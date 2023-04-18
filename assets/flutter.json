@@ -1,0 +1,166 @@
+{
+   "1": {
+        "qustion": "What is state in flutter ?", 
+        "answer": "State is information that can be read synchronously when the widget is built and might change during the lifetime of the widget."
+    },
+    "2": {
+        "qustion": "What is widget in flutter ?", 
+        "answer": "Widgets describe how the UI of the application would look like on the given state and configuration. Widgets are the building blocks of any Flutter application."
+    },
+    "3": {
+        "qustion": "What is the difference between material and cupertino ?", 
+        "answer": "The Material widget implements material design language for iOS, Android, web, and desktop applications. The Cupertino widget on the other hand is used to implement the current iOS design language based on Apple’s human interface guidelines."
+    },
+    "4": {
+        "qustion": "Define context in flutter ?", 
+        "answer": "Context is a link to the location of a widget in the tree structure of widgets."
+    },
+    "5": {
+        "qustion": "What is key in flutter ?", 
+        "answer": "A Key is an identifier for Widgets, Elements and SemanticsNodes."
+    },
+    "6": {
+        "qustion": "What is the difference between Local Key and Global Key ?", 
+        "answer": "LocalKey is a key that is unique amongst the elements with the same parent. As for GlobalKey, it is a key that is unique across the entire app."
+    },
+    "7": {
+        "qustion": "Define Vsync ?", 
+        "answer": "Vsync basically keeps the track of screen, so that Flutter does not renders the animation when the screen is not being displayed."
+    },
+    "8": {
+        "qustion": "What is the use of ticker ?", 
+        "answer": "You can think of Ticker as a special periodic timer that we can use to be notified when the Flutter engine is about to draw a new frame. A Ticker’s job is to provide a notification to any listeners when a frame update will occur. To create a ticker, we need to add a SingleTickerProviderStateMixin to our State subclass. Then we can create and start it in initState():when the screen is not being displayed."
+    },
+    "9": {
+        "qustion": "Explain mixin , how it’s different from inheritance ?", 
+        "answer": "A mixin is a sort of class that can be “associated” to another class in order to reuse pieces of code without using inheritance. Extends: This is the typical OOP inheritance that can be used when you want to add new features in a subclass. When you use class B extends A {} you are NOT forced to override every method of class A. Inheritance takes place so you can override as many methods as you want."
+    },
+    "10": {
+        "qustion": "What is the use of async in dart language ?", 
+        "answer": "The async computation cannot provide a result immediately when it is started because the program may need to wait for an external response."
+    },
+    "11": {
+        "qustion": "Explain async* .", 
+        "answer": "async* is an asynchronous generator that returns a Stream object"
+    },
+    "12": {
+        "qustion": "Define Tween", 
+        "answer": "Tween defines a transition between two values. To perform this task, a Tween needs a beginning value, an ending value, and a method that tells it how to transition between the two."
+    },
+    "13": {
+        "qustion": "Define animation", 
+        "answer": "An animation is just a visual change over time from A to B. The Curve class defines the rate at which it changes."
+    },
+    "14": {
+        "qustion": "What’s the main difference between Flexible and Expanded ?", 
+        "answer": "Flexible takes only the needed space, and Expanded takes all available space, respecting the flex factor."
+    },
+    "15": {
+        "qustion": "What’s the need of MaterialApp in flutter ?", 
+        "answer": "MaterialApp is an extension of Flutter’s WidgetsApp, a basic top-level widget. WidgetsApp is a convenience widget that abstracts away several elements required for most mobile apps, such as setting up navigation and applying a theme to the entire program."
+    },
+    "16": {
+        "qustion": "Explain the uses of LayoutBuilder in flutter", 
+        "answer": "LayoutBuilder helps to create a widget tree in the widget flutter which can depend on the size of the original widget. flutter can take the layout builder as a parameter. It has two parameters. build context and Boxconstrant. BuildContext refers to a widget. But box constraint is more important, it gives the width to the parent widget which is used to manage the child according to the size of the parent."
+    },
+    "17": {
+        "qustion": "Explain the need of tree shaking ?", 
+        "answer": "Tree shaking is the process of eliminating dead code, by only including code that is guaranteed to be executed."
+    },
+    "18": {
+        "qustion": "What’s the difference between Ephemeral State and App state in flutter ?", 
+        "answer": "Ephemeral State -when your state variables are in inside of the Stateful widget, its known as ephemeral state. When your state variables are in outside of the Stateful widget, its known as App state.(because that state is used by many widgets)."
+    },
+    "19": {
+        "qustion": "Explain the difference between Navigator.push() and Navigator.pop() methods ?", 
+        "answer": "To switch to a new route, use the Navigator. push() method. The push() method adds a Route to the stack of routes managed by the Navigator . The pop() method removes the current Route from the stack of routes managed by the Navigator."
+    },
+    "20": {
+        "qustion": "What is FormState in flutter ?", 
+        "answer": "A FormState object can be used to save, reset, and validate every FormField that is a descendant of the associated Form."
+    },
+    "21": {
+        "qustion": "Explain the use of SafeArea in Flutter ?", 
+        "answer": "SafeArea is a widget that inserts its child with sufficient padding to avoid intrusions by the operating system."
+    },
+    "22": {
+        "qustion": "Distinguish between NetworkImage and Image.network.", 
+        "answer": "NetworkImage class creates an object the provides an image from the src URL passed to it. It is not a widget and does not output an image to the screen. Image.network creates a widget that displays an image on the screen."
+    },
+    "23": {
+        "qustion": "Define gradle.", 
+        "answer": "gradle is configuration file used for android app development."
+    },
+    "24": {
+        "qustion": "What is BLoC?", 
+        "answer": "BLoC stands for Business Logic Components; it aims to separate the application’s business logic from User Interface, making the application code more unambiguous, scalable, and testable."
+    },
+    "25": {
+        "qustion": "What is the difference between hot reload and hot restart ?", 
+        "answer": "Hot reload loads code changes into the VM and re-builds the widget tree, preserving the app state; it doesn’t rerun main() or initState(). Hot restart loads code changes into the VM, and restarts the Flutter app, losing the app state."
+    },
+    "26": {
+        "qustion": "Explain the difference between stateful widgets and stateless widgets ?", 
+        "answer": "Stateless widgets are those whose state cannot be changed once they have been created. Once developed, these widgets are immutable, which means that any changes to the variables, icons, buttons, or data retrieval will not affect the app’s state. Stateless widgets include Icon, IconButton, and Text. Stateful Widgets are widgets whose state can be changed after they’ve been built. These states are changeable, meaning they can change several times throughout their lives CheckBox, RadioButton, Form, and TextField are some examples."
+    },
+    "27": {
+        "qustion": "What is the difference between unit test, widget test & integration test in flutter ?", 
+        "answer": "A unit test tests a single function, method, or class. A widget test (in other UI frameworks referred to as component test) tests a single widget. An integration test tests a complete app or a large part of an app."
+    },
+    "28": {
+        "qustion": "What is null aware operators ?", 
+        "answer": "Null-aware operators in dart allow you to make computations based on whether or not a value is null."
+    },
+    "29": {
+        "qustion": "What is the use of streams ?", 
+        "answer": "Streams provide an asynchronous sequence of data."
+    },
+    "30": {
+        "qustion": "Define Future ?", 
+        "answer": "Futures are any singular type of data, like a string, which will be available later."
+    },
+    "31": {
+        "qustion": "How can we classify streams ?", 
+        "answer": "There are two kinds of streams: “Single-subscription” streams and “broadcast” streams. A single-subscription stream allows only a single listener during the whole lifetime of the stream. Single-subscription streams are generally used for streaming chunks of larger contiguous data, like file I/O. A broadcast stream allows any number of listeners, and it fires its events when they are ready, whether there are listeners or not."
+    },
+    "32": {
+        "qustion": "", 
+        "answer": ""
+    },
+    "33": {
+        "qustion": "", 
+        "answer": ""
+    },
+    "34": {
+        "qustion": "", 
+        "answer": ""
+    },
+    "35": {
+        "qustion": "", 
+        "answer": ""
+    },
+    "36": {
+        "qustion": "", 
+        "answer": ""
+    },
+    "37": {
+        "qustion": "", 
+        "answer": ""
+    },
+    "38": {
+        "qustion": "", 
+        "answer": ""
+    },
+    "39": {
+        "qustion": "", 
+        "answer": ""
+    },
+    "40": {
+        "qustion": "", 
+        "answer": ""
+    },
+    "41": {
+        "qustion": "", 
+        "answer": ""
+    }
+}
