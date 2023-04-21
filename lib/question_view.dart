@@ -67,18 +67,54 @@ class _QuestionViewState extends State<QuestionView> {
           ),
         ),
       ),
-      floatingActionButton: FloatingActionButton.extended(
-        onPressed: () {},
-        extendedPadding: const EdgeInsetsDirectional.symmetric(horizontal: 40),
-        label: const Text(
-          'next',
-          style: TextStyle(
-            fontSize: 17,
-            fontWeight: FontWeight.w700,
-            color: Colors.white,
-          ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            _CustomFloatingActionButton(
+              heroTag: 'previous',
+              label: 'previous',
+              onPressed: () {},
+            ),
+            _CustomFloatingActionButton(
+              heroTag: 'next',
+              label: 'next',
+              onPressed: () {},
+            ),
+          ],
         ),
       ),
+    );
+  }
+}
+
+class _CustomFloatingActionButton extends StatelessWidget {
+  const _CustomFloatingActionButton({
+    required this.heroTag,
+    required this.label,
+    required this.onPressed,
+  });
+
+  final String heroTag;
+  final String label;
+  final void Function()? onPressed;
+
+  final _style = const TextStyle(
+    fontSize: 17,
+    fontWeight: FontWeight.w700,
+    color: Colors.white,
+  );
+
+  @override
+  Widget build(BuildContext context) {
+    return FloatingActionButton.extended(
+      heroTag: heroTag,
+      onPressed: onPressed,
+      backgroundColor: Colors.green[500],
+      extendedPadding: const EdgeInsetsDirectional.symmetric(horizontal: 40),
+      label: Text(label, style: _style),
     );
   }
 }
