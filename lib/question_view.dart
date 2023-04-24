@@ -33,7 +33,7 @@ class _QuestionViewState extends State<QuestionView> {
                             color: Colors.white,
                           ),
                           Text(
-                            '1/74',
+                            '1/71',
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.w900,

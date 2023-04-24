@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_interview_questions/app_router.dart';
 import 'package:flutter_interview_questions/gen/assets.gen.dart';
 import 'package:flutter_interview_questions/question_view.dart';
+import 'package:go_router/go_router.dart';
 
 void main() {
   runApp(const MyApp());
@@ -53,12 +54,7 @@ class _ProgrammingLanguagesState extends State<ProgrammingLanguages> {
             padding: const EdgeInsets.symmetric(horizontal: 10),
             child: GestureDetector(
               onTap: () {
-                Navigator.pushAndRemoveUntil(
-                    context,
-                    MaterialPageRoute(
-                      builder: (_) => const QuestionView(),
-                    ),
-                    (route) => true);
+                context.go('/listv');
               },
               child: Container(
                 alignment: Alignment.center,

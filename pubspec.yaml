@@ -18,6 +18,7 @@ dependencies:
 
   go_router: ^6.5.7
   flutter_gen: ^5.3.0
+  kartal: ^2.8.0
 
 dev_dependencies:
   flutter_test:
