@@ -6,31 +6,28 @@ import 'package:flutter/services.dart';
 
 import 'package:flutter_interview_questions/core/interface/i_question_repository.dart';
 import 'package:flutter_interview_questions/core/local_service/cache_service.dart';
-import 'package:flutter_interview_questions/core/utils/enum.dart';
 
 class QuestionRepository extends IQuestionRepository {
   QuestionRepository({
     CacheService? cacheService,
-    required DataPath path,
-  })  : _cacheService = cacheService ?? CacheService(),
-        _path = path;
+  }) : _cacheService = cacheService ?? CacheService();
 
   final CacheService _cacheService;
-  final DataPath _path;
+  //final String _path;
 
   @override
-  Future<List<Map<String, dynamic>>> loadQuestions(String category) async {
+  Future<List<Map<String, dynamic>>> loadQuestions({String? type}) async {
     List<Map<String, dynamic>> questions = [];
 
-    var jsonStr = await rootBundle.loadString('$_path/$category.json');
+    var jsonStr = await rootBundle.loadString('prg_lang/$type.json');
     Map<String, dynamic> jsonMap = await json.decode(jsonStr);
 
     for (var i = 1; i <= jsonMap.length; i++) {
       questions.add(jsonMap['$i']);
     }
 
-    _cacheService.questions.put(category, questions);
-    return await getQuestions(category);
+    _cacheService.questions.put(type, questions);
+    return await getQuestions(type!);
   }
 
   @override
