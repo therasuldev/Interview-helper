@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_interview_questions/app_router.dart';
-import 'package:flutter_interview_questions/core/model/question.dart';
+import 'package:flutter_interview_questions/core/model/question/question.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:path_provider/path_provider.dart' as path;
 

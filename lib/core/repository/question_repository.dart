@@ -5,14 +5,14 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 
 import 'package:flutter_interview_questions/core/interface/i_question_repository.dart';
-import 'package:flutter_interview_questions/core/service/cache_service.dart';
+import 'package:flutter_interview_questions/core/local_service/cache_service.dart';
 import 'package:flutter_interview_questions/core/utils/enum.dart';
 
 class QuestionRepository extends IQuestionRepository {
   QuestionRepository({
-    required CacheService cacheService,
+    CacheService? cacheService,
     required DataPath path,
-  })  : _cacheService = cacheService,
+  })  : _cacheService = cacheService ?? CacheService(),
         _path = path;
 
   final CacheService _cacheService;
