@@ -278,6 +278,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "8.1.2"
+<<<<<<< HEAD
   flutter_gen:
     dependency: "direct main"
     description:
@@ -302,6 +303,8 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "5.3.0"
+=======
+>>>>>>> develop
   flutter_lints:
     dependency: "direct dev"
     description:
@@ -480,6 +483,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.8.0"
+<<<<<<< HEAD
   mime:
     dependency: transitive
     description:
@@ -488,6 +492,8 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.4"
+=======
+>>>>>>> develop
   nested:
     dependency: transitive
     description:
@@ -496,6 +502,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.0"
+<<<<<<< HEAD
   package_config:
     dependency: transitive
     description:
@@ -520,6 +527,8 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.1"
+=======
+>>>>>>> develop
   path:
     dependency: transitive
     description:
@@ -528,6 +537,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.8.2"
+<<<<<<< HEAD
   path_provider:
     dependency: "direct main"
     description:
@@ -616,6 +626,8 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.2.4"
+=======
+>>>>>>> develop
   provider:
     dependency: transitive
     description:
@@ -624,6 +636,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "6.0.5"
+<<<<<<< HEAD
   pub_semver:
     dependency: transitive
     description:
@@ -680,6 +693,8 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.3"
+=======
+>>>>>>> develop
   sky_engine:
     dependency: transitive
     description: flutter
@@ -911,4 +926,8 @@ packages:
     version: "3.1.1"
 sdks:
   dart: ">=2.19.6 <3.0.0"
+<<<<<<< HEAD
   flutter: ">=3.3.0"
+=======
+  flutter: ">=1.16.0"
+>>>>>>> develop

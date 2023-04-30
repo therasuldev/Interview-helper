@@ -1,166 +1,298 @@
 {
-   "1": {
-        "qustion": "What is state in flutter ?", 
-        "answer": "State is information that can be read synchronously when the widget is built and might change during the lifetime of the widget."
+    "1": {
+        "question": "What is Flutter and how does it differ from other cross-platform frameworks?",
+        "answer": "Flutter is a free, open-source mobile app development framework created by Google. It uses the Dart programming language and allows developers to build high-quality, natively compiled apps for both iOS and Android with a single codebase. Flutter differs from other cross-platform frameworks such as React Native and Xamarin in a few key ways. Firstly, Flutter uses a unique and powerful rendering engine based on the Skia graphics library, which allows for fast, smooth, and attractive app animations and graphics. Secondly, Flutter provides a large and comprehensive set of customizable widgets, which allows for a highly personalized and unique user experience. Finally, Flutter also offers Hot Reload, which allows for faster iteration and bug fixing during development, making the development process more efficient."
     },
     "2": {
-        "qustion": "What is widget in flutter ?", 
+        "question": "What is widget in flutter ?",
         "answer": "Widgets describe how the UI of the application would look like on the given state and configuration. Widgets are the building blocks of any Flutter application."
     },
     "3": {
-        "qustion": "What is the difference between material and cupertino ?", 
+        "question": "What is the difference between material and cupertino ?",
         "answer": "The Material widget implements material design language for iOS, Android, web, and desktop applications. The Cupertino widget on the other hand is used to implement the current iOS design language based on Apple’s human interface guidelines."
     },
     "4": {
-        "qustion": "Define context in flutter ?", 
+        "question": "Define context in flutter ?",
         "answer": "Context is a link to the location of a widget in the tree structure of widgets."
     },
     "5": {
-        "qustion": "What is key in flutter ?", 
+        "question": "What is key in flutter ?",
         "answer": "A Key is an identifier for Widgets, Elements and SemanticsNodes."
     },
     "6": {
-        "qustion": "What is the difference between Local Key and Global Key ?", 
+        "question": "What is the difference between Local Key and Global Key ?",
         "answer": "LocalKey is a key that is unique amongst the elements with the same parent. As for GlobalKey, it is a key that is unique across the entire app."
     },
     "7": {
-        "qustion": "Define Vsync ?", 
+        "question": "Define Vsync ?",
         "answer": "Vsync basically keeps the track of screen, so that Flutter does not renders the animation when the screen is not being displayed."
     },
     "8": {
-        "qustion": "What is the use of ticker ?", 
-        "answer": "You can think of Ticker as a special periodic timer that we can use to be notified when the Flutter engine is about to draw a new frame. A Ticker’s job is to provide a notification to any listeners when a frame update will occur. To create a ticker, we need to add a SingleTickerProviderStateMixin to our State subclass. Then we can create and start it in initState():when the screen is not being displayed."
+        "question": "What is state in flutter ?",
+        "answer": "State is information that can be read synchronously when the widget is built and might change during the lifetime of the widget."
     },
     "9": {
-        "qustion": "Explain mixin , how it’s different from inheritance ?", 
+        "question": "Explain mixin , how it’s different from inheritance ?",
         "answer": "A mixin is a sort of class that can be “associated” to another class in order to reuse pieces of code without using inheritance. Extends: This is the typical OOP inheritance that can be used when you want to add new features in a subclass. When you use class B extends A {} you are NOT forced to override every method of class A. Inheritance takes place so you can override as many methods as you want."
     },
     "10": {
-        "qustion": "What is the use of async in dart language ?", 
+        "question": "What is the use of async in dart language ?",
         "answer": "The async computation cannot provide a result immediately when it is started because the program may need to wait for an external response."
     },
     "11": {
-        "qustion": "Explain async* .", 
+        "question": "Explain async* .",
         "answer": "async* is an asynchronous generator that returns a Stream object"
     },
     "12": {
-        "qustion": "Define Tween", 
+        "question": "Define Tween",
         "answer": "Tween defines a transition between two values. To perform this task, a Tween needs a beginning value, an ending value, and a method that tells it how to transition between the two."
     },
     "13": {
-        "qustion": "Define animation", 
+        "question": "Define animation",
         "answer": "An animation is just a visual change over time from A to B. The Curve class defines the rate at which it changes."
     },
     "14": {
-        "qustion": "What’s the main difference between Flexible and Expanded ?", 
+        "question": "What’s the main difference between Flexible and Expanded ?",
         "answer": "Flexible takes only the needed space, and Expanded takes all available space, respecting the flex factor."
     },
     "15": {
-        "qustion": "What’s the need of MaterialApp in flutter ?", 
+        "question": "What’s the need of MaterialApp in flutter ?",
         "answer": "MaterialApp is an extension of Flutter’s WidgetsApp, a basic top-level widget. WidgetsApp is a convenience widget that abstracts away several elements required for most mobile apps, such as setting up navigation and applying a theme to the entire program."
     },
     "16": {
-        "qustion": "Explain the uses of LayoutBuilder in flutter", 
+        "question": "Explain the uses of LayoutBuilder in flutter",
         "answer": "LayoutBuilder helps to create a widget tree in the widget flutter which can depend on the size of the original widget. flutter can take the layout builder as a parameter. It has two parameters. build context and Boxconstrant. BuildContext refers to a widget. But box constraint is more important, it gives the width to the parent widget which is used to manage the child according to the size of the parent."
     },
     "17": {
-        "qustion": "Explain the need of tree shaking ?", 
+        "question": "Explain the need of tree shaking ?",
         "answer": "Tree shaking is the process of eliminating dead code, by only including code that is guaranteed to be executed."
     },
     "18": {
-        "qustion": "What’s the difference between Ephemeral State and App state in flutter ?", 
+        "question": "What’s the difference between Ephemeral State and App state in flutter ?",
         "answer": "Ephemeral State -when your state variables are in inside of the Stateful widget, its known as ephemeral state. When your state variables are in outside of the Stateful widget, its known as App state.(because that state is used by many widgets)."
     },
     "19": {
-        "qustion": "Explain the difference between Navigator.push() and Navigator.pop() methods ?", 
+        "question": "Explain the difference between Navigator.push() and Navigator.pop() methods ?",
         "answer": "To switch to a new route, use the Navigator. push() method. The push() method adds a Route to the stack of routes managed by the Navigator . The pop() method removes the current Route from the stack of routes managed by the Navigator."
     },
     "20": {
-        "qustion": "What is FormState in flutter ?", 
+        "question": "What is FormState in flutter ?",
         "answer": "A FormState object can be used to save, reset, and validate every FormField that is a descendant of the associated Form."
     },
     "21": {
-        "qustion": "Explain the use of SafeArea in Flutter ?", 
+        "question": "Explain the use of SafeArea in Flutter ?",
         "answer": "SafeArea is a widget that inserts its child with sufficient padding to avoid intrusions by the operating system."
     },
     "22": {
-        "qustion": "Distinguish between NetworkImage and Image.network.", 
+        "question": "Distinguish between NetworkImage and Image.network.",
         "answer": "NetworkImage class creates an object the provides an image from the src URL passed to it. It is not a widget and does not output an image to the screen. Image.network creates a widget that displays an image on the screen."
     },
     "23": {
-        "qustion": "Define gradle.", 
+        "question": "Define gradle.",
         "answer": "gradle is configuration file used for android app development."
     },
     "24": {
-        "qustion": "What is BLoC?", 
+        "question": "What is BLoC?",
         "answer": "BLoC stands for Business Logic Components; it aims to separate the application’s business logic from User Interface, making the application code more unambiguous, scalable, and testable."
     },
     "25": {
-        "qustion": "What is the difference between hot reload and hot restart ?", 
+        "question": "What is the difference between hot reload and hot restart ?",
         "answer": "Hot reload loads code changes into the VM and re-builds the widget tree, preserving the app state; it doesn’t rerun main() or initState(). Hot restart loads code changes into the VM, and restarts the Flutter app, losing the app state."
     },
     "26": {
-        "qustion": "Explain the difference between stateful widgets and stateless widgets ?", 
+        "question": "Explain the difference between stateful widgets and stateless widgets ?",
         "answer": "Stateless widgets are those whose state cannot be changed once they have been created. Once developed, these widgets are immutable, which means that any changes to the variables, icons, buttons, or data retrieval will not affect the app’s state. Stateless widgets include Icon, IconButton, and Text. Stateful Widgets are widgets whose state can be changed after they’ve been built. These states are changeable, meaning they can change several times throughout their lives CheckBox, RadioButton, Form, and TextField are some examples."
     },
     "27": {
-        "qustion": "What is the difference between unit test, widget test & integration test in flutter ?", 
+        "question": "What is the difference between unit test, widget test & integration test in flutter ?",
         "answer": "A unit test tests a single function, method, or class. A widget test (in other UI frameworks referred to as component test) tests a single widget. An integration test tests a complete app or a large part of an app."
     },
     "28": {
-        "qustion": "What is null aware operators ?", 
+        "question": "What is null aware operators ?",
         "answer": "Null-aware operators in dart allow you to make computations based on whether or not a value is null."
     },
     "29": {
-        "qustion": "What is the use of streams ?", 
+        "question": "What is the use of streams ?",
         "answer": "Streams provide an asynchronous sequence of data."
     },
     "30": {
-        "qustion": "Define Future ?", 
+        "question": "Define Future ?",
         "answer": "Futures are any singular type of data, like a string, which will be available later."
     },
     "31": {
-        "qustion": "How can we classify streams ?", 
+        "question": "How can we classify streams ?",
         "answer": "There are two kinds of streams: “Single-subscription” streams and “broadcast” streams. A single-subscription stream allows only a single listener during the whole lifetime of the stream. Single-subscription streams are generally used for streaming chunks of larger contiguous data, like file I/O. A broadcast stream allows any number of listeners, and it fires its events when they are ready, whether there are listeners or not."
     },
     "32": {
-        "qustion": "", 
-        "answer": ""
+        "question": "What is the use of ticker ?",
+        "answer": "You can think of Ticker as a special periodic timer that we can use to be notified when the Flutter engine is about to draw a new frame. A Ticker’s job is to provide a notification to any listeners when a frame update will occur. To create a ticker, we need to add a SingleTickerProviderStateMixin to our State subclass. Then we can create and start it in initState():when the screen is not being displayed."
     },
     "33": {
-        "qustion": "", 
-        "answer": ""
+        "question": "What are the key features of Flutter?",
+        "answer": "Hot Reload: Allows developers to see code changes in real-time, making development faster and more efficient.\nCustomizable Widgets: Flutter has a comprehensive set of customizable widgets, allowing developers to create unique and attractive user interfaces.\nFast and Smooth Performance: Flutter uses its own rendering engine, based on the Skia graphics library, to provide fast and smooth app performance.\nSingle Codebase: With Flutter, developers can build apps for both iOS and Android with a single codebase, reducing development time and effort.\nAccess to Native Features: Flutter provides easy access to native features and APIs on both iOS and Android, allowing developers to create apps with native-like functionality.\nDart Programming Language: Flutter uses the Dart programming language, which is easy to learn, particularly for those with experience in object-oriented languages.\nLarge Community: Flutter has a large and growing community of developers and contributors, making it easy to find support and resources for app development."
     },
     "34": {
-        "qustion": "", 
-        "answer": ""
+        "question": "What is the architecture of Flutter and how does it work?",
+        "answer": "Flutter follows a reactive programming architecture, which means that the framework listens for changes to data and automatically updates the user interface whenever the data changes. This allows for a fast, smooth, and responsive user experience.\n\nAt the core of Flutter’s architecture is the Flutter Engine, which is responsible for rendering the user interface, handling gestures, and managing resources such as fonts and images. The Flutter Engine communicates with the native code on the host platform to provide access to platform-specific features.\n\nFlutter also includes a rich set of customizable widgets, which are the building blocks of the user interface. These widgets can be combined and nested to create complex, dynamic user interfaces. The widgets are drawn by the Flutter Engine and can be updated in real-time, without the need for a full app reload.\n\nFinally, Flutter provides a development toolkit, which includes the Flutter CLI, the Flutter framework, and the Dart programming language. The Flutter CLI is used to create and manage projects, run apps on devices or emulators, and perform other development tasks. The Flutter framework provides the core functionality and widgets, and the Dart programming language provides the syntax and programming tools.\n\nOverall, the architecture of Flutter is designed to be fast, flexible, and efficient, making it a popular choice for mobile app development."
     },
     "35": {
-        "qustion": "", 
-        "answer": ""
+        "question": "How does Flutter handle the differences between iOS and Android?",
+        "answer": "Flutter was designed to handle the differences between iOS and Android with a single codebase. This means that developers can write one set of code that works on both platforms, without having to maintain separate codebases for each platform.\n\nHowever, there are often times when a developer needs to add platform-specific functionality or adjust the user interface to match the conventions of each platform. Flutter provides several ways to handle these differences:\n\nCupertino (iOS-style) Widgets: Flutter includes a set of Cupertino widgets that are designed to look and feel like native iOS widgets. Developers can use these widgets to create iOS-style interfaces, or they can use them as a starting point to create their own custom widgets.\n\nPlatform-Specific Code: Flutter provides an easy way to write platform-specific code using Dart’s conditional imports and the Platform class. This allows developers to write code that is only executed on a specific platform, giving them full control over the platform-specific functionality.\n\nTheme Data: Flutter’s theme data provides a way to customize the visual style of an app based on the platform. For example, developers can specify different colors, text styles, and icon sizes for iOS and Android, which are automatically applied by the framework.\n\nAdaptive Widgets: Flutter’s adaptive widgets automatically adjust their size and layout based on the screen size and orientation of the device. This makes it easy to create apps that look great on both phones and tablets, regardless of the platform.\n\nOverall, Flutter provides a flexible and powerful set of tools for handling the differences between iOS and Android, making it a popular choice for cross-platform app development."
     },
     "36": {
-        "qustion": "", 
-        "answer": ""
+        "question": "How do you debug a Flutter app?",
+        "answer": "Debugging a Flutter app is a crucial part of the app development process. Flutter provides several tools and techniques to help developers find and fix bugs in their apps. Here are some of the most common ways to debug a Flutter app:\n\nDebug Console: The debug console is a powerful tool for printing messages, inspecting variables, and tracking the flow of execution through an app. Developers can use the debug console to get a better understanding of how their app is behaving and to isolate problems.\n\nFlutter Doctor: Flutter Doctor is a command-line tool that helps diagnose problems with the Flutter development environment. It checks the installed tools and dependencies and provides recommendations for fixing any issues.\n\nFlutter Observatory: The Flutter Observatory is a web-based tool for debugging and profiling Flutter apps. It provides information about the app’s performance, including CPU usage, memory usage, and widget tree.\n\nBreakpoints: Breakpoints are a powerful tool for stopping the execution of an app at a specific point and inspecting the values of variables and the state of the app. Developers can use breakpoints to find and fix bugs in their code.\n\nFlutter DevTools: Flutter DevTools is a browser-based development tool for debugging and profiling Flutter apps. It provides a comprehensive view of the app’s performance, including CPU usage, memory usage, and widget tree.\n\nHot Reload: Hot reload is a feature in Flutter that allows developers to quickly reload their app while preserving the state of the app. This makes it easy to make changes to the code and see the results without having to restart the app.\n\nFlutter inspector: The Flutter inspector is a visual tool for debugging Flutter apps. It provides a live view of the widget tree, and allows developers to inspect and modify the properties of widgets in real-time.\n\nOverall, Flutter provides a wide range of tools and techniques to help developers debug their apps, making it easier to find and fix bugs and improve the overall quality of the app."
     },
     "37": {
-        "qustion": "", 
-        "answer": ""
+        "question": "What is the widget tree in Flutter and how does it work?",
+        "answer": "The widget tree in Flutter is a hierarchical structure that represents the visual elements of a Flutter app. Each widget in the tree is responsible for rendering a specific part of the user interface, such as a text label, an image, or a button.\n\nThe widget tree is created using a declarative programming model, which means that developers define the structure of the tree using code. The Flutter framework takes care of rendering the widgets and updating the user interface as needed.\n\nFor example, if a developer wants to create a screen with a text label and an image, they would create two widgets in the widget tree: a Text widget for the label and an Image widget for the image. The parent widget would arrange the child widgets, for example, by using a Column widget to stack the label and image vertically.\n\nThe widget tree is a dynamic structure, meaning that it can change at runtime. For example, when a user interacts with the app, the state of the widgets can change, causing the widget tree to be rebuilt. This process is optimized by Flutter’s framework to minimize the number of widgets that need to be redrawn, providing a smooth and efficient user experience.\n\nOverall, the widget tree is a fundamental concept in Flutter, providing a way to define and manage the visual elements of an app in a structured and efficient manner."
     },
     "38": {
-        "qustion": "", 
-        "answer": ""
+        "question": "What is the difference between StatelessWidget and StatefulWidget?",
+        "answer": "In Flutter, a StatelessWidget is a widget that represents a static part of the user interface that does not change dynamically. For example, a text label or a static image would be implemented as a StatelessWidget.\n\nA StatefulWidget, on the other hand, is a widget that represents a part of the user interface that can change dynamically. For example, a button or a toggle switch would be implemented as a StatefulWidget.\n\nThe main difference between StatelessWidget and StatefulWidget lies in how they manage their state, or data. A StatelessWidget has no state, meaning that its properties are set once when it is created and cannot be changed. A StatefulWidget, on the other hand, has state, which can be updated dynamically in response to user interactions or other events. When the state of a StatefulWidget changes, the widget is rebuilt by the Flutter framework, which redraws the user interface to reflect the updated state.\n\nOverall, the choice between StatelessWidget and StatefulWidget depends on the specific needs of the user interface. If a part of the interface is static and does not change dynamically, it can be implemented as a StatelessWidget. If the interface needs to change dynamically in response to user interactions or other events, it should be implemented as a StatefulWidget."
     },
     "39": {
-        "qustion": "", 
-        "answer": ""
+        "question": "What is Flutter’s Hot Reload feature and how does it work?",
+        "answer": "Hot Reload is a feature in Flutter that allows developers to see changes made to the code immediately in the app, without having to restart the app or recompile the code. This saves time and makes it easier to iterate on the design and functionality of the app.\n\nHot Reload is especially useful for fixing bugs, trying out new features, and experimenting with the user interface. Developers can make changes to the code, see the changes reflected immediately in the app, and continue working on the app without having to wait for it to restart.\n\nHot Reload is supported by the Flutter framework and is available for both iOS and Android. It is a key feature of Flutter that contributes to its fast development cycle and makes it easier for developers to create high-quality, responsive, and efficient apps."
     },
     "40": {
-        "qustion": "", 
-        "answer": ""
+        "question": "How does Flutter handle layout and responsive design?",
+        "answer": "In Flutter, layout and responsive design are handled using a combination of widgets and constraints.\n\nThe layout of a Flutter app is defined using a tree of widgets, with each widget specifying its own constraints, such as its size, position, and how it should be aligned within its parent widget. Flutter provides a rich set of layout widgets that make it easy to create complex and dynamic user interfaces. For example, the Container widget is used to define the size and position of a widget, the Row and Column widgets are used to arrange widgets in a horizontal or vertical line, and the Expanded widget is used to take up remaining space in a row or column.\n\nFor responsive design, Flutter provides a set of strategies for handling different screen sizes and aspect ratios. For example, the LayoutBuilder widget can be used to dynamically adjust the layout of a widget based on the size of its parent. The MediaQuery widget can be used to obtain information about the screen size and orientation, allowing developers to make decisions about how to adjust the layout based on the current screen conditions.\n\nOverall, Flutter provides a rich and flexible set of tools for handling layout and responsive design, making it easy to create user interfaces that look great and work well on any screen size or aspect ratio. Whether developers need to create a simple layout or a complex, responsive design, Flutter provides the tools they need to get the job done."
     },
     "41": {
-        "qustion": "", 
-        "answer": ""
+        "question": "What is the difference between Stateless and Stateful animations in Flutter?",
+        "answer": "Stateless animations are animations that are defined once and run to completion without changing based on user interaction or other events. For example, a simple splash screen animation that plays when the app is launched could be implemented as a stateless animation.\n\nStateful animations, on the other hand, are animations that can change over time based on user interaction or other events. For example, an animation that changes the size of a button when it is pressed could be implemented as a stateful animation. Stateful animations are typically implemented using a StatefulWidget in combination with an AnimationController.\n\nThe AnimationController is used to control the state of the animation, including the speed and direction of the animation, and the Animation object is used to describe the desired animation. The Animation object is passed to the build method of the StatefulWidget, and the animation's value is used to control the properties of the widgets in the widget tree.\n\nIn summary, Stateless animations are best for simple animations that don’t require interaction, while Stateful animations are best for complex animations that respond to user interaction or change dynamically over time."
+    },
+    "42": {
+        "question": "What is the difference between streams and Futures in Flutter?",
+        "answer": "Streams and Futures are both ways to handle asynchronous data in Flutter.\n\nStreams are a way to handle multiple events that happen over time, where each event is a piece of data. You can subscribe to a stream and receive events as they occur, and can also handle errors that may occur during the process.\n\nFutures, on the other hand, represent a single async operation that returns a single value. You can use a Future to execute a computation in the background and receive the result when it’s ready.\n\nIn summary, Streams are best for handling multiple pieces of data over time, while Futures are best for handling a single piece of data that’s returned as the result of a single async operation."
+    },
+    "43": {
+        "question": "What is the difference between Scaffold and MaterialApp widgets in Flutter?",
+        "answer": "Scaffold and MaterialApp are both widgets in Flutter, but they serve different purposes.\n\nThe Scaffold widget is used to define the basic structure of an app screen, providing a visual structure for the app's content. It includes a AppBar, Drawer, BottomNavigationBar, and a floating action button. It also provides a blank canvas for building the app’s UI.\n\nThe MaterialApp widget, on the other hand, is the root widget of a Flutter app that uses Material Design. It provides a top-level navigation and styling for the app, and is usually the parent widget for the Scaffold widget. The MaterialApp widget takes care of initializing the right theme, font, and colors for your app, and also provides navigation routes and the basic structure for your app.\n\nIn summary, the Scaffold widget is used to define the structure of a single screen in your app, while the MaterialApp widget is used to define the overall look and feel of your entire app. The Scaffold is usually a child of the MaterialApp widget.\n\nWhen building a Flutter app, you typically start by creating a MaterialApp widget and then use Scaffold widgets within the MaterialApp to build the app's UI."
+    },
+    "44": {
+        "question": "How do you manage state in Flutter?",
+        "answer": "In Flutter, managing the state is a crucial part of developing a robust and responsive app. There are several ways to manage state in Flutter, including:\n\n1. StatefulWidget: A StatefulWidget is a widget that has mutable state. To manage state with a StatefulWidget, you need to create two classes: one for the widget itself, and another for its state. The state class holds the state data, and the widget class builds the UI based on that state. When the state changes, the widget rebuilds its UI to reflect the new state.\n\n2. InheritedWidget: An InheritedWidget is a widget that passes data down the widget tree. To use an InheritedWidget, you create a class that extends InheritedWidget, and then you wrap it around the widget tree. The children of the InheritedWidget can access the data by using a BuildContext and calling InheritedWidget.of(context).\n\n3. Bloc pattern: The Bloc (Business Logic Component) pattern is a state management solution that uses streams and sinks to manage state. The Bloc pattern helps to separate state management from the UI, making it easier to test and maintain your app.\n\n4. Provider: Provider is a popular third-party package that makes it easier to manage state in Flutter. It uses an InheritedWidget under the hood, but it provides a simpler and more flexible API.\n\n5. ScopedModel: ScopedModel is a package that extends InheritedWidget and provides an easy-to-use, high-level API for managing state in a widget tree.\n\nThe best approach depends on the specific needs of your app. For small apps with simple state, StatefulWidget or InheritedWidget may be sufficient. For larger and more complex apps, Provider or Bloc may be a better choice.\n\nIn general, it’s important to choose an approach that is simple, maintainable, and testable, and to always keep the UI as simple as possible. This makes it easier to reason about the state of your app, and reduces the risk of bugs and other issues."
+    },
+    "45": {
+        "question": "What is the Provider package and how is it used in Flutter?",
+        "answer": "The Provider package is a popular choice for managing state in Flutter apps. It's a third-party package that provides an easy way to manage state and provide data to widgets in a widget tree.\n\nThe Provider package uses the concept of 'inherited widgets' to pass data down the widget tree, allowing multiple widgets to access the same data. The main advantage of using Provider is that it makes it easy to manage state, without having to use StatefulWidget or InheritedWidget.\n\nTo use Provider, you create a ChangeNotifier or ValueNotifier class that holds the data you want to manage. Then, you wrap your app in a MultiProvider widget, passing in instances of your ChangeNotifier or ValueNotifier classes as arguments. Finally, you use Consumer widgets to access the data in the ChangeNotifier or ValueNotifier classes and update the UI whenever the data changes.\n\nUsing the Provider package can greatly simplify the process of managing state in Flutter apps, making it easier to build scalable and maintainable apps."
+    },
+    "46": {
+        "question": "How do you integrate a Flutter app with a REST API?",
+        "answer": "Integrating a Flutter app with a REST API involves making HTTP requests to the API endpoints and handling the response to display the data in the app. To make HTTP requests, Flutter provides various libraries such as dio, http, and chopper. To handle the response, you can use Future and Stream builders or manually parse the response and store it in variables. You can also use packages such as flutter_bloc or provider to manage the API calls and data flow in your app. It's important to handle errors and exceptions in the API calls and display appropriate messages to the user."
+    },
+    "47": {
+        "question": "What are different build modes in flutter?",
+        "answer": "Depending on your development phase, the framework compiles your code in different ways or modes, which we called a build mode. Flutter’s tooling allows the application to be compiled in three modes. Depending on our stage of development, we may choose between these compilation modes.\n\nDebug Mode: This mode enables debugging of apps on a physical device, emulator, or simulator. Assertions and service extensions are enabled here. Quick deployment is then achieved by optimizing compilation.\n\nProfile Mode: In this mode, some debugging abilities are maintained, enough to analyze the app’s performance while testing. Tracing and some extensions are enabled in this case. On emulators and simulators, profile mode is disabled since their behavior does not reproduce real-world performance. The following command can be used to compile the profile mode: flutter run — profile\n\nRelease Mode: When deploying the app, this mode is used to minimize the size of the footprint and maximize optimization. Debugging, assertions and service extensions are disabled here. Faster startup, faster execution, and less size are its key features. The following command can be used to compile the release mode: flutter run — release."
+    },
+    "48": {
+        "question": "What is the use of Mixins in Flutter?",
+        "answer": "Mixins in Flutter are a way to reuse a class’s code in multiple class hierarchies. Mixins allow you to share functionality between classes that don’t share a parent-child relationship, which is not possible with traditional inheritance. Mixins are defined using the “mixin” keyword, and they can be combined with a class to provide additional functionality. For example, a mixin class can contain code to handle animations, and this code can be reused in multiple widget classes. To use a mixin, you simply mix it into a class using the “with” keyword. This allows you to inherit the mixin’s code, along with the code from the base class, making it a convenient way to share and reuse code in Flutter./n/nMixins are a way to achieve multiple inheritance in Dart, which is not supported directly."
+    },
+    "49": {
+        "question": "What do you mean by Null-aware operators in Flutter?",
+        "answer": "Null-aware operators in Flutter are operators that allow you to handle null values in a clean and concise way. They provide a way to safely access and manipulate data that may be null or not present. The most commonly used null-aware operator in Flutter is the “?.” operator, which is used to access an object’s properties only if the object is not null. This helps to avoid NullPointerExceptions and provides a way to handle cases where data may be missing or not yet available."
+    },
+    "50": {
+        "question": "What is the difference between await and async in Flutter?",
+        "answer": "await and async are keywords used in Dart programming language, the language used in Flutter, to handle asynchronous operations.\n\nasync is used before the declaration of a function that returns a Future object, indicating that the function performs an asynchronous operation.\n\nawait is used in an async function, to wait for the completion of a Future object. It allows the code to wait for the asynchronous operation to complete before moving on to the next line.So, to summarize:\nasync keyword is used to define an asynchronous function\n\nawait keyword is used inside an async function to wait for a Future to complete\n\nIn other words, async functions are used to perform asynchronous operations, while await is used to wait for the completion of these operations."
+    },
+    "51": {
+        "question": "What is the Bloc pattern and how is it used in Flutter?",
+        "answer": "The BLoC (Business Logic Component) pattern is a popular state management pattern used in Flutter to separate the presentation logic of an app from its business logic. The pattern uses streams and sinks to communicate between widgets and the BLoC component. The BLoC component acts as a single source of truth for the state of the app, and the widgets subscribe to the streams provided by the BLoC component to receive updates to the state. This separation of concerns helps to improve the testability and maintainability of an app. The BLoC pattern is implemented using the flutter_bloc package, which provides a convenient set of abstractions for working with streams and sinks in Flutter.\n\nAn example use case of the BLoC pattern would be a shopping cart, where the BLoC would manage the state of the items in the cart, while the UI would display the items and allow for adding or removing items."
+    },
+    "52": {
+        "question": "What is an InheritedWidget in Flutter and how is it used?",
+        "answer": "In Flutter, an InheritedWidget is a widget that can be inherited by its descendants. It’s used to store and manage values that can be accessed and shared across multiple widgets in the widget tree. When an InheritedWidget changes, it triggers a rebuild of all its dependent widgets. This allows the values stored in the InheritedWidget to be updated throughout the widget tree, which is especially useful when implementing complex UI behaviors.\n\nFor example, consider an app that needs to store and display a theme color. Instead of passing the theme color down as a parameter to each widget that needs it, you can create an InheritedWidget that stores the color, and access it whenever you need it. This way, you can update the color from a single place, and it will be reflected throughout the app."
+    },
+    "53": {
+        "question": "What is Flutter tree shaking (flutter web)?",
+        "answer": "When compiling a Flutter web application, the JavaScript bundle is generated by the dart2js compiler. A release build has the highest level of optimization, which includes tree shaking your code. Tree shaking is the process of eliminating dead code, by only including code that is guaranteed to be executed. This means that you do not need to worry about the size of your app’s included libraries because unused classes or functions are excluded from the compiled JavaScript bundle."
+    },
+    "54": {
+        "question": "What is the difference between hot restart and hot reload?",
+        "answer": "What is Hot Reload in Flutter:\n\nFlutter hot reload features works with combination of Small r key on command prompt or Terminal. Hot reload feature quickly compile the newly added code in our file and sent the code to Dart Virtual Machine. After done updating the Code Dart Virtual Machine update the app UI with widgets. Hot Reload takes less time then Hot restart. There is also a draw back in Hot Reload, If you are using States in your application then Hot Reload preservers the States so they will not update on Hot Reload our set to their default values\n\nWhat is Hot Restart in Flutter:\n\nHot restart is much different than hot reload. In Hot restart it destroys the preserves State value and set them to their default. So if you are using States value in your application then After every hot restart the developer gets fully compiled application and all the states will set to their defaults. The app widget tree is completely rebuilt with new typed code. Hot Restart takes much higher time than Hot reload."
+    },
+    "55": {
+        "question": "What is the purpose of a SafeArea?",
+        "answer": "SafeArea is basically a glorified Padding widget. If you wrap another widget with SafeArea, it adds any necessary padding needed to keep your widget from being blocked by the system status bar, notches, holes, rounded corners and other 'creative' features by manufactures."
+    },
+    "56": {
+        "question": "How is an Inherited Widget different from a Provider?",
+        "answer": "Provider basically takes the logic of InheritedWidgets, but reduce the boilerplate to the strict minimum."
+    },
+    "57": {
+        "question": "What is an UnmodifiableListView?",
+        "answer": "Cannot change the list items by adding or removing"
+    },
+    "58": {
+        "question": "Difference between these operators ?? and ?.",
+        "answer": "?? expr1 ?? expr2 If expr1 is non-null, returns its value; otherwise, evaluates and returns the value of expr2.\n\n?. Like . but the leftmost operand can be null; example: foo?.bar selects property bar from expression foo unless foo is null (in which case the value of foo?.bar is null)."
+    },
+    "59": {
+        "question": "When do you use the WidgetsBindingObserver?",
+        "answer": "To check when the system puts the app in the background or returns the app to the foreground."
+    },
+    "60": {
+        "question": "Why does the first flutter app take a very long developing time?",
+        "answer": "When you are going to build the Flutter app for the first time, it takes a very long time than usual because Flutter builds a device-specific IPA or APK file. In this process, the Xcode and Gradle are used to build a file, which usually takes a long time."
+    },
+    "61": {
+        "question": "Define what is an App State?",
+        "answer": "The App State is also called an application state or shared state. The app state can be distributed across multiple areas of your app and the same is maintained with user sessions.\n\nFollowing are the examples of App State:\n\nLogin info User preferences The shopping cart of an e-commerce application."
+    },
+    "62": {
+        "question": "What is a Flutter inspector?",
+        "answer": "Flutter inspector is a tool that helps in visualizing and exploring the widget trees. It helps in understanding the present layout and diagnoses various layout issues."
+    },
+    "63": {
+        "question": "What is the difference between main function and the runApp() function in Flutter?",
+        "answer": "In Dart, main() acts as the entry point for the program whereas runApp() attaches the given widget to the screen."
+    },
+    "64": {
+        "question": "What is the difference between final and const in Flutter?",
+        "answer": "final means single-assignment: A final variable or field must have an initializer. Once assigned a value, a final variable's value cannot be changed. final modifies variables.\n\nconst has a meaning that's a bit more complex and subtle in Dart. const modifies values. You can use it when creating collections, like const [1, 2, 3], and when constructing objects (instead of new) like const Point(2, 3). Here, const means that the object's entire deep state can be determined entirely at compile time and that the object will be frozen and completely immutable.\n\nConst objects have a couple of interesting properties and restrictions:\n\nThey must be created from data that can be calculated at compile time. A const object does not have access to anything you would need to calculate at runtime. 1 + 2 is a valid const expression, but new DateTime.now() is not.\n\nThey are deeply, transitively immutable. If you have a final field containing a collection, that collection can still be mutable. If you have a const collection, everything in it must also be const, recursively.\n\nThey are canonicalized. This is sort of like string interning: for any given const value, a single const object will be created and re-used no matter how many times the const expression(s) are evaluated."
+    },
+    "65": {
+        "question": "How do you reduce widget rebuild?",
+        "answer": "You rebuild widgets when the state changes. This is normal and desirable, because it allows the user to see the state changes reflected in the UI. However, rebuilding parts of the UI that don't need to change is wasteful.\n\nThere are several things you can do to reduce unnecessary widget rebuilding.\n\n1. The first is to refactor a large widget tree into smaller individual widgets, each with its own build method.\n2. Whenever possible, use the const constructor, because this will tell Flutter that it doesn't need to rebuild the widget.\n\n3. Keep the subtree of a stateful widget as small as possible. If a stateful widget needs to have a widget subtree under it, create a custom widget for the stateful widget and give it a child parameter."
+    },
+    "66": {
+        "question": "What is BuildContext and how is it useful?",
+        "answer": "BuildContext is actually the widget's element in the Element tree — so every widget has its own BuildContext. You usually use BuildContext to get a reference to the theme or to another widget. For example, if you want to show a material dialog, you need a reference to the scaffold. You can get it with Scaffold.of(context), where context is the build context. of() searches up the tree until it finds the nearest scaffold."
+    },
+    "67": {
+        "question": "What is setState() ?",
+        "answer": "setState notifies the framework that the internal state of an object has changed in a way that might impact the user interface in this subtree, which causes the framework to schedule a build for this State object. If we just change the state directly without calling setState, the framework might not schedule a build and the user interface for this subtree might not be updated to reflect the new state. It is recommended that the setState method only be used to wrap the actual changes to the state, not any computation that might be associated with the change."
+    },
+    "68": {
+        "question": "What is the difference between WidgetsApp and MaterialApp?",
+        "answer": "WidgetsApp provides basic navigation. Together with the widgets library, it includes many of the foundational widgets that Flutter uses. MaterialApp and the corresponding material library is a layer built on top of WidgetsApp and the widgets library. It implements Material Design, which gives the app a unified look and feel on any platform or device. The material library has many additional widgets that come with it. You certainly aren’t required to use MaterialApp in your project. You can use CupertinoApp to make iOS users feel at home, or you can even build your own set of custom widgets to fit your brand."
+    },
+    "69": {
+        "question": "What is profile mode and when do you use it?",
+        "answer": "In profile mode, some debugging ability is maintained—enough to profile your app’s performance. Profile mode is used when you want to analyze performance. Profile mode is disabled on the emulator and simulator, because their behavior is not representative of real performance. On mobile, profile mode is similar to release mode, with the following differences: - Some service extensions, such as the one that enables the performance overlay, are enabled. - Tracing is enabled, and tools supporting source-level debugging (such as DevTools) can connect to the process. Profile mode for a web app means that: - The build is not minified but tree shaking has been performed. - The app is compiled with the dart2js compiler. The command flutter run --profile compiles to profile mode."
+    },
+    "70": {
+        "question": "What is the purpose of @override used in Flutter?",
+        "answer": "@override points out that the function is also defined in an ancestor class, but is being redefined to do something else in the current class. It's also used to annotate the implementation of an abstract method. It is optional to use but recommended as it improves readability."
+    },
+    "71": {
+        "question": "What are packages and plugins in Flutter?",
+        "answer": "A package is a group of similar types of classes, interfaces, and sub-packages. The packages and plugins help us to build the app without having to develop everything from packages.\n\nn Flutter, it allows you to import new widgets or functionality into the app. The packages and plugins have a very small distinction. Generally, packages are the new components or the code written in dart languages, whereas plugins allow more functionality on the device by using the native code. In the DartPub, packages and plugins are both referred to as packages."
+    },
+    "72": {
+        "question": "What is release mode and when do you use it?",
+        "answer": "Use release mode for deploying the app, when you want maximum optimization and minimal footprint size. For mobile, release mode (which is not supported on the simulator or emulator), means that:\n\nAssertions are disabled. Debugging information is stripped out. Debugging is disabled. Compilation is optimized for fast startup, fast execution, and small package sizes. Service extensions are disabled. Release mode for a web app means that: The build is minified and tree shaking has been performed. The app is compiled with the dart2js compiler for best performance."
+    },
+    "73": {
+        "question": "Why should you use kReleaseMode instead of assert?",
+        "answer": "Generally it is better to use kDebugMode or assert to gate code, since using kReleaseMode will introduce differences between release and profile builds, which makes performance testing less representative."
+    },
+    "74": {
+        "question": "What does a class with a method named ._() mean in Dart/Flutter?",
+        "answer": "AppTheme._(); is a named constructor (another examples might be the copy constructor on some objects in the Flutter framework: ThemeData.copy(...);).\n\nIn dart, if the leading character is an underscore, then the function/constructor is private to the library. That's also the case here, and the underscore is also the only character, so I'd imagine whoever wrote this constructor didn't plan for that constructor to ever be called at all.\n\nThe AppTheme._(); isn't necessary unless you don't want AppTheme to ever be accidentally instantiated using the implicit default constructor."
     }
 }
