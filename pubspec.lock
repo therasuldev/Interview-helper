@@ -278,7 +278,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "8.1.2"
-<<<<<<< HEAD
   flutter_gen:
     dependency: "direct main"
     description:
@@ -303,8 +302,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "5.3.0"
-=======
->>>>>>> develop
   flutter_lints:
     dependency: "direct dev"
     description:
@@ -483,7 +480,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.8.0"
-<<<<<<< HEAD
   mime:
     dependency: transitive
     description:
@@ -492,8 +488,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.4"
-=======
->>>>>>> develop
   nested:
     dependency: transitive
     description:
@@ -502,7 +496,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.0"
-<<<<<<< HEAD
   package_config:
     dependency: transitive
     description:
@@ -515,10 +508,10 @@ packages:
     dependency: transitive
     description:
       name: package_info_plus
-      sha256: cbff87676c352d97116af6dbea05aa28c4d65eb0f6d5677a520c11a69ca9a24d
+      sha256: "10259b111176fba5c505b102e3a5b022b51dd97e30522e906d6922c745584745"
       url: "https://pub.dev"
     source: hosted
-    version: "3.1.0"
+    version: "3.1.2"
   package_info_plus_platform_interface:
     dependency: transitive
     description:
@@ -527,8 +520,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.1"
-=======
->>>>>>> develop
   path:
     dependency: transitive
     description:
@@ -537,7 +528,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.8.2"
-<<<<<<< HEAD
   path_provider:
     dependency: "direct main"
     description:
@@ -550,10 +540,10 @@ packages:
     dependency: transitive
     description:
       name: path_provider_android
-      sha256: da97262be945a72270513700a92b39dd2f4a54dad55d061687e2e37a6390366a
+      sha256: "2cec049d282c7f13c594b4a73976b0b4f2d7a1838a6dd5aaf7bd9719196bee86"
       url: "https://pub.dev"
     source: hosted
-    version: "2.0.25"
+    version: "2.0.27"
   path_provider_foundation:
     dependency: transitive
     description:
@@ -582,10 +572,10 @@ packages:
     dependency: transitive
     description:
       name: path_provider_windows
-      sha256: f53720498d5a543f9607db4b0e997c4b5438884de25b0f73098cc2671a51b130
+      sha256: d3f80b32e83ec208ac95253e0cd4d298e104fbc63cb29c5c69edaed43b0c69d6
       url: "https://pub.dev"
     source: hosted
-    version: "2.1.5"
+    version: "2.1.6"
   petitparser:
     dependency: transitive
     description:
@@ -626,8 +616,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.2.4"
-=======
->>>>>>> develop
   provider:
     dependency: transitive
     description:
@@ -636,7 +624,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "6.0.5"
-<<<<<<< HEAD
   pub_semver:
     dependency: transitive
     description:
@@ -657,10 +644,10 @@ packages:
     dependency: transitive
     description:
       name: share_plus
-      sha256: "692261968a494e47323dcc8bc66d8d52e81bc27cb4b808e4e8d7e8079d4cc01a"
+      sha256: b1f15232d41e9701ab2f04181f21610c36c83a12ae426b79b4bd011c567934b1
       url: "https://pub.dev"
     source: hosted
-    version: "6.3.2"
+    version: "6.3.4"
   share_plus_platform_interface:
     dependency: transitive
     description:
@@ -693,8 +680,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.3"
-=======
->>>>>>> develop
   sky_engine:
     dependency: transitive
     description: flutter
@@ -926,8 +911,4 @@ packages:
     version: "3.1.1"
 sdks:
   dart: ">=2.19.6 <3.0.0"
-<<<<<<< HEAD
   flutter: ">=3.3.0"
-=======
-  flutter: ">=1.16.0"
->>>>>>> develop
