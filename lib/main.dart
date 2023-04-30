@@ -1,18 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_interview_questions/app_build.dart';
+import 'package:flutter_interview_questions/app_router.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 
-void main() {
+Future<void> main() async {
+  App.build();
+  await initialization();
   runApp(const MyApp());
 }
-class MyApp extends StatefulWidget {
+
+Future initialization() async {
+  await Future.delayed(const Duration(seconds: 3));
+  FlutterNativeSplash.remove();
+}
+
+class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  @override
   Widget build(BuildContext context) {
-    return Container();
+    return MaterialApp.router(
+      debugShowCheckedModeBanner: false,
+      routerConfig: AppRouter().router,
+    );
   }
 }
