@@ -1,20 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_interview_questions/app_build.dart';
 import 'package:flutter_interview_questions/app_router.dart';
-import 'package:flutter_interview_questions/core/model/question/question.dart';
-import 'package:hive_flutter/hive_flutter.dart';
-import 'package:path_provider/path_provider.dart' as path;
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 Future<void> main() async {
-  await path
-      .getApplicationDocumentsDirectory()
-      .then((directory) async => await Hive.initFlutter(directory.path));
-
-  if (!(Hive.isAdapterRegistered(0))) {
-    Hive.registerAdapter(QuestionAdapter());
-  }
-
-  await Hive.openBox('questions');
+  App.build();
+  await initialization();
   runApp(const MyApp());
+}
+
+Future initialization() async {
+  await Future.delayed(const Duration(seconds: 3));
+  FlutterNativeSplash.remove();
 }
 
 class MyApp extends StatelessWidget {

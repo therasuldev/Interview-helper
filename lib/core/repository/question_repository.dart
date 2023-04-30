@@ -13,7 +13,6 @@ class QuestionRepository extends IQuestionRepository {
   }) : _cacheService = cacheService ?? CacheService();
 
   final CacheService _cacheService;
-  //final String _path;
 
   @override
   Future<List<Map<String, dynamic>>> loadQuestions({String? type}) async {
