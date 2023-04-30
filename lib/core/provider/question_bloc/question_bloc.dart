@@ -22,7 +22,8 @@ class QuestionBloc extends Bloc<QuestionEvent, QuestionState> {
     emit(state.copyWith(event: event.type, loading: true));
 
     try {
-      final data = await questionRepository.loadQuestions(type: event.payload);
+      final data =
+          await questionRepository.fetchQuestionStart(type: event.payload);
 
       final questions = data.map((question) {
         return Question.fromJson(question);

@@ -15,7 +15,7 @@ class QuestionRepository extends IQuestionRepository {
   final CacheService _cacheService;
 
   @override
-  Future<List<Map<String, dynamic>>> loadQuestions({String? type}) async {
+  Future<List<Map<String, dynamic>>> fetchQuestionStart({String? type}) async {
     List<Map<String, dynamic>> questions = [];
 
     var jsonStr = await rootBundle.loadString('prg_lang/$type.json');
@@ -26,11 +26,11 @@ class QuestionRepository extends IQuestionRepository {
     }
 
     _cacheService.questions.put(type, questions);
-    return await getQuestions(type!);
+    return await fetchQuestionSuccess(type!);
   }
 
   @override
-  Future<List<Map<String, dynamic>>> getQuestions(String category) async {
+  Future<List<Map<String, dynamic>>> fetchQuestionSuccess(String category) async {
     return await _cacheService.questions.get(category);
   }
 }
