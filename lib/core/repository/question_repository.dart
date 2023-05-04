@@ -18,7 +18,7 @@ class QuestionRepository extends IQuestionRepository {
   Future<List<Map<String, dynamic>>> fetchQuestionStart({String? type}) async {
     List<Map<String, dynamic>> questions = [];
 
-    var jsonStr = await rootBundle.loadString('prg_lang/$type.json');
+    var jsonStr = await rootBundle.loadString('assets/prg_lang/$type.json');
     Map<String, dynamic> jsonMap = await json.decode(jsonStr);
 
     for (var i = 1; i <= jsonMap.length; i++) {

@@ -9,6 +9,16 @@
 
 import 'package:flutter/widgets.dart';
 
+class $AssetsPrgLangGen {
+  const $AssetsPrgLangGen();
+
+  /// File path: assets/prg_lang/flutter.json
+  String get flutter => 'assets/prg_lang/flutter.json';
+
+  /// List of all assets
+  List<String> get values => [flutter];
+}
+
 class $AssetsProgrammingLangPngGen {
   const $AssetsProgrammingLangPngGen();
 
@@ -27,6 +37,7 @@ class $AssetsProgrammingLangPngGen {
 class Assets {
   Assets._();
 
+  static const $AssetsPrgLangGen prgLang = $AssetsPrgLangGen();
   static const $AssetsProgrammingLangPngGen programmingLangPng =
       $AssetsProgrammingLangPngGen();
 }

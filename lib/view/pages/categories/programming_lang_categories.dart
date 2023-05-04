@@ -1,59 +1,45 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_interview_questions/app_navigators.dart';
+import 'package:flutter_interview_questions/core/provider/question_bloc/question_bloc.dart';
+import 'package:flutter_interview_questions/core/provider/question_bloc/question_event.dart';
+import 'package:flutter_interview_questions/core/provider/question_bloc/question_state.dart';
 import 'package:flutter_interview_questions/gen/assets.gen.dart';
+import 'package:flutter_interview_questions/view/pages/questionList/question_list_page.dart';
 import 'package:flutter_interview_questions/view/utils/utils.dart';
-import 'package:go_router/go_router.dart';
 
-class ProgrammingLanguageCategories extends StatefulWidget {
-  const ProgrammingLanguageCategories({super.key});
+class LangCategories extends StatefulWidget {
+  const LangCategories({super.key});
 
   @override
-  State<ProgrammingLanguageCategories> createState() =>
-      _ProgrammingLanguageCategoriesState();
+  State<LangCategories> createState() => _LangCategoriesState();
 }
 
-class _ProgrammingLanguageCategoriesState
-    extends State<ProgrammingLanguageCategories> {
+class _LangCategoriesState extends State<LangCategories> {
   /// programming lang. images
   final List<String> _images = [
     Assets.programmingLangPng.flutter.path,
     Assets.programmingLangPng.go.path,
   ];
 
-  /// programming lang. names
+  /// programming lang.
   final List<String> _languages = [
     'Flutter',
     'Go lang',
   ];
+
+  final List<String> categories = [
+    'flutter',
+    'go',
+  ];
+
   @override
-  Widget build(BuildContext context) => Scaffold(
-        body: GridView.builder(
-          itemCount: _languages.length,
-          gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-            maxCrossAxisExtent: 250,
-            childAspectRatio: 1,
-            mainAxisSpacing: 30,
-          ),
-          itemBuilder: (_, index) => _CategoriesBox(
-            images: _images,
-            languages: _languages,
-            index: index,
-          ),
-        ),
-      );
-}
+  void initState() {
+    super.initState();
+    _bloc = BlocProvider.of<QuestionBloc>(context);
+  }
 
-class _CategoriesBox extends StatelessWidget {
-  _CategoriesBox(
-      {required List<String> images,
-      required List<String> languages,
-      required int index})
-      : _images = images,
-        _languages = languages,
-        _index = index;
-
-  final List<String> _images;
-  final List<String> _languages;
-  final int _index;
+  late QuestionBloc _bloc;
 
   final _colors = [
     Colors.white,
@@ -61,33 +47,53 @@ class _CategoriesBox extends StatelessWidget {
   ];
 
   @override
-  Widget build(BuildContext context) => Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 10),
-        child: GestureDetector(
-          onTap: () => context.go('/listv'),
-          child: Container(
-            alignment: Alignment.center,
-            decoration: ViewUtils.categoryBox(
-              colors: _colors,
-              boxColor: Colors.grey,
+  Widget build(BuildContext context) => Scaffold(
+        body: BlocListener<QuestionBloc, QuestionState>(
+          listener: (context, state) {
+            if (!state.loading!) {
+              AppNavigators.go(
+                  context, QuestionListView(questions: state.questions ?? []));
+            }
+          },
+          child: GridView.builder(
+            itemCount: _languages.length,
+            gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+              maxCrossAxisExtent: 250,
+              childAspectRatio: 1,
+              mainAxisSpacing: 30,
             ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const Spacer(),
-                SizedBox(height: 100, child: Image.asset(_images[_index])),
-                const Spacer(),
-                Text(
-                  _languages[_index],
-                  style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                        color: Colors.grey[600]!.withRed(50),
-                        fontWeight: FontWeight.w900,
-                      ),
+            itemBuilder: (context, index) {
+              return GestureDetector(
+                onTap: () => _bloc.add(
+                  QuestionEvent.fetchQuestionStart(categories[index]),
                 ),
-                const Spacer(),
-              ],
-            ),
+                child: Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 10),
+                  alignment: Alignment.center,
+                  decoration: ViewUtils.categoryBox(
+                    colors: _colors,
+                    boxColor: Colors.grey,
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Spacer(),
+                      SizedBox(height: 100, child: Image.asset(_images[index])),
+                      const Spacer(),
+                      Text(
+                        _languages[index],
+                        style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                              color: Colors.grey[600]!.withRed(50),
+                              fontWeight: FontWeight.w900,
+                            ),
+                      ),
+                      const Spacer(),
+                    ],
+                  ),
+                ),
+              );
+            },
           ),
         ),
       );

@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_interview_questions/appbar_clipper.dart';
+import 'package:flutter_interview_questions/core/model/question/question.dart';
 
 class QuestionView extends StatefulWidget {
-  const QuestionView({super.key});
+  const QuestionView({super.key, required this.question});
+
+  final Question question;
 
   @override
   State<QuestionView> createState() => _QuestionViewState();
@@ -42,10 +45,10 @@ class _QuestionViewState extends State<QuestionView> {
                           ],
                         ),
                       ),
-                      const Text(
-                        'What’s the difference between Ephemeral State and App state in flutter ?',
+                      Text(
+                        widget.question.question,
                         textAlign: TextAlign.center,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 25,
                           fontWeight: FontWeight.w700,
                           color: Colors.white,
@@ -54,12 +57,12 @@ class _QuestionViewState extends State<QuestionView> {
                     ],
                   )),
             )),
-        body: const Padding(
-          padding: EdgeInsets.all(8.0),
+        body: Padding(
+          padding: const EdgeInsets.all(8.0),
           child: Text(
-            "Ephemeral State -when your state variables are in inside of the Stateful widget, its known as ephemeral state. When your state variables are in outside of the Stateful widget, its known as App state.(because that state is used by many widgets).",
+            widget.question.answer,
             textAlign: TextAlign.center,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 25,
               fontWeight: FontWeight.w700,
               color: Color.fromARGB(255, 89, 97, 107),
