@@ -8,11 +8,15 @@ import 'package:flutter_interview_questions/core/repository/question_repository.
 class QuestionBloc extends Bloc<QuestionEvent, QuestionState> {
   final QuestionRepository questionRepository = QuestionRepository();
 
-  QuestionBloc() : super(QuestionState()) {
+  QuestionBloc() : super(QuestionState.unknown()) {
     on<QuestionEvent>((event, emit) {
       switch (event.type) {
         case QuestionEvents.fetchQuestionStart:
           return _onFetchQuestionStart(event);
+        case QuestionEvents.goToNextQuestion:
+          return _onGoToNextQuestion(event);
+        case QuestionEvents.goToPreviousQuestion:
+          return _onGoToPreviousQuestion(event);
         default:
       }
     });
@@ -48,4 +52,9 @@ class QuestionBloc extends Bloc<QuestionEvent, QuestionState> {
       );
     }
   }
+
+  _onGoToNextQuestion(dynamic event) async {
+    
+  }
+  _onGoToPreviousQuestion(dynamic event) async {}
 }

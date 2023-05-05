@@ -1,3 +1,4 @@
+import 'package:field_suggestion/field_suggestion.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_interview_questions/app_navigators.dart';
 import 'package:flutter_interview_questions/core/model/question/question.dart';
@@ -14,13 +15,29 @@ class QuestionListView extends StatefulWidget {
 }
 
 class _QuestionListViewState extends State<QuestionListView> {
+  final textController = TextEditingController();
   @override
   Widget build(BuildContext context) => Scaffold(
+        appBar: AppBar(
+          automaticallyImplyLeading: false,
+          actions: const [Icon(Icons.search)],
+          title: FieldSuggestion(
+            boxStyle: const BoxStyle(backgroundColor: Colors.red),
+            itemBuilder: (_, i) {
+              return Container(color: Colors.red, child: const Text('salam'));
+            },
+            textController: textController,
+            suggestions: widget.questions,
+            search: (item, input) {
+              return true;
+            },
+          ),
+        ),
         body: ListView.builder(
             shrinkWrap: true,
             itemCount: widget.questions.length,
             itemBuilder: (context, index) {
-              final questions = widget.questions[index];
+              final question = widget.questions[index];
               return Container(
                 margin: const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
                 width: context.width * .8,
@@ -52,10 +69,15 @@ class _QuestionListViewState extends State<QuestionListView> {
                 child: ListTile(
                   onTap: () {
                     AppNavigators.go(
-                        context, QuestionView(question: questions));
+                      context,
+                      QuestionView(
+                        questions: widget.questions,
+                        index: index,
+                      ),
+                    );
                   },
                   title: Text(
-                    '${index + 1}. ${questions.question}',
+                    '${index + 1}. ${question.question}',
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                     style: const TextStyle(
@@ -65,7 +87,7 @@ class _QuestionListViewState extends State<QuestionListView> {
                     ),
                   ),
                   subtitle: Text(
-                    ' ${questions.answer}',
+                    ' ${question.answer}',
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                     style: const TextStyle(

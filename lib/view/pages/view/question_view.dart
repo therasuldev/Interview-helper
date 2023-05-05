@@ -3,15 +3,42 @@ import 'package:flutter_interview_questions/appbar_clipper.dart';
 import 'package:flutter_interview_questions/core/model/question/question.dart';
 
 class QuestionView extends StatefulWidget {
-  const QuestionView({super.key, required this.question});
+  const QuestionView({
+    super.key,
+    required this.questions,
+    required this.index,
+  });
 
-  final Question question;
+  final List<Question> questions;
+  final int index;
 
   @override
   State<QuestionView> createState() => _QuestionViewState();
 }
 
 class _QuestionViewState extends State<QuestionView> {
+  List<Question> questions = [];
+  int currentIndex = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    questions = widget.questions;
+    currentIndex = widget.index;
+  }
+
+  _goToNextQuestion() {
+    if (currentIndex < questions.length - 1) {
+      setState(() => currentIndex++);
+    }
+  }
+
+  _goToPreviousQuestion() {
+    if (currentIndex > 0) {
+      setState(() => currentIndex--);
+    }
+  }
+
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: PreferredSize(
@@ -29,14 +56,20 @@ class _QuestionViewState extends State<QuestionView> {
                         padding: const EdgeInsets.only(
                             top: 50, left: 15, right: 15, bottom: 15),
                         child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: const [
-                            BackButton(
-                              color: Colors.white,
+                          children: [
+                            const BackButton(color: Colors.white),
+                            const Spacer(flex: 30),
+                            IconButton(
+                              onPressed: () {},
+                              icon: const Icon(
+                                Icons.favorite,
+                                color: Colors.white,
+                              ),
                             ),
+                            const Spacer(flex: 1),
                             Text(
-                              '1/71',
-                              style: TextStyle(
+                              '${currentIndex + 1}/${widget.questions.length}',
+                              style: const TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.w900,
                                 color: Colors.white,
@@ -46,7 +79,7 @@ class _QuestionViewState extends State<QuestionView> {
                         ),
                       ),
                       Text(
-                        widget.question.question,
+                        questions[currentIndex].question,
                         textAlign: TextAlign.center,
                         style: const TextStyle(
                           fontSize: 25,
@@ -59,13 +92,16 @@ class _QuestionViewState extends State<QuestionView> {
             )),
         body: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Text(
-            widget.question.answer,
-            textAlign: TextAlign.center,
-            style: const TextStyle(
-              fontSize: 25,
-              fontWeight: FontWeight.w700,
-              color: Color.fromARGB(255, 89, 97, 107),
+          child: SingleChildScrollView(
+            physics: const BouncingScrollPhysics(),
+            child: Text(
+              questions[currentIndex].answer,
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                fontSize: 25,
+                fontWeight: FontWeight.w700,
+                color: Color.fromARGB(255, 89, 97, 107),
+              ),
             ),
           ),
         ),
@@ -78,12 +114,12 @@ class _QuestionViewState extends State<QuestionView> {
               _CustomFloatingActionButton(
                 heroTag: 'previous',
                 label: 'previous',
-                onPressed: () {},
+                onPressed: _goToPreviousQuestion,
               ),
               _CustomFloatingActionButton(
                 heroTag: 'next',
                 label: 'next',
-                onPressed: () {},
+                onPressed: _goToNextQuestion,
               ),
             ],
           ),

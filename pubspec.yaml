@@ -19,6 +19,7 @@ dependencies:
 
   flutter_gen: ^5.3.0
   kartal: ^2.8.0
+  field_suggestion: ^0.2.5
 
   # local database
   hive: ^2.2.2
