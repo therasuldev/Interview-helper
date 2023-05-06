@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_interview_questions/app_build.dart';
 import 'package:flutter_interview_questions/core/provider/question_bloc/question_bloc.dart';
-import 'package:flutter_interview_questions/view/pages/categories/programming_lang_categories.dart';
+import 'package:flutter_interview_questions/view/pages/categories/categories.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 Future<void> main() async {

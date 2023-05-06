@@ -377,7 +377,7 @@ packages:
     source: hosted
     version: "2.2.0"
   highlightable:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: highlightable
       sha256: "526793e148c91977b694d75d99cd34401ea3b65efd223e7b539c76916af86ffd"

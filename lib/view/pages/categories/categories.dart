@@ -5,7 +5,7 @@ import 'package:flutter_interview_questions/core/provider/question_bloc/question
 import 'package:flutter_interview_questions/core/provider/question_bloc/question_event.dart';
 import 'package:flutter_interview_questions/core/provider/question_bloc/question_state.dart';
 import 'package:flutter_interview_questions/gen/assets.gen.dart';
-import 'package:flutter_interview_questions/view/pages/questionList/question_list_page.dart';
+import 'package:flutter_interview_questions/view/pages/questions/questions.dart';
 import 'package:flutter_interview_questions/view/utils/utils.dart';
 
 class LangCategories extends StatefulWidget {
@@ -41,18 +41,15 @@ class _LangCategoriesState extends State<LangCategories> {
 
   late QuestionBloc _bloc;
 
-  final _colors = [
-    Colors.white,
-    Colors.blueGrey[200]!,
-  ];
-
   @override
   Widget build(BuildContext context) => Scaffold(
         body: BlocListener<QuestionBloc, QuestionState>(
           listener: (context, state) {
             if (!state.loading!) {
               AppNavigators.go(
-                  context, QuestionListView(questions: state.questions ?? []));
+                context,
+                Questions(questions: state.questions ?? []),
+              );
             }
           },
           child: GridView.builder(
@@ -62,38 +59,33 @@ class _LangCategoriesState extends State<LangCategories> {
               childAspectRatio: 1,
               mainAxisSpacing: 30,
             ),
-            itemBuilder: (context, index) {
-              return GestureDetector(
-                onTap: () => _bloc.add(
-                  QuestionEvent.fetchQuestionStart(categories[index]),
+            itemBuilder: (context, index) => GestureDetector(
+              onTap: () => _bloc.add(
+                QuestionEvent.fetchQuestionStart(categories[index]),
+              ),
+              child: Container(
+                margin: const EdgeInsets.symmetric(horizontal: 10),
+                alignment: Alignment.center,
+                decoration: ViewUtils.categoryCard(),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Spacer(),
+                    SizedBox(height: 100, child: Image.asset(_images[index])),
+                    const Spacer(),
+                    Text(
+                      _languages[index],
+                      style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                            color: Colors.grey[600]!.withRed(50),
+                            fontWeight: FontWeight.w900,
+                          ),
+                    ),
+                    const Spacer(),
+                  ],
                 ),
-                child: Container(
-                  margin: const EdgeInsets.symmetric(horizontal: 10),
-                  alignment: Alignment.center,
-                  decoration: ViewUtils.categoryBox(
-                    colors: _colors,
-                    boxColor: Colors.grey,
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      const Spacer(),
-                      SizedBox(height: 100, child: Image.asset(_images[index])),
-                      const Spacer(),
-                      Text(
-                        _languages[index],
-                        style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                              color: Colors.grey[600]!.withRed(50),
-                              fontWeight: FontWeight.w900,
-                            ),
-                      ),
-                      const Spacer(),
-                    ],
-                  ),
-                ),
-              );
-            },
+              ),
+            ),
           ),
         ),
       );
