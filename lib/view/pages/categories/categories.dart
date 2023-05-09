@@ -5,7 +5,7 @@ import 'package:flutter_interview_questions/core/provider/question_bloc/question
 import 'package:flutter_interview_questions/core/provider/question_bloc/question_event.dart';
 import 'package:flutter_interview_questions/core/provider/question_bloc/question_state.dart';
 import 'package:flutter_interview_questions/gen/assets.gen.dart';
-import 'package:flutter_interview_questions/view/pages/questions/questions.dart';
+import 'package:flutter_interview_questions/view/pages/categories/questions/questions.dart';
 import 'package:flutter_interview_questions/view/utils/utils.dart';
 
 class LangCategories extends StatefulWidget {
@@ -42,48 +42,47 @@ class _LangCategoriesState extends State<LangCategories> {
   late QuestionBloc _bloc;
 
   @override
-  Widget build(BuildContext context) => Scaffold(
-        body: BlocListener<QuestionBloc, QuestionState>(
-          listener: (context, state) {
-            if (!state.loading!) {
-              AppNavigators.go(
-                context,
-                Questions(questions: state.questions ?? []),
-              );
-            }
-          },
-          child: GridView.builder(
-            itemCount: _languages.length,
-            gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-              maxCrossAxisExtent: 250,
-              childAspectRatio: 1,
-              mainAxisSpacing: 30,
+  Widget build(BuildContext context) =>
+      BlocListener<QuestionBloc, QuestionState>(
+        listener: (context, state) {
+          if (!state.loading!) {
+            AppNavigators.go(
+              context,
+              Questions(questions: state.questions ?? []),
+            );
+          }
+        },
+        child: GridView.builder(
+          itemCount: _languages.length,
+          gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+            maxCrossAxisExtent: 250,
+            childAspectRatio: 1,
+            mainAxisSpacing: 30,
+          ),
+          itemBuilder: (context, index) => GestureDetector(
+            onTap: () => _bloc.add(
+              QuestionEvent.fetchQuestionStart(categories[index]),
             ),
-            itemBuilder: (context, index) => GestureDetector(
-              onTap: () => _bloc.add(
-                QuestionEvent.fetchQuestionStart(categories[index]),
-              ),
-              child: Container(
-                margin: const EdgeInsets.symmetric(horizontal: 10),
-                alignment: Alignment.center,
-                decoration: ViewUtils.categoryCard(),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Spacer(),
-                    SizedBox(height: 100, child: Image.asset(_images[index])),
-                    const Spacer(),
-                    Text(
-                      _languages[index],
-                      style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                            color: Colors.grey[600]!.withRed(50),
-                            fontWeight: FontWeight.w900,
-                          ),
-                    ),
-                    const Spacer(),
-                  ],
-                ),
+            child: Container(
+              margin: const EdgeInsets.symmetric(horizontal: 10),
+              alignment: Alignment.center,
+              decoration: ViewUtils.categoryCard(),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Spacer(),
+                  SizedBox(height: 100, child: Image.asset(_images[index])),
+                  const Spacer(),
+                  Text(
+                    _languages[index],
+                    style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                          color: Colors.grey[600]!.withRed(50),
+                          fontWeight: FontWeight.w900,
+                        ),
+                  ),
+                  const Spacer(),
+                ],
               ),
             ),
           ),

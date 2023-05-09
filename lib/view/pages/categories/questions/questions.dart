@@ -2,7 +2,7 @@ import 'package:field_suggestion/field_suggestion.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_interview_questions/app_navigators.dart';
 import 'package:flutter_interview_questions/core/model/question/question.dart';
-import 'package:flutter_interview_questions/view/pages/view/question_view.dart';
+import 'package:flutter_interview_questions/view/pages/categories/questions/view/question_view.dart';
 import 'package:flutter_interview_questions/view/utils/utils.dart';
 import 'package:kartal/kartal.dart';
 
