@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_interview_questions/view/pages/categories/categories.dart';
 import 'package:flutter_interview_questions/view/pages/store/store.dart';
+import 'package:kartal/kartal.dart';
 
 class GeneralPage extends StatefulWidget {
   const GeneralPage({super.key});
@@ -10,13 +11,11 @@ class GeneralPage extends StatefulWidget {
 }
 
 class _GeneralPageState extends State<GeneralPage> {
-  // pages
   final List<Widget> _children = [
     const LangCategories(),
     const BookStore(),
   ];
 
-  //bottom tapped function
   _bottomTapped(index) {
     setState(() {
       this.index = index;
@@ -28,13 +27,13 @@ class _GeneralPageState extends State<GeneralPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _children[index],
+      body: _children.elementAtOrNull(index),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: index,
         onTap: (ind) => _bottomTapped(ind),
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: ''),
-          BottomNavigationBarItem(icon: Icon(Icons.store), label: '')
+          BottomNavigationBarItem(icon: Icon(Icons.auto_stories), label: '')
         ],
       ),
     );

@@ -2,9 +2,6 @@ enum QuestionEvents {
   fetchQuestionStart,
   fetchQuestionSuccess,
   fetchQuestionError,
-
-  goToNextQuestion,
-  goToPreviousQuestion,
 }
 
 class QuestionEvent {
@@ -20,13 +17,5 @@ class QuestionEvent {
   }
   QuestionEvent.fetchQuestionError() {
     type = QuestionEvents.fetchQuestionError;
-  }
-  QuestionEvent.goToNextQuestion(int index) {
-    type = QuestionEvents.goToNextQuestion;
-    payload = index;
-  }
-  QuestionEvent.goToPreviousQuestion(int index) {
-    type = QuestionEvents.goToPreviousQuestion;
-    payload = index;
   }
 }

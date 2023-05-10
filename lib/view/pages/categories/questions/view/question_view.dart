@@ -17,8 +17,8 @@ class QuestionView extends StatefulWidget {
 }
 
 class _QuestionViewState extends State<QuestionView> {
-  List<Question> questions = [];
-  int currentIndex = 0;
+  late List<Question> questions;
+  late int currentIndex;
 
   @override
   void initState() {
@@ -91,7 +91,12 @@ class _QuestionViewState extends State<QuestionView> {
                   )),
             )),
         body: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: EdgeInsets.only(
+            left: 5,
+            right: 5,
+            top: 5,
+            bottom: MediaQuery.of(context).size.width * .2,
+          ),
           child: SingleChildScrollView(
             physics: const BouncingScrollPhysics(),
             child: Text(
@@ -134,10 +139,6 @@ class _CustomFloatingActionButton extends StatelessWidget {
     required this.onPressed,
   });
 
-  final String heroTag;
-  final String label;
-  final void Function()? onPressed;
-
   final _style = const TextStyle(
     fontSize: 17,
     fontWeight: FontWeight.w700,
@@ -149,7 +150,11 @@ class _CustomFloatingActionButton extends StatelessWidget {
         heroTag: heroTag,
         onPressed: onPressed,
         backgroundColor: Colors.green[500],
-        extendedPadding: const EdgeInsetsDirectional.symmetric(horizontal: 40),
         label: Text(label, style: _style),
+        extendedPadding: const EdgeInsets.symmetric(horizontal: 40),
       );
+
+  final String heroTag;
+  final String label;
+  final void Function()? onPressed;
 }
