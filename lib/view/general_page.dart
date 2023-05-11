@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_interview_questions/view/pages/categories/categories.dart';
 import 'package:flutter_interview_questions/view/pages/store/store.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_interview_questions/view/utils/utils.dart';
 import 'package:kartal/kartal.dart';
 
 class GeneralPage extends StatefulWidget {
@@ -31,15 +31,14 @@ class _GeneralPageState extends State<GeneralPage> {
           centerTitle: true,
           title: Text(
             'Programming languages',
-            style:
-                GoogleFonts.ubuntu(fontWeight: FontWeight.w400, fontSize: 22),
+            style: ViewUtils.ubuntuStyle(fontSize: 22),
           ),
           backgroundColor: const Color.fromARGB(255, 38, 109, 176),
         ),
         body: _children.elementAtOrNull(index),
         bottomNavigationBar: BottomNavigationBar(
-          selectedLabelStyle:
-              GoogleFonts.ubuntu(fontWeight: FontWeight.w400, fontSize: 16),
+          selectedLabelStyle: ViewUtils.ubuntuStyle(fontSize: 16),
+          unselectedLabelStyle: ViewUtils.ubuntuStyle(fontSize: 14),
           selectedItemColor: const Color.fromARGB(255, 38, 109, 176),
           currentIndex: index,
           onTap: (ind) => _bottomTapped(ind),
