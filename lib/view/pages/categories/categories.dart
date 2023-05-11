@@ -35,27 +35,30 @@ class _LangCategoriesState extends State<LangCategories> {
             );
           }
         },
-        child: GridView.builder(
-          physics: const BouncingScrollPhysics(),
-          gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-            maxCrossAxisExtent: 250,
-            childAspectRatio: 1,
-            mainAxisSpacing: 30,
-          ),
-          itemBuilder: (context, index) {
-            return GestureDetector(
-              onTap: () => _bloc.add(
-                QuestionEvent.fetchQuestionStart(
-                  Categories.categories[index],
+        child: Padding(
+          padding: const EdgeInsets.only(top: 20),
+          child: GridView.builder(
+            physics: const BouncingScrollPhysics(),
+            gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+              maxCrossAxisExtent: 250,
+              childAspectRatio: 1,
+              mainAxisSpacing: 30,
+            ),
+            itemBuilder: (context, index) {
+              return GestureDetector(
+                onTap: () => _bloc.add(
+                  QuestionEvent.fetchQuestionStart(
+                    Categories.categories[index],
+                  ),
                 ),
-              ),
-              child: _CategoryCard(
-                image: Categories.images[index],
-                language: Categories.names[index],
-              ),
-            );
-          },
-          itemCount: Categories.categories.length,
+                child: _CategoryCard(
+                  image: Categories.images[index],
+                  language: Categories.names[index],
+                ),
+              );
+            },
+            itemCount: Categories.categories.length,
+          ),
         ),
       );
 }

@@ -34,6 +34,8 @@ dependencies:
   bloc: ^8.1.1
   flutter_bloc: ^8.1.2
 
+  google_fonts: ^4.0.4
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -58,3 +60,10 @@ flutter:
   assets:
     - assets/programming_lang_png/
     - assets/prg_lang/
+
+
+  fonts:
+    - family: Ubuntu-Regular
+      fonts:
+        - asset: assets/fonts/Ubuntu-Regular.ttf
+
