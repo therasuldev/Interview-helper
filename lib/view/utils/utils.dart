@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ViewUtils {
   //for category card [Categories page]
@@ -48,4 +49,11 @@ class ViewUtils {
           bottomRight: Radius.circular(10),
         ),
       );
+
+  static ubuntuStyle({FontWeight? fontWeight, double? fontSize}) {
+    return GoogleFonts.ubuntu(
+      fontWeight: fontWeight ?? FontWeight.w500,
+      fontSize: fontSize,
+    );
+  }
 }

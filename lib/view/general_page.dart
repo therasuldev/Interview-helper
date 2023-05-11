@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_interview_questions/view/pages/categories/categories.dart';
 import 'package:flutter_interview_questions/view/pages/store/store.dart';
+import 'package:flutter_interview_questions/view/utils/utils.dart';
 import 'package:kartal/kartal.dart';
 
 class GeneralPage extends StatefulWidget {
@@ -25,17 +26,27 @@ class _GeneralPageState extends State<GeneralPage> {
   int index = 0;
 
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: _children.elementAtOrNull(index),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: index,
-        onTap: (ind) => _bottomTapped(ind),
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: ''),
-          BottomNavigationBarItem(icon: Icon(Icons.auto_stories), label: '')
-        ],
-      ),
-    );
-  }
+  Widget build(BuildContext context) => Scaffold(
+        appBar: AppBar(
+          centerTitle: true,
+          title: Text(
+            'Programming languages',
+            style: ViewUtils.ubuntuStyle(fontSize: 22),
+          ),
+          backgroundColor: const Color.fromARGB(255, 38, 109, 176),
+        ),
+        body: _children.elementAtOrNull(index),
+        bottomNavigationBar: BottomNavigationBar(
+          selectedLabelStyle: ViewUtils.ubuntuStyle(fontSize: 16),
+          unselectedLabelStyle: ViewUtils.ubuntuStyle(fontSize: 14),
+          selectedItemColor: const Color.fromARGB(255, 38, 109, 176),
+          currentIndex: index,
+          onTap: (ind) => _bottomTapped(ind),
+          items: const [
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.auto_stories), label: 'Library'),
+          ],
+        ),
+      );
 }
