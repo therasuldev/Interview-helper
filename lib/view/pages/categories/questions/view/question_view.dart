@@ -1,14 +1,44 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_interview_questions/appbar_clipper.dart';
+import 'package:flutter_interview_questions/core/model/question/question.dart';
 
 class QuestionView extends StatefulWidget {
-  const QuestionView({super.key});
+  const QuestionView({
+    super.key,
+    required this.questions,
+    required this.index,
+  });
+
+  final List<Question> questions;
+  final int index;
 
   @override
   State<QuestionView> createState() => _QuestionViewState();
 }
 
 class _QuestionViewState extends State<QuestionView> {
+  late List<Question> questions;
+  late int currentIndex;
+
+  @override
+  void initState() {
+    super.initState();
+    questions = widget.questions;
+    currentIndex = widget.index;
+  }
+
+  _goToNextQuestion() {
+    if (currentIndex < questions.length - 1) {
+      setState(() => currentIndex++);
+    }
+  }
+
+  _goToPreviousQuestion() {
+    if (currentIndex > 0) {
+      setState(() => currentIndex--);
+    }
+  }
+
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: PreferredSize(
@@ -26,14 +56,20 @@ class _QuestionViewState extends State<QuestionView> {
                         padding: const EdgeInsets.only(
                             top: 50, left: 15, right: 15, bottom: 15),
                         child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: const [
-                            BackButton(
-                              color: Colors.white,
+                          children: [
+                            const BackButton(color: Colors.white),
+                            const Spacer(flex: 30),
+                            IconButton(
+                              onPressed: () {},
+                              icon: const Icon(
+                                Icons.favorite,
+                                color: Colors.white,
+                              ),
                             ),
+                            const Spacer(flex: 1),
                             Text(
-                              '1/71',
-                              style: TextStyle(
+                              '${currentIndex + 1}/${widget.questions.length}',
+                              style: const TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.w900,
                                 color: Colors.white,
@@ -42,10 +78,10 @@ class _QuestionViewState extends State<QuestionView> {
                           ],
                         ),
                       ),
-                      const Text(
-                        'What’s the difference between Ephemeral State and App state in flutter ?',
+                      Text(
+                        questions[currentIndex].question,
                         textAlign: TextAlign.center,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 25,
                           fontWeight: FontWeight.w700,
                           color: Colors.white,
@@ -54,15 +90,23 @@ class _QuestionViewState extends State<QuestionView> {
                     ],
                   )),
             )),
-        body: const Padding(
-          padding: EdgeInsets.all(8.0),
-          child: Text(
-            "Ephemeral State -when your state variables are in inside of the Stateful widget, its known as ephemeral state. When your state variables are in outside of the Stateful widget, its known as App state.(because that state is used by many widgets).",
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontSize: 25,
-              fontWeight: FontWeight.w700,
-              color: Color.fromARGB(255, 89, 97, 107),
+        body: Padding(
+          padding: EdgeInsets.only(
+            left: 5,
+            right: 5,
+            top: 5,
+            bottom: MediaQuery.of(context).size.width * .2,
+          ),
+          child: SingleChildScrollView(
+            physics: const BouncingScrollPhysics(),
+            child: Text(
+              questions[currentIndex].answer,
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                fontSize: 25,
+                fontWeight: FontWeight.w700,
+                color: Color.fromARGB(255, 89, 97, 107),
+              ),
             ),
           ),
         ),
@@ -75,12 +119,12 @@ class _QuestionViewState extends State<QuestionView> {
               _CustomFloatingActionButton(
                 heroTag: 'previous',
                 label: 'previous',
-                onPressed: () {},
+                onPressed: _goToPreviousQuestion,
               ),
               _CustomFloatingActionButton(
                 heroTag: 'next',
                 label: 'next',
-                onPressed: () {},
+                onPressed: _goToNextQuestion,
               ),
             ],
           ),
@@ -95,10 +139,6 @@ class _CustomFloatingActionButton extends StatelessWidget {
     required this.onPressed,
   });
 
-  final String heroTag;
-  final String label;
-  final void Function()? onPressed;
-
   final _style = const TextStyle(
     fontSize: 17,
     fontWeight: FontWeight.w700,
@@ -110,7 +150,11 @@ class _CustomFloatingActionButton extends StatelessWidget {
         heroTag: heroTag,
         onPressed: onPressed,
         backgroundColor: Colors.green[500],
-        extendedPadding: const EdgeInsetsDirectional.symmetric(horizontal: 40),
         label: Text(label, style: _style),
+        extendedPadding: const EdgeInsets.symmetric(horizontal: 40),
       );
+
+  final String heroTag;
+  final String label;
+  final void Function()? onPressed;
 }

@@ -1,4 +1,3 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter_interview_questions/core/model/error/error_model.dart';
 import 'package:flutter_interview_questions/core/model/question/question.dart';
 import 'package:flutter_interview_questions/core/provider/question_bloc/question_event.dart';

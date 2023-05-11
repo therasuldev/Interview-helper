@@ -8,7 +8,7 @@ import 'package:flutter_interview_questions/core/repository/question_repository.
 class QuestionBloc extends Bloc<QuestionEvent, QuestionState> {
   final QuestionRepository questionRepository = QuestionRepository();
 
-  QuestionBloc() : super(QuestionState()) {
+  QuestionBloc() : super(QuestionState.unknown()) {
     on<QuestionEvent>((event, emit) {
       switch (event.type) {
         case QuestionEvents.fetchQuestionStart:
@@ -31,9 +31,9 @@ class QuestionBloc extends Bloc<QuestionEvent, QuestionState> {
 
       emit(
         state.copyWith(
-          event: QuestionEvents.fetchQuestionSuccess,
           questions: questions,
           loading: false,
+          event: QuestionEvents.fetchQuestionSuccess,
           error: null,
         ),
       );

@@ -6,19 +6,15 @@ part 'question.g.dart';
 @HiveType(typeId: 0)
 class Question {
   @HiveField(0)
-  final String id;
-  @HiveField(1)
   final String question;
-  @HiveField(2)
+  @HiveField(1)
   final String answer;
   Question({
-    required this.id,
     required this.question,
     required this.answer,
   });
 
   Question.fromJson(Map<String, dynamic> data)
-      : id = data['id'],
-        question = data['question'],
+      : question = data['question'],
         answer = data['answer'];
 }

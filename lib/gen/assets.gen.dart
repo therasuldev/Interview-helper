@@ -9,6 +9,16 @@
 
 import 'package:flutter/widgets.dart';
 
+class $AssetsPrgLangGen {
+  const $AssetsPrgLangGen();
+
+  /// File path: assets/prg_lang/flutter.json
+  String get flutter => 'assets/prg_lang/flutter.json';
+
+  /// List of all assets
+  List<String> get values => [flutter];
+}
+
 class $AssetsProgrammingLangPngGen {
   const $AssetsProgrammingLangPngGen();
 
@@ -20,13 +30,39 @@ class $AssetsProgrammingLangPngGen {
   AssetGenImage get go =>
       const AssetGenImage('assets/programming_lang_png/go.png');
 
+  /// File path: assets/programming_lang_png/java.png
+  AssetGenImage get java =>
+      const AssetGenImage('assets/programming_lang_png/java.png');
+
+  /// File path: assets/programming_lang_png/js.png
+  AssetGenImage get js =>
+      const AssetGenImage('assets/programming_lang_png/js.png');
+
+  /// File path: assets/programming_lang_png/python.png
+  AssetGenImage get python =>
+      const AssetGenImage('assets/programming_lang_png/python.png');
+
+  /// File path: assets/programming_lang_png/react.png
+  AssetGenImage get react =>
+      const AssetGenImage('assets/programming_lang_png/react.png');
+
+  /// File path: assets/programming_lang_png/ruby.png
+  AssetGenImage get ruby =>
+      const AssetGenImage('assets/programming_lang_png/ruby.png');
+
+  /// File path: assets/programming_lang_png/rust.png
+  AssetGenImage get rust =>
+      const AssetGenImage('assets/programming_lang_png/rust.png');
+
   /// List of all assets
-  List<AssetGenImage> get values => [flutter, go];
+  List<AssetGenImage> get values =>
+      [flutter, go, java, js, python, react, ruby, rust];
 }
 
 class Assets {
   Assets._();
 
+  static const $AssetsPrgLangGen prgLang = $AssetsPrgLangGen();
   static const $AssetsProgrammingLangPngGen programmingLangPng =
       $AssetsProgrammingLangPngGen();
 }
