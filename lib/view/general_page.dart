@@ -27,6 +27,7 @@ class _GeneralPageState extends State<GeneralPage> {
 
   @override
   Widget build(BuildContext context) => Scaffold(
+        backgroundColor: Colors.grey[200],
         appBar: AppBar(
           centerTitle: true,
           title: Text(
@@ -50,3 +51,5 @@ class _GeneralPageState extends State<GeneralPage> {
         ),
       );
 }
+
+

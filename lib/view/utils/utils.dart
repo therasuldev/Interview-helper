@@ -4,23 +4,21 @@ import 'package:google_fonts/google_fonts.dart';
 class ViewUtils {
   //for category card [Categories page]
   static categoryCard() => BoxDecoration(
-        boxShadow: const [
+        color: Colors.grey[200],
+        boxShadow: [
           BoxShadow(
-            color: Colors.grey,
-            offset: Offset(0, 10),
-            spreadRadius: .5,
+            color: Colors.grey[500]!,
+            offset: const Offset(-10, -10),
             blurRadius: 10,
-          )
+            spreadRadius: -10,
+          ),
+          const BoxShadow(
+            color: Colors.white,
+            offset: Offset(10, 10),
+            blurRadius: 10,
+            spreadRadius: -5,
+          ),
         ],
-        gradient: LinearGradient(
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-          colors: [
-            Colors.white,
-            Colors.blueGrey[200]!,
-          ],
-          stops: const [0.5, 1],
-        ),
         borderRadius: BorderRadius.circular(15),
       );
 
@@ -50,6 +48,7 @@ class ViewUtils {
         ),
       );
 
+  // Ubuntu Google fonts
   static ubuntuStyle({FontWeight? fontWeight, double? fontSize}) {
     return GoogleFonts.ubuntu(
       fontWeight: fontWeight ?? FontWeight.w500,
