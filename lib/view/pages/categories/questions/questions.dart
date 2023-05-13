@@ -28,6 +28,7 @@ class _QuestionCardState extends State<Questions> {
         fieldFocusNode.unfocus();
       },
       child: Scaffold(
+        backgroundColor: Colors.grey[200],
         appBar: AppBar(
           backgroundColor: Colors.transparent,
           elevation: 0,
