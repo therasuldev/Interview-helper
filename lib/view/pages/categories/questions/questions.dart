@@ -17,6 +17,7 @@ class Questions extends StatefulWidget {
 
 class _QuestionCardState extends State<Questions> {
   final textController = TextEditingController();
+  final searchBarController = TextEditingController();
   final fieldFocusNode = FocusNode();
   final boxController = BoxController();
 
@@ -28,85 +29,127 @@ class _QuestionCardState extends State<Questions> {
         fieldFocusNode.unfocus();
       },
       child: Scaffold(
-        backgroundColor: Colors.grey[200],
-        appBar: AppBar(
-          backgroundColor: Colors.transparent,
-          elevation: 0,
-          automaticallyImplyLeading: false,
-          title: FieldSuggestion(
-            boxController: boxController,
-            focusNode: fieldFocusNode,
-            boxStyle: _boxStyle(),
-            itemBuilder: (context, index) {
-              return ListTile(
-                onTap: () async {
-                  await AppNavigators.go(
-                    context,
-                    QuestionView(questions: widget.questions, index: index),
-                  );
+          backgroundColor: Colors.grey[200],
+          appBar: AppBar(
+            backgroundColor: Colors.transparent,
+            elevation: 0,
+            automaticallyImplyLeading: false,
+            // title: FieldSuggestion(
+            //   boxController: boxController,
+            //   focusNode: fieldFocusNode,
+            //   boxStyle: _boxStyle(),
+            //   itemBuilder: (context, index) {
+            //     return ListTile(
+            //       onTap: () async {
+            //         await AppNavigators.go(
+            //           context,
+            //           QuestionView(questions: widget.questions, index: index),
+            //         );
+            //       },
+            //       leading: Container(
+            //         height: 30,
+            //         width: 30,
+            //         alignment: Alignment.center,
+            //         decoration: BoxDecoration(
+            //           borderRadius: BorderRadius.circular(20),
+            //           color: Colors.blueGrey.shade800,
+            //         ),
+            //         child: Text(
+            //           (index + 1).toString(),
+            //           style: const TextStyle(
+            //             color: Colors.white,
+            //             fontSize: 15,
+            //           ),
+            //         ),
+            //       ),
+            //       subtitle: const Divider(thickness: 1, color: Colors.black),
+            //       title: HighlightText(
+            //         widget.questions[index].question,
+            //         highlight: Highlight(words: [textController.text]),
+            //         caseSensitive: true,
+            //         detectWords: true,
+            //         style: const TextStyle(
+            //           fontSize: 20,
+            //           color: Colors.black,
+            //           fontWeight: FontWeight.bold,
+            //         ),
+            //         highlightStyle: const TextStyle(
+            //           fontSize: 20,
+            //           letterSpacing: 2.5,
+            //           color: Colors.black,
+            //           backgroundColor: Colors.yellow,
+            //           fontWeight: FontWeight.bold,
+            //         ),
+            //       ),
+            //     );
+            //   },
+            //   inputDecoration: const InputDecoration(
+            //     suffixIcon: Icon(Icons.search),
+            //     border: UnderlineInputBorder(),
+            //     hintStyle: TextStyle(fontStyle: FontStyle.italic),
+            //     hintText: 'search question...',
+            //   ),
+            //   textController: textController,
+            //   suggestions: widget.questions,
+            //   search: (item, input) => item.question.contains(input),
+            // ),
+
+            title: SearchBar(
+              hintText: 'search question..',
+              controller: searchBarController,
+              trailing: [
+                CloseButton(
+                    color: Colors.black, onPressed: searchBarController.clear)
+              ],
+              leading: const BackButton(color: Colors.black),
+              elevation: MaterialStateProperty.all(0),
+              shape: MaterialStateProperty.all(
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+              ),
+            ),
+          ),
+          body: SearchAnchor(
+            builder: (_, con) {
+              return IconButton(
+                icon: const Icon(Icons.home),
+                onPressed: () {
+                  con.openView();
                 },
-                leading: Container(
-                  height: 30,
-                  width: 30,
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    color: Colors.blueGrey.shade800,
-                  ),
-                  child: Text(
-                    (index + 1).toString(),
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 15,
-                    ),
-                  ),
-                ),
-                subtitle: const Divider(thickness: 1, color: Colors.black),
-                title: HighlightText(
-                  widget.questions[index].question,
-                  highlight: Highlight(words: [textController.text]),
-                  caseSensitive: true,
-                  detectWords: true,
-                  style: const TextStyle(
-                    fontSize: 20,
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                  ),
-                  highlightStyle: const TextStyle(
-                    fontSize: 20,
-                    letterSpacing: 2.5,
-                    color: Colors.black,
-                    backgroundColor: Colors.yellow,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
               );
             },
-            inputDecoration: const InputDecoration(
-              suffixIcon: Icon(Icons.search),
-              border: UnderlineInputBorder(),
-              hintStyle: TextStyle(fontStyle: FontStyle.italic),
-              hintText: 'search question...',
-            ),
-            textController: textController,
-            suggestions: widget.questions,
-            search: (item, input) => item.question.contains(input),
+            suggestionsBuilder: (_, controller) {
+              return [];
+            },
+            viewBuilder: (suggestions) {
+              return ListView.builder(
+                padding: const EdgeInsets.only(top: 20),
+                shrinkWrap: true,
+                itemCount: widget.questions.length,
+                itemBuilder: (context, index) {
+                  final question = widget.questions[index];
+                  return _QuestionCard(
+                    questions: widget.questions,
+                    question: question,
+                    index: index,
+                  );
+                },
+              );
+            },
+          )
+          //  ListView.builder(
+          //   padding: const EdgeInsets.only(top: 20),
+          //   shrinkWrap: true,
+          //   itemCount: widget.questions.length,
+          //   itemBuilder: (context, index) {
+          //     final question = widget.questions[index];
+          //     return _QuestionCard(
+          //       questions: widget.questions,
+          //       question: question,
+          //       index: index,
+          //     );
+          //   },
+          // ),
           ),
-        ),
-        body: ListView.builder(
-          padding: const EdgeInsets.only(top: 20),
-          shrinkWrap: true,
-          itemCount: widget.questions.length,
-          itemBuilder: (context, index) {
-            final question = widget.questions[index];
-            return _QuestionCard(
-              questions: widget.questions,
-              question: question,
-              index: index,
-            );
-          },
-        ),
-      ),
     );
   }
 

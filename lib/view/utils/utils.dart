@@ -30,13 +30,13 @@ class ViewUtils {
           color: Colors.grey[600]!,
           offset: const Offset(-10, -10),
           blurRadius: 10,
-          spreadRadius: -10,
+          spreadRadius: -11,
         ),
         const BoxShadow(
           color: Colors.white,
           offset: Offset(10, 10),
           blurRadius: 10,
-          spreadRadius:2,
+          spreadRadius: 2,
         ),
       ],
       borderRadius: BorderRadius.circular(10));
