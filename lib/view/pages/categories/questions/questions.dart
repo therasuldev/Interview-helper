@@ -1,4 +1,3 @@
-import 'package:field_suggestion/field_suggestion.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_interview_questions/app_navigators.dart';
 import 'package:flutter_interview_questions/core/model/question/question.dart';
@@ -16,10 +15,7 @@ class Questions extends StatefulWidget {
 }
 
 class _QuestionCardState extends State<Questions> {
-  final textController = TextEditingController();
   final searchBarController = TextEditingController();
-  final fieldFocusNode = FocusNode();
-  final boxController = BoxController();
 
   List<Question> searchedList = [];
 
@@ -37,132 +33,47 @@ class _QuestionCardState extends State<Questions> {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        boxController.close?.call();
-        fieldFocusNode.unfocus();
-      },
-      child: Scaffold(
-        backgroundColor: Colors.grey[200],
-        appBar: AppBar(
-          backgroundColor: Colors.transparent,
-          elevation: 0,
-          automaticallyImplyLeading: false,
-          // title: FieldSuggestion(
-          //   boxController: boxController,
-          //   focusNode: fieldFocusNode,
-          //   boxStyle: _boxStyle(),
-          //   itemBuilder: (context, index) {
-          //     return ListTile(
-          //       onTap: () async {
-          //         await AppNavigators.go(
-          //           context,
-          //           QuestionView(questions: widget.questions, index: index),
-          //         );
-          //       },
-          //       leading: Container(
-          //         height: 30,
-          //         width: 30,
-          //         alignment: Alignment.center,
-          //         decoration: BoxDecoration(
-          //           borderRadius: BorderRadius.circular(20),
-          //           color: Colors.blueGrey.shade800,
-          //         ),
-          //         child: Text(
-          //           (index + 1).toString(),
-          //           style: const TextStyle(
-          //             color: Colors.white,
-          //             fontSize: 15,
-          //           ),
-          //         ),
-          //       ),
-          //       subtitle: const Divider(thickness: 1, color: Colors.black),
-          //       title: HighlightText(
-          //         widget.questions[index].question,
-          //         highlight: Highlight(words: [textController.text]),
-          //         caseSensitive: true,
-          //         detectWords: true,
-          //         style: const TextStyle(
-          //           fontSize: 20,
-          //           color: Colors.black,
-          //           fontWeight: FontWeight.bold,
-          //         ),
-          //         highlightStyle: const TextStyle(
-          //           fontSize: 20,
-          //           letterSpacing: 2.5,
-          //           color: Colors.black,
-          //           backgroundColor: Colors.yellow,
-          //           fontWeight: FontWeight.bold,
-          //         ),
-          //       ),
-          //     );
-          //   },
-          //   inputDecoration: const InputDecoration(
-          //     suffixIcon: Icon(Icons.search),
-          //     border: UnderlineInputBorder(),
-          //     hintStyle: TextStyle(fontStyle: FontStyle.italic),
-          //     hintText: 'search question...',
-          //   ),
-          //   textController: textController,
-          //   suggestions: widget.questions,
-          //   search: (item, input) => item.question.contains(input),
-          // ),
-
-          title: SearchBar(
-            hintText: 'search question..',
-            controller: searchBarController,
-            trailing: [
-              CloseButton(color: Colors.black, onPressed: clearSearchBar)
-            ],
-            leading: const BackButton(color: Colors.black),
-            elevation: MaterialStateProperty.all(0),
-            shape: MaterialStateProperty.all(
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-            ),
-            onChanged: (value) {
-              setState(() {});
-              searchedList = widget.questions.where((element) {
-                return element.question.contains(value.toLowerCase());
-              }).toList();
-            },
-          ),
-        ),
-        body: ListView.builder(
-          padding: const EdgeInsets.only(top: 20),
-          shrinkWrap: true,
-          itemCount: searchedList.length,
-          itemBuilder: (context, index) {
-            final question = searchedList[index];
-            return _QuestionCard(
-              questions: searchedList,
-              question: question,
-              index: index,
-            );
-          },
-        ),
-        //  ListView.builder(
-        //   padding: const EdgeInsets.only(top: 20),
-        //   shrinkWrap: true,
-        //   itemCount: widget.questions.length,
-        //   itemBuilder: (context, index) {
-        //     final question = widget.questions[index];
-        //     return _QuestionCard(
-        //       questions: widget.questions,
-        //       question: question,
-        //       index: index,
-        //     );
-        //   },
-        // ),
+    return Scaffold(
+      appBar: appBarBuild(),
+      body: ListView.builder(
+        padding: const EdgeInsets.only(top: 20),
+        shrinkWrap: true,
+        itemCount: searchedList.length,
+        itemBuilder: (context, index) {
+          final question = searchedList[index];
+          return _QuestionCard(
+            questions: searchedList,
+            question: question,
+            index: index,
+          );
+        },
       ),
+      backgroundColor: Colors.grey[200],
     );
   }
 
-  BoxStyle _boxStyle() => BoxStyle(
-        backgroundColor: Colors.blueGrey.shade100,
-        borderRadius: const BorderRadius.only(
-          bottomLeft: Radius.circular(15),
-          bottomRight: Radius.circular(15),
+  AppBar appBarBuild() => AppBar(
+        title: SearchBar(
+          trailing: [
+            CloseButton(color: Colors.black, onPressed: clearSearchBar)
+          ],
+          shape: MaterialStateProperty.all(
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+          ),
+          onChanged: (input) {
+            setState(() {});
+            searchedList = widget.questions.where((q) {
+              return q.question.contains(input.toLowerCase());
+            }).toList();
+          },
+          hintText: 'search question..',
+          controller: searchBarController,
+          elevation: MaterialStateProperty.all(0),
+          leading: const BackButton(color: Colors.black),
         ),
+        backgroundColor: Colors.transparent,
+        automaticallyImplyLeading: false,
+        elevation: 0,
       );
 }
 
@@ -180,10 +91,10 @@ class _QuestionCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
-      width: context.width * .8,
       height: 100,
+      width: context.width * .8,
       decoration: ViewUtils.questionCard(),
+      margin: const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
       child: ListTile(
         onTap: () => AppNavigators.go(
           context,
