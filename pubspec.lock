@@ -265,14 +265,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.1"
-  field_suggestion:
-    dependency: "direct main"
-    description:
-      name: field_suggestion
-      sha256: "596362ed67a661a18e01e4f51b8b92424f333baf37cebd48cc647a4c82c858d5"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.2.5"
   file:
     dependency: transitive
     description:
@@ -384,14 +376,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.2.0"
-  highlightable:
-    dependency: "direct main"
-    description:
-      name: highlightable
-      sha256: "526793e148c91977b694d75d99cd34401ea3b65efd223e7b539c76916af86ffd"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.0.5"
   hive:
     dependency: "direct main"
     description:
