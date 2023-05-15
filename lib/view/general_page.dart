@@ -28,14 +28,7 @@ class _GeneralPageState extends State<GeneralPage> {
   @override
   Widget build(BuildContext context) => Scaffold(
         backgroundColor: Colors.grey[200],
-        appBar: AppBar(
-          centerTitle: true,
-          title: Text(
-            'Programming languages',
-            style: ViewUtils.ubuntuStyle(fontSize: 22),
-          ),
-          backgroundColor: const Color.fromARGB(255, 38, 109, 176),
-        ),
+        appBar: index == 0 ? _homeAppBar() : _libraryAppBar(),
         body: _children.elementAtOrNull(index),
         bottomNavigationBar: BottomNavigationBar(
           selectedLabelStyle: ViewUtils.ubuntuStyle(fontSize: 16),
@@ -50,6 +43,26 @@ class _GeneralPageState extends State<GeneralPage> {
           ],
         ),
       );
+
+  AppBar _homeAppBar() {
+    return AppBar(
+      centerTitle: true,
+      title: Text(
+        'Programming languages',
+        style: ViewUtils.ubuntuStyle(fontSize: 22),
+      ),
+      backgroundColor: const Color.fromARGB(255, 38, 109, 176),
+    );
+  }
+
+  AppBar _libraryAppBar() {
+    return AppBar(
+      centerTitle: true,
+      title: Text(
+        'Library',
+        style: ViewUtils.ubuntuStyle(fontSize: 22),
+      ),
+      backgroundColor: const Color.fromARGB(255, 38, 109, 176),
+    );
+  }
 }
-
-
