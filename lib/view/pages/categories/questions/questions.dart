@@ -16,7 +16,7 @@ class Questions extends StatefulWidget {
 class _QuestionCardState extends State<Questions> {
   final searchBarController = TextEditingController();
 
-  List<Question> searchedList = [];
+  late List<Question> searchedList;
 
   @override
   void initState() {
@@ -61,8 +61,8 @@ class _QuestionCardState extends State<Questions> {
           ),
           onChanged: (input) {
             setState(() {});
-            searchedList = widget.questions.where((q) {
-              return q.question.contains(input.toLowerCase());
+            searchedList = widget.questions.where((v) {
+              return v.question.contains(input.toLowerCase());
             }).toList();
           },
           hintText: 'search question..',
