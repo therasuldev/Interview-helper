@@ -40,10 +40,7 @@ class _QuestionBox extends StatelessWidget {
       gradient: LinearGradient(
         begin: Alignment.topCenter,
         end: Alignment.bottomCenter,
-        colors: [
-          Colors.white,
-          Colors.blue.shade50,
-        ],
+        colors: [Colors.white,Colors.blue.shade50],
         stops: const [0.3, 1],
       ),
       color: Colors.white,
