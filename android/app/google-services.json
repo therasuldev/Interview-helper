@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "76643925457",
+    "project_id": "interview-questio",
+    "storage_bucket": "interview-questio.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:76643925457:android:c3f60113c8d45b34d6f4f0",
+        "android_client_info": {
+          "package_name": "com.example.flutter_interview_questions"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "76643925457-r0ruscudua0vn2jpga18ctqir3rfiqts.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3x8pN3EvXg0-z2BHfZpwHlGrk8Snf2s4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "76643925457-r0ruscudua0vn2jpga18ctqir3rfiqts.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_interview_questions/view/pages/categories/categories.dart';
 import 'package:flutter_interview_questions/view/pages/store/store.dart';
 import 'package:flutter_interview_questions/view/utils/utils.dart';
-import 'package:kartal/kartal.dart';
 
 class GeneralPage extends StatefulWidget {
   const GeneralPage({super.key});
@@ -28,14 +27,7 @@ class _GeneralPageState extends State<GeneralPage> {
   @override
   Widget build(BuildContext context) => Scaffold(
         backgroundColor: Colors.grey[200],
-        appBar: AppBar(
-          centerTitle: true,
-          title: Text(
-            'Programming languages',
-            style: ViewUtils.ubuntuStyle(fontSize: 22),
-          ),
-          backgroundColor: const Color.fromARGB(255, 38, 109, 176),
-        ),
+        appBar: index == 0 ? _homeAppBar() : null,
         body: _children.elementAtOrNull(index),
         bottomNavigationBar: BottomNavigationBar(
           selectedLabelStyle: ViewUtils.ubuntuStyle(fontSize: 16),
@@ -50,6 +42,26 @@ class _GeneralPageState extends State<GeneralPage> {
           ],
         ),
       );
+
+  AppBar _homeAppBar() {
+    return AppBar(
+      centerTitle: true,
+      title: Text(
+        'Programming languages',
+        style: ViewUtils.ubuntuStyle(fontSize: 22),
+      ),
+      backgroundColor: const Color.fromARGB(255, 38, 109, 176),
+    );
+  }
+
+  AppBar _libraryAppBar() {
+    return AppBar(
+      centerTitle: true,
+      title: Text(
+        'Library',
+        style: ViewUtils.ubuntuStyle(fontSize: 22),
+      ),
+      backgroundColor: const Color.fromARGB(255, 38, 109, 176),
+    );
+  }
 }
-
-
