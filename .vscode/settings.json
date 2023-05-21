@@ -1,3 +1,5 @@
 {
-    "cmake.sourceDirectory": "/Users/rasulramixanov/Desktop/flutter_interview_questions/linux"
+    "cmake.sourceDirectory": "/Users/rasulramixanov/Desktop/flutter_interview_questions/linux",
+    "cmake.configureOnOpen": true,
+    "terminal.integrated.fontFamily": "MesloLGS NF"
 }
