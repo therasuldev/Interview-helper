@@ -3,7 +3,6 @@ import 'package:flutter_interview_questions/app_navigators.dart';
 import 'package:flutter_interview_questions/core/model/question/question.dart';
 import 'package:flutter_interview_questions/view/pages/categories/questions/view/question_view.dart';
 import 'package:flutter_interview_questions/view/utils/utils.dart';
-import 'package:kartal/kartal.dart';
 
 class Questions extends StatefulWidget {
   const Questions({super.key, required this.questions});
@@ -17,7 +16,7 @@ class Questions extends StatefulWidget {
 class _QuestionCardState extends State<Questions> {
   final searchBarController = TextEditingController();
 
-  List<Question> searchedList = [];
+  late List<Question> searchedList;
 
   @override
   void initState() {
@@ -62,8 +61,8 @@ class _QuestionCardState extends State<Questions> {
           ),
           onChanged: (input) {
             setState(() {});
-            searchedList = widget.questions.where((q) {
-              return q.question.contains(input.toLowerCase());
+            searchedList = widget.questions.where((v) {
+              return v.question.contains(input.toLowerCase());
             }).toList();
           },
           hintText: 'search question..',
@@ -92,7 +91,7 @@ class _QuestionCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 100,
-      width: context.width * .8,
+      width: MediaQuery.of(context).size.width * .8,
       decoration: ViewUtils.questionCard(),
       margin: const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
       child: ListTile(
