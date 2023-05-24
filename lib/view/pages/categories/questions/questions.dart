@@ -1,3 +1,4 @@
+import 'package:app_bar_with_search_switch/app_bar_with_search_switch.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_interview_questions/app_navigators.dart';
 import 'package:flutter_interview_questions/core/model/question/question.dart';
@@ -33,10 +34,23 @@ class _QuestionCardState extends State<Questions> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appBarBuild(),
+      appBar: AppBarWithSearchSwitch(
+        onChanged: (input) {
+          setState(() {});
+          searchedList = widget.questions.where((v) {
+            return v.question.contains(input.toLowerCase());
+          }).toList();
+        },
+        appBarBuilder: (context) => AppBar(
+          title: Text(
+            'Questions',
+            style: ViewUtils.ubuntuStyle(),
+          ),
+          actions: const [AppBarSearchButton()],
+        ),
+      ),
       body: ListView.builder(
         padding: const EdgeInsets.only(top: 20),
-        shrinkWrap: true,
         itemCount: searchedList.length,
         itemBuilder: (context, index) {
           final question = searchedList[index];
@@ -46,34 +60,11 @@ class _QuestionCardState extends State<Questions> {
             index: index,
           );
         },
+        shrinkWrap: true,
       ),
       backgroundColor: Colors.grey[200],
     );
   }
-
-  AppBar appBarBuild() => AppBar(
-        title: SearchBar(
-          trailing: [
-            CloseButton(color: Colors.black, onPressed: clearSearchBar)
-          ],
-          shape: MaterialStateProperty.all(
-            RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-          ),
-          onChanged: (input) {
-            setState(() {});
-            searchedList = widget.questions.where((v) {
-              return v.question.contains(input.toLowerCase());
-            }).toList();
-          },
-          hintText: 'search question..',
-          controller: searchBarController,
-          elevation: MaterialStateProperty.all(0),
-          leading: const BackButton(color: Colors.black),
-        ),
-        backgroundColor: Colors.transparent,
-        automaticallyImplyLeading: false,
-        elevation: 0,
-      );
 }
 
 class _QuestionCard extends StatelessWidget {
@@ -93,7 +84,7 @@ class _QuestionCard extends StatelessWidget {
       height: 100,
       width: MediaQuery.of(context).size.width * .8,
       decoration: ViewUtils.questionCard(),
-      margin: const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
+      margin: const EdgeInsets.symmetric(vertical: 7, horizontal: 7),
       child: ListTile(
         onTap: () => AppNavigators.go(
           context,

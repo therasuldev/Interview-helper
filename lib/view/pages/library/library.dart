@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_interview_questions/gen/assets.gen.dart';
 import 'package:flutter_interview_questions/view/utils/utils.dart';
 
 class BookStore extends StatefulWidget {
@@ -40,6 +41,31 @@ class _BookCardWidget extends StatelessWidget {
             margin: const EdgeInsets.only(right: 15, bottom: 7, top: 7),
             width: 180,
             decoration: ViewUtils.categoryCard(),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                SizedBox(
+                  height: 150,
+                  width: 100,
+                  child: Image.asset(
+                    Assets.programmingLangPng.java.path,
+                  ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Text(
+                      'Java book',
+                      style: ViewUtils.ubuntuStyle(fontSize: 17),
+                    ),
+                    IconButton(
+                      onPressed: () {},
+                      icon: const Icon(Icons.download),
+                    )
+                  ],
+                )
+              ],
+            ),
           );
         },
       ),
