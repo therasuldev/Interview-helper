@@ -42,6 +42,7 @@ dependencies:
   flutter_bloc: ^8.1.3
 
   google_fonts: ^4.0.4
+  dio: ^5.1.2
 
 dev_dependencies:
   flutter_test:
