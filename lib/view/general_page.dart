@@ -28,7 +28,7 @@ class _GeneralPageState extends State<GeneralPage> {
   Widget build(BuildContext context) => Scaffold(
         backgroundColor: Colors.grey[200],
         appBar: index == 0 ? _homeAppBar() : null,
-        body: _children.elementAtOrNull(index),
+        body: _children.elementAt(index),
         bottomNavigationBar: BottomNavigationBar(
           selectedLabelStyle: ViewUtils.ubuntuStyle(fontSize: 16),
           unselectedLabelStyle: ViewUtils.ubuntuStyle(fontSize: 14),

@@ -7,7 +7,7 @@ import 'package:path_provider/path_provider.dart' as path;
 import 'package:flutter_interview_questions/core/model/question/question.dart';
 
 @immutable
-final class App {
+class App {
   const App._();
   static build() async {
     WidgetsFlutterBinding.ensureInitialized();
