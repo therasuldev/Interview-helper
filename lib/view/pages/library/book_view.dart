@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'dart:io' as io;
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_interview_questions/view/utils/utils.dart';
@@ -12,14 +13,21 @@ class BookView extends StatefulWidget {
 }
 
 class _BookViewState extends State<BookView> {
-  Map<int, double> downloadProgress = {};
-  late Future<ListResult> futureFiles;
-  bool isCompleted = false;
+  final Map<int, double> _downloadProgress = {};
+  late Future<ListResult> _futureFiles;
+  bool _isCompleted = false;
+  bool _isExists = false;
 
   @override
   void initState() {
     super.initState();
-    futureFiles = FirebaseStorage.instance.ref('/golang').listAll();
+    _futureFiles = FirebaseStorage.instance.ref('/golang').listAll();
+  }
+
+  Future<bool> existsFile(String path) async {
+    final isExs = await io.File(path).exists();
+    if (isExs) setState(() => _isExists = true);
+    return isExs;
   }
 
   Future downloadFile(int index, Reference ref) async {
@@ -28,30 +36,33 @@ class _BookViewState extends State<BookView> {
     final temp = await getTemporaryDirectory();
     final path = '${temp.path}/${ref.name}';
 
+    // for a file
+    if(await existsFile(path)) return;
+
     await Dio().download(
       url,
       path,
       onReceiveProgress: (count, total) {
         double progress = count / total;
-        setState(() => downloadProgress[index] = progress);
+        setState(() => _downloadProgress[index] = progress);
       },
-    ).whenComplete(() => setState(() => isCompleted = true));
+    ).whenComplete(() => setState(() => _isCompleted = true));
   }
 
   Widget? subtitleWidget(double? progress) {
     if (progress == null) return null;
-    if (!isCompleted) return LinearProgressIndicator(value: progress);
+    if (!_isCompleted) return LinearProgressIndicator(value: progress);
     return null;
   }
 
   Widget? downloadIcon(int index, Reference ref, double? progress) {
-    if (!isCompleted && progress == null) {
+    if (!_isCompleted && progress == null) {
       return IconButton(
         onPressed: () => downloadFile(index, ref),
         icon: const Icon(Icons.download),
       );
     }
-    if (!isCompleted && progress != null) {
+    if (!_isCompleted && progress != null) {
       return Container(
         height: 50,
         width: 50,
@@ -106,7 +117,7 @@ class _BookViewState extends State<BookView> {
             //   ),
             // ),
             FutureBuilder<ListResult>(
-              future: futureFiles,
+              future: _futureFiles,
               builder: (context, snapshot) {
                 if (snapshot.hasData) {
                   final files = snapshot.data!.items;
@@ -115,18 +126,22 @@ class _BookViewState extends State<BookView> {
                     itemCount: files.length,
                     itemBuilder: (context, index) {
                       final file = files[index];
-                      final double? progress = downloadProgress[index];
+                      final double? progress = _downloadProgress[index];
                       return ListTile(
                         title: Text(file.name),
                         subtitle: subtitleWidget(progress),
-                        trailing: ElevatedButton(
-                          onPressed: () => downloadFile(index, file),
-                          style: ButtonStyle(
-                            backgroundColor:
-                                MaterialStateProperty.all(Colors.green),
-                          ),
-                          child: const Text('download'),
-                        ),
+                        trailing: _isExists
+                            ? IconButton(
+                                onPressed: () {},
+                                icon: const Icon(Icons.download_done))
+                            : ElevatedButton(
+                                onPressed: () => downloadFile(index, file),
+                                style: ButtonStyle(
+                                  backgroundColor:
+                                      MaterialStateProperty.all(Colors.green),
+                                ),
+                                child: const Text('download'),
+                              ),
                       );
                     },
                   );
