@@ -26,7 +26,7 @@ class _BookStoreState extends State<BookStore> {
         const _BookCardWidget(),
       ],
     );
-  }
+  } 
 }
 
 class _BookCardWidget extends StatefulWidget {
