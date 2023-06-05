@@ -128,195 +128,99 @@
         "answer": "The java.util.concurrent package provides classes for concurrent programming, including thread pools, locks, atomic variables, and concurrent collections. It is designed to improve performance and scalability in multi- threaded applications."
     },
     "33": {
-        "question": "",
-        "answer": ""
+        "question": "What is an exception?",
+        "answer": "An exception is an event that occurs during the execution of a program that disrupts the normal flow of instructions."
     },
     "34": {
-        "question": "",
-        "answer": ""
+        "question": "How does an exception propagate throughout the Java code?",
+        "answer": "When an exception occurs, it tries to locate the matching catch block. If the matching catch block is located, then that block is executed. Otherwise the exception propagates through the method call stack and goes into the caller method where the process of matching the catch block is performed. This happens until the matching catch block is found. IIn case the match is not found, the program gets terminated in the main method."
     },
     "35": {
-        "question": "",
-        "answer": ""
+        "question": "What is the difference between checked and unchecked exceptions?",
+        "answer": "Checked exceptions are checked at compile- time, while unchecked exceptions are checked at runtime."
     },
     "36": {
-        "question": "",
-        "answer": ""
+        "question": "What is the use of try-catch block in Java?",
+        "answer": "The try-catch block is used to handle exceptions in Java."
     },
     "37": {
-        "question": "",
-        "answer": ""
+        "question": "What is the difference between throw and throws?",
+        "answer": "Throw is used to explicitly throw an exception, while throws is used to declare a method that can potentially throw an exception."
     },
     "38": {
-        "question": "",
-        "answer": ""
+        "question": "What is the use of the finally block?",
+        "answer": "The finally block is used to execute a block of code regardless of whether an exception is thrown or not."
     },
     "39": {
-        "question": "",
-        "answer": ""
+        "question": "What’s the base class of all exception classes?",
+        "answer": "In Java, Java.lang.Throwable is the super class of all exception classes and all exception classes are derived from this base class."
     },
     "40": {
-        "question": "",
-        "answer": ""
+        "question": "What is Java Enterprise Edition (Java EE)?",
+        "answer": "Java Enterprise Edition (Java EE) is a set of specifications and APIs for developing enterprise applications in Java. It includes a range of technologies, such as Servlets, JSPs, EJBs, JPA, JMS, and JNDI."
     },
     "41": {
-        "question": "",
-        "answer": ""
+        "question": "What is the difference between a Servlet and a JSP?",
+        "answer": "A Servlet is a Java class that processes HTTP requests and generates HTTP responses. A JSP (JavaServer Pages) is a text-based document that is compiled into a Servlet. JSPs allow for a separation of presentation logic from business logic."
     },
     "42": {
-        "question": "",
-        "answer": ""
+        "question": "What is the purpose of the Java Persistence API (JPA)?",
+        "answer": "The Java Persistence API (JPA) is a specification for object-relational mapping (ORM) in Java. It provides a set of interfaces and annotations for mapping Java objects to relational database tables and vice versa."
     },
     "43": {
-        "question": "",
-        "answer": ""
+        "question": "What is the difference between stateful and stateless session beans?",
+        "answer": "Stateful session beans maintain a conversational state with the client, while stateless session beans do not. Stateful session beans are used for long-running conversations with a client, while stateless session beans are used for short-lived tasks."
     },
     "44": {
-        "question": "",
-        "answer": ""
+        "question": "What is a thread and what are the different stages in its lifecycle?",
+        "answer": "A thread is a lightweight process that can run concurrently with other threads in a program. Java thread life cycle has 5 stages: New, Runnable, Running, Non-Runnable(Blocked/ Waiting), Terminated."
     },
     "45": {
-        "question": "",
-        "answer": ""
+        "question": "What is the difference between process and thread?",
+        "answer": "A process is a program in execution, while a thread is a subset of a process. Threads share memory while processes do not."
     },
     "46": {
-        "question": "",
-        "answer": ""
+        "question": "What are the different types of thread priorities available in Java?",
+        "answer": "There are a total of 3 different types of priority available in Java. MIN_PRIORITY:Integer value 1. MAX_PRIORITY: Integer value 10.NORM_PRIORITY: Integer value 5"
     },
     "47": {
-        "question": "",
-        "answer": ""
+        "question": "What is context switching in Java?",
+        "answer": "Context switching in Java is the process of switching from one thread to another by the operating system's scheduler. During context switching, the current thread's context, including its register values and program counter, are saved, and the next thread's context is restored."
     },
     "48": {
-        "question": "",
-        "answer": ""
+        "question": "What is the difference between user threads and Daemon threads?",
+        "answer": "In Java, user threads have a specific life cycle and its life is independent of any other thread and are used for critical tasks. Daemon threads are basically referred to as a service provider that provides services and support to user threads. JVM does not wait for daemon threads to finish their tasks before termination., but waits for user threads."
     },
     "49": {
-        "question": "",
-        "answer": ""
+        "question": "What is synchronization?",
+        "answer": "Synchronization is the mechanism that ensures that only one thread can access a shared resource at a time."
     },
     "50": {
-        "question": "",
-        "answer": ""
+        "question": "What is a deadlock?",
+        "answer": "A deadlock is a situation where two or more threads are blocked waiting for each other to release the resources they need to proceed."
     },
     "51": {
-        "question": "",
-        "answer": ""
+        "question": "What is the use of the wait() and notify() methods?",
+        "answer": "Wait() and notify() methods are used for inter- thread communication in Java."
     },
     "52": {
-        "question": "",
-        "answer": ""
+        "question": "What is the difference between a thread and a process in Java?",
+        "answer": "A process is an independent program that runs in its own memory space, while a thread is a subset of a process that runs concurrently with other threads in the same process."
     },
     "53": {
-        "question": "",
-        "answer": ""
+        "question": "What is the difference between synchronized and volatile in Java?",
+        "answer": "Synchronized is used to provide exclusive access to a shared resource by allowing only one thread to access it at a time, while volatile is used to ensure visibility of changes made to a shared variable by guaranteeing that all threads see the same value."
     },
     "54": {
-        "question": "",
-        "answer": ""
+        "question": "What is the purpose of the sleep() method in Java?",
+        "answer": "The sleep() method is used to pause the execution of a thread for a specified amount of time, allowing other threads to execute in the meantime."
     },
     "55": {
-        "question": "",
-        "answer": ""
+        "question": "What is the difference between wait() and sleep() in Java?",
+        "answer": "Wait() is a method of the Object class that is used to pause the execution of a thread and release the lock on an object, while sleep() is a method of the Thread class that is used to pause the execution of a thread without releasing any locks."
     },
     "56": {
-        "question": "",
-        "answer": ""
-    },
-    "57": {
-        "question": "",
-        "answer": ""
-    },
-    "58": {
-        "question": "",
-        "answer": ""
-    },
-    "59": {
-        "question": "",
-        "answer": ""
-    },
-    "60": {
-        "question": "",
-        "answer": ""
-    },
-    "61": {
-        "question": "",
-        "answer": ""
-    },
-    "62": {
-        "question": "",
-        "answer": ""
-    },
-    "63": {
-        "question": "",
-        "answer": ""
-    },
-    "64": {
-        "question": "",
-        "answer": ""
-    },
-    "65": {
-        "question": "",
-        "answer": ""
-    },
-    "66": {
-        "question": "",
-        "answer": ""
-    },
-    "67": {
-        "question": "",
-        "answer": ""
-    },
-    "68": {
-        "question": "",
-        "answer": ""
-    },
-    "69": {
-        "question": "",
-        "answer": ""
-    },
-    "70": {
-        "question": "",
-        "answer": ""
-    },
-    "71": {
-        "question": "",
-        "answer": ""
-    },
-    "72": {
-        "question": "",
-        "answer": ""
-    },
-    "73": {
-        "question": "",
-        "answer": ""
-    },
-    "74": {
-        "question": "",
-        "answer": ""
-    },
-    "75": {
-        "question": "",
-        "answer": ""
-    },
-    "76": {
-        "question": "",
-        "answer": ""
-    },
-    "77": {
-        "question": "",
-        "answer": ""
-    },
-    "78": {
-        "question": "",
-        "answer": ""
-    },
-    "79": {
-        "question": "",
-        "answer": ""
-    },
-    "80": {
-        "question": "",
-        "answer": ""
+        "question": "What is the difference between notify() and notifyAll() in Java?",
+        "answer": "Notify() is used to wake up a single thread that is waiting on an object, while notifyAll() is used to wake up all threads that are waiting on an object."
     }
 }
