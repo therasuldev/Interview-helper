@@ -7,9 +7,10 @@ import 'package:path_provider/path_provider.dart' as path;
 import 'package:flutter_interview_questions/core/model/question/question.dart';
 
 @immutable
-class App {
-  const App._();
-  static build() async {
+class Application {
+  const Application._();
+
+  static start() async {
     WidgetsFlutterBinding.ensureInitialized();
     await Firebase.initializeApp(
         options: DefaultFirebaseOptions.currentPlatform);
