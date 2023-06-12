@@ -3,6 +3,7 @@ import 'dart:io' as io;
 
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_interview_questions/core/repository/book_repository.dart';
 import 'package:flutter_interview_questions/view/utils/utils.dart';
 import 'package:path_provider/path_provider.dart';
 
@@ -135,7 +136,8 @@ class _BookCardWidgetState extends State<_BookCardWidget> {
                           trailing: _isExists
                               ? const Icon(Icons.download_done)
                               : ElevatedButton(
-                                  onPressed: () => downloadFile(index, file),
+                                  onPressed: () async=>   await BookRepository().downloadBook(file)
+,
                                   style: ButtonStyle(
                                     backgroundColor:
                                         MaterialStateProperty.all(Colors.green),
