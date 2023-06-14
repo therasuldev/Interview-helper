@@ -13,7 +13,8 @@ class Application {
   static start() async {
     WidgetsFlutterBinding.ensureInitialized();
     await Firebase.initializeApp(
-        options: DefaultFirebaseOptions.currentPlatform);
+      options: DefaultFirebaseOptions.currentPlatform,
+    );
     await path
         .getApplicationDocumentsDirectory()
         .then((directory) async => await Hive.initFlutter(directory.path));

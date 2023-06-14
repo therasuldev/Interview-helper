@@ -21,27 +21,24 @@ class BookBloc extends Bloc<BookEvent, BookState> {
     emit(state.copyWith(event: event.type, loading: true));
 
     try {
-      final data = await bookRepository.downloadBook(event.payload);
-
-      final questions = data.map((question) {
-        return Book.fromJson(question);
-      }).toList();
+      final data = await bookRepository.fetchBooks(event.payload);
+      final books = data.items.map((ref) => Book.fromJson(ref)).toList();
 
       emit(
         state.copyWith(
-          books: questions,
+          books: books,
           loading: false,
           event: BookEvents.fetchBookSuccess,
           error: null,
         ),
       );
-    } catch (e) {
+    } catch (exp) {
       emit(
         state.copyWith(
           books: [],
           loading: true,
           event: BookEvents.fetchBookError,
-          error: ErrorModel(description: e.toString()),
+          error: ErrorModel(description: exp.toString()),
         ),
       );
     }

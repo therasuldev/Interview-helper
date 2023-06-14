@@ -27,7 +27,7 @@ class _BookStoreState extends State<BookStore> {
         const _BookCardWidget(),
       ],
     );
-  } 
+  }
 }
 
 class _BookCardWidget extends StatefulWidget {
@@ -136,8 +136,7 @@ class _BookCardWidgetState extends State<_BookCardWidget> {
                           trailing: _isExists
                               ? const Icon(Icons.download_done)
                               : ElevatedButton(
-                                  onPressed: () async=>   await BookRepository().downloadBook(file)
-,
+                                  onPressed: () {},
                                   style: ButtonStyle(
                                     backgroundColor:
                                         MaterialStateProperty.all(Colors.green),

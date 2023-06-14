@@ -18,20 +18,17 @@ class BookAdapter extends TypeAdapter<Book> {
     };
     return Book(
       name: fields[0] as String,
-      image: fields[1] as String,
-      url: fields[2] as String,
+      url: fields[1] as String,
     );
   }
 
   @override
   void write(BinaryWriter writer, Book obj) {
     writer
-      ..writeByte(3)
+      ..writeByte(2)
       ..writeByte(0)
       ..write(obj.name)
       ..writeByte(1)
-      ..write(obj.image)
-      ..writeByte(2)
       ..write(obj.url);
   }
 

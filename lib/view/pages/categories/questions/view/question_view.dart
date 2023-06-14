@@ -54,7 +54,11 @@ class _QuestionViewState extends State<QuestionView> {
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(
-                        top: 50, left: 15, right: 15, bottom: 15),
+                      top: 50,
+                      left: 15,
+                      right: 15,
+                      bottom: 15,
+                    ),
                     child: Row(
                       children: [
                         const BackButton(color: Colors.white),
@@ -141,7 +145,7 @@ class _CustomFloatingActionButton extends StatelessWidget {
     required this.onPressed,
   });
 
-  final _style = const TextStyle(
+  final style = const TextStyle(
     fontSize: 17,
     fontWeight: FontWeight.w700,
     color: Colors.white,
@@ -152,7 +156,7 @@ class _CustomFloatingActionButton extends StatelessWidget {
         heroTag: heroTag,
         onPressed: onPressed,
         backgroundColor: Colors.green[500],
-        label: Text(label, style: _style),
+        label: Text(label, style: style),
         extendedPadding: const EdgeInsets.symmetric(horizontal: 40),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
       );
