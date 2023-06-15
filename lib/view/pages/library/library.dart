@@ -3,7 +3,9 @@ import 'dart:io' as io;
 
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_interview_questions/core/repository/book_repository.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_interview_questions/core/model/book/book.dart';
+import 'package:flutter_interview_questions/core/provider/books_bloc/books_bloc.dart';
 import 'package:flutter_interview_questions/view/utils/utils.dart';
 import 'package:path_provider/path_provider.dart';
 
@@ -39,14 +41,16 @@ class _BookCardWidget extends StatefulWidget {
 
 class _BookCardWidgetState extends State<_BookCardWidget> {
   final Map<int, double> _downloadProgress = {};
-  late Future<ListResult> _futureFiles;
+  //late Future<ListResult> _futureFiles;
   bool _isCompleted = false;
   bool _isExists = false;
 
   @override
   void initState() {
     super.initState();
-    _futureFiles = FirebaseStorage.instance.ref('/golang').listAll();
+    // _futureFiles = FirebaseStorage.instance.ref('/golang').listAll();
+    BlocProvider.of<BookBloc>(context)
+        .add(BookEvent.fetchQuestionStart('/golang'));
   }
 
   Future<bool> existsFile(String path) async {
@@ -55,13 +59,13 @@ class _BookCardWidgetState extends State<_BookCardWidget> {
     return isExs;
   }
 
-  Future downloadFile(int index, Reference ref) async {
-    final url = await ref.getDownloadURL();
-
+  Future downloadFile(int index, Book book) async {
+    final url = await book.url;
     final temp = await getTemporaryDirectory();
-    final path = '${temp.path}/${ref.name}';
 
-    // for a file
+    final path = '${temp.path}/${book.name}';
+
+    // for a exists file
     if (await existsFile(path)) return;
 
     await Dio().download(
@@ -80,10 +84,10 @@ class _BookCardWidgetState extends State<_BookCardWidget> {
     return null;
   }
 
-  Widget? downloadIcon(int index, Reference ref, double? progress) {
+  Widget? downloadIcon(int index, Book book, double? progress) {
     if (!_isCompleted && progress == null) {
       return IconButton(
-        onPressed: () => downloadFile(index, ref),
+        onPressed: () => downloadFile(index, book),
         icon: const Icon(Icons.download),
       );
     }
@@ -103,58 +107,51 @@ class _BookCardWidgetState extends State<_BookCardWidget> {
   Widget build(BuildContext context) {
     return SizedBox(
       height: MediaQuery.of(context).size.height * .35,
-      child: FutureBuilder<ListResult>(
-        future: _futureFiles,
-        builder: (context, snapshot) {
-          if (snapshot.hasData) {
-            final files = snapshot.data!.items;
-            return ListView.builder(
-              shrinkWrap: true,
-              itemCount: files.length,
-              scrollDirection: Axis.horizontal,
-              itemBuilder: (context, index) {
-                final file = files[index];
-                final progress = _downloadProgress[index];
-                return Container(
-                  margin: const EdgeInsets.all(5),
-                  color: Colors.amber,
-                  width: MediaQuery.of(context).size.width * .6,
-                  child: Column(
-                    children: [
-                      SizedBox(
-                        height: MediaQuery.of(context).size.height * .2,
-                        child: const Placeholder(),
-                      ),
-                      Expanded(
-                        child: ListTile(
-                          title: Text(
-                            file.name,
-                            maxLines: 4,
-                            overflow: TextOverflow.ellipsis,
-                            style: ViewUtils.ubuntuStyle(),
-                          ),
-                          trailing: _isExists
-                              ? const Icon(Icons.download_done)
-                              : ElevatedButton(
-                                  onPressed: () {},
-                                  style: ButtonStyle(
-                                    backgroundColor:
-                                        MaterialStateProperty.all(Colors.green),
-                                  ),
-                                  child: const Text('download'),
-                                ),
+      child: BlocBuilder<BookBloc, BookState>(
+        builder: (context, state) {
+          return ListView.builder(
+            shrinkWrap: true,
+            itemCount: state.books?.length ?? 0,
+            scrollDirection: Axis.horizontal,
+            itemBuilder: (context, index) {
+              final book = state.books?[index];
+              final progress = _downloadProgress[index];
+              return Container(
+                margin: const EdgeInsets.all(5),
+                color: Colors.amber,
+                width: MediaQuery.of(context).size.width * .6,
+                child: Column(
+                  children: [
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * .2,
+                      child: const Placeholder(),
+                    ),
+                    Expanded(
+                      child: ListTile(
+                        title: Text(
+                          book!.name,
+                          maxLines: 4,
+                          overflow: TextOverflow.ellipsis,
+                          style: ViewUtils.ubuntuStyle(),
                         ),
+                        subtitle: subtitleWidget(progress),
+                        trailing: _isExists
+                            ? const Icon(Icons.download_done)
+                            : ElevatedButton(
+                                onPressed: () => downloadFile(index, book),
+                                style: ButtonStyle(
+                                  backgroundColor:
+                                      MaterialStateProperty.all(Colors.green),
+                                ),
+                                child: const Text('download'),
+                              ),
                       ),
-                    ],
-                  ),
-                );
-              },
-            );
-          } else if (snapshot.hasError) {
-            return const Center(child: Text('error occured'));
-          } else {
-            return const CircularProgressIndicator();
-          }
+                    ),
+                  ],
+                ),
+              );
+            },
+          );
         },
       ),
     );

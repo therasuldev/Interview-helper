@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_interview_questions/application_start.dart';
+import 'package:flutter_interview_questions/core/provider/books_bloc/books_bloc.dart';
 import 'package:flutter_interview_questions/core/provider/question_bloc/question_bloc.dart';
 import 'package:flutter_interview_questions/view/general_page.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
@@ -22,7 +23,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
-      providers: [BlocProvider(create: (_) => QuestionBloc())],
+      providers: [
+        BlocProvider(create: (_) => QuestionBloc()),
+        BlocProvider(create: (_) => BookBloc()),
+      ],
       child: const MaterialApp(
         home: GeneralPage(),
         debugShowCheckedModeBanner: false,

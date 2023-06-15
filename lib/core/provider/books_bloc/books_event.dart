@@ -10,9 +10,9 @@ class BookEvent {
   BookEvents? type;
   dynamic payload;
 
-  BookEvent.fetchQuestionStart(String category) {
+  BookEvent.fetchQuestionStart(String path) {
     type = BookEvents.fetchBookStart;
-    payload = category;
+    payload = path;
   }
   BookEvent.fetchQuestionSuccess() {
     type = BookEvents.fetchBookSuccess;

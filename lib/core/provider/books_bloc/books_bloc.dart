@@ -22,7 +22,7 @@ class BookBloc extends Bloc<BookEvent, BookState> {
 
     try {
       final data = await bookRepository.fetchBooks(event.payload);
-      final books = data.items.map((ref) => Book.fromJson(ref)).toList();
+      final books = data.items.map((book) => Book.fromJson(book)).toList();
 
       emit(
         state.copyWith(

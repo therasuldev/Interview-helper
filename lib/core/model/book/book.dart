@@ -8,7 +8,7 @@ class Book {
   @HiveField(0)
   final String name;
   @HiveField(1)
-  final String url;
+  final Future<String> url;
   Book({
     required this.name,
     required this.url,
@@ -16,5 +16,5 @@ class Book {
 
   Book.fromJson(Reference ref)
       : name = ref.name,
-        url = ref.fullPath;
+        url = ref.getDownloadURL();
 }
