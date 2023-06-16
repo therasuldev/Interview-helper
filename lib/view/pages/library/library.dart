@@ -42,7 +42,7 @@ class _BookCardWidgetState extends State<_BookCardWidget> {
   final Map<int, double> _downloadProgress = {};
   //late Future<ListResult> _futureFiles;
   bool _isCompleted = false;
-  bool _isExists = false;
+  bool _isDownloaded = false;
 
   @override
   void initState() {
@@ -52,10 +52,14 @@ class _BookCardWidgetState extends State<_BookCardWidget> {
         .add(BookEvent.fetchQuestionStart('/golang'));
   }
 
+  path1() async {
+    final tempDir = await getTemporaryDirectory();
+  }
+
   Future<bool> existsFile(String path) async {
-    final isExs = await io.File(path).exists();
-    if (isExs) setState(() => _isExists = isExs);
-    return isExs;
+    final isDwnd = await io.File(path).exists();
+    if (isDwnd) setState(() => _isDownloaded = isDwnd);
+    return isDwnd;
   }
 
   Future downloadFile(int index, Book book) async {
@@ -102,6 +106,13 @@ class _BookCardWidgetState extends State<_BookCardWidget> {
     return const Icon(Icons.download_done_outlined);
   }
 
+  Future<bool> isfullPath(Book book) async {
+    final tempDir = await getTemporaryDirectory();
+    final path = '${tempDir.path}/${book.name}';
+    final isDwnd = await io.File(path).exists();
+    return isDwnd;
+  }
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -113,45 +124,72 @@ class _BookCardWidgetState extends State<_BookCardWidget> {
             itemCount: state.books?.length ?? 0,
             scrollDirection: Axis.horizontal,
             itemBuilder: (context, index) {
-              final book = state.books?[index];
+              final book = state.books![index];
               final progress = _downloadProgress[index];
-              return Container(
-                margin: const EdgeInsets.all(5),
-                color: Colors.amber,
-                width: MediaQuery.of(context).size.width * .6,
-                child: Column(
-                  children: [
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height * .2,
-                      child: const Placeholder(),
-                    ),
-                    Expanded(
-                      child: ListTile(
-                        title: Text(
-                          book!.name,
-                          maxLines: 4,
-                          overflow: TextOverflow.ellipsis,
-                          style: ViewUtils.ubuntuStyle(),
-                        ),
-                        subtitle: subtitleWidget(progress),
-                        trailing: _isExists
-                            ? const Icon(Icons.download_done)
-                            : ElevatedButton(
-                                onPressed: () => downloadFile(index, book),
-                                style: ButtonStyle(
-                                  backgroundColor:
-                                      MaterialStateProperty.all(Colors.green),
-                                ),
-                                child: const Text('download'),
-                              ),
-                      ),
-                    ),
-                  ],
-                ),
+              isfullPath(book).then((value) {
+                _isDownloaded = value;
+              });
+              return BookCard(
+                bookName: book.name,
+                isDownloaded: _isDownloaded,
+                onPressed: () {},
               );
             },
           );
         },
+      ),
+    );
+  }
+}
+
+class BookCard extends StatelessWidget {
+  const BookCard({
+    super.key,
+    required bool isDownloaded,
+    required String bookName,
+    required void Function()? onPressed,
+  })  : _isDownloaded = isDownloaded,
+        _bookName = bookName,
+        _onPressed = onPressed;
+
+  final bool _isDownloaded;
+  final String _bookName;
+  final void Function()? _onPressed;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.all(5),
+      color: Colors.amber,
+      width: MediaQuery.of(context).size.width * .6,
+      child: Column(
+        children: [
+          SizedBox(
+            height: MediaQuery.of(context).size.height * .2,
+            child: const Placeholder(),
+          ),
+          Expanded(
+            child: ListTile(
+              title: Text(
+                _bookName,
+                maxLines: 4,
+                overflow: TextOverflow.ellipsis,
+                style: ViewUtils.ubuntuStyle(),
+              ),
+              //subtitle: subtitleWidget(progress),
+              trailing: _isDownloaded
+                  ? const Icon(Icons.download_done)
+                  : ElevatedButton(
+                      onPressed: _onPressed,
+                      style: ButtonStyle(
+                        backgroundColor:
+                            MaterialStateProperty.all(Colors.green),
+                      ),
+                      child: const Text('download'),
+                    ),
+            ),
+          ),
+        ],
       ),
     );
   }

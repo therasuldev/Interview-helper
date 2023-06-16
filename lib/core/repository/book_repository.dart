@@ -3,8 +3,11 @@ import 'package:flutter_interview_questions/core/interface/i_book_repository.dar
 
 class BookRepository extends IBookRepository {
   @override
-  Future<ListResult> fetchBooks(String path) async {
-    final futureFiles = FirebaseStorage.instance.ref(path).listAll();
+  Future<ListResult> fetchBooks(List<String> path) async {
+    for (var p in path) {
+      await FirebaseStorage.instance.ref(p).listAll();
+    }
+    //final futureFiles = FirebaseStorage.instance.ref(path).listAll();
 
     // final url = await ref.getDownloadURL();
 

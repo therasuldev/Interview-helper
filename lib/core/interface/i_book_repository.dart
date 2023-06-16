@@ -1,3 +1,3 @@
 abstract class IBookRepository {
-  Future fetchBooks(String path);
+  Future fetchBooks(List<String> path);
 }
