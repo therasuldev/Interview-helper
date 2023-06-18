@@ -10,7 +10,7 @@ class BookEvent {
   BookEvents? type;
   dynamic payload;
 
-  BookEvent.fetchQuestionStart(String path) {
+  BookEvent.fetchQuestionStart(List<KPath> path) {
     type = BookEvents.fetchBookStart;
     payload = path;
   }

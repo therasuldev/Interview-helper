@@ -1,4 +1,5 @@
 import 'package:bloc/bloc.dart';
+import 'package:flutter_interview_questions/categories_path.dart';
 import 'package:flutter_interview_questions/core/model/book/book.dart';
 import 'package:flutter_interview_questions/core/model/error/error_model.dart';
 import 'package:flutter_interview_questions/core/repository/book_repository.dart';
@@ -22,11 +23,23 @@ class BookBloc extends Bloc<BookEvent, BookState> {
 
     try {
       final data = await bookRepository.fetchBooks(event.payload);
-      final books = data.items.map((book) => Book.fromJson(book)).toList();
+      List<Map<String, List<Book>>> library = [];
+
+      for (var map in data) {
+        List<Book> bookList = [];
+        map.forEach((key, value) {
+          for (var result in value!.items) {
+            bookList.add(Book.fromJson(result));
+          }
+        });
+
+        Map<String, List<Book>> bookMap = {map.keys.first: bookList};
+        library.add(bookMap);
+      }
 
       emit(
         state.copyWith(
-          books: books,
+          library: library,
           loading: false,
           event: BookEvents.fetchBookSuccess,
           error: null,
@@ -35,8 +48,8 @@ class BookBloc extends Bloc<BookEvent, BookState> {
     } catch (exp) {
       emit(
         state.copyWith(
-          books: [],
-          loading: true,
+          library: [],
+          loading: false,
           event: BookEvents.fetchBookError,
           error: ErrorModel(description: exp.toString()),
         ),
