@@ -33,8 +33,7 @@ class BookBloc extends Bloc<BookEvent, BookState> {
           }
         });
 
-        Map<String, List<Book>> bookMap = {map.keys.first: bookList};
-        library.add(bookMap);
+        library.add({map.keys.first: bookList});
       }
 
       emit(

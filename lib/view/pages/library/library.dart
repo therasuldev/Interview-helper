@@ -1,8 +1,7 @@
-import 'dart:io' as io;
-
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_interview_questions/core/local_service/cache_service.dart';
 import 'package:path_provider/path_provider.dart';
 
 import 'package:flutter_interview_questions/core/model/book/book.dart';
@@ -55,29 +54,20 @@ class _BookCardWidget extends StatefulWidget {
 }
 
 class _BookCardWidgetState extends State<_BookCardWidget> {
+  final bool _isCompleted = false;
   final Map<int, double> _downloadProgress = {};
-  //late Future<ListResult> _futureFiles;
-  bool _isCompleted = false;
-  bool _isDownloaded = false;
+  final CacheService _cacheService = CacheService();
 
-  path1() async {
-    final tempDir = await getTemporaryDirectory();
-  }
-
-  Future<bool> existsFile(String path) async {
-    final isDwnd = await io.File(path).exists();
-    if (isDwnd) setState(() => _isDownloaded = isDwnd);
-    return isDwnd;
-  }
+  // Future<bool> existsFile(String path) async {
+  //   final isDwnd = await io.File(path).exists();
+  //   if (isDwnd) setState(() => _isDownloaded = isDwnd);
+  //   return isDwnd;
+  // }
 
   Future downloadFile(int index, Book book) async {
     final url = await book.url;
     final temp = await getTemporaryDirectory();
-
     final path = '${temp.path}/${book.name}';
-
-    // for a exists file
-    if (await existsFile(path)) return;
 
     await Dio().download(
       url,
@@ -86,7 +76,9 @@ class _BookCardWidgetState extends State<_BookCardWidget> {
         double progress = count / total;
         setState(() => _downloadProgress[index] = progress);
       },
-    ).whenComplete(() => setState(() => _isCompleted = true));
+    ).whenComplete(() async {
+      await _cacheService.downloadedBooks.put(book.name, book.name);
+    });
   }
 
   Widget? subtitleWidget(double? progress) {
@@ -114,13 +106,6 @@ class _BookCardWidgetState extends State<_BookCardWidget> {
     return const Icon(Icons.download_done_outlined);
   }
 
-  Future<bool> isfullPath(Book book) async {
-    final tempDir = await getTemporaryDirectory();
-    final path = '${tempDir.path}/${book.name}';
-    final isDwnd = await io.File(path).exists();
-    return isDwnd;
-  }
-
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -131,14 +116,15 @@ class _BookCardWidgetState extends State<_BookCardWidget> {
           scrollDirection: Axis.horizontal,
           itemBuilder: (context, index) {
             final book = widget.books![index];
-            final progress = _downloadProgress[index];
-            isfullPath(book).then((value) {
-              _isDownloaded = value;
-            });
+            //TODO: final progress = _downloadProgress[index];
+            final existsBookName = _cacheService.downloadedBooks.get(book.name);
+
+            final isDownloaded = book.name == existsBookName;
+
             return BookCard(
               bookName: book.name,
-              isDownloaded: _isDownloaded,
-              onPressed: () {},
+              isDownloaded: isDownloaded,
+              onPressed: () => downloadFile(index, book),
             );
           },
         ));
@@ -163,7 +149,7 @@ class BookCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.all(5),
-      color: Color.fromARGB(255, 197, 201, 224),
+      color: const Color.fromARGB(255, 197, 201, 224),
       width: MediaQuery.of(context).size.width * .6,
       child: Column(
         children: [

@@ -23,5 +23,6 @@ class Application {
       Hive.registerAdapter(QuestionAdapter());
     }
     await Hive.openBox('questions');
+    await Hive.openBox('books');
   }
 }
