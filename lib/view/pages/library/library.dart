@@ -54,15 +54,11 @@ class _BookCardWidget extends StatefulWidget {
 }
 
 class _BookCardWidgetState extends State<_BookCardWidget> {
-  final bool _isCompleted = false;
+  //when proceed the downloading prosses
+  bool _isProceed = false;
+
   final Map<int, double> _downloadProgress = {};
   final CacheService _cacheService = CacheService();
-
-  // Future<bool> existsFile(String path) async {
-  //   final isDwnd = await io.File(path).exists();
-  //   if (isDwnd) setState(() => _isDownloaded = isDwnd);
-  //   return isDwnd;
-  // }
 
   Future downloadFile(int index, Book book) async {
     final url = await book.url;
@@ -74,76 +70,80 @@ class _BookCardWidgetState extends State<_BookCardWidget> {
       path,
       onReceiveProgress: (count, total) {
         double progress = count / total;
-        setState(() => _downloadProgress[index] = progress);
+        setState(() {
+          _isProceed = true;
+          _downloadProgress[index] = progress;
+        });
       },
     ).whenComplete(() async {
       await _cacheService.downloadedBooks.put(book.name, book.name);
+      setState(() => _isProceed = false);
     });
-  }
-
-  Widget? subtitleWidget(double? progress) {
-    if (progress == null) return null;
-    if (!_isCompleted) return LinearProgressIndicator(value: progress);
-    return null;
-  }
-
-  Widget? downloadIcon(int index, Book book, double? progress) {
-    if (!_isCompleted && progress == null) {
-      return IconButton(
-        onPressed: () => downloadFile(index, book),
-        icon: const Icon(Icons.download),
-      );
-    }
-    if (!_isCompleted && progress != null) {
-      return Container(
-        height: 50,
-        width: 50,
-        alignment: Alignment.center,
-        decoration: const BoxDecoration(shape: BoxShape.circle),
-        child: Text((progress * 100).round().toString()),
-      );
-    }
-    return const Icon(Icons.download_done_outlined);
   }
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-        height: MediaQuery.of(context).size.height * .35,
-        child: ListView.builder(
-          shrinkWrap: true,
-          itemCount: widget.books?.length ?? 0,
-          scrollDirection: Axis.horizontal,
-          itemBuilder: (context, index) {
-            final book = widget.books![index];
-            //TODO: final progress = _downloadProgress[index];
-            final existsBookName = _cacheService.downloadedBooks.get(book.name);
+      height: MediaQuery.of(context).size.height * .35,
+      child: ListView.builder(
+        shrinkWrap: true,
+        itemCount: widget.books?.length ?? 0,
+        scrollDirection: Axis.horizontal,
+        itemBuilder: (context, index) {
+          final book = widget.books![index];
+          final existsBookName = _cacheService.downloadedBooks.get(book.name);
+          final isDownloaded = book.name == existsBookName;
 
-            final isDownloaded = book.name == existsBookName;
-
-            return BookCard(
-              bookName: book.name,
-              isDownloaded: isDownloaded,
-              onPressed: () => downloadFile(index, book),
-            );
-          },
-        ));
+          return _BookCard(
+            bookName: book.name,
+            isProceed: _isProceed,
+            isDownloaded: isDownloaded,
+            progressValue: _downloadProgress[index],
+            onPressed: () async => await downloadFile(index, book),
+          );
+        },
+      ),
+    );
   }
 }
 
-class BookCard extends StatelessWidget {
-  const BookCard({
-    super.key,
+class _BookCard extends StatelessWidget {
+  const _BookCard({
     required bool isDownloaded,
+    required bool isProceed,
     required String bookName,
+    required double? progressValue,
     required void Function()? onPressed,
   })  : _isDownloaded = isDownloaded,
+        _isProceed = isProceed,
         _bookName = bookName,
+        _progressValue = progressValue,
         _onPressed = onPressed;
 
   final bool _isDownloaded;
+  final bool _isProceed;
   final String _bookName;
+  final double? _progressValue;
   final void Function()? _onPressed;
+
+  Widget? subtitleWidget() {
+    if (_progressValue != null && _isProceed) {
+      return LinearProgressIndicator(value: _progressValue);
+    }
+    if (_progressValue != null && !_isProceed) return null;
+    return null;
+  }
+
+  Widget? trailingWidget() {
+    if (_isDownloaded) return const Icon(Icons.download_done);
+    return ElevatedButton(
+      onPressed: _onPressed,
+      style: ButtonStyle(
+        backgroundColor: MaterialStateProperty.all(Colors.green),
+      ),
+      child: const Text('download'),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -165,17 +165,8 @@ class BookCard extends StatelessWidget {
                 overflow: TextOverflow.ellipsis,
                 style: ViewUtils.ubuntuStyle(),
               ),
-              //subtitle: subtitleWidget(progress),
-              trailing: _isDownloaded
-                  ? const Icon(Icons.download_done)
-                  : ElevatedButton(
-                      onPressed: _onPressed,
-                      style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all(Colors.green),
-                      ),
-                      child: const Text('download'),
-                    ),
+              subtitle: subtitleWidget(),
+              trailing: trailingWidget(),
             ),
           ),
         ],
