@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_interview_questions/view/pages/categories/categories.dart';
-import 'package:flutter_interview_questions/view/pages/store/store.dart';
+import 'package:flutter_interview_questions/view/pages/library/library.dart';
 import 'package:flutter_interview_questions/view/utils/utils.dart';
 
 class GeneralPage extends StatefulWidget {
@@ -28,7 +28,7 @@ class _GeneralPageState extends State<GeneralPage> {
   Widget build(BuildContext context) => Scaffold(
         backgroundColor: Colors.grey[200],
         appBar: index == 0 ? _homeAppBar() : null,
-        body: _children.elementAtOrNull(index),
+        body: _children.elementAt(index),
         bottomNavigationBar: BottomNavigationBar(
           selectedLabelStyle: ViewUtils.ubuntuStyle(fontSize: 16),
           unselectedLabelStyle: ViewUtils.ubuntuStyle(fontSize: 14),
@@ -65,3 +65,14 @@ class _GeneralPageState extends State<GeneralPage> {
     );
   }
 }
+
+
+//  appBar: AppBarWithSearchSwitch(
+//         onChanged: (text) {},
+//         appBarBuilder: (context) {
+//           return AppBar(
+//             title: const Text('Library '),
+//             actions: const [AppBarSearchButton()],
+//           );
+//         },
+//       ),

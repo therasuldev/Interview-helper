@@ -28,10 +28,10 @@ class QuestionState {
     );
   }
 
-  QuestionState.unknown([question = const <Question>[]])
+  QuestionState.unknown([questions = const <Question>[]])
       : this(
           event: null,
-          questions: question,
+          questions: questions,
           loading: true,
           error: null,
         );

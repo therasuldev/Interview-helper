@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_interview_questions/app_build.dart';
+import 'package:flutter_interview_questions/application_start.dart';
+import 'package:flutter_interview_questions/categories_path.dart';
+import 'package:flutter_interview_questions/core/provider/books_bloc/books_bloc.dart';
 import 'package:flutter_interview_questions/core/provider/question_bloc/question_bloc.dart';
 import 'package:flutter_interview_questions/view/general_page.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 Future<void> main() async {
-  await App.build();
+  await Application.start();
   await initialization();
   runApp(const MyApp());
 }
@@ -22,7 +24,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
-      providers: [BlocProvider(create: (_) => QuestionBloc())],
+      providers: [
+        BlocProvider(create: (context) => QuestionBloc()),
+        BlocProvider(
+          create: (context) => BookBloc()
+            ..add(BookEvent.fetchQuestionStart(
+              [
+                KPath.flutter,
+                KPath.go,
+              ],
+            )),
+        ),
+      ],
       child: const MaterialApp(
         home: GeneralPage(),
         debugShowCheckedModeBanner: false,

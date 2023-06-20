@@ -42,54 +42,60 @@ class _QuestionViewState extends State<QuestionView> {
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: PreferredSize(
-            preferredSize: const Size.fromHeight(240),
-            child: ClipPath(
-              clipper: MyClipper(),
-              child: Container(
-                  height: 300,
-                  color: const Color.fromARGB(255, 38, 109, 176),
-                  alignment: Alignment.center,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(
-                            top: 50, left: 15, right: 15, bottom: 15),
-                        child: Row(
-                          children: [
-                            const BackButton(color: Colors.white),
-                            const Spacer(flex: 30),
-                            IconButton(
-                              onPressed: () {},
-                              icon: const Icon(
-                                Icons.favorite,
-                                color: Colors.white,
-                              ),
-                            ),
-                            const Spacer(flex: 1),
-                            Text(
-                              '${currentIndex + 1}/${widget.questions.length}',
-                              style: const TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.w900,
-                                color: Colors.white,
-                              ),
-                            )
-                          ],
+          preferredSize: const Size.fromHeight(240),
+          child: ClipPath(
+            clipper: MyClipper(),
+            child: Container(
+              height: 300,
+              color: const Color.fromARGB(255, 38, 109, 176),
+              alignment: Alignment.center,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(
+                      top: 50,
+                      left: 15,
+                      right: 15,
+                      bottom: 15,
+                    ),
+                    child: Row(
+                      children: [
+                        const BackButton(color: Colors.white),
+                        const Spacer(flex: 30),
+                        IconButton(
+                          onPressed: () {},
+                          icon: const Icon(
+                            Icons.favorite,
+                            color: Colors.white,
+                          ),
                         ),
-                      ),
-                      Text(
-                        questions[currentIndex].question,
-                        textAlign: TextAlign.center,
-                        style: const TextStyle(
-                          fontSize: 25,
-                          fontWeight: FontWeight.w700,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ],
-                  )),
-            )),
+                        const Spacer(flex: 1),
+                        Text(
+                          '${currentIndex + 1}/${widget.questions.length}',
+                          style: const TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w900,
+                            color: Colors.white,
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                  Text(
+                    questions[currentIndex].question,
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.w700,
+                      color: Colors.white,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
         body: Padding(
           padding: EdgeInsets.only(
             left: 5,
@@ -139,7 +145,7 @@ class _CustomFloatingActionButton extends StatelessWidget {
     required this.onPressed,
   });
 
-  final _style = const TextStyle(
+  final style = const TextStyle(
     fontSize: 17,
     fontWeight: FontWeight.w700,
     color: Colors.white,
@@ -150,8 +156,9 @@ class _CustomFloatingActionButton extends StatelessWidget {
         heroTag: heroTag,
         onPressed: onPressed,
         backgroundColor: Colors.green[500],
-        label: Text(label, style: _style),
+        label: Text(label, style: style),
         extendedPadding: const EdgeInsets.symmetric(horizontal: 40),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
       );
 
   final String heroTag;
