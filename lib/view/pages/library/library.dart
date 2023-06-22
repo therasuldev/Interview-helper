@@ -1,7 +1,10 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_interview_questions/app_navigators.dart';
 import 'package:flutter_interview_questions/core/local_service/cache_service.dart';
+import 'package:flutter_interview_questions/core/utils/categories.dart';
+import 'package:flutter_interview_questions/view/pages/library/all_items/all_books.dart';
 import 'package:path_provider/path_provider.dart';
 
 import 'package:flutter_interview_questions/core/model/book/book.dart';
@@ -26,12 +29,17 @@ class _BookStoreState extends State<BookStore> {
           return ListView(
             shrinkWrap: true,
             children: [
-              _RowTitleWidget(title: 'Flutter', onPressed: () {}),
-              _BookCardWidget(books: state.library![0]['flutter']),
+              //* Flutter
+              _RowTitleWidget(
+                  title: Titles.flutter,
+                  onPressed: () async {
+                    await AppNavigators.go(context, const AllBooks());
+                  }),
+              _BookCardWidget(books: state.library![0][Languages.flutter]),
 
-              //*
-              _RowTitleWidget(title: 'Go Lang', onPressed: () {}),
-              _BookCardWidget(books: state.library![1]['go'])
+              //* Go
+              _RowTitleWidget(title: Titles.go, onPressed: () {}),
+              _BookCardWidget(books: state.library![1][Languages.go])
             ],
           );
         } else {
