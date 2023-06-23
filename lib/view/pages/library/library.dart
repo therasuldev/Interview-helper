@@ -1,7 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_interview_questions/app_navigators.dart';
 import 'package:flutter_interview_questions/core/local_service/cache_service.dart';
 import 'package:flutter_interview_questions/core/utils/enum.dart';
 import 'package:flutter_interview_questions/view/pages/library/all_items/all_books.dart';
@@ -32,16 +31,16 @@ class _BookStoreState extends State<BookStore> {
               //* Flutter
               _RowTitleWidget(
                 title: Titles.flutter.title,
-                page: const AllBooks(),
+                page: AllBooks(books: state.library![0][Types.flutter.type]!),
               ),
-              _BookCardWidget(books: state.library![0][Types.flutter.type]),
+              _BookCardWidget(books: state.library![0][Types.flutter.type]!),
 
               //* Go
               _RowTitleWidget(
                 title: Titles.go.title,
-                page: const AllBooks(),
+                page: AllBooks(books: state.library![1][Types.go.type]!),
               ),
-              _BookCardWidget(books: state.library![1][Types.go.type])
+              _BookCardWidget(books: state.library![1][Types.go.type]!)
             ],
           );
         } else {
@@ -57,7 +56,7 @@ class _BookCardWidget extends StatefulWidget {
     Key? key,
     required this.books,
   }) : super(key: key);
-  final List<Book>? books;
+  final List<Book> books;
 
   @override
   State<_BookCardWidget> createState() => _BookCardWidgetState();
@@ -97,10 +96,10 @@ class _BookCardWidgetState extends State<_BookCardWidget> {
       height: MediaQuery.of(context).size.height * .35,
       child: ListView.builder(
         shrinkWrap: true,
-        itemCount: widget.books?.length ?? 0,
+        itemCount: widget.books.length,
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
-          final book = widget.books![index];
+          final book = widget.books[index];
           final existsBookName = _cacheService.downloadedBooks.get(book.name);
           final isDownloaded = book.name == existsBookName;
 
@@ -201,7 +200,10 @@ class _RowTitleWidget extends StatelessWidget {
       children: [
         Text(title, style: ViewUtils.ubuntuStyle(fontSize: 20)),
         TextButton(
-          onPressed: AppNavigators.go(context, page),
+          onPressed: () {
+            Navigator.pushAndRemoveUntil(context,
+                MaterialPageRoute(builder: (_) => page), (route) => true);
+          },
           child: Text('All', style: ViewUtils.ubuntuStyle(fontSize: 20)),
         )
       ],
