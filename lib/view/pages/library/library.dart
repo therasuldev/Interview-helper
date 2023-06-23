@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_interview_questions/app_navigators.dart';
 import 'package:flutter_interview_questions/core/local_service/cache_service.dart';
-import 'package:flutter_interview_questions/core/utils/categories.dart';
+import 'package:flutter_interview_questions/core/utils/enum.dart';
 import 'package:flutter_interview_questions/view/pages/library/all_items/all_books.dart';
 import 'package:path_provider/path_provider.dart';
 
@@ -31,15 +31,17 @@ class _BookStoreState extends State<BookStore> {
             children: [
               //* Flutter
               _RowTitleWidget(
-                  title: Titles.flutter,
-                  onPressed: () async {
-                    await AppNavigators.go(context, const AllBooks());
-                  }),
-              _BookCardWidget(books: state.library![0][Languages.flutter]),
+                title: Titles.flutter.title,
+                page: const AllBooks(),
+              ),
+              _BookCardWidget(books: state.library![0][Types.flutter.type]),
 
               //* Go
-              _RowTitleWidget(title: Titles.go, onPressed: () {}),
-              _BookCardWidget(books: state.library![1][Languages.go])
+              _RowTitleWidget(
+                title: Titles.go.title,
+                page: const AllBooks(),
+              ),
+              _BookCardWidget(books: state.library![1][Types.go.type])
             ],
           );
         } else {
@@ -184,10 +186,13 @@ class _BookCard extends StatelessWidget {
 }
 
 class _RowTitleWidget extends StatelessWidget {
-  const _RowTitleWidget({required this.title, required this.onPressed});
+  const _RowTitleWidget({
+    required this.page,
+    required this.title,
+  });
 
+  final Widget page;
   final String title;
-  final void Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -196,7 +201,7 @@ class _RowTitleWidget extends StatelessWidget {
       children: [
         Text(title, style: ViewUtils.ubuntuStyle(fontSize: 20)),
         TextButton(
-          onPressed: onPressed,
+          onPressed: AppNavigators.go(context, page),
           child: Text('All', style: ViewUtils.ubuntuStyle(fontSize: 20)),
         )
       ],
