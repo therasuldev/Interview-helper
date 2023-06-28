@@ -1,9 +1,11 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_interview_questions/app_navigators.dart';
 import 'package:flutter_interview_questions/core/local_service/cache_service.dart';
 import 'package:flutter_interview_questions/core/utils/enum.dart';
 import 'package:flutter_interview_questions/view/pages/library/all_items/all_books.dart';
+import 'package:flutter_interview_questions/view/pages/library/book_view.dart';
 import 'package:path_provider/path_provider.dart';
 
 import 'package:flutter_interview_questions/core/model/book/book.dart';
@@ -103,12 +105,21 @@ class _BookCardWidgetState extends State<_BookCardWidget> {
           final existsBookName = _cacheService.downloadedBooks.get(book.name);
           final isDownloaded = book.name == existsBookName;
 
-          return _BookCard(
-            bookName: book.name,
-            isProceed: _isProceed,
-            isDownloaded: isDownloaded,
-            progressValue: _downloadProgress[index],
-            onPressed: () async => await downloadFile(index, book),
+          return GestureDetector(
+            child: _BookCard(
+              bookName: book.name,
+              isProceed: _isProceed,
+              isDownloaded: isDownloaded,
+              progressValue: _downloadProgress[index],
+              onPressed: () async => await downloadFile(index, book),
+            ),
+            onTap: () {
+              final otherBooks = widget.books.where((b) => b != book).toList();
+              AppNavigators.go(
+                context,
+                BookView(book: book, otherBooks: otherBooks),
+              );
+            },
           );
         },
       ),
@@ -157,27 +168,24 @@ class _BookCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: MediaQuery.of(context).size.width * .7,
+      color: Colors.pink,
       margin: const EdgeInsets.all(5),
-      color: const Color.fromARGB(255, 197, 201, 224),
-      width: MediaQuery.of(context).size.width * .6,
       child: Column(
         children: [
-          SizedBox(
-            height: MediaQuery.of(context).size.height * .2,
+          Container(
+            height: MediaQuery.of(context).size.width * .5,
+            color: Colors.yellow,
             child: const Placeholder(),
           ),
+          const SizedBox(height: 15),
           Expanded(
-            child: ListTile(
-              title: Text(
-                _bookName,
-                maxLines: 4,
-                overflow: TextOverflow.ellipsis,
-                style: ViewUtils.ubuntuStyle(),
-              ),
-              subtitle: subtitleWidget(),
-              trailing: trailingWidget(),
+            child: Text(
+              _bookName,
+              textAlign: TextAlign.center,
+              style: ViewUtils.ubuntuStyle(fontSize: 18),
             ),
-          ),
+          )
         ],
       ),
     );
