@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_interview_questions/app_navigators.dart';
+import 'package:flutter_interview_questions/core/local_service/cache_service.dart';
 import 'package:flutter_interview_questions/core/model/book/book.dart';
 import 'package:flutter_interview_questions/view/pages/library/book_view.dart';
 import 'package:flutter_interview_questions/view/utils/utils.dart';
@@ -13,6 +14,8 @@ class AllBooks extends StatefulWidget {
 }
 
 class _AllBooksState extends State<AllBooks> {
+  final CacheService _cacheService = CacheService();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,10 +29,19 @@ class _AllBooksState extends State<AllBooks> {
         itemCount: widget.books.length,
         itemBuilder: (context, index) {
           final book = widget.books[index];
+          final existBookName = _cacheService.downloadedBooks.get(book.name);
+          final isExist = book.name == existBookName;
           return GestureDetector(
             onTap: () {
-              final otherBooks = widget.books.where((b) => b!=book).toList();
-              AppNavigators.go(context, BookView(book: book, otherBooks: otherBooks));
+              final otherBooks = widget.books.where((b) => b != book).toList();
+              AppNavigators.go(
+                  context,
+                  BookView(
+                    book: book,
+                    index: index,
+                    isExist: isExist,
+                    otherBooks: otherBooks,
+                  ));
             },
             child: Container(
               width: MediaQuery.of(context).size.width * .7,

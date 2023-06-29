@@ -1,27 +1,86 @@
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_interview_questions/app_navigators.dart';
+import 'package:flutter_interview_questions/core/local_service/cache_service.dart';
 import 'package:flutter_interview_questions/core/model/book/book.dart';
 import 'package:flutter_interview_questions/view/utils/utils.dart';
+import 'package:path_provider/path_provider.dart';
 
+//TODO yukleme qurtaranda downlaod buttonu yox olmur
 class BookView extends StatefulWidget {
   const BookView({
     super.key,
     required this.book,
+    required this.index,
+    required this.isExist,
     required this.otherBooks,
   });
 
   final Book book;
+  final int index;
+  final bool isExist;
   final List<Book> otherBooks;
   @override
   State<BookView> createState() => _BookViewState();
 }
 
 class _BookViewState extends State<BookView> {
-  late List<Book> allBooks;
   @override
   void initState() {
     super.initState();
     allBooks = [...widget.otherBooks, widget.book];
+  }
+
+  late List<Book> allBooks;
+
+  //when proceed the downloading prosses
+  bool _isProceed = false;
+
+  final Map<int, double> _downloadProgress = {};
+  final CacheService _cacheService = CacheService();
+
+  Future downloadFile(int index, Book book) async {
+    final url = await book.url;
+    final temp = await getTemporaryDirectory();
+    final path = '${temp.path}/${book.name}';
+
+    await Dio().download(
+      url,
+      path,
+      onReceiveProgress: (count, total) {
+        double progress = count / total;
+        setState(() {
+          _isProceed = true;
+          _downloadProgress[index] = progress;
+        });
+      },
+    ).whenComplete(() async {
+      await _cacheService.downloadedBooks.put(book.name, book.name);
+      setState(() => _isProceed = false);
+    });
+  }
+
+  Widget? subtitleWidget() {
+    if (_downloadProgress[widget.index] != null && _isProceed) {
+      return LinearProgressIndicator(value: _downloadProgress[widget.index]);
+    }
+    if (_downloadProgress[widget.index] != null && !_isProceed) return null;
+    return null;
+  }
+
+  Widget trailingWidget() {
+    if (widget.isExist) return const Icon(Icons.download_done);
+    return SizedBox(
+      height: 50,
+      width: MediaQuery.of(context).size.width * .6,
+      child: ElevatedButton(
+        onPressed: () => downloadFile(widget.index, widget.book),
+        style: ButtonStyle(
+          backgroundColor: MaterialStateProperty.all(Colors.green),
+        ),
+        child: Text('download', style: ViewUtils.ubuntuStyle()),
+      ),
+    );
   }
 
   @override
@@ -49,16 +108,10 @@ class _BookViewState extends State<BookView> {
                   ),
                 ),
                 const SizedBox(height: 30),
+                trailingWidget(),
                 SizedBox(
-                  height: 50,
                   width: MediaQuery.of(context).size.width * .6,
-                  child: ElevatedButton(
-                    onPressed: () {},
-                    style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.green),
-                    ),
-                    child: Text('download', style: ViewUtils.ubuntuStyle()),
-                  ),
+                  child: ListTile(title: subtitleWidget()),
                 ),
                 const SizedBox(height: 30),
                 SizedBox(
@@ -75,7 +128,12 @@ class _BookViewState extends State<BookView> {
                               allBooks.where((b) => b != book).toList();
                           AppNavigators.go(
                             context,
-                            BookView(book: book, otherBooks: otherBooks),
+                            BookView(
+                              book: book,
+                              index: widget.index,
+                              isExist: widget.isExist,
+                              otherBooks: otherBooks,
+                            ),
                           );
                         },
                         child: Container(

@@ -1,4 +1,3 @@
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_interview_questions/app_navigators.dart';
@@ -6,7 +5,6 @@ import 'package:flutter_interview_questions/core/local_service/cache_service.dar
 import 'package:flutter_interview_questions/core/utils/enum.dart';
 import 'package:flutter_interview_questions/view/pages/library/all_items/all_books.dart';
 import 'package:flutter_interview_questions/view/pages/library/book_view.dart';
-import 'package:path_provider/path_provider.dart';
 
 import 'package:flutter_interview_questions/core/model/book/book.dart';
 import 'package:flutter_interview_questions/core/provider/books_bloc/books_bloc.dart';
@@ -65,33 +63,7 @@ class _BookCardWidget extends StatefulWidget {
 }
 
 class _BookCardWidgetState extends State<_BookCardWidget> {
-  //when proceed the downloading prosses
-  bool _isProceed = false;
-
-  final Map<int, double> _downloadProgress = {};
   final CacheService _cacheService = CacheService();
-
-  Future downloadFile(int index, Book book) async {
-    final url = await book.url;
-    final temp = await getTemporaryDirectory();
-    final path = '${temp.path}/${book.name}';
-
-    await Dio().download(
-      url,
-      path,
-      onReceiveProgress: (count, total) {
-        double progress = count / total;
-        setState(() {
-          _isProceed = true;
-          _downloadProgress[index] = progress;
-        });
-      },
-    ).whenComplete(() async {
-      await _cacheService.downloadedBooks.put(book.name, book.name);
-      setState(() => _isProceed = false);
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -102,22 +74,21 @@ class _BookCardWidgetState extends State<_BookCardWidget> {
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
           final book = widget.books[index];
-          final existsBookName = _cacheService.downloadedBooks.get(book.name);
-          final isDownloaded = book.name == existsBookName;
+          final existBookName = _cacheService.downloadedBooks.get(book.name);
+          final isExist = book.name == existBookName;
 
           return GestureDetector(
-            child: _BookCard(
-              bookName: book.name,
-              isProceed: _isProceed,
-              isDownloaded: isDownloaded,
-              progressValue: _downloadProgress[index],
-              onPressed: () async => await downloadFile(index, book),
-            ),
+            child: _BookCard(bookName: book.name),
             onTap: () {
               final otherBooks = widget.books.where((b) => b != book).toList();
               AppNavigators.go(
                 context,
-                BookView(book: book, otherBooks: otherBooks),
+                BookView(
+                  book: book,
+                  index: index,
+                  isExist: isExist,
+                  otherBooks: otherBooks,
+                ),
               );
             },
           );
@@ -129,41 +100,10 @@ class _BookCardWidgetState extends State<_BookCardWidget> {
 
 class _BookCard extends StatelessWidget {
   const _BookCard({
-    required bool isDownloaded,
-    required bool isProceed,
     required String bookName,
-    required double? progressValue,
-    required void Function()? onPressed,
-  })  : _isDownloaded = isDownloaded,
-        _isProceed = isProceed,
-        _bookName = bookName,
-        _progressValue = progressValue,
-        _onPressed = onPressed;
+  }) : _bookName = bookName;
 
-  final bool _isDownloaded;
-  final bool _isProceed;
   final String _bookName;
-  final double? _progressValue;
-  final void Function()? _onPressed;
-
-  Widget? subtitleWidget() {
-    if (_progressValue != null && _isProceed) {
-      return LinearProgressIndicator(value: _progressValue);
-    }
-    if (_progressValue != null && !_isProceed) return null;
-    return null;
-  }
-
-  Widget? trailingWidget() {
-    if (_isDownloaded) return const Icon(Icons.download_done);
-    return ElevatedButton(
-      onPressed: _onPressed,
-      style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.all(Colors.green),
-      ),
-      child: const Text('download'),
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
