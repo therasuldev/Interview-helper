@@ -42,10 +42,11 @@ class ViewUtils {
       borderRadius: BorderRadius.circular(10));
 
   // Ubuntu Google fonts
-  static ubuntuStyle({FontWeight? fontWeight, double? fontSize}) {
+  static ubuntuStyle({FontWeight? fontWeight, double? fontSize, Color? color}) {
     return GoogleFonts.ubuntu(
       fontWeight: fontWeight ?? FontWeight.w500,
       fontSize: fontSize,
+      color: color,
     );
   }
 }

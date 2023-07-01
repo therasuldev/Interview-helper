@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_interview_questions/app_navigators.dart';
 import 'package:flutter_interview_questions/core/local_service/cache_service.dart';
@@ -33,7 +34,7 @@ class _BookViewState extends State<BookView> {
 
   late List<Book> allBooks;
 
-  //when proceed the downloading prosses
+  /// when proceed the downloading prosses
   bool _isProceed = false;
 
   final Map<int, double> _downloadProgress = {};
@@ -69,17 +70,26 @@ class _BookViewState extends State<BookView> {
   }
 
   Widget trailingWidget() {
-    if (widget.isExist) return const Icon(Icons.download_done);
-    return SizedBox(
-      height: 50,
-      width: MediaQuery.of(context).size.width * .6,
-      child: ElevatedButton(
+    // sehife acilanda kantrol
+    if (widget.isExist) {
+      return const Icon(Icons.download_done);
+    }
+    // yukleme qurtarandan sonra kantrol
+    else if (!_isProceed) {
+      return _KCupertinoButton(
+        buttonText: 'open',
+        textColor: Colors.grey.shade600,
+        borderColor: Colors.grey.shade500,
+        //TODO: must be open file
         onPressed: () => downloadFile(widget.index, widget.book),
-        style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(Colors.green),
-        ),
-        child: Text('download', style: ViewUtils.ubuntuStyle()),
-      ),
+      );
+    }
+    // fayl yuklenmeyibse
+    return _KCupertinoButton(
+      buttonText: 'download',
+      textColor: Colors.green,
+      borderColor: Colors.green,
+      onPressed: () => downloadFile(widget.index, widget.book),
     );
   }
 
@@ -93,9 +103,9 @@ class _BookViewState extends State<BookView> {
             child: Column(
               children: [
                 Container(
-                  height: MediaQuery.of(context).size.width * .7,
-                  width: MediaQuery.of(context).size.width * .7,
                   color: Colors.purple,
+                  width: MediaQuery.of(context).size.width * .7,
+                  height: MediaQuery.of(context).size.width * .7,
                   child: const Placeholder(),
                 ),
                 const SizedBox(height: 30),
@@ -169,6 +179,41 @@ class _BookViewState extends State<BookView> {
               ],
             ),
           ),
+        ),
+      ),
+    );
+  }
+}
+
+class _KCupertinoButton extends StatelessWidget {
+  const _KCupertinoButton({
+    required this.buttonText,
+    required this.onPressed,
+    required this.textColor,
+    required this.borderColor,
+  });
+
+  final void Function()? onPressed;
+  final String buttonText;
+  final Color textColor;
+  final Color borderColor;
+
+  @override
+  Widget build(BuildContext context) {
+    return CupertinoButton(
+      onPressed: onPressed,
+      child: Container(
+        height: 50,
+        width: MediaQuery.of(context).size.width * .6,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(7),
+          border: Border.all(color: borderColor, width: 2),
+        ),
+        alignment: Alignment.center,
+        child: Text(
+          buttonText,
+          style: ViewUtils.ubuntuStyle(color: textColor, fontSize: 19),
         ),
       ),
     );
