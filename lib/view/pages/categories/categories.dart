@@ -83,7 +83,8 @@ class _CategoryCard extends StatelessWidget {
             const Spacer(),
             Text(
               language,
-              style: ViewUtils.ubuntuStyle(fontSize: 22, fontWeight: FontWeight.w600),
+              style: ViewUtils.ubuntuStyle(
+                  fontSize: 22, fontWeight: FontWeight.w600),
             ),
             const Spacer(),
           ],

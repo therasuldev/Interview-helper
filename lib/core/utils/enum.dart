@@ -11,3 +11,31 @@ enum DataPath {
     }
   }
 }
+
+enum Types {
+  flutter('flutter'),
+  go('go'),
+  java('java'),
+  python('python'),
+  ruby('ruby'),
+  rust('rust'),
+  js('js'),
+  react('react');
+
+  const Types(this.type);
+  final String type;
+}
+
+enum Titles {
+  flutter('Flutter'),
+  go('Go Lang'),
+  java('Java'),
+  python('Python'),
+  ruby('Ruby'),
+  rust('Rust'),
+  js('Java Script'),
+  react('React');
+
+  const Titles(this.title);
+  final String title;
+}
