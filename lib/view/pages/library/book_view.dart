@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_interview_questions/app_navigators.dart';
 import 'package:flutter_interview_questions/core/local_service/cache_service.dart';
 import 'package:flutter_interview_questions/core/model/book/book.dart';
+import 'package:flutter_interview_questions/view/pages/library/open_pdf.dart';
 import 'package:flutter_interview_questions/view/utils/utils.dart';
 import 'package:path_provider/path_provider.dart';
 
-//TODO yukleme qurtaranda downlaod buttonu yox olmur
 class BookView extends StatefulWidget {
   const BookView({
     super.key,
@@ -37,28 +37,50 @@ class _BookViewState extends State<BookView> {
   /// when proceed the downloading prosses
   bool _isProceed = false;
 
+  ///
+  bool _isCompleted = false;
+
+  ///
+  // bool _isDownloaded = false;
+
   final Map<int, double> _downloadProgress = {};
   final CacheService _cacheService = CacheService();
 
-  Future downloadFile(int index, Book book) async {
+  Future<String> downloadPDF(int index, Book book) async {
     final url = await book.url;
     final temp = await getTemporaryDirectory();
     final path = '${temp.path}/${book.name}';
 
-    await Dio().download(
-      url,
-      path,
-      onReceiveProgress: (count, total) {
-        double progress = count / total;
-        setState(() {
-          _isProceed = true;
-          _downloadProgress[index] = progress;
+    if (!widget.isExist) {
+      final isExst =
+          _cacheService.downloadedBooks.containsKey(widget.book.name);
+      if (!isExst) {
+        await Dio().download(
+          url,
+          path,
+          onReceiveProgress: (count, total) {
+            double progress = count / total;
+            setState(() {
+              _isProceed = true;
+              _downloadProgress[index] = progress;
+            });
+          },
+        ).whenComplete(() async {
+          await _cacheService.downloadedBooks.put(book.name, book.name);
+          setState(() => _isProceed = false);
         });
-      },
-    ).whenComplete(() async {
-      await _cacheService.downloadedBooks.put(book.name, book.name);
-      setState(() => _isProceed = false);
-    });
+      }
+    }
+    return path;
+  }
+
+  Future<void> openPDF() async {
+    //setState(() => _isDownloaded = true);
+    final localPath = await downloadPDF(widget.index, widget.book);
+
+    if (context.mounted) {
+      return await AppNavigators.go(context, OpenPDF(localPath: localPath));
+    }
   }
 
   Widget? subtitleWidget() {
@@ -71,17 +93,22 @@ class _BookViewState extends State<BookView> {
 
   Widget trailingWidget() {
     // sehife acilanda kantrol
-    if (widget.isExist) {
-      return const Icon(Icons.download_done);
-    }
-    // yukleme qurtarandan sonra kantrol
-    else if (!_isProceed) {
+    if (widget.isExist ||
+        _cacheService.downloadedBooks.containsKey(widget.book.name)) {
       return _KCupertinoButton(
         buttonText: 'open',
         textColor: Colors.grey.shade600,
         borderColor: Colors.grey.shade500,
-        //TODO: must be open file
-        onPressed: () => downloadFile(widget.index, widget.book),
+        onPressed: () async => await openPDF(),
+      );
+    }
+    //yukleme qurtarandan sonra kantrol
+    else if (_isCompleted) {
+      return _KCupertinoButton(
+        buttonText: 'open',
+        textColor: Colors.grey.shade600,
+        borderColor: Colors.grey.shade500,
+        onPressed: () async => await openPDF(),
       );
     }
     // fayl yuklenmeyibse
@@ -89,7 +116,10 @@ class _BookViewState extends State<BookView> {
       buttonText: 'download',
       textColor: Colors.green,
       borderColor: Colors.green,
-      onPressed: () => downloadFile(widget.index, widget.book),
+      onPressed: () async {
+        await downloadPDF(widget.index, widget.book);
+        setState(() => _isCompleted = true);
+      },
     );
   }
 
