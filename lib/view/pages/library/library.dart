@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_interview_questions/app_navigators.dart';
-import 'package:flutter_interview_questions/core/local_service/cache_service.dart';
+import 'package:flutter_interview_questions/core/repository/cache_repository.dart';
 import 'package:flutter_interview_questions/core/utils/enum.dart';
 import 'package:flutter_interview_questions/view/pages/library/all_items/all_books.dart';
 import 'package:flutter_interview_questions/view/pages/library/book_view.dart';
@@ -51,36 +51,30 @@ class _BookStoreState extends State<BookStore> {
   }
 }
 
-class _BookCardWidget extends StatefulWidget {
-  const _BookCardWidget({
-    Key? key,
-    required this.books,
-  }) : super(key: key);
+class _BookCardWidget extends StatelessWidget {
+  _BookCardWidget({required this.books}) : _cacheRepository = CacheRepository();
+
   final List<Book> books;
 
-  @override
-  State<_BookCardWidget> createState() => _BookCardWidgetState();
-}
+  late final CacheRepository _cacheRepository;
 
-class _BookCardWidgetState extends State<_BookCardWidget> {
-  final CacheService _cacheService = CacheService();
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: MediaQuery.of(context).size.height * .35,
       child: ListView.builder(
         shrinkWrap: true,
-        itemCount: widget.books.length,
+        itemCount: books.length,
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
-          final book = widget.books[index];
-          final existBookName = _cacheService.downloadedBooks.get(book.name);
+          final book = books[index];
+          final existBookName = _cacheRepository.get(book.name);
           final isExist = book.name == existBookName;
 
           return GestureDetector(
             child: _BookCard(bookName: book.name),
             onTap: () {
-              final otherBooks = widget.books.where((b) => b != book).toList();
+              final otherBooks = books.where((b) => b != book).toList();
               AppNavigators.go(
                 context,
                 BookView(

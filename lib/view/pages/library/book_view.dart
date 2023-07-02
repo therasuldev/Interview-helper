@@ -2,8 +2,8 @@ import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_interview_questions/app_navigators.dart';
-import 'package:flutter_interview_questions/core/local_service/cache_service.dart';
 import 'package:flutter_interview_questions/core/model/book/book.dart';
+import 'package:flutter_interview_questions/core/repository/cache_repository.dart';
 import 'package:flutter_interview_questions/view/pages/library/open_pdf.dart';
 import 'package:flutter_interview_questions/view/utils/utils.dart';
 import 'package:path_provider/path_provider.dart';
@@ -30,9 +30,12 @@ class _BookViewState extends State<BookView> {
   void initState() {
     super.initState();
     allBooks = [...widget.otherBooks, widget.book];
+    _cacheRepository = CacheRepository();
   }
 
   late List<Book> allBooks;
+
+  late final CacheRepository _cacheRepository;
 
   /// when proceed the downloading prosses
   bool _isProceed = false;
@@ -40,11 +43,7 @@ class _BookViewState extends State<BookView> {
   ///
   bool _isCompleted = false;
 
-  ///
-  // bool _isDownloaded = false;
-
   final Map<int, double> _downloadProgress = {};
-  final CacheService _cacheService = CacheService();
 
   Future<String> downloadPDF(int index, Book book) async {
     final url = await book.url;
@@ -52,9 +51,7 @@ class _BookViewState extends State<BookView> {
     final path = '${temp.path}/${book.name}';
 
     if (!widget.isExist) {
-      final isExst =
-          _cacheService.downloadedBooks.containsKey(widget.book.name);
-      if (!isExst) {
+      if (!_cacheRepository.containsKey(widget.book.name)) {
         await Dio().download(
           url,
           path,
@@ -66,7 +63,7 @@ class _BookViewState extends State<BookView> {
             });
           },
         ).whenComplete(() async {
-          await _cacheService.downloadedBooks.put(book.name, book.name);
+          await _cacheRepository.put(book.name, book.name);
           setState(() => _isProceed = false);
         });
       }
@@ -75,7 +72,6 @@ class _BookViewState extends State<BookView> {
   }
 
   Future<void> openPDF() async {
-    //setState(() => _isDownloaded = true);
     final localPath = await downloadPDF(widget.index, widget.book);
 
     if (context.mounted) {
@@ -83,18 +79,18 @@ class _BookViewState extends State<BookView> {
     }
   }
 
-  Widget? subtitleWidget() {
+  Widget? progressIndicatorView() {
     if (_downloadProgress[widget.index] != null && _isProceed) {
       return LinearProgressIndicator(value: _downloadProgress[widget.index]);
+    } else if (_downloadProgress[widget.index] != null && !_isProceed) {
+      return null;
     }
-    if (_downloadProgress[widget.index] != null && !_isProceed) return null;
     return null;
   }
 
-  Widget trailingWidget() {
+  Widget buttonView() {
     // sehife acilanda kantrol
-    if (widget.isExist ||
-        _cacheService.downloadedBooks.containsKey(widget.book.name)) {
+    if (widget.isExist || _cacheRepository.containsKey(widget.book.name)) {
       return _KCupertinoButton(
         buttonText: 'open',
         textColor: Colors.grey.shade600,
@@ -148,10 +144,19 @@ class _BookViewState extends State<BookView> {
                   ),
                 ),
                 const SizedBox(height: 30),
-                trailingWidget(),
+                buttonView(),
                 SizedBox(
                   width: MediaQuery.of(context).size.width * .6,
-                  child: ListTile(title: subtitleWidget()),
+                  child: ListTile(
+                    title: Visibility(
+                      visible: _isProceed,
+                      child: Text(
+                        _downloadProgress[widget.index].parseToPercent(),
+                        style: ViewUtils.ubuntuStyle(),
+                      ),
+                    ),
+                    subtitle: progressIndicatorView(),
+                  ),
                 ),
                 const SizedBox(height: 30),
                 SizedBox(
@@ -247,5 +252,11 @@ class _KCupertinoButton extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+extension ParseToPercent on double? {
+  String parseToPercent() {
+    return '${(double.parse(this?.toStringAsFixed(2) ?? '0') * 100).toInt()} %';
   }
 }
