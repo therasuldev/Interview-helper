@@ -28,12 +28,14 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (context) => QuestionBloc()),
         BlocProvider(
           create: (context) => BookBloc()
-            ..add(BookEvent.fetchQuestionStart(
-              [
-                KPath.flutter,
-                KPath.go,
-              ],
-            )),
+            ..add(
+              BookEvent.fetchQuestionStart(
+                [
+                  KPath.flutter,
+                  KPath.go,
+                ],
+              ),
+            ),
         ),
       ],
       child: const MaterialApp(

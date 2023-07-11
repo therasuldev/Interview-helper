@@ -2,12 +2,12 @@ import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_interview_questions/app_navigators.dart';
-import 'package:flutter_interview_questions/core/local_service/cache_service.dart';
 import 'package:flutter_interview_questions/core/model/book/book.dart';
+import 'package:flutter_interview_questions/core/repository/cache_repository.dart';
+import 'package:flutter_interview_questions/view/pages/library/open_pdf.dart';
 import 'package:flutter_interview_questions/view/utils/utils.dart';
 import 'package:path_provider/path_provider.dart';
 
-//TODO yukleme qurtaranda downlaod buttonu yox olmur
 class BookView extends StatefulWidget {
   const BookView({
     super.key,
@@ -30,58 +30,81 @@ class _BookViewState extends State<BookView> {
   void initState() {
     super.initState();
     allBooks = [...widget.otherBooks, widget.book];
+    _cacheRepository = CacheRepository();
   }
 
   late List<Book> allBooks;
 
+  late final CacheRepository _cacheRepository;
+
   /// when proceed the downloading prosses
   bool _isProceed = false;
 
-  final Map<int, double> _downloadProgress = {};
-  final CacheService _cacheService = CacheService();
+  ///
+  bool _isCompleted = false;
 
-  Future downloadFile(int index, Book book) async {
+  final Map<int, double> _downloadProgress = {};
+
+  Future<String> downloadPDF(int index, Book book) async {
     final url = await book.url;
     final temp = await getTemporaryDirectory();
     final path = '${temp.path}/${book.name}';
 
-    await Dio().download(
-      url,
-      path,
-      onReceiveProgress: (count, total) {
-        double progress = count / total;
-        setState(() {
-          _isProceed = true;
-          _downloadProgress[index] = progress;
+    if (!widget.isExist) {
+      if (!_cacheRepository.containsKey(widget.book.name)) {
+        await Dio().download(
+          url,
+          path,
+          onReceiveProgress: (count, total) {
+            double progress = count / total;
+            setState(() {
+              _isProceed = true;
+              _downloadProgress[index] = progress;
+            });
+          },
+        ).whenComplete(() async {
+          await _cacheRepository.put(book.name, book.name);
+          setState(() => _isProceed = false);
         });
-      },
-    ).whenComplete(() async {
-      await _cacheService.downloadedBooks.put(book.name, book.name);
-      setState(() => _isProceed = false);
-    });
+      }
+    }
+    return path;
   }
 
-  Widget? subtitleWidget() {
+  Future<void> openPDF() async {
+    final localPath = await downloadPDF(widget.index, widget.book);
+
+    if (context.mounted) {
+      return await AppNavigators.go(context, OpenPDF(localPath: localPath));
+    }
+  }
+
+  Widget? progressIndicatorView() {
     if (_downloadProgress[widget.index] != null && _isProceed) {
       return LinearProgressIndicator(value: _downloadProgress[widget.index]);
+    } else if (_downloadProgress[widget.index] != null && !_isProceed) {
+      return null;
     }
-    if (_downloadProgress[widget.index] != null && !_isProceed) return null;
     return null;
   }
 
-  Widget trailingWidget() {
+  Widget buttonView() {
     // sehife acilanda kantrol
-    if (widget.isExist) {
-      return const Icon(Icons.download_done);
-    }
-    // yukleme qurtarandan sonra kantrol
-    else if (!_isProceed) {
+    if (widget.isExist || _cacheRepository.containsKey(widget.book.name)) {
       return _KCupertinoButton(
         buttonText: 'open',
         textColor: Colors.grey.shade600,
         borderColor: Colors.grey.shade500,
-        //TODO: must be open file
-        onPressed: () => downloadFile(widget.index, widget.book),
+        onPressed: () async => await openPDF(),
+      );
+    }
+    //yukleme qurtarandan sonra kantrol
+    else if (_isCompleted) {
+      return _KCupertinoButton(
+        buttonText: 'open',
+        textColor: Colors.grey.shade600,
+        borderColor: Colors.grey.shade500,
+        onPressed: () async => await openPDF(),
       );
     }
     // fayl yuklenmeyibse
@@ -89,7 +112,10 @@ class _BookViewState extends State<BookView> {
       buttonText: 'download',
       textColor: Colors.green,
       borderColor: Colors.green,
-      onPressed: () => downloadFile(widget.index, widget.book),
+      onPressed: () async {
+        await downloadPDF(widget.index, widget.book);
+        setState(() => _isCompleted = true);
+      },
     );
   }
 
@@ -118,10 +144,19 @@ class _BookViewState extends State<BookView> {
                   ),
                 ),
                 const SizedBox(height: 30),
-                trailingWidget(),
+                buttonView(),
                 SizedBox(
                   width: MediaQuery.of(context).size.width * .6,
-                  child: ListTile(title: subtitleWidget()),
+                  child: ListTile(
+                    title: Visibility(
+                      visible: _isProceed,
+                      child: Text(
+                        _downloadProgress[widget.index].parseToPercent(),
+                        style: ViewUtils.ubuntuStyle(),
+                      ),
+                    ),
+                    subtitle: progressIndicatorView(),
+                  ),
                 ),
                 const SizedBox(height: 30),
                 SizedBox(
@@ -217,5 +252,11 @@ class _KCupertinoButton extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+extension ParseToPercent on double? {
+  String parseToPercent() {
+    return '${(double.parse(this?.toStringAsFixed(2) ?? '0') * 100).toInt()} %';
   }
 }
