@@ -100,84 +100,84 @@
         "answer": "Go's range keyword can be used in conjunction with a for loop to iterate over a specified channel.\n\nThe range keyword can be used to iterate over the values received from a channel until the channel is closed. When the channel is closed, the loop will terminate.\n\nHere is an example of ranging over a channel: \n\nch := make(chan int) \ngo func() { \n  for i := 0; i < 10; i++ { \n  ch <- i \n  } \n  close(ch) \n}() \n// range over the channel \nfor val := range ch { \n  fmt.Println(val) \n} \n\nThis example creates a channel ch and launches a goroutine that sends 10 values on the channel. The main function ranges over the channel, printing the values as they are received. When the channel is closed, the loop terminates. "
     },
     "26": {
-        "question": "",
-        "answer": ""
+        "question": "How do you handle panics and recover from them in Go?",
+        "answer": "In the Go programming language, a panic is a run-time error that occurs when a program is unable to recover from an error. Panics are usually caused by programmer mistakes, such as trying to index an array out of bounds or trying to divide by zero.\n\nTo handle a panic and recover from it, you can use the recover function inside a defer statement. The panic's error value can be retrieved by the recover function when a defer statement delays its execution until the surrounding function returns."
     },
     "27": {
-        "question": "",
-        "answer": ""
+        "question": "What is the 'defer' keyword used for in Go?",
+        "answer": "A staple in Golang interview questions for 2 years of experience, be prepared to answer this one. In the Go programming language, the defer keyword is used to defer the execution of a function until the surrounding function returns.\n\nThe defer statement is used to ensure that a function is always executed, regardless of whether the surrounding function returns normally or through a panic. It is often used to perform cleanup tasks, such as closing a file or releasing a lock."
     },
     "28": {
-        "question": "",
-        "answer": ""
+        "question": "How do you create and use a package in Go?",
+        "answer": "In the Go programming language, a package is a collection of related Go source files that are compiled together. Packages are used to organize and reuse code, and they provide a way to create and use libraries in Go.\n\nTo create a package in Go, you simply put your Go source files in a directory with the same name as the package. The package name is the name of the directory in which the source files are located."
     },
     "29": {
-        "question": "",
-        "answer": ""
+        "question": "What is the difference between a package and a module in Go?",
+        "answer": "In the Go programming language, a package is a collection of related Go source files that are compiled together. Packages are used to organize and reuse code, and they provide a way to create and use libraries in Go.\n\nA module is a unit of organization for Go source code, introduced in Go 1.11. Modules provide a way to manage dependency versions, and they are used to build, test, and publish Go packages.\n\nModules are defined using a go.mod file, which specifies the module path, the module's dependencies, and the required versions of those dependencies."
     },
     "30": {
-        "question": "",
-        "answer": ""
+        "question": "How do you create a custom type in Go?",
+        "answer": "In the Go programming language, you can create a custom type by using the type keyword followed by the type name and the type you want to define it as. \n\nHere is an example of creating a custom type called MyInt that is based on the built-in int type:\n\npackage main \ntype MyInt int \nfunc main() { \n  var x MyInt = 5 \n  fmt.Println(x) \n}\n\nThis example creates a custom type called MyInt that is based on the int type. The custom type can be used like any other type in Go."
     },
     "31": {
-        "question": "",
-        "answer": ""
+        "question": "What is the syntax for type casting in Go?",
+        "answer": "The act of changing a value's type is known as 'type casting' in the Go programming language. To cast a value to a different type in Go, you use the following syntax:\n\nnewType(expression)\n\nHere is an example of type casting in Go: \n\npackage main \nimport 'fmt' \nfunc main() { \n  var x float64 = 3.14 \n  var y int = int(x) \n  fmt.Println(y)  // prints '3' \n}\nIn this example, the value of x is cast from a float64 to an int. The result is the integer value 3"
     },
     "32": {
-        "question": "",
-        "answer": ""
+        "question": "How do you use the 'blank identifier' in Go?",
+        "answer": "One of the most frequently posed Golang interview questions for experienced, be ready for it. The blank identifier is a unique identifier in the Go programming language that serves as a stand-in for when a value must be thrown away. The blank identifier is represented by an underscore character (_). It has no name and cannot be used as a variable.\n\nHere is an example of using the blank identifier in Go: \n\npackage main \nimport 'fmt' \nfunc main() { \n  // discard the error value \n  _, err := os.Open('filename.txt') \n  if err != nil { \n  panic(err) \n} \n  } \n\nIn this example, the blank identifier is used to discard the value returned by os.Open, which is the file and an error. The error value is assigned to the err variable, while the file value is discarded using the blank identifier."
     },
     "33": {
-        "question": "",
-        "answer": ""
+        "question": "How do you create and use a pointer to a struct in Go?",
+        "answer": "Pointers in Go are variables that hold the memory address of other variables. Pointers are useful for passing variables by reference and for modifying variables through indirection. To create a pointer to a struct in Go, you use the & operator to get the memory address of the struct, and you use the * operator to define the type of the pointer: \n\npackage main \n\ntype Person struct { \n  Name string \n  Age  int \n}\n\nfunc main() { \n// create a pointer to a Person struct \n  p := &Person{Name: 'John', Age: 30} \n  // modify the struct through the pointer \n  p.Age = 31 \n  fmt.Println(p)  // prints '&{John 31}' \n}\n\nIn this example, the p variable is a pointer to a Person struct. The struct is modified through the pointer by assigning a new value to the Age field."
     },
     "34": {
-        "question": "",
-        "answer": ""
+        "question": "How do you embed a struct in Go?",
+        "answer": "In the Go programming language, you can embed a struct inside another struct to create a composite data type. This is known as struct embedding.\n\nTo embed a struct, you simply specify the struct type as a field in the outer struct. The fields of the inner struct become fields of the outer struct, and the methods of the inner struct become methods of the outer struct."
     },
     "35": {
-        "question": "",
-        "answer": ""
+        "question": "How do you create and use a function closure in Go?",
+        "answer": "In Go, a function closure is a function that refers to variables from the scope in which it was defined. These variables are 'closed over' by the function, and they remain accessible even after the function is invoked outside of their original scope. \n\nHere's an example of how to create and use a function closure in Go: \n\npackage main \nimport 'fmt' \nfunc main() { \n// Create a variable x and initialize it to 10 \nx := 10 \n// Create a function closure that captures the value of x \naddX := func(y int) int { \n   return x + y \n}\n// Use the function closure to add x to different values of y \nfmt.Println(addX(5))  // prints 15 \nfmt.Println(addX(10)) // prints 20 \n// Modify the value of x and see that the function closure still uses the original value \nx = 20 \nfmt.Println(addX(5))  // still prints 15 \n}"
     },
     "36": {
-        "question": "",
-        "answer": ""
+        "question": "What is the syntax for creating and using a function literal in Go?",
+        "answer": "An anonymous function is a function literal in Go, which is defined and called without a name. They can be assigned to a variable or passed as an argument to another function. Here's an example of how to create and use a function literal in Go:\n\npackage main \nimport 'fmt' \nfunc main() { \n// create a function literal that takes two integers as input and returns their sum \nadd := func(x, y int) int { \n   return x + y \n}\n// use the function literal to add two numbers \nresult := add(5, 10) \nfmt.Println(result) // prints 15 \n// pass a function literal as an argument to another function \nsomeFunc(func(x int) int { \n   return x * x \n}) \n}\nfunc someFunc(f func(int) int) { \nfmt.Println(f(5)) \n} "
     },
     "37": {
-        "question": "",
-        "answer": ""
+        "question": "How do you use the 'select' statement in Go?",
+        "answer": "In Go, the 'select' statement is used to choose between multiple communication operations. It's similar to a 'switch' statement, but it's used specifically for communication operations such as sending or receiving data on channels. The select statement blocks until one of its cases can run, then it runs that case, it's a blocking operation."
     },
     "38": {
-        "question": "",
-        "answer": ""
+        "question": "What is the syntax for creating and using a type assertion in Go?",
+        "answer": "In Go, a type assertion is used to check if an interface variable contains a specific type and, if it does, to extract the underlying value of that type. \n\nHere's an example of how to create and use a type assertion in Go:\n\npackage main \nimport ( \n'fmt' \n) \nfunc main() { \n// define an interface variable \nvar myvar interface{} = 'hello' \n// use type assertion to check the type of myvar \nstr, ok := myvar.(string) \nif ok { \n   fmt.Println(str) \n} else { \n   fmt.Println('myvar is not a string') \n} \n}"
     },
     "39": {
-        "question": "",
-        "answer": ""
+        "question": "What is the syntax for creating and using a type switch in Go?",
+        "answer": "In Go, a type switch is used to check the type of an interface variable and to execute different code based on the type of the underlying value. A type switch is similar to a type assertion, but it can check for multiple types at once, and it doesn't require a variable to hold the underlying value. \n\nHere's an example of how to create and use a type switch in Go: \n\npackage main \nimport ( \n'fmt' \n) \nfunc doSomething(i interface{}) { \nswitch v := i.(type) { \ncase int: \n   fmt.Println('i is an int:', v) \ncase float64: \n   fmt.Println('i is a float64:', v) \ncase string: \n   fmt.Println('i is a string:', v) \ndefault: \n   fmt.Println('i is of an unknown type') \n} \n} \nfunc main() { \ndoSomething(1) \ndoSomething(3.14) \ndoSomething('hello') \ndoSomething([]int{}) \n} "
     },
     "40": {
-        "question": "",
-        "answer": ""
+        "question": "What is the syntax for creating and using a type conversion in Go?",
+        "answer": "One way to change the type of a value in Go is to apply a type conversion. Go has built-in type conversions for most of the basic types. Here is an example for how to create and use a type conversion in Go: \n\npackage main \nimport ( \n'fmt' \n) \nfunc main() { \nvar x float64 = 3.14 \nvar y int = int(x) // type conversion from float64 to int 'nfmt.Println(y) // prints '3' \nvar a string = '42' \nvar b int64 \nb, _ = strconv.ParseInt(a, 10, 64) // type conversion from string to int64 using the standard library \nfmt.Println(b) // prints '42' \n} "
     },
     "41": {
-        "question": "",
-        "answer": ""
+        "question": "How do you use the 'sync' package to protect shared data in Go?",
+        "answer": "The 'sync' package in Go provides various types and functions for synchronizing access to shared data. One of the most popular options is sync.Mutex, which ensures that only one goroutine at a time can access the shared data by means of mutual exclusion."
     },
     "42": {
-        "question": "",
-        "answer": ""
+        "question": "How do you use the 'sync/atomic' package to perform atomic operations in Go?",
+        "answer": "The 'sync/atomic' package in Go provides low-level atomic memory operations, such as atomic memory reads and writes, for use with the sync package. These operations allow you to perform atomic read-modify-write operations on variables that are shared across multiple goroutines, without the need for explicit locks or other synchronization."
     },
     "43": {
-        "question": "",
-        "answer": ""
+        "question": "How do you use the 'context' package to carry around request-scoped values in Go?",
+        "answer": "The 'context' package in Go provides a way to carry around request-scoped values and cancelation signals across API boundaries. It is often used in conjunction with http request handlers to provide request-scoped data such as request metadata, request timeout, etc."
     },
     "44": {
-        "question": "",
-        "answer": ""
+        "question": "How do you use the 'net/http' package to build an HTTP server in Go?",
+        "answer": "The 'net/http' package in Go provides a set of functions and types for building HTTP servers and clients. An easy HTTP server built with this software is demonstrated below.\n\npackage main \nimport ( \n'fmt' \n'net/http' \n) \nfunc handler(w http.ResponseWriter, r *http.Request) { \nfmt.Fprint(w, 'Hello, World!') \n} \nfunc main() { \nhttp.HandleFunc('/', handler) \nhttp.ListenAndServe(':8080', nil) \n}\n\nThis code creates an HTTP server that listens on port 8080 and handles incoming requests by calling the handler function."
     },
     "45": {
-        "question": "",
-        "answer": ""
+        "question": "How do you use the 'encoding/json' package to parse and generate JSON in Go?",
+        "answer": "The encoding/json package in Go provides functionality for encoding and decoding JSON data.\n\nTo parse JSON data, you can use the json.Unmarshal() function. This function takes a byte slice of JSON data and a pointer to a struct, and it populates the struct with the data from the JSON."
     },
     "46": {
         "question": "",
