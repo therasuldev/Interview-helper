@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_interview_questions/app_navigators.dart';
+import 'package:flutter_interview_questions/core/app/extension/to_string.dart';
 import 'package:flutter_interview_questions/core/repository/cache_repository.dart';
 import 'package:flutter_interview_questions/core/utils/enum.dart';
 import 'package:flutter_interview_questions/view/pages/library/all_items/all_books.dart';
@@ -44,7 +45,7 @@ class _BookStoreState extends State<BookStore> {
             ],
           );
         } else {
-          return Center(child: Text(state.error.toString()));
+          return Center(child: Text(state.error.str()));
         }
       },
     );

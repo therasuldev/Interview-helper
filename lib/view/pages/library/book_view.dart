@@ -2,6 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_interview_questions/app_navigators.dart';
+import 'package:flutter_interview_questions/core/app/extension/to_percent.dart';
 import 'package:flutter_interview_questions/core/model/book/book.dart';
 import 'package:flutter_interview_questions/core/repository/cache_repository.dart';
 import 'package:flutter_interview_questions/view/pages/library/open_pdf.dart';
@@ -151,7 +152,7 @@ class _BookViewState extends State<BookView> {
                     title: Visibility(
                       visible: _isProceed,
                       child: Text(
-                        _downloadProgress[widget.index].parseToPercent(),
+                        _downloadProgress[widget.index].toPercent(),
                         style: ViewUtils.ubuntuStyle(),
                       ),
                     ),
@@ -252,11 +253,5 @@ class _KCupertinoButton extends StatelessWidget {
         ),
       ),
     );
-  }
-}
-
-extension ParseToPercent on double? {
-  String parseToPercent() {
-    return '${(double.parse(this?.toStringAsFixed(2) ?? '0') * 100).toInt()} %';
   }
 }
