@@ -180,63 +180,63 @@
         "answer": "The encoding/json package in Go provides functionality for encoding and decoding JSON data.\n\nTo parse JSON data, you can use the json.Unmarshal() function. This function takes a byte slice of JSON data and a pointer to a struct, and it populates the struct with the data from the JSON."
     },
     "46": {
-        "question": "",
-        "answer": ""
+        "question": "How do you use the 'reflect' package to inspect the type and value of a variable in Go? ",
+        "answer": "The reflect package in Go provides functions for inspecting the type and value of variables at runtime.\n\nTo inspect the type of a variable, you can use the reflect.TypeOf() function. This function takes an interface{} value and returns a reflect.Type value representing the type of the underlying value. Here's an example of using reflect.TypeOf(): \n\npackage main \nimport ( \n'fmt' \n'reflect' \n) \nfunc main() { \nvar x int = 10 \nfmt.Println(reflect.TypeOf(x)) // prints 'int' \nvar y float64 = 3.14 \nfmt.Println(reflect.TypeOf(y)) // prints 'float64' \nvar z string = 'hello' \nfmt.Println(reflect.TypeOf(z)) // prints 'string' \n} "
     },
     "47": {
-        "question": "",
-        "answer": ""
+        "question": "How do you use the 'testing' package to write unit tests in Go?",
+        "answer": "A common question in Golang advance interview questions, don't miss this one. The testing package in Go provides functionality for writing unit tests. \n\nA unit test in Go is a function with the signature func TestXxx(*testing.T), where Xxx can be any alphanumeric string (but the first letter of Xxx must be in uppercase). This function runs some test cases and reports whether they passed or failed by using methods provided by the testing.T struct."
     },
     "48": {
-        "question": "",
-        "answer": ""
+        "question": "How do you use the 'errors' package to create and manipulate errors in Go?",
+        "answer": "The 'errors' package in Go provides a simple way to create and manipulate errors. To create an error, you can use the errors.New function, which takes a string as an argument and returns an error. For example:\n\npackage main \nimport ( \n'errors' \n'fmt' \n)  \nfunc main() { \nerr := errors.New('something went wrong') \nfmt.Println(err) \n}\n\nThis will print the string 'something went wrong'."
     },
     "49": {
-        "question": "",
-        "answer": ""
+        "question": "How do you use the 'net' package to implement networking protocols in Go?",
+        "answer": "Import the 'net' package: To use the 'net' package to implement networking protocols in Go, the first step is to import the package in your code. At do so, append the following line to the very beginning of your document: \n\nimport 'net'\n\n* Create a network connection: Once the 'net' package is imported, you can use it to create a network connection. Go provides several types of network connections, including TCP, UDP, and IP. For example, to create a TCP connection, you can use the 'net.DialTCP' function. To create a UDP connection, you can use the 'net.DialUDP' function. To create an IP connection, you can use the 'net.DialIP' function.\n\n* Send data over the connection: Once the connection is established, you can use the 'Write' method of the connection to send data to the remote host. The 'Write' method takes a byte array as its argument, which is the data that you want to send.\n\n* Receive data from the connection: To receive data from the remote host, you can use the 'Read' method of the connection. This method will block until data is received, or until the connection is closed.\n\n* Close the connection: When you are done with the connection, you should close it to free up resources and prevent memory leaks. To close a connection, you can use the 'Close' method of the connection.\n\n* Handle errors: Each step can contain errors and need to handle it, if anything goes wrong like failing to dial, connection refused, failing to write or read, etc."
     },
     "50": {
-        "question": "",
-        "answer": ""
+        "question": "How do you use the 'time' package to handle dates and times in Go?",
+        "answer": "The 'time' package in Go provides a set of functions and types for working with dates and times. Here's some example code that shows how you might use the 'time' package to handle dates and times in Go:\n\npackage main \nimport ( \n  'fmt' \n  'time' \n)\nfunc main() { \n// Get the current time \nnow := time.Now() \n   fmt.Println('Current time:' , now) \n   // Format the time using a predefined layout \n   fmt.Println('Formatted time:', now.Format(time.RFC3339)) \n   // Parse a time from a string \n   parsedTime, err := time.Parse('2006-01-02 15:04:05', '2022-11-17 14:25:00')\nif err != nil { \nfmt.Println('Error while parsing time:', err) \n} else { \nfmt.Println('Parsed time:', parsedTime) \n} \n// Add a duration to a time\nduration, _ := time.ParseDuration('2h30m') \nfutureTime := now.Add(duration) \nfmt.Println('Future time:', futureTime) \n// Get the difference between two times \ndiff := futureTime.Sub(now) \nfmt.Println('Time difference:', diff)\n} "
     },
     "51": {
-        "question": "",
-        "answer": ""
+        "question": "How do you use the 'math' and 'math/rand' packages to perform mathematical and statistical operations in Go?",
+        "answer": "The 'math' package in Go provides a set of functions and constants for performing basic mathematical operations, such as trigonometry, exponentials, and logarithms. The 'math/rand' package, on the other hand, provides a pseudo-random number generator.\n\nHere are the general steps for using the 'math' and 'math/rand' packages to perform mathematical and statistical operations in Go:\n\nImport the 'math' and 'math/rand' packages: To use the 'math' and 'math/rand' packages, you first need to import them in your code. You can do this by adding the following lines at the top of your file: \n\nimport 'math/rand'\n\n* Use mathematical functions: The 'math' package provides a wide range of mathematical functions that you can use, such as Sine, Cosine, Tangent, square root, etc. These functions can be called directly and take a float64 as an argument and return a float64.\n\n* Seed the random number generator: The 'math/rand' package provides a pseudo-random number generator, which uses a seed value to generate random numbers. To seed the generator, you can use the 'rand.Seed' function, which takes an int64 value as its argument.\n\n* Generate random numbers: Once the random number generator is seeded, you can use the 'rand.Intn' function to generate a random integer between 0 and a specified upper bound. You can also use the 'rand.Float64' function to generate a random float64 value between 0 and 1.\n\n* Statistical operations: The 'math' package also provides statistical operation like average, variance, etc, you can use these functions on slices of float64 \n\n* Handle errors: Be aware that some of the functions in the math package might return errors depending on the inputs, like log(-1) will return an error."
     },
     "52": {
-        "question": "",
-        "answer": ""
+        "question": "How do you use the 'crypto' package to perform cryptographic operations in Go?",
+        "answer": "The 'crypto' package in Go provides a set of functions and types for performing various cryptographic operations, such as message digests, digital signatures, and encryption. Here's some example code that shows how you might use the 'crypto' package to perform cryptographic operations in Go:\n\npackage main \nimport ( \n   'crypto/sha256' \n   'fmt' \n)\nfunc main() { \n// Create a new SHA-256 hash \n   hash := sha256.New() \n   // Write data to the hash \n   hash.Write([]byte('hello world')) \n   // Get the resulting hash value \n   hashValue := hash.Sum(nil) \n   // Print the hash value \n   fmt.Printf('Hash: %x\n', hashValue) \n} "
     },
     "53": {
-        "question": "",
-        "answer": ""
+        "question": "<p>How do you use the 'os' package to interact with the operating system in Go?</p>",
+        "answer": "It's no surprise that this one pops up often in senior Golang interview questions. The 'os' package in Go provides a set of functions and types for interacting with the operating system, such as working with files and directories, running external commands, and accessing environment variables.\n\nHere are the general steps for using the 'os' package to interact with the operating system in Go:\n\n* Import the 'os' package: To use the 'os' package, you first need to import it in your code. You can do this by adding the following line at the top of your file: import 'os'\n\n* You can access environment variables using the 'os.Getenv' function, which takes a string representing the name of the environment variable and returns a string representing the value of the environment variable. value := os.Getenv('MY_VARIABLE')\n\n* Run external commands: You can run external commands using the 'os.Command' function which can be called with the command name and arguments, then run it.\n\ncmd := exec.Command('ls', '-l')  \noutput, err := cmd.Output()\n\n* Create and delete files and directories: You can create, delete, and move files and directories using the 'os.Create', 'os.Remove' and 'os.Rename' functions. os.Create('newfile.txt')\n\nos.Remove('existingfile.txt') \n\nos.Rename('oldname.txt', 'newname.txt') \n\n* For modifying file properties, the 'os' package includes commands like 'chmod' and 'chtimes', among others.\n\n* If something goes wrong at any stage—for example, the command isn't executed successfully, the file isn't deleted, etc.—you'll need to deal with it."
     },
     "54": {
-        "question": "",
-        "answer": ""
+        "question": "How do you use the 'bufio' package to read and write buffered data in Go?",
+        "answer": "The 'bufio' package in Go provides buffered I/O for reading and writing streams of bytes.\n\nTo read information from a file, you can use the 'bufio' package, as demonstrated here:\n\npackage main \nimport ( \n'bufio' \n'fmt' \n'os' \n)\nfunc main() { \nfile, err := os.Open('file.txt') \nif err != nil { \n   fmt.Println(err) \n   return \n}\ndefer file.Close() \nscanner := bufio.NewScanner(file) \nfor scanner.Scan() { \n   fmt.Println(scanner.Text()) \n}\nif err := scanner.Err(); err != nil { \nfmt.Println(err) \n} \n}\nThis example uses the os.Open function to open a file called 'file.txt' for reading. It then creates a new bufio.Scanner and sets the input source to the file by passing it as the argument to the NewScanner function. The Scan method of the scanner is used in a loop to read the file line by line. The Text method of the scanner is used to return the current line as a string. "
     },
     "55": {
-        "question": "",
-        "answer": ""
+        "question": "How do you use the 'strings' package to manipulate strings in Go?",
+        "answer": "The strings package in Go provides a variety of functions for manipulating strings. Below are a few examples of how you can use the strings package to manipulate strings in Go: \n\nContains(s, substr string) bool: returns true if the string s contains the substring substr. \npackage main \nimport ( \n'fmt' \n'strings' \n)\nfunc main() { \ns := 'Hello, World!' \nsubstr := 'World' \nfmt.Println(strings.Contains(s, substr))  // true \n}\nCount(s, sep string) int: returns the number of non-overlapping instances of sep in s. \npackage main \nimport ( \n'fmt' \n'strings' \n)\nfunc main() { \ns := 'Hello, World! How are you?' \nsep := ' ' \nfmt.Println(strings.Count(s, sep))  // 6 \n} "
     },
     "56": {
-        "question": "",
-        "answer": ""
+        "question": "How do you use the 'bytes' package to manipulate byte slices in Go?",
+        "answer": "The bytes package in Go provides a variety of functions for manipulating byte slices. Below is an example of how you can use the bytes package to manipulate byte slices in Go: \n\nCompare(a, b []byte) int: compares two byte slices lexicographically and returns an integer indicating their order (-1, 0, or 1) \n\npackage main \nimport ( \n'fmt' \n'bytes'\n) \nfunc main() { \na := []byte('hello') \nb := []byte('world') \nfmt.Println(bytes.Compare(a, b)) // -1 \n} "
     },
     "57": {
-        "question": "",
-        "answer": ""
+        "question": "How do you use the 'encoding/binary' package to encode and decode binary data in Go?",
+        "answer": "The encoding/binary package in Go provides functions for encoding and decoding data in binary format. Below is an example to encoding/binary package to encode and decode binary data in Go:\n\nEncoding an int32 value to a byte slice using the Write function: \n\npackage main \nimport ( \n'bytes' \n'encoding/binary' \n'fmt' \n) \nfunc main() { \nvar num int32 = 12345 \nbuf := new(bytes.Buffer) \nerr := binary.Write(buf, binary.LittleEndian, num) \nif err != nil { \n     fmt.Println('binary.Write failed:', err) \n} \nfmt.Printf('% x', buf.Bytes()) // 39 30 00 00 \n} \n\nThe Write function takes three arguments: the first is the buffer to write to, the second is the byte order, and the third is the value to be encoded. In this case, we are using binary.LittleEndian for the byte order, and num for the value to be encoded."
     },
     "58": {
-        "question": "",
-        "answer": ""
+        "question": "How do you use the 'compress/gzip' package to compress and decompress data using the gzip algorithm in Go?",
+        "answer": "The compress/gzip package in Go provides functions for compressing and decompressing data using the gzip algorithm. Below is an example to compress/gzip package to compress and decompress data using the gzip algorithm in Go: \n\npackage main \nimport ( \n'bytes' \n'compress/gzip' \n'fmt' \n'io' \n'log' \n) \nfunc main() { \n// Data to be compressed \ndata := []byte('Hello World') \n// Compress the data \nvar b bytes.Buffer \nw := gzip.NewWriter(&b) \nif _, err := w.Write(data); err != nil { \n       log.Fatalln(err) \n} \nif err := w.Close(); err != nil { \nlog.Fatalln(err) \n}  \n// Decompress the data \nr, err := gzip.NewReader(&b) \nif err != nil { \n       log.Fatalln(err) \n} \ndefer r.Close() \nvar result bytes.Buffer \nio.Copy(&result, r) \nfmt.Println(result.String()) // Hello World \n} "
     },
     "59": {
-        "question": "",
-        "answer": ""
+        "question": "How do you use the 'database/sql' package to access a SQL database in Go?",
+        "answer": "The database/sql package in Go provides a simple and clean interface for interacting with SQL databases. An example of how you might use it to perform a simple query to select all rows from a table called 'users':\n\npackage main \nimport ( \n      'database/sql' \n       'fmt'\n_ 'github.com/go-sql-driver/mysql' // Required import for MySQL driver \n) \nfunc main() { \n    // Open a connection to the database \n     db, err := sql.Open('mysql', 'user:password@tcp(host:port)/dbname') \n      if err != nil { \n      fmt.Println(err) \n     return \n} \n       defer db.Close() \n         // Prepare a statement to select all rows from the users table \n       rows, err := db.Query('SELECT * FROM users') \n     if err != nil { \n      fmt.Println(err) \n     return \n} \n       defer rows.Close() \n       // Iterate over the rows and print the results \n       for rows.Next() { \n        var id int \n       var name string \n      var age int \n      err := rows.Scan(&id, &name, &age) \n       if err != nil { \n      fmt.Println(err) \n         return \n       } \n        fmt.Println(id, name, age) \n     } \n}\n\nIn this example, we import the database/sql package, as well as the MySQL driver for database/sql, which is available as a separate package (github.com/go-sql-driver/mysql). We then use the sql.Open() function to open a connection to the database, passing in the driver name ('mysql') and the data source name (DSN) in the format 'user:password@tcp(host:port)/dbname'. "
     },
     "60": {
-        "question": "",
-        "answer": ""
+        "question": "How do you use the 'html/template' package to generate HTML templates in Go?",
+        "answer": "The html/template package in Go provides a set of functions for working with HTML templates. You can use this package to parse a template file and then execute it with data to produce the final HTML output. Here's an example of how to use the package to generate an HTML template:\n\npackage main \nimport ( \n'html/template' \n'os' \n) \ntype Person struct { \nName string \nAge  int \n} \nfunc main() { \n// define the template \n tmpl := ` \n<h1>{{.Name}}</h1> \n <p>Age: {{.Age}}</p>  \n// create a new template \nt, err := template.New('person').Parse(tmpl) \nif err != nil { \n      panic(err) \n} \n// create a Person struct \np := Person{Name: 'Alice', Age: 30} \n// execute the template and write the result to os.Stdout \nerr = t.Execute(os.Stdout, p) \nif err != nil { \n       panic(err) \n} \n} \n\nThis code defines a struct type called Person with two fields, Name and Age. It then creates an HTML template string that uses Go's template language to insert the Name and Age values of a Person struct into the HTML. It creates a new template object by calling template.New('person') and parsing the template string with Parse(tmpl). \n\nThen creates an instance of Person, then using the Execute function, pass it the struct to fill the data of the template. "
     }
 }
