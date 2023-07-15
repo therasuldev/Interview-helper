@@ -1,6 +1,7 @@
 import 'package:flutter_interview_questions/core/model/error/error_model.dart';
 import 'package:flutter_interview_questions/core/model/question/question.dart';
-import 'package:flutter_interview_questions/core/provider/question_bloc/question_event.dart';
+
+import '../../app/enum/question.dart';
 
 class QuestionState {
   final QuestionEvents? event;

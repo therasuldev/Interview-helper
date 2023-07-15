@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_interview_questions/application_start.dart';
-import 'package:flutter_interview_questions/categories_path.dart';
+import 'package:flutter_interview_questions/core/app/enum/kpath_event.dart';
 import 'package:flutter_interview_questions/core/provider/books_bloc/books_bloc.dart';
 import 'package:flutter_interview_questions/core/provider/question_bloc/question_bloc.dart';
 import 'package:flutter_interview_questions/view/general_page.dart';

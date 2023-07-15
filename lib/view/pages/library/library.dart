@@ -3,13 +3,15 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_interview_questions/app_navigators.dart';
 import 'package:flutter_interview_questions/core/app/extension/to_string.dart';
 import 'package:flutter_interview_questions/core/repository/cache_repository.dart';
-import 'package:flutter_interview_questions/core/utils/enum.dart';
 import 'package:flutter_interview_questions/view/pages/library/all_items/all_books.dart';
 import 'package:flutter_interview_questions/view/pages/library/book_view.dart';
 
 import 'package:flutter_interview_questions/core/model/book/book.dart';
 import 'package:flutter_interview_questions/core/provider/books_bloc/books_bloc.dart';
 import 'package:flutter_interview_questions/view/utils/utils.dart';
+
+import '../../../core/app/enum/lang_title_enum.dart';
+import '../../../core/app/enum/lang_type_enum.dart';
 
 class BookStore extends StatefulWidget {
   const BookStore({super.key});

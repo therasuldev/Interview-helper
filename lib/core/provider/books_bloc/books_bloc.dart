@@ -1,9 +1,11 @@
 import 'package:bloc/bloc.dart';
-import 'package:flutter_interview_questions/categories_path.dart';
+import 'package:flutter_interview_questions/core/app/enum/book.dart';
 import 'package:flutter_interview_questions/core/app/extension/to_string.dart';
 import 'package:flutter_interview_questions/core/model/book/book.dart';
 import 'package:flutter_interview_questions/core/model/error/error_model.dart';
 import 'package:flutter_interview_questions/core/repository/book_repository.dart';
+
+import '../../app/enum/kpath_event.dart';
 
 part 'books_event.dart';
 part 'books_state.dart';
