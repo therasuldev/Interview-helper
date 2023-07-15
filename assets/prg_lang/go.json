@@ -53,7 +53,7 @@
     },
     "14": {
         "question": "How do you create a pointer in Go?",
-        "answer": "In Go, you can create a pointer to a value by using the & operator. This operator returns the memory address of the value.\n\nFor example, to create a pointer to an int value, you can do the following:\nx := 10\np := &x\n\nHere, p is a pointer to an int value, and &x is the memory address of the x variable.\n\nYou can use the * operator to dereference a pointer and access the value it points to. For example\nfmt.Println(*p)  // prints 10"
+        "answer": "In Go, you can create a pointer to a value by using the & operator. This operator returns the memory address of the value.\n\nFor example, to create a pointer to an int value, you can do the following:\nx := 10\np := &x\n\nHere, p is a pointer to an int value, and &x is the memory address of the x variable.\n\nYou can use the * operator to dereference a pointer and access the value it points to. For example\nfmt.Println(*p)  // prints 10\n\n Pointers are used for the following purposes:\n\n* Allowing function to directly mutate value passed to it. That is achieving pass by reference functionality.\n\n* For increasing the performance in the edge cases in the presence of a large data structure. Using pointers help to copy large data efficiently.\n\n* Helps in signifying the lack of values. For instance, while unmarshalling JSON data into a struct, it is useful to know if the key is present or absent then the key is present with 0 value."
     },
     "15": {
         "question": "What is the syntax for creating a struct in Go?",
@@ -238,5 +238,45 @@
     "60": {
         "question": "How do you use the 'html/template' package to generate HTML templates in Go?",
         "answer": "The html/template package in Go provides a set of functions for working with HTML templates. You can use this package to parse a template file and then execute it with data to produce the final HTML output. Here's an example of how to use the package to generate an HTML template:\n\npackage main \nimport ( \n'html/template' \n'os' \n) \ntype Person struct { \nName string \nAge  int \n} \nfunc main() { \n// define the template \n tmpl := ` \n<h1>{{.Name}}</h1> \n <p>Age: {{.Age}}</p>  \n// create a new template \nt, err := template.New('person').Parse(tmpl) \nif err != nil { \n      panic(err) \n} \n// create a Person struct \np := Person{Name: 'Alice', Age: 30} \n// execute the template and write the result to os.Stdout \nerr = t.Execute(os.Stdout, p) \nif err != nil { \n       panic(err) \n} \n} \n\nThis code defines a struct type called Person with two fields, Name and Age. It then creates an HTML template string that uses Go's template language to insert the Name and Age values of a Person struct into the HTML. It creates a new template object by calling template.New('person') and parsing the template string with Parse(tmpl). \n\nThen creates an instance of Person, then using the Execute function, pass it the struct to fill the data of the template. "
+    },
+    "61": {
+        "question": "Is Golang case sensitive or insensitive?",
+        "answer": "Go is a case-sensitive language."
+    },
+    "62": {
+        "question": "What do you understand by the scope of variables in Go?",
+        "answer": "The variable scope is defined as the part of the program where the variable can be accessed. Every variable is statically scoped (meaning a variable scope can be identified at compile time) in Go which means that the scope is declared at the time of compilation itself. There are two scopes in Go, they are:\n\n* Local variables - These are declared inside a function or a block and is accessible only within these entities.\n\n* Global variables - These are declared outside function or block and is accessible by the whole source file."
+    }, 
+    "63": {
+        "question": "Is the usage of Global Variables in programs implementing goroutines recommended?",
+        "answer": "Using global variables in goroutines is not recommended because it can be accessed and modified by multiple goroutines concurrently. This can lead to unexpected and arbitrary results."
+    },
+    "64": {
+        "question": "What are the uses of an empty struct?",
+        "answer": "Empty struct is used when we want to save memories. This is because they do not consume any memory for the values. The syntax for an empty struct is:\n\n a := struct{}{}\n\n The size of empty struct would return 0 when using println(unsafe.Sizeof(a))\n\nThe important use of empty struct is to show the developer that we do not have any value."
+    },
+    "65": {
+        "question": "How is GoPATH different from GoROOT variables in Go?",
+        "answer": "The GoPATH variable is an environment variable that is used for symbolizing the directories out of $GoROOT which combines the source and the binaries of Go Projects. The GoROOT variable determines where the Go SDK is located. We do not have to modify the variable unless we plan to use multiple Go versions. The GoPATH determines the root of the workspace whereas the GoROOT determines the location of Go SDK."
+    },
+    "66": {
+        "question": "Which is safer for concurrent data access? Channels or Maps?",
+        "answer": "Channels are safe for concurrent access because they have blocking/locking mechanisms that do not let goroutines share memory in the presence of multiple threads.\n\nMaps are unsafe because they do not have locking mechanisms. While using maps, we have to use explicit locking mechanisms like mutex for safely sending data through goroutines."
+    },
+    "67": {
+        "question": "Explain what is string literals?",
+        "answer": "A string literals represents a string constant obtained from concatenating a sequence of characters. There are two forms,\n\n* Raw string literals: The value of raw string literals are character sequence between back quotes ‘‘.  The value of a string literal is the string composed of the uninterrupted character between quotes.\n\n* Interpreted string literals: It is represented between double quotes ““. The text between the double quotes which may not contain newlines, forms the value of the literal."
+    },
+    "68": {
+        "question": "Explain static type declaration of variable in Go programming language?",
+        "answer": "Static type variable declaration is used to provide assurance to the compiler that there is one variable in the given type and name so that there is no need for compiler to know complete detail about the variable for further processing. A variable declaration has its meaning at the time of compilation only, compiler needs actual variable declaration at the time of linking of the program."
+    },
+    "69": {
+        "question": "Explain dynamic type declaration of a variable in Go programming language?",
+        "answer": "A dynamic type variable declaration needs a compiler to interpret the type of variable according to the value passed to it. Compilers don't need a variable to have type statically as a necessary requirement."
+    },
+    "70": {
+        "question": "Is it true that short variable declaration := can be used only inside a function?",
+        "answer": "Yes. A short variable declaration := can be used only inside a function."
     }
 }
