@@ -1,0 +1,322 @@
+{
+    "1": {
+        "question": "1. What is Python? List some popular applications of Python in the world of technology.",
+        "answer": "Python is a widely-used general-purpose, high-level programming language. It was created by Guido van Rossum in 1991 and further developed by the Python Software Foundation. It was designed with an emphasis on code readability, and its syntax allows programmers to express their concepts in fewer lines of code.It is used for:\n\n * System Scripting\n\n * Web Development\n\n * Game Development\n\n * Software Development\n\n * Complex Mathematics"
+    },
+    "2": {
+        "question": " What are the benefits of using Python language as a tool in the present scenario?",
+        "answer": "The following are the benefits of using Python language:\n\n * Object-Oriented Language\n\n * High-Level Language\n\n * Dynamically Typed language\n\n * Extensive support Libraries\n\n * Presence of third-party modules\n\n * Open source and community development\n\n * Portable and Interactive\n\n * Portable across Operating systems"
+    }, 
+    "3": {
+        "question": "Is Python a compiled language or an interpreted language?",
+        "answer": "Actually, Python is a partially compiled language and partially interpreted language. The compilation part is done first when we execute our code and this will generate byte code internally this byte code gets converted by the Python virtual machine(p.v.m) according to the underlying platform(machine+operating system)."
+    },
+    "4": {
+        "question": "What does the ‘#’ symbol do in Python?",
+        "answer": "‘#’ is used to comment on everything that comes after on the line."
+    },
+    "5": {
+        "question": "What is the difference between a Mutable datatype and an Immutable data type?",
+        "answer": "Mutable data types can be edited i.e., they can change at runtime. Eg – List, Dictionary, etc.\nImmutable data types can not be edited i.e., they can not change at runtime. Eg – String, Tuple, etc."
+    },
+    "6": {
+        "question": "How are arguments passed by value or by reference in Python?",
+        "answer": "Everything in Python is an object and all variables hold references to the objects. The reference values are according to the functions; as a result, you cannot change the value of the references. However, you can change the objects if it is mutable."
+    },
+    "7": {
+        "question": "What is the difference between a Set and Dictionary?",
+        "answer": "The set is an unordered collection of data types that is iterable, mutable and has no duplicate elements.\n\nA dictionary in Python is an unordered collection of data values, used to store data values like a map."
+    },
+    "8": {
+        "question": "What is List Comprehension? Give an Example.",
+        "answer": "List comprehension is a syntax construction to ease the creation of a list based on existing iterable.\n\nFor Example:\n\nmy_list = [i for i in range(1, 10)]"
+    },
+    "9": {
+        "question": "What is a lambda function?",
+        "answer": "A lambda function is an anonymous function. This function can have any number of parameters but, can have just one statement. For Example:\n\na = lambda x, y : x*y\nprint(a(7, 19))"
+    },
+    "10": {
+        "question": "What is a pass in Python?",
+        "answer": "Pass means performing no operation or in other words, it is a placeholder in the compound statement, where there should be a blank left and nothing has to be written there."
+    },
+    "11": {
+        "question": "What is the difference between / and // in Python?",
+        "answer": "/ represents floor division whereas / represents precise division. For Example:\n\n5//2 = 2\n5/2 = 2.5"
+    },
+    "12": {
+        "question": "How is Exceptional handling done in Python?",
+        "answer": "There are 3 main keywords i.e. try, except, and finally which are used to catch exceptions and handle the recovering mechanism accordingly. Try is the block of a code that is monitored for errors. Except block gets executed when an error occurs.\nThe beauty of the final block is to execute the code after trying for an error. This block gets executed irrespective of whether an error occurred or not. Finally, block is used to do the required cleanup activities of objects/variables."
+    },
+    "13": {
+        "question": "What is swapcase function in Python?",
+        "answer": "It is a string’s function that converts all uppercase characters into lowercase and vice versa. It is used to alter the existing case of the string. This method creates a copy of the string which contains all the characters in the swap case. For Example:\n\nstring = 'GeeksforGeeks'\nstring.swapcase() ---> 'gEEKSFORgEEKS'"
+    },
+    "14": {
+        "question": "Difference between for loop and while loop in Python",
+        "answer": "The “for” Loop is generally used to iterate through the elements of various collection types such as List, Tuple, Set, and Dictionary. Developers use a “for” loop where they have both the conditions start and the end. Whereas, the “while” loop is the actual looping feature that is used in any other programming language. Programmers use a Python while loop where they just have the end conditions."
+    }, 
+    "15": {
+        "question": "Can we Pass a function as an argument in Python?",
+        "answer": "Yes, Several arguments can be passed to a function, including objects, variables (of the same or distinct data types), and functions. Functions can be passed as parameters to other functions because they are objects. Higher-order functions are functions that can take other functions as arguments."
+    },
+    "16": {
+        "question": "What are *args and *kwargs?",
+        "answer": "To pass a variable number of arguments to a function in Python, use the special syntax *args and **kwargs in the function specification. It is used to pass a variable-length, keyword-free argument list. By using the *, the variable we associate with the * becomes iterable, allowing you to do operations on it such as iterating over it and using higher-order operations like map and filter."
+    },
+    "17": {
+        "question": "Is Indentation Required in Python?",
+        "answer": "Yes, indentation is required in Python. A Python interpreter can be informed that a group of statements belongs to a specific block of code by using Python indentation. Indentations make the code easy to read for developers in all programming languages but in Python, it is very important to indent the code in a specific order."
+    },
+    "18": {
+        "question": "What is Scope in Python?",
+        "answer": "The location where we can find a variable and also access it if required is called the scope of a variable.\n\n * Python Local variable: Local variables are those that are initialized within a function and are unique to that function. It cannot be accessed outside of the function.\n\n * Python Global variables: Global variables are the ones that are defined and declared outside any function and are not specified to any function.\n\n * Module-level scope: It refers to the global objects of the current module accessible in the program.\n\n * Outermost scope: It refers to any built-in names that the program can call. The name referenced is located last among the objects in this scope."
+    },
+    "19": {
+        "question": "What is docstring in Python?",
+        "answer": "Python documentation strings (or docstrings) provide a convenient way of associating documentation with Python modules, functions, classes, and methods.\n\n * Declaring Docstrings: The docstrings are declared using ”’triple single quotes”’ or “””triple double quotes””” just below the class, method, or function declaration. All functions should have a docstring.\n\n * Accessing Docstrings: The docstrings can be accessed using the __doc__ method of the object or using the help function."
+    },
+    "20": {
+        "question": "What is a dynamically typed language?",
+        "answer": "Typed languages are the languages in which we define the type of data type and it will be known by the machine at the compile-time or at runtime. Typed languages can be classified into two categories:\n\n * Statically typed languages: In this type of language, the data type of a variable is known at the compile time which means the programmer has to specify the data type of a variable at the time of its declaration.\n\n * Dynamically typed languages: These are the languages that do not require any pre-defined data type for any variable as it is interpreted at runtime by the machine itself. In these languages, interpreters assign the data type to a variable at runtime depending on its value."
+    },
+    "21": {
+        "question": "What is a break, continue, and pass in Python?",
+        "answer": "The break statement is used to terminate the loop or statement in which it is present. After that, the control will pass to the statements that are present after the break statement, if available.\n\nContinue is also a loop control statement just like the break statement. continue statement is opposite to that of the break statement, instead of terminating the loop, it forces to execute the next iteration of the loop.\n\nPass means performing no operation or in other words, it is a placeholder in the compound statement, where there should be a blank left and nothing has to be written there."
+    },
+    "22": {
+        "question": "What are Built-in data types in Python?",
+        "answer": "The following are the standard or built-in data types in Python:\n\n * Numeric: The numeric data type in Python represents the data that has a numeric value. A numeric value can be an integer, a floating number, a Boolean, or even a complex number.\n\n * Sequence Type: The sequence Data Type in Python is the ordered collection of similar or different data types. There are several sequence types in Python:\n\n  * Python String\n\n  * Python List\n\n  * Python Tuple\n\n  * Python range\n\nMapping Types: In Python, hashable data can be mapped to random objects using a mapping object. There is currently only one common mapping type, the dictionary, and mapping objects are mutable.\n\n  * Python Dictionary\n\n * Set Types: In Python, a Set is an unordered collection of data types that is iterable, mutable, and has no duplicate elements. The order of elements in a set is undefined though it may consist of various elements."
+    },
+    "23": {
+        "question": "How do you floor a number in Python?",
+        "answer": "The Python math module includes a method that can be used to calculate the floor of a number.\n\n  * floor() method in Python returns the floor of x i.e., the largest integer not greater than x\n\n  * Also, The method ceil(x) in Python returns a ceiling value of x i.e., the smallest integer greater than or equal to x."
+    },
+    "24": {
+        "question": "What is the difference between xrange and range functions?",
+        "answer": "range() and xrange() are two functions that could be used to iterate a certain number of times in for loops in Python. In Python 3, there is no xrange, but the range function behaves like xrange in Python 2.\n\n  * range() – This returns a list of numbers created using the range() function.\n\n  * xrange() – This function returns the generator object that can be used to display numbers only by looping. The only particular range is displayed on demand and hence called lazy evaluation."
+    },
+    "25": {
+        "question": "What is Dictionary Comprehension? Give an Example",
+        "answer": "Dictionary Comprehension is a syntax construction to ease the creation of a dictionary based on the existing iterable.\n\n For Example: my_dict = {i:1+7 for i in range(1, 10)}"
+    },
+    "26": {
+        "question": "Is Tuple Comprehension? If yes, how, and if not why?",
+        "answer": "(i for i in (1, 2, 3))\n\nTuple comprehension is not possible in Python because it will end up in a generator, not a tuple comprehension."
+    }, 
+    "27": {
+        "question": "Differentiate between List and Tuple?",
+        "answer": "Let’s analyze the differences between List and Tuple:\n\n * List *\n\nLists are Mutable datatype.\n\nLists consume more memory\n\nThe list is better for performing operations, such as insertion and deletion.\n\nThe implication of iterations is Time-consuming\n\n * Tuple *\n\nTuples are Immutable datatype.\n * Tuple consumes less memory as compared to the list\n * A Tuple data type is appropriate for accessing the elements\n * The implication of iterations is comparatively Faster"
+    },
+    "28": {
+        "question": "What is the difference between a shallow copy and a deep copy?",
+        "answer": "Shallow copy is used when a new instance type gets created and it keeps values that are copied whereas deep copy stores values that are already copied.\n\nA shallow copy has faster program execution whereas a deep coy makes it slow."
+    },
+    "29": {
+        "question": "Which sorting technique is used by sort() and sorted() functions of python?",
+        "answer": "Python uses the Tim Sort algorithm for sorting. It’s a stable sorting whose worst case is O(N log N). It’s a hybrid sorting algorithm, derived from merge sort and insertion sort, designed to perform well on many kinds of real-world data."
+    },
+    "30": {
+        "question": "What are Decorators?",
+        "answer": "Decorators are a very powerful and useful tool in Python as they are the specific change that we make in Python syntax to alter functions easily."
+    },
+    "31": {
+        "question": "How do you debug a Python program?",
+        "answer": "By using this command we can debug a Python program:\n\n $ python -m pdb python-script.py"
+    },
+    "32": {
+        "question": "What are Iterators in Python?",
+        "answer": "In Python, iterators are used to iterate a group of elements, containers like a list. Iterators are collections of items, and they can be a list, tuples, or a dictionary. Python iterator implements __itr__ and the next() method to iterate the stored elements. We generally use loops to iterate over the collections (list, tuple) in Python."
+    },
+    "33": {
+        "question": "What are Generators in Python?",
+        "answer": "In Python, the generator is a way that specifies how to implement iterators. It is a normal function except that it yields expression in the function. It does not implement __itr__ and next() method and reduces other overheads as well.\n\nIf a function contains at least a yield statement, it becomes a generator. The yield keyword pauses the current execution by saving its states and then resumes from the same when required."
+    },
+    "34": {
+        "question": "Does Python supports multiple Inheritance?",
+        "answer": "Python does support multiple inheritances, unlike Java. Multiple inheritances mean that a class can be derived from more than one parent class."
+    },
+    "35": {
+        "question": "What is Polymorphism in Python?",
+        "answer": "Polymorphism means the ability to take multiple forms. So, for instance, if the parent class has a method named ABC then the child class also can have a method with the same name ABC having its own parameters and variables. Python allows polymorphism."
+    },
+    "36": {
+        "question": "Define encapsulation in Python?",
+        "answer": "Encapsulation means binding the code and the data together. A Python class is an example of encapsulation."
+    },
+    "37": {
+        "question": "How do you do data abstraction in Python?",
+        "answer": "Data Abstraction is providing only the required details and hides the implementation from the world. It can be achieved in Python by using interfaces and abstract classes."
+    },
+    "38": {
+        "question": "How is memory management done in Python?",
+        "answer": "Python uses its private heap space to manage the memory. Basically, all the objects and data structures are stored in the private heap space. Even the programmer can not access this private space as the interpreter takes care of this space. Python also has an inbuilt garbage collector, which recycles all the unused memory and frees the memory and makes it available to the heap space."
+    }, 
+    "39": {
+        "question": "How to delete a file using Python?",
+        "answer": "We can delete a file using Python by following approaches:\n\n * os.remove()\n\n * os.unlink()"
+    },
+    "40": {
+        "question": "What is slicing in Python?",
+        "answer": "Python Slicing is a string operation for extracting a part of the string, or some part of a list. With this operator, one can specify where to start the slicing, where to end, and specify the step. List slicing returns a new list from the existing list.\n\nSyntax: Lst[ Initial : End : IndexJump ]"
+    },
+    "41": {
+        "question": "What is a namespace in Python?",
+        "answer": "A namespace is a naming system used to make sure that names are unique to avoid naming conflicts."
+    },
+    "42": {
+        "question": "What is PIP?",
+        "answer": "PIP is an acronym for Python Installer Package which provides a seamless interface to install various Python modules. It is a command-line tool that can search for packages over the internet and install them without any user interaction."
+    },
+    "43": {
+        "question": "What is a zip function?",
+        "answer": "Python zip() function returns a zip object, which maps a similar index of multiple containers. It takes an iterable, converts it into an iterator and aggregates the elements based on iterables passed. It returns an iterator of tuples."
+    },
+    "44": {
+        "question": "What are Pickling and Unpickling?",
+        "answer": "The Pickle module accepts any Python object and converts it into a string representation and dumps it into a file by using the dump function, this process is called pickling. While the process of retrieving original Python objects from the stored string representation is called unpickling."
+    },
+    "45": {
+        "question": "What is monkey patching in Python?",
+        "answer": "In Python, the term monkey patch only refers to dynamic modifications of a class or module at run-time.\n\n# g.py\nclass GeeksClass:\n   def function(self):\n      print 'function()'\n\n import m\n  def monkey_function(self):\n    print 'monkey_function()' \n\n m.GeeksClass.function = monkey_function\nobj = m.GeeksClass()\nobj.function()"
+    },
+    "46": {
+        "question": "What is __init__() in Python?",
+        "answer": "Equivalent to constructors in OOP terminology, __init__ is a reserved method in Python classes. The __init__ method is called automatically whenever a new object is initiated. This method allocates memory to the new object as soon as it is created. This method can also be used to initialize variables."
+    },
+    "47": {
+        "question": "Write a code to display the current time?",
+        "answer": "currenttime= time.localtime(time.time())\nprint (“Current time is”, currenttime)"
+    },
+    "48": {
+        "question": "What are Access Specifiers in Python?",
+        "answer": "Python uses the ‘_’ symbol to determine the access control for a specific data member or a member function of a class. A Class in Python has three types of Python access modifiers:\n\n  * Public Access Modifier: The members of a class that are declared public are easily accessible from any part of the program. All data members and member functions of a class are public by default. \n\n  * Protected Access Modifier: The members of a class that are declared protected are only accessible to a class derived from it. All data members of a class are declared protected by adding a single underscore ‘_’ symbol before the data members of that class.\n\n  * Private Access Modifier: The members of a class that are declared private are accessible within the class only, the private access modifier is the most secure access modifier. Data members of a class are declared private by adding a double underscore ‘__’ symbol before the data member of that class."
+    },
+    "49": {
+        "question": "What are unit tests in Python?",
+        "answer": "Unit Testing is the first level of software testing where the smallest testable parts of the software are tested. This is used to validate that each unit of the software performs as designed. The unit test framework is Python’s xUnit style framework. The White Box Testing method is used for Unit testing."
+    },
+    "50": {
+        "question": "Python Global Interpreter Lock (GIL)?",
+        "answer": "Python Global Interpreter Lock (GIL) is a type of process lock that is used by Python whenever it deals with processes. Generally, Python only uses only one thread to execute the set of written statements. The performance of the single-threaded process and the multi-threaded process will be the same in Python and this is because of GIL in Python. We can not achieve multithreading in Python because we have a global interpreter lock that restricts the threads and works as a single thread."
+    }, 
+    "51": {
+        "question": "What are Function Annotations in Python?",
+        "answer": "Function Annotation is a feature that allows you to add metadata to function parameters and return values. This way you can specify the input type of the function parameters and the return type of the value the function returns.\n\nFunction annotations are arbitrary Python expressions that are associated with various parts of functions. These expressions are evaluated at compile time and have no life in Python’s runtime environment. Python does not attach any meaning to these annotations. They take life when interpreted by third-party libraries, for example, mypy."
+    },
+    "52": {
+        "question": "What are Exception Groups in Python?",
+        "answer": "The latest feature of Python 3.11, Exception Groups. The ExceptionGroup can be handled using a new except* syntax. The * symbol indicates that multiple exceptions can be handled by each except* clause.\n\nExceptionGroup is a collection/group of different kinds of Exception. Without creating Multiple Exceptions we can group together different Exceptions which we can later fetch one by one whenever necessary, the order in which the Exceptions are stored in the Exception Group doesn’t matter while calling them.\n\n try:\nraise ExceptionGroup('Example ExceptionGroup', (\nTypeError('Example TypeError'),\nValueError('Example ValueError'),\nKeyError('Example KeyError'),\nAttributeError('Example AttributeError')\n))\nexcept* TypeError:\n...\nexcept* ValueError as e:\n... \nexcept* (KeyError, AttributeError) as e:\n..."
+    },
+    "53": {
+        "question": "What is Python Switch Statement ",
+        "answer": "From version 3.10 upward, Python has implemented a switch case feature called “structural pattern matching”. You can implement this feature with the match and case keywords. Note that the underscore symbol is what you use to define a default case for the switch statement in Python.\n\n Note: Before Python 3.10 Python doesn’t support match Statements. \n\n match term:\ncase pattern-1:\naction-1\ncase pattern-2:\naction-2\ncase pattern-3:\naction-3\ncase _:\naction-default"
+    },
+    "54": {
+        "question": "Explain how Memcached should not be used in your Python project?",
+        "answer": "• Memcached common misuse is to use it as a data store, and not as a cache\n• Never use Memcached as the only source of the information you need to run your application. Data should always be available through another source as well\n• Memcached is just a key or value store and cannot perform query over the data or iterate over the contents to extract information\n• Memcached does not offer any form of security either in encryption or authentication"
+    },
+    "55": {
+        "question": "Explain what is Dogpile effect? How can you prevent this effect?",
+        "answer": "Dogpile effect is referred to the event when cache expires, and websites are hit by the multiple requests made by the client at the same time. This effect can be prevented by using semaphore lock. In this system when value expires, first process acquires the lock and starts generating new value."
+    },
+    "56": {
+        "question": "Mention what is Flask-WTF and what are their features?",
+        "answer": "Flask-WTF offers simple integration with WTForms. Features include for Flask WTF are \n\n • Integration with wtforms\n• Secure form with csrf token\n• Global csrf protection\n• Internationalization integration\n• Recaptcha supporting\n• File upload that works with Flask Uploads"
+    },
+    "57": {
+        "question": "Mention what is the difference between Django, Pyramid, and Flask?",
+        "answer": "Flask is a “microframework” primarily build for a small application with simpler requirements. In flask, you have to use external libraries. Flask is ready to use.\n\nPyramid are build for larger applications. It provides flexibility and lets the developer use the right tools for their project. The developer can choose the database, URL structure, templating style and more. Pyramid is heavy configurable.\n\nLike Pyramid, Django can also used for larger applications. It includes an ORM."
+    },
+    "58": {
+        "question": "What is pep 8?",
+        "answer": "PEP in Python stands for Python Enhancement Proposal. It comprises a collection of guidelines that outline the optimal approach for crafting and structuring Python code to ensure the utmost clarity and legibility."
+    },
+    "59": {
+        "question": "What are the Key features of Python?",
+        "answer": "The key features of Python are as follows:\n\n  * Python is an interpreted language, so it doesn’t need to be compiled before execution, unlike languages such as C.\n\n  * Python is dynamically typed, so there is no need to declare a variable with the data type. Python Interpreter will identify the data type on the basis of the value of the variable.\n\n  * Python follows an object-oriented programming paradigm with the exception of having access specifiers. Other than access specifiers (public and private keywords), Python has classes, inheritance, and all other usual OOPs concepts.\n\n  * Python is a cross-platform language, i.e., a Python program written on a Windows system will also run on a Linux system with little or no modifications at all.\n\n  * Python is literally a general-purpose language, i.e., Python finds its way in various domains such as web application development, automation, Data Science, Machine Learning, and more."
+    },
+    "60": {
+        "question": "What is PYTHONPATH?",
+        "answer": "PYTHONPATH serves as an environment variable within the Python programming language, empowering users to define supplementary directories for Python to search when seeking modules and packages. This variable serves as a search path and helps Python locate the necessary files to import when executing code. By setting the PYTHONPATH variable, users can extend the default search path and customize the module search behavior according to their needs. This feature enables developers to organize and structure their Python projects efficiently, facilitating easier module importation and enhancing code reusability."
+    },
+    "61": {
+        "question": "What is shallow and deep copying in Python?",
+        "answer": "In shallow copying, the copied object creates an exact copy of the values in the original object, while in deep copying, it duplicates the objects referenced by the source object."
+    },
+    "62": {
+        "question": "What is reindexing in Pandas?",
+        "answer": "Reindexing in Pandas refers to the process of creating a new object with the data conformed to a new index."
+    }, 
+    "63": {
+        "question": "Why is finalize used in Python?",
+        "answer": "It is used to free up unwanted resources and clear up waste before invoking the garbage collector."
+    },
+    "64": {
+        "question": "",
+        "answer": ""
+    },
+    "65": {
+        "question": "",
+        "answer": ""
+    },
+    "66": {
+        "question": "",
+        "answer": ""
+    },
+    "67": {
+        "question": "",
+        "answer": ""
+    },
+    "68": {
+        "question": "",
+        "answer": ""
+    },
+    "69": {
+        "question": "",
+        "answer": ""
+    },
+    "70": {
+        "question": "",
+        "answer": ""
+    },
+    "71": {
+        "question": "",
+        "answer": ""
+    },
+    "72": {
+        "question": "",
+        "answer": ""
+    },
+    "73": {
+        "question": "",
+        "answer": ""
+    },
+    "74": {
+        "question": "",
+        "answer": ""
+    }, 
+    "75": {
+        "question": "",
+        "answer": ""
+    },
+    "76": {
+        "question": "",
+        "answer": ""
+    },
+    "77": {
+        "question": "",
+        "answer": ""
+    },
+    "78": {
+        "question": "",
+        "answer": ""
+    },
+    "79": {
+        "question": "",
+        "answer": ""
+    },
+    "80": {
+        "question": "",
+        "answer": ""
+    }
+}
