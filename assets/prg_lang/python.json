@@ -6,7 +6,7 @@
     "2": {
         "question": " What are the benefits of using Python language as a tool in the present scenario?",
         "answer": "The following are the benefits of using Python language:\n\n * Object-Oriented Language\n\n * High-Level Language\n\n * Dynamically Typed language\n\n * Extensive support Libraries\n\n * Presence of third-party modules\n\n * Open source and community development\n\n * Portable and Interactive\n\n * Portable across Operating systems"
-    }, 
+    },
     "3": {
         "question": "Is Python a compiled language or an interpreted language?",
         "answer": "Actually, Python is a partially compiled language and partially interpreted language. The compilation part is done first when we execute our code and this will generate byte code internally this byte code gets converted by the Python virtual machine(p.v.m) according to the underlying platform(machine+operating system)."
@@ -54,7 +54,7 @@
     "14": {
         "question": "Difference between for loop and while loop in Python",
         "answer": "The “for” Loop is generally used to iterate through the elements of various collection types such as List, Tuple, Set, and Dictionary. Developers use a “for” loop where they have both the conditions start and the end. Whereas, the “while” loop is the actual looping feature that is used in any other programming language. Programmers use a Python while loop where they just have the end conditions."
-    }, 
+    },
     "15": {
         "question": "Can we Pass a function as an argument in Python?",
         "answer": "Yes, Several arguments can be passed to a function, including objects, variables (of the same or distinct data types), and functions. Functions can be passed as parameters to other functions because they are objects. Higher-order functions are functions that can take other functions as arguments."
@@ -102,7 +102,7 @@
     "26": {
         "question": "Is Tuple Comprehension? If yes, how, and if not why?",
         "answer": "(i for i in (1, 2, 3))\n\nTuple comprehension is not possible in Python because it will end up in a generator, not a tuple comprehension."
-    }, 
+    },
     "27": {
         "question": "Differentiate between List and Tuple?",
         "answer": "Let’s analyze the differences between List and Tuple:\n\n * List *\n\nLists are Mutable datatype.\n\nLists consume more memory\n\nThe list is better for performing operations, such as insertion and deletion.\n\nThe implication of iterations is Time-consuming\n\n * Tuple *\n\nTuples are Immutable datatype.\n * Tuple consumes less memory as compared to the list\n * A Tuple data type is appropriate for accessing the elements\n * The implication of iterations is comparatively Faster"
@@ -150,7 +150,7 @@
     "38": {
         "question": "How is memory management done in Python?",
         "answer": "Python uses its private heap space to manage the memory. Basically, all the objects and data structures are stored in the private heap space. Even the programmer can not access this private space as the interpreter takes care of this space. Python also has an inbuilt garbage collector, which recycles all the unused memory and frees the memory and makes it available to the heap space."
-    }, 
+    },
     "39": {
         "question": "How to delete a file using Python?",
         "answer": "We can delete a file using Python by following approaches:\n\n * os.remove()\n\n * os.unlink()"
@@ -198,7 +198,7 @@
     "50": {
         "question": "Python Global Interpreter Lock (GIL)?",
         "answer": "Python Global Interpreter Lock (GIL) is a type of process lock that is used by Python whenever it deals with processes. Generally, Python only uses only one thread to execute the set of written statements. The performance of the single-threaded process and the multi-threaded process will be the same in Python and this is because of GIL in Python. We can not achieve multithreading in Python because we have a global interpreter lock that restricts the threads and works as a single thread."
-    }, 
+    },
     "51": {
         "question": "What are Function Annotations in Python?",
         "answer": "Function Annotation is a feature that allows you to add metadata to function parameters and return values. This way you can specify the input type of the function parameters and the return type of the value the function returns.\n\nFunction annotations are arbitrary Python expressions that are associated with various parts of functions. These expressions are evaluated at compile time and have no life in Python’s runtime environment. Python does not attach any meaning to these annotations. They take life when interpreted by third-party libraries, for example, mypy."
@@ -246,77 +246,9 @@
     "62": {
         "question": "What is reindexing in Pandas?",
         "answer": "Reindexing in Pandas refers to the process of creating a new object with the data conformed to a new index."
-    }, 
+    },
     "63": {
         "question": "Why is finalize used in Python?",
         "answer": "It is used to free up unwanted resources and clear up waste before invoking the garbage collector."
-    },
-    "64": {
-        "question": "",
-        "answer": ""
-    },
-    "65": {
-        "question": "",
-        "answer": ""
-    },
-    "66": {
-        "question": "",
-        "answer": ""
-    },
-    "67": {
-        "question": "",
-        "answer": ""
-    },
-    "68": {
-        "question": "",
-        "answer": ""
-    },
-    "69": {
-        "question": "",
-        "answer": ""
-    },
-    "70": {
-        "question": "",
-        "answer": ""
-    },
-    "71": {
-        "question": "",
-        "answer": ""
-    },
-    "72": {
-        "question": "",
-        "answer": ""
-    },
-    "73": {
-        "question": "",
-        "answer": ""
-    },
-    "74": {
-        "question": "",
-        "answer": ""
-    }, 
-    "75": {
-        "question": "",
-        "answer": ""
-    },
-    "76": {
-        "question": "",
-        "answer": ""
-    },
-    "77": {
-        "question": "",
-        "answer": ""
-    },
-    "78": {
-        "question": "",
-        "answer": ""
-    },
-    "79": {
-        "question": "",
-        "answer": ""
-    },
-    "80": {
-        "question": "",
-        "answer": ""
     }
 }
