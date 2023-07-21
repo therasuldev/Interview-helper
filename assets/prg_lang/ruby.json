@@ -1,0 +1,230 @@
+{
+    "1": {
+        "question": "What is Ruby programming language?",
+        "answer": "Ruby is a dynamic, reflective, general purpose, open source programming language that focuses on simplicity and productivity. Ruby has a mixed features of Perl, small talk, Eiffel, Ada and Lisp. Ruby was designed to create a new language which makes a balance with the functionality of Imperative languages."
+    },
+    "2": {
+        "question": "Who is the developer of Ruby?",
+        "answer": "Ruby is designed and developed by Yukihiro 'martz' Matsumoto in mid 1990 in Japan."
+    },
+    "3": {
+        "question": "Why Ruby is known as a language of flexibility?",
+        "answer": "Ruby is known as a language of flexibility because it facilitates its author to alter the programming elements. Some specific parts of the language can be removed or redefined. Ruby does not restrict the user. For example, to add two numbers, Ruby allows to use + sign or the word 'plus'. This alteration can be done with Ruby's built-in class Numeric."
+    },
+    "4": {
+        "question": "List some features of Ruby?",
+        "answer": "Ruby has many features. Some of them are listed below.\n\n* Object-oriented\n* Flexible\n* Dynamic typing and Duck typing\n* Garbage collector\n* Keyword arguments"
+    },
+    "5": {
+        "question": "What are class libraries in Ruby?",
+        "answer": "Ruby class libraries contain variety of domain such as thread programming, data types, various domains. Following is a list of domains which has relevant class libraries:\n\n* Text processing\n* CGI Programming\n* Network programming\n* GUI programming\n* XML programming"
+    },
+    "6": {
+        "question": "Name some operators used in Ruby.",
+        "answer": "Operators are a symbol which is used to perform different operations.\n\n* Unary operator\n* Airthmetic operator\n* Bitwise operator\n* Logical operator\n* Ternary operator"
+    },
+    "7": {
+        "question": "What is RubyGems in Ruby programming language?",
+        "answer": "RubyGems provides a standard format for distributing ruby programs and libraries. It works as a package manager for the Ruby programming language."
+    },
+    "8": {
+        "question": "What are Ruby variables.",
+        "answer": "Ruby variables hold data which can be used later in a program. Each variable act as a memory and shas a different name.\n\n* Local variable\n* Class variable\n* Instance variable\n* Global variable"
+    },
+    "9": {
+        "question": "What is the use of load and require in Ruby?",
+        "answer": "In Ruby, load and require both are used for loading the available code into the current code. In cases where loading the code required every time when changed or every times someone hits the URL, it is suggested to use 'load'.\n\nIt case of autoload, it is suggested to use 'require'."
+    },
+    "10": {
+        "question": "Explain case statement in Ruby.",
+        "answer": "In Ruby, we use 'case' instead of 'switch' and 'when' instead of 'case'. The case statement matches one statement with multiple conditions just like a switch statement in other languages."
+    },
+    "11": {
+        "question": "Explain for loop in Ruby.",
+        "answer": "Ruby for loop iterates over a specific range of numbers. Hence, for loop is used if a program has fixed number of itrerations.\n\nRuby for loop will execute once for each element in expression."
+    },
+    "12": {
+        "question": "Explain while loop in Ruby.",
+        "answer": "Ruby while loop is used to iterate a program several times. If the number of iterations is not fixed"
+    },
+    "13": {
+        "question": "Explain do while loop in Ruby.",
+        "answer": "Ruby do while loop iterates a part of program several times. In this, loop will execute at least once because do while condition is written at the end."
+    },
+    "14": {
+        "question": "Explain until loop in Ruby.",
+        "answer": "Ruby until loop runs until the given condition evaluates to true. It exits the loop when condition becomes true. It is opposite of the while loop."
+    },
+    "15": {
+        "question": "Explain break statement in Ruby.",
+        "answer": "Ruby break statement is used to terminate a loop. It is mostly used in while loop where value is printed till the condition is true."
+    },
+    "16": {
+        "question": "Explain next statement in Ruby.",
+        "answer": "Ruby next statement is used to skip loop's next iteration. Once the next statement is executed, no further iteration will be performed."
+    },
+    "17": {
+        "question": "Explain redo statement in Ruby.",
+        "answer": "Ruby redo statement is used to repeat the current iteration of the loop. The redo statement is executed without evaluating loop's condition."
+    },
+    "18": {
+        "question": "Explain retry statement in Ruby.",
+        "answer": "Ruby retry statement is used to repeat the whole loop iteration from the start."
+    },
+    "19": {
+        "question": "How will you comment in Ruby.",
+        "answer": "Ruby comments are non-executable lines in a program. They do not take part in the execution of a program.\n\nSingle line comment syntax:\n#This is single line comment.  \n\nMulti line comment syntax:\n=begin  \nThis  \nis  \nmulti line  \ncomment  \n=end  "
+    },
+    "20": {
+        "question": "Explain Ruby object.",
+        "answer": "Object is the default root of all Ruby objects. Ruby objects inherit from BasicObject which allows creating alternate object hierarchies."
+    },
+    "21": {
+        "question": "How to create Ruby object?",
+        "answer": "Objects in Ruby are created by calling new method of the class. It is a unique type of method and predefined in Ruby library.\n Syntax:\nobjectName=className.new  "
+    },
+    "22": {
+        "question": "Explain Ruby class.",
+        "answer": "Each Ruby class is an instance of Ruby class. Classes in Ruby are first class objects. It always starts with a keyword class followed by the class name.\n\nSyntax:\n\nclass ClassName  \ncodes...  \nend  "
+    },
+    "23": {
+        "question": "Define Ruby methods.",
+        "answer": "Ruby method prevent us from writing the same code in a program again and again. Ruby methods are similar to functions in other languages."
+    },
+    "24": {
+        "question": "What are Ruby blocks.",
+        "answer": "Ruby code blocks are called closures in other programming languages. It consist of a group of codes which is always enclosed with braces or written between do...end."
+    },
+    "25": {
+        "question": "In how many ways a block is written in Ruby.",
+        "answer": "A block is written in two ways:\n\n* Multi-line between do and end\n* Inline between braces {}\nBoth are same and have the same functionality."
+    },
+    "26": {
+        "question": "What is yield statement in Ruby.",
+        "answer": "The yield statement is used to call a block within a method with a value."
+    },
+    "27": {
+        "question": "Explain ampersand parameter (&block) in Ruby.",
+        "answer": "The &block is a way to pass a reference (instead of a local variable) to the block to a method.\n\nHere, block word after the & is just a name for the reference, any other name can be used instead of this."
+    },
+    "28": {
+        "question": "Explain Ruby module.",
+        "answer": "Ruby module is a collection of methods and constants. A module method may be instance method or module method. They are similar to classes as they hold a collection of methods, class definitions, constants and other modules. They are defined like classes. Objects or subclasses can not be created using modules. There is no module hierarchy of inheritance.\n\nModules basically serve two purposes:\n* They act as namespace. They prevent the name clashes.\n* They allow the mixin facility to share functionality between classes.\n Module name should start with a capital letter.\n Syntax: \n module ModuleName  \nstatement1  \nstatement2  \n...........  \nend  "
+    },
+    "29": {
+        "question": "Explain module mixins in Ruby.",
+        "answer": "Ruby doesn't support multiple inheritance. Modules eliminate the need of multiple inheritance using mixin in Ruby.\n\nA module doesn't have instances because it is not a class. However, a module can be included within a class.\n\nWhen you include a module within a class, the class will have access to the methods of the module."
+    },
+    "30": {
+        "question": "Explain Ruby strings.",
+        "answer": "Ruby string object holds and manipulates an arbitary sequence of bytes, typically representing characters. They are created using String::new or as literals."
+    },
+    "31": {
+        "question": "How to access Ruby strings elements in an application.",
+        "answer": "You can access Ruby string elements in different parts with the help of square brackets []. Within square brackets write the index or string."
+    },
+    "32": {
+        "question": "How to write multiline string in Ruby.",
+        "answer": "Writing multiline string is very simple in Ruby language. We will show three ways to print multiline string.\n\n* String can be written within double quotes.\n* The % character is used and string is enclosed within / character.\n* In heredoc syntax, we use << and string is enclosed within word STRING."
+    },
+    "33": {
+        "question": "What is the use of global variable $ in Ruby?",
+        "answer": "The global variable is declared in Ruby that you can access it anywhere within the application because it has full scope in the application. The global variables are used in Ruby with $ prepend."
+    },
+    "34": {
+        "question": "What is concatenating string in Ruby. In how many ways you can create a concatenating string.",
+        "answer": "Ruby concatenating string implies creating one string from multiple strings. You can join more than one string to form a single string by concatenating them.\n\nThere are four ways to concatenate Ruby strings into single string:\n* Using plus sign in between strings.\n* Using a single space in between strings.\n* Using << sign in between strings.\n* Using concat method in between strings."
+    },
+    "35": {
+        "question": "What are freezing string in Ruby.",
+        "answer": "In most programming languages strings are immutable. It means that an existing string can't be modified, only a new string can be created out of them.\n\nIn Ruby, by default strings are not immutable. To make them immutable, freeze method can be used."
+    },
+    "36": {
+        "question": "In how many ways you can compare Ruby string?",
+        "answer": "Ruby strings can be compared with three operators:\n\n* With == operator : Returns true or false\n* With eql? Operator : Returns true or false\n* With casecmp method : Returns 0 if matched or 1 if not matched"
+    },
+    "37": {
+        "question": "What are class libraries in Ruby?",
+        "answer": "Ruby class libraries contain variety of domain such as thread programming, data types, various domains. Following is a list of domains which has relevant class libraries:\n\n* Text processing\n* CGI Programming\n* Network programming\n* GUI programming\n* XML programming"
+    },
+    "38": {
+        "question": "What are Ruby arrays and how they can be created?",
+        "answer": "Ruby arrays are ordered collections of objects. They can hold objects like integer, number, hash, string, symbol or any other array.\n\nIts indexing starts with 0. The negative index starts with -1 from the end of the array. For example, -1 indicates last element of the array and 0 indicates first element of the array.\n\nA Ruby array is created in many ways.\n\n* Using literal constructor []\n* Using new class method"
+    },
+    "39": {
+        "question": "How to access Ruby array elements? How many methods are used to access Ruby elements.?",
+        "answer": "Ruby array elements can be accessed using #[] method. You can pass one or more than one arguments or even a range of arguments.\n\nMethods used to access Ruby elements:\n\n* at method\n* slice method\n* fetch method\n* first and last method\n* take method\n* drop method"
+    },
+    "40": {
+        "question": "In how many ways items can be added in an array in Ruby?",
+        "answer": "Ruby array elements can be added in different ways.\n\n* push or <<\n* unshift\n* insert"
+    },
+    "41": {
+        "question": "In how many ways items can be removed from array in Ruby?",
+        "answer": "Ruby array elements can be removed in different ways.\n\n* pop\n* shift\n* delete\n* uniq"
+    },
+    "42": {
+        "question": "Explain Ruby hashes.",
+        "answer": "A Ruby hash is a collection of unique keys and their values. They are similar to arrays but array use integer as an index and hash use any object type. They are also called associative arrays, dictionaries or maps.\n\nIf a hash is accessed with a key that does not exist, the method will return nil."
+    },
+    "43": {
+        "question": "How to create a new time instance in Ruby?",
+        "answer": "A new Time instance can be created with ::new. This will use your current system's time. Parts of time like year, month, day, hour, minute, etc can also be passed.\n\nWhile creating a new time instance, you need to pass at least a year. If only year is passed, then time will default to January 1 of that year at 00:00:00 with current system time zone."
+    },
+    "44": {
+        "question": "Explain Ruby ranges. What are the ways to define ranges?",
+        "answer": "Ruby range represents a set of values with a beginning and an end. They can be constructed using s..e and s...e literals or with ::new.\n\nThe ranges which has .. in them, run from beginning to end inclusively. The ranges which has ... in them, run exclusively the end value.\n\nRuby has a variety of ways to define ranges.\n\n * Ranges as sequences\n * Ranges as conditions\n * Ranges as intervals"
+    },
+    "45": {
+        "question": "What are Ruby iterators?",
+        "answer": "Iterator is a concept used in object-oriented language. Iteration means doing one thing many times like a loop.\n\nThe loop method is the simplest iterator. They return all the elements from a collection, one after the other. Arrays and hashes come in the category of collection."
+    },
+    "46": {
+        "question": "How many iterators are there in Ruby?",
+        "answer": "Following iterators are there in Ruby:\n\n* each iterator\n* times iterator\n* upto and downto iterator\n* step iterator\n* each_line iterator"
+    },
+    "47": {
+        "question": "Name different methods for IO console in Ruby?",
+        "answer": "The IO console provides different methods to interact with console. The class IO provides following basic methods:\n\n* IO::console\n* IO#raw#raw!\n* IO#cooked\n* IO#cooked!\n* IO#getch"
+    },
+    "48": {
+        "question": "How to open a file in Ruby?",
+        "answer": "A Ruby file can be created using different methods for reading, writing or both.\n\nThere are two methods to open a file in Ruby.\n\n* File.new method : Using this method a new file can be created for reading, writing or both.\n* File.open method : Using this method a new file object is created. That file object is assigned to a file.\n\n Difference between both the methods is that File.open method can be associated with a block while File.new method can't."
+    },
+    "49": {
+        "question": "Explain class libraries in Ruby.",
+        "answer": "Ruby class libraries contain a variety of domains like thread programming, data types, and various domains. It has additional libraries evolving day by day. The following are the domains which has relevant class libraries.\n\n* Text processing: File, String, Regexp for quick and clean text processing.\n* CGI Programming: There are supporting class library for CGI programming support like, data base interface, eRuby, mod_ruby for Apache, text processing classes.\n* Network programming: Various well-designed sockets are available in ruby for network programming.\n* GUI programming: Ruby/Tk and Ruby/Gtk are the classes for GUI programming\n* XML programming: UTF-8 text processing regular expression engine make XML programming very handy in ruby."
+    },
+    "50": {
+        "question": "What is sysread method in Ruby?",
+        "answer": "The sysread method is also used to read the content of a file. With the help of this method you can open a file in any mode."
+    },
+    "51": {
+        "question": "How to check whether a directory exist or not in Ruby?",
+        "answer": "To check whether a directory exists or not exists? Method is used.\n\nSyntax:\n\nputs Dir.exists? 'dirName'"
+    },
+    "52": {
+        "question": "Explain Ruby exceptions.",
+        "answer": "Ruby exception is an object, an instance of the class Exception or descendent of that class. When something goes wrong, Ruby program throws an exceptional behavior. By default Ruby program terminates on throwing an exception."
+    },
+    "53": {
+        "question": "What are some built-in Ruby class exceptions.",
+        "answer": "Built-in subclasses of exception are as follows:\n\n* NoMemoryError\n* ScriptError\n* SecurityError\n* SignalException"
+    },
+    "54": {
+        "question": "How an exception is handled in Ruby?",
+        "answer": "To handle exception, the code that raises exception is enclosed within begin-end block. Using rescue clauses we can state type of exceptions we want to handle."
+    },
+    "55": {
+        "question": "Explain the use of retry statement in Ruby?",
+        "answer": "Usaually in a rescue clause, the exception is captured and code resumes after begin block. Using retry statement, the rescue block code can be resumed from begin after capturing an exception."
+    },
+    "56": {
+        "question": "Explain raise statement in Ruby?",
+        "answer": "The raise statement is used to raise an exception.\n\nSyntax:\n\nraise\n\nOr,\n\nraise 'Error Message' \n\nOr,\n\nraise ExceptionType, 'Error Message' \n\nOr,\n\nraise ExceptionType, 'Error Message' condition"
+    },
+    "57": {
+        "question": "Explain the use of ensure statement in Ruby?",
+        "answer": "There is an ensure clause which guarantees some processing at the end of code. The ensure block always run whether an exception is raised or not. It is placed after last rescue clause and will always executed as the block terminates.\n\nThe ensure block will run at any case whether an exception arises, exception is rescued or code is terminated by uncaught exception.\n\nSyntax:\n\nbegin  \ncode..  \n#..raise exception  \nrescue  \n#.. exception is rescued  \nensure  \n#.. This code will always execute.  \nend  "
+    }
+}
