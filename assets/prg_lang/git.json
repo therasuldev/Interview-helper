@@ -1,0 +1,150 @@
+{
+    "1": {
+        "question": "What are Git and GitHub?",
+        "answer": "Git is an open-source and free distributed version control system developed to handle projects of all sizes quickly and efficiently.\n\nGitHub uses Git to provide Internet hosting for version control and software development. It offers the functionality of distributed version control and source code management, which is found in Git, in addition to other unique features."
+    },
+    "2": {
+        "question": "What is the difference between Git and GitHub?",
+        "answer": "Git is a version control system that is used in the management of the source code history. GitHub, on the other hand, is a cloud-based hosting service that is used in the management of Git repositories. GitHub is designed to help in the better management of open-source projects."
+    },
+    "3": {
+        "question": "What is a Git repository? Name some popular Git hosting services.",
+        "answer": "Repositories contain a batch of files that are different versions of a project. These files are imported from the repositories into the local servers of users for further modifications and updates in the content. \n\nA few popular Git hosting services are:\n* GitHub\n* GitLab\n* Bitbucket\n* SourceForge"
+    },
+    "4": {
+        "question": "What is a version control system? Mention its types.",
+        "answer": "A version control system (VCS) is a software tool used to create different project versions and store them in a repository. All modifications to the code are recorded and tracked by the VCS.\n\nTypes of version control systems: \n\n* Local version control systems have a database that maintains all the file changes on disk under revision control in a special format.\n* Centralized version control systems contain one repository, and each user gets their own working copy.\n* Distributed version control systems contain multiple repositories, each accessible to separate users with their own working copy."
+    },
+    "5": {
+        "question": "What are the advantages of using GIT?",
+        "answer": "Here are some of the most important advantages of Git:\n* Data redundancy and data replication is possible\n* It is a highly available service\n* For one repository we can have only one directory of Git\n* The network performance and disk utilization are excellent\n* It is very easy to collaborate on any project\n* We can work on any sort of project within the Git"
+    },
+    "6": {
+        "question": "What language is used in GIT?",
+        "answer": "C is the programming language that is used for creating Git which ensures that the overheads are reduced."
+    },
+    "7": {
+        "question": "What are the advantages of Git over SVN?",
+        "answer": "Since Git is an open source version control system it lets us run multiple versions of our project so that it shows the changes that are made to the code over time and if needed we can keep track of the changes that we have made. This means that a large number of developers can make their own changes and upload those changes so that the changes can be attributed to the particular developers."
+    },
+    "8": {
+        "question": "What is Git Bash?",
+        "answer": "Git Bash is an application that installs Bash, Git, and a few Bash utilities that are commonly used on a Windows OS. In Git Bash, interaction is possible with Git elements and the repository through different commands."
+    },
+    "9": {
+        "question": "What is the meaning of “Index” or “Staging Area” in GIT?",
+        "answer": "When we are making the commits, we can make changes to it, format it and review it in the intermediate area known as ‘Staging Area’ or ‘Index’."
+    },
+    "10": {
+        "question": "What is tagging in Git?",
+        "answer": "Tagging allows developers to mark all the important checkpoints through the course of their projects’ progress. Instead of commit IDs, tag names can be used while commits are checked out and pushed to a remote repo."
+    },
+    "11": {
+        "question": "What is forking in Git?",
+        "answer": "A repository copy is called a fork. So, forking allows one to experiment with changes without worrying about the original project. This process is ideal for proposing changes to someone else’s projects."
+    },
+    "12": {
+        "question": "What is the use of a Git clone?",
+        "answer": "The Git clone command lets us copy the existing Git repository. If we want to get a copy of the central repository then the best way to do it is using ‘cloning’."
+    },
+    "13": {
+        "question": "What is the function of ‘git config’?",
+        "answer": "The ‘Git config’ is a great way to configure our options for the Git installation. Using this command, we can define the repository behavior, preferences and user information."
+    },
+    "14": {
+        "question": "What is the process for creating a repository in Git?",
+        "answer": "If we want to create a repository in Git, then we need to run the command “git init”. With this command .git repository, we can create a directory in the project directory."
+    },
+    "15": {
+        "question": "What is cherry-pick in Git?",
+        "answer": "Git cherry-pick is a command that allows the picking of arbitrary Git commits by reference and adding them to the HEAD. Cherry-picking is the process of picking a commit from one branch and applying it to another. It helps in undoing changes."
+    },
+    "16": {
+        "question": "What is origin in Git?",
+        "answer": "Origin refers to the remote repository that a project was originally cloned from and is used instead of the original repository’s URL. This allows for easier referencing."
+    },
+    "17": {
+        "question": "What is the git push command?",
+        "answer": "The git push command is applied for uploading content to a remote repository from a local repository. Pushing can overwrite changes, so it should be used with caution."
+    },
+    "18": {
+        "question": "What is the git pull command?",
+        "answer": "The git pull command is for fetching and downloading content from a remote repository and integrating it with a local repository."
+    },
+    "19": {
+        "question": "What is the difference between git fetch and git pull?",
+        "answer": "Git fetch retrieves new data from a remote repository but does not integrate it into our working files. It helps in checking if any changes happened in the remote repository. It does not manipulate or destroy anything in the process.\n\nGit pull, on the other hand, updates the HEAD with the latest changes from the remote server and directly integrates it into the working copy files. Using git pull can end in merge conflict as it tries to merge remote changes with the local ones."
+    },
+    "20": {
+        "question": "Explain git checkout in Git.",
+        "answer": "Git checkout allows for the switching of the HEAD. It can be used to restore the historic versions of files as well. The command operates upon files, commits, and branches."
+    },
+    "21": {
+        "question": "What does git rebase do?",
+        "answer": "Rebasing is the reapplying of commits on top of another base trip. A sequence of commits is applied from distinct branches into the final commit. It is a linear process of merging and an alternative to the git merge command. Rebasing makes it seem like one has created a branch from a different commit."
+    },
+    "22": {
+        "question": "What is the difference between git rebase and git merge?",
+        "answer": "In git rebase, a feature branch is moved into a master. Git merge maintains the history by adding a new commit."
+    },
+    "23": {
+        "question": "What is revert in Git?",
+        "answer": "The git revert command is a forward-moving undo operation. It is a safe way to undo changes as it will create a new commit that inverses the changes instead of deleting or orphaning commits in the commit history."
+    },
+    "24": {
+        "question": "What is the difference between resetting and reverting?",
+        "answer": "While git reset changes the state of the branch to a previous one by removing all of the states after the desired commit, git revert does it through the creation of new reverting commits and keeping the original one intact."
+    },
+    "25": {
+        "question": "What is the difference between ‘git remote’ and ‘git clone’?",
+        "answer": "Git remote adds a reference to a remote repository for further tracking. Git clone, like its name, clones an existing remote repository and builds a new one."
+    },
+    "26": {
+        "question": "What is GIT stash?",
+        "answer": "The Git stash will take the working directory in the current state and index it to put on the stack at a later stage so that what we get is a clean working directory.This means that if we are in the middle of some task and need to get a clean working directory and simultaneously we want to keep all our current edits, then we can use the Git stash."
+    },
+    "27": {
+        "question": "How are fork, branch, and clone different from each other?",
+        "answer": "Forking creates a copy of the original repository, and it remains in the GitHub account. Whereas, in cloning, the repository is copied to the local machine using Git. Forking is used to propose changes to the repository owners. In cloning, the changes are directly pushed to the original repository, provided the user has write access. A branch occurs within a repository and is a way to keep developing and modifying the software without affecting the main project."
+    },
+    "28": {
+        "question": "What is the difference between git reflog and log?",
+        "answer": "The git log is a public record of the commit history for a branch. Reflog, on the other hand, is a private one of the repository’s local commits.\n\nUnlike reflog, the git log is a part of the Git repository and is replicated after a push, fetch, or pull. A developer cannot access a local repository’s reflog without having access to the computer where it is located."
+    },
+    "29": {
+        "question": "What is GIT stash drop?",
+        "answer": "When we are finished with working on the stashed item or want to remove the list, we can use the Git stash drop. This will ensure that the item that is last added by default or any particular item can be removed from the argument."
+    },
+    "30": {
+        "question": "How to identify if a certain branch has been merged into master?",
+        "answer": "Git branch –merged master – shows all branches that are merged into master\n\nGit branch – merged – shows all branches that are merged into the head\n\nGit branch – no-merged –shows all the branches that are not merged"
+    },
+    "31": {
+        "question": "Why do we need branching in GIT?",
+        "answer": "With the help of branching, we can have our own branch and we can also jump between various branches. We can go to our previous work, at the same time keeping our recent work intact."
+    },
+    "32": {
+        "question": "What are the constituents of the commit object contain?",
+        "answer": "* the state of a project at a given point of time is contained in a set of files\n* Parent object commit references\n* A 40-character string that uniquely identifies the commit object called a SHAI name"
+    },
+    "33": {
+        "question": "What is HEAD in Git, and how many HEADs can be created in a repository?",
+        "answer": "The reference to a commit object is called the HEAD. Every repository has a ‘Master’ which is the default head. There can be multiple heads in a repository."
+    },
+    "34": {
+        "question": "What is the regular way for branching in GIT?",
+        "answer": "The best way to create a branch in GIT is to have one ‘main’ branch and then create another branch for implementing the changes that we want to make. This is extremely useful when there are a large number of developers working on a single project."
+    },
+    "35": {
+        "question": "State a way to create a new branch in Git.",
+        "answer": "If we want to create a new feature into the main branch, then we can use the command ‘git merge’ or ‘git pull’."
+    },
+    "36": {
+        "question": "How do you define a ‘conflict’ in git?",
+        "answer": "If we want to merge a commit there is a change in one place and the same change already exists then while merging the Git will not be able to predict which is the change that needs to be taken precedence."
+    },
+    "37": {
+        "question": "How to resolve a conflict in Git?",
+        "answer": "If we want to resolve a conflict in Git, then we need to edit the files for fixing the conflicting changes and then we can run “git add” to add the resolved files and after that we can run the ‘git commit’ for committing the repaired merge."
+    }
+}
