@@ -6,7 +6,8 @@ enum Titles {
   ruby('Ruby'),
   rust('Rust'),
   js('Java Script'),
-  react('React');
+  react('React'),
+  csharp('C#');
 
   const Titles(this.title);
   final String title;

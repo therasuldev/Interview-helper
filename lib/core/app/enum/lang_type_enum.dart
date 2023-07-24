@@ -6,6 +6,7 @@ enum Types {
   ruby('ruby'),
   rust('rust'),
   js('js'),
+  csharp('csharp'),
   react('react');
 
   const Types(this.type);

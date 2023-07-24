@@ -4,9 +4,10 @@ import 'package:flutter_interview_questions/app_navigators.dart';
 import 'package:flutter_interview_questions/core/provider/question_bloc/question_bloc.dart';
 import 'package:flutter_interview_questions/core/provider/question_bloc/question_event.dart';
 import 'package:flutter_interview_questions/core/provider/question_bloc/question_state.dart';
+import 'package:flutter_interview_questions/core/utils/all_lang.dart';
 import 'package:flutter_interview_questions/core/utils/categories.dart';
+import 'package:flutter_interview_questions/core/utils/categories_list.dart';
 import 'package:flutter_interview_questions/view/pages/categories/questions/questions.dart';
-import 'package:flutter_interview_questions/view/utils/utils.dart';
 
 class LangCategories extends StatefulWidget {
   const LangCategories({super.key});
@@ -48,13 +49,10 @@ class _LangCategoriesState extends State<LangCategories> {
               return GestureDetector(
                 onTap: () => _bloc.add(
                   QuestionEvent.fetchQuestionStart(
-                    Categories.categories[index],
+                    Categories.categories.current(index),
                   ),
                 ),
-                child: _CategoryCard(
-                  image: Categories.images[index],
-                  language: Categories.names[index],
-                ),
+                child: CategoryHelper().cards(AllLanguages.all[index]),
               );
             },
             itemCount: Categories.categories.length,
@@ -63,31 +61,8 @@ class _LangCategoriesState extends State<LangCategories> {
       );
 }
 
-class _CategoryCard extends StatelessWidget {
-  const _CategoryCard({required this.image, required this.language});
-
-  final String image;
-  final String language;
-
-  @override
-  Widget build(BuildContext context) => Container(
-        margin: const EdgeInsets.symmetric(horizontal: 10),
-        alignment: Alignment.center,
-        decoration: ViewUtils.categoryCard(),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Spacer(),
-            SizedBox(height: 100, child: Image.asset(image)),
-            const Spacer(),
-            Text(
-              language,
-              style: ViewUtils.ubuntuStyle(
-                  fontSize: 22, fontWeight: FontWeight.w600),
-            ),
-            const Spacer(),
-          ],
-        ),
-      );
+extension _CurrentIndex on List {
+  current(int index) {
+    return this[indexWhere((val) => val == AllLanguages.all[index])];
+  }
 }
