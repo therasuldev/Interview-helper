@@ -1,322 +1,334 @@
 {
     "1": {
-        "question": "",
-        "answer": ""
+        "question": "What is C#?",
+        "answer": "C# is an object-oriented programming language compiled by the .Net framework to generate Microsoft Intermediate Language."
     },
     "2": {
-        "question": "",
-        "answer": ""
-    }, 
+        "question": "What is the difference between static, public, and void?",
+        "answer": "Public declared variables can be accessed from anywhere in the application. Static declared variables can be accessed globally without needing to create an instance of the class. Void is a type modifier which states the method and is used to specify the return type of a method in C#."
+    },
     "3": {
-        "question": "",
-        "answer": ""
+        "question": "What is an object?",
+        "answer": "An object is a class instance that can be used to access class methods. The 'New' keyword can be used to construct an object."
     },
     "4": {
-        "question": "",
-        "answer": ""
+        "question": "Define Constructors.",
+        "answer": "A constructor is a member function with the same name as its class. The constructor is automatically invoked when an object is created. While the class is being initialized, it constructs all the values of data members."
     },
     "5": {
-        "question": "",
-        "answer": ""
+        "question": "What are Jagged Arrays?",
+        "answer": "The Array which comprises elements of type array is called Jagged Array. The elements in Jagged Arrays can be of various dimensions and sizes."
     },
     "6": {
-        "question": "",
-        "answer": ""
+        "question": "What is the difference between out and ref parameters?",
+        "answer": "When an argument is passed as a ref, it must be initialized before it can be passed to the method. An out parameter, on the other hand, need not to be initialized before passing to a method."
     },
     "7": {
-        "question": "",
-        "answer": ""
+        "question": "What is the benefit of ‘using’ statement in C#?",
+        "answer": "The ‘using’ statement can be used in order to obtain a resource for processing before automatically disposing it when execution is completed."
     },
     "8": {
-        "question": "",
-        "answer": ""
+        "question": "What is serialization?",
+        "answer": "In order to transport an object through a network, we would need to convert it into a stream of bytes. This process is called Serialization. "
     },
     "9": {
-        "question": "",
-        "answer": ""
+        "question": "Can “this” command be used within a static method?",
+        "answer": "No. This is because only static variables/methods can be used in a static method."
     },
     "10": {
-        "question": "",
-        "answer": ""
+        "question": "Differentiate between Break and Continue Statement.",
+        "answer": "Continue statement - Used in jumping over a particular iteration and getting into the next iteration of the loop.\n\nBreak statement - Used to skip the next statements of the current iteration and come out of the loop. "
     },
     "11": {
-        "question": "",
-        "answer": ""
+        "question": "Explain the four steps involved in the C# code compilation.",
+        "answer": "Four steps of code compilation in C# include -\n\n* Source code compilation in managed code.\n* Newly created code is clubbed with assembly code.\n* The Common Language Runtime (CLR) is loaded.\n* Assembly execution is done through CLR."
     },
     "12": {
-        "question": "",
-        "answer": ""
+        "question": "Discuss the various methods to pass parameters in a method.",
+        "answer": "The various methods of passing parameters in a method include -\n\n* Output parameters: Lets the method return more than one value.\n* Value parameters: The formal value copies and stores the value of the actual argument, which enables the manipulation of the formal parameter without affecting the value of the actual parameter.\n* Reference parameters: The memory address of the actual parameter is stored in the formal argument, which means any change to the formal parameter would reflect on the actual argument too."
     },
     "13": {
-        "question": "",
-        "answer": ""
+        "question": "Name all the C# access modifiers.",
+        "answer": "The C# access modifiers are -\n\n* Private Access Modifier - A private attribute or method is one that can only be accessed from within the class.\n* Public Access Modifier - When an attribute or method is declared public, it can be accessed from anywhere in the code.\n* Internal Access Modifier - When a property or method is defined as internal, it can only be accessible from the current assembly point of that class.\n* Protected Access Modifier - When a user declares a method or attribute as protected, it can only be accessed by members of that class and those who inherit it."
     },
     "14": {
-        "question": "",
-        "answer": ""
-    }, 
+        "question": "Mention all the advantages of C#.",
+        "answer": "The following are the advantages of C# -\n\n* C# is component-oriented.\n* It is an object-oriented language.\n* The syntax is really easy to grasp.\n* It is easier to learn.\n* C# is part of the framework called .NET"
+    },
     "15": {
-        "question": "",
-        "answer": ""
+        "question": "Mention the important IDEs for C# development provided by Microsoft.",
+        "answer": "The following IDEs’ are useful in C# development -\n\n* MonoDevelop\n* Visual Studio Code (VS Code)\n* Browxy\n* Visual Studio Express (VSE)\n* Visual Web Developer (VWD)"
     },
     "16": {
-        "question": "",
-        "answer": ""
+        "question": "Why do we use C# language?",
+        "answer": "Below are the reasons why we use the C# language -\n\n* C# is a component-oriented language.\n* It is easy to pass parameters in the C# language.\n* The C# language can be compiled on many platforms.\n* The C# language follows a structured approach.\n* It is easy to learn and pick up.\n* The C# language produces really efficient and readable programmes."
     },
     "17": {
-        "question": "",
-        "answer": ""
+        "question": "Mention the features of C# briefly.",
+        "answer": "Some of the main features of C# are -\n\n* C# is a safely typed and managed language.\n* C# is object-oriented in nature.\n* C# is a Cross-platform friendly language.\n* C# is a platform-independent language when it comes to compilation.\n* C# is general purpose in nature.\n* C# is used in implementing Destructors and Constructors.\n* C# is part of the .NET framework.\n* C# is an easy-to-learn and easy-to-grasp language.\n* C# is a structured language."
     },
     "18": {
-        "question": "",
-        "answer": ""
+        "question": "What is meant by Unmanaged or Managed Code?",
+        "answer": "In simple terms, managed code is code that is executed by the CLR (Common Language Runtime). This means that every application code is totally dependent on the .NET platform and is regarded as overseen in light of it. Code executed by a runtime programme that is not part of the .NET platform is considered unmanaged code. Memory, security, and other activities related to execution will be handled by the application's runtime."
     },
     "19": {
-        "question": "",
-        "answer": ""
+        "question": "What is meant by an Abstract Class?",
+        "answer": "It's a type of class whose objects can't be instantiated, and it's signified by the term 'abstract'. It consists of a methodology or a single approach."
     },
     "20": {
-        "question": "",
-        "answer": ""
+        "question": "Differentiate between finalize blocks and finalize.",
+        "answer": "Once the try and catch blocks have been completed, the finalize block is called since it is used for exception handling. No matter if the exception has been captured, this block of code is run. In general, the code in this block is cleaner.\n\nJust before garbage collection, the finalize method is called. The main priorities of the finalize method are to clean up unmanaged code, which is automatically triggered whenever an instance is not re-called."
     },
     "21": {
-        "question": "",
-        "answer": ""
+        "question": "What is meant by an Interface?",
+        "answer": "An interface is a class that does not have any implementation. Only the declarations of events, properties, and attributes are included."
     },
     "22": {
-        "question": "",
-        "answer": ""
+        "question": "What is meant by a Partial Class?",
+        "answer": "A partial class effectively breaks a class's definition into various classes in the same or other source code files. A class definition can be written in numerous files, but it is compiled as a single class at runtime, and when a class is formed, all methods from all source files can be accessed using the same object. The keyword 'partial' denotes this."
     },
     "23": {
-        "question": "",
-        "answer": ""
+        "question": "What is the difference between read-only and constants?",
+        "answer": "During the time of compilation, constant variables are declared as well as initialized. It’s not possible to change this particular value later. On the other hand, read-only is used after a value is assigned at run time."
     },
     "24": {
-        "question": "",
-        "answer": ""
+        "question": "What is an interface class?",
+        "answer": "An interface class is an abstract class with only public abstract methods. Only declaration is there in these methods, but not the definition. They must be implemented in the inherited classes."
     },
     "25": {
-        "question": "",
-        "answer": ""
+        "question": "What are reference types and value types?",
+        "answer": "A value type holds a data value inside its memory space. Reference type, on the other hand, keeps the object’s address where the value is stored. It is, essentially, a pointer to a different memory location."
     },
     "26": {
-        "question": "",
-        "answer": ""
-    }, 
+        "question": "What are User Control and Custom Control?",
+        "answer": "Custom Controls are produced as compiled code. These are easy to use and can be added to the toolbox. Developers can drag and drop these controls onto their web forms. User Controls are almost the same as ASP include files. They are also easy to create. User controls, however, can’t be put in the toolbox. They also can’t be dragged and dropped from it."
+    },
     "27": {
-        "question": "",
-        "answer": ""
+        "question": "What are sealed classes in C#?",
+        "answer": "When a restriction needs to be placed on the class that needs to be inherited, sealed classes are created. In order to prevent any derivation from a class, a sealed modifier is used. Compile-time error occurs when a sealed class is forcefully specified as a base class."
     },
     "28": {
-        "question": "",
-        "answer": ""
+        "question": "What is method overloading?",
+        "answer": "Method overloading is the process of generating many methods in the same class with the same name but distinct signatures. The compiler utilizes overload resolution to identify which method to invoke when we compile."
     },
     "29": {
-        "question": "",
-        "answer": ""
+        "question": "What is the difference between Arraylist and Array?",
+        "answer": "An array only has items of the same type and its size if fixed. Arraylist is similar but it does not have a fixed size."
     },
     "30": {
-        "question": "",
-        "answer": ""
+        "question": "Is it possible for a private virtual method to be overridden?",
+        "answer": "A private virtual method cannot be overridden as it can’t be accessed outside the class."
     },
     "31": {
-        "question": "",
-        "answer": ""
+        "question": "Describe the accessibility modifier “protected internal”.",
+        "answer": "Variables or methods that are Protected Internal can be accessed within the same assembly as well as from the classes which have been derived from the parent class."
     },
     "32": {
-        "question": "",
-        "answer": ""
+        "question": "What are the differences between System.String and System.Text.StringBuilder classes?",
+        "answer": "System.String is absolute. When a string variable’s value is modified, a new memory is assigned to the new value. The previous memory allocation gets released. System.StringBuilder, on the other hand, is designed so it can have a mutable string in which a plethora of operations can be performed without the need for allocation of a separate memory location for the string that has been modified."
     },
     "33": {
-        "question": "",
-        "answer": ""
+        "question": "What’s the difference between the System.Array.CopyTo() and System.Array.Clone() ?",
+        "answer": "In the Clone() method, a new array object is created, with all the original Array elements using the CopyTo() method. Essentially, all the elements present in the existing array get copied into another existing array."
     },
     "34": {
-        "question": "",
-        "answer": ""
+        "question": "How can the Array elements be sorted in descending order?",
+        "answer": "You can use the Using Sort() methods and then Reverse() method."
     },
     "35": {
-        "question": "",
-        "answer": ""
+        "question": "What’s the difference between an abstract and interface class?",
+        "answer": "All methods in interfaces have only a declaration but no definition. We can have some strong methods in an abstract class. All methods in an interface class are public. Private methods may exist in an abstract class."
     },
     "36": {
-        "question": "",
-        "answer": ""
+        "question": "What is the difference between Dispose() and Finalize()methods?",
+        "answer": "Dispose() is used when an object is required to release any unmanaged resources in it. Finalize(), on the other hand, doesn’t assure the garbage collection of an object even though it is used for the same function."
     },
     "37": {
-        "question": "",
-        "answer": ""
+        "question": "What are circular references?",
+        "answer": "When two or more resources are dependent on each, it causes a lock condition, and the resources become unusable. This is called a circular reference."
     },
     "38": {
-        "question": "",
-        "answer": ""
-    }, 
+        "question": "What are generics in C# .NET?",
+        "answer": "In order to reduce code redundancy, raise type safety, and performance, generics can be used in order to make code classes that can be reused. Collection classes can be created using generics."
+    },
     "39": {
-        "question": "",
-        "answer": ""
+        "question": "What is an object pool in .NET?",
+        "answer": "A container that has objects which are ready to be used is known as an object pool. It helps in tracking the object which is currently in use and the total number of objects present in the pool. This brings down the need for creating and re-creating objects."
     },
     "40": {
-        "question": "",
-        "answer": ""
+        "question": "What are Custom Exceptions?",
+        "answer": "In some cases, errors have to be handled according to user requirements. Custom exceptions are used in such cases."
     },
     "41": {
-        "question": "",
-        "answer": ""
+        "question": "What are delegates?",
+        "answer": "Delegates are essentially the same as function pointers in C++. The main and only difference between the two is delegates are type safe while function pointers are not. Delegates are essential because they allow for the creation of generic type-safe functions."
     },
     "42": {
-        "question": "",
-        "answer": ""
+        "question": "What is the difference between method overriding and method overloading?",
+        "answer": "In method overriding, the relevant method definition is replaced in the derived class, which changes the method behavior. When it comes to method overloading, a method is created with the same name and is in the same class while having different signatures."
     },
     "43": {
-        "question": "",
-        "answer": ""
+        "question": "How do you inherit a class into another class in C#?",
+        "answer": "In C#, colon can be used as an inheritance operator. You need to place a colon and follow it with the class name."
     },
     "44": {
-        "question": "",
-        "answer": ""
+        "question": "What are the various ways that a method can be overloaded??",
+        "answer": "Different data types can be used for a parameter in order for a method to be overloaded; different orders of parameters as well as different numbers of parameters can be used."
     },
     "45": {
-        "question": "",
-        "answer": ""
+        "question": "Why can't the accessibility modifier be specified for methods within the interface?",
+        "answer": "In an interface, there are virtual methods which do not come with method definition. All the methods present are to be overridden in the derived class. This is the reason they are all public."
     },
     "46": {
-        "question": "",
-        "answer": ""
+        "question": "How can we set the class to be inherited, but prevent the method from being overridden?",
+        "answer": "To set the class to be inherited, it needs to be declared as public. The method needs to be sealed to prevent any overrides."
     },
     "47": {
-        "question": "",
-        "answer": ""
+        "question": "What happens if the method names in the inherited interfaces conflict?",
+        "answer": "A problem could arise when the methods from various interfaces expect different data. But when it comes to the compiler itself, there shouldn’t be an issue."
     },
     "48": {
-        "question": "",
-        "answer": ""
+        "question": "What is the difference between a Struct and a Class?",
+        "answer": "Structs are essentially value-type variables, whereas classes would be reference types. "
     },
     "49": {
-        "question": "",
-        "answer": ""
+        "question": "How to use nullable types in .Net?",
+        "answer": "When either normal values or a null value can be taken by value types, they are called nullable types."
     },
     "50": {
-        "question": "",
-        "answer": ""
-    }, 
+        "question": "How can we make an array with non-standard values?",
+        "answer": "An array with non-default values can be created using Enumerable.Repeat."
+    },
     "51": {
-        "question": "",
-        "answer": ""
+        "question": "What is the difference between “is” and “as” operators in c#?",
+        "answer": "An “is” operator can be used to check an object’s compatibility with respect to a given type, and the result is returned as a Boolean. An “as” operator can be used for casting an object to either a type or a class."
     },
     "52": {
-        "question": "",
-        "answer": ""
+        "question": "What is a multicast delegate?",
+        "answer": "Multicast delegate is when a single delegate comes with multiple handlers. Each handler is assigned to a method."
     },
     "53": {
-        "question": "",
-        "answer": ""
+        "question": "What are indexers in C# .NET?",
+        "answer": "In C#, indexers are called smart arrays. Indexers allow class instances to be indexed in the same way as arrays do."
     },
     "54": {
-        "question": "",
-        "answer": ""
+        "question": "What is the distinction between 'throw' and 'throw ex' in.NET?",
+        "answer": "“Throw” statement keeps the original error stack. But “throw ex” keeps the stack trace from their throw point."
     },
     "55": {
-        "question": "",
-        "answer": ""
+        "question": "What are C# attributes and its significance?",
+        "answer": "C# gives developers an option to define declarative tags on a few entities. For instance, class and method are known as attributes. The information related to the attribute can be retrieved during runtime by taking the help of Reflection."
     },
     "56": {
-        "question": "",
-        "answer": ""
+        "question": "In C#, how do you implement the singleton design pattern?",
+        "answer": "In a singleton pattern, a class is allowed to have only one instance, and an access point is provided to it globally."
     },
     "57": {
-        "question": "",
-        "answer": ""
+        "question": "What's the distinction between directcast and ctype?",
+        "answer": "If an object is required to have the run-time type similar to a different object, then DirectCast is used to convert it. When the conversion is between the expression as well as the type, then Ctype is used."
     },
     "58": {
-        "question": "",
-        "answer": ""
+        "question": "Is C# code managed or unmanaged code?",
+        "answer": "C# is a managed code as the runtime of Common language can compile C# code to Intermediate language."
     },
     "59": {
-        "question": "",
-        "answer": ""
+        "question": "What is a Console application?",
+        "answer": "An application that is able to run in the command prompt window is called a console application. "
     },
     "60": {
-        "question": "",
-        "answer": ""
+        "question": "What are namespaces in C#?",
+        "answer": "Namespaces allow you to keep one set of names that is different from others. A great advantage of namespace is that class names declared in one namespace don’t clash with those declared in another namespace."
     },
     "61": {
-        "question": "",
-        "answer": ""
+        "question": "What is the distinction between the Dispose() and Finalize() methods?",
+        "answer": "Namespaces, interfaces, structures, and delegates can all be members."
     },
     "62": {
-        "question": "",
-        "answer": ""
-    }, 
+        "question": "Write features of Generics in C#?",
+        "answer": "Generics is a technique to improve your program in various ways including creating generic classes and reusing code."
+    },
     "63": {
-        "question": "",
-        "answer": ""
+        "question": "Difference between SortedList and SortedDictionary in C#.",
+        "answer": "SortedList is a collection of value pairs sorted by their keys. SortedDictionary is a collection to store the value pairs in the sorted form, in which the sorting is done on the key."
     },
     "64": {
-        "question": "",
-        "answer": ""
+        "question": "What is Singleton design pattern in C#?",
+        "answer": "Singleton design pattern in C# has just one instance that gives global access to it."
     },
     "65": {
-        "question": "",
-        "answer": ""
+        "question": "What is tuple in C#?",
+        "answer": "Tuple is a data structure to represent a data set that has multiple values that could be related to each other. "
     },
     "66": {
-        "question": "",
-        "answer": ""
+        "question": "What are Events?",
+        "answer": "An event is a notice that something has occurred."
     },
     "67": {
-        "question": "",
-        "answer": ""
+        "question": "What is the Constructor Chaining in C#?",
+        "answer": "With Constructor Chaining, an overloaded constructor can be called from another constructor. The constructor must belong to the same class."
     },
     "68": {
-        "question": "",
-        "answer": ""
+        "question": "What is a multicasting delegate in C#?",
+        "answer": "Multicasting of delegates helps users to point to more than one method in a single call."
     },
     "69": {
-        "question": "",
-        "answer": ""
+        "question": "What are Accessibility Modifiers in C#?",
+        "answer": "Access Modifiers are terms that specify a program's member, class, or datatype's accessibility."
     },
     "70": {
-        "question": "",
-        "answer": ""
+        "question": "What is a Virtual Method in C#?",
+        "answer": "In the parent class, a virtual method is declared that can be overridden in the child class. We construct a virtual method in the base class using the virtual keyword, and that function is overridden in the derived class with the Override keyword."
     },
     "71": {
-        "question": "",
-        "answer": ""
+        "question": "What is Multithreading with .NET?",
+        "answer": "Multi-threading refers to the use of multiple threads within a single process. Each thread here performs a different function."
     },
     "72": {
-        "question": "",
-        "answer": ""
+        "question": "In C#, what is a Hash table class?",
+        "answer": "The Hash table class represents a collection of key/value pairs that are organized based on the hash code of the key."
     },
     "73": {
-        "question": "",
-        "answer": ""
+        "question": "What is LINQ in C#?",
+        "answer": "LINQ refers to Language Integrated Query. It provides .NET languages (like C#) the ability to generate queries to retrieve data from the data source."
     },
     "74": {
-        "question": "",
-        "answer": ""
-    }, 
+        "question": "Why can't a private virtual procedure in C# be overridden?",
+        "answer": "Private virtual methods are not accessible outside of the class."
+    },
     "75": {
-        "question": "",
-        "answer": ""
+        "question": "What is File Handling in C#?",
+        "answer": "File handling includes operations such as creating the file, reading from the file, and appending the file, among others."
     },
     "76": {
-        "question": "",
-        "answer": ""
+        "question": "What do you understand about Get and Set Accessor properties?",
+        "answer": "In C#, Get and Set are termed accessors because they use properties. Such private fields are accessed via accessors."
     },
     "77": {
-        "question": "",
-        "answer": ""
+        "question": "What is the Race condition in C#?",
+        "answer": "When 2 threads access the same resource and try to change it at the same time, we have a race condition. "
     },
     "78": {
-        "question": "",
-        "answer": ""
+        "question": "Why are Async and Await used in C#?",
+        "answer": "Asynchronous programming processes execute independently of the primary or other processes. Asynchronous methods in C# are created using the Async and Await keywords."
     },
     "79": {
-        "question": "",
-        "answer": ""
+        "question": "What is an Indexer in C#?",
+        "answer": "An indexer is a class property that allows you to access a member variable of another class using array characteristics."
     },
     "80": {
-        "question": "",
-        "answer": ""
+        "question": "What is Thread Pooling in C#?",
+        "answer": "In C#, a Thread Pool is a group of threads. These threads are used to do work without interfering with the principal thread's operation."
+    },
+    "81": {
+        "question": "What information can you provide regarding the XSD file in C#?",
+        "answer": "XSD stands for XML Schema Definition. The XML file can have any attributes and elements if there is no XSD file associated with it. "
+    },
+    "82": {
+        "question": "What are I/O classes in C#?",
+        "answer": "In C#, the System.IO namespace contains multiple classes that are used to conduct different file operations such as creation, deletion, closure, and opening."
+    },
+    "83": {
+        "question": "What exactly do you mean by regular expressions in C#?",
+        "answer": "A regular expression is a pattern that can be used to match a set of input. Constructs, character literals, and operators are all possible."
     }
 }
