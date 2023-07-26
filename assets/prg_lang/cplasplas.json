@@ -1,0 +1,202 @@
+{
+    "1": {
+        "question": "What are objects in C++?",
+        "answer": "An instance of a class is called an object. Since a class is a user-defined data type, an object can be referred to as a variable of that data type."
+    },
+    "2": {
+        "question": "What is STL in C++?",
+        "answer": "The STL (Standard Template Library) is a C++ library. It is a powerful set of C++ template classes that provide general-purpose programming data and functions like vectors, lists, queues, and stacks. The STL is highly parameterized in its constituent parts.\n\nSTL is made up of three well-structured components, i.e., Algorithms, Containers, and Iterators."
+    },
+    "3": {
+        "question": "What are destructors in C++?",
+        "answer": "A destructor is a member function of the class invoked when an object of that class goes out of scope or when the delete expression is used on a pointer to the object of that class. A destructor has the same name as their class name, but it is preceded by a tilde (~). It cannot return any value or accept any parameters."
+    },
+    "4": {
+        "question": "What is the use of destructors in C++?",
+        "answer": "Destructors are used to deallocate memory and perform other cleanups when a class object and its members are deleted."
+    },
+    "5": {
+        "question": "What are Templates in C++?",
+        "answer": "A C++ template is a blueprint for creating a generic class or method. It is used to send data types as parameters. We can use templates to build a single function or class that can work with multiple data types.\n\nIn C++, there are two types of Templates:\n\n* Function templates\n* Class templates"
+    },
+    "6": {
+        "question": "What is the difference between equal to (==) and assignment operator (=)?",
+        "answer": "The equal to or (==) operator determines whether two values are identical. If the values are equal, it will return true. It will return false if they are not equal. In contrast, we use the assignment or (=) operator to assign the data on the right to the variable."
+    },
+    "7": {
+        "question": "Why do we use static member variables?",
+        "answer": "A static member method can be called even if no objects of the class exist made. It is primarily used to store information that is shared by all objects in a class. "
+    },
+    "8": {
+        "question": "What is the use of a namespace in C++?",
+        "answer": "It is used to group codes logically and to avoid name collisions that can occur when our code contains multiple libraries. At namespace scope, all identifiers are accessible to one another without qualification."
+    },
+    "9": {
+        "question": "What is operator overloading in C++?",
+        "answer": "Most of the C++ operators can be redefined or are overloaded using operator overloading. It means operators can be provided with different meanings for a data type as per the user's choice. This functionality is known as operator overloading. "
+    },
+    "10": {
+        "question": "What is the difference between reference and pointer in C++?",
+        "answer": "* Reference *\n\n1. A reference is an alias for a variable that already exists.\n2. The reference variable shares the same memory address as the existing variable.\n3. It is necessary to initialize it with a value during declaration.\n4. It cannot be assigned a null value.\n\n* Pointer *\n\n1.A pointer is a variable that holds the memory address of another variable.\n2.Pointer has its own memory address.\n3.Pointer variable can be declared without initializing.\n4.It can be assigned null value."
+    },
+    "11": {
+        "question": "What is the difference between call by value and call by reference?",
+        "answer": "Call by value: When calling by value, we send a duplicate of the parameter to the functions. These duplicated values are given a new memory address, and any modifications to these values have no impact on the variable used in the main code.\n\nCall by reference: Here, we give a reference of the variable's address, and it uses that address to find the actual argument that was used to call the function. Changes to the parameter consequently have an effect on the passing argument."
+    },
+    "12": {
+        "question": "What is friend function in C++?",
+        "answer": "In C++, a friend function is a function that can access private, protected, and public members of a class. The friend function can be declared within the body of the class using the friend keyword."
+    },
+    "13": {
+        "question": "Define Virtual function in C++?",
+        "answer": "A virtual function in C++ is a member function of a base class that we want to redefine in derived classes to achieve polymorphism. We can declare a virtual function in the base class using the virtual keyword in front of the function."
+    },
+    "14": {
+        "question": "What is the OOPS concept in C++, and why do we need it?",
+        "answer": "Object Oriented Programming (OOP) is a programming paradigm that includes many principles such as inheritance, encapsulation, polymorphism, and so on. In earlier programming languages, such as C, we used procedural-oriented programming. This approach was not effective because it had some limitations, such as code that could not be reused in the program. So OOPS provides us with functionalities like code usability and data hiding."
+    },
+    "15": {
+        "question": "How does the class accomplish data hiding in c++?",
+        "answer": "In C++, the class can divide data members and functions using three access specifiers: private, protected, and public. Here, private and protected members are hidden from the outside world and thus enable data hiding so that only relevant information is exposed to the user. "
+    },
+    "16": {
+        "question": "What is inheritance in C++?",
+        "answer": "Inheritance is a method for reusing and extending preexisting classes without changing them, producing hierarchical relationships. The preexisting class is called the base class or parent class, and the new class which inherits the properties of the base class is called the derived class."
+    },
+    "17": {
+        "question": "Why do we use constructors in C++?",
+        "answer": "In C++, constructors are special member functions with the same name as their class. It can be used to initialize values to an object's data members. Whenever any instance of a class is created, it is automatically executed."
+    },
+    "18": {
+        "question": "What is meant by copy constructor in C++?",
+        "answer": "In C++, a copy constructor is an overloaded constructor that creates an instance of the class by initializing it with an earlier-created object of the same class."
+    },
+    "19": {
+        "question": "What is Encapsulation, and how can it be achieved in C++?",
+        "answer": "Encapsulation is the process of combining data members and member functions and bundling them inside a single class to hide sensitive data from end users. It helps to prevent direct data access. Encapsulation can be achieved by making all the data members and functions private. And making getter and setter functions to access it."
+    },
+    "20": {
+        "question": "What are virtual destructors?",
+        "answer": "In C++, the parent class uses a virtual destructor to enable the destruction of the object from the derived class as well. Before the constructor, a virtual destructor is declared using the tilde (~) operator and the virtual keyword."
+    },
+    "21": {
+        "question": "What is an inline function in C++?",
+        "answer": "We can declare a function as inline in C++. Here the function is copied to the address of the function call at compile time. This may help the program execute faster."
+    },
+    "22": {
+        "question": "What does a segmentation fault denotes in C++?",
+        "answer": "A segmentation fault happens when your program tries to access memory that it is not allowed to access. In other words, when your program attempts to access memory that is beyond the limits set by the operating system."
+    },
+    "23": {
+        "question": "How can we access private members of a class in C++?",
+        "answer": "Private members of the class cannot be accessed by any object or method outside of the class. Only functions within the class or friend functions have access to them. But outside of the class, pointers can be used to access private data members."
+    },
+    "24": {
+        "question": "What is the difference between global and local variables?",
+        "answer": "Global variables, such as a session id, are helpful for data that is generally constant or that must be used by several functions in the code. On the other hand, a local variable has a restricted scope. It exists only within the block in which it was declared. When the block ends, the variable is destroyed, and its values are lost."
+    },
+    "25": {
+        "question": "What is the difference between structure and class in C++?",
+        "answer": "* Structure *\n\n1.Data members of a structure are public by default\n2.Structures don't have the data-hiding capability\n3.Structures can only contain data members.\nNote: In recent versions, we can include data functions as well.\n4.Structures are stored at the stack\n\n* Class *\n\n1.By default, data members of a class are private\n2.Classes have the data-hiding capability\n3.Classes can contain data members as well as functions\n4.For classes, memory is allocated on the heap"
+    },
+    "26": {
+        "question": "What is an overflow error in C++?",
+        "answer": "An overflow error happens when a code is given a number, value, or variable that it cannot handle. Working with integers or even other numerals is a frequent programming error."
+    },
+    "27": {
+        "question": "What do you mean by multiple inheritance? What problems can arise with it?",
+        "answer": "When a child class inherits properties and functionalities from more than one parent class, this type of inheritance is called multiple inheritance.\nWhen a function with the same name is present in more than one parent class, and the child class invokes that function. Here, the compiler gets confused about which member function to invoke. This problem arises when we use multiple inheritance."
+    },
+    "28": {
+        "question": "What exactly is multi-threading in C++?",
+        "answer": "Multitasking refers to the ability of your computer to run two or more programs at the same moment. Multithreading is a more sophisticated type of multitasking.\n\nA multithreaded program consists of two or more components that can operate concurrently. A thread is one of the program's components, and each thread specifies its own execution path."
+    },
+    "29": {
+        "question": "What is the difference between virtual functions and pure virtual functions?",
+        "answer": "Virtual Function: A member function of a parent class that can be modified in a derived class is known as a virtual function. It is declared using the keyword virtual.\n\nPure Virtual Function: A pure virtual function has no implementation and is defined by setting the value to 0. It doesn't have a body. Its only role is to tell the compiler that a function will be empty and pure."
+    },
+    "30": {
+        "question": "How is memory allocated and deallocated in C++?",
+        "answer": "Memory is allocated using the new operator in C++, and memory is deallocated using the deletes operator.\nint *nums = new int[ 10 ];  // Allocates memory for storing 10 integers\ndelete [ ] nums;  // Deallocates memory taken by nums"
+    },
+    "31": {
+        "question": "Explain how functions are classified in C++?",
+        "answer": "In C++ functions are classified as\n\n* Return type\n* Function Name\n* Parameters\n* Function body"
+    },
+    "32": {
+        "question": "What is a scope resolution operator?",
+        "answer": "The:: (scope resolution) operator qualifies concealed names so they can be utilized. If an explicit declaration of the same name in a block or class obscures a namespace scope or global scope name, you can use the unary scope operator."
+    },
+    "33": {
+        "question": "Difference between operator overloading and function overloading?",
+        "answer": "Operator overloading: Operator overloading is defined as the ability to redefine a standard operator such that it takes on a new meaning when applied to instances of a class.\nFunction overloading: Function overloading is when a function can have multiple versions. A function's signature varies, indicating that it has a different set of parameters in each iteration."
+    },
+    "34": {
+        "question": "What is the difference between an array and a list?",
+        "answer": "* A list is made up of heterogeneous elements, whereas an array is made up of homogenous components.\n* Memory allocation in an array is static and continuous, whereas memory allocation in a list is dynamic and unpredictable.\n* Users of Array do not need to keep track of the next memory allocation, whereas users of List must keep track of the next memory allocation location."
+    },
+    "35": {
+        "question": "What is an abstract class and when do you use it?",
+        "answer": "An abstract class is one that has no objects that can be created. As a parent for the derived classes, such a class exists. By including a pure virtual function in a class, we can make it abstract."
+    },
+    "36": {
+        "question": " Explain what is C++ exceptional handling?",
+        "answer": "The practice of handling runtime faults in C++ is known as exception handling. We handle exceptions so that the application's usual flow can be preserved even when runtime issues occur. An exception in C++ is a run-time event or object. The std::exception class is where all exceptions are derived."
+    },
+    "37": {
+        "question": "What are the methods of exporting a function from a DLL?",
+        "answer": "There are two approaches:\n\n* By Using the type library in the DLL.\n* By Using the DLL instance to get a reference to the function."
+    },
+    "38": {
+        "question": "Define the Local and Global scope of a variable.",
+        "answer": "Global variables are useful for data that are relatively constant or that must be accessed by multiple functions in the script, such as a session id. A local variable, on the other hand, has a limited scope: it only exists within the block in which it was defined. The variable is destroyed and its values are lost once that block ends."
+    },
+    "39": {
+        "question": "What is polymorphism in C++?",
+        "answer": "Polymorphism is defined as the presence of several forms. Its function depends greatly upon the circumstances. While we have several classes which are connected to each other through inheritance, this happens. Consider a base class named car, which has a method called car brand (). Mercedes, BMW, and Audi are examples of derived automobile classes, and each has its own implementation of a car.\n\nPolymorphism has two types,\n\n* Compile Time Polymorphism.\n* Runtime Polymorphism."
+    },
+    "40": {
+        "question": "What is Data binding and Abstraction?",
+        "answer": "Data Binding: Data binding is the method of constructing a link between both the application's user interface and the information it shows. If the binding has the correct parameters and the information provides the appropriate notification, whenever the data has changed its value, the components that are connected to it instantly adapt to the change.\n\nData Abstraction: Data abstraction is a process of reducing an enormous amount of information to a simple representation of the whole. Abstraction is the process of diminishing something to a set of basic characteristics by eliminating or subtracting characteristics."
+    },
+    "41": {
+        "question": "What is flush in C++?",
+        "answer": "std::flush synchronizes the stream buffer with its controlled output sequence."
+    },
+    "42": {
+        "question": "What is a class in C++?",
+        "answer": "C language is not an object-oriented programming language, so it is a constant attempt of C++ to introduce OOPs. Class is a user-defined data type that defines a blueprint of data type. For example,"
+    },
+    "43": {
+        "question": "What is vector in C++?",
+        "answer": "A sequence of containers to store elements, a vector is a template class of C++. Vectors are used when managing ever-changing data elements. The syntax of creating vector.\n\nvector <type> variable (number of elements)\n\nFor example:\n\nvector <int> rooms (9);"
+    },
+    "44": {
+        "question": "What are character constants in C++?",
+        "answer": "A character constant is member of the character set in which a program is written which is surrounded by single quotation marks (‘)."
+    },
+    "45": {
+        "question": "What is containership in C++?",
+        "answer": "Containership in C++ is a relationship in which a class’s object is nested within another class. The class that contains the object is called a container class and the class whose object is stored is called a contained class."
+    },
+    "46": {
+        "question": "When is void() return type used?",
+        "answer": "The void keyword, when used as a function return type, indicates that the function does not return a value. When used as a parameter list for a function, void indicates that the function takes no parameters. Non-Value Returning functions are also known as void functions. They’re called “void” since they’re not designed to return anything. True, but only partially. We can’t return values from void functions, but we can certainly return something. Although void functions have no return type, they can return values."
+    },
+    "47": {
+        "question": "What is the function of the keyword “Auto”?",
+        "answer": "The auto keyword may be used to declare a variable with a complex type in a straightforward fashion. You can use auto to declare a variable if the initialization phrase contains templates, pointers to functions, references to members, etc. With type inference capabilities, we can spend less time having to write out things the compiler already knows. As all the types are deduced in the compiler phase only, the time for compilation increases slightly but it does not affect the runtime of the program. "
+    },
+    "48": {
+        "question": "What are void pointers?",
+        "answer": "Just like its name a void pointer is a pointer that is not associated with anything or with any data type. Nevertheless, a void pointer can hold the address value of any type and can be converted from one data type to another."
+    },
+    "49": {
+        "question": "Can we call a virtual function from a constructor?",
+        "answer": "Yes, we can call a virtual function from a constructor. But it can throw an exception of overriding."
+    },
+    "50": {
+        "question": "What is the main use of the keyword “Volatile”?",
+        "answer": "Just like its name, things can change suddenly and unexpectantly; So it is used to inform the compiler that the value may change anytime. Also, the volatile keyword prevents the compiler from performing optimization on the code. It was intended to be used when interfacing with memory-mapped hardware, signal handlers, and machine code instruction."
+    }
+}
