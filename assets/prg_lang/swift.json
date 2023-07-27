@@ -1,0 +1,194 @@
+{
+    "1": {
+        "question": "What is iOS Swift?",
+        "answer": "Swift is a compiled and new programming language evolved by Apple Inc in June 2014 in order to develop apps for mobile and desktop. This language works for watchOS, macOS, iOS, and tvOS.\n\nApple created Swift language to work with both Cocoa Touch and Cocoa. Swift supports multiple operating systems such as Free BSD, Linux, Darwin, etc. This language was designed to work along with the Objective-C library and Cocoa framework in the Apple products."
+    },
+    "2": {
+        "question": "What are the advantages of using Swift?",
+        "answer": "Swift programming language has speedily become one of the quick-growing languages in memoir. Swift makes us develop software that is incredibly fast, robust and secure.\n\nThis language is the most useful programming language that is used to develop an application for macOS and iOS(iPad and iPhone).\n\nThere are some important advantages offered by developing apps for macOS and iOS using swift.\n\n* Open-source language: The Swift programming language has been created as an open-source and is being open to everyone, this makes it simple for the program to upgrade all the source codes, email lists and bug tracker at regular intervals.\n* Easy to learn and maintain: Swift programing language is more simple and accurate when compared to C/C++. Apple evolved its programing language to be easy to use and syntaxes are taken from programming languages such as C#, Python, and Ruby. These simple syntax of this programing language make it more meaningful. In swift, all the content of the implementation (.m) and header (.h) files are combined in a single file that is (.swift).\n* Supported by multiple devices: Swift programming language is not just limited to support Apple devices, it will also support multiple devices of the technology world like Linux and Windows devices.\n* Supports dynamic libraries: Dynamic libraries are the executable chunks of the code that can be connected to an app. This feature allows the latest swift programing language. In swift, dynamic libraries are directly uploaded to the memory, thereby resulting in deduction down on the initial size of the app and finally increases app performance.\n* Optional types: An optional in swift is a type that can be held either as a value or not. To declare an optional, we can use a question “?” mark.\n8 Closures: Closures are self-contained blocks of functionality that can be passed around and used in our code."
+    },
+    "3": {
+        "question": "Explain Swift vs Objective-C.",
+        "answer": "Enlisted below are the various differences between Swift vs Objective-C.\n\n1. Swift is an object-oriented and functional programing language, whereas Objective-C is a class-based object-oriented programing language.\n2. Swift supports dynamic libraries, whereas Objective-C does not support dynamic libraries.\n3. Swift supports Tuples, whereas Objective-C does not support Tuples.\n4. Semicolons are not required in Swift, whereas semicolons are required in Objective-C.\n5. Swift is an open-source programing language, whereas Objective-C is limited to Apple, and it’s not an open-source language.\n6. We have to use the “let” keyword to declare for constant and “var” keyword to declare for a variable, whereas in objective C, we have to declare the variable as “NSString” and constant as “int”.\n7. Swift enables us to define methods in structure, classes or enumeration, whereas Objective C does not allow this.\n8. In swift, we can define classes in a single file (.swift), whereas in Objective C we create separate interface (.h) files for classes and implementation (.m) files for classes."
+    },
+    "4": {
+        "question": "Where can we test the apple iPhone apps if we don’t have an iOS device?",
+        "answer": "If we don’t have an iOS device, we can test our application on simulators provided by Apple on the Mac system."
+    },
+    "5": {
+        "question": "What are the tools that are required to develop iOS applications?",
+        "answer": "These are some of the essential tools that we should have:\n\n* Mac/MacMini: It is necessary for us to get a Mac with the Intel-based processor running on Mac OS. Not to worry, if we have our own PC, we can still develop iOS apps through Mac Mini.\n* Xcode: Xcode is the Apple IDE (Integrated Development Environment) that is used for both iOS apps and MAC OS. It provides us a visual layout editor and a code editor that can deal with the logic, user interface and response behind the scene.\n* Swift Programming Language: In the code editor, the logic will be written in a programming language that is invented by Apple, called Swift.\n* Apple Developer Program: This program allows the developer to push our app live on the App store so that the customers and downloaders all over the world can download our app and use it."
+    },
+    "6": {
+        "question": "What are the most important features of swift?",
+        "answer": "Some important features of swift are given below:\n* More impressive structs and enums\n* Protocol oriented\n* Optional Types\n* Type Safety and Type inference language\n* Not required to use semicolons\n* Enforced initializers\n* Safe by default\n* Less code, fewer files\n* Forced Unwrapping\n* Tuples\n* Closures\n* Much faster when compared to other languages."
+    },
+    "7": {
+        "question": "Explain the common execution states for a swift iOS App (iOS Application Lifecycle).",
+        "answer": "The 5 common execution states are as follows:\n* Not Running: This is a simple state in which our app is not launched or no code is being executed and terminated by the system and the application is completely switched off.\n* Inactive: This state is just a transitional state. Inactive state means our application is running in the background but is not able to receive events.\n* Active: Active state is the main execution state, where our app is running in the background and is able to receive events.\n* Background: This is the state where our App is running in the background and still is able to execute the code in the background.\n* Suspended: This state means that our app running is in the background state and the system suspends this app and the application cannot execute any code."
+    },
+    "8": {
+        "question": "Is Swift an object-oriented programming language?",
+        "answer": "Yes, swift is an object-oriented programming language."
+    },
+    "9": {
+        "question": "What type of objects are basic data types in swift?",
+        "answer": "Swift uses a standard set of basic data types for different purposes such as Boolean values, numbers, and strings.\n\n* Int: int is used to store the integer value.\n* Double and Float: Double and Float in swift are considered when while working with the decimal numbers.\n* Bool: The bool type is used to store the Boolean value. In swift, it uses true and false conditions.\n* String: In String literals, the user defines the text that is enclosed by double quotes in Swift.\n* Arrays: Arrays are the collection of list items.\n* Dictionaries: A dictionary is an unordered collection of items of a particular type that is connected with a unique key."
+    },
+    "10": {
+        "question": "What is init() in Swift?",
+        "answer": "Initialization is a process of preparing an instance of an enumeration, structure or class for use.\n\nInitializers are also called to create a new instance of a particular type. An initializer is an instance method with no parameters. Using the initializer, we can write the init keyword."
+    },
+    "11": {
+        "question": "What are the control transfer statements that are used in iOS swift?",
+        "answer": "The control transfer statements that are used in iOS swift include:\n\n1. Return\n2. Break\n3. Continue\n4. Fallthrough"
+    },
+    "12": {
+        "question": "What is the difference between Let and Var in swift?",
+        "answer": "In swift language, we can declare a constant and variable using Let and Var keyword.\n\n(i) Let: Let keyword is immutable, it’s used to declare a constant variable, and the constant variable cannot be changed once they are initialized.\n\nFor Example: let myAge = 25\n\nWe cannot change the value of age, you can declare the constant value of it only once using the let keyword.\n\n(ii) Var: Var keyword is mutable, and is used to declare a variant variable. These variant variables can change the run time."
+    },
+    "13": {
+        "question": "How to add an element into an Array?",
+        "answer": "Arrays are one of the most used data types in an application (app). We use arrays to organize our application (app) data.\n\nSwift makes it easy to create an array in our code using an array literal. Array elements are simply surrounded by a comma and the list of values is separated with square brackets."
+    },
+    "14": {
+        "question": "Which JSON framework is supported by iOS?",
+        "answer": "SBJson framework is supported by iOS. SBJson framework provides additional control and a flexible API which makes JSON handling easier. It is a well and highly flexible framework that supports the flexible functioning of APIs."
+    },
+    "15": {
+        "question": "What is PLIST in iOS?",
+        "answer": "PLIST stands for Property List. PLIST is basically a dictionary of value and keys that can be stored in our file system with a .plist file extension. The property list is used as a portable and lightweight means to store a lesser amount of data. They are normally written in XML.\n\nDifferent types of property lists are mentioned below:\n\n* Binary Property List\n* XML Property List\n* ASCII Legacy Property List"
+    },
+    "16": {
+        "question": "What is a dictionary?",
+        "answer": "Dictionaries are an association of an unordered collection of key-value pairs. Each value is associated with a unique key, which is a hashable type such as a number or string. We can use the dictionary concept in swift programming language whenever we want to obtain the values based on a key value."
+    },
+    "17": {
+        "question": "What is a Protocol in swift?",
+        "answer": "The protocol is a very common feature of the Swift programming language and the protocol is a concept that is similar to an interface from java. A protocol defines a blueprint of properties, methods, and other requirements that are suitable for a particular task.\n\nIn its simplest form, the protocol is an interface that describes some methods and properties. The protocol is just described as the properties or methods skeleton instead of implementation. Properties and methods implementation can be done by defining enumerations, functions, and classes.\n\nProtocols are declared after the structure, enumeration or class type names. A single and multiple protocol declaration can be possible. Multiple protocols are separated by commas."
+    },
+    "18": {
+        "question": "What is a delegate in swift?",
+        "answer": "Delegate is a design pattern, which is used to pass the data or communication between structs or classes. Delegate allows sending a message from one object to another object when a specific event happens and is used for handling table view and collection view events.\n\nDelegates have one to one relationship and one to one communication."
+    },
+    "19": {
+        "question": "What is the use of double question mark “??” in swift?",
+        "answer": "The double question mark “??” is a nil-coalescing operator, it is mainly a shorthand for the ternary conditional operator where we used to test for nil. A double question mark is also used to provide a default value for a variable.\n\nstringVar ?? “default string”\n\nThis exactly does the common thing, if stringVar is not nil then it is returned, otherwise the “default string” is returned."
+    },
+    "20": {
+        "question": "What is a GUARD statement? What is the benefit of using the GUARD statement in swift?",
+        "answer": "A GUARD statement is used to transfer the program control out of the scope when one or more conditions are not met. Using this statement helps in avoiding the pyramid of doom."
+    },
+    "21": {
+        "question": "What are the collection types that are available in swift?",
+        "answer": "There are three primary collection types that are available in swift for storing a collection of values. They are dictionaries, sets, and arrays\n\n1. Arrays: Arrays is an ordered collection of values, which is stored in the same type of values in an ordered list.\n\n2. Sets: Sets are an unordered collection of unique values, which are stored in a distinct value of the same type in a collection without any defined ordering.\n\n3. Dictionaries: Dictionaries are an unordered collection of Key and value pair associations in an unordered manner."
+    },
+    "22": {
+        "question": "What is “defer”?",
+        "answer": "The “defer” is a keyword that provides a block of code that can be executed while the execution is leaving the current scope."
+    },
+    "23": {
+        "question": "What is Tuple? How to create a Tuple in swift?",
+        "answer": "A tuple is a group of different values in a single compound value. It is an ordered list of elements. There are two ways of accessing the object data in a tuple i.e. by name or by position.\n\nIn swift, a tuple can consist of multiple different types. It can support two values i.e. one of integer type, and the other of a string type. It is a legal command."
+    },
+    "24": {
+        "question": "What is the difference between Array and NSArray?",
+        "answer": "The difference between Array and NSArray are given below:\n\n* An array can hold only one type of data, whereas NSArray can hold different types of data.\n* An array is a value type, whereas NSArray is an immutable reference type."
+    },
+    "25": {
+        "question": "What is the difference between class and structure?",
+        "answer": "The difference between class and structure are given below:\n\n1. Classes are reference types, whereas structs are value types.\n2. Classes can be built on other classes, whereas struct cannot inherit from another struct.\n3. Classes have an inheritance, whereas structs cannot have an inheritance.\n4. In class, we can create an instance with “let” keywords and attempt to mutate its property, whereas there is no Mutability in Structs.\n5. Classes have Type Casting, whereas struct doesn’t have Type Casting."
+    },
+    "26": {
+        "question": "What are the best ways of achieving concurrency in iOS?",
+        "answer": "The three best way to achieve concurrency in iOS are given below:\n\n* Dispatch queues\n* Threads\n* Operation queues"
+    },
+    "27": {
+        "question": "How to create a constant in Swift programming?",
+        "answer": "We have to use the “let” keyword to declare a constant in the Swift Programming."
+    },
+    "28": {
+        "question": "How to pass the data between view controllers?",
+        "answer": "There are three ways to pass the data between view controllers as shown below.\n\n1. Using Segue, in prepareForSegue method (Forward).\n2. Setting the variable directly (Backword).\n3. Using Delegate (Backword)."
+    },
+    "29": {
+        "question": "How can we define a base class in swift?",
+        "answer": "In a swift programming language, classes are not inherited from the base class. The classes are defined by the developer without specifying the superclass and it will become the base class automatically."
+    },
+    "30": {
+        "question": "How can we make a property Optional in swift?",
+        "answer": "Declaring a Question mark “?” in the swift code can make a property optional. This question mark “?” helps to avoid the runtime error when a property doesn’t hold a value."
+    },
+    "31": {
+        "question": "Who calls the main function of our app during the app launch cycle?",
+        "answer": "The main thread calls the main function of our app. During the app launching cycle, the system will create a main thread for the app and call the app main function on that main thread."
+    },
+    "32": {
+        "question": "What are UI elements?",
+        "answer": "Images, Buttons, labels, text fields, and any other elements that are visible to the user within the application are called UI elements."
+    },
+    "33": {
+        "question": "Which is the superclass of all the view controller objects?",
+        "answer": "UIViewController class is the superclass of all the view controller objects. The functionality for presenting them, loading views, rotating them is a response to the device rotations. All the standard system behavior is provided by the UIViewController class."
+    },
+    "34": {
+        "question": "What are the new feature in Swift 4.0?",
+        "answer": "The new features in swift 4.0 are given below:\n\n* Faster and easier to use strings that keep Unicode correctness.\n* Tuples and multiple return values.\n* Native error handling using throw/try/catch.\n* Extends to support serialization to a struct."
+    },
+    "35": {
+        "question": "How to write a multiple line comment in swift?",
+        "answer": "A multiple line comment is written in between the (/*) at the starting point and (*/) at the endpoint."
+    },
+    "36": {
+        "question": "What are the source items used by Xcode?",
+        "answer": "Xcode uses four different types of source items as mentioned below:\n\n* Framework\n* Source Group\n* Source File\n* Source Folder"
+    },
+    "37": {
+        "question": "What are the different ways to pass data in swift?",
+        "answer": "There are several ways to pass data in swift such as KVO, Delegate, NSNotification & Callbacks, Target-Action, etc."
+    },
+    "38": {
+        "question": "Explain the usage of Class and benefits of Inheritance.",
+        "answer": "They are:\n\n* Reuse implementation\n* Subclass provides dynamic dispatch.\n* Subclass provides the reuse interface.\n* Modularity\n* Overriding provides the mechanism for customization."
+    },
+    "39": {
+        "question": "Explain some Common features of Protocols & Superclasses.",
+        "answer": "Some common features of Protocol & Superclass are given below:\n\n* Interface reuse.\n* Implementation reuse.\n* Supporting modular design.\n* Provides points for customization."
+    },
+    "40": {
+        "question": "Explain some biggest changes in UserNotifications.",
+        "answer": "Some bigger changes in UserNotifications are given below:\n\n* Allows adding images, audio, and videos.\n* Allows creating custom interfaces for notifications.\n* Allows managing the notifications with interface in the notification center."
+    },
+    "41": {
+        "question": "What is Optional chaining?",
+        "answer": "Optional chaining is a useful process which we can use in combination with the optional to call the methods, properties, and subscripts on the optionals and these values may or may not be nil. In this process, we may try to retrieve a value from a chain of the optional values.\n\n* If the optional contains a value, then calling the subscript, method or property of an optional will return a value.\n* If optional is nil, then calling the subscript, method and property will return nil."
+    },
+    "42": {
+        "question": "What is Optional binding?",
+        "answer": "Optional Binding concept is used to find out whether an optional contains a value, and it makes that value available as a variable or temporary constant. We use an optional binding concept to check if the optional contains a value or not.\n\nOptional binding can be used with the condition (if and while) statements to check for a value inside an optional."
+    },
+    "43": {
+        "question": "What are the Higher-Order functions in swift?",
+        "answer": "The higher-order functions are given below:\n\n* Map: Transform the array contents.\n* Reduce: Reduce the values in the collection to a single value.\n* Sort: Sorting the arrays.\n* Filter: Transform the array contents."
+    },
+    "44": {
+        "question": "Explain some design patterns which we normally use during the app development.",
+        "answer": "The design patterns that are used during app development are given below:\n\n* Behavioral: Memento, and Observer.\n* Creational: Builder, Factory, and Singleton.\n* Structural: Façade, Adapter, and Decorator."
+    },
+    "45": {
+        "question": "What are the various ways to unwrap an optional in swift?",
+        "answer": "There are seven ways to unwrap an optional in swift. They are:\n\n* Guard statement: safe.\n* Forced unwrapping: using “!” operator, unsafe.\n* Optional binding: safe.\n* Optional pattern: safe.\n* Nil coalescing operator: safe.\n* Implicitly unwrapped variable declaration: unsafe in many cases.\n* Optional chaining: safe."
+    },
+    "46": {
+        "question": "What mechanism does iOS support for multi-threading?",
+        "answer": "They are:\n\n* NSThread: It can create a low-level thread which can be started by using the “start” method.\n* NSOperationQueue: It allows a pool of threads to be created and is used to execute “NSOperations” in parallel."
+    },
+    "47": {
+        "question": "What is Swift module?",
+        "answer": "* A module is a single unit of code distribution.\n* A framework or application is built and shipped as a single unit and that can be imported by another module using the swift import keyword.\n* Each build target in the Xcode tool is treated as a separate module in swift."
+    },
+    "48": {
+        "question": "Explain Core Data.",
+        "answer": "Core data is one of the most powerful frameworks provided by Apple for macOS and iOS apps. Core data is used for handling the model layer object in our applications. We can treat Core Data as a framework to filter, modify, save, track the data within the iOS apps. Core Data is not a relational database.\n\nUsing core data, we can easily map the objects in our app to the table records in the database without knowing any SQL. Core data is the M in MVC structure.\n\nSome features of Core data are given below for your reference:\n\n\n* Effective integration with the iOS and macOS toolchains.\n* Organizing, filtering, and grouping data in memory and in the UI (User Interface).\n* Automatic support for storing objects.\n* Automatic validation of property values.\n* First framework for managing an object graph.\n* Core Data framework for managing the life cycle of the object in the object graph."
+    }
+}
