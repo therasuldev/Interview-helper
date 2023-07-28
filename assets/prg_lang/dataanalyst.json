@@ -1,0 +1,202 @@
+{
+    "1": {
+        "question": "What are the key differences between Data Analysis and Data Mining?",
+        "answer": "Data analysis involves the process of cleaning, organizing, and using data to produce meaningful insights. Data mining is used to search for hidden patterns in the data. \n\nData analysis produces results that are far more comprehensible by a variety of audiences than the results from data mining."
+    },
+    "2": {
+        "question": "What is Data Validation?",
+        "answer": "Data validation, as the name suggests, is the process that involves determining the accuracy of data and the quality of the source as well. There are many processes in data validation but the main ones are data screening and data verification.\n\n* Data screening: Making use of a variety of models to ensure that the data is accurate and no redundancies are present.\n* Data verification: If there is a redundancy, it is evaluated based on multiple steps and then a call is taken to ensure the presence of the data item."
+    },
+    "3": {
+        "question": "What is Data Analysis, in brief?",
+        "answer": "Data analysis is the structured procedure that involves working with data by performing activities such as ingestion, cleaning, transforming, and assessing it to provide insights, which can be used to drive revenue. \nData is collected, to begin with, from varied sources. Since the data is a raw entity, it has to be cleaned and processed to fill out missing values and to remove any entity that is out of the scope of usage.\nAfter pre-processing the data, it can be analyzed with the help of models, which use the data to perform some analysis on it.\nThe last step involves reporting and ensuring that the data output is converted to a format that can also cater to a non-technical audience, alongside the analysts."
+    },
+    "4": {
+        "question": "How to know if a data model is performing well or not?",
+        "answer": "This question is subjective, but certain simple assessment points can be used to assess the accuracy of a data model. They are as follows:\n\n* A well-designed model should offer good predictability. This correlates to the ability to be easily able to predict future insights when needed.\n* A rounded model adapts easily to any change made to the data or the pipeline if need be.\n* The model should have the ability to cope in case there is an immediate requirement to large-scale the data.\n* The model’s working should be easy and it should be easily understood among clients to help them derive the required results."
+    },
+    "5": {
+        "question": "Explain Data Cleaning in brief.",
+        "answer": "Data Cleaning is also called Data Wrangling. As the name suggests, it is a structured way of finding erroneous content in data and safely removing them to ensure that the data is of the utmost quality. Here are some of the ways in data cleaning:\n\n* Removing a data block entirely\n* Finding ways to fill black data in, without causing redundancies\n* Replacing data with its mean or median values\n* Making use of placeholders for empty spaces"
+    },
+    "6": {
+        "question": "What are some of the problems that a working Data Analyst might encounter?",
+        "answer": "There can be many issues that a Data Analyst might face when working with data. Here are some of them:\n\n* The accuracy of the model in development will be low if there are multiple entries of the same entity and errors concerning spellings and incorrect data. \n* If the source the data being ingested from is not a verified source, then the data might require a lot of cleaning and preprocess before beginning the analysis.\n* The same goes for when extracting data from multiple sources and merging them for use.\n* The analysis will take a backstep if the data obtained is incomplete or inaccurate."
+    },
+    "7": {
+        "question": "What is Data Profiling?",
+        "answer": "Data profiling is a methodology that involves analyzing all entities present in data to a greater depth. The goal here is to provide highly accurate information based on the data and its attributes such as the datatype, frequency of occurrence, and more."
+    },
+    "8": {
+        "question": "What are the scenarios that could cause a model to be retrained?",
+        "answer": "Data is never a stagnant entity. If there is an expansion of business, this could cause sudden opportunities that call for a change in the data. Furthermore, assessing the model to check its standing can help the analyst analyze whether the model is to be retrained or not. \n\nHowever, the general rule of thumb is to ensure that the models are retrained when there is a change in the business protocols and offerings."
+    },
+    "9": {
+        "question": "What are the prerequisites to become a Data Analyst?",
+        "answer": "There are many skills that a budding data analyst needs. Here are some of them:\n\n* Being well-versed in programming languages such as XML, JavaScript, and ETL frameworks\n* Proficient in databases such as SQL, MongoDB, and more\n* Ability to effectively collect and analyze data\n* Knowledge of database designing and data mining\n* Having the ability/experience of working with large datasets"
+    },
+    "10": {
+        "question": "What are the top tools used to perform Data Analysis?",
+        "answer": "There is a wide spectrum of tools that can be used in the field of data analysis. Here are some of the popular ones:\n\n* Google Search Operators\n* RapidMiner\n* Tableau\n* KNIME\n* OpenRefine"
+    },
+    "11": {
+        "question": "What is an outlier?",
+        "answer": "An outlier is a value in a dataset that is considered to be away from the mean of the characteristic feature of the dataset. There are two types of outliers: univariate and multivariate."
+    },
+    "12": {
+        "question": "How can we deal with problems that arise when the data flows in from a variety of sources?",
+        "answer": "There are many ways to go about dealing with multi-source problems. However, these are done primarily to solve the problems of:\n\n* Identifying the presence of similar/same records and merging them into a single record\n* Re-structuring the schema to ensure there is good schema integration"
+    },
+    "13": {
+        "question": "What are some of the popular tools used in Big Data?",
+        "answer": "There are multiple tools that are used to handle Big Data. Some of the most popular ones are as follows:\n* Hadoop\n*Spark\n* Scala\n* Hive\n* Flume\n* Mahout"
+    },
+    "14": {
+        "question": "What is the use of a Pivot table?",
+        "answer": "Pivot tables are one of the key features of Excel. They allow a user to view and summarize the entirety of large datasets simply. Most of the operations with Pivot tables involve drag-and-drop operations that aid in the quick creation of reports."
+    },
+    "15": {
+        "question": "Explain the KNN imputation method, in brief.",
+        "answer": "KNN is the method that requires the selection of several nearest neighbors and a distance metric at the same time. It can predict both discrete and continuous attributes of a dataset. \n\nA distance function is used here to find the similarity of two or more attributes, which will help in further analysis."
+    },
+    "16": {
+        "question": "What are the top Apache frameworks used in a distributed computing environment?",
+        "answer": "MapReduce and Hadoop are considered to be the top Apache frameworks when the situation calls for working with a huge dataset in a distributed working environment."
+    },
+    "17": {
+        "question": "What is Hierarchical Clustering?",
+        "answer": "Hierarchical clustering, or hierarchical cluster analysis, is an algorithm that groups similar objects into common groups called clusters. The goal is to create a set of clusters, where each cluster is different from the other and, individually, they contain similar entities."
+    },
+    "18": {
+        "question": "What are the steps involved when working on a data analysis project?",
+        "answer": "Many steps are involved when working end-to-end on a data analysis project. Some of the important steps are as mentioned below:\n\n* Problem statement\n* Data cleaning/preprocessing\n* Data exploration\n* Modeling\n* Data validation\n* Implementation\n* Verification"
+    },
+    "19": {
+        "question": "Can you name some of the statistical methodologies used by data analysts?",
+        "answer": "Many statistical techniques are very useful when performing data analysis. Here are some of the important ones:\n\n* Markov process\n* Cluster analysis\n* Imputation techniques\n* Bayesian methodologies\n* Rank statistics"
+    },
+    "20": {
+        "question": "What is time series analysis?",
+        "answer": "Time series analysis, or TSA, is a widely used statistical technique when working with trend analysis and time-series data in particular. The time-series data involves the presence of the data at particular intervals of time or set periods."
+    },
+    "21": {
+        "question": "Where is time series analysis used?",
+        "answer": "Since time series analysis (TSA) has a wide scope of usage, it can be used in multiple domains. Here are some of the places where TSA plays an important role:\n\n* Statistics\n* Signal processing\n* Econometrics\n* Weather forecasting\n* Earthquake prediction\n* Astronomy\n* Applied science"
+    },
+    "22": {
+        "question": "What are some of the properties of clustering algorithms?",
+        "answer": "Any clustering algorithm, when implemented will have the following properties:\n\n* Flat or hierarchical\n* Iterative\n* Disjunctive"
+    },
+    "23": {
+        "question": "What is collaborative filtering?",
+        "answer": "Collaborative filtering is an algorithm used to create recommendation systems based mainly on the behavioral data of a customer or user. \n\nFor example, when browsing e-commerce sites, a section called ‘Recommended for you’ is present. This is done using the browsing history, analyzing the previous purchases, and collaborative filtering."
+    },
+    "24": {
+        "question": "Which are the types of hypothesis testing used today?",
+        "answer": "There are many types of hypothesis testing. Some of them are as follows:\n\n* Analysis of variance (ANOVA): Here, the analysis is conducted between the mean values of multiple groups.\n\n* T-test: This form of testing is used when the standard deviation is not known, and the sample size is relatively small.\n\n* Chi-square Test: This kind of hypothesis testing is used when there is a requirement to find the level of association between the categorical variables in a sample."
+    },
+    "25": {
+        "question": "What are some of the data validation methodologies used in data analysis?",
+        "answer": "Many types of data validation techniques are used today. Some of them are as follows:\n\n* Field-level validation: Validation is done across each of the fields to ensure that there are no errors in the data entered by the user.\n* Form-level validation: Here, validation is done when the user completes working with the form but before the information is saved.\n* Data saving validation: This form of validation takes place when the file or the database record is being saved.\n* Search criteria validation: This kind of validation is used to check whether valid results are returned when the user is looking for something."
+    },
+    "26": {
+        "question": "What is K-means algorithm?",
+        "answer": "K-means algorithm clusters data into different sets based on how close the data points are to each other. The number of clusters is indicated by ‘k’ in the k-means algorithm. It tries to maintain a good amount of separation between each of the clusters.\n\nHowever, since it works in an unsupervised nature, the clusters will not have any sort of labels to work with."
+    },
+    "27": {
+        "question": "What is the difference between the concepts of recall and the true positive rate?",
+        "answer": "Recall and the true positive rate, both are totally identical. Here’s the formula for it:\nRecall = (True positive)/(True positive + False negative)"
+    },
+    "28": {
+        "question": "What are the ideal situations in which t-test or z-test can be used?",
+        "answer": "It is a standard practice that a t-test is used when there is a sample size less than 30 and the z-test is considered when the sample size exceeds 30 in most cases."
+    },
+    "29": {
+        "question": "Why is Naive Bayes called ‘naive’?",
+        "answer": "Naive Bayes is called naive because it makes the general assumption that all the data present are unequivocally important and independent of each other. This is not true and won’t hold up in a real-world scenario."
+    },
+    "30": {
+        "question": "What is the simple difference between standardized and unstandardized co-efficients?",
+        "answer": "In the case of standardized coefficients, they are interpreted based on their standard deviation values. The unstandardized coefficient is measured based on the actual value present in the dataset."
+    },
+    "31": {
+        "question": "How are outliers detected?",
+        "answer": "Multiple methodologies can be used for detecting outliers, but the two most commonly used methods are as follows:\n* Standard deviation method: Here, the value is considered as an outlier if the value is lower or higher than three standard deviations from the mean value.\n* Box plot method: Here, a value is considered an outlier if it is lesser or higher than 1.5 times the interquartile range (IQR)"
+    },
+    "32": {
+        "question": "Why is KNN preferred when determining missing numbers in data?",
+        "answer": "K-Nearest Neighbour (KNN) is preferred here because of the fact that KNN can easily approximate the value to be determined based on the values closest to it."
+    },
+    "33": {
+        "question": "How can one handle suspicious or missing data in a dataset while performing analysis?",
+        "answer": "If there are any discrepancies in data, a user can go on to use any of the following methods:\n\n* Creation of a validation report with details about the data in the discussion\n* Escalating the same to an experienced data analyst to look at it and take a call\n* Replacing the invalid data with corresponding valid and up-to-date data\n* Using many strategies together to find missing values and using approximation if needed"
+    },
+    "34": {
+        "question": "What is the difference between Principal Component Analysis (PCA) and Factor Analysis (FA)?",
+        "answer": "Among many differences, the major difference between PCA and FA lies in the fact that factor analysis is used to specify and work with the variance between variables, while PCA aims to explain the covariance between the existing components or variables. \n\nNext up on this list of top data analyst interview questions and answers, let us check out some of the top questions from the advanced category."
+    },
+    "35": {
+        "question": "How is it beneficial to make use of version control?",
+        "answer": "There are numerous benefits of using version control, as shown below:\n\n* Establishes an easy way to compare files, identify differences, and merge if any changes are made.\n* Creates an easy way to track the life cycle of an application build, including every stage in it, such as development, production, testing, etc.\n* Brings about a good way to establish a collaborative work culture\n* Ensures that every version and variant of code is kept safe and secure"
+    },
+    "36": {
+        "question": "What are the future trends in data analysis?",
+        "answer": "With this question, the interviewer is trying to assess your grip on the subject and your knowledge in the field. Make sure to state valid facts and their respective validation from sources to add positivity to your candidature. Also, try to explain how artificial intelligence is making a huge impact on data analysis and its potential in the same."
+    },
+    "37": {
+        "question": "Why did you apply for the data analyst role in our company?",
+        "answer": "Here, the interviewer is trying to see how well you can convince them regarding your proficiency in the subject, alongside the need for data analysis at the firm you’ve applied for. It is always an added advantage to know the job description in detail, along with the compensation and the details of the company."
+    },
+    "38": {
+        "question": "Can you rate yourself on a scale of 1–10, depending on your proficiency in data analysis?",
+        "answer": "With this question, the interviewer is trying to grasp your understanding of the subject, your confidence, and your spontaneity. The most important thing to note here is that you answer honestly based on your capacity."
+    },
+    "39": {
+        "question": "Has your college degree helped you with data analysis?",
+        "answer": "This is a question that relates to the latest program you completed in college. Do talk about the degree you have obtained, how it was useful, and how you plan on putting it to full use in the future after being recruited by the company."
+    },
+    "40": {
+        "question": "What is your plan after taking up this data analyst role?",
+        "answer": "While answering this question, make sure to keep your explanation concise on how you would bring about a plan that works with the company setup and how you would implement the plan, ensuring that it works by performing perforation validation testing on the same. Highlight how it can be made better in the coming days with further iteration."
+    },
+    "41": {
+        "question": "What are the disadvantages of data analytics?",
+        "answer": "Compared to the plethora of advantages, there are a few disadvantages when considering data analytics. Some of the disadvantages are listed below:\n\n* Data analytics can cause a breach in customer privacy and information such as transactions, purchases, and subscriptions.\n\n* Some of the tools are complex and require prior training.\n\n* It takes a lot of skills and expertise to select the right analytics tool every time."
+    },
+    "42": {
+        "question": "What skills should a successful data analyst possess?",
+        "answer": "This is a descriptive question highly dependent on how analytical your thinking skills are. There are a variety of tools that a data analyst must have expertise in. Programming languages such as Python, R, and SAS, probability, statistics, regression, correlation, and more are the primary skills that a data analyst should possess."
+    },
+    "43": {
+        "question": "What makes you think you are the right fit for this data analyst role?",
+        "answer": "With this question, the interviewer is trying to gauge your understanding of the job description and where you’re coming from regarding your knowledge of data analysis. Be sure to answer this in a concise yet detailed manner by explaining your interests, goals, and visions and how these match with the company’s structure."
+    },
+    "44": {
+        "question": "Talk about your past data analysis work.",
+        "answer": "This is a very commonly asked question in a data analysis interview. The interviewer will be assessing you for your clarity in communication, actionable insights from your work experience, your debating skills if questioned on the topics, and how thoughtful you are in your analytical skills."
+    },
+    "45": {
+        "question": "How would you estimate the number of visitors to the Taj Mahal in November 2019?",
+        "answer": "This is a classic behavioral question. This is to check your thought process without making use of computers or any sort of dataset. You can begin your answer using the below template:\n\n“First, I would gather some data. I will find out the population of Agra, where the Taj Mahal is located. I will find out the number of tourists that visit the site in 2019. This will be followed by the average length of their stay, which can be further analyzed by considering factors such as age, gender, income, and the number of vacation days and bank holidays in India. I will analyze any sort of data available from the local tourist offices.”"
+    },
+    "46": {
+        "question": "Do you have any experience working in the same industry as ours before?",
+        "answer": "This is a very straightforward question. This aims to assess if you have the industry-specific skills that are needed for the current role. Even if you do not possess all of the skills, make sure to thoroughly explain how you can still make use of the skills you’ve obtained in the past to benefit the company."
+    },
+    "47": {
+        "question": "Have you earned any certifications to boost your opportunities as a data analyst aspirant?",
+        "answer": "As always, interviewers look for candidates who are serious about advancing their career options by making use of additional tools like certifications. Certificates are strong proof that you have put in all the effort to learn new skills, master them, and put them to use to the best of your capacity. List the certifications, if you have any, and talk about them in brief, explaining what you learned from the program and how it’s been helpful to you so far."
+    },
+    "48": {
+        "question": "What tools do you prefer to use in the various phases of data analysis?",
+        "answer": "This is a question to check what tools you think are useful for their respective tasks. Talk about how comfortable you are with the tools you mention and about their popularity in the market today."
+    },
+    "49": {
+        "question": "Which step of a data analysis project do you like the most?",
+        "answer": "It is normal to have a predilection for certain tools and tasks over others. However, while performing data analysis, you will always be expected to deal with the entirety of the analytics life cycle, so make sure not to speak negatively about any of the tools or the steps in the process of data analysis.\n\nFinally, in these interview questions for the data analyst’s blog, we have to understand how to carefully approach this question and answer it to the best of our ability."
+    },
+    "50": {
+        "question": "How good are you in terms of explaining technical content to a non-technical audience with respect to data analysis?",
+        "answer": "This is another classic question asked in most data analytics interviews. Here, you must talk about your communication skills in terms of delivering the technical content, your level of patience, and your ability to break content into smaller chunks to help the audience understand it better.\n\nIt is always advantageous to show the interviewer that you are very capable of working effectively with people from a variety of backgrounds who may or may not be technical. "
+    }
+}
