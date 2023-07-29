@@ -1,0 +1,206 @@
+{
+    "1": {
+        "question": "Explain what is Perl language?",
+        "answer": "Perl stands for “Practical Extraction and Reporting Language”. It’s a powerful scripting language and is rich in features. Using Perl, we can write powerful and efficient code that can be used in mission-critical projects."
+    },
+    "2": {
+        "question": "Can you name the variables in which the chomp works? Also, how they are different from one another?",
+        "answer": "These are: Scalar and Array\n\nScalar is generally denoted by the symbol $ and it can have a variable that can either be a string or a number. An array on the other side is denoted by @ symbol. An array is always a number. Both these variables have a different namespace. The scalar variables are capable to hold a value of 1 digit while the array can have more values. Both of them can be executed in the function whenever there is a need for the same."
+    },
+    "3": {
+        "question": "Is it possible in Perl to use code again and again? If so, which feature enables the user to that?",
+        "answer": "Yes, it is possible in Perl. However, there is a limit on the usage of the same code in the same program. The users need not worry about the complexity either as Perl is equipped with a code trimming feature. It automatically guides users on how to keep the code as short as possible. Code reusability is a prime example of this. The feature that enables users to simply keep up the pace towards this is “Inheritance”. The child class in this feature can use the methods of their parent class."
+    },
+    "4": {
+        "question": "How can you represent the warning signs in the Perl in case of an error and what are the options through which this task can be performed?",
+        "answer": "There is an option in Perl which is known as the Command-Line. All the warning messages can be displayed using this and the pragma function simply makes sure that the user can declare the variables during the appearance of warning messages. The entire program can be scrolled easily and in fact, in a very short span of time using the in-built debugger."
+    },
+    "5": {
+        "question": "While writing a program, why the code should be as short as possible?",
+        "answer": "Complex codes are not always easy to handle. They are not even easy to be reused. Moreover, finding a bug in them is not at all a difficult job. Any software or application if has complex or lengthy code couldn’t work smoothly with the hardware and often have compatibility issues. Generally, they take more time to operate and thus become useless or of no preference for most of the users. The shortcode always makes sure that the project can be made user-friendly and it enables programmers to save a lot of time."
+    },
+    "6": {
+        "question": "Can you tell the meaning of the term debugging in programming?",
+        "answer": "Well, every programmer is familiar with this approach. The fact is many errors declare their presence in the programs due to reasons which are not always necessary to be known exactly. Eliminating these errors is very essential for the smooth flow of the tasks. Finding bugs or errors is known as debugging. The programming languages can have in-built options for debugging or the programmers are free to consider other options too."
+    },
+    "7": {
+        "question": "What are “Require” and “Use” statement in Perl and when it is used?",
+        "answer": "It is considered when it comes to importing the functions in a way that they can be accessed directly during the program. The users are free to get the results in case the substatements are not accurate. On the other side, the use statement is generally executed during parsing."
+    },
+    "8": {
+        "question": "In Perl, is it possible for the programmers to prefer a dynamic approach when it comes to loading the binary extension?",
+        "answer": "Yes, it is possible. The only need for this is the system a programmer is using must support it. The other option is to accomplish this task statically in case the system doesn’t allow the same. The dynamic approach can help users to save time as they are free to perform some basic tasks in their own way."
+    },
+    "9": {
+        "question": "Name a few arguments which are used in Perl frequently. Tell their meaning as well",
+        "answer": "These areas following\n\n* -d which means debug\n* -w that indicates a warning\n* -e means execute\n* -c which says non return compilation"
+    },
+    "10": {
+        "question": "Tell something about the Associate Arrays in Perl and how they are significant for the programmers?",
+        "answer": "It is basically one of the widely used data types in Perl after Scalar and Array. They are quite similar to that of a hash table and there are a lot of functions that are quite similar to that of the same."
+    },
+    "11": {
+        "question": "Can you add a module file in Perl and what are the functions that simply enable you to do so?",
+        "answer": "Yes, it is possible and there are “Require” “Or” and “Use”"
+    },
+    "12": {
+        "question": "What are the guidelines about the Perl Modules which users should pay attention to and follow?",
+        "answer": "There are various things that a user should pay attention to. A few important ones are as follow:\n\n* The user must always make it the user that a Package Name should always begin with a capital letter\n* If there is a file name, the extension for the same could be .pm\n* The package should come from the exporter class in case the object is not considered for the same"
+    },
+    "13": {
+        "question": "For executing a program in Perl, is there any basic condition which the users have to fulfill?",
+        "answer": "The users must make sure that the program they have accomplished should be passed through the interpreter before its actual execution. It actually compiles the program reliably and the best part is the users are free to ignore any spaces or marks in the same."
+    },
+    "14": {
+        "question": "Is Perl a compiler or Interpreter?",
+        "answer": "The programming language can also be used both as a compiler and as an interpreter. It takes in the source codes and converts the same into bytecode that is understandable by the programming language. You can then execute and run the program. Therefore, the programming language can both be regarded as an interpreter and a compiler."
+    },
+    "15": {
+        "question": "What does CPAN mean?",
+        "answer": "It stands for Comprehensive Perl Archive Network and is a large collection of all the documents and software related to Perl. The programmers can access the same and can avoid the difficulties they face.  CPAN is of significant use for the programmers and they are free to derive a lot of useful information from the same."
+    },
+    "16": {
+        "question": "While start working on a project, how you will decide Perl is suitable for the same",
+        "answer": "The first thing to pay attention to is whether the execution need is fast or not. If so, Perl is a good option to consider. The users are free to keep up the pace with flexibility as well. Perl is highly flexible and it can enable users to keep up the pace with the same. Perl is open source and is free from license issues. Perl has one of the best and in fact, the largest free code repositories that simply make it one of the best options to be considered. Also, it is one of the best programming languages with vast support available for programmers."
+    },
+    "17": {
+        "question": "Name the operators which are used in Perl and are common?",
+        "answer": "1.Assignment Operators\n2.Arithmetic Operators\n3.Increment operators\n4.Comparison operators\n5.Logical Operators\n6.String Operators"
+    },
+    "18": {
+        "question": "Tell how can an array be made empty in Perl?",
+        "answer": "This can be done easily. For this, the value of the array is set to zero and the users can then perform this task by assigning the null list to it."
+    },
+    "19": {
+        "question": "Which among the Terms or Lists in Perl have maximum precedence and how you can say that?",
+        "answer": "Terms have the maximum number of precedence. It generally includes expressions, quotes and the same have complex word precedence."
+    },
+    "20": {
+        "question": "What are the options with the help of which you can wrap scripts in the loops?",
+        "answer": "For this, there are options –p and –n. The users are free to use this option as many times as they can. There are no restrictions on the size of the scripts and the loops. "
+    },
+    "21": {
+        "question": "What is the significance of the warning messages in Perl and how they are helpful to the users?",
+        "answer": "These are generally the messages that simply let the user keep an eye on the quality of code. With the appropriate messages, it becomes simple for a user to highlight problems. The user can set the messages as optional while working on the programs."
+    },
+    "22": {
+        "question": "How the information can be inserted into the hashes in Perl?",
+        "answer": "This hash in this programming language is a group of key values. These are scalar values. The hashes are used after a % sign and can be created only by assigning a value to it.\n\nFor incorporating information in hashes, the key-value pairs should be created which is known as the unwinding of hash. In this case, the even number items are listed on the right called values, and the ones stored on the left are termed as keys."
+    },
+    "23": {
+        "question": "Tell one reason why Perl aliases are good enough to be considered and are faster than references?",
+        "answer": "They don’t need dereferencing and that is one of the best things about it. A lot of tasks that are not required or are not usually can be avoided easily."
+    },
+    "24": {
+        "question": "Tell something about memory management in Perl?",
+        "answer": "When the programmers make use of a variable in Perl, some memory get occupies. The users have to make sure that memory is utilized in the best possible manner. After a program is executed, the files can be divided into sections easily and can then be managed."
+    },
+    "25": {
+        "question": "When you can make use of Perl Grep?",
+        "answer": "It is basically an important function in Perl that simply lets the programmers make sure that the elements that are considered in Perl can be trusted for the long run. It enables programmers to get the elements that are actually suitable with the criteria set by the users on the functions."
+    },
+    "26": {
+        "question": "What is the significance of Chop functions in Perl and how the users can keep up the pace with them?",
+        "answer": "Sometimes there is a need for the users to avoid some random characters from the expression. The same is done in Perl through the Chop Functions."
+    },
+    "27": {
+        "question": "Can the Compiled Form is stored as a file in Perl?",
+        "answer": "No, it cannot be stored as a File"
+    },
+    "28": {
+        "question": "Does Perl have Objects? What is the best thing about them you have come across?",
+        "answer": "Yes, Perl is equipped with some very useful Objects. The best part is programmers are not forced to use them while performing their tasks. The users can easily skip them in case they don’t felt their need while writing the codes. Certain Object-Oriented modules are present in Perl and the users are free to consider them without actually understanding the objects. However, it is recommended to the programmers to go with the Objects in case the program is too complex. "
+    },
+    "29": {
+        "question": "How to get private values inside a subroutine or block?",
+        "answer": "The user can use two ways to get private values in a subroutine. The ways are Local operator or My operator.\n\n* Local operator – This functions on the global variable only. It takes in the private variable and restores them at the end of any block arranged.\n* My operator – For creating a new variable, this operator is used. It remains privately within the block."
+    },
+    "30": {
+        "question": "What is Closure in Perl and how it is helpful?",
+        "answer": "It is defined as the block of code in Perl which is used for capturing the lexical variable which can be accessed at a later section in a program."
+    },
+    "31": {
+        "question": "What do you understand by Perl scripting?",
+        "answer": "It can be regarded as one important script programming language similar to that of the C and C++ language implemented in the IT market. It is mainly used for network operations. The use of Perl scripting depends on the compiler and not on the interpreter. Perl is used mainly for network operations, developing websites, and OS programs."
+    },
+    "32": {
+        "question": "Why is Perl scripting used?",
+        "answer": "Perl Scripting is used for designing 76 operating systems at the same time and 3000 modules. Other functional concepts can also be done with the help of this programming language. For extending its support to operating systems and modules, it is also known as comprehensive Perl archive network modules. In simple words, the use of the language is to extract information from any text file and result in a printing form of the same by converting the text file."
+    },
+    "33": {
+        "question": "Explain some advantages and disadvantages of programming using Perl script language?",
+        "answer": "Advantages – Perl is a high-level programming language that is simpler to understand due to its syntax. It is also easier to use due to its flexibility, and easy readability. In addition, the language also supports OOP. It also becomes easier to understand since it has the ability to combine many languages.\n\nDisadvantages – This software is not portable and has some unreadable codes. It is slower compared to other programming language since it is an interpretative language. When you apply any code which is more than 200 lines, it starts to give in problem within the program. It also contains a CPAN module which makes it incompatible to run on the system in which CPAN is not installed."
+    },
+    "34": {
+        "question": "What is the importance of Perl warnings and how to turn them on?",
+        "answer": "To check the quality of any coding in the language, warnings are the basic methods to check the wrong codes. During the lexical analysis stage, some usual mandatory problems are highlighted. Therefore, the time spent on researching weird results is very high which can be minimized by turning on the warnings.\n\nThere are several ways to turn on the warnings.\n\n* -w option is used on the command line for Perl one-liner\n\n* -w option is also used on shebang line on OS such a UNIX or windows. The Windows Perl interpreter does not require warnings.\n\nFor another operating system, the compiler warnings should be selected."
+    },
+    "35": {
+        "question": "State the difference between Use and Require?",
+        "answer": "Both Use and require are used for importing modules and file extension is not required for any of them.\n\nIn case of use, the objects included are different at the time of compilation, and in case of require, the objects are verified during the runtime."
+    },
+    "36": {
+        "question": "Draw a difference between My and Local?",
+        "answer": "Any variable during the coding with My statement remains in the current block. The variable along with the value goes out of the block. On the contrary in the case of the Local statement, it is used to assign any value to a global variable outside the block. The variable of the local statement can be used globally, but the value lasts till it is inside the block."
+    },
+    "37": {
+        "question": "Does Perl programming has objects or not?",
+        "answer": "The answer to this question is yes, this programming language has objects that do not force to use it. In most cases, object-oriented modules can be used without even understanding the object. But if the program is a large one, then it is required to make it subject-oriented."
+    },
+    "38": {
+        "question": "How many types of Perl operators are present?",
+        "answer": "This operator is present in four different types:\n\n* A unary operator is similar to that of not operator\n* Ternary operator similar to the conditional operator\n* List operator resembles the print operator\n* Binary operator similar to the additional operator"
+    },
+    "39": {
+        "question": "What Perl identifier connotes?",
+        "answer": "The identifier is used to state a variable, module, class, function, and other relating objects while using this programming language. The variable starts with symbols such as @, %, or $ which is followed by digits and underscore."
+    },
+    "40": {
+        "question": "What kind of data is supported by this programming language?",
+        "answer": "There are three types of data namely – arrays of scalars, scalars, and hashes of scalars."
+    },
+    "41": {
+        "question": "How many types of primary data structures are there? What do they denote?",
+        "answer": "There are three types of primary data structure in this programing language. They are arrays, the scalar, associative arrays.\n\n1.Arrays – It is denoted with ‘@’ a sign.\n2. Scalar – It is capable of holding one information at one time, and it is denoted by the $ symbol.  Further, this symbol is followed by a Perl identifier that can be in the form of underscores or alphanumeric. It should not start with a digit.\n3. Associative arrays – These are also called hashes which work similarly to that of hash tables used by programmers in other languages."
+    },
+    "42": {
+        "question": "How to use a variable in the programming language?",
+        "answer": "When you assign a value to a variable with the help of an equal sign, a declaration is made. In the case of this language, there is no need to declare the Perl variable to backup memory space within the application."
+    },
+    "43": {
+        "question": "Explain some features of this programming language?",
+        "answer": "Some features of this programming language are as follows:\n\n* It is a simple object-oriented programming syntax\n* It helps in designing Unicode\n* It supports 25,000 open modules at the same time\n* It is open-source software and a cross-platform language\n* It also supports databases such as Oracle, MySQL, etc.\n* Vital personal data can be protected with the help of this language such as in e-commerce transactions.\n* It makes use of tools that help in converting a text file into other forms such that it is compatible with HTML or XML.\n* Regular expression engine is offered by the language that is used for changing any type of text file"
+    },
+    "44": {
+        "question": "Explain the difference between Perl hash and Perl array?",
+        "answer": "Perl hash is an unordered list of elements where is used by the key values. It is symbolized by a % sign.\n\nPerl array is an ordered list of elements used in the programming language which are used by index numbers and symbolized by @ sign."
+    },
+    "45": {
+        "question": "How to use modules while working with this language?",
+        "answer": "A module usually refers to a namespace that is mentioned in a file. Modules are a collection of functions, and certain guidelines should be followed while implementing the same in Perl scripting language.\n\n* The file name assigned should be the same as that of the package name.\n* The name of the package should begin with a capital letter.\n* The file names should have ‘pm’ as their extension.\n* The package should be derived from the Exporter class in case no object-oriented technique is implemented in the module.\n* For the non-object techniques used in the modules, the functions and variables should be derived from the namespace with the help of @EXPORT and @EXPOR_OK arrays."
+    },
+    "46": {
+        "question": "Can Perl patterns be considered as regular expressions?",
+        "answer": "The answer mentioned above is no, the Perl patterns cannot be considered as regular expressions since the patterns do not have any references. The regular expression should determine the next state automation and also keep the previous state into it. The wrong usage of a pattern is disqualified regular expressions."
+    },
+    "47": {
+        "question": "What does Perl array function mean?",
+        "answer": "In an array, this function is used to add or remove elements. This function is available in four different types, they are\n\n1. Pop – It helps to remove the last element of an array.\n2. Push – This function helps to add a new element at the end of an array.\n3. Shift – this function helps to remove the element on the extreme left of an array.\n4. Unshift – To add a new element at the start of an array, this function is used."
+    },
+    "48": {
+        "question": "How to differentiate Perl list and Perl array?",
+        "answer": "The Perl list is a process to bring together data into the programming source code. This list is a fixed collection of scalars and this list is always present in the one-dimensional form.\n\nThe Perl array is a process to collect data in the form of variables, and these are multi-dimensional."
+    },
+    "49": {
+        "question": "How many loop control keys are found and what do they connote?",
+        "answer": "In this language, there are three types of loop control statements namely next, redo, and last.\n\n1. Next statement – It is similar to the continue statement in C language and helps to move to the next element of an array skipping all the elements in between.\n\n2. Redo statement – It helps to restart the current loop without considering the control statement.\n\n3. Last statement – It functions similar to that break statement in C language. It helps to exit the loop soon after using the statement."
+    },
+    "50": {
+        "question": "Explain the use of –I, -n, and –p options?",
+        "answer": "Among all the options, -n and –p is used to include scripts within the loop. The first option is used to enables the programming language to implement the script inside the loop. The –p options function in the same manner with the addition of continuation. The –i option is used to change the files in the right place. Using this option, the name of the input file can be changed, and the output file would open with the original file name. With this option, no backup of any file is created."
+    },
+    "51": {
+        "question": "What does the word subroutine stand for?",
+        "answer": "It is a block of code used in the above-mentioned programming language which is implemented together to task any task. It can be executed at any point in time in any program. To mention some of its advantages, it helps to execute modular programming making it simpler to understand. It also helps to eliminate duplication of any program reusing the same code in the programming language."
+    }
+}
