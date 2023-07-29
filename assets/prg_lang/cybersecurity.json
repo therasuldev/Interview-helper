@@ -1,0 +1,158 @@
+{
+    "1": {
+        "question": "What is Cryptography?",
+        "answer": "Cryptography is the practice and study of techniques for securing information and communication mainly to protect the data from third parties that the data is not intended for."
+    },
+    "2": {
+        "question": "What is the difference between Symmetric and Asymmetric encryption?",
+        "answer": "* Symmetric Encryption *\n\n1.Same key for encryption & decryption\n2.Encryption is fast but more vulnerable\n3.DES, 3DES, AES and RC4\n4.Used for bulk data transmission\n\n* Asymmetric Encryption* \n\n1.Different keys for encryption & decryption\n2. Encryption is slow due to high computation\n3. Diffie-Hellman, RSA\n4. Often used for securely exchanging secret keys"
+    },
+    "3": {
+        "question": "What is the difference between IDS and IPS?",
+        "answer": "IDS is Intrusion Detection System and it only detects intrusions and the administrator has to take care of preventing the intrusion. Whereas, in IPS i.e., Intrusion Prevention System, the system detects the intrusion and also takes actions to prevent the intrusion."
+    },
+    "4": {
+        "question": "Explain CIA triad.",
+        "answer": "CIA stands for Confidentiality, Integrity, and Availability. CIA is a model that is designed to guide policies for Information Security. It is one of the most popular models used by organizations.\n\nConfidentiality\n\nThe information should be accessible and readable only to authorized personnel. It should not be accessible by unauthorized personnel. The information should be strongly encrypted just in case someone uses hacking to access the data so that even if the data is accessed, it is not readable or understandable.\n\nIntegrity\n\nMaking sure the data has not been modified by an unauthorized entity. Integrity ensures that data is not corrupted or modified by unauthorized personnel. If an authorized individual/system is trying to modify the data and the modification wasn’t successful, then the data should be reversed back and should not be corrupted.\n\nAvailability\n\nThe data should be available to the user whenever the user requires it. Maintaining of Hardware, upgrading regularly, Data Backups and Recovery, Network Bottlenecks should be taken care of."
+    },
+    "5": {
+        "question": "How is Encryption different from Hashing?",
+        "answer": "Both Encryption and Hashing are used to convert readable data into an unreadable format. The difference is that the encrypted data can be converted back to original data by the process of decryption but the hashed data cannot be converted back to original data."
+    },
+    "6": {
+        "question": "What is a Firewall and why is it used?",
+        "answer": "A Firewall is a network security system set on the boundaries of the system/network that monitors and controls network traffic. Firewalls are mainly used to protect the system/network from viruses, worms, malware, etc. Firewalls can also be to prevent remote access and content filtering."
+    },
+    "7": {
+        "question": "What is the difference between VA(Vulnerability Assessment) and PT(Penetration Testing)?",
+        "answer": "Vulnerability Assessment is the process of finding flaws on the target. Here, the organization knows that their system/network has flaws or weaknesses and want to find these flaws and prioritize the flaws for fixing.\n\nPenetration Testing is the process of finding vulnerabilities on the target. In this case, the organization would have set up all the security measures they could think of and would want to test if there is any other way that their system/network can be hacked."
+    },
+    "8": {
+        "question": "What is a three-way handshake?",
+        "answer": "A three-way handshake is a method used in a TCP/IP network to create a connection between a host and a client. It’s called a three-way handshake because it is a three-step method in which the client and server exchanges packets. The three steps are as follows:\n\n1.The client sends a SYN(Synchronize) packet to the server check if the server is up or has open ports\n2.The server sends SYN-ACK packet to the client if it has open ports\n3.The client acknowledges this and sends an ACK(Acknowledgment) packet back to the server"
+    },
+    "9": {
+        "question": "What are the response codes that can be received from a Web Application?",
+        "answer": "1xx – Informational responses\n2xx – Success\n3xx – Redirection\n4xx – Client-side error\n5xx – Server-side error"
+    },
+    "10": {
+        "question": "What is traceroute? Why is it used?",
+        "answer": "Traceroute is a tool that shows the path of a packet. It lists all the points (mainly routers) that the packet passes through. This is used mostly when the packet is not reaching its destination. Traceroute is used to check where the connection stops or breaks to identify the point of failure."
+    },
+    "11": {
+        "question": "What is the difference between HIDS and NIDS?",
+        "answer": "HIDS(Host IDS) and NIDS(Network IDS) are both Intrusion Detection System and work for the same purpose i.e., to detect the intrusions. The only difference is that the HIDS is set up on a particular host/device. It monitors the traffic of a particular device and suspicious system activities. On the other hand, NIDS is set up on a network. It monitors traffic of all device of the network."
+    },
+    "12": {
+        "question": "What are the steps to set up a firewall?",
+        "answer": "Following are the steps to set up a firewall:\n\n1.Username/password: modify the default password for a firewall device\n2.Remote administration: Disable the feature of the remote administration\n3.Port forwarding: Configure appropriate port forwarding for certain applications to work properly, such as a web server or FTP server\n4.DHCP server: Installing a firewall on a network with an existing DHCP server will cause conflict unless the firewall’s DHCP is disabled\n5.Logging: To troubleshoot firewall issues or potential attacks, ensure that logging is enabled and understand how to view logs\n6.Policies: You should have solid security policies in place and make sure that the firewall is configured to enforce those policies."
+    },
+    "13": {
+        "question": "Explain SSL Encryption",
+        "answer": "SSL(Secure Sockets Layer) is the industry-standard security technology creating encrypted connections between Web Server and a Browser. This is used to maintain data privacy and to protect the information in online transactions. The steps for establishing an SSL connection is as follows:\n\nA browser tries to connect to the webserver secured with SSL\n1.The browser sends a copy of its SSL certificate to the browser\n2.The browser checks if the SSL certificate is trustworthy or not. If it is trustworthy, then the browser sends a message to the web server requesting to establish an encrypted connection\n3.The web server sends an acknowledgment to start an SSL encrypted connection\n4.SSL encrypted communication takes place between the browser and the web server"
+    },
+    "14": {
+        "question": "What steps will you take to secure a server?",
+        "answer": "Secure servers use the Secure Sockets Layer (SSL) protocol for data encryption and decryption to protect data from unauthorized interception.\n\nHere are four simple ways to secure server:\n\nStep 1: Make sure you have a secure password for your root and administrator users\n\nStep 2: The next thing you need to do is make new users on your system. These will be the users you use to manage the system\n\nStep 3: Remove remote access from the default root/administrator accounts\n\nStep 4: The next step is to configure your firewall rules for remote access"
+    },
+    "15": {
+        "question": "Explain Data Leakage",
+        "answer": "Data Leakage is an intentional or unintentional transmission of data from within the organization to an external unauthorized destination. It is the disclosure of confidential information to an unauthorized entity. Data Leakage can be divided into 3 categories based on how it happens:\n\n1.Accidental Breach: An entity unintentionally send data to an unauthorized person due to a fault or a blunder\n2.Intentional Breach: The authorized entity sends data to an unauthorized entity on purpose\n3.System Hack: Hacking techniques are used to cause data leakage\n\nData Leakage can be prevented by using tools, software, and strategies known as DLP(Data Leakage Prevention) Tools."
+    },
+    "16": {
+        "question": "What are some of the common Cyberattacks?",
+        "answer": "Following are some common cyber attacks that could adversely affect your system.\n\n1.Malware\n2.Phishing\n3.Password Attacks\n4.DDoS\n5.Man in the Middle\n6.Drive-By Downloads\n7.Malvertising\n8.Rogue Software"
+    },
+    "17": {
+        "question": "What is a Brute Force Attack? How can you prevent it?",
+        "answer": "Brute Force is a way of finding out the right credentials by repetitively trying all the permutations and combinations of possible credentials. In most cases, brute force attacks are automated where the tool/software automatically tries to login with a list of credentials. There are various ways to prevent Brute Force attacks. Some of them are:\n\n** Password Length: You can set a minimum length for password. The lengthier the password, the harder it is to find.\n** Password Complexity: Including different formats of characters in the password makes brute force attacks harder. Using alpha-numeric passwords along with special characters, and upper and lower case characters increase the password complexity making it difficult to be cracked.\n** Limiting Login Attempts: Set a limit on login failures. For example, you can set the limit on login failures as 3. So, when there are 3 consecutive login failures, restrict the user from logging in for some time, or send an Email or OTP to use to log in the next time. Because brute force is an automated process, limiting login attempts will break the brute force process."
+    },
+    "18": {
+        "question": "What is Port Scanning?",
+        "answer": "Port Scanning is the technique used to identify open ports and service available on a host. Hackers use port scanning to find information that can be helpful to exploit vulnerabilities. Administrators use Port Scanning to verify the security policies of the network. Some of the common Port Scanning Techniques are:\n\n1.Ping Scan\n2.TCP Half-Open\n3.TCP Connect\n4.UDP\n5.Stealth Scanning"
+    },
+    "19": {
+        "question": "What are the different layers of the OSI model?",
+        "answer": "An OSI model is a reference model for how applications communicate over a network. The purpose of an OSI reference is to guide vendors and developers so the digital communication products and software programs can interoperate.\n\n* Physical Layer: Responsible for transmission of digital data from sender to receiver through the communication media,\n\n* Data Link Layer: Handles the movement of data to and from the physical link. It is also responsible for encoding and decoding of data bits.\n\n* Network Layer: Responsible for packet forwarding and providing routing paths for network communication.\n\n* Transport Layer: Responsible for end-to-end communication over the network. It splits the data from the above layer and passes it to the Network Layer and then ensures that all the data has successfully reached at the receiver’s end.\n\n* Session Layer: Controls connection between the sender and the receiver. It is responsible for starting, ending, and managing the session and establishing, maintaining and synchronizing interaction between the sender and the receiver.\n\n* Presentation Layer: It deals with presenting the data in a proper format and data structure instead of sending raw datagrams or packets.\n\n* Application Layer: It provides an interface between the application and the network. It focuses on process-to-process communication and provides a communication interface."
+    },
+    "20": {
+        "question": "What is a VPN?",
+        "answer": "Almost all Cybersecurity Interview Questions will have this question included. VPN stands for Virtual Private Network. It is used to create a safe and encrypted connection. When you use a VPN, the data from the client is sent to a point in the VPN where it is encrypted and then sent through the internet to another point. At this point, the data is decrypted and sent to the server. When the server sends a response, the response is sent to a point in the VPN where it is encrypted and this encrypted data is sent to another point in the VPN where it is decrypted. And finally, the decrypted data is sent to the client. The whole point of using a VPN is to ensure encrypted data transfer."
+    },
+    "21": {
+        "question": "What do you understand by Risk, Vulnerability & Threat in a network?",
+        "answer": "1.Threat: Someone with the potential to harm a system or an organization\n2.Vulnerability: Weakness in a system that can be exploited by a potential hacker\n3.Risk: Potential for loss or damage when threat exploits a vulnerability"
+    },
+    "22": {
+        "question": "How can identity theft be prevented?",
+        "answer": "Here’s what you can do to prevent identity theft:\n\n* Ensure strong and unique password\n* Avoid sharing confidential information online, especially on social media\n* Shop from known and trusted websites\n* Use the latest version of the browsers\n* Install advanced malware and spyware tools\n* Use specialized security solutions against financial data\n* Always update your system and the software\n* Protect your SSN (Social Security Number)"
+    },
+    "23": {
+        "question": "What are black hat, white hat and grey hat hackers?",
+        "answer": "Black hat hackers are known for having vast knowledge about breaking into computer networks. They can write malware which can be used to gain access to these systems. This type of hackers misuse their skills to steal information or use the hacked system for malicious purpose. \n\nWhite hat hackers use their powers for good deeds and so they are also called Ethical Hackers. Look out for our Ethical Hacking Course to learn more about the Ethical Hacking. These are mostly hired by companies as a security specialist that attempts to find and fix vulnerabilities and security holes in the systems. They use their skills to help make the security better.\n\nGrey hat hackers are an amalgamation of a white hat and black hat hacker. They look for system vulnerabilities without the owner’s permission. If they find any vulnerabilities, they report it to the owner. Unlike Black hat hackers, they do not exploit the vulnerabilities found."
+    },
+    "24": {
+        "question": "How often should you perform Patch management?",
+        "answer": "Patch management should be done as soon as it is released. For windows, once the patch is released it should be applied to all machines, not later than one month. Same goes for network devices, patch it as soon as it is released. Proper patch management should be followed."
+    },
+    "25": {
+        "question": "How would you reset a password-protected BIOS configuration?",
+        "answer": "Since BIOS is a pre-boot system it has its own storage mechanism for settings and preferences. A simple way to reset is by popping out the CMOS battery so that the memory storing the settings lose its power supply and as a result, it will lose its setting."
+    },
+    "26": {
+        "question": "Explain MITM attack and how to prevent it?",
+        "answer": "A MITM(Man-in-the-Middle) attack is a type of attack where the hacker places himself in between the communication of two parties and steal the information. Suppose there are two parties A and B having a communication. Then the hacker joins this communication. He impersonates as party B to A and impersonates as party A in front of B. The data from both the parties are sent to the hacker and the hacker redirects the data to the destination party after stealing the data required. While the two parties think that they are communicating with each other, in reality, they are communicating with the hacker.\n\nYou can prevent MITM attack by using the following practices:\n\nUse VPN\n* Use strong WEP/WPA encryption\n* Use Intrusion Detection Systems\n* Force HTTPS\n* Public Key Pair Based Authentication"
+    },
+    "27": {
+        "question": "Explain DDOS attack and how to prevent it?",
+        "answer": "This again is an important Cybersecurity Interview Question. A DDOS(Distributed Denial of Service) attack is a cyberattack that causes the servers to refuse to provide services to genuine clients. DDOS attack can be classified into two types:\n\n1.Flooding attacks: In this type, the hacker sends a huge amount of traffic to the server which the server can not handle. And hence, the server stops functioning. This type of attack is usually executed by using automated programs that continuously send packets to the server.\n2.Crash attacks: In this type, the hackers exploit a bug on the server resulting in the system to crash and hence the server is not able to provide service to the clients.\n\nYou can prevent DDOS attacks by using the following practices:\n\n* Use Anti-DDOS services\n* Configure Firewalls and Routers\n* Use Front-End Hardware\n* Use Load Balancing\n* Handle Spikes in Traffic"
+    },
+    "28": {
+        "question": "Explain XSS attack and how to prevent it?",
+        "answer": "XSS(Cross-Site Scripting) is a cyberattack that enables hackers to inject malicious client-side scripts into web pages. XSS can be used to hijack sessions and steal cookies, modify DOM, remote code execution, crash the server etc.\n\nYou can prevent XSS attacks by using the following practices:* Validate user inputs\n* Sanitize user inputs\n* Encode special characters\n* Use Anti-XSS services/tools\n* Use XSS  HTML Filter"
+    },
+    "29": {
+        "question": "What is an ARP and how does it work?",
+        "answer": "Address Resolution Protocol (ARP)is a protocol for mapping an Internet Protocol address (IP address) to a physical machine address that is recognized in the local network.\n\nWhen an incoming packet destined for a host machine on a particular local area network arrives at a gateway, the gateway asks the ARP program to find a physical host or MAC address that matches the IP address.\n\nThe ARP program looks in the ARP cache and, if it finds the address, provides it so that the packet can be converted to the right packet length and format and sent to the machine.\n\nIf no entry is found for the IP address, ARP broadcasts a request packet in a special format to all the machines on the LAN to see if one machine knows that it has that IP address associated with it."
+    },
+    "30": {
+        "question": "What is port blocking within LAN?",
+        "answer": "Restricting the users from accessing a set of services within the local area network is called port blocking.\n\nStopping the source to not to access the destination node via ports. As the application works on the ports, so ports are blocked to restricts the access filling up the security holes in the network infrastructure."
+    },
+    "31": {
+        "question": "What is a Botnet?",
+        "answer": "A Botnet is a number of devices connected to the internet where each device has one or more bots running on it. The bots on the devices and malicious scripts used to hack a victim. Botnets can be used to steal data, send spams and execute a DDOS attack."
+    },
+    "32": {
+        "question": "What are salted hashes?",
+        "answer": "Salt is a random data. When a properly protected password system receives a new password, it creates a hash value of that password, a random salt value, and then the combined value is stored in its database. This helps to defend against dictionary attacks and known hash attacks.\n\nExample: If someone uses the same password on two different systems and they are being used using the same hashing algorithm, the hash value would be same, however, if even one of the system uses salt with the hashes, the value will be different."
+    },
+    "33": {
+        "question": "Explain SSL and TLS",
+        "answer": "SSL is meant to verify the sender’s identity but it doesn’t search for anything more than that. SSL can help you track the person you are talking to but that can also be tricked at times.\n\nTLS is also an identification tool just like SSL, but it offers better security features. It provides additional protection to the data and hence SSL and TLS are often used together for better protection."
+    },
+    "34": {
+        "question": "What is data protection in transit vs data protection at rest?",
+        "answer": "1.Data Protection in transit\n\n   * When data is going from server to client\n   * Effective Data protection measures for in-transit data are critical as data is less secure when in motion\n\n2.Data protection at rest\n\n   * When data just exists in its database or on its hard drive\n   * Data at rest is sometimes considered to be less vulnerable than data in transit"
+    },
+    "35": {
+        "question": "What is 2FA and how can it be implemented for public websites?",
+        "answer": "An extra layer of security that is known as “multi-factor authentication“.\n\nRequires not only a password and username but also something that only, and only, that user has on them, i.e. a piece of information only they should know or have immediately to hand – such as a physical token.\n\nAuthenticator apps replace the need to obtain a verification code via text, voice call or email."
+    },
+    "36": {
+        "question": "What is Cognitive Cybersecurity?",
+        "answer": "Cognitive Cybersecurity is an application of AI technologies patterned on human thought processes to detect threats and protect physical and digital systems.\n\nSelf-learning security systems use data mining, pattern recognition, and natural language processing to simulate the human brain, albeit in a high-powered computer model."
+    },
+    "37": {
+        "question": "What is the difference between VPN and VLAN?",
+        "answer": "1.VPN\n\n   * Helps to group workstations that are not within the same locations into the same broadcast domain\n   * Means to logically segregate networks without physically segregating them with various switches\n   * Saves the data from prying eyes while in transit and no one on the net can capture the packets and read the data\n\n2.VLAN\n\n   * Related to remote access to the network of a company\n   * Used to connect two points in a secured and encrypted tunnel\n   * Does not involve any encryption technique but it is only used to slice up your logical network into different sections for the purpose of management and security"
+    },
+    "38": {
+        "question": "Explain Phishing and how to prevent it?",
+        "answer": "Phishing is a Cyberattack in which a hacker disguises as a trustworthy person or business and attempt to steal sensitive financial or personal information through fraudulent email or instant message.\n\nYou can prevent Phishing attacks by using the following practices:\n\n* Don’t enter sensitive information in the webpages that you don’t trust\n* Verify the site’s security\n* Use Firewalls\n* Use AntiVirus Software that has Internet Security\n* Use Anti-Phishing Toolbar"
+    },
+    "39": {
+        "question": "Explain SQL Injection and how to prevent it?",
+        "answer": "SQL Injection (SQLi) is a code injection attack where an attacker manipulates the data being sent to the server to execute malicious SQL statements to control a web application’s database server, thereby accessing, modifying and deleting unauthorized data. This attack is mainly used to take over database servers.\n\nYou can prevent SQL Injection attacks by using the following practices:\n\n* Use prepared statements\n* Use Stored Procedures\n* Validate user input"
+    }
+}
