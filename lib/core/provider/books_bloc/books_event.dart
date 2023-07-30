@@ -4,14 +4,14 @@ class BookEvent {
   BookEvents? type;
   dynamic payload;
 
-  BookEvent.fetchQuestionStart(List<KPath> path) {
+  BookEvent.fetchBooksStart(List<KPath> path) {
     type = BookEvents.fetchBookStart;
     payload = path;
   }
-  BookEvent.fetchQuestionSuccess() {
+  BookEvent.fetchBooksSuccess() {
     type = BookEvents.fetchBookSuccess;
   }
-  BookEvent.fetchQuestionError() {
+  BookEvent.fetchBooksError() {
     type = BookEvents.fetchBookError;
   }
 }

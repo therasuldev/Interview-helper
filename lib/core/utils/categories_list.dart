@@ -8,6 +8,19 @@ class Categories {
     'rust',
     'js',
     'react',
-    'csharp'
+    'csharp',
+    'backend',
+    'cplascplas',
+    'cybersecurity',
+    'dataanalyst',
+    'datascientist',
+    'engineer',
+    'frontend',
+    'git',
+    'nodejs',
+    'perl',
+    'php',
+    'scala',
+    'swift',
   ];
 }

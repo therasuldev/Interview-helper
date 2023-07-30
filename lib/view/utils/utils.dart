@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 class ViewUtils {
   //for category card [Categories page]
-  static categoryCard() => BoxDecoration(
+  static categoryCardDecor() => BoxDecoration(
         color: Colors.grey[200],
         boxShadow: [
           BoxShadow(
@@ -23,7 +23,7 @@ class ViewUtils {
       );
 
   //for question card [Questions page]
-  static questionCard() => BoxDecoration(
+  static questionCardDecor() => BoxDecoration(
       color: Colors.grey[200],
       boxShadow: [
         BoxShadow(

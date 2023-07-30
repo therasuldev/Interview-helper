@@ -1,6 +1,5 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter_interview_questions/core/app/enum/question.dart';
-import 'package:flutter_interview_questions/core/app/extension/to_string.dart';
 import 'package:flutter_interview_questions/core/model/error/error_model.dart';
 import 'package:flutter_interview_questions/core/model/question/question.dart';
 import 'package:flutter_interview_questions/core/provider/question_bloc/question_event.dart';
@@ -45,7 +44,7 @@ class QuestionBloc extends Bloc<QuestionEvent, QuestionState> {
           questions: [],
           loading: true,
           event: QuestionEvents.fetchQuestionError,
-          error: ErrorModel(description: e.str()),
+          error: ErrorModel(description: e.toString()),
         ),
       );
     }

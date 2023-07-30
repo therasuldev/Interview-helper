@@ -1,6 +1,5 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter_interview_questions/core/app/enum/book.dart';
-import 'package:flutter_interview_questions/core/app/extension/to_string.dart';
 import 'package:flutter_interview_questions/core/model/book/book.dart';
 import 'package:flutter_interview_questions/core/model/error/error_model.dart';
 import 'package:flutter_interview_questions/core/repository/book_repository.dart';
@@ -53,7 +52,7 @@ class BookBloc extends Bloc<BookEvent, BookState> {
           library: [],
           loading: false,
           event: BookEvents.fetchBookError,
-          error: ErrorModel(description: exp.str()),
+          error: ErrorModel(description: exp.toString()),
         ),
       );
     }

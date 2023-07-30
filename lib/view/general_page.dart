@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_interview_questions/view/pages/categories/categories.dart';
+import 'package:flutter_interview_questions/view/pages/home/categories.dart';
 import 'package:flutter_interview_questions/view/pages/library/library.dart';
 import 'package:flutter_interview_questions/view/utils/utils.dart';
 
@@ -12,7 +12,7 @@ class GeneralPage extends StatefulWidget {
 
 class _GeneralPageState extends State<GeneralPage> {
   final List<Widget> _children = [
-    const LangCategories(),
+    const HomeCategories(),
     const BookStore(),
   ];
 

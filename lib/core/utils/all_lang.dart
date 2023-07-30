@@ -11,5 +11,18 @@ class AllLanguages {
     Types.rust.name,
     Types.js.name,
     Types.react.name,
+    Types.backend.name,
+    Types.cplasplas.name,
+    Types.cybersecurity.name,
+    Types.dataanalyst.name,
+    Types.datascientist.name,
+    Types.engineer.name,
+    Types.frontend.name,
+    Types.git.name,
+    Types.nodejs.name,
+    Types.perl.name,
+    Types.php.name,
+    Types.scala.name,
+    Types.swift.name,
   ];
 }
