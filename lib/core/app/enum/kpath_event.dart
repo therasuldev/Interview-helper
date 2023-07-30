@@ -1,4 +1,4 @@
-enum KPath {
+enum Path {
   flutter,
   go,
   backend,
@@ -22,51 +22,51 @@ enum KPath {
   scala,
   swift;
 
-  static String? kpath(KPath kPath) {
-    switch (kPath) {
-      case KPath.flutter:
+  static String? getPath(Path path) {
+    switch (path) {
+      case Path.flutter:
         return 'flutter/';
-      case KPath.go:
+      case Path.go:
         return 'go/';
-      case KPath.backend:
+      case Path.backend:
         return 'backend/';
-      case KPath.cplasplas:
+      case Path.cplasplas:
         return 'cplasplas/';
-      case KPath.csharp:
+      case Path.csharp:
         return 'csharp/';
-      case KPath.cybersecurity:
+      case Path.cybersecurity:
         return 'cybersecurity/';
-      case KPath.dataanalyst:
+      case Path.dataanalyst:
         return 'dataanalyst/';
-      case KPath.datascientist:
+      case Path.datascientist:
         return 'datascientist/';
-      case KPath.engineer:
+      case Path.engineer:
         return 'engineer/';
-      case KPath.frontend:
+      case Path.frontend:
         return 'frontend/';
-      case KPath.git:
+      case Path.git:
         return 'git/';
-      case KPath.java:
+      case Path.java:
         return 'java/';
-      case KPath.js:
+      case Path.js:
         return 'js/';
-      case KPath.nodejs:
+      case Path.nodejs:
         return 'nodejs/';
-      case KPath.perl:
+      case Path.perl:
         return 'perl/';
-      case KPath.php:
+      case Path.php:
         return 'php/';
-      case KPath.python:
+      case Path.python:
         return 'python/';
-      case KPath.react:
+      case Path.react:
         return 'react/';
-      case KPath.ruby:
+      case Path.ruby:
         return 'ruby/';
-      case KPath.rust:
+      case Path.rust:
         return 'rust/';
-      case KPath.scala:
+      case Path.scala:
         return 'scala/';
-      case KPath.swift:
+      case Path.swift:
         return 'swift/';
     }
   }

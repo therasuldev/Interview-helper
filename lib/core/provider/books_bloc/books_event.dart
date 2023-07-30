@@ -4,7 +4,7 @@ class BookEvent {
   BookEvents? type;
   dynamic payload;
 
-  BookEvent.fetchBooksStart(List<KPath> path) {
+  BookEvent.fetchBooksStart(List<Path> path) {
     type = BookEvents.fetchBookStart;
     payload = path;
   }

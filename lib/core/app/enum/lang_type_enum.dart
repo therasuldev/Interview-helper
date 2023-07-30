@@ -1,4 +1,4 @@
-enum Types {
+enum Type {
   flutter('flutter'),
   go('go'),
   java('java'),
@@ -22,6 +22,6 @@ enum Types {
   scala('scala'),
   swift('swift');
 
-  const Types(this.type);
+  const Type(this.type);
   final String type;
 }

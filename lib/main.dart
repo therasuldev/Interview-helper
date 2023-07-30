@@ -31,8 +31,8 @@ class MyApp extends StatelessWidget {
             ..add(
               BookEvent.fetchBooksStart(
                 [
-                  KPath.flutter,
-                  KPath.go,
+                  Path.flutter,
+                  Path.go,
                 ],
               ),
             ),

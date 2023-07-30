@@ -33,16 +33,16 @@ class _BookStoreState extends State<BookStore> {
               //* Flutter
               _RowTitleWidget(
                 title: Titles.flutter.title,
-                page: AllBooks(books: state.library![0][Types.flutter.type]!),
+                page: AllBooks(books: state.library![0][Type.flutter.type]!),
               ),
-              _BookCardWidget(books: state.library![0][Types.flutter.type]!),
+              _BookCardWidget(books: state.library![0][Type.flutter.type]!),
 
               //* Go
               _RowTitleWidget(
                 title: Titles.go.title,
-                page: AllBooks(books: state.library![1][Types.go.type]!),
+                page: AllBooks(books: state.library![1][Type.go.type]!),
               ),
-              _BookCardWidget(books: state.library![1][Types.go.type]!)
+              _BookCardWidget(books: state.library![1][Type.go.type]!)
             ],
           );
         } else {
@@ -77,7 +77,9 @@ class _BookCardWidget extends StatelessWidget {
           return GestureDetector(
             child: _BookCard(bookName: book.name),
             onTap: () {
-              final otherBooks = books.where((b) => b != book).toList();
+              final otherBooks = books.where((currentBook) {
+                return currentBook != book;
+              }).toList();
               AppNavigators.go(
                 context,
                 BookView(
