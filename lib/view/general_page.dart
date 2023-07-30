@@ -11,10 +11,10 @@ class GeneralPage extends StatefulWidget {
 }
 
 class _GeneralPageState extends State<GeneralPage> {
-  final List<Widget> _children = [
+  final List<Widget> pages = List.unmodifiable([
     const HomeCategories(),
     const BookStore(),
-  ];
+  ]);
 
   _bottomTapped(index) {
     setState(() {
@@ -28,7 +28,7 @@ class _GeneralPageState extends State<GeneralPage> {
   Widget build(BuildContext context) => Scaffold(
         backgroundColor: Colors.grey[200],
         appBar: index == 0 ? _homeAppBar() : null,
-        body: _children.elementAt(index),
+        body: pages.elementAt(index),
         bottomNavigationBar: BottomNavigationBar(
           selectedLabelStyle: ViewUtils.ubuntuStyle(fontSize: 16),
           unselectedLabelStyle: ViewUtils.ubuntuStyle(fontSize: 14),
