@@ -1,5 +1,5 @@
 import 'package:flutter_interview_questions/core/interface/i_cache_repository.dart';
-import 'package:flutter_interview_questions/core/local_service/cache_service.dart';
+import 'package:flutter_interview_questions/core/cache/cache_service.dart';
 
 class CacheRepository extends ICacheRepository {
   late CacheService _cacheService;

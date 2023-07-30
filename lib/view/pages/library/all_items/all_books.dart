@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_interview_questions/app_navigators.dart';
-import 'package:flutter_interview_questions/core/local_service/cache_service.dart';
+import 'package:flutter_interview_questions/core/cache/cache_service.dart';
 import 'package:flutter_interview_questions/core/model/book/book.dart';
 import 'package:flutter_interview_questions/view/pages/library/book_view.dart';
 import 'package:flutter_interview_questions/view/utils/utils.dart';

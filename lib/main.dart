@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
         BlocProvider(
           create: (context) => BookBloc()
             ..add(
-              BookEvent.fetchQuestionStart(
+              BookEvent.fetchBooksStart(
                 [
                   KPath.flutter,
                   KPath.go,

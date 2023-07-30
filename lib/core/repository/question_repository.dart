@@ -6,7 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_interview_questions/core/app/constant.dart';
 
 import 'package:flutter_interview_questions/core/interface/i_question_repository.dart';
-import 'package:flutter_interview_questions/core/local_service/cache_service.dart';
+import 'package:flutter_interview_questions/core/cache/cache_service.dart';
 
 class QuestionRepository extends IQuestionRepository {
   QuestionRepository({
