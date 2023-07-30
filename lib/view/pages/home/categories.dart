@@ -7,16 +7,16 @@ import 'package:flutter_interview_questions/core/provider/question_bloc/question
 import 'package:flutter_interview_questions/core/utils/all_lang.dart';
 import 'package:flutter_interview_questions/core/utils/categories.dart';
 import 'package:flutter_interview_questions/core/utils/categories_list.dart';
-import 'package:flutter_interview_questions/view/pages/categories/questions/questions.dart';
+import 'package:flutter_interview_questions/view/pages/home/questions/questions.dart';
 
-class LangCategories extends StatefulWidget {
-  const LangCategories({super.key});
+class HomeCategories extends StatefulWidget {
+  const HomeCategories({super.key});
 
   @override
-  State<LangCategories> createState() => _LangCategoriesState();
+  State<HomeCategories> createState() => _HomeCategoriesState();
 }
 
-class _LangCategoriesState extends State<LangCategories> {
+class _HomeCategoriesState extends State<HomeCategories> {
   @override
   void initState() {
     super.initState();

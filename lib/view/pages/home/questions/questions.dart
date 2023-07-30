@@ -2,7 +2,7 @@ import 'package:app_bar_with_search_switch/app_bar_with_search_switch.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_interview_questions/app_navigators.dart';
 import 'package:flutter_interview_questions/core/model/question/question.dart';
-import 'package:flutter_interview_questions/view/pages/categories/questions/view/question_view.dart';
+import 'package:flutter_interview_questions/view/pages/home/questions/view/question_view.dart';
 import 'package:flutter_interview_questions/view/utils/utils.dart';
 
 class Questions extends StatefulWidget {
@@ -83,7 +83,7 @@ class _QuestionCard extends StatelessWidget {
     return Container(
       height: 100,
       width: MediaQuery.of(context).size.width * .8,
-      decoration: ViewUtils.questionCard(),
+      decoration: ViewUtils.questionCardDecor(),
       margin: const EdgeInsets.symmetric(vertical: 7, horizontal: 7),
       child: ListTile(
         onTap: () => AppNavigators.go(

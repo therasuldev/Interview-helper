@@ -12,7 +12,7 @@ class CategoryCard extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 10),
       alignment: Alignment.center,
-      decoration: ViewUtils.categoryCard(),
+      decoration: ViewUtils.categoryCardDecor(),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -22,6 +22,7 @@ class CategoryCard extends StatelessWidget {
           const Spacer(),
           Text(
             title,
+            textAlign: TextAlign.center,
             style: ViewUtils.ubuntuStyle(
               fontSize: 22,
               fontWeight: FontWeight.w600,
