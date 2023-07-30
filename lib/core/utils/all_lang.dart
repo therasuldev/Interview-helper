@@ -1,7 +1,7 @@
 import 'package:flutter_interview_questions/core/app/enum/lang_type_enum.dart';
 
 class AllLanguages {
-  static final List<String> all = [
+  static final List<String> _all = [
     Types.flutter.name,
     Types.go.name,
     Types.csharp.name,
@@ -25,4 +25,6 @@ class AllLanguages {
     Types.scala.name,
     Types.swift.name,
   ];
+
+  static List<String> get all => List<String>.unmodifiable(_all);
 }

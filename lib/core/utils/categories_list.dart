@@ -1,5 +1,5 @@
 class Categories {
-  static final List<String> categories = [
+  static final List<String> _categories = [
     'flutter',
     'go',
     'java',
@@ -23,4 +23,5 @@ class Categories {
     'scala',
     'swift',
   ];
+  static List<String> get categories => List<String>.unmodifiable(_categories);
 }

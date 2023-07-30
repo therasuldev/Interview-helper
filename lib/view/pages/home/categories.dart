@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_interview_questions/app_navigators.dart';
+import 'package:flutter_interview_questions/core/app/extension/to_current_category.dart';
 import 'package:flutter_interview_questions/core/provider/question_bloc/question_bloc.dart';
 import 'package:flutter_interview_questions/core/provider/question_bloc/question_event.dart';
 import 'package:flutter_interview_questions/core/provider/question_bloc/question_state.dart';
@@ -59,10 +60,4 @@ class _HomeCategoriesState extends State<HomeCategories> {
           ),
         ),
       );
-}
-
-extension _CurrentIndex on List {
-  current(int index) {
-    return this[indexWhere((val) => val == AllLanguages.all[index])];
-  }
 }
