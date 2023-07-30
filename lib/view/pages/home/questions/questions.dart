@@ -6,9 +6,11 @@ import 'package:flutter_interview_questions/view/pages/home/questions/view/quest
 import 'package:flutter_interview_questions/view/utils/utils.dart';
 
 class Questions extends StatefulWidget {
-  const Questions({super.key, required this.questions});
+  const Questions(
+      {super.key, required this.questions, required this.appBarTitle});
 
   final List<Question> questions;
+  final String appBarTitle;
 
   @override
   State<Questions> createState() => _QuestionCardState();
@@ -25,7 +27,7 @@ class _QuestionCardState extends State<Questions> {
     searchedList = widget.questions;
   }
 
-  clearSearchBar() {
+  void clearSearchBar() {
     searchBarController.clear();
     searchedList = widget.questions;
     setState(() {});
@@ -42,9 +44,10 @@ class _QuestionCardState extends State<Questions> {
           }).toList();
         },
         appBarBuilder: (context) => AppBar(
+          centerTitle: true,
           title: Text(
-            'Questions',
-            style: ViewUtils.ubuntuStyle(),
+            widget.appBarTitle,
+            style: ViewUtils.ubuntuStyle(fontSize: 22),
           ),
           actions: const [AppBarSearchButton()],
         ),

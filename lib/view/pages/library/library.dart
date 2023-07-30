@@ -68,6 +68,7 @@ class _BookCardWidget extends StatelessWidget {
         shrinkWrap: true,
         itemCount: books.length,
         scrollDirection: Axis.horizontal,
+        physics: const BouncingScrollPhysics(),
         itemBuilder: (context, index) {
           final book = books[index];
           final existBookName = _cacheRepository.get(book.name);

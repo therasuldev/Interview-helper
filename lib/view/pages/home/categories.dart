@@ -25,6 +25,7 @@ class _HomeCategoriesState extends State<HomeCategories> {
   }
 
   late QuestionBloc _bloc;
+  String appBarTitle = '';
 
   @override
   Widget build(BuildContext context) =>
@@ -33,7 +34,10 @@ class _HomeCategoriesState extends State<HomeCategories> {
           if (!state.loading!) {
             AppNavigators.go(
               context,
-              Questions(questions: state.questions ?? []),
+              Questions(
+                appBarTitle: appBarTitle,
+                questions: state.questions ?? [],
+              ),
             );
           }
         },
@@ -47,13 +51,17 @@ class _HomeCategoriesState extends State<HomeCategories> {
               mainAxisSpacing: 30,
             ),
             itemBuilder: (context, index) {
+              final cards = CategoryHelper().cards(AllLanguages.all[index]);
               return GestureDetector(
-                onTap: () => _bloc.add(
-                  QuestionEvent.fetchQuestionStart(
-                    Categories.categories.current(index),
-                  ),
-                ),
-                child: CategoryHelper().cards(AllLanguages.all[index]),
+                onTap: () {
+                  _bloc.add(
+                    QuestionEvent.fetchQuestionStart(
+                      Categories.categories.current(index),
+                    ),
+                  );
+                  setState(() => appBarTitle = cards!.title);
+                },
+                child: cards,
               );
             },
             itemCount: Categories.categories.length,
