@@ -1,0 +1,346 @@
+{
+    "1": {
+        "question": "What is Data Science?",
+        "answer": "Data Science is a field of computer science that explicitly deals with turning data into information and extracting meaningful insights from it. The reason why Data Science is so popular is that the kind of insights it allows us to draw from the available data has led to some major innovations in several products and companies. Using these insights, we are able to determine the taste of a particular customer, the likelihood of a product succeeding in a particular market, etc."
+    },
+    "2": {
+        "question": "Differentiate between Data Analytics and Data Science",
+        "answer": "1.Data Analytics\n\n   * Data Analytics is a subset of Data Science.\n   * The goal of data analytics is to illustrate the precise details of retrieved insights.\n   * Requires just basic programming languages.\n   * It focuses on just finding the solutions.\n   * A data analyst’s job is to analyze data in order to make decisions.\n\n2.Data Science\n\n   * Data Science is a broad technology that includes various subsets such as Data Analytics, Data Mining, Data Visualization, etc.\n   * The goal of data science is to discover meaningful insights from massive datasets and derive the best possible solutions to resolve business issues.\n   * Requires knowledge in advanced programming languages, statistics, and special machine learning algorithms.\n   * Data Science not only focuses on finding solutions but also predicts the future with past patterns or insights.\n   * A data scientist’s job is to provide insightful data visualizations from raw data that are easily understandable."
+    },
+    "3": {
+        "question": "How is Python Useful?",
+        "answer": "Python is widely recognized as an exceptionally advantageous programming language due to its versatility and simplicity. Its extensive range of applications and associated benefits have established it as a preferred choice among developers. Notably, Python stands out in terms of readability and user-friendliness.\n\nIts syntax is meticulously designed to be intuitive and concise, enabling ease in coding, comprehension, and maintenance. Additionally, Python offers a comprehensive standard library that encompasses a diverse collection of pre-built modules and functions. This wealth of resources substantially minimizes the time and effort expended by developers, streamlining the execution of routine programming tasks."
+    },
+    "4": {
+        "question": "How R is Useful in the Data Science Domain?",
+        "answer": "Here are some ways in which R is useful in the data science domain:\n\n* Data Manipulation and Analysis: R offers a comprehensive collection of libraries and functions that facilitate proficient data manipulation, transformation, and statistical analysis.\n* Statistical Modeling and Machine Learning: R offers a wide range of packages for advanced statistical modeling and machine learning tasks, empowering data scientists to build predictive models and perform complex analyses.\n* Data Visualization: R’s extensive visualization libraries enable the creation of visually appealing and insightful plots, charts, and graphs.\n* Reproducible Research: R supports the integration of code, data, and documentation, facilitating reproducible workflows and ensuring transparency in data science projects."
+    },
+    "5": {
+        "question": "What is Supervised Learning?",
+        "answer": "Supervised learning is a machine learning approach in which an algorithm learns from labeled training data to make predictions or classify new, unseen data. It involves the use of input data and corresponding output labels, allowing the algorithm to learn patterns and relationships. The goal is to generalize the learned patterns and accurately predict outputs for new input data based on the learned patterns."
+    },
+    "6": {
+        "question": "What is Unsupervised Learning?",
+        "answer": "Unsupervised learning is a machine learning approach wherein an algorithm uncovers patterns and structures within unlabeled data, operating without explicit guidance or predetermined output labels. Its objective is to reveal hidden relationships, patterns, and clusters present in the data. Unlike supervised learning, the algorithm autonomously explores the data to identify inherent structures and draw inferences, proving valuable for exploratory data analysis and the discovery of novel insights."
+    },
+    "7": {
+        "question": "What do you understand about Linear Regression?",
+        "answer": "Linear regression helps in understanding the linear relationship between the dependent and the independent variables. Linear regression is a supervised learning algorithm, which helps in finding the linear relationship between two variables. One is the predictor or the independent variable and the other is the response or the dependent variable. In linear regression, we try to understand how the dependent variable changes with respect to  the independent variable. If there is only one independent variable, then it is called simple linear regression, and if there is more than one independent variable then it is known as multiple linear regression."
+    },
+    "8": {
+        "question": "What do you understand by logistic regression?",
+        "answer": "Logistic regression is a classification algorithm that can be used when the dependent variable is binary. Let’s take an example. Here, we are trying to determine whether it will rain or not on the basis of temperature and humidity.\n\nTemperature and humidity are the independent variables, and rain would be our dependent variable. So, the logistic regression algorithm actually produces an S shape curve.\n\nSo, basically in logistic regression, the Y value lies within the range of 0 and 1. This is how logistic regression works."
+    },
+    "9": {
+        "question": "What is a confusion matrix?",
+        "answer": "The confusion matrix is a table that is used to estimate the performance of a model. It tabulates the actual values and the predicted values in a 2×2 matrix.\n\nTrue Positive (d): This denotes all of those records where the actual values are true and the predicted values are also true. So, these denote all of the true positives. False Negative (c): This denotes all of those records where the actual values are true, but the predicted values are false. False Positive (b): In this, the actual values are false, but the predicted values are true. True Negative (a): Here, the actual values are false and the predicted values are also false. So, if you want to get the correct values, then correct values would basically represent all of the true positives and the true negatives. This is how the confusion matrix works."
+    },
+    "10": {
+        "question": "What do you understand about the true-positive rate and false-positive rate?",
+        "answer": "True positive rate: In Machine Learning, true-positive rates, which are also referred to as sensitivity or recall, are used to measure the percentage of actual positives which are correctly identified. Formula: \nTrue Positive Rate = True Positives/Positives\n\nFalse positive rate: False positive rate is basically the probability of falsely rejecting the null hypothesis for a particular test. The false-positive rate is calculated as the ratio between the number of negative events wrongly categorized as positive (false positive) upon the total number of actual events. Formula:\nFalse-Positive Rate = False-Positives/Negatives."
+    },
+    "11": {
+        "question": "How is Data Science different from traditional application programming?",
+        "answer": "Data Science takes a fundamentally different approach to building systems that provide value than traditional application development.\n\nIn traditional programming paradigms, we used to analyze the input, figure out the expected output, and write code, which contains rules and statements needed to transform the provided input into the expected output. As we can imagine, these rules were not easy to write, especially, for data that even computers had a hard time understanding, e.g., images, videos, etc.\n\nData Science shifts this process a little bit. In it, we need access to large volumes of data that contain the necessary inputs and their mappings to the expected outputs. Then, we use data science algorithms, which use mathematical analysis to generate rules to map the given inputs to outputs.\n\nThis process of rule generation is called training. After training, we use some data that was set aside before the training phase to test and check the system’s accuracy. The generated rules are a kind of black box, and we cannot understand how the inputs are being transformed into outputs.\n\nHowever, If the accuracy is good enough, then we can use the system (also called a model).\n\nAs described above, in traditional programming, we had to write the rules to map the input to the output, but in Data Science, the rules are automatically generated or learned from the given data. This helped solve some really difficult challenges that were being faced by several companies."
+    },
+    "12": {
+        "question": "What is the difference between long format data and wide format data?",
+        "answer": "1.Long Format Data\n\n   * A long format data has a column for possible variable types and a column for the values of those variables.\n   * Each row in the long format represents a one-time point per subject. As a result, each topic will contain many rows of data.\n   * This data format is most typically used in R analysis and for writing to log files at the end of each experiment.\n   * A long format contains values that do repeat in the first column.\n   * Use df.melt() to convert the wide form to long form\n\n2.Wide Format Data\n\n   * Whereas, Wide data has a column for each variable.\n   * The repeated responses of a subject will be in a single row, with each response in its own column, in the wide format.\n   * This data format is most widely used in data manipulations, and stats programmes for repeated measures ANOVAs and is seldom used in R analysis.\n   * A wide format contains values that do not repeat in the first column.\n   * use df.pivot().reset_index() to convert the long form into wide form"
+    },
+    "13": {
+        "question": "Mention some techniques used for sampling. What is the main advantage of sampling?",
+        "answer": "Sampling is defined as the process of selecting a sample from a group of people or from any particular kind for research purposes. It is one of the most important factors which decides the accuracy of a research/survey result.\n\nMainly, there are two types of sampling techniques:\n\nProbability sampling: It involves random selection which makes every element get a chance to be selected. Probability sampling has various subtypes in it, as mentioned below:\n\n   * Simple Random Sampling\n   * Stratified sampling\n   * Systematic sampling\n   * Cluster Sampling\n   * Multi-stage Sampling\n\nNon- Probability Sampling: Non-probability sampling follows non-random selection which means the selection is done based on your ease or any other required criteria. This helps to collect the data easily. The following are various types of sampling in it:\n\n   * Convenience Sampling\n   * Purposive Sampling\n   * Quota Sampling\n   * Referral /Snowball Sampling"
+    },
+    "14": {
+        "question": "What is bias in data science?",
+        "answer": "Bias is a type of error that occurs in a data science model because of using an algorithm that is not strong enough to capture the underlying patterns or trends that exist in the data. In other words, this error occurs when the data is too complicated for the algorithm to understand, so it ends up building a model that makes simple assumptions. This leads to lower accuracy because of underfitting. Algorithms that can lead to high bias are linear regression, logistic regression, etc."
+    },
+    "15": {
+        "question": "What is dimensionality reduction?",
+        "answer": "Dimensionality reduction is the process of converting a dataset with a high number of dimensions (fields) to a dataset with a lower number of dimensions. This is done by dropping some fields or columns from the dataset. However, this is not done haphazardly. In this process, the dimensions or fields are dropped only after making sure that the remaining information will still be enough to succinctly describe similar information."
+    },
+    "16": {
+        "question": "Why is R used in Data Visualization?",
+        "answer": "R provides the best ecosystem for data analysis and visualization with more than 12,000 packages in Open-source repositories. It has huge community support, which means you can easily find the solution to your problems on various platforms like StackOverflow.\n\nIt has better data management and supports distributed computing by splitting the operations between multiple tasks and nodes, which eventually decreases the complexity and execution time of large datasets."
+    },
+    "17": {
+        "question": "What are the popular libraries used in Data Science?",
+        "answer": "Below are the popular libraries used for data extraction, cleaning, visualization, and deploying DS models:\n\n* TensorFlow: Supports parallel computing with impeccable library management backed by Google.\n* SciPy: Mainly used for solving differential equations, multidimensional programming, data manipulation, and visualization through graphs and charts.\n* Pandas: Used to implement the ETL(Extracting, Transforming, and Loading the datasets) capabilities in business applications.\n* Matplotlib: Being free and open-source, it can be used as a replacement for MATLAB, which results in better performance and low memory consumption.\n* PyTorch: Best for projects which involve ,machine learning algorithms and deep neural networks."
+    },
+    "18": {
+        "question": "What are important functions used in Data Science?",
+        "answer": "Within the realm of data science, various pivotal functions assume critical roles across diverse tasks. Among these, two foundational functions are the cost function and the loss function.\n\nCost function: Also referred to as the objective function, the cost function holds substantial utility within machine learning algorithms, especially in optimization scenarios. Its purpose is to quantify the disparity between predicted values and actual values. Minimizing the cost function entails optimizing the model’s parameters or coefficients, aiming to achieve an optimal solution.\n\nLoss function: Loss functions possess significant significance in supervised learning endeavors. They evaluate the discrepancy or error between predicted values and actual labels. The selection of a specific loss function depends on the problem at hand, such as employing mean squared error (MSE) for regression tasks or cross-entropy loss for classification tasks. The loss function guides the model’s optimization process during training, ultimately bolstering accuracy and overall performance."
+    },
+    "19": {
+        "question": "What is k-fold cross-validation?",
+        "answer": "In k-fold cross-validation, we divide the dataset into k equal parts. After this, we loop over the entire dataset k times. In each iteration of the loop, one of the k parts is used for testing, and the other k − 1 parts are used for training. Using k-fold cross-validation, each one of the k parts of the dataset ends up being used for training and testing purposes."
+    },
+    "20": {
+        "question": "Explain how a recommender system works.",
+        "answer": "A recommender system is a system that many consumer-facing, content-driven, online platforms employ to generate recommendations for users from a library of available content. These systems generate recommendations based on what they know about the users’ tastes from their activities on the platform.\n\nFor example, imagine that we have a movie streaming platform, similar to Netflix or Amazon Prime. If a user has previously watched and liked movies from action and horror genres, then it means that the user likes watching movies of these genres. In that case, it would be better to recommend such movies to this particular user. These recommendations can also be generated based on what users with similar tastes like watching."
+    },
+    "21": {
+        "question": "What is Poisson Distribution?",
+        "answer": "The Poisson distribution is a statistical probability distribution used to represent the occurrence of events within a specific interval of time or space. It is commonly employed to characterize infrequent events that happen independently and at a consistent average rate, such as quantifying the number of incoming phone calls received within a given hour."
+    },
+    "22": {
+        "question": "What is a normal distribution?",
+        "answer": "Data distribution is a visualization tool to analyze how data is spread out or distributed. Data can be distributed in various ways. For instance, it could be with a bias to the left or the right, or it could all be jumbled up.\n\nData may also be distributed around a central value, i.e., mean, median, etc. This kind of distribution has no bias either to the left or to the right and is in the form of a bell-shaped curve. This distribution also has its mean equal to the median. This kind of distribution is called a normal distribution."
+    },
+    "23": {
+        "question": "What is Deep Learning?",
+        "answer": "Deep Learning is a kind of Machine Learning, in which neural networks are used to imitate the structure of the human brain, and just like how a brain learns from information, machines are also made to learn from the information that is provided to them.\n\nDeep Learning is an advanced version of neural networks to make the machines learn from data. In Deep Learning, the neural networks comprise many hidden layers (which is why it is called ‘deep’ learning) that are connected to each other, and the output of the previous layer is the input of the current layer."
+    },
+    "24": {
+        "question": "What is CNN (Convolutional Neural Network)?",
+        "answer": "A Convolutional Neural Network (CNN) is an advanced deep learning architecture designed specifically for analyzing visual data, such as images and videos. It is composed of interconnected layers of neurons that utilize convolutional operations to extract meaningful features from the input data. CNNs exhibit remarkable effectiveness in tasks like image classification, object detection, and image recognition, thanks to their inherent ability to autonomously learn hierarchical representations and capture spatial relationships within the data, eliminating the need for explicit feature engineering."
+    },
+    "25": {
+        "question": "What is an RNN (recurrent neural network)?",
+        "answer": "A recurrent neural network, or RNN for short, is a kind of Machine Learning algorithm that makes use of the artificial neural network. RNNs are used to find patterns from a sequence of data, such as time series, stock market, temperature, etc. RNNs are a kind of feedforward network, in which information from one layer passes to another layer, and each node in the network performs mathematical operations on the data. These operations are temporal, i.e., RNNs store contextual information about previous computations in the network. It is called recurrent because it performs the same operations on some data every time it is passed. However, the output may be different based on past computations and their results."
+    },
+    "26": {
+        "question": "Explain selection bias.",
+        "answer": "Selection bias is the bias that occurs during the sampling of data. This kind of bias occurs when a sample is not representative of the population, which is going to be analyzed in a statistical study."
+    },
+    "27": {
+        "question": "Between Python and R, which one will you choose for analyzing the text, and why?",
+        "answer": "Due to the following factors, Python will outperform R for text analytics:\n\n* Python’s Pandas module provides high-performance data analysis capabilities as well as simple-to-use data structures.\n\n* Python does all sorts of text analytics more quickly."
+    },
+    "28": {
+        "question": "Explain the purpose of data cleaning",
+        "answer": "Data cleaning’s primary goal is to rectify or eliminate inaccurate, corrupted, improperly formatted, duplicate, or incomplete data from a dataset. This often yields better outcomes and a higher return on investment for marketing and communications efforts."
+    },
+    "29": {
+        "question": "What do you understand from Recommender System? and State its application",
+        "answer": "Recommender Systems are a subclass of information filtering systems designed to forecast the preferences or ratings given to a product by a user.\n\nThe Amazon product suggestions page is an example of a recommender system in use. Based on the user’s search history and previous orders, this area contains products."
+    },
+    "30": {
+        "question": "What is Gradient Descent?",
+        "answer": "An iterative first-order optimization process called gradient descent (GD) is used to locate the local minimum and maximum of a given function. This technique is frequently applied in machine learning (ML) and deep learning (DL) to minimize a cost/loss function (for example, in linear regression)."
+    },
+    "31": {
+        "question": "What are the various skills required to become Data Scientist?",
+        "answer": "The following abilities are necessary to become a certified Data Scientist:\n\n* Having familiarity with built-in data types like lists, tuples, sets, and related.\n* N-dimensional NumPy array knowledge is required.\n* Being able to use Pandas and Dataframes.\n* Strong holdover performance in vectors with only one element.\n* Hands-on experience with Tableau and PowerBI."
+    },
+    "32": {
+        "question": "What is TensorFlow?",
+        "answer": "A free and open-source software library for machine learning and artificial intelligence is called TensorFlow. It enables programmers to build dataflow graphs, which are representations of the flow of data among processing nodes in a graph."
+    },
+    "33": {
+        "question": "What is Dropout?",
+        "answer": "In Data Science, the term “dropout” refers to the process of randomly removing visible and hidden network units. By eliminating up to 20% of the nodes, they avoid overfitting the data and allow for the necessary space to be set up for the network’s iterative convergence process."
+    },
+    "34": {
+        "question": "State any five Deep Learning Frameworks.",
+        "answer": "Some of the Deep Learning frameworks are:\n\n* Caffe\n* Keras\n* TensorFlow\n* Pytorch\n* Chainer\n* Microsoft Cognitive Toolkit"
+    },
+    "35": {
+        "question": "Define Neural Networks and its types",
+        "answer": "Neural Networks are computational models that derive their principles from the structure and functionality of the human brain. Consisting of interconnected artificial neurons organized in layers, Neural Networks exhibit remarkable capacities in learning and discerning patterns within datasets. Consequently, they assume a pivotal role in diverse domains including pattern recognition, classification, and optimization, thereby providing invaluable solutions in the realm of artificial intelligence.\n\nThere exist various types of Neural Networks, including:\n\nFeedforward Neural Networks: These networks facilitate a unidirectional information flow, progressing from input to output. They find frequent application in tasks involving pattern recognition and classification.\n\n* Convolutional Neural Networks (CNNs): Specifically tailored for grid-like data, such as images or videos, CNNs leverage convolutional layers to extract meaningful features. Their prowess lies in tasks like image classification and object detection.\n\n* Recurrent Neural Networks (RNNs): RNNs are particularly adept at handling sequential data, wherein the present output is influenced by past inputs. They are extensively utilized in domains such as language modeling and time series analysis.\n\n* Long Short-Term Memory (LSTM) Networks: This variation of RNNs addresses the issue of vanishing gradients and excels at capturing long-term dependencies in data. LSTM networks find wide-ranging applications in areas like speech recognition and natural language processing.\n\n* Generative Adversarial Networks (GANs): GANs consist of a generator and a discriminator that is trained in a competitive manner. They are employed to generate new data samples and are helpful for tasks like image generation and text synthesis."
+    },
+    "36": {
+        "question": "What is the ROC curve?",
+        "answer": "It stands for Receiver Operating Characteristic. It is basically a plot between a true positive rate and a false positive rate, and it helps us to find out the right tradeoff between the true positive rate and the false positive rate for different probability thresholds of the predicted values. So, the closer the curve to the upper left corner, the better the model is. In other words, whichever curve has greater area under it that would be the better model."
+    },
+    "37": {
+        "question": "How is Data modeling different from Database design?",
+        "answer": "Data Modeling: It can be considered as the first step towards the design of a database. Data modeling creates a conceptual model based on the relationship between various data models. The process involves moving from the conceptual stage to the logical model to the physical schema. It involves the systematic method of applying data modeling techniques.\n\nDatabase Design: This is the process of designing the database. The database design creates an output which is a detailed data model of the database. Strictly speaking, database design includes the detailed logical model of a database but it can also include physical design choices and storage parameters."
+    },
+    "38": {
+        "question": "What is precision?",
+        "answer": "Precision: When we are implementing algorithms for the classification of data or the retrieval of information, precision helps us get a portion of positive class values that are positively predicted. Basically, it measures the accuracy of correct positive predictions. Below is the formula to calculate precision:\n\nprecision = (true positives)/(true positives + false positives)"
+    },
+    "39": {
+        "question": "What is a recall?",
+        "answer": "Recall: It is the set of all positive predictions out of the total number of positive instances. Recall helps us identify the misclassified positive predictions. We use the below formula to calculate recall:\n\recall = (true positives)/(true positives + false negatives)"
+    },
+    "40": {
+        "question": "What is a p-value?",
+        "answer": "P-value is the measure of the statistical importance of an observation. It is the probability that shows the significance of output to the data. We compute the p-value to know the test statistics of a model. Typically, it helps us choose whether we can accept or reject the null hypothesis."
+    },
+    "41": {
+        "question": "Why do we use p-value?",
+        "answer": "We use the p-value to understand whether the given data really describes the observed effect or not. We use the below formula to calculate the p-value for the effect ‘E’ and the null hypothesis ‘H0’ is true:\n\nP Value = P(E | H0)"
+    },
+    "42": {
+        "question": "What is the difference between an error and a residual error?",
+        "answer": "An error occurs in values while the prediction gives us the difference between the observed values and the true values of a dataset. Whereas, the residual error is the difference between the observed values and the predicted values. The reason we use the residual error to evaluate the performance of an algorithm is that the true values are never known. Hence, we use the observed values to measure the error using residuals. It helps us get an accurate estimate of the error."
+    },
+    "43": {
+        "question": "How are Data Science and Machine Learning related to each other?",
+        "answer": "Data Science and Machine Learning are two terms that are closely related but are often misunderstood. Both of them deal with data. However, there are some fundamental distinctions that show us how they are different from each other.\n\nData Science is a broad field that deals with large volumes of data and allows us to draw insights from this voluminous data. The entire process of data science takes care of multiple steps that are involved in drawing insights out of the available data. This process includes crucial steps such as data gathering, data analysis, data manipulation, data visualization, etc.\n\nMachine Learning, on the other hand, can be thought of as a sub-field of data science. It also deals with data, but here, we are solely focused on learning how to convert the processed data into a functional model, which can be used to map inputs to outputs, e.g., a model that can expect an image as an input and tell us if that image contains a flower as an output.\n\nIn short, data science deals with gathering data, processing it, and finally, drawing insights from it. The field of data science that deals with building models using algorithms is called machine learning. Therefore, machine learning is an integral part of data science."
+    },
+    "44": {
+        "question": "Explain univariate, bivariate, and multivariate analyses.",
+        "answer": "When we are dealing with data analysis, we often come across terms such as univariate, bivariate, and multivariate. Let’s try and understand what these mean.\n\n* Univariate analysis: Univariate analysis involves analyzing data with only one variable or, in other words, a single column or a vector of the data. This analysis allows us to understand the data and extract patterns and trends from it. Example: Analyzing the weight of a group of people.\n\n* Bivariate analysis: Bivariate analysis involves analyzing the data with exactly two variables or, in other words, the data can be put into a two-column table. This kind of analysis allows us to figure out the relationship between the variables. Example: Analyzing the data that contains temperature and altitude.\n\n* Multivariate analysis: Multivariate analysis involves analyzing the data with more than two variables. The number of columns of the data can be anything more than two. This kind of analysis allows us to figure out the effects of all other variables (input variables) on a single variable (the output variable)."
+    },
+    "45": {
+        "question": "How can we handle missing data?",
+        "answer": "To be able to handle missing data, we first need to know the percentage of data missing in a particular column so that we can choose an appropriate strategy to handle the situation.\n\nFor example, if in a column the majority of the data is missing, then dropping the column is the best option, unless we have some means to make educated guesses about the missing values. However, if the amount of missing data is low, then we have several strategies to fill them up.\n\nOne way would be to fill them all up with a default value or a value that has the highest frequency in that column, such as 0 or 1, etc. This may be useful if the majority of the data in that column contains these values.\n\nAnother way is to fill up the missing values in the column with the mean of all the values in that column. This technique is usually preferred as the missing values have a higher chance of being closer to the mean than to the mode.\n\nFinally, if we have a huge dataset and a few rows have values missing in some columns, then the easiest and fastest way is to drop those columns. Since the dataset is large, dropping a few columns should not be a problem anyway."
+    },
+    "46": {
+        "question": "What is the benefit of dimensionality reduction?",
+        "answer": "Dimensionality reduction reduces the dimensions and size of the entire dataset. It drops unnecessary features while retaining the overall information in the data intact. Reduction in dimensions leads to faster processing of the data.\n\nThe reason why data with high dimensions is considered so difficult to deal with is that it leads to high time consumption while processing the data and training a model on it. Reducing dimensions speeds up this process, removes noise, and also leads to better model accuracy."
+    },
+    "47": {
+        "question": "What is a bias-variance trade-off in Data Science?",
+        "answer": "When building a model using Data Science or Machine Learning, our goal is to build one that has low bias and variance. We know that bias and variance are both errors that occur due to either an overly simplistic model or an overly complicated model. Therefore, when we are building a model, the goal of getting high accuracy is only going to be accomplished if we are aware of the tradeoff between bias and variance.\n\nBias is an error that occurs when a model is too simple to capture the patterns in a dataset. To reduce bias, we need to make our model more complex. Although making the model more complex can lead to reducing bias, if we make the model too complex, it may end up becoming too rigid, leading to high variance. So, the tradeoff between bias and variance is that if we increase the complexity, the bias reduces and the variance increases, and if we reduce complexity, the bias increases and the variance reduces. Our goal is to find a point at which our model is complex enough to give low bias but not so complex to end up having high variance."
+    },
+    "48": {
+        "question": "What is RMSE?",
+        "answer": "RMSE stands for the root mean square error. It is a measure of accuracy in regression. RMSE allows us to calculate the magnitude of error produced by a regression model. The way RMSE is calculated is as follows:\n\nFirst, we calculate the errors in the predictions made by the regression model. For this, we calculate the differences between the actual and the predicted values. Then, we square the errors.\n\nAfter this step, we calculate the mean of the squared errors, and finally, we take the square root of the mean of these squared errors. This number is the RMSE and a model with a lower value of RMSE is considered to produce lower errors, i.e., the model will be more accurate."
+    },
+    "49": {
+        "question": "What is a kernel function in SVM?",
+        "answer": "In the SVM algorithm, a kernel function is a special mathematical function. In simple terms, a kernel function takes data as input and converts it into a required form. This transformation of the data is based on something called a kernel trick, which is what gives the kernel function its name. Using the kernel function, we can transform the data that is not linearly separable (cannot be separated using a straight line) into one that is linearly separable."
+    },
+    "50": {
+        "question": "How can we select an appropriate value of k in k-means?",
+        "answer": "Selecting the correct value of k is an important aspect of k-means clustering. We can make use of the elbow method to pick the appropriate k value. To do this, we run the k-means algorithm on a range of values, e.g., 1 to 15. For each value of k, we compute an average score. This score is also called inertia or the inter-cluster variance.\n\nThis is calculated as the sum of squares of the distances of all values in a cluster. As k starts from a low value and goes up to a high value, we start seeing a sharp decrease in the inertia value. After a certain value of k, in the range, the drop in the inertia value becomes quite small. This is the value of k that we need to choose for the k-means clustering algorithm."
+    },
+    "51": {
+        "question": "How can we deal with outliers?",
+        "answer": "Outliers can be dealt with in several ways. One way is to drop them. We can only drop the outliers if they have values that are incorrect or extreme. For example, if a dataset with the weights of babies has a value 98.6-degree Fahrenheit, then it is incorrect. Now, if the value is 187 kg, then it is an extreme value, which is not useful for our model.\n\nIn case the outliers are not that extreme, then we can try:\n\n* A different kind of model. For example, if we were using a linear model, then we can choose a non-linear model\n\n* Normalizing the data, which will shift the extreme values closer to other data points\n\n* Using algorithms that are not so affected by outliers, such as random forest, etc."
+    },
+    "52": {
+        "question": "How to calculate the accuracy of a binary classification algorithm using its confusion matrix?",
+        "answer": "In a binary classification algorithm, we have only two labels, which are True and False. Before we can calculate the accuracy, we need to understand a few key terms:\n\n* True positives: Number of observations correctly classified as True\n* True negatives: Number of observations correctly classified as False\n* False positives: Number of observations incorrectly classified as True\n* False negatives: Number of observations incorrectly classified as False\n* To calculate the accuracy, we need to divide the sum of the correctly classified observations by the number of total observations."
+    },
+    "53": {
+        "question": "What is ensemble learning?",
+        "answer": "When we are building models using Data Science and Machine Learning, our goal is to get a model that can understand the underlying trends in the training data and can make predictions or classifications with a high level of accuracy.\n\nHowever, sometimes some datasets are very complex, and it is difficult for one model to be able to grasp the underlying trends in these datasets. In such situations, we combine several individual models together to improve performance. This is what is called ensemble learning."
+    },
+    "54": {
+        "question": "Explain collaborative filtering in recommender systems.",
+        "answer": "Collaborative filtering is a technique used to build recommender systems. In this technique, to generate recommendations, we make use of data about the likes and dislikes of users similar to other users. This similarity is estimated based on several varying factors, such as age, gender, locality, etc.\n\nIf User A, similar to User B, watched and liked a movie, then that movie will be recommended to User B, and similarly, if User B watched and liked a movie, then that would be recommended to User A.\n\nIn other words, the content of the movie does not matter much. When recommending it to a user what matters is if other users similar to that particular user liked the content of the movie or not."
+    },
+    "55": {
+        "question": "Explain content-based filtering in recommender systems.",
+        "answer": "Content-based filtering is one of the techniques used to build recommender systems. In this technique, recommendations are generated by making use of the properties of the content that a user is interested in.\n\nFor example, if a user is watching movies belonging to the action and mystery genre and giving them good ratings, it is a clear indication that the user likes movies of this kind. If shown movies of a similar genre as recommendations, there is a higher probability that the user would like those recommendations as well.\n\nIn other words, here, the content of the movie is taken into consideration when generating recommendations for users."
+    },
+    "56": {
+        "question": "Explain bagging in Data Science.",
+        "answer": "Bagging is an ensemble learning method. It stands for bootstrap aggregating. In this technique, we generate some data using the bootstrap method, in which we use an already existing dataset and generate multiple samples of the N size. This bootstrapped data is then used to train multiple models in parallel, which makes the bagging model more robust than a simple model.\n\nOnce all the models are trained, then it’s time to make a prediction, we make predictions using all the trained models and then average the result in the case of regression, and for classification, we choose the result, generated by models, that have the highest frequency."
+    },
+    "57": {
+        "question": "Explain boosting in data science.",
+        "answer": "Boosting is one of the ensemble learning methods. Unlike bagging, it is not a technique used to parallelly train our models. In boosting, we create multiple models and sequentially train them by combining weak models iteratively in a way that training a new model depends on the models trained before it.\n\nIn doing so, we take the patterns learned by a previous model and test them on a dataset when training the new model. In each iteration, we give more importance to observations in the dataset that are incorrectly handled or predicted by previous models. Boosting is useful in reducing bias in models as well."
+    },
+    "58": {
+        "question": "Explain stacking in data science.",
+        "answer": "Just like bagging and boosting, stacking is also an ensemble learning method. In bagging and boosting, we could only combine weak models that used the same learning algorithms, e.g., logistic regression. These models are called homogeneous learners.\n\nHowever, in stacking, we can combine weak models that use different learning algorithms as well. These learners are called heterogeneous learners. Stacking works by training multiple (and different) weak models or learners and then using them together by training another model, called a meta-model, to make predictions based on the multiple outputs of predictions returned by these multiple weak models."
+    },
+    "59": {
+        "question": "Explain how machine learning is different from deep learning.",
+        "answer": "A field of computer science, machine learning is a subfield of data science that deals with using existing data to help systems automatically learn new skills to perform different tasks without having rules to be explicitly programmed.\n\nDeep Learning, on the other hand, is a field in machine learning that deals with building machine learning models using algorithms that try to imitate the process of how the human brain learns from the information in a system for it to attain new capabilities. In deep learning, we make heavy use of deeply connected neural networks with many layers."
+    },
+    "60": {
+        "question": "What does the word ‘Naive’ mean in Naive Bayes?",
+        "answer": "Naive Bayes is a data science algorithm. It has the word ‘Bayes’ in it because it is based on the Bayes theorem, which deals with the probability of an event occurring given that another event has already occurred.\n\nIt has ‘naive’ in it because it makes the assumption that each variable in the dataset is independent of the other. This kind of assumption is unrealistic for real-world data. However, even with this assumption, it is very useful for solving a range of complicated problems, e.g., spam email classification, etc."
+    },
+    "61": {
+        "question": "What is batch normalization?",
+        "answer": "One method for attempting to enhance the functionality and stability of the neural network is batch normalization. To do this, normalize the inputs in each layer such that the mean output activation stays at 0 and the standard deviation is set to 1."
+    },
+    "62": {
+        "question": "What do you understand from cluster sampling and systematic sampling?",
+        "answer": "Cluster sampling is also known as the probability sampling approach where you can divide a population into groups, such as districts or schools, and then select a representative sample from among these groups at random. A modest representation of the population as a whole should be present in each cluster.\n\nA probability sampling strategy called systematic sampling involves picking people from the population at regular intervals, such as every 15th person on a population list. The population can be organized randomly to mimic the benefits of simple random sampling."
+    },
+    "63": {
+        "question": "What is the Computational Graph?",
+        "answer": "A directed graph with variables or operations as nodes is a computational graph. Variables can contribute to operations with their value, and operations can contribute their output to other operations. In this manner, each node in the graph establishes a function of the variables."
+    },
+    "64": {
+        "question": "What is the difference between Batch and Stochastic Gradient Descent?",
+        "answer": "The differences between Batch and Stochastic Gradient Descent are as follows:\n\n1.Batch\n\n   * Provides assistance in calculating the gradient utilizing the entire set of data.\n   * Takes time to converge.\n   * The volume is substantial enough for analysis.\n   * Updates the weight infrequently.\n\n2.Stochastic Gradient Descent\n\n   * Helps in calculating the gradient using only a single sample.\n   * Takes less time to converge.\n   * The volume is lower for analysis purposes.\n   * Updates the weight more frequently."
+    },
+    "65": {
+        "question": "What is an activation function?",
+        "answer": "An activation function is a function that is incorporated into an artificial neural network to aid in the network’s learning of complicated patterns in the input data. In contrast to a neuron-based model seen in human brains, the activation function determines what signals should be sent to the following neuron at the very end."
+    },
+    "66": {
+        "question": "How Do You Build a random forest model?",
+        "answer": "The steps for creating a random forest model are as follows: \n\n* Choose n from a dataset of k records. \n* Create distinct decision trees for each of the n data values being taken into account. From each of them, a projected result is obtained.  \n* Each of the findings is subjected to a voting mechanism.  \n* The final outcome is determined by whose prediction received the most support."
+    },
+    "67": {
+        "question": "Can you avoid overfitting your model? if yes, then how?",
+        "answer": "In actuality, data models may be overfitting. For it, the strategies listed below can be applied:\n\n* Increase the amount of data in the dataset under study to make it simpler to separate the links between the input and output variables. \n* To discover important traits or parameters that need to be examined, use feature selection. \n* Use regularization strategies to lessen the variation of the outcomes a data model generates. \n* Rarely, datasets are stabilized by adding a little amount of noisy data. This practice is called data augmentation."
+    },
+    "68": {
+        "question": "What is Cross Validation?",
+        "answer": "Cross-validation is a model validation method used to assess the generalizability of statistical analysis results to other data sets. It is frequently applied when forecasting is the main objective and one wants to gauge how well a model will work in real-world applications.\n\nIn order to prevent overfitting and gather knowledge on how the model will generalize to different data sets, cross-validation aims to establish a data set to test the model during the training phase (i.e. validation data set)."
+    },
+    "69": {
+        "question": "What is variance in Data Science?",
+        "answer": "Variance is a type of error that occurs in a Data Science model when the model ends up being too complex and learns features from data, along with the noise that exists in it. This kind of error can occur if the algorithm used to train the model has high complexity, even though the data and the underlying patterns and trends are quite easy to discover. This makes the model a very sensitive one that performs well on the training dataset but poorly on the testing dataset, and on any kind of data that the model has not yet seen. Variance generally leads to poor accuracy in testing and results in overfitting."
+    },
+    "70": {
+        "question": "What is pruning in a decision tree algorithm?",
+        "answer": "Pruning a decision tree is the process of removing the sections of the tree that are not necessary or are redundant. Pruning leads to a smaller decision tree, which performs better and gives higher accuracy and speed."
+    },
+    "71": {
+        "question": "What information is gained in a decision tree algorithm?",
+        "answer": "When building a decision tree, at each step, we have to create a node that decides which feature we should use to split data, i.e., which feature would best separate our data so that we can make predictions. This decision is made using information gain, which is a measure of how much entropy is reduced when a particular feature is used to split the data. The feature that gives the highest information gain is the one that is chosen to split the data.\n\nLet’s consider a practical example to gain a better understanding of how information gain operates within a decision tree algorithm. Imagine we have a dataset containing customer information such as age, income, and purchase history. Our objective is to predict whether a customer will make a purchase or not.\n\nTo determine which attribute provides the most valuable information, we calculate the information gain for each attribute. If splitting the data based on income leads to subsets with significantly reduced entropy, it indicates that income plays a crucial role in predicting purchase behavior. Consequently, income becomes a crucial factor in constructing the decision tree as it offers valuable insights.\n\nBy maximizing information gain, the decision tree algorithm identifies attributes that effectively reduce uncertainty and enable accurate splits. This process enhances the model’s predictive accuracy, enabling informed decisions pertaining to customer purchases."
+    },
+    "72": {
+        "question": "How to detect if the time series data is stationary?",
+        "answer": "Time series data is considered stationary when variance or mean is constant with time. If the variance or mean does not change over a period of time in the dataset, then we can draw the conclusion that, for that period, the data is stationary."
+    },
+    "73": {
+        "question": "What does root cause analysis mean?",
+        "answer": "Root cause analysis is the process of figuring out the root causes that lead to certain faults or failures. A factor is considered to be a root cause if, after eliminating it, a sequence of operations, leading to a fault, error, or undesirable result, ends up working correctly. Root cause analysis is a technique that was initially developed and used in the analysis of industrial accidents, but now, it is used in a wide variety of areas."
+    },
+    "74": {
+        "question": "What is A/B testing?",
+        "answer": "A/B testing is a kind of statistical hypothesis testing for randomized experiments with two variables. These variables are represented as A and B. A/B testing is used when we wish to test a new feature in a product. In the A/B test, we give users two variants of the product, and we label these variants as A and B.\n\nThe A variant can be the product with the new feature added, and the B variant can be the product without the new feature. After users use these two products, we capture their ratings for the product.\n\nIf the rating of product variant A is statistically and significantly higher, then the new feature is considered an improvement and useful and is accepted. Otherwise, the new feature is removed from the product."
+    },
+    "75": {
+        "question": "Out of collaborative filtering and content-based filtering, which one is considered better, and why?",
+        "answer": "Content-based filtering is considered to be better than collaborative filtering for generating recommendations. It does not mean that collaborative filtering generates bad recommendations.\n\nHowever, as collaborative filtering is based on the likes and dislikes of other users we cannot rely on it much. Also, users’ likes and dislikes may change in the future.\n\nFor example, there may be a movie that a user likes right now but did not like 10 years ago. Moreover, users who are similar in some features may not have the same taste in the kind of content that the platform provides.\n\nIn the case of content-based filtering, we make use of users’ own likes and dislikes which are much more reliable and yield more positive results. This is why platforms such as Netflix, Amazon Prime, Spotify, etc. make use of content-based filtering for generating recommendations for their users."
+    },
+    "76": {
+        "question": "What is reinforcement learning?",
+        "answer": "Reinforcement learning is a kind of Machine Learning, which is concerned with building software agents that perform actions to attain the most cumulative rewards.\n\nA reward here is used for letting the model know (during training) if a particular action leads to the attainment of or brings it closer to the goal. For example, if we are creating an ML model that plays a video game, the reward is going to be either the points collected during the play or the level reached in it.\n\nReinforcement learning is used to build these kinds of agents that can make real-world decisions that should move the model toward the attainment of a clearly defined goal."
+    },
+    "77": {
+        "question": "Explain TF/IDF vectorization.",
+        "answer": "The expression ‘TF/IDF’ stands for the Term Frequency–Inverse Document Frequency. It is a numerical measure that allows us to determine how important a word is to a document in a collection of documents called a corpus. TF/IDF is used often in text mining and information retrieval."
+    },
+    "78": {
+        "question": "What are the assumptions required for linear regression?",
+        "answer": "There are several assumptions required for linear regression. They are as follows:\n\n* The data, which is a sample drawn from a population, used to train the model should be representative of the population.\n* The relationship between independent variables and the mean of dependent variables is linear.\n* The variance of the residual is going to be the same for any value of an independent variable. It is also represented as X.\n* Each observation is independent of all other observations.\n* For any value of an independent variable, the independent variable is normally distributed."
+    },
+    "79": {
+        "question": "What happens when some of the assumptions required for linear regression are violated?",
+        "answer": "These assumptions may be violated lightly (i.e., some minor violations) or strongly (i.e., the majority of the data has violations). Both of these violations will have different effects on a linear regression model.\n\nStrong violations of these assumptions make the results entirely redundant. Light violations of these assumptions make the results have greater bias or variance."
+    },
+    "80": {
+        "question": "How to deal with unbalanced binary classification?",
+        "answer": "Given below are the following points that will teach you to deal with unbalanced binary classification:\n\n* Use other formulas to determine the model’s performance, such as precision/recall, F1 score, etc.\n* Re-sample the data using strategies such as undersampling (decreasing the sample size of the bigger class), oversampling (raising the sample size of the smaller class using repetition, SMOTE, and other similar strategies), and so on.\n* K-fold cross-validation is used\n* Use ensemble learning such that each decision tree only takes into account a portion of the bigger class and the complete sample of the smaller class."
+    },
+    "81": {
+        "question": "Which cross-validation method would you use for a batch of time series data?",
+        "answer": "Instead of utilizing k-fold cross-validation, you should be aware that a time series is fundamentally organized by chronological order and is not made up of randomly dispersed data. Use approaches like forward-chaining, where you model on previous data and then look at forward-facing data, when dealing with time series data."
+    },
+    "82": {
+        "question": "How can time-series data be declared as stationery?",
+        "answer": "The time series is considered stationary when its essential constituents don’t change over time. These variables might be variance or mean. Static time series exhibit no trends nor seasonal impacts. Data from stationary time series are required for data science models."
+    },
+    "83": {
+        "question": "Difference between Point Estimates and Confidence Interval.",
+        "answer": "Point Estimates: A specific number known as the point estimate provides an estimate of the population parameter. The Maximum Likelihood estimator and the Method of Moments are two common techniques used to produce Population Parameter Point, estimators.\n\nConfidence Interval: The confidence interval provides a range of values that most likely contain the population parameter. It even reveals the likelihood that the population parameter may be found in that specific period. The likelihood or similarity is represented by the Confidence Coefficient (or Confidence level), which is indicated by 1-alpha. The significance level is indicated by alpha."
+    },
+    "84": {
+        "question": "Define the terms KPI, lift, model fitting, robustness, and DOE.",
+        "answer": "* KPI: KPI stands for Key Performance Indicator, which evaluates how successfully a company accomplishes its goals.\n* Lift: Lift is a performance indicator for the target model compared to a random selection model. Lift measures how well the model predicts in comparison to no model.\n* Model fitting: This describes how well the proposed model conforms to the available data.\n* Robustness: This refers to how well the system can manage variations and changes.\n* DOE: DOE refers to the task design with the goal of describing and explaining information variance under postulated circumstances to reflect variables."
+    },
+    "85": {
+        "question": "What are LLMs?",
+        "answer": "Large Language Models, abbreviated as LLMs, are sophisticated artificial intelligence models designed to process and generate text that resembles human language based on the input they receive. They employ advanced techniques like deep learning, particularly neural networks, to comprehend and produce language patterns, enabling them to answer questions, engage in conversations, and provide information on a broad array of topics.\nLLMs undergo training using extensive sets of textual data from diverse sources, including books, websites, and other text-based materials. Through this training, they acquire the ability to recognize patterns, comprehend context, and generate coherent and contextually appropriate responses.\nNotable examples of LLMs, such as ChatGPT based on the GPT-3.5 architecture, have been trained on comprehensive and varied datasets to offer accurate and valuable information across different domains. These models possess natural language understanding capabilities and can undertake various tasks such as language translation, content generation, and text completion.\nTheir versatility allows them to assist users in diverse inquiries and tasks, making them valuable tools across numerous fields, including education, customer service, content creation, and research."
+    },
+    "86": {
+        "question": "What is a Transformer in Machine Learning?",
+        "answer": "Within the realm of machine learning, the term “Transformer” denotes a neural network architecture that has garnered significant acclaim, primarily in the domain of natural language processing (NLP) tasks. Its introduction occurred in the seminal research paper titled “Attention Is All You Need,” authored by Vaswani et al. in 2017. Since then, the Transformer has emerged as a fundamental framework in numerous applications within the NLP domain.\n\nThe Transformer architecture is purposefully designed to overcome the limitations encountered by conventional recurrent neural networks (RNNs) when confronted with sequential data, such as sentences or documents. Unlike RNNs, Transformers do not rely on sequential processing and possess the ability to parallelize computations, thereby facilitating enhanced efficiency and scalability."
+    }
+}

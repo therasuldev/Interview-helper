@@ -17,21 +17,18 @@ class QuestionAdapter extends TypeAdapter<Question> {
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
     return Question(
-      id: fields[0] as String,
-      question: fields[1] as String,
-      answer: fields[2] as String,
+      question: fields[0] as String,
+      answer: fields[1] as String,
     );
   }
 
   @override
   void write(BinaryWriter writer, Question obj) {
     writer
-      ..writeByte(3)
-      ..writeByte(0)
-      ..write(obj.id)
-      ..writeByte(1)
-      ..write(obj.question)
       ..writeByte(2)
+      ..writeByte(0)
+      ..write(obj.question)
+      ..writeByte(1)
       ..write(obj.answer);
   }
 

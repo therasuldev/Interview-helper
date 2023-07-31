@@ -1,0 +1,154 @@
+{
+    "1": {
+        "question": "What is Scala?",
+        "answer": "Scala is a general-purpose programming language that supports both functional and object-oriented programming. Its source code is compiled into Java bytecode and executable code runs on Java virtual machine."
+    },
+    "2": {
+        "question": "Name the four types of scala identifiers?",
+        "answer": "There are four types of identifiers are used in Scala -\n\n* Operator identifiers\n* Mixed identifiers\n* Alphanumeric identifiers\n* Literal identifiers"
+    },
+    "3": {
+        "question": "Name different types of Scala literals?",
+        "answer": "These are different literals used in scala  \n\n* Integer literals\n* Boolean literals\n* Symbol literals\n* Character literals\n* String literals\n* Multi-Line strings\n* Floating-point literals"
+    },
+    "4": {
+        "question": "What are the benefits/advantages of using scala?",
+        "answer": "Following are the advantages of Scala \n\n* Uses lightweight syntax to define an anonymous task\n8 Allows nested functions\n* Supports first-order operations\n* Provides features of concurrent programming\n* High scalability and testability\n* Less error-prone functional style"
+    },
+    "5": {
+        "question": "What is Scala set? What are its different types?",
+        "answer": "Scala set is a group of pairwise different elements of the same type. This set contains no duplicate elements. There are two types of sets - mutable and immutable. By default, scala uses immutable sets."
+    },
+    "6": {
+        "question": "What are scala maps?",
+        "answer": "Scala map is a group of unique value (Key) pairs. Maps are also called as hash tables and they are categorized into two - mutable and immutable. The main difference between mutable and immutable is that an immutable object cannot be changed by itself."
+    },
+    "7": {
+        "question": "What are scala variables?",
+        "answer": "Variables are the reserved memory location used to store values. When you create a variable, based on the data type of the variable, the compiler allocates memory for it. reserved."
+    },
+    "8": {
+        "question": "What is the difference between class and object?",
+        "answer": "A class is a user-defined prototype that contains variables and methods. An object is an instance of a class using which methods and variables can be accessed."
+    },
+    "9": {
+        "question": "What is a recursion tail in Scala?",
+        "answer": "Recursion is a function that calls itself again and again. The last operation performed by this function is to call itself. This technique is used in functional programming."
+    },
+    "10": {
+        "question": "What is the Scala trait?",
+        "answer": "A trait consists of method and field definitions that can be reused by mixing them into classes. A trait definition looks exactly like a class definition, the only difference is that it uses the word Trait."
+    },
+    "11": {
+        "question": "What are case classes?",
+        "answer": "Case classes are the regular classes that can export their constructor parameter and allow recursive decomposition via pattern matching. These constructor parameters are considered as public and can be accessed directly."
+    },
+    "12": {
+        "question": "How can you format a string?",
+        "answer": "In order to format a string, we can use .format() method. \n\nVal formatted= “%s %i”.format (mystring.myInt)"
+    },
+    "13": {
+        "question": "Why does Scala prefer immutability?",
+        "answer": "Scala prefers immutability by default and helps to deal with concurrent programs and equality issues."
+    },
+    "14": {
+        "question": "How can we append to the list?",
+        "answer": "In Scala, we can ':+'' single value. Check out the below given example to understand better.\n\nvar myList = List.empty[String]\n\nmyList :+= 'a'\n\nmyList :+= 'b'\n\nmyList :+= 'c'\n\nuse++ for appending a list\n\nvar myList = List.empty[String]\n\nmyList ++= List('a', 'b', 'c')"
+    },
+    "15": {
+        "question": "What is the basic difference between var and value?",
+        "answer": "In Scala, Val defines a constant, a fixed value that cannot be modified once declared and assigned while var defines a variable, which can be modified or reassigned."
+    },
+    "16": {
+        "question": "How is Scala better than other programming languages?",
+        "answer": "No language is perfect, but Scala brings many advantages that make it better than other programming languages. Some of those features are -\n\n* The Scala code is more concise, readable, and error-free.\n* It is easier to write, compile, debug, and run the program in Scala as compared to many other programming languages.\n* In Scala, functional programming helps you solve the same problem from different angles.\n* Concurrency helps in parallelizing tasks.\n* Several third-party libraries are utilized for specific tasks. These are added in the form of language constructs"
+    },
+    "17": {
+        "question": "What is the use of tuples in Scala?",
+        "answer": "Tuples are used to combine a fixed number of items together in a group so that they can be passed as a single item. A tuple is immutable which can hold different types of objects, unlike an array or list."
+    },
+    "18": {
+        "question": "What is the use of function currying in Scala?",
+        "answer": "Currying is a simple process of transforming a function that takes multiple arguments into a function that takes a single argument. This function is commonly used in multiple functional languages."
+    },
+    "19": {
+        "question": "What are the implicit parameters in Scala?",
+        "answer": "When no value or parameter is passed to a method or function, then the compiler looks for implicit parameters and executes it further. A method can contain only one implicit keyword."
+    },
+    "20": {
+        "question": "What are closures in Scala?",
+        "answer": "Scala closures are the functions that use multiple free variables and the return value of the function is dependent on these variables. Free variables are defined outside the closure function and are not bound to a function with a valid value."
+    },
+    "21": {
+        "question": "What are 'Scala's higher-order functions?",
+        "answer": "Scala high-order functions are the functions that contain other functions as parameters and also return a function as an output. In easy words, a function that operates with other functions is called a higher-order function. "
+    },
+    "22": {
+        "question": "Explain about Scala anonymous function?",
+        "answer": "Scala anonymous function is a function that does not contain any name and provides a lightweight function definition. It is useful when a user has to create an inline function."
+    },
+    "23": {
+        "question": "Give a list of a few frameworks of Scala?",
+        "answer": "Some of the most common framework supported by Scala is -\n\n* Akka Framework\n* Neo4j Framework\n* Lift Framework\n* Spark Framework\n* Play Framework\n* Scalding Framework\n* Bowler Framework"
+    },
+    "24": {
+        "question": "Mention the types of variables in Scala?",
+        "answer": "In scala, two types of variables are used most commonly and they are - \n\n* Mutable variables *\n\nMutable Variables declared using the var keyword.\n* Values in the Mutable Variables support Changes\n\n * Immutable variables *\n\nImmutable Variables declared using the val keyword.\n* Values in Immutable Variables do not support changes."
+    },
+    "25": {
+        "question": "What is a stream in Scala?",
+        "answer": "A Scala stream is a list that can be infinitely long because its elements are computed lazily."
+    },
+    "26": {
+        "question": "Explain the Operators in Scala?",
+        "answer": "Operators in Scala are \n\n* Arithmetic Operators\n* Relational Operators\n* Logical Operators\n8 Bitwise Operators\n* Assignment Operators"
+    },
+    "27": {
+        "question": "Why do we need an App in Scala?",
+        "answer": "Scala offers a helper class called 'App' that contains the main method and its members. Instead of writing your own main method, you can extend the App class and produce executable applications in Scala."
+    },
+    "28": {
+        "question": "Explain the scope provided for variables in Scala?",
+        "answer": "In Scala, we have three types of scopes for variables as follows- \n\n* Fields: Fields are the variables declared within an object which can be accessed anywhere in the program depending upon the access modifiers. Fields are declared using var as well as val.\n\n* Method Parameters: Method parameters are strictly Immutable. Method parameters are mainly used to Pass values to the methods. These are accessed inside a method, but it is possible to access them from outside the method provided by a Reference.\n\n* Local Variables: Local variables are declared inside a method and they are accessible only inside the method. They can be accessed if you return them from the method."
+    },
+    "29": {
+        "question": "How is Scala both an object-oriented and functional programming language?",
+        "answer": "Scala treats each and every single value as an object including functions. Hence, scala is a fusion of both functional as well as to object-oriented features."
+    },
+    "30": {
+        "question": "What are the access modifiers available in Scala?",
+        "answer": "We have mainly three access modifiers in Scala and they are -\n\nPrivate: a private member is accessible only in the Class or the Object in which it declared.\n\nProtected: a protected member can be accessed from Subclasses of the class it is declared in.\n\nPublic: Public members can be accessed from anywhere."
+    },
+    "31": {
+        "question": "What is the functionality of Yield?",
+        "answer": "Yield is used in a loop and produces a value for every iteration."
+    },
+    "32": {
+        "question": "What is Monad in Scala?",
+        "answer": "A Monad is an object that wraps up another object in it. It allows chaining the operations together."
+    },
+    "33": {
+        "question": "Why is an Option used in Scala?",
+        "answer": "Option in Scala is used to Wrap the Missing value."
+    },
+    "34": {
+        "question": "How is the Scala code compiled?",
+        "answer": "First of all, the code is written in Scala REPL or a Scala IDE, then it is converted into a Byte code and sent to the JVM  for compilation."
+    },
+    "35": {
+        "question": "What is the difference between Null, Nill, None, and Nothing?",
+        "answer": "* Null represents the absence of a value\n* Nill denotes the end of the list\n* None is the value of an option with no value \n* Nothing is the lowest type in a type system"
+    },
+    "36": {
+        "question": "What is an auxiliary constructor?",
+        "answer": "An auxiliary constructor is used for constructor overloading. It calls either the previously defined auxiliary constructor or primary constructors present in the body.  A scala class may contain zero or more auxiliary constructors."
+    },
+    "37": {
+        "question": "What is the extractor in Scala?",
+        "answer": "An extractor is an object which contains a method 'unapply' as one of its members. unapply method is used to match the values and take them apart."
+    },
+    "38": {
+        "question": "What would be the result of x+y*z and why?",
+        "answer": "Scala evaluates y*z first and then adds (y*z) with x.\n\nLike other programming languages, Scala also follows Presidency and Priority table rules. "
+    }
+}

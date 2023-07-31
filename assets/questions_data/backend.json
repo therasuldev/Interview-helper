@@ -1,0 +1,186 @@
+{
+    "1": {
+        "question": "What is the typical workflow to implement a new feature on the back-end?",
+        "answer": "The workflows used to implement features on the back-end may vary depending on what technology stack the company uses. A typical workflow would include discussing the feature with stakeholders, prototyping and designing the feature, writing code, and quality assurance (QA).\n\nThe back-end developer will usually work with the front-end developer to ensure data is properly transmitted between the client and server. It is also important to make sure that new features are compatible with older versions of the application."
+    },
+    "2": {
+        "question": "What is a web server?",
+        "answer": "A web server can be described as a computer that stores web pages and distributes them. When you enter a URL into a browser, the browser contacts a web server to request the page. The page is then sent back to the browser by the web server which is displayed on the screen.\n\nNGINX and Apache are two of the most widely used web servers by back-end apps. Web servers are also capable of hosting other resources such as videos and images."
+    },
+    "3": {
+        "question": "What are the DRY and DIE principles?",
+        "answer": "Software developers must not duplicate code according to the DRY principle (Don't Repeat Yourself). Duplicated code can cause maintenance problems as multiple changes must be made. Similar to the DRY principle, DIE (Duplication Is Evil) goes one step further and states that even small amounts of duplication should be avoided."
+    },
+    "4": {
+        "question": "What's the difference between GET and POST?",
+        "answer": "A GET query retrieves data from a web server. A POST query sends data to a web server. A GET request passes parameters in the URL. With a POST request parameters are included in the request's body."
+    },
+    "5": {
+        "question": "Differentiate between software architecture and software design.",
+        "answer": "Software architecture refers to the program structure. As such, it can be understood as the bare skeleton of a program. Software design refers to the actual implementation of the code for the software requirements. So, software architecture can be considered as the program blueprint and software design can be considered as the process of how to build the program.\n\nAs far as development is concerned, software design gets into the details. Both software architecture and software design are two separate processes that work together to form an integrated development process."
+    },
+    "6": {
+        "question": "Talk about continuous integration and continuous delivery.",
+        "answer": "Continuous integration and continuous delivery are two interconnected software engineering processes. Continuous integration is a process that takes place in an ongoing manner to ensure that the program is built and tested regularly. Continuous delivery, on the other hand, is the ongoing development process that takes place in the latter part of the program lifecycle just before production.\n\nThese two processes form a cohesive automated process that keeps the work on track and increases production speed by getting rid of the inconsistencies between the development and operations teams."
+    },
+    "7": {
+        "question": "How can you build scalability into a software program?",
+        "answer": "Scalability is an important aspect to be considered for enhancing productivity, especially concerning higher user demands and adaptation of functions and elements to higher amounts of user data. To determine the lifetime value of a software program, one must check its scalability.\n\nLack of scalability warrants the need for rewriting the application with a new tech stack that adapts to the growth in audience. The scalability of a program can increase with features like cache, states, API, sort, and asynchronous programming. Moreover, tools like databases and frameworks have greater scalability than some others."
+    },
+    "8": {
+        "question": "What are NoSQL databases? Mention different types of NoSQL databases.",
+        "answer": "With the increase in big data, the internet has become a complex place. NoSQL databases help solve this problem. The NoSQL databases are neither traditional nor relational database management systems.\n\nNoSQL stands for ‘Not Only SQL’. With the growing amounts of data, a large percentage, close to 85%, is unstructured, messy, and complicated. NoSQL database handles and sorts such data. Thus, NoSQL offers a storage and retrieval mechanism for data that is modeled using other means and not the tabular relations used in the Relational Database Management System (RDBMS).\n\nTypes of NoSQL databases include\n\n* Graph\n* Key-value\n* Document oriented\n* Column-oriented"
+    },
+    "9": {
+        "question": "Why is Microservices architecture used?",
+        "answer": "Microservices architecture is characterized by integrating several small but independently deployable services into one application. It makes the operation more versatile as different programming languages can be used for writing individual services. Thus, different languages can be leveraged for different services.\n\nMaintenance is also easier as, even though the services are integrated, they are loosely connected. The microservices architecture model works well with and is preferred by larger teams, however, it may not be completely free of challenges like debugging."
+    },
+    "10": {
+        "question": "Explain SQL injection.",
+        "answer": "An SQL injection can destroy the database by injecting malicious code or hack your database by injecting a hacking code. This occurs because there is little separation between the program code and the user input. SQL injection is a common type of injection attack on databases.\n\nAn injection attack can be prevented in the following ways:\n\n* Prepare statements with queries that have defined parameters\n* Have pre-defined and stored procedures\n* Have a validation process for the input whereby you can blacklist or whitelist the input\n* Use the principle of least privilege, i.e. do not provide premium administrator type access to the public database server. So, even if the hacker is able to hack into the application, it would not compromise the integrity of the database as they wouldn’t be able to access it."
+    },
+    "11": {
+        "question": "Differentiate between acceptance and functional tests.",
+        "answer": "The differences are as follows:\n\nFunctional testing: Functional testing is done to verify whether the product, especially the application, is working as required or not. It ascertains whether the created software meets the business needs.\n\nAcceptance testing: Acceptance testing is done to validate whether or not you built the right product. It validates that the product meets the customer’s needs. Acceptance tests ascertain that the user (customer) is actually benefiting from the product and is using it for the purpose it was meant for."
+    },
+    "12": {
+        "question": "Mention some performance testing steps.",
+        "answer": "* Determine the environment for testing\n* Finalize what performance metrics to use\n* Create a plan and design for the performance test\n* Configure the environment for the test\n* Implement the design for the test\n* Execute the performance tests\n* Conduct test analysis, create test report, and advise retest for underperforming applications"
+    },
+    "13": {
+        "question": "Mention some advantages of web services.",
+        "answer": "* Interoperability: Web services can be accessed over the network and run using HTTP/SOAP protocols. For transporting data, web services use XML/JSON, thus, they can be rendered using different programming languages.For example, a web service that is written in Java is accessible over the network, runs on HTTP/SOAP protocol, and uses XML/JSON to transport data, hence it can be developed in any programming language. Web service can be written in java programming with PHP as the client and vice versa.\n* Reusability: Many client applications can use the same web service at the same time.\n* Loose Coupling: Web services client code does not depend on server code, thus, loose coupling is possible in the application.\n* It is easy to deploy and integrate, exactly like web applications.\n* Several versions of the service can run at the same time."
+    },
+    "14": {
+        "question": "Differentiate between clustered and non-clustered indexes?",
+        "answer": "A clustered index physically stores the rows on the disk in the order they appear on the index. Thus, only one clustered index is possible. A clustered index tells the database to store values that are close next to one another on the disk.\n\nA non-clustered index has a second list with pointers to the physical rows. There can be several non-clustered indexes, every new index increases the time for writing new records.\n\nIf all columns are needed as is, then reading from a Clustered index is faster. You need not go to the index and table in that order. However, if the data must be rearranged, writing to a table with a clustered index can slow down the process."
+    },
+    "15": {
+        "question": "What are some common problems with ORMs?",
+        "answer": "ORMs often have performance issues, incorrect data mapping, and difficulties with complex queries."
+    },
+    "16": {
+        "question": "What is the CAP theorem?",
+        "answer": "CAP theorem which is also known as Brewer’s theorem states that a distributed databases system can only guarantee two of the three characteristics: consistency, availability, and partition tolerance.\n\nThis theorem is the foundation for modern distributed computing methods. The world's largest traffic companies (e.g. Amazon, Google, Facebook) use this basis for their application architecture."
+    },
+    "17": {
+        "question": "What does REST stand for?",
+        "answer": "Representational States Transfer (REST) is a software architecture that specifies how an API should operate. REST was first created to provide a framework for managing communication on complex networks like the internet."
+    },
+    "18": {
+        "question": "What is object-oriented programming?",
+        "answer": "Object-oriented Programming (OOP), a type of computer programming, organizes software design around objects or data rather than functions and logic."
+    },
+    "19": {
+        "question": "What are the various types of constructors?",
+        "answer": "1. Default Constructor: constructor with no arguments. They initialize data members with real values.\n2. Parameterized Constructor: contains arguments in the constructor. Here we can pass more than one argument.\n3. Copy constructor: Initializes an object using another object of the same class."
+    },
+    "20": {
+        "question": "What is serialization?",
+        "answer": "Serialization refers to a process or mechanism that converts the object's state into a byte stream. Deserialization does exactly the opposite. Serializing an object makes it possible to easily convert the byte stream into a copy of the object."
+    },
+    "21": {
+        "question": "What's the difference between finally, final, and finalize?",
+        "answer": "Final is an access modifier, finally is a block, and finalize is a method of an object class. The final method is executed when called. Finally is executed once the try-catch block is executed. Its execution does not depend upon the exception. Finalize method is executed before the object can be destroyed."
+    },
+    "22": {
+        "question": "What's the difference between Primitive Data Types and Wrapper Classes?",
+        "answer": "Wrapper classes allow using a variety of primitive data types such as int or boolean as objects. The wrapper class transforms a primitive type into an object. A primitive type is a predefined data type that the Java programming language provides."
+    },
+    "23": {
+        "question": "How does a HashMap function?",
+        "answer": "HashMap in Java works with a variety of hashing principles. It stores the entries in the map by using its static inner classes. HashMap makes use of several buckets. Each bucket of HashMap points to a Singly Linked List.\n\nIn Java 8 however, HashMap replaces Linked Lists with a binary tree once the number of bucket elements reaches a threshold. HashMap supports multiple null values, but only one null key."
+    },
+    "24": {
+        "question": "What's a thread?",
+        "answer": "A thread is a thread of execution within a program. Threads enable Java applications to be more responsive and faster by performing multiple tasks at the same time."
+    },
+    "25": {
+        "question": "What's the difference between a thread and a process?",
+        "answer": "A process is the execution of a program, which allows users to execute the actions specified in the program.\n\nA thread, on the other hand, is an execution unit. It is an execution unit and can be managed separately by a scheduler. A process can have multiple threads which execute at the same moment."
+    },
+    "26": {
+        "question": "What is a design pattern?",
+        "answer": "A design pattern is a repeatable or reusable solution for common problems in software design. These patterns are similar to blueprints and often show interactions between classes or objects."
+    },
+    "27": {
+        "question": "What is the difference between MySQL and SQL?",
+        "answer": "SQL (Structured Query Language) is a programming language used to communicate with databases. MySQL is a relational database management system that uses SQL as its primary language. SQL is used to create, modify, and delete databases, while MySQL is used to store and access data within databases."
+    },
+    "28": {
+        "question": "What are the various subsets in SQL?",
+        "answer": "1. Data Definition Language (DDL): This allows you to perform various operations in the database, such as CREATE, ALTER and DELETE.\n\n2. Data Manipulation Language (DML): This allows you to access and modify data. It allows you to insert, update, and delete data from the database.\n\n3. Data Control Language (DCL): This allows you to control data definition and data manipulation operations, such as granting and revoking user access privileges, and creating, altering, and dropping database objects, such as tables and views."
+    },
+    "29": {
+        "question": "What is RDBMS?",
+        "answer": "A Relational Database Management System (RDBMS) is a program used to manage a relational database. It serves as the foundation of modern database systems such as MySQL, Microsoft Access, Microsoft SQL Server, and Oracle. RDBMS uses SQL to obtain data from the database."
+    },
+    "30": {
+        "question": "What is the 'SELECT' statement?",
+        "answer": "The SELECT statement allows you to select data from SQL databases. The result-set stores the returned data in a result table."
+    },
+    "31": {
+        "question": "What is OLTP?",
+        "answer": "Online transactional processing (OLTP) allows large groups of people to perform massive database transactions in real-time, via the internet. Database transactions are when data is modified, inserted, deleted, or queried."
+    },
+    "32": {
+        "question": "What are the differences between OLAP and OLTP?",
+        "answer": "OLTP stands for online transaction processing and OLAP stands for online analytical processing. OLTP can be described as an online database modification and OLAP is an online database query response system."
+    },
+    "33": {
+        "question": "What is the difference between static and dynamic websites?",
+        "answer": "What is the difference between static and dynamic websites?"
+    },
+    "34": {
+        "question": "What does High Availability (HA) mean?",
+        "answer": "Accessibility refers to the user's ability to access the system. If the user is unable to access the application, it will be assumed that the application is unavailable. High availability means that the application will always be available without interruption.\n\nClustering with redundant server nodes is a common way of achieving higher availability for web applications. Availability is usually expressed as a percentage of uptime in a given period of time."
+    },
+    "35": {
+        "question": "Why would you choose Microservices architecture?",
+        "answer": "Microservices architecture offers many benefits. Here are some of the pros:\n\n* Microservices are easily adaptable to other frameworks and technologies.\n\n* One process failure does not necessarily affect the whole system.\n\n* Supports both small and large companies.\n\n* It can be used independently and takes relatively little time."
+    },
+    "36": {
+        "question": "What is Containerization?",
+        "answer": "A containerization is a form of virtualization that was developed as an alternative to hypervisor-based virtualization.\n\nContainerization means that the operating system is shared between the containers, rather than being cloned for each machine. Docker, for example, is a container virtualization platform that can be used as an alternative to hypervisor-based arrangements."
+    },
+    "37": {
+        "question": "What is the difference between Acceptance Test and Functional Test?",
+        "answer": "Functional testing is a verification test to determine if we have built an appropriate product. Does the software satisfy the requirements of the business? Functional tests confirm that the program operates according to what the developer believes it should.\n\nAcceptance Testing is an activity to verify that we create the correct product. Does the customer really want it? Tests of acceptance confirm that the product can solve the problem it was designed to handle. This is best done with the help of the user such as doing the tasks the software helps in."
+    },
+    "38": {
+        "question": "What do you mean by Denormalization?",
+        "answer": "Denormalization is a technique that is used to access data from higher to lower forms of a database. It assists database managers to improve the efficiency of the whole infrastructure by introducing redundant data into tables. It incorporates redundant data into a table by integrating database queries that integrate data from multiple tables into one table."
+    },
+    "39": {
+        "question": "What's an Index?",
+        "answer": "An index is an approach to tuning the performance and making it easier to retrieve records in the database. The index generates an entry for each value. Hence, it is faster to access information."
+    },
+    "40": {
+        "question": "What is DISTINCT statement? What is its use?",
+        "answer": "This DISTINCT query is used in conjunction with the SELECT query to get rid of duplicates and return only unique records. Sometimes, an entire table is filled with duplicate records. The DISTINCT clause in SQL is used to remove duplicates in a SELECT statement's results set."
+    },
+    "41": {
+        "question": "What is 'Trigger' in SQL?",
+        "answer": "In SQL, a Trigger is a particular kind of stored procedure that is defined to execute automatically after data modifications. It lets you execute a series of codes whenever an update, insert, or another query is performed against a particular table."
+    },
+    "42": {
+        "question": "What's the difference between natural join and cross join?",
+        "answer": "The cross join produces the cross product or Cartesian product from two tables. The natural join is built on all columns that have the same name as well as data types within both tables."
+    },
+    "43": {
+        "question": "What is NULL?",
+        "answer": "The NULL data type is a special one-value data type. A variable of datatype NULL is a non-valued variable. It can be assigned using the following: $var = NULL; or $var = null;"
+    },
+    "44": {
+        "question": "What is a UNIQUE constraint?",
+        "answer": "The UNIQUE constraint prevents identical column values from appearing in more than one record. The UNIQUE constraint assures that every value within a column is unique."
+    },
+    "45": {
+        "question": "What are unpickling and pickling?",
+        "answer": "Pickling and unpickling are processes related to serializing and deserializing objects in Python. Pickling is the process of transforming an object into a byte stream, while unpickling is the inverse operation, i.e. transforming a byte stream back into an object hierarchy. Pickling allows complex objects to be stored and transmitted as a single entity, and unpickling allows the byte stream to be converted back into the original object hierarchy."
+    },
+    "46": {
+        "question": "What is Database Black Box Testing?",
+        "answer": "Black Box Testing is a method of testing functions of the software, that involves not knowing their internal code structure, implementation details, or internal routes. It focuses solely on the input and output of software applications. It is completely driven by specifications and software requirements. Another name for it is behavioral testing."
+    }
+}

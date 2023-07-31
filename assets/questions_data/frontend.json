@@ -1,0 +1,142 @@
+{
+    "1": {
+        "question": "What is a CDN?",
+        "answer": "A content delivery network (CDN) is a system for delivering content to users based on geographic location. CDNs can deliver websites, software applications, and other types of digital content."
+    },
+    "2": {
+        "question": "What is AJAX?",
+        "answer": "AJAX is a web development technique for creating asynchronous web applications. AJAX allows you to create dynamic, responsive web applications that can be updated without reloading the page."
+    },
+    "3": {
+        "question": "What are the differences between HTML and XHTML?",
+        "answer": "HTML is the standard markup language for creating web pages. XHTML is a stricter and more well-defined version of HTML. It's frequently used for formatting more complex documents within a stated taxonomy."
+    },
+    "4": {
+        "question": "What is responsive design?",
+        "answer": "Responsive design is a web development technique that creates websites compatible with multiple devices with different screen sizes. Responsive websites are designed to look good on both desktop and mobile devices."
+    },
+    "5": {
+        "question": "What are the different types of CSS selectors?",
+        "answer": "CSS selectors are used to select elements in an HTML document. There are several types of CSS selectors, including class selectors, ID selectors, and attribute selectors."
+    },
+    "6": {
+        "question": "What is a pseudo-class?",
+        "answer": "A pseudo-class is a selector that styles an element based on its state. For example, the :hover pseudo-class styles an element when the user hovers over it with their mouse but does nothing when they don't."
+    },
+    "7": {
+        "question": "What is a CSS reset?",
+        "answer": "A CSS reset is a set of rules applied to all browsers to normalize the default styling of HTML elements. It’s particularly useful when stripping the formatting of HTML elements."
+    },
+    "8": {
+        "question": "What is a CSS grid system?",
+        "answer": "A CSS grid system is a set of rules that can be used to create a responsive layout. There are many different grid systems available, but the most popular one is Bootstrap. Bootstrap makes it easier to create layouts that react predictably without having to reinvent the wheel."
+    },
+    "9": {
+        "question": "What is a CSS preprocessor?",
+        "answer": "A CSS preprocessor is a tool that allows you to write CSS in a more concise and structured manner. The most popular CSS preprocessors are Less and Sass. They aren't very useful for small projects but become exponentially more powerful as a project grows."
+    },
+    "10": {
+        "question": "What are the benefits of using a CSS preprocessor?",
+        "answer": "There are several benefits of using a CSS preprocessor, such as writing code in a more structured and concise manner, reducing the amount of code that needs to be written, and making it easier to maintain and update code. More importantly, it makes it easier to manage a project among large numbers of devs."
+    },
+    "11": {
+        "question": "What is Bootstrap?",
+        "answer": "Bootstrap is a popular CSS framework providing a set of rules for creating responsive layouts."
+    },
+    "12": {
+        "question": "What are the benefits of using bootstrap?",
+        "answer": "Some benefits of using bootstrap include reducing required written code, having a consistent framework across multiple projects, and easier creation of responsive layouts."
+    },
+    "13": {
+        "question": "What is a task runner?",
+        "answer": "Task runners are tools that help automate common tasks in the development process, such as minification, compilation, linting, etc. Some of the most popular task runners are Gulp and Grunt."
+    },
+    "14": {
+        "question": "Task runners are tools that help automate common tasks in the development process, such as minification, compilation, linting, etc. Some of the most popular task runners are Gulp and Grunt.",
+        "answer": "The benefits of using a task runner include reducing the amount of time spent on repetitive tasks, automating tedious and error-prone tasks, and making it easier to manage the development process."
+    },
+    "15": {
+        "question": "What type of front-end development do you specialize in?",
+        "answer": "A lot of front-end developers are jacks-of-all-trades. But your interviewer wants to know where most of your experience lies. Do you have more experience with Angular than React? Do you prefer vanilla JavaScript over using a framework?"
+    },
+    "16": {
+        "question": "What is your favorite CSS framework?",
+        "answer": "Do you like the grid system of Bootstrap? The simplicity of Foundation? Most interviewers will be somewhat familiar with the most popular systems, but if you can surprise them (and justify your answer), you may gain points."
+    },
+    "17": {
+        "question": "How would you optimize a website's performance?",
+        "answer": "This is a broad question with many potential answers. \n\nFirst, you should make sure that your code is minified and compressed. This reduces the size of your files, which makes them faster to download. \n\nSecond, you should use caching wherever possible. This stores frequently used files locally, so they don't need to be downloaded every time a user visits your site. But don’t overdo it, or your site won’t be as dynamic as you want — it won’t update as reliably.\n\nFinally, you should use a content delivery network (CDN). This distributes your files across multiple servers, so users can download them from their respective locations. "
+    },
+    "18": {
+        "question": "What is your favorite front-end development tool?",
+        "answer": "A front-end development tool is any software that helps develop a website or web application. Some of the most popular front-end development tools are code editors and IDEs, task runners, and CSS preprocessors. Play it safe by mentioning something like Sass or Git, or get more in the weeds with a specialized tool. You can even suggest that your favorite tool is a color picker or a UI tester."
+    },
+    "19": {
+        "question": "How would you go about debugging a website?",
+        "answer": "As with speeding up a website, debugging a website is broad. But what they're really asking is for the general steps you might take. Some of the most common methods include using the browser’s developer tools, using an automated quality assurance suite, debugging the code line-by-line, or using the 'rubber duck' method of debugging."
+    },
+    "20": {
+        "question": "What are some common issues that you have faced with cross-browser compatibility?",
+        "answer": "Some of the most common issues with cross-browser compatibility are different browsers rendering CSS differently, different browsers supporting different HTML and CSS features, and different browsers having different levels of support for standards. This is particularly difficult as many browsers differ depending on the platform, and the platform differs so widely; someone can open Chrome OS on a smart fridge today."
+    },
+    "21": {
+        "question": "What are some of the common front-end development challenges that you have faced?",
+        "answer": "Some of the most common front-end development challenges include cross-browser compatibility issues, dealing with legacy code, and optimizing website performance. Another issue developers frequently run into (but unfortunately less frequently address) is the ability to make their code ADA compliant."
+    },
+    "22": {
+        "question": "Discuss the biggest achievement of your career.",
+        "answer": "Be ready to discuss a time when you made a significant impact on a project. This is your opportunity to really sell yourself, so make sure you have a great story to tell. If you can, try to connect your achievement to the company's values or mission statement. Don't be afraid to highlight how a team member or manager helped you. This shows you're a team player."
+    },
+    "23": {
+        "question": "Discuss the biggest challenge of your career.",
+        "answer": "This is not the time to discuss a personal challenge, like overcoming your fear of public speaking. Instead, focus on a professional challenge that you faced and overcame, such as developing for a defunct system, or encountering a particular UI/UX challenge. Talk about what the problem was, how you tackled it, and what the result was. As with the previous question, try to connect your story to the company's values or mission"
+    },
+    "24": {
+        "question": "What was your last project? How did it go?",
+        "answer": "This is a great opportunity to talk about something you're passionate about. If your last project was particularly challenging or successful, mention it. Be specific about the technologies you used and any unique ways you used them."
+    },
+    "25": {
+        "question": "How do you effectively manage your time?",
+        "answer": "This is an important question for any developer, as work can be varied and unpredictable. Talk about the tools you use to manage your time (such as a Pomodoro timer) and how you use them. You might also discuss how you prioritize your tasks and deal with unexpected interruptions."
+    },
+    "26": {
+        "question": "What do you do when you get stuck?",
+        "answer": "No one likes being stuck, but it's a fact of life for any programmer. Talk about methods you use to get unstuck, such as asking for help, doing research, or taking a break. Also, mention how you prevent yourself from getting stuck in the first place, such as research in advance and making sure you don't stretch the project's scope."
+    },
+    "27": {
+        "question": "What do you do when you get something wrong?",
+        "answer": "Everyone makes mistakes. The important thing is how you react when you make a mistake. Talk about the steps you take to fix mistakes, such as undoing your changes or writing tests. Also, mention how you prevent yourself from making the same mistake twice, such as keeping better documentation."
+    },
+    "28": {
+        "question": "What are the differences between HTML5 and HTML4?",
+        "answer": "HTML5, the latest version of HTML, includes several new elements and attributes. It also supports audio and video playback and introduces support for local storage."
+    },
+    "29": {
+        "question": "How would you create a custom error page?",
+        "answer": "A custom error page is a page that is displayed when an error occurs. To create a custom error page, you would first need to create a file called 'error.php' or 'error.html.' Then, you would need to edit the .htaccess file to point to the custom error page."
+    },
+    "30": {
+        "question": "How do you use media queries to optimize for different screen sizes?",
+        "answer": "Media queries are a CSS3 feature that allows you to apply different styles based on the screen’s width. To use media queries, you would first need to include a viewport meta tag in your HTML. Then, you would need to write your CSS using media queries -- but integrating it into the HTML is important, too."
+    },
+    "31": {
+        "question": "What is the difference between == and ===?",
+        "answer": "== checks for value equality, while === checks for both value and type equality."
+    },
+    "32": {
+        "question": "What is the difference between an anonymous function and a named function?",
+        "answer": "A named function can be referenced in the future from anywhere in the code, whereas an anonymous function cannot — although it will run when it occurs in-line."
+    },
+    "33": {
+        "question": "What are the differences between inline, embedded, and external stylesheets?",
+        "answer": "Inline styles are written as a part of the code (<div style=”background-color: blue”>), embedded styles are style sheets embedded in the header of the page, and external style sheets are linked within the header of the page."
+    },
+    "34": {
+        "question": "How do you create a responsive layout?",
+        "answer": "You can create a responsive layout by using a framework like Bootstrap. Alternatively, you will need to manually detect the screen’s size and make changes. Responsive layout best practices include creating a “fail-proof” system that collapses elements if they are too small to be viewed."
+    },
+    "35": {
+        "question": "How do you use animation and transitions?",
+        "answer": "Most animations and transitions are brought into CSS through JavaScript; another way in which CSS, JavaScript, and HTML are so entwined. You might name an element in CSS and set its parameters with CSS only to process an animation with JavaScript. There are some built-in animations and transitions in CSS, but they tend to be fairly rudimentary."
+    }
+}

@@ -1,0 +1,222 @@
+{
+    "1": {
+        "question": "Differentiate between static and dynamic websites.",
+        "answer": "* Static Website *\n\n1.The content cannot be manipulated after the script is executed\n2.No way to change the content as it is predefined\n\n* Dynamic Website *\n\n1.The content can be changed even at the runtime\n2.The content can be changed easily by manipulation and reloading"
+    },
+    "2": {
+        "question": "What is PHP most used for?",
+        "answer": "PHP has a plethora of uses for developers and the ones mentioned below are some of the most widely used concepts that PHP offers:\n\n* With PHP, it becomes very easy to provide restricted access to the required content of the website.\n* It allows users to access individual cookies and set them as per requirement.\n* Database manipulation operations, such as addition, deletion, and modification, can be done easily.\n* Form handling, alongside features that involve file handling concepts and email integration, is used widely.\n* The system module allows users to perform a variety of system functions such as open, read, write, etc."
+    },
+    "3": {
+        "question": "Is PHP a case-sensitive scripting language?",
+        "answer": "The answer to this is both yes and no. Variables and their declaration in PHP are completely case sensitive while function names are not.\n\nFor example, user-defined functions in PHP can be defined in uppercase but later referred to in lowercase, and it would still function normally.\n\n Next up on these PHP interview questions for freshers, you need to understand what PEAR is."
+    },
+    "4": {
+        "question": "What is the meaning of PEAR in PHP?",
+        "answer": "PEAR stands for PHP Extension and Application Repository. It is one of the frameworks and acting repositories that host all of the reusable PHP components. Alongside containing some of the PHP libraries, it also provides you with a simple interface in PHP to automatically install packages."
+    },
+    "5": {
+        "question": "How is a PHP script executed?",
+        "answer": "PHP scripts can be easily executed from the command-line interface (CLI). The syntax is as follows:\n\nphp filename.php\n\nHere, filename refers to the file that contains scripts. The extension .php is needed alongside the filename."
+    },
+    "6": {
+        "question": "What are the types of variables present in PHP?",
+        "answer": "There are eight primary data types in PHP as shown below:\n\n* Array: A named and ordered collection of data\n* Boolean: A logical value (True or False)\n* Double: Floating point numbers such as 5.1525\n* Integer: Whole numbers without a floating point\n* Object: An instance of classes, containing data and functions\n* NULL: A special data type, supporting only the NULL data\n* Resource: Special variables that hold references to external resources\n* String: A sequence of characters such as, “Hello learners!”"
+    },
+    "7": {
+        "question": "What are the variable-naming rules you should follow in PHP?",
+        "answer": "There are two main rules that you have to follow when naming a variable in PHP. They are as follows:\n\n* Variables can only begin with letters or underscores.\n* Special characters such as +, %, -, &, etc. cannot be used."
+    },
+    "8": {
+        "question": "What are the main characteristics of a PHP variable?",
+        "answer": "Following are some of the most important aspects of the usage of variables in PHP:\n\n* Variables can be declared before the value assignment.\n* A variable value assignment happens using the ‘=’ operator.\n* Every variable in PHP is denoted with a $ (dollar) sign.\n* The value of a variable depends on its latest assigned value.\n* PHP variables are not intrinsic. There is no explicit declaration.\n* Next up on these PHP interview questions for freshers, you need to understand what NULL is."
+    },
+    "9": {
+        "question": "What is NULL in PHP?",
+        "answer": "NULL is a special data type in PHP used to denote the presence of only one value, NULL. You cannot assign any other value to it.\n\nNULL is not case sensitive in PHP and can be declared in two ways as shown below:\n$var = NULL:\nOr,\n$var = null;"
+    },
+    "10": {
+        "question": "How are constants defined in PHP?",
+        "answer": "Constants can be defined easily in PHP by making use of the define() function. This function is used to define and pull out the values of the constants easily.\n\nConstants, as the name suggests, cannot be changed after being definition. They do not require the PHP syntax of starting with the conventional $ sign."
+    },
+    "11": {
+        "question": "What is the use of the constant() function in PHP?",
+        "answer": "The constant() function is used to retrieve the values predefined in a constant variable. It is used especially when you do not know the name of the variable"
+    },
+    "12": {
+        "question": "What are the various constants predefined in PHP?",
+        "answer": "PHP consists of many constants, and the following are some of the more widely used ones:\n\n* _METHOD_: Represents the class name\n* _CLASS_: Returns the class name\n* _FUNCTION_: Denotes the function name\n* _LINE_: Denotes the working line number\n* _FILE_: Represents the path and the file name"
+    },
+    "13": {
+        "question": "Differentiate between variables and constants in PHP.",
+        "answer": "* Variable *\n\n1.Variables can have changed paths\n2.The default scope is the current access scope\n3.The $ assignment is used for definition\n4.Compulsory usage of the $ sign at the start\n\n* Constant *\n\n1.Constants cannot be changed\n2.Constants can be accessed throughout without any scoping rules\n3.Constants are defined using the define() function\n4.No need for the $ sign for constants"
+    },
+    "14": {
+        "question": "What does the phrase ‘PHP escape’ mean?",
+        "answer": "PHP escape is a mechanism that is used to tell the PHP parser that certain code elements are different from the PHP code. This provides the basic means to differentiate a piece of PHP code from the other aspects of the program."
+    },
+    "15": {
+        "question": "How are two objects compared in PHP?",
+        "answer": "PHP provides you with the ‘==’ operator, which is used to compare two objects at a time. This is used to check if there is a common presence of attributes and values between the objects in comparison.\n\nThe ‘===’ operator is also used to compare if both objects in consideration are referencing to the same class.\n\nNext up on these PHP interview questions, you need to understand a fundamental concept."
+    },
+    "16": {
+        "question": "What is the meaning of break and continue statements in PHP?",
+        "answer": "Break: This statement is used in a looping construct to terminate the execution of the iteration and to immediately execute the next code snippet outside the scope of the iterating statement.\n\nContinue: This statement is used to skip the current iteration of the loop and continue to execute the next iteration until the looping construct is exited."
+    },
+    "17": {
+        "question": "What are some of the popular frameworks in PHP?",
+        "answer": "There are many frameworks in PHP that are known for their usage. Following are some of them:\n\n* CodeIgniter\n* CakePHP\n* Laravel\n* Zend\n* Phalcon\n* Yii 2"
+    },
+    "18": {
+        "question": "What is the use of the final class and the final method in PHP?",
+        "answer": "The ‘final’ keyword, if present in a declaration, denotes that the current method does not support overriding by other classes. This is used when there is a requirement to create an immutable class.\n\nNote: Properties cannot be declared as final. It is only the methods and classes that get to be final.\n\nNext up on this core PHP interview questions and answers blog, let us take a look at the intermediate questions."
+    },
+    "19": {
+        "question": "How does JavaScript interact with PHP?",
+        "answer": "JavaScript is a client-side programming language, while PHP is a server-side scripting language. PHP has the ability to generate JavaScript variables, and this can be executed easily in the browser, thereby making it possible to pass variables to PHP using a simple URL."
+    },
+    "20": {
+        "question": "Does PHP interact with HTML?",
+        "answer": "Yes, HTML and PHP interaction is at the core of what makes PHP’s functionality. PHP scripts have the ability to generate HTML mode and move around information very easily.\nPHP is a server-side scripting language, while HTML is a client-side language. This interaction helps bridge the gaps and use the best of both languages."
+    },
+    "21": {
+        "question": "What are the types of arrays supported by PHP?",
+        "answer": "There are three main types of arrays that are used in PHP.\n\n* Indexed arrays: These are arrays that contain numerical data. Data access and storage are linear in indexed arrays.\n* Associative arrays: There are arrays that contain strings for indexing elements.\n* Multidimensional arrays: These are arrays that contain more than one index and dimension."
+    },
+    "22": {
+        "question": "How does the ‘foreach’ loop work in PHP?",
+        "answer": "The foreach statement is a looping construct used in PHP to iterate and loop through the array data type. The working of foreach is simple; with every single pass of the value, elements get assigned a value and pointers are incremented. This process is repeated until the end of the array."
+    },
+    "23": {
+        "question": "Differentiate between require() and require_once() functions.",
+        "answer": "* require() *\n\n1.The inclusion and evaluation of files\n2.Preferred for files with fewer functions\n\n* require_once() *\n\n1.Includes files if they are not included before\n2.Preferred when there are a lot of functions"
+    },
+    "24": {
+        "question": "Is it possible to set infinite execution time in PHP?",
+        "answer": "Yes, it is possible to have an infinite execution time in PHP for a script by adding the set_time_limit(0) function to the beginning of a script.\n\nThis can also be executed in the  ‘php.ini’  file if not at the beginning of the script."
+    },
+    "25": {
+        "question": "What is the use of constructors and destructors in PHP?",
+        "answer": "Constructors are special methods in PHP that are automatically invoked at the time of object creation. Their primary purpose is to initialize the object’s properties and perform any necessary setup tasks. Constructors are particularly useful for ensuring that an object is in a valid and usable state upon instantiation. They allow developers to define and set initial values for the object’s properties or perform other initialization logic. By using constructors, the object can be properly configured and ready to be utilized immediately.\n\nDestructors are automatically invoked when an object goes out of scope. Their primary objective is to execute cleanup operations prior to the object’s destruction and the subsequent release of its memory. Destructors prove valuable in releasing resources, closing database connections, and performing any essential cleanup tasks. Through the implementation of destructors, developers can ensure the proper management and release of resources when they are no longer needed, effectively preventing memory leaks and other potential issues."
+    },
+    "26": {
+        "question": "What are some of the top Content Management Systems (CMS) made using PHP?",
+        "answer": "There are many CMS that are made using PHP. The popular ones are as mentioned below:\n\n* WordPress\n* Joomla\n* Magento\n* Drupal"
+    },
+    "27": {
+        "question": "What is the most used method for hashing passwords in PHP?",
+        "answer": "The crypt() function is widely used for this functionality as it provides a large amount of hashing algorithms that can be used. These algorithms include md5, sha1 or sha256."
+    },
+    "28": {
+        "question": "Differentiate between an indexed array and an associative array.",
+        "answer": "Indexed arrays have elements that contain a numerical index value.\nExample: $color=array('red','green','blue');\n\nHere, red is at index 0, green at 1, and blue at 2.\n\nAssociative arrays, on the other hand, hold elements with string indices as shown below:\nExample: $salary=array('Jacob'=>'20000','John'=>'44000','Josh'=>'60000');"
+    },
+    "29": {
+        "question": "What are sessions and cookies in PHP?",
+        "answer": "Sessions are global variables that are stored on the server inside the architecture. Every single session is tagged with a unique server ID that is later used to work with the storage and retrieval of values.\n\nCookies are entities used to identify unique users in the architecture. It is a small file that the server plants into the client system. This is done to get useful information from the client for the development of various aspects of the server."
+    },
+    "30": {
+        "question": "Is typecasting supported in PHP?",
+        "answer": "Yes, typecasting is supported by PHP and can be done very easily. Following are the types that can be cast in PHP:\n\n* (int), (integer): Cast to integer\n* (bool), (boolean): Cast to boolean\n* (float), (double), (real): Cast to float\n* (string): Cast to string\n* (array): Cast to array\n* (object): Cast to object"
+    },
+    "31": {
+        "question": "Can a form be submitted in PHP without making use of a submit button?",
+        "answer": "Yes, a form can be submitted without the explicit use of a button. This is done by making use of the JavaScript submit() function easily.\n\nNext up on this PHP developer interview questions, it is vital that you know about PHP in detail. Read on."
+    },
+    "32": {
+        "question": "What is the use of session_start() and session_destroy() functions?",
+        "answer": "In PHP, the session_start() function is used to start a new session. However, it can also resume an existing session if it is stopped. In this case, the return will be the current session if resumed."
+    },
+    "33": {
+        "question": "How can you open a file in PHP?",
+        "answer": "PHP supports file operations by providing users with a plethora of file-related functions.\n\nIn the case of opening a file, the fopen() function is used. This function can open a file or a URL as per requirement. It takes two arguments: $filename and $mode."
+    },
+    "34": {
+        "question": "What are the different types of PHP errors?",
+        "answer": "There are three main types of errors in PHP. They are as follows:\n\n* Notice: A notice is a non-critical error that is not displayed to the user.\n* Warning: A warning is an error that is displayed to the user while the script is running.\n* Fatal error: This is the most critical type of error. A fatal error will cause immediate termination of the script."
+    },
+    "35": {
+        "question": "How can you get the IP address of a client in PHP?",
+        "answer": "The IP address of a client, who is connected, can be obtained easily in PHP by making use of the following syntax:\n\n$_SERVER['REMOTE_ADDR'];"
+    },
+    "36": {
+        "question": "What is the use of $message and $$message in PHP?",
+        "answer": "Both $message and $$message are variables in PHP and the difference lies in the name. While $message is a variable with a fixed name, $$message is a variable with a name that is actually stored in $message."
+    },
+    "37": {
+        "question": "Differentiate between GET and POST methods in PHP.",
+        "answer": "* GET Method *\n\n1.The GET method can only send a maximum of 1024 characters simultaneously\n2.GET does not support sending binary data\n3.QUERY_STRING env variable is used to access the data that is sent\n4.The $_GET associative array is used to access the sent information\n\n* POST Method *\n\n1.There is no restriction on the data size\n2.POST supports binary data as well as ASCII\n3.The HTTP protocol and the header are used to push the data\n4.The $_POST associative array is used to access the sent information here"
+    },
+    "38": {
+        "question": "What is the use of lambda functions in PHP?",
+        "answer": "Being an anonymous function, the lambda function is used to first store data into a variable and then to pass it as arguments for the usage in other methods or functions.\nConsider the following example:\n\n$input = array(2, 5, 10);\n\n$output = array_filter($input, function ($x) { return $x > 2; });\n\nThe lambda function definition here:\nfunction ($x) { return $x > 2; });\nThis is used further to store data into a variable, and then you can use it when required without the requirement of defining it again."
+    },
+    "39": {
+        "question": "Differentiate between compile-time exception and runtime exception in PHP.",
+        "answer": "As the name suggests, if there is an occurrence of any sort of exception while the script is being compiled, it is called a compile-time exception. The FileNotFoundException is a good example of a compile-time exception.\n\nAn exception that interrupts the script while running is called a runtime exception. The ArrayIndexOutOfBoundException is an example of a runtime exception."
+    },
+    "40": {
+        "question": "What is the meaning of type hinting in PHP?",
+        "answer": "Type hinting is used in PHP when there is a requirement to explicitly define the data type of an argument when passing it through a function.\n\nWhen this function is first called, PHP will run a quick check to analyze the presence of all the data types that are specified. If it is different, then the runtime will stop as an exception will be raised."
+    },
+    "41": {
+        "question": "How is a URL connected to PHP?",
+        "answer": "Any URL can be connected to PHP easily by making use of the library called cURL. This comes as a default library with the standard installation of PHP.\n\nThe term ‘cURL’ stands for client-side URL, allowing users to connect to a URL and pick up information from that page to display."
+    },
+    "42": {
+        "question": "What are the steps to create a new database using MySQL and PHP?",
+        "answer": "There are four basic steps that are used to create a new MySQL database in PHP. They are as follows:\n\n* First, a connection is established to the MySQL server using the PHP script.\n* Second, the connection is validated. If the connection is successful, then you can write a sample query to verify.\n* Queries that create the database are input and later stored into a string variable.\n* Then, the created queries are executed one after the other."
+    },
+    "43": {
+        "question": "How does string concatenation work in PHP?",
+        "answer": "String concatenation is carried out easily in PHP by making use of the dot(.) operator. Consider the following example:\n<?php $string1='Welcome'; $string2='to Intellipaat'; echo $string1 . ' ' . $string2; ?>"
+    },
+    "44": {
+        "question": "What rules are there for determining the 'truth' of any value that isn't already a Boolean value?",
+        "answer": "A value is said to be “true” if it is either a non-empty string or a non-zero number. Anything else, such as a null value or an empty string, is regarded as false. Additionally, an array is false if it is open and correct if it has at least one entry. Null is also thought to be incorrect."
+    },
+    "45": {
+        "question": "How can we encrypt a password using PHP?",
+        "answer": "The crypt () function is used to create one-way encryption. It takes one input string and one optional parameter. The function is defined as:\ncrypt ($input_string, $salt)\n\nHere, $input_string consists of the input string that has to be encrypted and $salt is also a string parameter that is used to generate a strong password and it acts as the base of the hashing process here. PHP uses DES for encryption."
+    },
+    "46": {
+        "question": "Explain how to submit a form without a submit button.",
+        "answer": "A form can be posted or submitted without the button in the following ways:\n* On the OnClick event of a label in the form, a JavaScript function can be called to submit the form.\nExample:\n document.form_name.submit()\n* Using a Hyperlink: On clicking the link, a JavaScript function can be called.\n* A form can be submitted in the following ways as well without using the submit button:\n**Submitting a form by clicking a link\n** Submitting a form by selecting an option from the drop-down box with the invocation of an onChange event\n** Using JavaScript:\ndocument.form.submit();\n* Using header(“location:page.php”);"
+    },
+    "47": {
+        "question": "How can we increase the execution time of a PHP script?",
+        "answer": "* The default time allowed for a PHP script to execute is 30 seconds as mentioned in the php.ini file. The function used is set_time_limit(int sec). If the value passed is ‘0’, it takes unlimited time. It should be noted that if the default timer is set to 30 seconds and 20 seconds is specified in set_time_limit(), the script will run for 45 seconds.\n* This time can be increased by modifying max_execution_time in seconds. The time must be changed keeping in mind the environment of the server. This is because modifying the execution time will affect all the sites hosted by the server.\n* The script execution time can be increased by:\n** Using the sleep() function in the PHP script\n** Using the set_time_limit() function\n\nThe default limit is 30 seconds. The time limit can be set to zero to impose no time limit"
+    },
+    "48": {
+        "question": "What is Zend Engine?",
+        "answer": "Zend Engine is used internally by PHP as a compiler and runtime engine. PHP Scripts are loaded into memory and compiled into Zend OPCodes.\nThese OPCodes are executed and the HTML generated is sent to the client.\nThe Zend Engine provides memory and resource management and other standard services for the PHP language. Its performance, reliability, and extensibility have played a significant role in PHP’s increasing popularity."
+    },
+    "49": {
+        "question": "What library is used for PDF in PHP?",
+        "answer": "The PDF functions in PHP can create PDF files using PDFlib version 6. PDFlib offers an object-oriented API for PHP5 in addition to the function-oriented API for PHP4.\nThere is also the Â» Panda module.\nFPDF is a PHP class, which allows generating PDF files with pure PHP (without using PDFlib). F from FPDF stands for Free: we may use it for any requirement and modify it to suit our needs. FPDF requires no extension (except zlib to activate compression and GD for GIF support) and works with PHP4 and PHP5."
+    },
+    "50": {
+        "question": "What is htaccess? Why do we use it and where?",
+        "answer": "The .htaccess files are configuration files of Apache Server that provide a way to make configuration changes on a per-directory basis. A file, containing one or more configuration directives, is placed in a particular document directory; the directives apply to that directory and all subdirectories thereof.\nThese .htaccess files are used to change the functionality and features of the Apache web server.\nFor instance:\n\n* The .htaccess file is used for URL rewrite.\n* It is used to make the site password-protected.\n* It can restrict some IP addresses so that on these restricted IP addresses, the site will not open."
+    },
+    "51": {
+        "question": "What is meant by PEAR in PHP?",
+        "answer": "PEAR is an acronym for PHP Extension and Application Repository. The purpose of PEAR is to provide:\n\n* A structured library of open-sourced code for PHP users\n* A system for code distribution and package maintenance\n* A standard style for writing code in PHP\n* PHP Foundation Classes (PFC)\n* PHP Extension Community Library (PECL)\n* A website, mailing lists, and download mirrors to support the PHP/PEAR community"
+    },
+    "52": {
+        "question": "Explain soundex() and metaphone().",
+        "answer": "The soundex() function calculates the soundex key of a string. A soundex key is a 4-character long alphanumeric string that represents the English pronunciation of a word. The soundex() function can be used for spelling applications.\n\nThe metaphone() function calculates the metaphone key of a string. A metaphone key represents how a string sounds if it is pronounced by an English (native) person. This function can also be used for spelling applications."
+    },
+    "53": {
+        "question": "What is Smarty?",
+        "answer": "Smarty is a template engine written in PHP. Typically, these templates will include variables—like {$variable}—and a range of logical and loop operators to allow adaptability within the templates."
+    },
+    "54": {
+        "question": "What is Memcache?",
+        "answer": "Memcache is a technology that caches objects in memory such that a web application can get to them really fast. It is used by sites, such as Digg, Facebook, and NowPublic, and is widely recognized as an essential ingredient in scaling any LAMP."
+    },
+    "55": {
+        "question": "How can we execute a PHP script using a command line?",
+        "answer": "We just have to run the PHP CLI (Command-line Interface) program and provide the PHP script file name as the command-line argument, for example, php myScript.php, assuming php as the command to invoke the CLI program.\n\nWe have to keep in mind that if our PHP script is written for the Web CGI interface, it may not execute properly in the command-line environment."
+    }
+}

@@ -1,10 +1,4 @@
-enum QuestionEvents {
-  fetchQuestionStart,
-
-  fetchQuestionSuccess,
-
-  fetchQuestionError,
-}
+import 'package:flutter_interview_questions/core/app/enum/question.dart';
 
 class QuestionEvent {
   QuestionEvents? type;

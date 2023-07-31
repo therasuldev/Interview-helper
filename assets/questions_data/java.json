@@ -1,0 +1,226 @@
+{
+    "1": {
+        "question": "What is the difference between JDK and JRE?",
+        "answer": "JDK stands for Java Development Kit, which is a software development environment for building Java applications. JRE stands for Java Runtime Environment, which is required to run Java programs."
+    },
+    "2": {
+        "question": "Why is Java a platform independent language?",
+        "answer": "By relying on a virtual machine, Java achieves platform independence. In practice, this means that both the Java programming language and its associated APIs are first compiled into bytecodes that can run on multiple platforms. Then, the virtual machine handles any variations in how these bytecodes are executed across different platforms."
+    },
+    "3": {
+        "question": "What is the difference between an abstract class and an interface?",
+        "answer": "An abstract class is a class that cannot be instantiated and can only be inherited. An interface is a blueprint of a class that contains only abstract methods and constants."
+    },
+    "4": {
+        "question": "What is the difference between final, finally, and finalize?",
+        "answer": "Final is used to make a variable or method constant and cannot be changed later. finally is used in try-catch blocks to execute a block of code regardless of whether an exception is thrown or not. finalise is a method that is called by the garbage collector when an object is no longer in use."
+    },
+    "5": {
+        "question": "What is the difference between stack and heap memory?",
+        "answer": "Stack memory is used for storing local variables and function call, while heap memory is used for storing objects and their instance variables."
+    },
+    "6": {
+        "question": "What is the difference between method overloading and method overriding?",
+        "answer": "Method overloading is creating multiple methods in a class with the same name but different parameters, while method overriding is creating a method in a subclass with the same name and parameters as a method in its superclass."
+    },
+    "7": {
+        "question": "What is the difference between an abstract class and an interface?",
+        "answer": "An abstract class can have both abstract and concrete methods, while an interface can only have abstract methods. A class can extend only one abstract class, but it can implement multiple interfaces."
+    },
+    "8": {
+        "question": "What is the difference between a private and a protected modifier?",
+        "answer": "A private modifier makes a member accessible only within the same class, while a protected modifier makes a member accessible within the same class and its subclasses."
+    },
+    "9": {
+        "question": "What is constructor overloading in Java?",
+        "answer": "Constructor overloading is a concept in object- oriented programming where a class can have multiple constructors with different parameter lists. Each constructor provides a different way to initialise objects of that class."
+    },
+    "10": {
+        "question": "What is the use of super keyword in Java?",
+        "answer": "The super keyword is used to access data members of the parent class when the data members names of the parent class and its child subclasses are the same, to call the default and parameterized constructor of the parent class inside the child subclass and to access parent class methods when the child subclasses have overridden them."
+    },
+    "11": {
+        "question": "What is the difference between static methods, static variables, and static classes in Java?",
+        "answer": "Static Methods and Static variables are those methods and variables that belong to the class of the java program, not to the object of the class. They are allocated memory when the class is loaded and can directly be called with the help of the class names. A class in the java program cannot be static except if it is the inner class. If it is an inner static class, then it exactly works like other static members of the class"
+    },
+    "12": {
+        "question": "What exactly is System.out.println in Java?",
+        "answer": "System.out.println() is a method to print a message on the console. System - It is a class present in java.lang package. Out is the static variable of type PrintStream class present in the System class. println() is the method present in the PrintStream class."
+    },
+    "13": {
+        "question": "What part of memory - Stack or Heap - is cleaned in the garbage collection process?",
+        "answer": "Garbage Collection is done on heap memory to free the memory used by objects that don't have any reference. Any object created in the heap space has global access and can be referenced from anywhere in the application."
+    },
+    "14": {
+        "question": "What are the Object Oriented Features supported by Java?",
+        "answer": "Java is an object-oriented programming language and supports the following object- oriented features:\n\n Encapsulation: Java allows encapsulation, which is the practice of hiding the implementation details of an object from other objects. This is achieved through the use of access modifiers*.\n\n Inheritance: Java supports inheritance, which allows a new class to be based on an existing class, inheriting its attributes and methods. This enables code reuse and makes it easier to create new classes that have common properties with existing classes.\n\n  Polymorphism: Java supports polymorphism, which allows objects of different classes to be treated as if they were objects of a common superclass. This can be achieved through method overriding and method overloading.\n\n Abstraction: Java allows abstraction, which is the process of hiding complex implementation details and providing a simplified interface for the user. This can be achieved through abstract classes and interfaces.\n\n Classes and Objects: Java is a class-based language, which means that it provides constructs for defining classes and creating objects from those classes."
+    },
+    "15": {
+        "question": "What are the different access specifiers used in Java?",
+        "answer": "Java has 4 access specifiers.\n\n Public Can be accessed by any class or method\n\nProtected Can be accessed by the class of the same package, or by the sub-class of this class, or within the same class\n\nDefault Are accessible only within the package, is the default option for all classes, methods and variables.\n\nPrivate Can be accessed only within the class"
+    },
+    "16": {
+        "question": "What is the difference between composition and inheritance?",
+        "answer": "Composition is a 'has-a' relationship, where a class contains an object of another class as a member variable. Inheritance is an 'is-a' relationship, where a subclass extends a superclass to inherit its attributes and methods."
+    },
+    "17": {
+        "question": "What is the purpose of an abstract class?",
+        "answer": "An abstract class is a class that cannot be instantiated and is used as a base class for other classes to inherit from. It can contain abstract methods, which are declared but not implemented in the abstract class and must be implemented in the subclasses."
+    },
+    "18": {
+        "question": "What are the differences between constructor and method of a class in Java?",
+        "answer": "Constructor is used for initialising the object state whereas method is used for exposing the object's behaviour. Constructors have no return type but Methods should have a return type. Even if it does not return anything, the return type is void. If the constructor is not defined, then a default constructor is provided by the java compiler. The constructor name should be equal to the class name. A constructor cannot be marked as final because whenever a class is inherited, the constructors are not inherited. A method can be defined as final but it cannot be overridden in its subclasses."
+    },
+    "19": {
+        "question": "What is the diamond problem in Java and how is it solved?",
+        "answer": "The diamond problem is an issue that can arise in programming languages that support multiple inheritance, where a class inherits from two or more classes that have a common ancestor. This can cause ambiguity in the method resolution order, leading to unpredictable behaviour. In Java, multiple inheritance is not supported directly, but it can be simulated using interfaces. A class can implement one or more interfaces, effectively inheriting their properties and methods."
+    },
+    "20": {
+        "question": "What is the difference between local and instance variables in Java?",
+        "answer": "Instance variables are accessible by all the methods in the class. They are declared outside the methods and inside the class. These variables describe the properties of an object and remain bound to it. Local variables are those variables present within a block, function, or constructor and can be accessed only inside them. The utilisation of the variable is restricted to the block scope."
+    },
+    "21": {
+        "question": "What is a Marker interface in Java?",
+        "answer": "Marker interfaces or tagging interfaces are those which have no methods and constants defined in them. They help the compiler and JVM get run time-related object information."
+    },
+    "22": {
+        "question": "Why are strings immutable in Java?",
+        "answer": "This storage area in the Java heap is specifically used to store String literals, with the aim of reducing the creation of temporary String objects through sharing. For sharing to be possible, an immutable class is required. Also no external synchronisation of threads is required if the String objects are immutable. In Hash Tables and HashMaps, keys are String objects and should thus be immutable to avoid modification."
+    },
+    "23": {
+        "question": "What is the difference between creating a String using new() and as a literal?",
+        "answer": "If we create a String using new(), then a new object is created in the heap memory even if that value is already present in the heap memory. If we create a String using String literal and its value already exists in the string pool, then that String variable also points to that same value in the String pool without the creation of a new String with that value."
+    },
+    "24": {
+        "question": "What is the Collections framework?",
+        "answer": "The Collections framework is a set of interfaces and classes that provide common data structures such as lists, sets, and maps."
+    },
+    "25": {
+        "question": "What is the difference between ArrayList and LinkedList?",
+        "answer": "ArrayList is a dynamic array that can grow or shrink as needed, while LinkedList is a doubly linked list that allows fast insertion and deletion of elements."
+    },
+    "26": {
+        "question": "What is the difference between a HashMap and a TreeMap?",
+        "answer": "HashMap is a hash table that stores key-value pairs, while TreeMap is a red-black tree that stores key-value pairs in sorted order."
+    },
+    "27": {
+        "question": "What is the difference between a HashSet and a TreeSet?",
+        "answer": "HashSet is a set that stores unique elements in an unordered manner, while TreeSet is a set that stores unique elements in a sorted manner."
+    },
+    "28": {
+        "question": "What is the difference between an Iterator and a ListIterator?",
+        "answer": "Iterator is used to traverse a collection in a forward direction, while ListIterator is used to traverse a list in both forward and backward directions."
+    },
+    "29": {
+        "question": "What is the difference between an ArrayList and a LinkedList?",
+        "answer": "An ArrayList is a dynamic array that can grow or shrink as needed, while a LinkedList is a doubly linked list that allows fast insertion and deletion of elements. Accessing an element in an ArrayList is O(1) on average, while accessing an element in a LinkedList is O(n) on average."
+    },
+    "30": {
+        "question": "What is the purpose of the Comparable interface?",
+        "answer": "The Comparable interface is used to provide a natural ordering for a class. It contains a single method compareTo() that compares the current object with another object of the same class and returns a negative integer, zero, or a positive integer depending on whether the current object is less than, equal to, or greater than the other object, respectively."
+    },
+    "31": {
+        "question": "What is the difference between a HashSet and a TreeSet?",
+        "answer": "A HashSet is an unordered collection of unique elements, while a TreeSet is a sorted collection of unique elements. HashSet uses a hash table to store its elements, while TreeSet uses a balanced binary tree."
+    },
+    "32": {
+        "question": "What is the purpose of the java.util.concurrent package?",
+        "answer": "The java.util.concurrent package provides classes for concurrent programming, including thread pools, locks, atomic variables, and concurrent collections. It is designed to improve performance and scalability in multi- threaded applications."
+    },
+    "33": {
+        "question": "What is an exception?",
+        "answer": "An exception is an event that occurs during the execution of a program that disrupts the normal flow of instructions."
+    },
+    "34": {
+        "question": "How does an exception propagate throughout the Java code?",
+        "answer": "When an exception occurs, it tries to locate the matching catch block. If the matching catch block is located, then that block is executed. Otherwise the exception propagates through the method call stack and goes into the caller method where the process of matching the catch block is performed. This happens until the matching catch block is found. IIn case the match is not found, the program gets terminated in the main method."
+    },
+    "35": {
+        "question": "What is the difference between checked and unchecked exceptions?",
+        "answer": "Checked exceptions are checked at compile- time, while unchecked exceptions are checked at runtime."
+    },
+    "36": {
+        "question": "What is the use of try-catch block in Java?",
+        "answer": "The try-catch block is used to handle exceptions in Java."
+    },
+    "37": {
+        "question": "What is the difference between throw and throws?",
+        "answer": "Throw is used to explicitly throw an exception, while throws is used to declare a method that can potentially throw an exception."
+    },
+    "38": {
+        "question": "What is the use of the finally block?",
+        "answer": "The finally block is used to execute a block of code regardless of whether an exception is thrown or not."
+    },
+    "39": {
+        "question": "What’s the base class of all exception classes?",
+        "answer": "In Java, Java.lang.Throwable is the super class of all exception classes and all exception classes are derived from this base class."
+    },
+    "40": {
+        "question": "What is Java Enterprise Edition (Java EE)?",
+        "answer": "Java Enterprise Edition (Java EE) is a set of specifications and APIs for developing enterprise applications in Java. It includes a range of technologies, such as Servlets, JSPs, EJBs, JPA, JMS, and JNDI."
+    },
+    "41": {
+        "question": "What is the difference between a Servlet and a JSP?",
+        "answer": "A Servlet is a Java class that processes HTTP requests and generates HTTP responses. A JSP (JavaServer Pages) is a text-based document that is compiled into a Servlet. JSPs allow for a separation of presentation logic from business logic."
+    },
+    "42": {
+        "question": "What is the purpose of the Java Persistence API (JPA)?",
+        "answer": "The Java Persistence API (JPA) is a specification for object-relational mapping (ORM) in Java. It provides a set of interfaces and annotations for mapping Java objects to relational database tables and vice versa."
+    },
+    "43": {
+        "question": "What is the difference between stateful and stateless session beans?",
+        "answer": "Stateful session beans maintain a conversational state with the client, while stateless session beans do not. Stateful session beans are used for long-running conversations with a client, while stateless session beans are used for short-lived tasks."
+    },
+    "44": {
+        "question": "What is a thread and what are the different stages in its lifecycle?",
+        "answer": "A thread is a lightweight process that can run concurrently with other threads in a program. Java thread life cycle has 5 stages: New, Runnable, Running, Non-Runnable(Blocked/ Waiting), Terminated."
+    },
+    "45": {
+        "question": "What is the difference between process and thread?",
+        "answer": "A process is a program in execution, while a thread is a subset of a process. Threads share memory while processes do not."
+    },
+    "46": {
+        "question": "What are the different types of thread priorities available in Java?",
+        "answer": "There are a total of 3 different types of priority available in Java. MIN_PRIORITY:Integer value 1. MAX_PRIORITY: Integer value 10.NORM_PRIORITY: Integer value 5"
+    },
+    "47": {
+        "question": "What is context switching in Java?",
+        "answer": "Context switching in Java is the process of switching from one thread to another by the operating system's scheduler. During context switching, the current thread's context, including its register values and program counter, are saved, and the next thread's context is restored."
+    },
+    "48": {
+        "question": "What is the difference between user threads and Daemon threads?",
+        "answer": "In Java, user threads have a specific life cycle and its life is independent of any other thread and are used for critical tasks. Daemon threads are basically referred to as a service provider that provides services and support to user threads. JVM does not wait for daemon threads to finish their tasks before termination., but waits for user threads."
+    },
+    "49": {
+        "question": "What is synchronization?",
+        "answer": "Synchronization is the mechanism that ensures that only one thread can access a shared resource at a time."
+    },
+    "50": {
+        "question": "What is a deadlock?",
+        "answer": "A deadlock is a situation where two or more threads are blocked waiting for each other to release the resources they need to proceed."
+    },
+    "51": {
+        "question": "What is the use of the wait() and notify() methods?",
+        "answer": "Wait() and notify() methods are used for inter- thread communication in Java."
+    },
+    "52": {
+        "question": "What is the difference between a thread and a process in Java?",
+        "answer": "A process is an independent program that runs in its own memory space, while a thread is a subset of a process that runs concurrently with other threads in the same process."
+    },
+    "53": {
+        "question": "What is the difference between synchronized and volatile in Java?",
+        "answer": "Synchronized is used to provide exclusive access to a shared resource by allowing only one thread to access it at a time, while volatile is used to ensure visibility of changes made to a shared variable by guaranteeing that all threads see the same value."
+    },
+    "54": {
+        "question": "What is the purpose of the sleep() method in Java?",
+        "answer": "The sleep() method is used to pause the execution of a thread for a specified amount of time, allowing other threads to execute in the meantime."
+    },
+    "55": {
+        "question": "What is the difference between wait() and sleep() in Java?",
+        "answer": "Wait() is a method of the Object class that is used to pause the execution of a thread and release the lock on an object, while sleep() is a method of the Thread class that is used to pause the execution of a thread without releasing any locks."
+    },
+    "56": {
+        "question": "What is the difference between notify() and notifyAll() in Java?",
+        "answer": "Notify() is used to wake up a single thread that is waiting on an object, while notifyAll() is used to wake up all threads that are waiting on an object."
+    }
+}

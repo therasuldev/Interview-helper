@@ -1,4 +1,5 @@
 import 'package:bloc/bloc.dart';
+import 'package:flutter_interview_questions/core/app/enum/question.dart';
 import 'package:flutter_interview_questions/core/model/error/error_model.dart';
 import 'package:flutter_interview_questions/core/model/question/question.dart';
 import 'package:flutter_interview_questions/core/provider/question_bloc/question_event.dart';
@@ -8,7 +9,7 @@ import 'package:flutter_interview_questions/core/repository/question_repository.
 class QuestionBloc extends Bloc<QuestionEvent, QuestionState> {
   final QuestionRepository questionRepository = QuestionRepository();
 
-  QuestionBloc() : super(QuestionState()) {
+  QuestionBloc() : super(QuestionState.unknown()) {
     on<QuestionEvent>((event, emit) {
       switch (event.type) {
         case QuestionEvents.fetchQuestionStart:
@@ -22,7 +23,8 @@ class QuestionBloc extends Bloc<QuestionEvent, QuestionState> {
     emit(state.copyWith(event: event.type, loading: true));
 
     try {
-      final data = await questionRepository.loadQuestions(type: event.payload);
+      final data =
+          await questionRepository.fetchQuestionStart(type: event.payload);
 
       final questions = data.map((question) {
         return Question.fromJson(question);
@@ -30,9 +32,9 @@ class QuestionBloc extends Bloc<QuestionEvent, QuestionState> {
 
       emit(
         state.copyWith(
-          event: QuestionEvents.fetchQuestionSuccess,
           questions: questions,
           loading: false,
+          event: QuestionEvents.fetchQuestionSuccess,
           error: null,
         ),
       );

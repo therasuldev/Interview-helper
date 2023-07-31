@@ -1,0 +1,126 @@
+{
+    "1": {
+        "question": "Describe the process you have for a programming task, from requirements to delivery.",
+        "answer": "The software development process or life cycle is a structure applied to the development of a software product. There are several models for such processes (such as the agile method), each describing approaches to a variety of tasks or activities that take place during the process.\n\n1. Requirements analysis. Extracting the requirements of a desired software product is the first task in creating it. While customers probably believe they know what the software is to do, it may require skill and experience in software engineering to recognize incomplete, ambiguous, or contradictory requirements.\n2. Specification. Specification is the task of precisely describing the software to be written, in a rigorous way. In practice, most successful specifications are written to understand and fine-tune applications that were already well-developed, although safety-critical software systems are often carefully specified prior to application development. Specifications are most important for external interfaces that must remain stable.\n3. Software architecture. The architecture of a software system refers to an abstract representation of that system. Architecture is concerned with making sure the software system will meet the requirements of the product, as well as ensuring that future requirements can be addressed."
+    },
+    "2": {
+        "question": "What programming languages do you use? Which three do you prefer or are most familiar with?",
+        "answer": "Interviewers expect engineers to be familiar with multiple languages. They might look for an engineer who has experience with C++ and with Java, to demonstrate the applicant has programming chops to rapidly pick up a new language. Python is a highly sought after language. If you are applying for a full-stack role, then you should be familiar with JavaScript frameworks like React and Node. (Here is a guide with 84 most asked full-stack interview questions and the best ways to answer them.)\n\nHaving some scripting experience with Perl or Python is also a big plus."
+    },
+    "3": {
+        "question": "How do you implement your error handling?",
+        "answer": "Talk about writing tests, wrapping the code to catch exceptions, trying try/catch statements, and looking through the WOMM development process. Make sure that you have a well-thought-out answer to this question. "
+    },
+    "4": {
+        "question": "What is the software development life cycle? What are the differences between them?",
+        "answer": "SDLC or the Software Development Life Cycle is a process that produces software with the highest quality and lowest cost in the shortest time. SDLC includes a detailed plan for how to develop, alter, maintain, and replace a software system.\n\nSDLC involves several distinct stages, including planning, design, building, testing, and deployment. Popular SDLC models include the waterfall model, spiral model, and Agile model."
+    },
+    "5": {
+        "question": "What has your experience been like as part of an Agile software development process, if any?",
+        "answer": "Agile software development refers to software development methodologies centered around the idea of iterative development, where requirements and solutions evolve through collaboration between self-organizing cross-functional teams. The ultimate value in Agile development is that it enables teams to deliver value faster, with greater quality and predictability, and greater aptitude to respond to change."
+    },
+    "6": {
+        "question": "What is responsive design? What is the difference between fixed and fluid layouts?",
+        "answer": "1. Responsive website design. Websites that are built with responsive design use media queries to target breakpoints that scale images, wrap text, and adjust the layout so that the website can ‘shrink to fit’ any size of screen, such as the difference between desktops and mobiles.\n2. Fluid website design. Websites that are built with fluid design use percentages as relative indicators for widths.\n3. Fixed design. Websites that are built using fixed design rely on fixed pixel widths. While a design with fixed dimensions can sometimes be the quickest way to get up and running, it’ll provide a less user-friendly experience across multiple devices."
+    },
+    "7": {
+        "question": "What is your process to test and find bugs in an application?",
+        "answer": "Software testing is a universally expected part of software development You need to create sets of tests and assessments to be conducted at various development stages. In fact, testing should be carried out at all stages of development, including after your main launch. Things change, platforms are updated, and errors in mobile apps that were not visible before an OS update can wreak havoc.\n\nUsually, this means viewing the application as a whole and as their component pieces, then setting priorities in any areas that you think are more at risk than others. Tests are then conducted to confirm the functionality, and the detected defects are subsequently recorded. These defects can then be prioritized depending on their impact and severity."
+    },
+    "8": {
+        "question": "Algorithms and Data Structures Questions",
+        "answer": "Many technical questions in software engineering interviews quiz you on the fundamentals of algorithms and data structures—in order to evaluate your baseline knowledge of these vital topics. This seems like a formal process and something that’s designed to penalize people who didn’t take a formal computer science degree since most software engineers will use libraries to abstract away efficient implementations of these data structures and algorithms. However, it’s an important part of the process.  \n\nIt’s important for you to understand how these data structures and algorithms actually work,  especially since it will come up in interview settings where you’ll have to whiteboard your solution. This means solving the problem with a paper and pen instead of a computer.  Here are a few sample questions to get you to practice."
+    },
+    "9": {
+        "question": "What is a stack? What are the two basic operations of a stack?",
+        "answer": "A stack is a linear data structure with three basic operations: push (insertion of an element to the stack from the top), pop (removal of the latest element added to the stack). Some implementations of stack also allow peek, a function enabling you to see an element in a stack without modifying it. Stacks use a last-in, first-out structure – so the last element added to the stack is the first element that can be removed. Queues are a similar data structure, which work with a first-in, first-out structure. Stacks are usually implemented with an array or a linked list. You might be asked to implement a stack in an interview and to implement different operations."
+    },
+    "10": {
+        "question": "Use Big O notation to describe QuickSort.",
+        "answer": "A quick sort usually works best on average cases, but there are worst-case scenarios. On average, it is O(N log N), but O(N2) in the worst case. You’ll want to use quick sort in situations where average-case performance matters a lot rather than dwelling on the worst. You’ll need to have a deep and nuanced understanding of algorithms and their performance/implementation in order to answer."
+    },
+    "11": {
+        "question": "How does an array differ from a stack?",
+        "answer": "An array doesn’t have a fixed structure for how to add or retrieve data, but a stack has a strict LIFO approach (last in and first out). Questions like this will test your understanding of the nuances of data structures and the ability to memorize it."
+    },
+    "12": {
+        "question": "Implement Dijkstra’s Shortest Path in the programming language of your choice.",
+        "answer": "Dijkstra’s algorithm is used for finding the shortest path between nodes with positive-edge weights in a graph. This is a classic algorithm question where interviewers test your understanding of how to implement an algorithm, and you’ll often see these for more senior software development roles. Dijkstra is an example: there are others like Bellman-Ford, Floyd-Warshall. You’ll want to study different algorithms and their implementations and practice those implementations in a variety of different manners."
+    },
+    "13": {
+        "question": "What is the difference between blocking and non-blocking calls and its relationship with Node.js? Can you give an example of each?",
+        "answer": "Blocking calls are those where the execution of additional JavaScript has to wait until a non-Javascript operation (such as something with input or output) completes or finishes. You can think of this as a synchronous action. Non-blocking calls can execute asynchronously and so therefore will have a performance advantage. \n\nThis is important because JavaScript is single-threaded, which means that it executes code in a specific order and each operation must finish executing before moving onto the next operation. JavaScript has only one call stack and one memory heap. JavaScript’s engine can help process asynchronous code on the browser.  \n\nMost of the I/O methods in Node.js offer a synchronous and asynchronous method. An example of a forced synchronous file read would be fs.readFileSync as a method, while the fs.readFile method would be asynchronous."
+    },
+    "14": {
+        "question": "What are web workers in HTML5, and why do they matter?",
+        "answer": "Since JavaScript is single-threaded, concurrency and simultaneous operations are difficult to execute and must be simulated with functions like setTimeout and setInterval. Web workers in HTML5 helps to run background scripts in a web application without blocking changes in the UI. In effect, web workers helps simulate multi-threading in JavaScript, allowing simultaneous scripts to run"
+    },
+    "15": {
+        "question": "How do you organize CSS files? What are the pros and cons of this approach?",
+        "answer": "This question tests your organizational ability and your familiarity with web development front-end principles, especially relevant if the role in question is more front-end focused. \n\nHere’s an example of a file schema for CSS that would make sense:\n\n* reset.css: reset and normalization styles; minimal color, border, or font-related declarations\n* typography.css: font faces, weights, line heights, sizes, and styles for headings and body text\n* layouts.css: styles that manage page layouts and segments, including grids\n* forms.css: styles for form controls and labels\n* lists.css: list-specific styles\n* tables.css: table-specific styles\n* carousel.css: styles required for carousel components\n* accordion.css: styles for accordion components.”"
+    },
+    "16": {
+        "question": "Build a single page application with multiple sections using any framework that you feel most comfortable with",
+        "answer": "Interviewers might prefer React.js and React Router in 2020, but you can use anything you want. The purpose of this testing is to see how you build applications, even simple ones, and if you can build them at all. Oftentimes, an interviewer will observe you in a pair programming like setting, and will observe every step of your work process."
+    },
+    "17": {
+        "question": "What is black box testing? What is white box testing?",
+        "answer": "Software Testing can be majorly classified into two categories:\n\n* Black Box Testing is a software testing method in which the internal structure/ design/ implementation of the item being tested is not known to the tester.\n\n* White Box Testing is a software testing method in which the internal structure/ design/ implementation of the item being tested is known to the tester."
+    },
+    "18": {
+        "question": "What are some ways to make websites faster? Name as many different techniques as you can.",
+        "answer": "1. Implement your own content delivery network (CDN). \n2. Use adaptive images. \n3. Cache, cache, cache.\n4. Evaluate your plugins.\n5. Combine images into CSS sprites. \n6. Enable HTTP keep-alive response headers.\n7. Compress your content. \n8. Configure expires headers. \n9. Minify JavaScript and CSS. \n10. Review your hosting package."
+    },
+    "19": {
+        "question": "What is the difference between functional requirements and non-functional requirements?",
+        "answer": "Functional requirements are the features that a developed software product is expected to perform. For example, adding a payment option at an eCommerce website will be a functional requirement. Non-functional requirements measure the usability of the application such as User Interface look and feel, Security, Performance, Interoperability, Reliability, etc."
+    },
+    "20": {
+        "question": "What is the smallest building block of ReactJS?",
+        "answer": "The smallest building blocks are React.js elements as opposed to components or props which are larger elements."
+    },
+    "21": {
+        "question": "Why would you choose a microservice approach vs a monolithic app?",
+        "answer": "If you built your app as a microservice, it’d be a combination of different services that operate independently and robustly without being dependent on one another. You might want to do this if you wanted an app with multiple points of failures or faster performance or efficiency per each app. You should be prepared to defend your decision here and to have a point of view informed by scaling issues"
+    },
+    "22": {
+        "question": "Tell me about a tough software development problem and how you solved it.",
+        "answer": "Give a brief description. Make the assumption the other person doesn’t know any specialized vocabulary or industry-specific challenges. You can also ask the interviewer about their familiarity with the topic you’re about to describe and mold your answer based on the other person’s level of context (a more or less technical answer)."
+    },
+    "23": {
+        "question": "Do you have any personal projects? Tell me about them.",
+        "answer": "Sometimes it’s hard to settle on an idea for a project. If you have that problem, start by making a replica of a different application with a different tech stack or something. This will get your brain pumping and eventually you’ll come up with something you’d rather do. The key isn’t coming up with a great idea. The key is to get started on something.\n\nAfter you’ve worked on your replica for a while, you might notice some shortcomings in the app that you can fix. Or you might realize that you don’t want to make this replica anymore and you start on something else. The purpose of replicating an existing app isn’t to really make the replica. The purpose is to get you started on something so that you’ll find what you really want to do."
+    },
+    "24": {
+        "question": "Explain the concept of cloud computing to my older (not-very-technical) mother.",
+        "answer": "In the simplest terms, cloud computing means storing and accessing data and programs over the Internet instead of your computer’s hard drive. Instead of storing data on your own machine, you store it on the machines of cloud service providers like Google and Amazon."
+    },
+    "25": {
+        "question": "Have you ever disagreed with your boss or manager? What did you do?",
+        "answer": "Your goal is to share a story where you disagreed with your manager and you were right about the disagreement. The reason you want to be right is that your story should ideally show how competent you are at your work, which will give the hiring manager confidence in hiring you. This answer can also display other great skills such as negotiating, selling an idea, and inspiring others."
+    },
+    "26": {
+        "question": "Why do you want to work at [company name]? Have you used our products?",
+        "answer": "How can you help the company succeed? Read up on what’s happening with the company and its industry. What stage of growth is the business in? Has it recently changed its product or service offerings? What competitive pressures is it facing? Consider this landscape and think, “What knowledge and experience do I have that would be especially useful to this employer in this time of growth and/or change?”"
+    },
+    "27": {
+        "question": "When do you consider a product to be finished?",
+        "answer": "The process of software development is a never-ending cycle. The first release of a software application is rarely “finished.” There are almost always additional features and bug fixes waiting to be designed, developed, and deployed.\n\nReports from error monitoring software about usability and bugs feedback into the process of software development and become new feature requests and improvements to existing features."
+    },
+    "28": {
+        "question": "Teach me about something for the next 10 minutes.",
+        "answer": "Choose a simple topic or concept that is easy to explain and will be easy for the interviewer to understand. Making the answer fun will help to engage the interviewer. Keep the answer lighthearted. Remember, the content is not as important as the delivery and showing your communication and teaching skills."
+    },
+    "29": {
+        "question": "What web technologies are you excited about, and why do you think they’ll win/survive in the next decade?",
+        "answer": "Choose a web technology and describe it, along with reasons (for example, technical and community support) for why it might win out against other web technologies. This question tries to gauge your passion for web development and following emerging technologies, as well as your strategic vision for the future of web development."
+    },
+    "30": {
+        "question": "Do you contribute to open source projects? Have you flagged issues?",
+        "answer": "On this question, you’ll want to flag your passion for the open-source ecosystem, as a proxy for your passion for software engineering and your ability to being proactive about contributing."
+    },
+    "31": {
+        "question": "What are your favorite resources to keep on top of software engineering?",
+        "answer": "You’ll want to have a list of resources ready, but more importantly, you’ll want to be pretty sharp about genuinely following resources in the space. This displays your ability to learn new things and your passion for doing so, an important trait in a field that is ever-evolving. Here is one Hackernoon resource that you can learn from."
+    }
+}

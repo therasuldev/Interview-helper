@@ -3,9 +3,10 @@
 import 'dart:convert';
 
 import 'package:flutter/services.dart';
+import 'package:flutter_interview_questions/core/app/constant.dart';
 
 import 'package:flutter_interview_questions/core/interface/i_question_repository.dart';
-import 'package:flutter_interview_questions/core/local_service/cache_service.dart';
+import 'package:flutter_interview_questions/core/cache/cache_service.dart';
 
 class QuestionRepository extends IQuestionRepository {
   QuestionRepository({
@@ -15,22 +16,24 @@ class QuestionRepository extends IQuestionRepository {
   final CacheService _cacheService;
 
   @override
-  Future<List<Map<String, dynamic>>> loadQuestions({String? type}) async {
+  Future<List<Map<String, dynamic>>> fetchQuestionStart({String? type}) async {
     List<Map<String, dynamic>> questions = [];
 
-    var jsonStr = await rootBundle.loadString('prg_lang/$type.json');
-    Map<String, dynamic> jsonMap = await json.decode(jsonStr);
+    var jsonV =
+        await rootBundle.loadString('${Constant.questionPath}/$type.json');
+    Map<String, dynamic> jsonMap = await json.decode(jsonV);
 
     for (var i = 1; i <= jsonMap.length; i++) {
       questions.add(jsonMap['$i']);
     }
 
     _cacheService.questions.put(type, questions);
-    return await getQuestions(type!);
+    return await fetchQuestionSuccess(type!);
   }
 
   @override
-  Future<List<Map<String, dynamic>>> getQuestions(String category) async {
+  Future<List<Map<String, dynamic>>> fetchQuestionSuccess(
+      String category) async {
     return await _cacheService.questions.get(category);
   }
 }

@@ -27,7 +27,7 @@ class Intl {
         RegExp(r'\%[0-9]{1,3}', multiLine: true), (Match match) {
       idx = int.parse(match[0]!.substring(1)) - 1;
 
-      return (args.asMap()[idx] ?? match[0]).toString();
+      return (args.asMap()[idx] ?? match[0]).str();
     });
 
     return formatted;
@@ -39,7 +39,7 @@ class Intl {
     Map<String, dynamic> jsonMap = json.decode(jsonString);
 
     localizedValues = jsonMap.map(
-      (key, value) => MapEntry(key, value.toString()),
+      (key, value) => MapEntry(key, value.str()),
     );
     return localizedValues!;
   }
