@@ -62,15 +62,7 @@ class _QuestionViewState extends State<QuestionView> {
                     child: Row(
                       children: [
                         const BackButton(color: Colors.white),
-                        const Spacer(flex: 30),
-                        IconButton(
-                          onPressed: () {},
-                          icon: const Icon(
-                            Icons.favorite,
-                            color: Colors.white,
-                          ),
-                        ),
-                        const Spacer(flex: 1),
+                        const Spacer(),
                         Text(
                           '${currentIndex + 1}/${widget.questions.length}',
                           style: const TextStyle(
