@@ -47,7 +47,7 @@ class _GeneralPageState extends State<GeneralPage> {
     return AppBar(
       centerTitle: true,
       title: Text(
-        'Programming languages',
+        'Categories',
         style: ViewUtils.ubuntuStyle(fontSize: 22),
       ),
       backgroundColor: const Color.fromARGB(255, 38, 109, 176),
