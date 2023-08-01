@@ -50,7 +50,9 @@ class _QuestionCardState extends State<Questions> {
           ),
           centerTitle: true,
           actions: const [AppBarSearchButton()],
+          backgroundColor: const Color.fromARGB(255, 38, 109, 176),
         ),
+        backgroundColor: const Color.fromARGB(255, 38, 109, 176),
       ),
       body: ListView.builder(
         padding: const EdgeInsets.only(top: 20),

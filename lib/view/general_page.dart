@@ -16,25 +16,23 @@ class _GeneralPageState extends State<GeneralPage> {
     const BookStore(),
   ]);
 
-  _bottomTapped(index) {
-    setState(() {
-      this.index = index;
-    });
+  bottomTapped(index) {
+    setState(() => pageIdx = index);
   }
 
-  int index = 0;
+  int pageIdx = 0;
 
   @override
   Widget build(BuildContext context) => Scaffold(
         backgroundColor: Colors.grey[200],
-        appBar: index == 0 ? _homeAppBar() : null,
-        body: pages.elementAt(index),
+        appBar: appBar(pageIdx),
+        body: pages.elementAt(pageIdx),
         bottomNavigationBar: BottomNavigationBar(
           selectedLabelStyle: ViewUtils.ubuntuStyle(fontSize: 16),
           unselectedLabelStyle: ViewUtils.ubuntuStyle(fontSize: 14),
           selectedItemColor: const Color.fromARGB(255, 38, 109, 176),
-          currentIndex: index,
-          onTap: (ind) => _bottomTapped(ind),
+          currentIndex: pageIdx,
+          onTap: (idx) => bottomTapped(idx),
           items: const [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
             BottomNavigationBarItem(
@@ -43,36 +41,14 @@ class _GeneralPageState extends State<GeneralPage> {
         ),
       );
 
-  AppBar _homeAppBar() {
+  AppBar appBar(int pageIdx) {
     return AppBar(
       centerTitle: true,
       title: Text(
-        'Categories',
-        style: ViewUtils.ubuntuStyle(fontSize: 22),
-      ),
-      backgroundColor: const Color.fromARGB(255, 38, 109, 176),
-    );
-  }
-
-  AppBar _libraryAppBar() {
-    return AppBar(
-      centerTitle: true,
-      title: Text(
-        'Library',
+        pageIdx == 0 ? 'Categories' : 'Library',
         style: ViewUtils.ubuntuStyle(fontSize: 22),
       ),
       backgroundColor: const Color.fromARGB(255, 38, 109, 176),
     );
   }
 }
-
-
-//  appBar: AppBarWithSearchSwitch(
-//         onChanged: (text) {},
-//         appBarBuilder: (context) {
-//           return AppBar(
-//             title: const Text('Library '),
-//             actions: const [AppBarSearchButton()],
-//           );
-//         },
-//       ),
