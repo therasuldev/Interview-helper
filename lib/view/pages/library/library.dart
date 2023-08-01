@@ -25,7 +25,11 @@ class _BookStoreState extends State<BookStore> {
     return BlocBuilder<BookBloc, BookState>(
       builder: (context, state) {
         if (state.loading!) {
-          return const CircularProgressIndicator();
+          return const Center(
+            child: RepaintBoundary(
+              child: CircularProgressIndicator(),
+            ),
+          );
         } else if (!state.loading!) {
           return ListView(
             shrinkWrap: true,
@@ -42,7 +46,152 @@ class _BookStoreState extends State<BookStore> {
                 title: Titles.go.title,
                 page: AllBooks(books: state.library![1][Type.go.type]!),
               ),
-              _BookCardWidget(books: state.library![1][Type.go.type]!)
+              _BookCardWidget(books: state.library![1][Type.go.type]!),
+
+              //* Java
+              _RowTitleWidget(
+                title: Titles.java.title,
+                page: AllBooks(books: state.library![1][Type.java.type]!),
+              ),
+              _BookCardWidget(books: state.library![1][Type.java.type]!),
+
+              //* Python
+              _RowTitleWidget(
+                title: Titles.python.title,
+                page: AllBooks(books: state.library![1][Type.python.type]!),
+              ),
+              _BookCardWidget(books: state.library![1][Type.python.type]!),
+
+              //* Ruby
+              _RowTitleWidget(
+                title: Titles.ruby.title,
+                page: AllBooks(books: state.library![1][Type.ruby.type]!),
+              ),
+              _BookCardWidget(books: state.library![1][Type.ruby.type]!),
+
+              //* Rust
+              _RowTitleWidget(
+                title: Titles.rust.title,
+                page: AllBooks(books: state.library![1][Type.rust.type]!),
+              ),
+              _BookCardWidget(books: state.library![1][Type.rust.type]!),
+
+              //* Java Script
+              _RowTitleWidget(
+                title: Titles.js.title,
+                page: AllBooks(books: state.library![1][Type.js.type]!),
+              ),
+              _BookCardWidget(books: state.library![1][Type.js.type]!),
+
+              //* React
+              _RowTitleWidget(
+                title: Titles.react.title,
+                page: AllBooks(books: state.library![1][Type.react.type]!),
+              ),
+              _BookCardWidget(books: state.library![1][Type.react.type]!),
+
+              //* C#
+              _RowTitleWidget(
+                title: Titles.csharp.title,
+                page: AllBooks(books: state.library![1][Type.csharp.type]!),
+              ),
+              _BookCardWidget(books: state.library![1][Type.csharp.type]!),
+
+              //* NodeJS
+              _RowTitleWidget(
+                title: Titles.nodejs.title,
+                page: AllBooks(books: state.library![1][Type.nodejs.type]!),
+              ),
+              _BookCardWidget(books: state.library![1][Type.nodejs.type]!),
+
+              //* Perl
+              _RowTitleWidget(
+                title: Titles.perl.title,
+                page: AllBooks(books: state.library![1][Type.perl.type]!),
+              ),
+              _BookCardWidget(books: state.library![1][Type.perl.type]!),
+
+              //* PHP
+              _RowTitleWidget(
+                title: Titles.php.title,
+                page: AllBooks(books: state.library![1][Type.php.type]!),
+              ),
+              _BookCardWidget(books: state.library![1][Type.php.type]!),
+
+              //* Scala
+              _RowTitleWidget(
+                title: Titles.scala.title,
+                page: AllBooks(books: state.library![1][Type.scala.type]!),
+              ),
+              _BookCardWidget(books: state.library![1][Type.scala.type]!),
+
+              //* Swift
+              _RowTitleWidget(
+                title: Titles.swift.title,
+                page: AllBooks(books: state.library![1][Type.swift.type]!),
+              ),
+              _BookCardWidget(books: state.library![1][Type.swift.type]!),
+
+              //* C++
+              _RowTitleWidget(
+                title: Titles.cplasplas.title,
+                page: AllBooks(books: state.library![1][Type.cplasplas.type]!),
+              ),
+              _BookCardWidget(books: state.library![1][Type.cplasplas.type]!),
+
+              //* Git
+              _RowTitleWidget(
+                title: Titles.git.title,
+                page: AllBooks(books: state.library![1][Type.git.type]!),
+              ),
+              _BookCardWidget(books: state.library![1][Type.git.type]!),
+
+              //* Frontend
+              _RowTitleWidget(
+                title: Titles.frontend.title,
+                page: AllBooks(books: state.library![1][Type.frontend.type]!),
+              ),
+              _BookCardWidget(books: state.library![1][Type.frontend.type]!),
+
+              //* Backend
+              _RowTitleWidget(
+                title: Titles.backend.title,
+                page: AllBooks(books: state.library![1][Type.backend.type]!),
+              ),
+              _BookCardWidget(books: state.library![1][Type.backend.type]!),
+
+              //* Engineer
+              _RowTitleWidget(
+                title: Titles.engineer.title,
+                page: AllBooks(books: state.library![1][Type.engineer.type]!),
+              ),
+              _BookCardWidget(books: state.library![1][Type.engineer.type]!),
+
+              //* Data Scientist
+              _RowTitleWidget(
+                title: Titles.datascientist.title,
+                page: AllBooks(
+                    books: state.library![1][Type.datascientist.type]!),
+              ),
+              _BookCardWidget(
+                  books: state.library![1][Type.datascientist.type]!),
+
+              //* Data Analyst
+              _RowTitleWidget(
+                title: Titles.dataanalyst.title,
+                page:
+                    AllBooks(books: state.library![1][Type.dataanalyst.type]!),
+              ),
+              _BookCardWidget(books: state.library![1][Type.dataanalyst.type]!),
+
+              //* Cyber Security
+              _RowTitleWidget(
+                title: Titles.cybersecurity.title,
+                page: AllBooks(
+                    books: state.library![1][Type.cybersecurity.type]!),
+              ),
+              _BookCardWidget(
+                  books: state.library![1][Type.cybersecurity.type]!),
             ],
           );
         } else {
@@ -148,8 +297,11 @@ class _RowTitleWidget extends StatelessWidget {
         Text(title, style: ViewUtils.ubuntuStyle(fontSize: 20)),
         TextButton(
           onPressed: () {
-            Navigator.pushAndRemoveUntil(context,
-                MaterialPageRoute(builder: (_) => page), (route) => true);
+            Navigator.pushAndRemoveUntil(
+              context,
+              MaterialPageRoute(builder: (_) => page),
+              (route) => true,
+            );
           },
           child: Text('All', style: ViewUtils.ubuntuStyle(fontSize: 20)),
         )
