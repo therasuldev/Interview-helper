@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_interview_questions/appbar_clipper.dart';
 import 'package:flutter_interview_questions/core/model/question/question.dart';
+import 'package:flutter_interview_questions/view/utils/utils.dart';
 
 class QuestionView extends StatefulWidget {
   const QuestionView({
@@ -65,10 +66,9 @@ class _QuestionViewState extends State<QuestionView> {
                         const Spacer(),
                         Text(
                           '${currentIndex + 1}/${widget.questions.length}',
-                          style: const TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w900,
+                          style: ViewUtils.ubuntuStyle(
                             color: Colors.white,
+                            fontSize: 20,
                           ),
                         )
                       ],
@@ -77,9 +77,8 @@ class _QuestionViewState extends State<QuestionView> {
                   Text(
                     questions[currentIndex].question,
                     textAlign: TextAlign.center,
-                    style: const TextStyle(
+                    style: ViewUtils.ubuntuStyle(
                       fontSize: 25,
-                      fontWeight: FontWeight.w700,
                       color: Colors.white,
                     ),
                   ),
@@ -90,20 +89,19 @@ class _QuestionViewState extends State<QuestionView> {
         ),
         body: Padding(
           padding: EdgeInsets.only(
+            bottom: MediaQuery.of(context).size.width * .2,
             left: 5,
             right: 5,
             top: 5,
-            bottom: MediaQuery.of(context).size.width * .2,
           ),
           child: SingleChildScrollView(
             physics: const BouncingScrollPhysics(),
             child: Text(
               questions[currentIndex].answer,
               textAlign: TextAlign.center,
-              style: const TextStyle(
+              style: ViewUtils.ubuntuStyle(
                 fontSize: 25,
-                fontWeight: FontWeight.w700,
-                color: Color.fromARGB(255, 89, 97, 107),
+                color: const Color.fromARGB(255, 89, 97, 107),
               ),
             ),
           ),
@@ -131,17 +129,13 @@ class _QuestionViewState extends State<QuestionView> {
 }
 
 class _CustomFloatingActionButton extends StatelessWidget {
-  const _CustomFloatingActionButton({
+  _CustomFloatingActionButton({
     required this.heroTag,
     required this.label,
     required this.onPressed,
   });
 
-  final style = const TextStyle(
-    fontSize: 17,
-    fontWeight: FontWeight.w700,
-    color: Colors.white,
-  );
+  final style = ViewUtils.ubuntuStyle(fontSize: 17, color: Colors.white);
 
   @override
   Widget build(BuildContext context) => FloatingActionButton.extended(

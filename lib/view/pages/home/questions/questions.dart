@@ -43,6 +43,7 @@ class _QuestionCardState extends State<Questions> {
             return v.question.contains(input.toLowerCase());
           }).toList();
         },
+        fieldHintText: '...',
         appBarBuilder: (context) => AppBar(
           centerTitle: true,
           title: Text(
@@ -50,7 +51,9 @@ class _QuestionCardState extends State<Questions> {
             style: ViewUtils.ubuntuStyle(fontSize: 22),
           ),
           actions: const [AppBarSearchButton()],
+          backgroundColor: const Color.fromARGB(255, 38, 109, 176),
         ),
+        backgroundColor: const Color.fromARGB(255, 38, 109, 176),
       ),
       body: ListView.builder(
         padding: const EdgeInsets.only(top: 20),
@@ -97,20 +100,17 @@ class _QuestionCard extends StatelessWidget {
           '${index + 1}. ${question.question}',
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
-          style: const TextStyle(
+          style: ViewUtils.ubuntuStyle(
             fontSize: 20,
-            fontWeight: FontWeight.bold,
             color: Colors.black,
+            fontWeight: FontWeight.w600,
           ),
         ),
         subtitle: Text(
           ' ${question.answer}',
           maxLines: 2,
           overflow: TextOverflow.ellipsis,
-          style: const TextStyle(
-            fontSize: 18,
-            color: Colors.grey,
-          ),
+          style: ViewUtils.ubuntuStyle(fontSize: 18, color: Colors.grey),
         ),
       ),
     );

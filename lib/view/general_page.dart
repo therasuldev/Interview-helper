@@ -16,7 +16,7 @@ class _GeneralPageState extends State<GeneralPage> {
     const BookStore(),
   ]);
 
-  _bottomTapped(index) {
+  bottomTapped(index) {
     setState(() => pageIdx = index);
   }
 
@@ -32,7 +32,7 @@ class _GeneralPageState extends State<GeneralPage> {
           unselectedLabelStyle: ViewUtils.ubuntuStyle(fontSize: 14),
           selectedItemColor: const Color.fromARGB(255, 38, 109, 176),
           currentIndex: pageIdx,
-          onTap: (ind) => _bottomTapped(ind),
+          onTap: (idx) => bottomTapped(idx),
           items: const [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
             BottomNavigationBarItem(
