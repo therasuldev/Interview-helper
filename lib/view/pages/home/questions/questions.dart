@@ -44,11 +44,11 @@ class _QuestionCardState extends State<Questions> {
           }).toList();
         },
         appBarBuilder: (context) => AppBar(
-          centerTitle: true,
           title: Text(
             widget.appBarTitle,
             style: ViewUtils.ubuntuStyle(fontSize: 22),
           ),
+          centerTitle: true,
           actions: const [AppBarSearchButton()],
         ),
       ),
@@ -87,7 +87,7 @@ class _QuestionCard extends StatelessWidget {
       height: 100,
       width: MediaQuery.of(context).size.width * .8,
       decoration: ViewUtils.questionCardDecor(),
-      margin: const EdgeInsets.symmetric(vertical: 7, horizontal: 7),
+      margin: const EdgeInsets.all(7),
       child: ListTile(
         onTap: () => AppNavigators.go(
           context,
