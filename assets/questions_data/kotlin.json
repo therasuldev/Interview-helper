@@ -1,0 +1,118 @@
+{
+    "1": {
+        "question": "Features Of Kotlin",
+        "answer": "Kotlin comes in with several features that have made the lives of developers easier. Highlighting a few of the eye-catching features of Kotlin which will help you understand this language better-\n\n1.Compact Code- Kotlin is known as an OOPs-based programming language with fewer code lines compared to Java. This feature makes it a perfect choice for software developers.\n\n2.Open Source- Kotlin combines the attributes of OOPs and functional programming. It is known as an open-source for Android and uses the JVM.\n\n3.Easy to understand- The coding in Kotlin is simple, which makes it readable and understandable. Not to forget, it also helps improve the performance of Android Development.\n\n4.Many extensions- This code can support varied extension functions without modifying the code. It helps in improvising the existing code and making it more efficient.\n\n5.Easy to combine- One can quickly jump from Java Code to Kotlin Code without thinking much as both the codes can be used together. In short, if you have a handful of knowledge of OOPs programming, then switching to Kotlin development shouldn’t be a big deal for you.\n\n6.Cost-efficient- Kotlin supports the highly efficient and cost-effective technique known as Smart Cast. This technique helps in reducing the cost of an application and makes the programming more efficient.\n\n7.Easy to learn- Kotlin brings in easy code language, which eases down the whole process and makes the overall experience easier and more efficient. This code is simple to learn for developers in comparison to other codes."
+    },
+    "2": {
+        "question": "What are the advantages of Kotlin over Java?",
+        "answer": "* Easy Process- In Java, one has to create getters and setters for each object. Not only that, one is required to write hashCode and equals. However, In Kotlin Programming Language, everything is taken care of by classes- making the process easier.\n\n* Rewriting the method- If you use Java, then for each variable, it is essential to rewrite/copy the getter and setter method, which is time-consuming. In Kotlin, the rewrite bit takes a lot less time.\n\n* Support of Extension- In Java, one can’t avail of extension functions. However, in Kotlin, there is strong support for extension functions making the overall process and code language clear.\n\n* No/Fewer Errors- In Kotlin, the chances of errors are less than in Java."
+    },
+    "3": {
+        "question": "What’s the Target Platform of Kotlin? How is Kotlin-Java interoperability possible?",
+        "answer": "Java Virtual Machine is known as the Target Platform of Kotlin. Yes, Kotlin-Java interoperability is possible as both produce bytecode on the compilation. Due to this reason, it’s possible to call Kotlin code from Java and vice-versa."
+    },
+    "4": {
+        "question": "How do you differentiate val and var declaration?",
+        "answer": "The variables of val can’t be changed. They are considered final modifiers in Java. On the other hand, var can be reassigned with the same data type value."
+    },
+    "5": {
+        "question": "Is it possible to convert a String to an Int?",
+        "answer": "Yes, with the toInt() method, it’s possible to convert a String to an Int."
+    },
+    "6": {
+        "question": "What’s the Elvis Operator?",
+        "answer": "Elvis Operator is considered as the safeguard of the value. It helps to unwrap the value from the Nullable safely. It can be identified as ?: over the nullable type. "
+    },
+    "7": {
+        "question": "What is Null Safety?",
+        "answer": "Null Safety refers to initializing the ‘null’ value so that the variable contains the null for the possible execution. With Null Safety, all the runtime null-dereference errors will be reflected in compile time."
+    },
+    "8": {
+        "question": "What are Nullable Types in Kotlin?",
+        "answer": "Here are the following Nullable Types in Kotlin- String?, Int?, Float?."
+    },
+    "9": {
+        "question": "Can we use primitive types like int, float, and double in Kotlin?",
+        "answer": "One can’t use primitive types at the entry-level. But one can experience it at compiled JVM bytecode."
+    },
+    "10": {
+        "question": "What’s the entry point of the Kotlin Program?",
+        "answer": "The primary function is considered the entry point of the Kotlin Program. In this programming language, one can choose to ignore the central part of the class. Later, the strings passed in Array<String> command code are used to reclaim the command line arguments."
+    },
+    "11": {
+        "question": "How is const. not similar to a val?",
+        "answer": "It is impossible to use const with a var or as an individual. Const is not permitted on a local variable. On the other hand, val properties are defined on a runtime. Adding const modifier to val can make a compile-time constant."
+    },
+    "12": {
+        "question": "How do you define that a function has been declared?",
+        "answer": "A function’s return type is signified after the :\n\nFor eg-\n\nfun sumOf(a: Int, b: Int): Int{\n\nreturn a + b}"
+    },
+    "13": {
+        "question": "How do you differentiate between == and === operators in Kotlin?",
+        "answer": "== is used to identify if the values are equal or not. === is used to check if the reference is equal or not."
+    },
+    "14": {
+        "question": "What are the visibility modifiers identified in Kotlin?",
+        "answer": "The Visibility Modifiers in Kotlin are- Public, Internal, Private, and Protected."
+    },
+    "15": {
+        "question": "What is the default visibility modifier?",
+        "answer": "The public is known as the default visibility modifier."
+    },
+    "16": {
+        "question": "Define the type of constructors in Kotlin?",
+        "answer": "Constructors in Kotlin can be defined in two types- Primary and Secondary.\n\nPrimary: Primary constructors are highlighted in the class headers. They are not compatible to hold any logic. Hence, there’s only one primary constructor aligned per class.\n\nSecondary- Secondary constructors are identified in the class body. They are compatible with holding logic. One can specify more than one secondary constructor."
+    },
+    "17": {
+        "question": "Define the init block in Kotlin?",
+        "answer": "init is identified as the initializer block in Kotlin. It can be executed only once the primary constructor has been instantiated. However, if someone invokes a secondary constructor, it will start working after the primary one following the chain."
+    },
+    "18": {
+        "question": "How does String Interpolation work in Kotlin?",
+        "answer": "String Interpolation is used to evaluate string templates. One uses the symbol $ to insert variables inside a String."
+    },
+    "19": {
+        "question": "Identify the type of arguments inside a constructor?",
+        "answer": "The constructor arguments are by default set as val and var."
+    },
+    "20": {
+        "question": "Do you identify ‘new’ as a keyword in Kotlin?",
+        "answer": "No, there is no word as ‘new’ in Kotlin. However, one can identify the same in Java."
+    },
+    "21": {
+        "question": "How can we instantiate a class object in Kotlin?",
+        "answer": "Here’s a quick example of how we can set it in-\n\nclass A\n\nvar a = A()\n\nVal new = A()"
+    },
+    "22": {
+        "question": "What do you understand about Companion Objects in Kotlin?",
+        "answer": "While in other programming languages like Java, a static keyword is used to declare the class members/name. Kotlin doesn’t consist of a static keyword, i.e., to achieve the functionality of static member functions, a companion object is used. Companion Object is also known as Object Extension."
+    },
+    "23": {
+        "question": "What’s the difference between Open and Public keywords in Kotlin?",
+        "answer": "Open resembles Open For Expansion. While in Java, methods can be overridden by default. In Kotlin, it’s essential to use an available form, which can be overridden but cannot be done by default.\n\nIf in Kotlin no visibility modifier is specified, one prefers to use public by default. This means that the declarations will be accessible everywhere inside the program."
+    },
+    "24": {
+        "question": "What do you understand by the “when” keyword in the context of Kotlin?",
+        "answer": "The “when” keyword refers to substitutes. It is used to substitute the switch operator in other languages like Java. Once a particular condition is met, a specific block of code must run. \n\nInside this expression, it compares all the branches one by one. The target is to identify a match. Once the first match is discovered, it heads to the conclusion of the when block and focuses on executing the code immediately. "
+    },
+    "25": {
+        "question": "How do you differentiate lazy from lateinit?",
+        "answer": "* Both of the attributes are known for delaying the property initialization in Kotlin. \n\n* Lateinit is considered as a modifier used with var. It is used to set the value to the var at a later point.\n\nThe lazy method or lambda expression is developed on a val only. The value would be created at runtime as and when required."
+    },
+    "26": {
+        "question": "Does Kotlin have the static keyword?",
+        "answer": "No, in Kotlin, you can’t find the static keyword. To create a static keyword, one has to use the companion object."
+    },
+    "27": {
+        "question": "Is it better to use val mutableList or var immutableList in Kotlin?",
+        "answer": "Mutable and immutable lists improve design clarity as they push the developer to think about and clarify the collection’s purpose. Mutable lists are used if the collection will alter as part of the design and immutable lists if the model is meant to be viewed. \n\nVal and var, again, have specific purposes. They specify how a variable’s value or reference should be handled. Var is used when the value or reference can be altered at any moment and val when the variable’s value or reference can be assigned once and can’t be modified later on. \n\nOften, immutable lists are preferred because they promote functional programming where state is passed to the next function. This way, a new state is constructed by being based on it, instead of being altered. \n\nIt’s also often easier to understand and debug software. Immutable resources don’t induce race conditions because no write access is required in multi-threaded systems. \n\nBut there are downsides, too. Copying large collections to add or remove a single piece is expensive in immutable lists. Code can also become more difficult when you need to alter single fields frequently."
+    },
+    "28": {
+        "question": "Define coroutines in Kotlin.",
+        "answer": "Kotlin doesn’t have async and await keywords. Kotlinx.coroutines is a rich library for coroutines with high-level coroutine-enabled primitives. Kotlin coroutines offer an API to write asynchronous code sequentially. They are similar to lightweight threads because they don’t allocate new threads when creating them. \n\nThe coroutines can be suspended and resumed during execution. You can have a long-running task being executed one by one. "
+    },
+    "29": {
+        "question": "How is using a Sealed Class better than Enum?",
+        "answer": "Sealed classes have different types of subclasses and contain the state. Subclasses that extend Sealed classes should be nested classes or declared in the same file as the Sealed class. "
+    }
+}
