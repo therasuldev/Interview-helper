@@ -83,14 +83,11 @@ class _BookViewState extends State<BookView> {
   Widget? progressIndicatorView() {
     if (_downloadProgress[widget.index] != null && _isProceed) {
       return LinearProgressIndicator(value: _downloadProgress[widget.index]);
-    } else if (_downloadProgress[widget.index] != null && !_isProceed) {
-      return null;
     }
     return null;
   }
 
   Widget buttonView() {
-    // sehife acilanda kantrol
     if (widget.isExist || _cacheRepository.containsKey(widget.book.name)) {
       return _KCupertinoButton(
         buttonText: 'open',
@@ -98,9 +95,7 @@ class _BookViewState extends State<BookView> {
         borderColor: Colors.grey.shade500,
         onPressed: () async => await openPDF(),
       );
-    }
-    //yukleme qurtarandan sonra kantrol
-    else if (_isCompleted) {
+    } else if (_isCompleted) {
       return _KCupertinoButton(
         buttonText: 'open',
         textColor: Colors.grey.shade600,
@@ -108,7 +103,6 @@ class _BookViewState extends State<BookView> {
         onPressed: () async => await openPDF(),
       );
     }
-    // fayl yuklenmeyibse
     return _KCupertinoButton(
       buttonText: 'download',
       textColor: Colors.green,
