@@ -2,7 +2,7 @@ enum Path {
   flutter,
   go,
   backend,
-  cplasplas,
+  cplusplus,
   csharp,
   cybersecurity,
   dataanalyst,
@@ -18,6 +18,8 @@ enum Path {
   python,
   react,
   ruby,
+  kotlin,
+  typescript,
   rust,
   scala,
   swift;
@@ -30,8 +32,8 @@ enum Path {
         return 'go/';
       case Path.backend:
         return 'backend/';
-      case Path.cplasplas:
-        return 'cplasplas/';
+      case Path.cplusplus:
+        return 'cplusplus/';
       case Path.csharp:
         return 'csharp/';
       case Path.cybersecurity:
@@ -64,6 +66,10 @@ enum Path {
         return 'ruby/';
       case Path.rust:
         return 'rust/';
+      case Path.kotlin:
+        return 'kotlin/';
+      case Path.typescript:
+        return 'typescript/';
       case Path.scala:
         return 'scala/';
       case Path.swift:

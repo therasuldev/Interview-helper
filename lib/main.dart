@@ -27,15 +27,10 @@ class MyApp extends StatelessWidget {
       providers: [
         BlocProvider(create: (context) => QuestionBloc()),
         BlocProvider(
-          create: (context) => BookBloc()
-            ..add(
-              BookEvent.fetchBooksStart(
-                [
-                  Path.flutter,
-                  Path.go,
-                ],
-              ),
-            ),
+          create: (context) {
+            return BookBloc()
+              ..add(BookEvent.fetchBooksStart(_Helper.categories));
+          },
         ),
       ],
       child: const MaterialApp(
@@ -44,4 +39,28 @@ class MyApp extends StatelessWidget {
       ),
     );
   }
+}
+
+class _Helper {
+  static Set<Path> get categories => {
+        Path.flutter,
+        Path.go,
+        Path.java,
+        Path.python,
+        Path.ruby,
+        Path.kotlin,
+        Path.typescript,
+        Path.rust,
+        Path.js,
+        Path.react,
+        Path.csharp,
+        Path.nodejs,
+        Path.perl,
+        Path.php,
+        Path.scala,
+        Path.swift,
+        Path.cplusplus,
+        Path.git,
+        Path.cybersecurity,
+      };
 }
