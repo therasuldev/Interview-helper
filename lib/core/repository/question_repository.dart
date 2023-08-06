@@ -28,12 +28,12 @@ class QuestionRepository extends IQuestionRepository {
     }
 
     _cacheService.questions.put(type, questions);
-    return await fetchQuestionSuccess(type!);
+    return fetchQuestionSuccess(type!);
   }
 
   @override
   Future<List<Map<String, dynamic>>> fetchQuestionSuccess(
       String category) async {
-    return await _cacheService.questions.get(category);
+    return _cacheService.questions.get(category);
   }
 }

@@ -1,16 +1,18 @@
 class Categories {
-  static final List<String> _categories = [
+  static final Set<String> _categories = {
     'flutter',
     'go',
     'java',
     'python',
     'ruby',
+    'kotlin',
+    'typescript',
     'rust',
     'js',
     'react',
     'csharp',
     'backend',
-    'cplascplas',
+    'cpluscplus',
     'cybersecurity',
     'dataanalyst',
     'datascientist',
@@ -22,6 +24,6 @@ class Categories {
     'php',
     'scala',
     'swift',
-  ];
+  };
   static List<String> get categories => List<String>.unmodifiable(_categories);
 }

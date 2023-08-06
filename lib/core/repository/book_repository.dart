@@ -5,7 +5,7 @@ import 'package:flutter_interview_questions/core/interface/i_book_repository.dar
 class BookRepository extends IBookRepository {
   List<Map<String, ListResult?>> result = [];
   @override
-  Future<List<Map<String, ListResult?>>> fetchBooks(List<Path> path) async {
+  Future<List<Map<String, ListResult?>>> fetchBooks(Set<Path> path) async {
     for (var p in path) {
       result.add({
         p.name: await FirebaseStorage.instance.ref(Path.getPath(p)).listAll(),

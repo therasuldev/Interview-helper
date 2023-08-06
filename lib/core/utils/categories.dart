@@ -10,7 +10,6 @@ class CategoryHelper {
           image: Assets.imageData.flutter.path,
           title: Titles.flutter.title,
         );
-
       case 'go':
         return CategoryCard(
           image: Assets.imageData.go.path,
@@ -30,6 +29,16 @@ class CategoryHelper {
         return CategoryCard(
           image: Assets.imageData.ruby.path,
           title: Titles.ruby.title,
+        );
+      case 'kotlin':
+        return CategoryCard(
+          image: Assets.imageData.kotlin.path,
+          title: Titles.kotlin.title,
+        );
+      case 'typescript':
+        return CategoryCard(
+          image: Assets.imageData.typescript.path,
+          title: Titles.typescript.title,
         );
       case 'rust':
         return CategoryCard(
@@ -106,10 +115,10 @@ class CategoryHelper {
           image: Assets.imageData.cybersecurity.path,
           title: Titles.cybersecurity.title,
         );
-      case 'cplasplas':
+      case 'cplusplus':
         return CategoryCard(
-          image: Assets.imageData.cplasplas.path,
-          title: Titles.cplasplas.title,
+          image: Assets.imageData.cplusplus.path,
+          title: Titles.cplusplus.title,
         );
       case 'backend':
         return CategoryCard(
