@@ -16,9 +16,9 @@ class $AssetsImageDataGen {
   AssetGenImage get backend =>
       const AssetGenImage('assets/image_data/backend.png');
 
-  /// File path: assets/image_data/cplasplas.png
-  AssetGenImage get cplasplas =>
-      const AssetGenImage('assets/image_data/cplasplas.png');
+  /// File path: assets/image_data/cplusplus.png
+  AssetGenImage get cplusplus =>
+      const AssetGenImage('assets/image_data/cplusplus.png');
 
   /// File path: assets/image_data/csharp.png
   AssetGenImage get csharp =>
@@ -60,6 +60,10 @@ class $AssetsImageDataGen {
   /// File path: assets/image_data/js.png
   AssetGenImage get js => const AssetGenImage('assets/image_data/js.png');
 
+  /// File path: assets/image_data/kotlin.png
+  AssetGenImage get kotlin =>
+      const AssetGenImage('assets/image_data/kotlin.png');
+
   /// File path: assets/image_data/nodejs.png
   AssetGenImage get nodejs =>
       const AssetGenImage('assets/image_data/nodejs.png');
@@ -89,10 +93,14 @@ class $AssetsImageDataGen {
   /// File path: assets/image_data/swift.png
   AssetGenImage get swift => const AssetGenImage('assets/image_data/swift.png');
 
+  /// File path: assets/image_data/typescript.png
+  AssetGenImage get typescript =>
+      const AssetGenImage('assets/image_data/typescript.png');
+
   /// List of all assets
   List<AssetGenImage> get values => [
         backend,
-        cplasplas,
+        cplusplus,
         csharp,
         cybersecurity,
         dataanalyst,
@@ -104,6 +112,7 @@ class $AssetsImageDataGen {
         go,
         java,
         js,
+        kotlin,
         nodejs,
         perl,
         php,
@@ -112,7 +121,8 @@ class $AssetsImageDataGen {
         ruby,
         rust,
         scala,
-        swift
+        swift,
+        typescript
       ];
 }
 
@@ -122,8 +132,8 @@ class $AssetsQuestionsDataGen {
   /// File path: assets/questions_data/backend.json
   String get backend => 'assets/questions_data/backend.json';
 
-  /// File path: assets/questions_data/cplasplas.json
-  String get cplasplas => 'assets/questions_data/cplasplas.json';
+  /// File path: assets/questions_data/cplusplus.json
+  String get cplusplus => 'assets/questions_data/cplusplus.json';
 
   /// File path: assets/questions_data/csharp.json
   String get csharp => 'assets/questions_data/csharp.json';
@@ -161,6 +171,9 @@ class $AssetsQuestionsDataGen {
   /// File path: assets/questions_data/js.json
   String get js => 'assets/questions_data/js.json';
 
+  /// File path: assets/questions_data/kotlin.json
+  String get kotlin => 'assets/questions_data/kotlin.json';
+
   /// File path: assets/questions_data/nodejs.json
   String get nodejs => 'assets/questions_data/nodejs.json';
 
@@ -188,10 +201,13 @@ class $AssetsQuestionsDataGen {
   /// File path: assets/questions_data/swift.json
   String get swift => 'assets/questions_data/swift.json';
 
+  /// File path: assets/questions_data/typescript.json
+  String get typescript => 'assets/questions_data/typescript.json';
+
   /// List of all assets
   List<String> get values => [
         backend,
-        cplasplas,
+        cplusplus,
         csharp,
         cybersecurity,
         dataanalyst,
@@ -204,6 +220,7 @@ class $AssetsQuestionsDataGen {
         help,
         java,
         js,
+        kotlin,
         nodejs,
         perl,
         php,
@@ -212,7 +229,8 @@ class $AssetsQuestionsDataGen {
         ruby,
         rust,
         scala,
-        swift
+        swift,
+        typescript
       ];
 }
 
