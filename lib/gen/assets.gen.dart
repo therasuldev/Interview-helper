@@ -126,17 +126,6 @@ class $AssetsImageDataGen {
       ];
 }
 
-class $AssetsLogoGen {
-  const $AssetsLogoGen();
-
-  /// File path: assets/logo/logo_flutter.jpg
-  AssetGenImage get logoFlutter =>
-      const AssetGenImage('assets/logo/logo_flutter.jpg');
-
-  /// List of all assets
-  List<AssetGenImage> get values => [logoFlutter];
-}
-
 class $AssetsQuestionsDataGen {
   const $AssetsQuestionsDataGen();
 
@@ -249,7 +238,6 @@ class Assets {
   Assets._();
 
   static const $AssetsImageDataGen imageData = $AssetsImageDataGen();
-  static const $AssetsLogoGen logo = $AssetsLogoGen();
   static const $AssetsQuestionsDataGen questionsData =
       $AssetsQuestionsDataGen();
 }

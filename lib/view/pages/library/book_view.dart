@@ -41,6 +41,7 @@ class _BookViewState extends State<BookView> {
   /// when proceed the downloading prosses
   bool _isProceed = false;
 
+  ///
   bool _isCompleted = false;
 
   final Map<int, double> _downloadProgress = {};
