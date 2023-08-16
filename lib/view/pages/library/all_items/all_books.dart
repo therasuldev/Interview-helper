@@ -1,13 +1,10 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_interview_questions/app_navigators.dart';
 import 'package:flutter_interview_questions/core/cache/cache_service.dart';
 import 'package:flutter_interview_questions/core/model/book/book.dart';
-import 'package:flutter_interview_questions/core/repository/book_repository.dart';
+import 'package:flutter_interview_questions/get_book_from_cache.dart';
 import 'package:flutter_interview_questions/view/pages/library/book_view.dart';
 import 'package:flutter_interview_questions/view/utils/utils.dart';
-import 'package:pdf_render/pdf_render_widgets.dart';
 
 class AllBooks extends StatefulWidget {
   const AllBooks({super.key, required this.books});
@@ -54,22 +51,7 @@ class _AllBooksState extends State<AllBooks> {
               margin: const EdgeInsets.all(5),
               child: Column(
                 children: [
-                  FutureBuilder<File>(
-                    future: BookRepository().getFirstpage(book),
-                    builder: (ctx, snapshot) {
-                      if (snapshot.hasData) {
-                        return SizedBox(
-                          height: MediaQuery.of(context).size.width * .5,
-                          child: PdfViewer.openFile(snapshot.data!.path),
-                        );
-                      } else if (snapshot.connectionState ==
-                          ConnectionState.waiting) {
-                        return const CircularProgressIndicator();
-                      } else {
-                        return const SizedBox.shrink();
-                      }
-                    },
-                  ),
+                  GetBooksFromCache(book: book),
                   const SizedBox(height: 15),
                   Expanded(
                     child: Padding(

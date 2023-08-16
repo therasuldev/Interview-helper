@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_interview_questions/app_navigators.dart';
 import 'package:flutter_interview_questions/core/repository/cache_repository.dart';
+import 'package:flutter_interview_questions/get_book_from_cache.dart';
+import 'package:flutter_interview_questions/spinkit_circle_loading_widget.dart';
 import 'package:flutter_interview_questions/view/pages/library/all_items/all_books.dart';
 import 'package:flutter_interview_questions/view/pages/library/book_view.dart';
 
@@ -12,24 +14,20 @@ import 'package:flutter_interview_questions/view/utils/utils.dart';
 import '../../../core/app/enum/lang_title_enum.dart';
 import '../../../core/app/enum/lang_type_enum.dart';
 
-class BookStore extends StatefulWidget {
-  const BookStore({super.key});
+class Library extends StatefulWidget {
+  const Library({super.key});
 
   @override
-  State<BookStore> createState() => _BookStoreState();
+  State<Library> createState() => _LibraryState();
 }
 
-class _BookStoreState extends State<BookStore> {
+class _LibraryState extends State<Library> {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<BookBloc, BookState>(
       builder: (context, state) {
         if (state.loading!) {
-          return const Center(
-            child: RepaintBoundary(
-              child: CircularProgressIndicator(),
-            ),
-          );
+          return const Center(child: KSpinKitCircle());
         } else if (!state.loading!) {
           return ListView(
             shrinkWrap: true,
@@ -200,7 +198,7 @@ class _BookCardWidget extends StatelessWidget {
           final isExist = book.name == existBookName;
 
           return GestureDetector(
-            child: _BookCard(bookName: book.name),
+            child: _BookCard(book: book),
             onTap: () {
               final otherBooks = books.where((currentBook) {
                 return currentBook != book;
@@ -223,29 +221,22 @@ class _BookCardWidget extends StatelessWidget {
 }
 
 class _BookCard extends StatelessWidget {
-  const _BookCard({
-    required String bookName,
-  }) : _bookName = bookName;
+  const _BookCard({required this.book});
 
-  final String _bookName;
+  final Book book;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width * .7,
-      color: Colors.pink,
       margin: const EdgeInsets.all(5),
       child: Column(
         children: [
-          Container(
-            height: MediaQuery.of(context).size.width * .5,
-            color: Colors.yellow,
-            child: const Placeholder(),
-          ),
+          GetBooksFromCache(book: book),
           const SizedBox(height: 15),
           Expanded(
             child: Text(
-              _bookName,
+              book.name,
               textAlign: TextAlign.center,
               style: ViewUtils.ubuntuStyle(fontSize: 18),
             ),

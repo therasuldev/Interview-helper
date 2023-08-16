@@ -5,6 +5,7 @@ import 'package:flutter_interview_questions/app_navigators.dart';
 import 'package:flutter_interview_questions/core/app/extension/to_percent.dart';
 import 'package:flutter_interview_questions/core/model/book/book.dart';
 import 'package:flutter_interview_questions/core/repository/cache_repository.dart';
+import 'package:flutter_interview_questions/get_book_from_cache.dart';
 import 'package:flutter_interview_questions/view/pages/library/open_pdf.dart';
 import 'package:flutter_interview_questions/view/utils/utils.dart';
 import 'package:path_provider/path_provider.dart';
@@ -123,12 +124,7 @@ class _BookViewState extends State<BookView> {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                Container(
-                  color: Colors.purple,
-                  width: MediaQuery.of(context).size.width * .7,
-                  height: MediaQuery.of(context).size.width * .7,
-                  child: const Placeholder(),
-                ),
+                GetBooksFromCache(book: widget.book),
                 const SizedBox(height: 30),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -176,32 +172,7 @@ class _BookViewState extends State<BookView> {
                             ),
                           );
                         },
-                        child: Container(
-                          width: MediaQuery.of(context).size.width * .7,
-                          color: Colors.pink,
-                          margin: const EdgeInsets.all(5),
-                          child: Column(
-                            children: [
-                              Container(
-                                height: MediaQuery.of(context).size.width * .5,
-                                color: Colors.yellow,
-                                child: const Placeholder(),
-                              ),
-                              const SizedBox(height: 15),
-                              Expanded(
-                                child: Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 3.0),
-                                  child: Text(
-                                    book.name,
-                                    textAlign: TextAlign.center,
-                                    style: ViewUtils.ubuntuStyle(fontSize: 19),
-                                  ),
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
+                        child: GetBooksFromCache(book: book),
                       );
                     },
                   ),
