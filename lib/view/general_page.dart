@@ -13,7 +13,7 @@ class GeneralPage extends StatefulWidget {
 class _GeneralPageState extends State<GeneralPage> {
   final List<Widget> pages = List.unmodifiable([
     const HomeCategories(),
-    const BookStore(),
+    const Library(),
   ]);
 
   bottomTapped(index) {

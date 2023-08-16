@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
         BlocProvider(
           create: (context) {
             return BookBloc()
-              ..add(BookEvent.fetchBooksStart(_Helper.categories));
+              ..add(BookEvent.fetchBooksStart(_Helper().categories));
           },
         ),
       ],
@@ -42,7 +42,7 @@ class MyApp extends StatelessWidget {
 }
 
 class _Helper {
-  static Set<Path> get categories => {
+  Set<Path> get categories => {
         Path.flutter,
         Path.go,
         Path.java,
