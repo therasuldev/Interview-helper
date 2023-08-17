@@ -15,12 +15,11 @@ class GetBooksFromCache extends StatelessWidget {
       builder: (ctx, snapshot) {
         if (snapshot.hasData) {
           return SizedBox(
-            height: MediaQuery.of(context).size.width * .5,
+            height: MediaQuery.of(context).size.height * .3,
+            width: MediaQuery.of(context).size.width * .5,
             child: const PDF(swipeHorizontal: true).cachedFromUrl(
               snapshot.data!,
-              placeholder: (progress) {
-                return Center(child: Text('${progress.toInt()} %'));
-              },
+              placeholder: (p) => Center(child: Text('${p.toInt()} %')),
             ),
           );
         } else if (snapshot.connectionState == ConnectionState.waiting) {

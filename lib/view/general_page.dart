@@ -11,10 +11,10 @@ class GeneralPage extends StatefulWidget {
 }
 
 class _GeneralPageState extends State<GeneralPage> {
-  final List<Widget> pages = List.unmodifiable([
+  final List<Widget> pages = [
     const HomeCategories(),
     const Library(),
-  ]);
+  ];
 
   bottomTapped(index) {
     setState(() => pageIdx = index);
