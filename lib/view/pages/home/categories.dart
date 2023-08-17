@@ -51,7 +51,7 @@ class _HomeCategoriesState extends State<HomeCategories> {
               mainAxisSpacing: 30,
             ),
             itemBuilder: (context, index) {
-              final cards = CategoryHelper().cards(AllLanguages.all[index]);
+              final cards = CategoryHelper().cards(AllLanguages.allHome[index]);
               return GestureDetector(
                 onTap: () {
                   _bloc.add(

@@ -101,10 +101,14 @@ class _QuestionCard extends StatelessWidget {
           overflow: TextOverflow.ellipsis,
           style: ViewUtils.ubuntuStyle(fontSize: 20, color: Colors.black),
         ),
-        subtitle: Text(' ${question.answer}',
-            maxLines: 2,
-            overflow: TextOverflow.ellipsis,
-            style: ViewUtils.ubuntuStyle(fontSize: 18, color: Colors.grey)),
+        subtitle: Padding(
+          padding: const EdgeInsets.only(top: 5.0),
+          child: Text(' ${question.answer}',
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
+              style: ViewUtils.ubuntuStyle(fontSize: 18, color: Colors.grey)),
+        ),
+        isThreeLine: true,
       ),
     );
   }

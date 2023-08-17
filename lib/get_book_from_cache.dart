@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_cached_pdfview/flutter_cached_pdfview.dart';
 import 'package:flutter_interview_questions/core/model/book/book.dart';
+import 'package:flutter_interview_questions/shimmer_loading.dart';
 import 'package:flutter_interview_questions/spinkit_circle_loading_widget.dart';
 
 class GetBooksFromCache extends StatelessWidget {
@@ -19,7 +20,7 @@ class GetBooksFromCache extends StatelessWidget {
             width: MediaQuery.of(context).size.width * .5,
             child: const PDF(swipeHorizontal: true).cachedFromUrl(
               snapshot.data!,
-              placeholder: (p) => Center(child: Text('${p.toInt()} %')),
+              placeholder: (p) => KShimmer(progress: '${p.toInt()} %'),
             ),
           );
         } else if (snapshot.connectionState == ConnectionState.waiting) {

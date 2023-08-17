@@ -35,8 +35,7 @@ class _GeneralPageState extends State<GeneralPage> {
           onTap: (idx) => bottomTapped(idx),
           items: const [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.auto_stories), label: 'Library'),
+            BottomNavigationBarItem(icon: Icon(Icons.auto_stories), label: 'Library'),
           ],
         ),
       );
