@@ -11,10 +11,10 @@ class GeneralPage extends StatefulWidget {
 }
 
 class _GeneralPageState extends State<GeneralPage> {
-  final List<Widget> pages = List.unmodifiable([
+  final List<Widget> pages = [
     const HomeCategories(),
-    const BookStore(),
-  ]);
+    const Library(),
+  ];
 
   bottomTapped(index) {
     setState(() => pageIdx = index);
@@ -35,8 +35,7 @@ class _GeneralPageState extends State<GeneralPage> {
           onTap: (idx) => bottomTapped(idx),
           items: const [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.auto_stories), label: 'Library'),
+            BottomNavigationBarItem(icon: Icon(Icons.auto_stories), label: 'Library'),
           ],
         ),
       );

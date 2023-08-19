@@ -5,37 +5,42 @@ import 'package:flutter_interview_questions/get_book_from_cache.dart';
 import 'package:flutter_interview_questions/view/pages/library/book_view.dart';
 import 'package:flutter_interview_questions/view/utils/utils.dart';
 
-class AllBooks extends StatefulWidget {
-  const AllBooks({super.key, required this.books});
-  final List<Book> books;
+class BooksListViewBuilder extends StatelessWidget {
+  const BooksListViewBuilder({
+    super.key,
+    this.allBooks,
+    required this.otherBooks,
+  });
 
-  @override
-  State<AllBooks> createState() => _AllBooksState();
-}
+  final List<Book>? allBooks;
+  final List<Book> otherBooks;
 
-class _AllBooksState extends State<AllBooks> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: GridView.builder(
-        gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-          maxCrossAxisExtent: 300,
-          childAspectRatio: 5 / 9,
-          crossAxisSpacing: 3,
-          mainAxisSpacing: 3,
-        ),
-        itemCount: widget.books.length,
+    return SizedBox(
+      height: MediaQuery.of(context).size.height * .4,
+      child: ListView.builder(
+        shrinkWrap: true,
+        scrollDirection: Axis.horizontal,
+        itemCount: otherBooks.length,
         itemBuilder: (context, index) {
-          final book = widget.books[index];
+          final book = otherBooks[index];
+          List<Book> otherBooks1 = [];
+          if (allBooks == null) {
+            otherBooks1 = otherBooks.where((currentBook) {
+              return currentBook != book;
+            }).toList();
+          } else {
+            otherBooks1 = allBooks!.where((b) => b != book).toList();
+          }
           return GestureDetector(
             onTap: () {
-              final otherBooks = widget.books.where((b) => b != book).toList();
               AppNavigators.go(
                 context,
                 BookView(
                   book: book,
                   index: index,
-                  otherBooks: otherBooks,
+                  otherBooks: otherBooks1,
                 ),
               );
             },
@@ -54,7 +59,7 @@ class _AllBooksState extends State<AllBooks> {
                         maxLines: 3,
                         textAlign: TextAlign.center,
                         overflow: TextOverflow.ellipsis,
-                        style: ViewUtils.ubuntuStyle(fontSize: 19),
+                        style: ViewUtils.ubuntuStyle(fontSize: 19,fontWeight: FontWeight.w300),
                       ),
                     ),
                   )
