@@ -48,8 +48,8 @@ class _BookViewState extends State<BookView> {
               ),
               const SizedBox(height: 50),
               BooksListViewBuilder(
-                otherBooks: widget.otherBooks,
                 allBooks: allBooks,
+                otherBooks: widget.otherBooks,
               )
             ],
           ),
