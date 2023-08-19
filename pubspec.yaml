@@ -34,7 +34,7 @@ dependencies:
   hive: ^2.2.2
   hive_flutter: ^1.1.0
   path_provider: ^2.0.14
-  flutter_cache_manager: ^3.3.1
+
 
   # native splash screen
   flutter_native_splash: ^2.2.19
