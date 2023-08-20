@@ -45,7 +45,6 @@ class _AllBooksState extends State<AllBooks> {
               child: Column(
                 children: [
                   GetBooksFromCache(book: book),
-                  const SizedBox(height: 15),
                   Expanded(
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 3.0),

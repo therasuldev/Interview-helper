@@ -72,6 +72,7 @@ flutter:
   uses-material-design: true
 
   assets:
+    - assets/splash.png
     - assets/image_data/
     - assets/questions_data/
 
