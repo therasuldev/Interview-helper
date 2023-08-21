@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_interview_questions/gen/assets.gen.dart';
+import 'package:flutter_interview_questions/rate_app.dart';
 import 'package:flutter_interview_questions/settings.dart';
 import 'package:flutter_interview_questions/view/pages/home/categories.dart';
 import 'package:flutter_interview_questions/view/pages/library/library.dart';
@@ -82,7 +83,13 @@ class _Drawer extends StatelessWidget {
             icon: Icons.star_border_outlined,
             color: Colors.yellow.shade800,
             title: 'Rate us',
-            onTap: () {},
+            onTap: () {
+              // TODO: Rate app feature
+              // showDialog(
+              //   context: context,
+              //   builder: (context) => RateApp.ratingDialog(context),
+              // );
+            },
           ),
           _ListTile(
             icon: Icons.share_outlined,
