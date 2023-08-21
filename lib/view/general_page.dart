@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_interview_questions/gen/assets.gen.dart';
-import 'package:flutter_interview_questions/rate_app.dart';
 import 'package:flutter_interview_questions/settings.dart';
 import 'package:flutter_interview_questions/view/pages/home/categories.dart';
 import 'package:flutter_interview_questions/view/pages/library/library.dart';
@@ -95,7 +94,10 @@ class _Drawer extends StatelessWidget {
             icon: Icons.share_outlined,
             color: Colors.black,
             title: 'Share',
-            onTap: () {},
+            onTap: () {
+              //TODO: share app feature
+              //ShareApp.onShare(context);
+            },
           ),
           _ListTile(
             icon: Icons.settings_outlined,
