@@ -26,24 +26,26 @@ class _GeneralPageState extends State<GeneralPage> {
   int pageIdx = 0;
 
   @override
-  Widget build(BuildContext context) => Scaffold(
-        backgroundColor: Colors.grey[200],
-        appBar: appBar(pageIdx),
-        body: pages.elementAt(pageIdx),
-        bottomNavigationBar: BottomNavigationBar(
-          selectedLabelStyle: ViewUtils.ubuntuStyle(fontSize: 16),
-          unselectedLabelStyle: ViewUtils.ubuntuStyle(fontSize: 14),
-          selectedItemColor: const Color.fromARGB(255, 38, 109, 176),
-          currentIndex: pageIdx,
-          onTap: (idx) => bottomTapped(idx),
-          items: const [
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.auto_stories), label: 'Library'),
-          ],
-        ),
-        drawer: const _DrawerWidget(),
-      );
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.grey[200],
+      appBar: appBar(pageIdx),
+      body: pages.elementAt(pageIdx),
+      bottomNavigationBar: BottomNavigationBar(
+        selectedLabelStyle: ViewUtils.ubuntuStyle(fontSize: 16),
+        unselectedLabelStyle: ViewUtils.ubuntuStyle(fontSize: 14),
+        selectedItemColor: const Color.fromARGB(255, 38, 109, 176),
+        currentIndex: pageIdx,
+        onTap: (idx) => bottomTapped(idx),
+        items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.auto_stories), label: 'Library'),
+        ],
+      ),
+      drawer: const _Drawer(),
+    );
+  }
 
   AppBar appBar(int pageIdx) {
     return AppBar(
@@ -57,8 +59,8 @@ class _GeneralPageState extends State<GeneralPage> {
   }
 }
 
-class _DrawerWidget extends StatelessWidget {
-  const _DrawerWidget();
+class _Drawer extends StatelessWidget {
+  const _Drawer();
 
   @override
   Widget build(BuildContext context) {
@@ -75,14 +77,21 @@ class _DrawerWidget extends StatelessWidget {
               ],
             ),
           ),
+          const SizedBox(height: 50),
           _ListTile(
-            icon: Icons.star_border,
-            color: Colors.yellow,
+            icon: Icons.star_border_outlined,
+            color: Colors.yellow.shade800,
             title: 'Rate us',
             onTap: () {},
           ),
           _ListTile(
-            icon: Icons.settings,
+            icon: Icons.share_outlined,
+            color: Colors.black,
+            title: 'Share',
+            onTap: () {},
+          ),
+          _ListTile(
+            icon: Icons.settings_outlined,
             title: 'Settings',
             onTap: () {
               Navigator.push(

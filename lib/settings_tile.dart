@@ -16,7 +16,7 @@ class SettingTile extends StatelessWidget {
     required this.iconColor,
     required this.icon,
     this.tralling,
-    this.margin = const EdgeInsets.symmetric(vertical: 5),
+    this.margin = const EdgeInsets.symmetric(vertical: 10),
     this.onTap,
   }) : super(key: key);
 
@@ -31,13 +31,13 @@ class SettingTile extends StatelessWidget {
         borderRadius: BorderRadius.circular(10),
         boxShadow: [BoxShadow(color: Colors.grey.withOpacity(.1))],
       ),
-      padding: const EdgeInsets.all(10),
+      padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
       child: Builder(builder: (context) {
-        if (tralling == null) return mainPart();
-
-        return Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [mainPart(), tralling!],
+        return _MainPart(
+          iconColor: iconColor,
+          tralling: tralling,
+          title: title,
+          icon: icon,
         );
       }),
     );
@@ -49,22 +49,38 @@ class SettingTile extends StatelessWidget {
       child: body,
     );
   }
+}
 
-  Widget mainPart() {
-    return Row(
-      children: [
-        Container(
-          height: 30,
-          width: 30,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10),
-            color: iconColor,
-          ),
-          child: Center(child: icon),
+class _MainPart extends StatelessWidget {
+  const _MainPart({
+    required this.iconColor,
+    required this.icon,
+    required this.title,
+    this.tralling,
+  });
+
+  final Color iconColor;
+  final Widget icon;
+  final String title;
+  final Widget? tralling;
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      leading: Container(
+        height: 30,
+        width: 30,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+          color: iconColor,
         ),
-        const SizedBox(width: 10),
-        Text(title, style: ViewUtils.ubuntuStyle(color: Colors.black)),
-      ],
+        child: Center(child: icon),
+      ),
+      title: Text(title, style: ViewUtils.ubuntuStyle(color: Colors.black)),
+      trailing: tralling ?? const SizedBox.shrink(),
+      contentPadding: EdgeInsets.zero,
+      minVerticalPadding: 0,
+      horizontalTitleGap: 0,
     );
   }
 }
