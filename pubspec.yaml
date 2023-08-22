@@ -54,6 +54,7 @@ dependencies:
   rating_dialog: ^2.0.4
   store_redirect: ^2.0.1
   share_plus: ^7.0.0
+  flutter_email_sender: ^6.0.0
 
   google_fonts: ^4.0.4
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_interview_questions/contact_us_screen.dart';
 
 import 'package:flutter_interview_questions/gen/assets.gen.dart';
 import 'package:flutter_interview_questions/settings.dart';
@@ -106,6 +107,16 @@ class _Drawer extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (_) => const Settings()),
+              );
+            },
+          ),
+          _ListTile(
+            icon: Icons.send,
+            title: 'Contact us',
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) =>  ContactUsScreen()),
               );
             },
           ),
