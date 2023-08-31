@@ -25,9 +25,8 @@ class GetBooksFromCache extends StatelessWidget {
           );
         } else if (snapshot.connectionState == ConnectionState.waiting) {
           return const KSpinKitCircle();
-        } else {
-          return const SizedBox.shrink();
         }
+        return const SizedBox.shrink();
       },
     );
   }

@@ -72,7 +72,9 @@ class _RowTitleWidget extends StatelessWidget {
           Text(
             title,
             style: ViewUtils.ubuntuStyle(
-                fontSize: 20, fontWeight: FontWeight.w800),
+              fontSize: 20,
+              fontWeight: FontWeight.w800,
+            ),
           ),
           TextButton(
             onPressed: () {
