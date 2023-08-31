@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_interview_questions/app_navigators.dart';
 import 'package:flutter_interview_questions/core/model/book/book.dart';
-import 'package:flutter_interview_questions/get_book_from_cache.dart';
+import 'package:flutter_interview_questions/pdf_view_model.dart';
 import 'package:flutter_interview_questions/view/pages/library/book_view.dart';
 import 'package:flutter_interview_questions/view/utils/utils.dart';
 
@@ -44,7 +44,7 @@ class _AllBooksState extends State<AllBooks> {
               margin: const EdgeInsets.all(5),
               child: Column(
                 children: [
-                  GetBooksFromCache(book: book),
+                  BookViewModel(book: book).buildBookforViewScreen(context),
                   const SizedBox(height: 15),
                   Expanded(
                     child: Padding(

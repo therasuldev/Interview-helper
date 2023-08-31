@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_interview_questions/core/model/book/book.dart';
-import 'package:flutter_interview_questions/get_book_from_cache.dart';
+import 'package:flutter_interview_questions/pdf_view_model.dart';
 import 'package:flutter_interview_questions/view/pages/library/books_listview_builder.dart';
+import 'package:flutter_interview_questions/view/pages/library/open_pdf.dart';
 import 'package:flutter_interview_questions/view/utils/utils.dart';
 
 class BookView extends StatefulWidget {
@@ -36,14 +37,21 @@ class _BookViewState extends State<BookView> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              GetBooksFromCache(book: widget.book),
+              BookViewModel(book: widget.book).buildBookforViewScreen(context),
               const SizedBox(height: 20),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10),
-                child: Text(
-                  widget.book.name,
-                  textAlign: TextAlign.center,
-                  style: ViewUtils.ubuntuStyle(fontSize: 20),
+              GestureDetector(
+                onTap: () async {
+                  buildder(_) => OpenPDF(book: widget.book);
+                  final destination = MaterialPageRoute(builder: buildder);
+                  await Navigator.push(context, destination);
+                },
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  child: Text(
+                    widget.book.name,
+                    textAlign: TextAlign.center,
+                    style: ViewUtils.ubuntuStyle(fontSize: 20),
+                  ),
                 ),
               ),
               const SizedBox(height: 50),
