@@ -21,11 +21,6 @@ dependencies:
   firebase_core: ^2.13.0
   cloud_firestore: ^4.7.1
 
-  # work with PDF
-  file_picker: ^5.3.0
-  flutter_pdfview: ^1.2.7
-  pdf_render: ^1.4.0
-
   # cache manage
   flutter_cached_pdfview: ^0.4.2
   simple_app_cache_manager: ^0.0.1
