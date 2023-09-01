@@ -29,7 +29,7 @@ class BookBloc extends Bloc<BookEvent, BookState> {
 
       for (var map in data) {
         List<Book> bookList = [];
-        map.forEach((key, value) {
+        map.forEach((_, value) {
           for (var result in value!.items) {
             bookList.add(Book.fromJson(result));
           }
