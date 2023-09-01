@@ -44,13 +44,13 @@ class _GeneralPageState extends State<GeneralPage> {
               icon: Icon(Icons.auto_stories), label: 'Library'),
         ],
       ),
-      drawer: pageIdx == 0 ? const _Drawer() : null,
+      drawer: pageIdx.isEqual(0) ? const _Drawer() : null,
     );
   }
 
   AppBar appBar(int pageIdx) => AppBar(
         title: Text(
-          pageIdx == 0 ? 'Categories' : 'Library',
+          pageIdx.isEqual(0) ? 'Categories' : 'Library',
           style: ViewUtils.ubuntuStyle(fontSize: 22),
         ),
         centerTitle: true,
@@ -146,5 +146,11 @@ class _ListTile extends StatelessWidget {
       horizontalTitleGap: 0,
       title: Text(title, style: ViewUtils.ubuntuStyle(fontSize: 20)),
     );
+  }
+}
+
+extension on int {
+  bool isEqual(int value) {
+    return this == value;
   }
 }

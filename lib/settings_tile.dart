@@ -68,12 +68,12 @@ class _MainPart extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: Container(
-        height: 30,
-        width: 30,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           color: iconColor,
         ),
+        height: 30,
+        width: 30,
         child: Center(child: icon),
       ),
       title: Text(title, style: ViewUtils.ubuntuStyle(color: Colors.black)),

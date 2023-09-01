@@ -1,44 +1,47 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
-import 'package:flutter_email_sender/flutter_email_sender.dart';
 import 'package:flutter_interview_questions/view/utils/utils.dart';
+
+import 'package:http/http.dart' as http;
 
 class ContactUsScreen extends StatelessWidget {
   final TextEditingController _messageController = TextEditingController();
-  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _userController = TextEditingController();
 
   ContactUsScreen({super.key});
 
-  void _sendEmail(BuildContext context) async {
-    String username = 'rasul.ramixanov@gmail.com';
-    String password = 'ramikhanov7';
-    //final smtpServer = gmail(username, password);
+  void _sendEmail({
+    required String name,
+    required String email,
+    required String subject,
+    required String message,
+  }) async {
+    const serviceId = 'service_o2y9q97';
+    const templateId = 'template_gxhao98';
+    const userId = '_-E1ndG0CCw8ZD0mS';
 
-    // final message = Message()
-    //   ..from = Address(username, 'Your Name')
-    //   ..recipients.add('rasul.ramixanov@gmail.com') // Developer's email address
-    //   ..subject = 'User Feedback / Complaint'
-    //   ..text = _messageController.text;
-
-    // try {
-    //   final sendReport = await send(message, smtpServer);
-    //   print('Message sent: ${sendReport.toString()}');
-    //   ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-    //     content: Text('Message sent successfully!'),
-    //   ));
-    // } on MailerException catch (e) {
-    //   print('Message not sent. ${e.message}');
-    //   ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-    //     content: Text('Message could not be sent.'),
-    //   ));
-    // }
-
-    final Email email = Email(
-      body: _messageController.text,
-      subject: _emailController.text.trim(),
-      recipients: ['rasul.ramixanov@gmail.com'],
-    );
-
-    await FlutterEmailSender.send(email);
+    try {
+      final url = Uri.parse('https://api.emailjs.com/api/v1.0/email/send');
+      await http.post(
+        url,
+        headers: {
+          'origin': 'http://localhost',
+          'Content-Type': 'application/json'
+        },
+        body: json.encode({
+          'service_id': serviceId,
+          'template_id': templateId,
+          'user_id': userId,
+          'template_params': {
+            'user_name': name,
+            'user_email': email,
+            'user_subject': subject,
+            'user_message': message,
+          },
+        }),
+      );
+    } catch (_) {}
   }
 
   @override
@@ -59,7 +62,7 @@ class ContactUsScreen extends StatelessWidget {
             const SizedBox(height: 20),
             TextField(
               maxLines: 1,
-              controller: _emailController,
+              controller: _userController,
               decoration: InputDecoration(
                 hintText: 'Your email',
                 hintStyle: ViewUtils.ubuntuStyle(),
@@ -82,7 +85,12 @@ class ContactUsScreen extends StatelessWidget {
                 height: 50,
                 width: MediaQuery.of(context).size.width * .6,
                 child: ElevatedButton(
-                  onPressed: () => _sendEmail(context),
+                  onPressed: () => _sendEmail(
+                    name: _userController.text.trim(),
+                    email: _userController.text.trim(),
+                    subject: _userController.text.trim(),
+                    message: _messageController.text.trim(),
+                  ),
                   child: Text('Submit', style: ViewUtils.ubuntuStyle()),
                 ),
               ),
