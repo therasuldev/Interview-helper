@@ -44,20 +44,18 @@ class _GeneralPageState extends State<GeneralPage> {
               icon: Icon(Icons.auto_stories), label: 'Library'),
         ],
       ),
-      drawer: const _Drawer(),
+      drawer: pageIdx == 0 ? const _Drawer() : null,
     );
   }
 
-  AppBar appBar(int pageIdx) {
-    return AppBar(
-      centerTitle: true,
-      title: Text(
-        pageIdx == 0 ? 'Categories' : 'Library',
-        style: ViewUtils.ubuntuStyle(fontSize: 22),
-      ),
-      backgroundColor: const Color.fromARGB(255, 38, 109, 176),
-    );
-  }
+  AppBar appBar(int pageIdx) => AppBar(
+        title: Text(
+          pageIdx == 0 ? 'Categories' : 'Library',
+          style: ViewUtils.ubuntuStyle(fontSize: 22),
+        ),
+        centerTitle: true,
+        backgroundColor: const Color.fromARGB(255, 38, 109, 176),
+      );
 }
 
 class _Drawer extends StatelessWidget {
@@ -116,7 +114,7 @@ class _Drawer extends StatelessWidget {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (_) =>  ContactUsScreen()),
+                MaterialPageRoute(builder: (_) => ContactUsScreen()),
               );
             },
           ),

@@ -607,40 +607,6 @@ PODS:
     - firebase_core
     - Flutter
     - nanopb (< 2.30910.0, >= 2.30908.0)
-  - DKImagePickerController/Core (4.3.4):
-    - DKImagePickerController/ImageDataManager
-    - DKImagePickerController/Resource
-  - DKImagePickerController/ImageDataManager (4.3.4)
-  - DKImagePickerController/PhotoGallery (4.3.4):
-    - DKImagePickerController/Core
-    - DKPhotoGallery
-  - DKImagePickerController/Resource (4.3.4)
-  - DKPhotoGallery (0.0.17):
-    - DKPhotoGallery/Core (= 0.0.17)
-    - DKPhotoGallery/Model (= 0.0.17)
-    - DKPhotoGallery/Preview (= 0.0.17)
-    - DKPhotoGallery/Resource (= 0.0.17)
-    - SDWebImage
-    - SwiftyGif
-  - DKPhotoGallery/Core (0.0.17):
-    - DKPhotoGallery/Model
-    - DKPhotoGallery/Preview
-    - SDWebImage
-    - SwiftyGif
-  - DKPhotoGallery/Model (0.0.17):
-    - SDWebImage
-    - SwiftyGif
-  - DKPhotoGallery/Preview (0.0.17):
-    - DKPhotoGallery/Model
-    - DKPhotoGallery/Resource
-    - SDWebImage
-    - SwiftyGif
-  - DKPhotoGallery/Resource (0.0.17):
-    - SDWebImage
-    - SwiftyGif
-  - file_picker (0.0.1):
-    - DKImagePickerController/PhotoGallery
-    - Flutter
   - Firebase/CoreOnly (10.9.0):
     - FirebaseCore (= 10.9.0)
   - Firebase/Firestore (10.9.0):
@@ -767,14 +733,9 @@ PODS:
   - path_provider_foundation (0.0.1):
     - Flutter
     - FlutterMacOS
-  - pdf_render (0.0.1):
-    - Flutter
   - PromisesObjC (2.2.0)
   - rate_my_app (1.1.4):
     - Flutter
-  - SDWebImage (5.15.8):
-    - SDWebImage/Core (= 5.15.8)
-  - SDWebImage/Core (5.15.8)
   - share_plus (0.0.1):
     - Flutter
   - shared_preferences_foundation (0.0.1):
@@ -787,11 +748,9 @@ PODS:
     - FMDB (>= 2.7.5)
   - store_redirect (0.0.1):
     - Flutter
-  - SwiftyGif (5.4.4)
 
 DEPENDENCIES:
   - cloud_firestore (from `.symlinks/plugins/cloud_firestore/ios`)
-  - file_picker (from `.symlinks/plugins/file_picker/ios`)
   - firebase_core (from `.symlinks/plugins/firebase_core/ios`)
   - firebase_storage (from `.symlinks/plugins/firebase_storage/ios`)
   - Flutter (from `Flutter`)
@@ -799,7 +758,6 @@ DEPENDENCIES:
   - flutter_native_splash (from `.symlinks/plugins/flutter_native_splash/ios`)
   - flutter_pdfview (from `.symlinks/plugins/flutter_pdfview/ios`)
   - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/ios`)
-  - pdf_render (from `.symlinks/plugins/pdf_render/ios`)
   - rate_my_app (from `.symlinks/plugins/rate_my_app/ios`)
   - share_plus (from `.symlinks/plugins/share_plus/ios`)
   - shared_preferences_foundation (from `.symlinks/plugins/shared_preferences_foundation/ios`)
@@ -811,8 +769,6 @@ SPEC REPOS:
   trunk:
     - abseil
     - BoringSSL-GRPC
-    - DKImagePickerController
-    - DKPhotoGallery
     - Firebase
     - FirebaseAppCheckInterop
     - FirebaseAuthInterop
@@ -830,14 +786,10 @@ SPEC REPOS:
     - Libuv-gRPC
     - nanopb
     - PromisesObjC
-    - SDWebImage
-    - SwiftyGif
 
 EXTERNAL SOURCES:
   cloud_firestore:
     :path: ".symlinks/plugins/cloud_firestore/ios"
-  file_picker:
-    :path: ".symlinks/plugins/file_picker/ios"
   firebase_core:
     :path: ".symlinks/plugins/firebase_core/ios"
   firebase_storage:
@@ -852,8 +804,6 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/flutter_pdfview/ios"
   path_provider_foundation:
     :path: ".symlinks/plugins/path_provider_foundation/ios"
-  pdf_render:
-    :path: ".symlinks/plugins/pdf_render/ios"
   rate_my_app:
     :path: ".symlinks/plugins/rate_my_app/ios"
   share_plus:
@@ -871,9 +821,6 @@ SPEC CHECKSUMS:
   abseil: ebe5b5529fb05d93a8bdb7951607be08b7fa71bc
   BoringSSL-GRPC: 3175b25143e648463a56daeaaa499c6cb86dad33
   cloud_firestore: f9951b7475ab483af80514228921edbef7109fff
-  DKImagePickerController: b512c28220a2b8ac7419f21c491fc8534b7601ac
-  DKPhotoGallery: fdfad5125a9fdda9cc57df834d49df790dbb4179
-  file_picker: ce3938a0df3cc1ef404671531facef740d03f920
   Firebase: bd152f0f3d278c4060c5c71359db08ebcfd5a3e2
   firebase_core: fc68c0f9eec4e800b9418deff14a7e0a504016f3
   firebase_storage: 09fe224b1ae65ffb74241f2e3e89c8ebabbaa5cb
@@ -897,16 +844,13 @@ SPEC CHECKSUMS:
   Libuv-gRPC: 55e51798e14ef436ad9bc45d12d43b77b49df378
   nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
   path_provider_foundation: 29f094ae23ebbca9d3d0cec13889cd9060c0e943
-  pdf_render: 0b4e1a615aab83ce88b26c57753049424908a755
   PromisesObjC: 09985d6d70fbe7878040aa746d78236e6946d2ef
   rate_my_app: e249ec0751c276811746ff89558c23dc0da39f0c
-  SDWebImage: cb032eba469c54e0000e78bcb0a13cdde0a52798
   share_plus: 599aa54e4ea31d4b4c0e9c911bcc26c55e791028
   shared_preferences_foundation: 5b919d13b803cadd15ed2dc053125c68730e5126
   simple_app_cache_manager: a46704297b2c7a375656a254ee36d62adcca323d
   sqflite: 31f7eba61e3074736dff8807a9b41581e4f7f15a
   store_redirect: 2977747cf81689a39bd62c248c2deacb7a0d131e
-  SwiftyGif: 93a1cc87bf3a51916001cf8f3d63835fb64c819f
 
 PODFILE CHECKSUM: d4000b9c15b10f37f9bef75de22fee9583ced143
 
