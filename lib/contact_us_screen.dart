@@ -117,11 +117,11 @@ class _SendFeedbackButton extends StatelessWidget {
           switch (state.event) {
             case FeedbackEvents.success:
               ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(
-                  margin: EdgeInsets.all(10),
+                 SnackBar(
+                  margin: const EdgeInsets.all(10),
                   backgroundColor: Colors.green,
                   behavior: SnackBarBehavior.floating,
-                  content: Text('Thank you for your feedback.'),
+                  content: Text('Thank you for your feedback.',style: ViewUtils.ubuntuStyle()),
                 ),
               );
               break;
@@ -131,7 +131,7 @@ class _SendFeedbackButton extends StatelessWidget {
                   backgroundColor: Colors.red,
                   margin: const EdgeInsets.all(10),
                   behavior: SnackBarBehavior.floating,
-                  content: Text(state.exception!.description),
+                  content: Text(state.exception!.description, style: ViewUtils.ubuntuStyle()),
                 ),
               );
               break;
