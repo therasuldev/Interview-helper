@@ -19,67 +19,68 @@ class ContactUsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Padding(
-        padding: EdgeInsets.only(
-          left: 15,
-          right: 15,
-          top: MediaQuery.of(context).padding.top + 10,
-          bottom: MediaQuery.of(context).padding.bottom,
-        ),
-        child: Form(
-          key: _formKey,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'Contact us',
-                style: ViewUtils.ubuntuStyle(fontSize: 30),
-              ),
-              const SizedBox(height: 20),
-              TextFormField(
-                maxLines: 1,
-                key: _emailKey,
-                controller: _email,
-                style: ViewUtils.ubuntuStyle(),
-                textInputAction: TextInputAction.done,
-                keyboardType: TextInputType.emailAddress,
-                decoration: InputDecoration(
-                  hintText: 'Your email',
-                  hintStyle: ViewUtils.ubuntuStyle(),
-                  border: const OutlineInputBorder(),
+    return SafeArea(
+      child: Scaffold(
+        body: Padding(
+          padding: EdgeInsets.symmetric(
+            horizontal: 15,
+            vertical: MediaQuery.of(context).padding.copyWith(top: 20).top,
+          ),
+          child: Form(
+            key: _formKey,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Contact us',
+                  style: ViewUtils.ubuntuStyle(fontSize: 30),
                 ),
-                validator: (value) => FormValidate.emailFieldIsValidate(value),
-              ),
-              const SizedBox(height: 20),
-              TextFormField(
-                maxLines: 7,
-                key: _feedbackKey,
-                controller: _message,
-                style: ViewUtils.ubuntuStyle(),
-                textInputAction: TextInputAction.done,
-                keyboardType: TextInputType.text,
-                decoration: InputDecoration(
-                  hintText: 'Write your feedback here...',
-                  hintStyle: ViewUtils.ubuntuStyle(),
-                  border: const OutlineInputBorder(),
+                const SizedBox(height: 20),
+                TextFormField(
+                  maxLines: 1,
+                  key: _emailKey,
+                  controller: _email,
+                  style: ViewUtils.ubuntuStyle(),
+                  textInputAction: TextInputAction.done,
+                  keyboardType: TextInputType.emailAddress,
+                  decoration: InputDecoration(
+                    hintText: 'Your email',
+                    hintStyle: ViewUtils.ubuntuStyle(),
+                    border: const OutlineInputBorder(),
+                  ),
+                  validator: (value) =>
+                      FormValidate.emailFieldIsValidate(value),
                 ),
-                validator: (value) =>
-                    FormValidate.feedbackFieldIsValidate(value),
-              ),
-              const Spacer(),
-              Center(
-                child: SizedBox(
-                  height: 50,
-                  width: MediaQuery.of(context).size.width * .9,
-                  child: _SendFeedbackButton(
-                    email: _email,
-                    message: _message,
-                    formKey: _formKey,
+                const SizedBox(height: 20),
+                TextFormField(
+                  maxLines: 7,
+                  key: _feedbackKey,
+                  controller: _message,
+                  style: ViewUtils.ubuntuStyle(),
+                  textInputAction: TextInputAction.done,
+                  keyboardType: TextInputType.text,
+                  decoration: InputDecoration(
+                    hintText: 'Write your feedback here...',
+                    hintStyle: ViewUtils.ubuntuStyle(),
+                    border: const OutlineInputBorder(),
+                  ),
+                  validator: (value) =>
+                      FormValidate.feedbackFieldIsValidate(value),
+                ),
+                const Spacer(),
+                Center(
+                  child: SizedBox(
+                    height: 50,
+                    width: MediaQuery.of(context).size.width * .9,
+                    child: _SendFeedbackButton(
+                      email: _email,
+                      message: _message,
+                      formKey: _formKey,
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
@@ -117,11 +118,12 @@ class _SendFeedbackButton extends StatelessWidget {
           switch (state.event) {
             case FeedbackEvents.success:
               ScaffoldMessenger.of(context).showSnackBar(
-                 SnackBar(
+                SnackBar(
                   margin: const EdgeInsets.all(10),
                   backgroundColor: Colors.green,
                   behavior: SnackBarBehavior.floating,
-                  content: Text('Thank you for your feedback.',style: ViewUtils.ubuntuStyle()),
+                  content: Text('Thank you for your feedback.',
+                      style: ViewUtils.ubuntuStyle()),
                 ),
               );
               break;
@@ -131,7 +133,8 @@ class _SendFeedbackButton extends StatelessWidget {
                   backgroundColor: Colors.red,
                   margin: const EdgeInsets.all(10),
                   behavior: SnackBarBehavior.floating,
-                  content: Text(state.exception!.description, style: ViewUtils.ubuntuStyle()),
+                  content: Text(state.exception!.description,
+                      style: ViewUtils.ubuntuStyle()),
                 ),
               );
               break;
