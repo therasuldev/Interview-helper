@@ -52,7 +52,7 @@ class BookBloc extends Bloc<BookEvent, BookState> {
           library: [],
           loading: false,
           event: BookEvents.fetchBookError,
-          error: ErrorModel(description: exp.toString()),
+          error: ExceptionModel(description: exp.toString()),
         ),
       );
     }

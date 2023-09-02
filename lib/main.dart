@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_interview_questions/application_start.dart';
 import 'package:flutter_interview_questions/core/app/enum/kpath_event.dart';
 import 'package:flutter_interview_questions/core/provider/books_bloc/books_bloc.dart';
+import 'package:flutter_interview_questions/core/provider/feedback_cubit/cubit/feedback_cubit.dart';
 import 'package:flutter_interview_questions/core/provider/question_bloc/question_bloc.dart';
 import 'package:flutter_interview_questions/view/general_page.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
@@ -25,12 +26,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
+        BlocProvider(create: (context) => FeedbackCubit()),
         BlocProvider(create: (context) => QuestionBloc()),
         BlocProvider(
-          create: (context) {
-            return BookBloc()
-              ..add(BookEvent.fetchBooksStart(_Helper().categories));
-          },
+          create: (context) =>
+              BookBloc()..add(BookEvent.fetchBooksStart(_Helper().categories)),
         ),
       ],
       child: const MaterialApp(

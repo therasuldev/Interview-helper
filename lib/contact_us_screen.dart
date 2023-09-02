@@ -1,102 +1,148 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_interview_questions/core/model/email/emailjs.dart';
+import 'package:flutter_interview_questions/form_validate.dart';
+import 'package:flutter_interview_questions/spinkit_circle_loading_widget.dart';
 import 'package:flutter_interview_questions/view/utils/utils.dart';
 
-import 'package:http/http.dart' as http;
+import 'core/provider/feedback_cubit/cubit/feedback_cubit.dart';
 
 class ContactUsScreen extends StatelessWidget {
-  final TextEditingController _messageController = TextEditingController();
-  final TextEditingController _userController = TextEditingController();
+  final TextEditingController _message = TextEditingController();
+  final TextEditingController _email = TextEditingController();
+
+  final _formKey = GlobalKey<FormState>();
+  final _emailKey = GlobalKey<FormFieldState>();
+  final _feedbackKey = GlobalKey<FormFieldState>();
 
   ContactUsScreen({super.key});
-
-  void _sendEmail({
-    required String name,
-    required String email,
-    required String subject,
-    required String message,
-  }) async {
-    const serviceId = 'service_o2y9q97';
-    const templateId = 'template_gxhao98';
-    const userId = '_-E1ndG0CCw8ZD0mS';
-
-    try {
-      final url = Uri.parse('https://api.emailjs.com/api/v1.0/email/send');
-      await http.post(
-        url,
-        headers: {
-          'origin': 'http://localhost',
-          'Content-Type': 'application/json'
-        },
-        body: json.encode({
-          'service_id': serviceId,
-          'template_id': templateId,
-          'user_id': userId,
-          'template_params': {
-            'user_name': name,
-            'user_email': email,
-            'user_subject': subject,
-            'user_message': message,
-          },
-        }),
-      );
-    } catch (_) {}
-  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.symmetric(
-          horizontal: 15,
-          vertical: MediaQuery.of(context).padding.top,
+        padding: EdgeInsets.only(
+          left: 15,
+          right: 15,
+          top: MediaQuery.of(context).padding.top + 10,
+          bottom: MediaQuery.of(context).padding.bottom,
         ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              'Contact us',
-              style: ViewUtils.ubuntuStyle(fontSize: 30),
-            ),
-            const SizedBox(height: 20),
-            TextField(
-              maxLines: 1,
-              controller: _userController,
-              decoration: InputDecoration(
-                hintText: 'Your email',
-                hintStyle: ViewUtils.ubuntuStyle(),
-                border: const OutlineInputBorder(),
+        child: Form(
+          key: _formKey,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Contact us',
+                style: ViewUtils.ubuntuStyle(fontSize: 30),
               ),
-            ),
-            const SizedBox(height: 20),
-            TextField(
-              maxLines: 7,
-              controller: _messageController,
-              decoration: InputDecoration(
-                hintText: 'Write your message here...',
-                hintStyle: ViewUtils.ubuntuStyle(),
-                border: const OutlineInputBorder(),
+              const SizedBox(height: 20),
+              TextFormField(
+                maxLines: 1,
+                key: _emailKey,
+                controller: _email,
+                style: ViewUtils.ubuntuStyle(),
+                textInputAction: TextInputAction.done,
+                keyboardType: TextInputType.emailAddress,
+                decoration: InputDecoration(
+                  hintText: 'Your email',
+                  hintStyle: ViewUtils.ubuntuStyle(),
+                  border: const OutlineInputBorder(),
+                ),
+                validator: (value) => FormValidate.emailFieldIsValidate(value),
               ),
-            ),
-            const SizedBox(height: 20),
-            Center(
-              child: SizedBox(
-                height: 50,
-                width: MediaQuery.of(context).size.width * .6,
-                child: ElevatedButton(
-                  onPressed: () => _sendEmail(
-                    name: _userController.text.trim(),
-                    email: _userController.text.trim(),
-                    subject: _userController.text.trim(),
-                    message: _messageController.text.trim(),
+              const SizedBox(height: 20),
+              TextFormField(
+                maxLines: 7,
+                key: _feedbackKey,
+                controller: _message,
+                style: ViewUtils.ubuntuStyle(),
+                textInputAction: TextInputAction.done,
+                keyboardType: TextInputType.text,
+                decoration: InputDecoration(
+                  hintText: 'Write your feedback here...',
+                  hintStyle: ViewUtils.ubuntuStyle(),
+                  border: const OutlineInputBorder(),
+                ),
+                validator: (value) =>
+                    FormValidate.feedbackFieldIsValidate(value),
+              ),
+              const Spacer(),
+              Center(
+                child: SizedBox(
+                  height: 50,
+                  width: MediaQuery.of(context).size.width * .9,
+                  child: _SendFeedbackButton(
+                    email: _email,
+                    message: _message,
+                    formKey: _formKey,
                   ),
-                  child: Text('Submit', style: ViewUtils.ubuntuStyle()),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
+      ),
+    );
+  }
+}
+
+class _SendFeedbackButton extends StatelessWidget {
+  const _SendFeedbackButton({
+    required TextEditingController email,
+    required TextEditingController message,
+    required this.formKey,
+  })  : _email = email,
+        _message = message;
+
+  final TextEditingController _email;
+  final TextEditingController _message;
+
+  final GlobalKey<FormState> formKey;
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () {
+        if (formKey.currentState?.validate() ?? false) {
+          final params = MSGParams(email: _email.text, message: _message.text);
+          context.read<FeedbackCubit>().send(params: params);
+        }
+      },
+      style: ButtonStyle(
+        backgroundColor: MaterialStateProperty.all(Colors.green),
+      ),
+      child: BlocConsumer<FeedbackCubit, FeedbackState>(
+        listener: (context, state) {
+          switch (state.event) {
+            case FeedbackEvents.success:
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(
+                  margin: EdgeInsets.all(10),
+                  backgroundColor: Colors.green,
+                  behavior: SnackBarBehavior.floating,
+                  content: Text('Thank you for your feedback.'),
+                ),
+              );
+              break;
+            case FeedbackEvents.faile:
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  backgroundColor: Colors.red,
+                  margin: const EdgeInsets.all(10),
+                  behavior: SnackBarBehavior.floating,
+                  content: Text(state.exception!.description),
+                ),
+              );
+              break;
+            default:
+              break;
+          }
+        },
+        builder: (context, state) {
+          if (state.loading) return const KSpinKitCircle();
+          return Text('Send feedback', style: ViewUtils.ubuntuStyle());
+        },
       ),
     );
   }

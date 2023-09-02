@@ -1,4 +1,4 @@
-class ErrorModel {
+class ExceptionModel {
   final String description;
-  ErrorModel({required this.description});
+  ExceptionModel({required this.description});
 }

@@ -652,8 +652,6 @@ PODS:
     - FirebaseCoreExtension (~> 10.0)
     - GTMSessionFetcher/Core (< 4.0, >= 2.1)
   - Flutter (1.0.0)
-  - flutter_email_sender (0.0.1):
-    - Flutter
   - flutter_native_splash (0.0.1):
     - Flutter
   - flutter_pdfview (1.0.2):
@@ -754,7 +752,6 @@ DEPENDENCIES:
   - firebase_core (from `.symlinks/plugins/firebase_core/ios`)
   - firebase_storage (from `.symlinks/plugins/firebase_storage/ios`)
   - Flutter (from `Flutter`)
-  - flutter_email_sender (from `.symlinks/plugins/flutter_email_sender/ios`)
   - flutter_native_splash (from `.symlinks/plugins/flutter_native_splash/ios`)
   - flutter_pdfview (from `.symlinks/plugins/flutter_pdfview/ios`)
   - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/ios`)
@@ -796,8 +793,6 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/firebase_storage/ios"
   Flutter:
     :path: Flutter
-  flutter_email_sender:
-    :path: ".symlinks/plugins/flutter_email_sender/ios"
   flutter_native_splash:
     :path: ".symlinks/plugins/flutter_native_splash/ios"
   flutter_pdfview:
@@ -832,7 +827,6 @@ SPEC CHECKSUMS:
   FirebaseFirestore: 584d0e1b0f7f1666c516c5157ff06e785bd8836f
   FirebaseStorage: 075a0c10ec43f24193018c539d65e991db65d9ef
   Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
-  flutter_email_sender: 02d7443217d8c41483223627972bfdc09f74276b
   flutter_native_splash: 52501b97d1c0a5f898d687f1646226c1f93c56ef
   flutter_pdfview: 25f53dd6097661e6395b17de506e6060585946bd
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
