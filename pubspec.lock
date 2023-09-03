@@ -884,10 +884,10 @@ packages:
     dependency: "direct main"
     description:
       name: simple_app_cache_manager
-      sha256: "3e882f7b65d41bffc36f6b89a1b59f0de97c542309ca39ddd58a97df8321389d"
+      sha256: "7ce2aa00914729032801413995220d00fa2c3e127261b4f43e85ee9d539780f0"
       url: "https://pub.dev"
     source: hosted
-    version: "0.0.1"
+    version: "0.0.2"
   sky_engine:
     dependency: transitive
     description: flutter

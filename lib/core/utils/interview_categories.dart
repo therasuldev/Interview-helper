@@ -1,4 +1,4 @@
-class Categories {
+class InterviewCategories {
   static final Set<String> _categories = {
     'flutter',
     'go',
@@ -11,19 +11,19 @@ class Categories {
     'js',
     'react',
     'csharp',
-    'backend',
-    'cpluscplus',
-    'cybersecurity',
-    'dataanalyst',
-    'datascientist',
-    'engineer',
-    'frontend',
-    'git',
     'nodejs',
     'perl',
     'php',
     'scala',
     'swift',
+    'cplusplus',
+    'git',
+    'cybersecurity',
+    'backend',
+    'dataanalyst',
+    'datascientist',
+    'engineer',
+    'frontend',
   };
-  static List<String> get categories => List<String>.unmodifiable(_categories);
+  static Set<String> get categories => Set<String>.unmodifiable(_categories);
 }

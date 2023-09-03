@@ -3,7 +3,7 @@ import 'package:flutter_interview_questions/contact_us_screen.dart';
 
 import 'package:flutter_interview_questions/gen/assets.gen.dart';
 import 'package:flutter_interview_questions/settings.dart';
-import 'package:flutter_interview_questions/view/pages/home/categories.dart';
+import 'package:flutter_interview_questions/view/pages/home/home_categories_widget.dart';
 import 'package:flutter_interview_questions/view/pages/library/library.dart';
 import 'package:flutter_interview_questions/view/utils/utils.dart';
 
