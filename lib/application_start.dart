@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_interview_questions/core/notifications/notifications_service.dart';
 import 'package:flutter_interview_questions/firebase_options.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:path_provider/path_provider.dart' as path;
@@ -12,6 +13,7 @@ class Application {
 
   static start() async {
     WidgetsFlutterBinding.ensureInitialized();
+    await NotificationService().initNotification();
     await Firebase.initializeApp(
       options: DefaultFirebaseOptions.currentPlatform,
     );

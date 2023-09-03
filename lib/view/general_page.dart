@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_interview_questions/contact_us_screen.dart';
+import 'package:flutter_interview_questions/core/notifications/notifications_service.dart';
 
 import 'package:flutter_interview_questions/gen/assets.gen.dart';
 import 'package:flutter_interview_questions/settings.dart';
@@ -93,9 +94,10 @@ class _Drawer extends StatelessWidget {
             icon: Icons.share_outlined,
             color: Colors.black,
             title: 'Share',
-            onTap: () {
+            onTap: () async{
               //TODO: share app feature
               //ShareApp.onShare(context);
+              await NotificationService().showNotification(title: 'notification',body: 'it`s notification');
             },
           ),
           _ListTile(
