@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:interview_prep/app_colors.dart';
 import 'package:interview_prep/contact_us_screen.dart';
 
 import 'package:interview_prep/gen/assets.gen.dart';
@@ -35,7 +36,7 @@ class _GeneralPageState extends State<GeneralPage> {
       bottomNavigationBar: BottomNavigationBar(
         selectedLabelStyle: ViewUtils.ubuntuStyle(fontSize: 16),
         unselectedLabelStyle: ViewUtils.ubuntuStyle(fontSize: 14),
-        selectedItemColor: const Color.fromARGB(255, 38, 109, 176),
+        selectedItemColor: AppColors.appColor,
         currentIndex: pageIdx,
         onTap: (idx) => bottomTapped(idx),
         items: const [
@@ -53,8 +54,9 @@ class _GeneralPageState extends State<GeneralPage> {
           pageIdx.isEqual(0) ? 'Categories' : 'Library',
           style: ViewUtils.ubuntuStyle(fontSize: 22),
         ),
+        elevation: 0,
         centerTitle: true,
-        backgroundColor: const Color.fromARGB(255, 38, 109, 176),
+        backgroundColor: AppColors.appColor,
       );
 }
 

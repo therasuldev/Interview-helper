@@ -1,5 +1,6 @@
 import 'package:app_bar_with_search_switch/app_bar_with_search_switch.dart';
 import 'package:flutter/material.dart';
+import 'package:interview_prep/app_colors.dart';
 import 'package:interview_prep/app_navigators.dart';
 import 'package:interview_prep/core/model/question/question.dart';
 import 'package:interview_prep/view/pages/home/questions/view/question_view.dart';
@@ -48,11 +49,13 @@ class _QuestionCardState extends State<Questions> {
             widget.appBarTitle,
             style: ViewUtils.ubuntuStyle(fontSize: 22),
           ),
+          elevation: 0,
           centerTitle: true,
           actions: const [AppBarSearchButton()],
-          backgroundColor: const Color.fromARGB(255, 38, 109, 176),
+          backgroundColor: AppColors.appColor,
         ),
-        backgroundColor: const Color.fromARGB(255, 38, 109, 176),
+        elevation: 0,
+        backgroundColor:  AppColors.appColor,
       ),
       body: ListView.builder(
         padding: const EdgeInsets.only(top: 20),

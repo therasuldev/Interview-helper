@@ -5,7 +5,7 @@ class ViewUtils {
   //for category card [Categories page]
   static categoryCardDecor() => BoxDecoration(
         color: Colors.grey[200],
-        border: Border.all(color: Colors.black12),
+        border: Border.all(color: Colors.blueGrey.shade200),
         borderRadius: BorderRadius.circular(15),
       );
 

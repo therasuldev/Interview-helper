@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:interview_prep/app_colors.dart';
 import 'package:interview_prep/appbar_clipper.dart';
 import 'package:interview_prep/core/model/question/question.dart';
 import 'package:interview_prep/view/utils/utils.dart';
@@ -28,13 +29,13 @@ class _QuestionViewState extends State<QuestionView> {
     currentIndex = widget.index;
   }
 
-  _goToNextQuestion() {
+  void _goToNextQuestion() {
     if (currentIndex < questions.length - 1) {
       setState(() => currentIndex++);
     }
   }
 
-  _goToPreviousQuestion() {
+  void _goToPreviousQuestion() {
     if (currentIndex > 0) {
       setState(() => currentIndex--);
     }
@@ -48,7 +49,7 @@ class _QuestionViewState extends State<QuestionView> {
             clipper: MyClipper(),
             child: Container(
               height: 300,
-              color: const Color.fromARGB(255, 38, 109, 176),
+              color: AppColors.appColor,
               alignment: Alignment.center,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -135,16 +136,21 @@ class _CustomFloatingActionButton extends StatelessWidget {
     required this.onPressed,
   });
 
-  final style = ViewUtils.ubuntuStyle(fontSize: 17, color: Colors.white);
+  final style = ViewUtils.ubuntuStyle(fontSize: 17, color: AppColors.appColor);
 
   @override
   Widget build(BuildContext context) => FloatingActionButton.extended(
+        elevation: 0,
         heroTag: heroTag,
         onPressed: onPressed,
-        backgroundColor: Colors.green[500],
+        foregroundColor: Colors.green,
+        backgroundColor: Colors.white,
         label: Text(label, style: style),
         extendedPadding: const EdgeInsets.symmetric(horizontal: 40),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10),
+          side: const BorderSide(color: AppColors.appColor),
+        ),
       );
 
   final String heroTag;
