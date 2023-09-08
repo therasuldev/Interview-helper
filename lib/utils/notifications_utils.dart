@@ -1,4 +1,4 @@
-import 'package:flutter_interview_questions/gen/assets.gen.dart';
+import 'package:interview_prep/gen/assets.gen.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
 class NotificationUtils {
@@ -21,7 +21,8 @@ class NotificationUtils {
     await _showNotificationWithDefaultSound(notificationsPlugin);
   }
 
-  static Future<void> _showNotificationWithDefaultSound(FlutterLocalNotificationsPlugin notificationsPlugin) async {
+  static Future<void> _showNotificationWithDefaultSound(
+      FlutterLocalNotificationsPlugin notificationsPlugin) async {
     final androidChannel = AndroidNotificationDetails(
       'your channel id',
       'your channel name',
@@ -31,7 +32,8 @@ class NotificationUtils {
     );
     const iOSChannel = DarwinNotificationDetails();
 
-    final channel = NotificationDetails(android: androidChannel, iOS: iOSChannel);
+    final channel =
+        NotificationDetails(android: androidChannel, iOS: iOSChannel);
     //TODO: fix later
     await notificationsPlugin.show(
       2,

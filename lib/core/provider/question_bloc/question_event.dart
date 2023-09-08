@@ -1,4 +1,4 @@
-import 'package:flutter_interview_questions/core/app/enum/question.dart';
+import 'package:interview_prep/core/app/enum/question.dart';
 
 class QuestionEvent {
   QuestionEvents? type;

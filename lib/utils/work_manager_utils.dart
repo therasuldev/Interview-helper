@@ -1,4 +1,4 @@
-import 'package:flutter_interview_questions/utils/notifications_utils.dart';
+import 'package:interview_prep/utils/notifications_utils.dart';
 import 'package:workmanager/workmanager.dart';
 
 class WorkmanagerUtils {

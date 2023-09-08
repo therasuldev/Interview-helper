@@ -3,10 +3,10 @@
 import 'dart:convert';
 
 import 'package:flutter/services.dart';
-import 'package:flutter_interview_questions/core/app/constant.dart';
+import 'package:interview_prep/core/app/constant.dart';
 
-import 'package:flutter_interview_questions/core/interface/i_question_repository.dart';
-import 'package:flutter_interview_questions/core/cache/cache_service.dart';
+import 'package:interview_prep/core/interface/i_question_repository.dart';
+import 'package:interview_prep/core/cache/cache_service.dart';
 
 class QuestionRepository extends IQuestionRepository {
   QuestionRepository({

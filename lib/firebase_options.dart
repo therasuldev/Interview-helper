@@ -54,7 +54,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyA3x8pN3EvXg0-z2BHfZpwHlGrk8Snf2s4',
-    appId: '1:76643925457:android:c3f60113c8d45b34d6f4f0',
+    appId: '1:76643925457:android:526e2447095fa66ed6f4f0',
     messagingSenderId: '76643925457',
     projectId: 'interview-questio',
     storageBucket: 'interview-questio.appspot.com',
@@ -62,21 +62,21 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyDx8kOq0BpazSRMC7xSNo3sy6us6InUctk',
-    appId: '1:76643925457:ios:3ae928989e9580bdd6f4f0',
+    appId: '1:76643925457:ios:e3fee3674571cc35d6f4f0',
     messagingSenderId: '76643925457',
     projectId: 'interview-questio',
     storageBucket: 'interview-questio.appspot.com',
-    iosClientId: '76643925457-udh85epo1nr13nah3p7q3bu7gg3tav85.apps.googleusercontent.com',
-    iosBundleId: 'com.example.flutterInterviewQuestions',
+    iosClientId: '76643925457-5vfh8kpdqbffkudsn0j02o6sara0c2sq.apps.googleusercontent.com',
+    iosBundleId: 'com.example.interviewPrep',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
     apiKey: 'AIzaSyDx8kOq0BpazSRMC7xSNo3sy6us6InUctk',
-    appId: '1:76643925457:ios:3ae928989e9580bdd6f4f0',
+    appId: '1:76643925457:ios:e3fee3674571cc35d6f4f0',
     messagingSenderId: '76643925457',
     projectId: 'interview-questio',
     storageBucket: 'interview-questio.appspot.com',
-    iosClientId: '76643925457-udh85epo1nr13nah3p7q3bu7gg3tav85.apps.googleusercontent.com',
-    iosBundleId: 'com.example.flutterInterviewQuestions',
+    iosClientId: '76643925457-5vfh8kpdqbffkudsn0j02o6sara0c2sq.apps.googleusercontent.com',
+    iosBundleId: 'com.example.interviewPrep',
   );
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_interview_questions/view/utils/utils.dart';
+import 'package:interview_prep/view/utils/utils.dart';
 
 class SettingTile extends StatelessWidget {
   final String title;

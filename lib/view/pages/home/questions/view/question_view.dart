@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_interview_questions/appbar_clipper.dart';
-import 'package:flutter_interview_questions/core/model/question/question.dart';
-import 'package:flutter_interview_questions/view/utils/utils.dart';
+import 'package:interview_prep/appbar_clipper.dart';
+import 'package:interview_prep/core/model/question/question.dart';
+import 'package:interview_prep/view/utils/utils.dart';
 
 class QuestionView extends StatefulWidget {
   const QuestionView({

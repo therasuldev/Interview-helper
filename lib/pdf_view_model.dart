@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_cached_pdfview/flutter_cached_pdfview.dart';
 
-import 'package:flutter_interview_questions/core/model/book/book.dart';
-import 'package:flutter_interview_questions/shimmer_loading.dart';
-import 'package:flutter_interview_questions/spinkit_circle_loading_widget.dart';
+import 'package:interview_prep/core/model/book/book.dart';
+import 'package:interview_prep/shimmer_loading.dart';
+import 'package:interview_prep/spinkit_circle_loading_widget.dart';
 
 abstract class IBookViewModel {
   Widget buildBookforEntireScreen(BuildContext context);

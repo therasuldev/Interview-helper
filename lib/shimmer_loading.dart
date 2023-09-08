@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_interview_questions/view/utils/utils.dart';
+import 'package:interview_prep/view/utils/utils.dart';
 import 'package:shimmer/shimmer.dart';
 
 class KShimmer extends StatelessWidget {

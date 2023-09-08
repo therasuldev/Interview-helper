@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_interview_questions/view/utils/utils.dart';
+import 'package:interview_prep/view/utils/utils.dart';
 
 class CategoryCard extends StatelessWidget {
   const CategoryCard({super.key, required this.image, required this.title});

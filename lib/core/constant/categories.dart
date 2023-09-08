@@ -1,6 +1,6 @@
-import 'package:flutter_interview_questions/core/app/enum/titles.dart';
-import 'package:flutter_interview_questions/gen/assets.gen.dart';
-import 'package:flutter_interview_questions/view/pages/home/category_card.dart';
+import 'package:interview_prep/core/app/enum/titles.dart';
+import 'package:interview_prep/gen/assets.gen.dart';
+import 'package:interview_prep/view/pages/home/category_card.dart';
 
 class CategoryHelper {
   CategoryCard? cards(String name) {

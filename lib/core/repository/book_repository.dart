@@ -1,6 +1,6 @@
 import 'package:firebase_storage/firebase_storage.dart';
-import 'package:flutter_interview_questions/core/app/enum/kpath_event.dart';
-import 'package:flutter_interview_questions/core/interface/i_book_repository.dart';
+import 'package:interview_prep/core/app/enum/kpath_event.dart';
+import 'package:interview_prep/core/interface/i_book_repository.dart';
 
 class BookRepository extends IBookRepository {
   Set<Map<String, ListResult?>> result = {};

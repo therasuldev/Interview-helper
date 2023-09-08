@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_interview_questions/core/model/email/emailjs.dart';
-import 'package:flutter_interview_questions/form_validate.dart';
-import 'package:flutter_interview_questions/spinkit_circle_loading_widget.dart';
-import 'package:flutter_interview_questions/view/utils/utils.dart';
+import 'package:interview_prep/core/model/email/emailjs.dart';
+import 'package:interview_prep/form_validate.dart';
+import 'package:interview_prep/spinkit_circle_loading_widget.dart';
+import 'package:interview_prep/view/utils/utils.dart';
 
 import 'core/provider/feedback_cubit/cubit/feedback_cubit.dart';
 

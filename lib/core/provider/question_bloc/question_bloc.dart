@@ -1,10 +1,10 @@
 import 'package:bloc/bloc.dart';
-import 'package:flutter_interview_questions/core/app/enum/question.dart';
-import 'package:flutter_interview_questions/core/model/error/error_model.dart';
-import 'package:flutter_interview_questions/core/model/question/question.dart';
-import 'package:flutter_interview_questions/core/provider/question_bloc/question_event.dart';
-import 'package:flutter_interview_questions/core/provider/question_bloc/question_state.dart';
-import 'package:flutter_interview_questions/core/repository/question_repository.dart';
+import 'package:interview_prep/core/app/enum/question.dart';
+import 'package:interview_prep/core/model/error/error_model.dart';
+import 'package:interview_prep/core/model/question/question.dart';
+import 'package:interview_prep/core/provider/question_bloc/question_event.dart';
+import 'package:interview_prep/core/provider/question_bloc/question_state.dart';
+import 'package:interview_prep/core/repository/question_repository.dart';
 
 class QuestionBloc extends Bloc<QuestionEvent, QuestionState> {
   final QuestionRepository questionRepository = QuestionRepository();

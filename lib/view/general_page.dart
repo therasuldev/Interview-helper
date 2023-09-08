@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_interview_questions/contact_us_screen.dart';
+import 'package:interview_prep/contact_us_screen.dart';
 
-import 'package:flutter_interview_questions/gen/assets.gen.dart';
-import 'package:flutter_interview_questions/settings.dart';
-import 'package:flutter_interview_questions/view/pages/home/home_categories_widget.dart';
-import 'package:flutter_interview_questions/view/pages/library/library.dart';
-import 'package:flutter_interview_questions/view/utils/utils.dart';
+import 'package:interview_prep/gen/assets.gen.dart';
+import 'package:interview_prep/settings.dart';
+import 'package:interview_prep/view/pages/home/home_categories_widget.dart';
+import 'package:interview_prep/view/pages/library/library.dart';
+import 'package:interview_prep/view/utils/utils.dart';
 
 class GeneralPage extends StatefulWidget {
   const GeneralPage({super.key});

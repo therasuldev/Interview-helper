@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_interview_questions/settings_tile.dart';
-import 'package:flutter_interview_questions/view/utils/utils.dart';
+import 'package:interview_prep/settings_tile.dart';
+import 'package:interview_prep/view/utils/utils.dart';
 import 'package:simple_app_cache_manager/simple_app_cache_manager.dart';
 
 class Settings extends StatefulWidget {

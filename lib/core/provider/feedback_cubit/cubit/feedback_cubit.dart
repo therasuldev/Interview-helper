@@ -3,8 +3,8 @@ import 'dart:io';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter_interview_questions/core/model/email/emailjs.dart';
-import 'package:flutter_interview_questions/core/model/error/error_model.dart';
+import 'package:interview_prep/core/model/email/emailjs.dart';
+import 'package:interview_prep/core/model/error/error_model.dart';
 
 import 'package:http/http.dart' as http;
 

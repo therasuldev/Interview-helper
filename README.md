@@ -1,4 +1,4 @@
-# flutter_interview_questions
+# interview_prep
 
 A new Flutter project.
 

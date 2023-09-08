@@ -1,9 +1,9 @@
 import 'package:app_bar_with_search_switch/app_bar_with_search_switch.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_interview_questions/app_navigators.dart';
-import 'package:flutter_interview_questions/core/model/question/question.dart';
-import 'package:flutter_interview_questions/view/pages/home/questions/view/question_view.dart';
-import 'package:flutter_interview_questions/view/utils/utils.dart';
+import 'package:interview_prep/app_navigators.dart';
+import 'package:interview_prep/core/model/question/question.dart';
+import 'package:interview_prep/view/pages/home/questions/view/question_view.dart';
+import 'package:interview_prep/view/utils/utils.dart';
 
 class Questions extends StatefulWidget {
   const Questions(

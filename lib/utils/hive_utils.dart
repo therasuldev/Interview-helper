@@ -1,4 +1,4 @@
-import 'package:flutter_interview_questions/core/model/question/question.dart';
+import 'package:interview_prep/core/model/question/question.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:path_provider/path_provider.dart' as path;
 

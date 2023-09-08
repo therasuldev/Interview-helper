@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_interview_questions/core/model/book/book.dart';
-import 'package:flutter_interview_questions/pdf_view_model.dart';
-import 'package:flutter_interview_questions/view/pages/library/books_listview_builder.dart';
-import 'package:flutter_interview_questions/view/pages/library/open_pdf.dart';
-import 'package:flutter_interview_questions/view/utils/utils.dart';
+import 'package:interview_prep/core/model/book/book.dart';
+import 'package:interview_prep/pdf_view_model.dart';
+import 'package:interview_prep/view/pages/library/books_listview_builder.dart';
+import 'package:interview_prep/view/pages/library/open_pdf.dart';
+import 'package:interview_prep/view/utils/utils.dart';
 
 class BookView extends StatefulWidget {
   const BookView({

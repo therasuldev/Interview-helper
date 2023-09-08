@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_interview_questions/application_start.dart';
-import 'package:flutter_interview_questions/core/app/enum/kpath_event.dart';
-import 'package:flutter_interview_questions/core/provider/books_bloc/books_bloc.dart';
-import 'package:flutter_interview_questions/core/provider/feedback_cubit/cubit/feedback_cubit.dart';
-import 'package:flutter_interview_questions/core/provider/question_bloc/question_bloc.dart';
-import 'package:flutter_interview_questions/view/general_page.dart';
+import 'package:interview_prep/application_start.dart';
+import 'package:interview_prep/core/app/enum/kpath_event.dart';
+import 'package:interview_prep/core/provider/books_bloc/books_bloc.dart';
+import 'package:interview_prep/core/provider/feedback_cubit/cubit/feedback_cubit.dart';
+import 'package:interview_prep/core/provider/question_bloc/question_bloc.dart';
+import 'package:interview_prep/view/general_page.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 Future<void> main() async {

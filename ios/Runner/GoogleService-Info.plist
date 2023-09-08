@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>76643925457-udh85epo1nr13nah3p7q3bu7gg3tav85.apps.googleusercontent.com</string>
+	<string>76643925457-5vfh8kpdqbffkudsn0j02o6sara0c2sq.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.76643925457-udh85epo1nr13nah3p7q3bu7gg3tav85</string>
+	<string>com.googleusercontent.apps.76643925457-5vfh8kpdqbffkudsn0j02o6sara0c2sq</string>
 	<key>API_KEY</key>
 	<string>AIzaSyDx8kOq0BpazSRMC7xSNo3sy6us6InUctk</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.example.flutterInterviewQuestions</string>
+	<string>com.example.interviewPrep</string>
 	<key>PROJECT_ID</key>
 	<string>interview-questio</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:76643925457:ios:3ae928989e9580bdd6f4f0</string>
+	<string>1:76643925457:ios:e3fee3674571cc35d6f4f0</string>
 </dict>
 </plist>

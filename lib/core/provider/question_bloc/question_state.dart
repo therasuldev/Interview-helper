@@ -1,5 +1,5 @@
-import 'package:flutter_interview_questions/core/model/error/error_model.dart';
-import 'package:flutter_interview_questions/core/model/question/question.dart';
+import 'package:interview_prep/core/model/error/error_model.dart';
+import 'package:interview_prep/core/model/question/question.dart';
 
 import '../../app/enum/question.dart';
 
