@@ -22,10 +22,7 @@ class ContactUsScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: Padding(
-          padding: EdgeInsets.symmetric(
-            horizontal: 15,
-            vertical: MediaQuery.of(context).padding.copyWith(top: 20).top,
-          ),
+          padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
           child: Form(
             key: _formKey,
             child: Column(
@@ -69,14 +66,10 @@ class ContactUsScreen extends StatelessWidget {
                 ),
                 const Spacer(),
                 Center(
-                  child: SizedBox(
-                    height: 50,
-                    width: MediaQuery.of(context).size.width * .9,
-                    child: _SendFeedbackButton(
-                      email: _email,
-                      message: _message,
-                      formKey: _formKey,
-                    ),
+                  child: _SendFeedbackButton(
+                    email: _email,
+                    message: _message,
+                    formKey: _formKey,
                   ),
                 ),
               ],
@@ -103,49 +96,57 @@ class _SendFeedbackButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: () {
-        if (formKey.currentState?.validate() ?? false) {
-          final params = MSGParams(email: _email.text, message: _message.text);
-          context.read<FeedbackCubit>().send(params: params);
-        }
-      },
-      style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.all(Colors.green),
-      ),
-      child: BlocConsumer<FeedbackCubit, FeedbackState>(
-        listener: (context, state) {
-          switch (state.event) {
-            case FeedbackEvents.success:
-              ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(
-                  margin: const EdgeInsets.all(10),
-                  backgroundColor: Colors.green,
-                  behavior: SnackBarBehavior.floating,
-                  content: Text('Thank you for your feedback.',
-                      style: ViewUtils.ubuntuStyle()),
-                ),
-              );
-              break;
-            case FeedbackEvents.faile:
-              ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(
-                  backgroundColor: Colors.red,
-                  margin: const EdgeInsets.all(10),
-                  behavior: SnackBarBehavior.floating,
-                  content: Text(state.exception!.description,
-                      style: ViewUtils.ubuntuStyle()),
-                ),
-              );
-              break;
-            default:
-              break;
+    return SizedBox(
+      height: 50,
+      width: MediaQuery.of(context).size.width * .9,
+      child: ElevatedButton(
+        onPressed: () {
+          if (formKey.currentState?.validate() ?? false) {
+            final params =
+                MSGParams(email: _email.text, message: _message.text);
+            context.read<FeedbackCubit>().send(params: params);
           }
         },
-        builder: (context, state) {
-          if (state.loading) return const KSpinKitCircle();
-          return Text('Send feedback', style: ViewUtils.ubuntuStyle());
-        },
+        style: ButtonStyle(
+          elevation: MaterialStateProperty.all(0),
+          foregroundColor: MaterialStateProperty.all(Colors.green),
+          backgroundColor: MaterialStateProperty.all(Colors.white),
+          side: MaterialStateProperty.all(const BorderSide(color: Colors.green, strokeAlign: 10)),
+        ),
+        child: BlocConsumer<FeedbackCubit, FeedbackState>(
+          listener: (context, state) {
+            switch (state.event) {
+              case FeedbackEvents.success:
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    margin: const EdgeInsets.all(10),
+                    backgroundColor: Colors.green,
+                    behavior: SnackBarBehavior.floating,
+                    content: Text('Thank you for your feedback.',
+                        style: ViewUtils.ubuntuStyle(fontSize: 12)),
+                  ),
+                );
+                break;
+              case FeedbackEvents.faile:
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    backgroundColor: Colors.red,
+                    margin: const EdgeInsets.all(10),
+                    behavior: SnackBarBehavior.floating,
+                    content: Text(state.exception!.description,
+                        style: ViewUtils.ubuntuStyle()),
+                  ),
+                );
+                break;
+              default:
+                break;
+            }
+          },
+          builder: (context, state) {
+            if (state.loading) return const KSpinKitCircle();
+            return Text('Send feedback', style: ViewUtils.ubuntuStyle());
+          },
+        ),
       ),
     );
   }
