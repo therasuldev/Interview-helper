@@ -42,14 +42,14 @@ class FeedbackCubit extends Cubit<FeedbackState> {
       }
       emit(state.copyWith(
         loading: false,
-        event: FeedbackEvents.faile,
+        event: FeedbackEvents.fail,
         exception: ExceptionModel(description: "${response.reasonPhrase}"),
       ));
     } on SocketException catch (exception) {
       emit(
         state.copyWith(
           loading: false,
-          event: FeedbackEvents.faile,
+          event: FeedbackEvents.fail,
           exception: ExceptionModel(description: exception.message),
         ),
       );

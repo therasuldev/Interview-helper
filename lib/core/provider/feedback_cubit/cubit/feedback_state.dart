@@ -3,7 +3,7 @@ part of 'feedback_cubit.dart';
 enum FeedbackEvents {
   start,
   success,
-  faile,
+  fail,
 }
 
 @immutable
