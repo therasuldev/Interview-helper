@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:interview_prep/app_colors.dart';
 import 'package:interview_prep/core/model/email/emailjs.dart';
 import 'package:interview_prep/form_validate.dart';
 import 'package:interview_prep/spinkit_circle_loading_widget.dart';
@@ -109,9 +110,9 @@ class _SendFeedbackButton extends StatelessWidget {
         },
         style: ButtonStyle(
           elevation: MaterialStateProperty.all(0),
-          foregroundColor: MaterialStateProperty.all(Colors.green),
           backgroundColor: MaterialStateProperty.all(Colors.white),
-          side: MaterialStateProperty.all(const BorderSide(color: Colors.green, strokeAlign: 10)),
+          foregroundColor: MaterialStateProperty.all(AppColors.appColor),
+          side: MaterialStateProperty.all(const BorderSide(color: AppColors.appColor, strokeAlign: 10)),
         ),
         child: BlocConsumer<FeedbackCubit, FeedbackState>(
           listener: (context, state) {
@@ -127,7 +128,7 @@ class _SendFeedbackButton extends StatelessWidget {
                   ),
                 );
                 break;
-              case FeedbackEvents.faile:
+              case FeedbackEvents.fail:
                 ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(
                     backgroundColor: Colors.red,
