@@ -69,7 +69,7 @@ dev_dependencies:
 
 flutter_native_splash:
   color: "#202122"
-  image: assets/splash.png
+  image: assets/app.png
 
 
 flutter:
@@ -78,7 +78,7 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/splash.png
+    - assets/app.png
     - assets/image_data/
     - assets/questions_data/
 
