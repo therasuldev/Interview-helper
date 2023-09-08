@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_interview_questions/core/utils/screen_data_paths.dart';
+import 'package:flutter_interview_questions/core/constant/screen_data_paths.dart';
 import 'package:flutter_interview_questions/spinkit_circle_loading_widget.dart';
 import 'package:flutter_interview_questions/view/pages/library/all_items/all_books.dart';
 import 'package:flutter_interview_questions/core/provider/books_bloc/books_bloc.dart';

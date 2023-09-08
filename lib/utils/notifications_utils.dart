@@ -1,9 +1,9 @@
 import 'package:flutter_interview_questions/gen/assets.gen.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:workmanager/workmanager.dart';
 
 class NotificationUtils {
-  static Future<void> _start() async {
+  NotificationUtils._();
+  static Future<void> initialize() async {
     final notificationsPlugin = FlutterLocalNotificationsPlugin();
     const android = AndroidInitializationSettings('background');
 
@@ -21,8 +21,7 @@ class NotificationUtils {
     await _showNotificationWithDefaultSound(notificationsPlugin);
   }
 
-  static Future<void> _showNotificationWithDefaultSound(
-      FlutterLocalNotificationsPlugin notificationsPlugin) async {
+  static Future<void> _showNotificationWithDefaultSound(FlutterLocalNotificationsPlugin notificationsPlugin) async {
     final androidChannel = AndroidNotificationDetails(
       'your channel id',
       'your channel name',
@@ -32,8 +31,7 @@ class NotificationUtils {
     );
     const iOSChannel = DarwinNotificationDetails();
 
-    final channel =
-        NotificationDetails(android: androidChannel, iOS: iOSChannel);
+    final channel = NotificationDetails(android: androidChannel, iOS: iOSChannel);
     //TODO: fix later
     await notificationsPlugin.show(
       2,
@@ -42,14 +40,5 @@ class NotificationUtils {
       channel,
       payload: 'Default_Sound',
     );
-  }
-}
-
-class WorkmanagerUtils {
-  static void callbackDispatcher() {
-    Workmanager().executeTask((_, __) async {
-      await NotificationUtils._start();
-      return Future.value(true);
-    });
   }
 }

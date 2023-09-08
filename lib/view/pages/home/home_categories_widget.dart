@@ -4,9 +4,9 @@ import 'package:flutter_interview_questions/app_navigators.dart';
 import 'package:flutter_interview_questions/core/provider/question_bloc/question_bloc.dart';
 import 'package:flutter_interview_questions/core/provider/question_bloc/question_event.dart';
 import 'package:flutter_interview_questions/core/provider/question_bloc/question_state.dart';
-import 'package:flutter_interview_questions/core/utils/screen_data_paths.dart';
-import 'package:flutter_interview_questions/core/utils/categories.dart';
-import 'package:flutter_interview_questions/core/utils/interview_categories.dart';
+import 'package:flutter_interview_questions/core/constant/screen_data_paths.dart';
+import 'package:flutter_interview_questions/core/constant/categories.dart';
+import 'package:flutter_interview_questions/core/constant/interview_categories.dart';
 import 'package:flutter_interview_questions/view/pages/home/questions/questions.dart';
 
 class HomeCategories extends StatefulWidget {
