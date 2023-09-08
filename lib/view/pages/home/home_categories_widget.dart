@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_interview_questions/app_navigators.dart';
-import 'package:flutter_interview_questions/core/app/extension/to_current_category.dart';
 import 'package:flutter_interview_questions/core/provider/question_bloc/question_bloc.dart';
 import 'package:flutter_interview_questions/core/provider/question_bloc/question_event.dart';
 import 'package:flutter_interview_questions/core/provider/question_bloc/question_state.dart';
-import 'package:flutter_interview_questions/core/utils/all_lang.dart';
+import 'package:flutter_interview_questions/core/utils/screen_data_paths.dart';
 import 'package:flutter_interview_questions/core/utils/categories.dart';
-import 'package:flutter_interview_questions/core/utils/categories_list.dart';
+import 'package:flutter_interview_questions/core/utils/interview_categories.dart';
 import 'package:flutter_interview_questions/view/pages/home/questions/questions.dart';
 
 class HomeCategories extends StatefulWidget {
@@ -51,12 +50,12 @@ class _HomeCategoriesState extends State<HomeCategories> {
               mainAxisSpacing: 30,
             ),
             itemBuilder: (context, index) {
-              final cards = CategoryHelper().cards(AllLanguages.allHome[index]);
+              final cards = CategoryHelper().cards(ScreenDataPaths().homeCategoryPathNames[index]);
               return GestureDetector(
                 onTap: () {
                   _bloc.add(
                     QuestionEvent.fetchQuestionStart(
-                      Categories.categories.current(index),
+                      InterviewCategories.categories.toList()[index],
                     ),
                   );
                   setState(() => appBarTitle = cards!.title);
@@ -64,7 +63,7 @@ class _HomeCategoriesState extends State<HomeCategories> {
                 child: cards,
               );
             },
-            itemCount: Categories.categories.length,
+            itemCount: InterviewCategories.categories.length,
           ),
         ),
       );

@@ -22,6 +22,7 @@ class BooksListViewBuilder extends StatelessWidget {
       child: ListView.builder(
         shrinkWrap: true,
         scrollDirection: Axis.horizontal,
+        //TODO phisyc
         itemCount: otherBooks.length,
         itemBuilder: (context, index) {
           final book = otherBooks[index];

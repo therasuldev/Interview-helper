@@ -7,7 +7,7 @@ class QuestionState {
   final QuestionEvents? event;
   final List<Question>? questions;
   final bool? loading;
-  final ErrorModel? error;
+  final ExceptionModel? error;
   QuestionState({
     this.event,
     this.loading,
@@ -19,7 +19,7 @@ class QuestionState {
     QuestionEvents? event,
     List<Question>? questions,
     bool? loading,
-    ErrorModel? error,
+    ExceptionModel? error,
   }) {
     return QuestionState(
       event: event ?? this.event,

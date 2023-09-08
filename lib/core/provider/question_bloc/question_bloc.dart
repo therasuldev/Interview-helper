@@ -38,13 +38,13 @@ class QuestionBloc extends Bloc<QuestionEvent, QuestionState> {
           error: null,
         ),
       );
-    } catch (e) {
+    } catch (exp) {
       emit(
         state.copyWith(
           questions: [],
           loading: true,
           event: QuestionEvents.fetchQuestionError,
-          error: ErrorModel(description: e.toString()),
+          error: ExceptionModel(description: exp.toString()),
         ),
       );
     }

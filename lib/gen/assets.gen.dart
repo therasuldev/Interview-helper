@@ -240,6 +240,10 @@ class Assets {
   static const $AssetsImageDataGen imageData = $AssetsImageDataGen();
   static const $AssetsQuestionsDataGen questionsData =
       $AssetsQuestionsDataGen();
+  static const AssetGenImage splash = AssetGenImage('assets/splash.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [splash];
 }
 
 class AssetGenImage {

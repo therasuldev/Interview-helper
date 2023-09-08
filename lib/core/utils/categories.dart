@@ -1,4 +1,4 @@
-import 'package:flutter_interview_questions/core/app/enum/lang_title_enum.dart';
+import 'package:flutter_interview_questions/core/app/enum/titles.dart';
 import 'package:flutter_interview_questions/gen/assets.gen.dart';
 import 'package:flutter_interview_questions/view/pages/home/category_card.dart';
 

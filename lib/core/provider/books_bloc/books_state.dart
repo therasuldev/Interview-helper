@@ -4,7 +4,7 @@ class BookState {
   final BookEvents? event;
   List<Map<String, List<Book>>>? library;
   final bool? loading;
-  final ErrorModel? error;
+  final ExceptionModel? error;
   BookState({
     this.event,
     this.loading,
@@ -16,7 +16,7 @@ class BookState {
     BookEvents? event,
     List<Map<String, List<Book>>>? library,
     bool? loading,
-    ErrorModel? error,
+    ExceptionModel? error,
   }) {
     return BookState(
       event: event ?? this.event,
