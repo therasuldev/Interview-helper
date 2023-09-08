@@ -26,7 +26,7 @@ class NotificationUtils {
     final androidChannel = AndroidNotificationDetails(
       'your channel id',
       'your channel name',
-      icon: Assets.splash.path,
+      icon: Assets.app.path,
       importance: Importance.max,
       priority: Priority.high,
     );

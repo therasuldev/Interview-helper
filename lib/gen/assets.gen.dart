@@ -237,13 +237,13 @@ class $AssetsQuestionsDataGen {
 class Assets {
   Assets._();
 
+  static const AssetGenImage app = AssetGenImage('assets/app.png');
   static const $AssetsImageDataGen imageData = $AssetsImageDataGen();
   static const $AssetsQuestionsDataGen questionsData =
       $AssetsQuestionsDataGen();
-  static const AssetGenImage splash = AssetGenImage('assets/splash.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [splash];
+  List<AssetGenImage> get values => [app];
 }
 
 class AssetGenImage {

@@ -14,7 +14,7 @@ class RateApp {
         style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
       ),
       image: Image.asset(
-        Assets.splash.path,
+        Assets.app.path,
         height: MediaQuery.of(context).size.height * .2,
       ),
       submitButtonText: 'Submit',

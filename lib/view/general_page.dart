@@ -71,7 +71,7 @@ class _Drawer extends StatelessWidget {
             child: Row(
               children: [
                 const Spacer(),
-                Image.asset(Assets.splash.path),
+                Image.asset(Assets.app.path),
                 const Spacer(),
               ],
             ),
