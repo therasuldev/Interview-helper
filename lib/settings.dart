@@ -11,28 +11,8 @@ class Settings extends StatefulWidget {
   State<Settings> createState() => _SettingsState();
 }
 
-class _SettingsState extends State<Settings> {
+class _SettingsState extends State<Settings> with CacheMixin {
   bool switchVal = false;
-  String cacheSize = '';
-  late final SimpleAppCacheManager cacheManager;
-
-  @override
-  void initState() {
-    super.initState();
-    cacheManager = SimpleAppCacheManager();
-    updateCacheSize();
-  }
-
-  @override
-  void didUpdateWidget(Settings oldWidget) {
-    super.didUpdateWidget(oldWidget);
-    updateCacheSize();
-  }
-
-  void updateCacheSize() async {
-    final newSize = await cacheManager.getTotalCacheSize();
-    setState(() => cacheSize = newSize);
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -50,9 +30,12 @@ class _SettingsState extends State<Settings> {
                 color: Colors.white,
                 Icons.edit_attributes_rounded,
               ),
-              tralling: Text(
-                cacheSize.toString(),
-                style: ViewUtils.ubuntuStyle(color: Colors.red, fontSize: 19),
+              tralling: ValueListenableBuilder(
+                valueListenable: cacheSizeNotifier,
+                builder: (context, cacheSize, child) => Text(
+                  cacheSize,
+                  style: ViewUtils.ubuntuStyle(color: Colors.red, fontSize: 19),
+                ),
               ),
               onTap: () async {
                 cacheManager.clearCache();
@@ -79,5 +62,28 @@ class _SettingsState extends State<Settings> {
         ),
       ),
     );
+  }
+}
+
+mixin CacheMixin on State<Settings> {
+  late final SimpleAppCacheManager cacheManager;
+  late ValueNotifier<String> cacheSizeNotifier = ValueNotifier<String>('');
+
+  @override
+  void initState() {
+    super.initState();
+    cacheManager = SimpleAppCacheManager();
+    updateCacheSize();
+  }
+
+  @override
+  void didUpdateWidget(Settings oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    updateCacheSize();
+  }
+
+  void updateCacheSize() async {
+    final cacheSize = await cacheManager.getTotalCacheSize();
+    cacheSizeNotifier.value = cacheSize;
   }
 }

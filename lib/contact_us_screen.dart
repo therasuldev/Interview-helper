@@ -44,6 +44,9 @@ class ContactUsScreen extends StatelessWidget {
                     hintText: 'Your email',
                     hintStyle: ViewUtils.ubuntuStyle(),
                     border: const OutlineInputBorder(),
+                    focusedBorder: const OutlineInputBorder(
+                      borderSide: BorderSide(color: AppColors.appColor),
+                    ),
                   ),
                   validator: (value) =>
                       FormValidate.emailFieldIsValidate(value),
@@ -60,6 +63,9 @@ class ContactUsScreen extends StatelessWidget {
                     hintText: 'Write your feedback here...',
                     hintStyle: ViewUtils.ubuntuStyle(),
                     border: const OutlineInputBorder(),
+                    focusedBorder: const OutlineInputBorder(
+                      borderSide: BorderSide(color: AppColors.appColor),
+                    ),
                   ),
                   validator: (value) =>
                       FormValidate.feedbackFieldIsValidate(value),
@@ -101,11 +107,11 @@ class _SendFeedbackButton extends StatelessWidget {
       width: MediaQuery.of(context).size.width * .9,
       child: ElevatedButton(
         onPressed: () {
-          if (formKey.currentState?.validate() ?? false) {
-            final params =
-                MSGParams(email: _email.text, message: _message.text);
-            context.read<FeedbackCubit>().send(params: params);
-          }
+          final isValidate = formKey.currentState?.validate() ?? false;
+          if (!isValidate) return;
+          final msgParams =
+              MSGParams(email: _email.text, message: _message.text);
+          context.read<FeedbackCubit>().send(msgParams: msgParams);
         },
         style: ButtonStyle(
           elevation: MaterialStateProperty.all(0),

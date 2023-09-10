@@ -16,8 +16,8 @@ class FeedbackCubit extends Cubit<FeedbackState> {
   FeedbackCubit({required this.apiUrl, required this.headers})
       : super(FeedbackState.unknown);
 
-  void send({required MSGParams params}) async {
-    final emailJS = EmailJS(msgParams: params);
+  void send({required MSGParams msgParams}) async {
+    final emailJS = EmailJS(msgParams: msgParams);
 
     try {
       emit(state.copyWith(loading: true));
