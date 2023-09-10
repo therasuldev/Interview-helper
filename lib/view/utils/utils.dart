@@ -13,7 +13,7 @@ class ViewUtils {
   static questionCardDecor() => BoxDecoration(
         color: Colors.grey[200],
         border: Border.all(color: Colors.black12),
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(5),
       );
 
   // Ubuntu Google fonts

@@ -102,6 +102,7 @@ class _Drawer extends StatelessWidget {
           ),
           _ListTile(
             icon: Icons.settings_outlined,
+            color: Colors.grey,
             title: 'Settings',
             onTap: () {
               Navigator.push(
@@ -112,6 +113,7 @@ class _Drawer extends StatelessWidget {
           ),
           _ListTile(
             icon: Icons.send,
+            color: Colors.green,
             title: 'Contact us',
             onTap: () {
               Navigator.push(
