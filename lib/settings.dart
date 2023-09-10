@@ -76,12 +76,6 @@ mixin CacheMixin on State<Settings> {
     updateCacheSize();
   }
 
-  @override
-  void didUpdateWidget(Settings oldWidget) {
-    super.didUpdateWidget(oldWidget);
-    updateCacheSize();
-  }
-
   void updateCacheSize() async {
     final cacheSize = await cacheManager.getTotalCacheSize();
     cacheSizeNotifier.value = cacheSize;
