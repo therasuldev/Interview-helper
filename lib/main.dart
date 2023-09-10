@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:interview_prep/application_start.dart';
 import 'package:interview_prep/core/app/enum/kpath_event.dart';
+import 'package:interview_prep/core/config/api_config.dart';
 import 'package:interview_prep/core/provider/books_bloc/books_bloc.dart';
-import 'package:interview_prep/core/provider/feedback_cubit/cubit/feedback_cubit.dart';
+import 'package:interview_prep/core/provider/feedback_cubit/feedback_cubit.dart';
 import 'package:interview_prep/core/provider/question_bloc/question_bloc.dart';
 import 'package:interview_prep/utils/work_manager_utils.dart';
 import 'package:interview_prep/view/general_page.dart';
@@ -37,7 +38,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider(create: (context) => FeedbackCubit()),
+        BlocProvider(
+          create: (context) => FeedbackCubit(
+            apiUrl: ApiConfig().url,
+            headers: ApiConfig().headers,
+          ),
+        ),
         BlocProvider(create: (context) => QuestionBloc()),
         BlocProvider(
           create: (context) =>

@@ -11,25 +11,19 @@ import 'package:http/http.dart' as http;
 part 'feedback_state.dart';
 
 class FeedbackCubit extends Cubit<FeedbackState> {
-  FeedbackCubit() : super(FeedbackState.unknown);
+  final Uri apiUrl;
+  final Map<String, String> headers;
+  FeedbackCubit({required this.apiUrl, required this.headers})
+      : super(FeedbackState.unknown);
 
   void send({required MSGParams params}) async {
-    final url = Uri.parse('https://api.emailjs.com/api/v1.0/email/send');
     final emailJS = EmailJS(msgParams: params);
 
-    final headers = {
-      'origin': 'http://localhost',
-      'Content-Type': 'application/json'
-    };
-
     try {
-      emit(state.copyWith(
-        loading: true,
-        event: FeedbackEvents.start,
-      ));
+      emit(state.copyWith(loading: true));
 
       final response = await http.post(
-        url,
+        apiUrl,
         headers: headers,
         body: json.encode(emailJS.toJson()),
       );

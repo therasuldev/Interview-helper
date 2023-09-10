@@ -2,11 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:interview_prep/app_colors.dart';
 import 'package:interview_prep/core/model/email/emailjs.dart';
+import 'package:interview_prep/core/provider/feedback_cubit/feedback_cubit.dart';
 import 'package:interview_prep/form_validate.dart';
 import 'package:interview_prep/spinkit_circle_loading_widget.dart';
 import 'package:interview_prep/view/utils/utils.dart';
-
-import 'core/provider/feedback_cubit/cubit/feedback_cubit.dart';
 
 class ContactUsScreen extends StatelessWidget {
   final TextEditingController _message = TextEditingController();
@@ -112,7 +111,8 @@ class _SendFeedbackButton extends StatelessWidget {
           elevation: MaterialStateProperty.all(0),
           backgroundColor: MaterialStateProperty.all(Colors.white),
           foregroundColor: MaterialStateProperty.all(AppColors.appColor),
-          side: MaterialStateProperty.all(const BorderSide(color: AppColors.appColor, strokeAlign: 10)),
+          side: MaterialStateProperty.all(
+              const BorderSide(color: AppColors.appColor, strokeAlign: 10)),
         ),
         child: BlocConsumer<FeedbackCubit, FeedbackState>(
           listener: (context, state) {
