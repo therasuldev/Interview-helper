@@ -7,83 +7,64 @@ import 'package:interview_prep/view/pages/home/questions/view/question_view.dart
 import 'package:interview_prep/view/utils/utils.dart';
 
 class Questions extends StatefulWidget {
-  const Questions(
-      {super.key, required this.questions, required this.appBarTitle});
+  const Questions({
+    super.key,
+    required this.questions,
+    required this.appBarTitle,
+  });
 
   final List<Question> questions;
   final String appBarTitle;
 
   @override
-  State<Questions> createState() => _QuestionCardState();
+  State<Questions> createState() => _QuestionsState();
 }
 
-class _QuestionCardState extends State<Questions> {
-  final searchBarController = TextEditingController();
-
-  late List<Question> searchedList;
-
-  @override
-  void initState() {
-    super.initState();
-    searchedList = widget.questions;
-  }
-
-  void clearSearchBar() {
-    searchBarController.clear();
-    searchedList = widget.questions;
-    setState(() {});
-  }
-
+class _QuestionsState extends State<Questions> with QuestionCardMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBarWithSearchSwitch(
-        onChanged: (input) {
-          setState(() {});
-          searchedList = widget.questions.where((v) {
-            return v.question.contains(input.toLowerCase());
-          }).toList();
-        },
-        appBarBuilder: (context) => AppBar(
-          title: Text(
-            widget.appBarTitle,
-            style: ViewUtils.ubuntuStyle(fontSize: 22),
-          ),
-          elevation: 0,
-          centerTitle: true,
-          actions: const [AppBarSearchButton()],
-          backgroundColor: AppColors.appColor,
-        ),
-        elevation: 0,
-        backgroundColor: AppColors.appColor,
-      ),
+      appBar: _appBarWithSearchSwitch(),
       body: ListView.builder(
         padding: const EdgeInsets.only(top: 20),
         itemCount: searchedList.length,
         itemBuilder: (context, index) {
-          final question = searchedList[index];
-          return _QuestionCard(
-            questions: searchedList,
-            question: question,
-            index: index,
-          );
+          return _QuestionCard(questions: searchedList, index: index);
         },
         shrinkWrap: true,
       ),
-      backgroundColor: Colors.grey[200],
+      backgroundColor: Colors.white,
+    );
+  }
+
+  AppBarWithSearchSwitch _appBarWithSearchSwitch() {
+    return AppBarWithSearchSwitch(
+      onChanged: (input) {
+        setState(() {});
+        searchedList = widget.questions.where((v) {
+          return v.question.contains(input.toLowerCase());
+        }).toList();
+      },
+      appBarBuilder: (context) => AppBar(
+        title: Text(
+          widget.appBarTitle,
+          style: ViewUtils.ubuntuStyle(fontSize: 22),
+        ),
+        elevation: 0,
+        centerTitle: true,
+        actions: const [AppBarSearchButton()],
+        backgroundColor: AppColors.appColor,
+      ),
+      elevation: 0,
+      backgroundColor: AppColors.appColor,
     );
   }
 }
 
 class _QuestionCard extends StatelessWidget {
-  const _QuestionCard({
-    required this.questions,
-    required this.question,
-    required this.index,
-  });
+  const _QuestionCard({required this.questions, required this.index});
 
   final List<Question> questions;
-  final Question question;
   final int index;
 
   @override
@@ -99,7 +80,7 @@ class _QuestionCard extends StatelessWidget {
           QuestionView(questions: questions, index: index),
         ),
         title: Text(
-          '${index + 1}. ${question.question}',
+          '${index + 1}. ${questions[index].question}',
           maxLines: 1,
           textAlign: TextAlign.start,
           overflow: TextOverflow.ellipsis,
@@ -108,15 +89,36 @@ class _QuestionCard extends StatelessWidget {
         subtitle: Padding(
           padding: const EdgeInsets.only(top: 5.0),
           child: Text(
-            question.answer,
+            questions[index].answer,
             maxLines: 2,
             textAlign: TextAlign.start,
             overflow: TextOverflow.ellipsis,
-            style: ViewUtils.ubuntuStyle(fontSize: 18, color: Colors.blueGrey.withOpacity(.6).withBlue(155)),
+            style: ViewUtils.ubuntuStyle(
+              fontSize: 18,
+              color: Colors.blueGrey.withOpacity(.6).withBlue(155),
+            ),
           ),
         ),
         isThreeLine: true,
       ),
     );
+  }
+}
+
+mixin QuestionCardMixin on State<Questions> {
+  final searchBarController = TextEditingController();
+
+  late List<Question> searchedList;
+
+  @override
+  void initState() {
+    super.initState();
+    searchedList = widget.questions;
+  }
+
+  void clearSearchBar() {
+    searchBarController.clear();
+    searchedList = widget.questions;
+    setState(() {});
   }
 }
