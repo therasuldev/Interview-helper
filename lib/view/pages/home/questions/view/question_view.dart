@@ -18,31 +18,10 @@ class QuestionView extends StatefulWidget {
   State<QuestionView> createState() => _QuestionViewState();
 }
 
-class _QuestionViewState extends State<QuestionView> {
-  late List<Question> questions;
-  late int currentIndex;
-
-  @override
-  void initState() {
-    super.initState();
-    questions = widget.questions;
-    currentIndex = widget.index;
-  }
-
-  void _goToNextQuestion() {
-    if (currentIndex < questions.length - 1) {
-      setState(() => currentIndex++);
-    }
-  }
-
-  void _goToPreviousQuestion() {
-    if (currentIndex > 0) {
-      setState(() => currentIndex--);
-    }
-  }
-
+class _QuestionViewState extends State<QuestionView> with _QuestionViewMixin {
   @override
   Widget build(BuildContext context) => Scaffold(
+        backgroundColor: Colors.white,
         appBar: PreferredSize(
           preferredSize: const Size.fromHeight(240),
           child: ClipPath(
@@ -51,62 +30,11 @@ class _QuestionViewState extends State<QuestionView> {
               height: 300,
               color: AppColors.appColor,
               alignment: Alignment.center,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(
-                      top: 50,
-                      left: 15,
-                      right: 15,
-                      bottom: 15,
-                    ),
-                    child: Row(
-                      children: [
-                        const BackButton(color: Colors.white),
-                        const Spacer(),
-                        Text(
-                          '${currentIndex + 1}/${widget.questions.length}',
-                          style: ViewUtils.ubuntuStyle(
-                            color: Colors.white,
-                            fontSize: 20,
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                  Text(
-                    questions[currentIndex].question,
-                    textAlign: TextAlign.center,
-                    style: ViewUtils.ubuntuStyle(
-                      color: Colors.white,
-                      fontSize: 25,
-                    ),
-                  ),
-                ],
-              ),
+              child: _QuestionViewModel(currentIndex: currentIndex, questions: questions),
             ),
           ),
         ),
-        body: Padding(
-          padding: EdgeInsets.only(
-            bottom: MediaQuery.of(context).size.width * .2,
-            left: 5,
-            right: 5,
-            top: 5,
-          ),
-          child: SingleChildScrollView(
-            physics: const BouncingScrollPhysics(),
-            child: Text(
-              questions[currentIndex].answer,
-              textAlign: TextAlign.center,
-              style: ViewUtils.ubuntuStyle(
-                fontSize: 25,
-                color: const Color.fromARGB(255, 89, 97, 107),
-              ),
-            ),
-          ),
-        ),
+        body: _AnswerViewModel(question: questions[currentIndex]),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         floatingActionButton: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
@@ -127,6 +55,79 @@ class _QuestionViewState extends State<QuestionView> {
           ),
         ),
       );
+}
+
+class _QuestionViewModel extends StatelessWidget {
+  const _QuestionViewModel({
+    required this.currentIndex,
+    required this.questions,
+  });
+
+  final int currentIndex;
+  final List<Question> questions;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Padding(
+          padding:
+              const EdgeInsets.only(top: 50, left: 15, right: 15, bottom: 15),
+          child: Row(
+            children: [
+              const BackButton(color: Colors.white),
+              const Spacer(),
+              Text(
+                '${currentIndex + 1}/${questions.length}',
+                style: ViewUtils.ubuntuStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                ),
+              )
+            ],
+          ),
+        ),
+        Text(
+          questions[currentIndex].question,
+          textAlign: TextAlign.center,
+          style: ViewUtils.ubuntuStyle(
+            color: Colors.white,
+            fontSize: 25,
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class _AnswerViewModel extends StatelessWidget {
+  const _AnswerViewModel({required this.question});
+
+  final Question question;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.only(
+        bottom: MediaQuery.of(context).size.width * .2,
+        left: 5,
+        right: 5,
+        top: 5,
+      ),
+      child: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
+        child: Text(
+          question.answer,
+          textAlign: TextAlign.center,
+          style: ViewUtils.ubuntuStyle(
+            fontSize: 25,
+            color: const Color.fromARGB(255, 89, 97, 107),
+          ),
+        ),
+      ),
+    );
+  }
 }
 
 class _CustomFloatingActionButton extends StatelessWidget {
@@ -156,4 +157,28 @@ class _CustomFloatingActionButton extends StatelessWidget {
   final String heroTag;
   final String label;
   final void Function()? onPressed;
+}
+
+mixin _QuestionViewMixin on State<QuestionView> {
+  late List<Question> questions;
+  late int currentIndex;
+
+  @override
+  void initState() {
+    super.initState();
+    questions = widget.questions;
+    currentIndex = widget.index;
+  }
+
+  void _goToNextQuestion() {
+    if (currentIndex < questions.length - 1) {
+      setState(() => currentIndex++);
+    }
+  }
+
+  void _goToPreviousQuestion() {
+    if (currentIndex > 0) {
+      setState(() => currentIndex--);
+    }
+  }
 }
