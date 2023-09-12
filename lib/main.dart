@@ -6,17 +6,25 @@ import 'package:interview_prep/core/config/api_config.dart';
 import 'package:interview_prep/core/provider/books_bloc/books_bloc.dart';
 import 'package:interview_prep/core/provider/feedback_cubit/feedback_cubit.dart';
 import 'package:interview_prep/core/provider/question_bloc/question_bloc.dart';
-import 'package:interview_prep/utils/work_manager_utils.dart';
+import 'package:interview_prep/utils/notifications_utils.dart';
 import 'package:interview_prep/view/general_page.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:workmanager/workmanager.dart';
+
+@pragma('vm:entry-point')
+void callbackDispatcher() {
+  Workmanager().executeTask((task, inputData) async {
+    await NotificationUtils.initialize();
+    return Future.value(true);
+  });
+}
 
 void main() async {
   await Application.start();
   await initialization();
 
-  //Background local notifications service
-  await Workmanager().initialize(WorkmanagerUtils.callbackDispatcher);
+  // Background local notifications service
+  await Workmanager().initialize(callbackDispatcher);
   await Workmanager().registerPeriodicTask(
     '2',
     'Interview Questions App',
@@ -40,7 +48,7 @@ class MyApp extends StatelessWidget {
       providers: [
         BlocProvider(
           create: (context) => FeedbackCubit(
-            apiUrl: ApiConfig().url,
+            api: ApiConfig().api,
             headers: ApiConfig().headers,
           ),
         ),
