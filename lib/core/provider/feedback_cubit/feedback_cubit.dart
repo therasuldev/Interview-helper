@@ -11,9 +11,9 @@ import 'package:http/http.dart' as http;
 part 'feedback_state.dart';
 
 class FeedbackCubit extends Cubit<FeedbackState> {
-  final Uri apiUrl;
+  final Uri api;
   final Map<String, String> headers;
-  FeedbackCubit({required this.apiUrl, required this.headers})
+  FeedbackCubit({required this.api, required this.headers})
       : super(FeedbackState.unknown);
 
   void send({required MSGParams msgParams}) async {
@@ -23,7 +23,7 @@ class FeedbackCubit extends Cubit<FeedbackState> {
       emit(state.copyWith(loading: true));
 
       final response = await http.post(
-        apiUrl,
+        api,
         headers: headers,
         body: json.encode(emailJS.toJson()),
       );
