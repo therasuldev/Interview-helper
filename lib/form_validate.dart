@@ -13,7 +13,7 @@ class FormValidate {
 
   static String? feedbackFieldIsValidate(String? value) {
     if (value!.isEmpty) {
-      return 'Email field is required.';
+      return 'Feedback field is required.';
     }
     return null;
   }

@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:interview_prep/application_start.dart';
@@ -14,7 +12,6 @@ import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:workmanager/workmanager.dart';
 
 void main() async {
-  log('main called');
   await Application.start();
   await initialization();
 
@@ -25,10 +22,8 @@ void main() async {
     'Interview Questions App',
     frequency: const Duration(days: 5),
   );
-  log('main called');
 
   runApp(const MyApp());
-  log('main called');
 }
 
 Future initialization() async {
