@@ -5,13 +5,12 @@ class NotificationUtils {
   NotificationUtils._();
   static Future<void> initialize() async {
     final notificationsPlugin = FlutterLocalNotificationsPlugin();
-    const android = AndroidInitializationSettings('background');
+    const android = AndroidInitializationSettings('app');
 
     final ios = DarwinInitializationSettings(
       requestAlertPermission: true,
       requestBadgePermission: true,
       requestSoundPermission: true,
-      //TODO: fix later
       onDidReceiveLocalNotification: (_, __, ___, ____) async {},
     );
 
@@ -32,12 +31,10 @@ class NotificationUtils {
     );
     const iOSChannel = DarwinNotificationDetails();
 
-    final channel =
-        NotificationDetails(android: androidChannel, iOS: iOSChannel);
-    //TODO: fix later
+    final channel = NotificationDetails(android: androidChannel, iOS: iOSChannel);
     await notificationsPlugin.show(
       2,
-      'Interview Questions App',
+      'Interview Prep App',
       'Get ready for the interview',
       channel,
       payload: 'Default_Sound',
