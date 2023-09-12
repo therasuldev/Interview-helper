@@ -4,14 +4,14 @@ import 'package:google_fonts/google_fonts.dart';
 class ViewUtils {
   //for category card [Categories page]
   static categoryCardDecor() => BoxDecoration(
-        color: Colors.grey[200],
+        color: Colors.white,
         border: Border.all(color: Colors.blueGrey.shade200),
         borderRadius: BorderRadius.circular(15),
       );
 
   //for question card [Questions page]
   static questionCardDecor() => BoxDecoration(
-        color: Colors.grey[200],
+        color: Colors.white,
         border: Border.all(color: Colors.black12),
         borderRadius: BorderRadius.circular(5),
       );
