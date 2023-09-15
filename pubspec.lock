@@ -664,6 +664,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.0"
+  package_info_plus:
+    dependency: transitive
+    description:
+      name: package_info_plus
+      sha256: "10259b111176fba5c505b102e3a5b022b51dd97e30522e906d6922c745584745"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.1.2"
+  package_info_plus_platform_interface:
+    dependency: transitive
+    description:
+      name: package_info_plus_platform_interface
+      sha256: "9bc8ba46813a4cc42c66ab781470711781940780fd8beddd0c3da62506d3a6c6"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.1"
   path:
     dependency: transitive
     description:
@@ -1109,6 +1125,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.4"
+  version_tracker:
+    dependency: "direct main"
+    description:
+      name: version_tracker
+      sha256: "671a423bec061d4282f228fd1a05ea470fd1595545e6dacaf1cc0f0cd740ebf4"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.2.0"
   watcher:
     dependency: transitive
     description:
@@ -1137,10 +1161,10 @@ packages:
     dependency: transitive
     description:
       name: win32
-      sha256: "9e82a402b7f3d518fb9c02d0e9ae45952df31b9bf34d77baf19da2de03fc2aaa"
+      sha256: "5a751eddf9db89b3e5f9d50c20ab8612296e4e8db69009788d6c8b060a84191c"
       url: "https://pub.dev"
     source: hosted
-    version: "5.0.7"
+    version: "4.1.4"
   workmanager:
     dependency: "direct main"
     description:

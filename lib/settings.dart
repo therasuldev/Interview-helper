@@ -96,7 +96,7 @@ class _SettingsState extends State<Settings> with CacheMixin, VersionMixin {
 
 mixin CacheMixin on State<Settings> {
   late final SimpleAppCacheManager cacheManager;
-  late ValueNotifier<String> cacheSizeNotifier = ValueNotifier<String>('');
+  final cacheSizeNotifier = ValueNotifier<String>('');
 
   void updateCacheSize() async {
     final cacheSize = await cacheManager.getTotalCacheSize();
@@ -106,7 +106,7 @@ mixin CacheMixin on State<Settings> {
 
 mixin VersionMixin on State<Settings> {
   late final VersionTracker versionTracker;
-  late ValueNotifier<String> versionNotifier = ValueNotifier<String>('');
+  final versionNotifier = ValueNotifier<String>('');
 
   void updateVersion() async {
     await versionTracker.track();

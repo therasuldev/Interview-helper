@@ -43,10 +43,11 @@ dependencies:
   shimmer: ^3.0.0
 
   # app features
+  share_plus: ^7.0.0
   rate_my_app: ^1.1.4
   rating_dialog: ^2.0.4
   store_redirect: ^2.0.1
-  share_plus: ^7.0.0
+  version_tracker: ^2.2.0
 
   google_fonts: ^4.0.4
   http: ^0.13.6
