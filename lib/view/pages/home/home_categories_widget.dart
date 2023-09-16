@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:interview_prep/app_navigators.dart';
-import 'package:interview_prep/core/provider/question_bloc/question_bloc.dart';
-import 'package:interview_prep/core/provider/question_bloc/question_event.dart';
-import 'package:interview_prep/core/provider/question_bloc/question_state.dart';
+import 'package:interview_prep/core/provider/bloc/questions/question_bloc.dart';
+import 'package:interview_prep/core/provider/bloc/questions/question_event.dart';
+import 'package:interview_prep/core/provider/bloc/questions/question_state.dart';
 import 'package:interview_prep/core/constant/screen_data_paths.dart';
 import 'package:interview_prep/core/constant/categories.dart';
 import 'package:interview_prep/core/constant/interview_categories.dart';
@@ -43,15 +43,8 @@ class _HomeCategoriesState extends State<HomeCategories> {
         child: Padding(
           padding: const EdgeInsets.only(top: 20),
           child: GridView.builder(
-            physics: const BouncingScrollPhysics(),
-            gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-              maxCrossAxisExtent: 250,
-              childAspectRatio: 1,
-              mainAxisSpacing: 30,
-            ),
             itemBuilder: (context, index) {
-              final cards = CategoryHelper()
-                  .cards(ScreenDataPaths().homeCategoryPathNames[index]);
+              final cards = CategoryHelper().cards(ScreenDataPaths().homeCategoryPathNames[index]);
               return GestureDetector(
                 onTap: () {
                   _bloc.add(
@@ -64,7 +57,15 @@ class _HomeCategoriesState extends State<HomeCategories> {
                 child: cards,
               );
             },
+            addRepaintBoundaries: false,
+            addAutomaticKeepAlives: false,
+            physics: const BouncingScrollPhysics(),
             itemCount: InterviewCategories.categories.length,
+            gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+              maxCrossAxisExtent: 250,
+              childAspectRatio: 1,
+              mainAxisSpacing: 30,
+            ),
           ),
         ),
       );

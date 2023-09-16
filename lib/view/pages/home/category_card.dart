@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:interview_prep/view/utils/utils.dart';
 
+//TODO encapsulation
 class CategoryCard extends StatelessWidget {
   const CategoryCard({super.key, required this.image, required this.title});
 

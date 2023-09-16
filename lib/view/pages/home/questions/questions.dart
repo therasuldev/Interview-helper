@@ -26,12 +26,14 @@ class _QuestionsState extends State<Questions> with QuestionCardMixin {
     return Scaffold(
       appBar: _appBarWithSearchSwitch(),
       body: ListView.builder(
-        padding: const EdgeInsets.only(top: 20),
-        itemCount: searchedList.length,
         itemBuilder: (context, index) {
           return _QuestionCard(questions: searchedList, index: index);
         },
-        shrinkWrap: true,
+        padding: const EdgeInsets.only(top: 20),
+        physics: const BouncingScrollPhysics(),
+        itemCount: searchedList.length,
+        addAutomaticKeepAlives: false,
+        addRepaintBoundaries: false,
       ),
       backgroundColor: Colors.white,
     );
