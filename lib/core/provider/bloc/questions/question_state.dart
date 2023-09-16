@@ -1,7 +1,7 @@
 import 'package:interview_prep/core/model/error/error_model.dart';
 import 'package:interview_prep/core/model/question/question.dart';
 
-import '../../app/enum/question.dart';
+import '../../../app/enum/question.dart';
 
 class QuestionState {
   final QuestionEvents? event;

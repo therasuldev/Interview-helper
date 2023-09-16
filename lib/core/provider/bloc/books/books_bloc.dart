@@ -1,10 +1,9 @@
 import 'package:bloc/bloc.dart';
 import 'package:interview_prep/core/app/enum/book.dart';
+import 'package:interview_prep/core/app/enum/kpath_event.dart';
 import 'package:interview_prep/core/model/book/book.dart';
 import 'package:interview_prep/core/model/error/error_model.dart';
 import 'package:interview_prep/core/repository/book_repository.dart';
-
-import '../../app/enum/kpath_event.dart';
 
 part 'books_event.dart';
 part 'books_state.dart';
@@ -21,7 +20,7 @@ class BookBloc extends Bloc<BookEvent, BookState> {
     });
   }
   _onFetchBookStart(dynamic event) async {
-    emit(state.copyWith(event: event.type, loading: true));
+    emit(state.copyWith(loading: true));
 
     try {
       final data = await bookRepository.fetchBooks(event.payload);
@@ -40,10 +39,9 @@ class BookBloc extends Bloc<BookEvent, BookState> {
 
       emit(
         state.copyWith(
+          event: BookEvents.fetchBookSuccess,
           library: library,
           loading: false,
-          event: BookEvents.fetchBookSuccess,
-          error: null,
         ),
       );
     } catch (exp) {

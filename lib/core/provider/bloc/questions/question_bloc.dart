@@ -2,8 +2,8 @@ import 'package:bloc/bloc.dart';
 import 'package:interview_prep/core/app/enum/question.dart';
 import 'package:interview_prep/core/model/error/error_model.dart';
 import 'package:interview_prep/core/model/question/question.dart';
-import 'package:interview_prep/core/provider/question_bloc/question_event.dart';
-import 'package:interview_prep/core/provider/question_bloc/question_state.dart';
+import 'package:interview_prep/core/provider/bloc/questions/question_event.dart';
+import 'package:interview_prep/core/provider/bloc/questions/question_state.dart';
 import 'package:interview_prep/core/repository/question_repository.dart';
 
 class QuestionBloc extends Bloc<QuestionEvent, QuestionState> {
