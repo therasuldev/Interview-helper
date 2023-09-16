@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:interview_prep/core/service/shared_pref.dart';
 import 'package:interview_prep/settings_tile.dart';
 import 'package:interview_prep/view/utils/utils.dart';
 import 'package:simple_app_cache_manager/simple_app_cache_manager.dart';
@@ -12,7 +13,8 @@ class Settings extends StatefulWidget {
   State<Settings> createState() => _SettingsState();
 }
 
-class _SettingsState extends State<Settings> with CacheMixin, VersionMixin {
+class _SettingsState extends State<Settings>
+    with CacheMixin, VersionMixin, NotificationMixin {
   bool switchVal = false;
 
   @override
@@ -24,6 +26,9 @@ class _SettingsState extends State<Settings> with CacheMixin, VersionMixin {
 
     versionTracker = VersionTracker();
     updateVersion();
+
+    prefs = NotificationPrefs();
+    updateNotificationSettings();
   }
 
   @override
@@ -39,7 +44,7 @@ class _SettingsState extends State<Settings> with CacheMixin, VersionMixin {
               Text('Settings', style: ViewUtils.ubuntuStyle(fontSize: 25)),
               const SizedBox(height: 10),
               clearCacheCard(),
-              notificationCard(),
+              notificationCard(prefs),
               const Spacer(),
               showAppVersion()
             ],
@@ -70,12 +75,20 @@ class _SettingsState extends State<Settings> with CacheMixin, VersionMixin {
         iconColor: Colors.orange,
       );
 
-  Widget notificationCard() => SettingTile(
+  Widget notificationCard(NotificationPrefs prefs) => SettingTile(
         icon: const Icon(size: 20, color: Colors.white, Icons.notifications),
-        tralling: CupertinoSwitch(
-          value: switchVal,
-          activeColor: Colors.green,
-          onChanged: (val) => setState(() => switchVal = val),
+        tralling: ValueListenableBuilder(
+          valueListenable: prefsNotifier,
+          builder: (context, isEnabled, child) {
+            return CupertinoSwitch(
+              value: isEnabled,
+              activeColor: Colors.green,
+              onChanged: (isEnabled) async {
+                prefs.notificationCtrlSet(isEnabled);
+                updateNotificationSettings();
+              },
+            );
+          },
         ),
         title: 'Notifications',
         iconColor: Colors.blueGrey,
@@ -111,5 +124,15 @@ mixin VersionMixin on State<Settings> {
   void updateVersion() async {
     await versionTracker.track();
     versionNotifier.value = versionTracker.currentVersion!;
+  }
+}
+
+mixin NotificationMixin on State<Settings> {
+  late final NotificationPrefs prefs;
+  final prefsNotifier = ValueNotifier<bool>(false);
+
+  void updateNotificationSettings() async {
+    var isEnabled = await prefs.notificationCtrlGet();
+    prefsNotifier.value = isEnabled ?? false;
   }
 }
