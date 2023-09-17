@@ -14,6 +14,9 @@ dependencies:
 
   cupertino_icons: ^1.0.2
 
+  # connectivity
+  connectivity_plus: ^4.0.2
+
   # Firebase
   firebase_storage: ^11.2.1
   firebase_core: ^2.13.0
@@ -54,6 +57,7 @@ dependencies:
 
   workmanager: ^0.5.1
   flutter_local_notifications: ^15.1.1
+  shared_preferences: ^2.2.1
 
 dev_dependencies:
   flutter_test:
