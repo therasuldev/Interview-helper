@@ -9,27 +9,26 @@ abstract class CachedQuestionsSourceDataSource {
 }
 
 class CachedQuestionsSourceDataSourceImpl implements CachedQuestionsSourceDataSource {
-  CachedQuestionsSourceDataSourceImpl({required this.cacheService});
-  final CacheService cacheService;
+  CachedQuestionsSourceDataSourceImpl({required CacheService cacheService}): _cacheService = cacheService;
+  final CacheService _cacheService;
 
   @override
   Future<List<Map<String, dynamic>>> fetchQuestionsFromSource({String? type}) async {
-    List<Map<String, dynamic>> questions = cacheService.cachedquestions.get(type) ?? [];
+    List<Map<String, dynamic>> questions = [];
 
-    if (questions.isNotEmpty) return _completedFetchQuestionsSource(type!);
-    
-    try {
-      var jsonV = await rootBundle.loadString('${Constant.questionPath}/$type.json');
-      List<dynamic> jsonList = json.decode(jsonV);
+    var jsonV = await rootBundle.loadString('${Constant.questionPath}/$type.json');
+    Map<String, dynamic> jsonMap = await json.decode(jsonV);
 
-      questions = jsonList.cast<Map<String, dynamic>>();
 
-      cacheService.cachedquestions.put(type, questions);
-      return _completedFetchQuestionsSource(type!);
-    } catch (e) {throw e.toString();}
+    var jsonList = jsonMap.values.toList();
+    List<Map<String, dynamic>> typedJsonList = jsonList.cast<Map<String, dynamic>>();
+    questions.addAll(typedJsonList);
+
+    _cacheService.cachedquestions.put(type, questions);
+    return await _completedFetchQuestionsSource(type!);
   }
 
   Future<List<Map<String, dynamic>>> _completedFetchQuestionsSource(String category) async {
-    return cacheService.cachedquestions.get(category) ?? [];
+    return await _cacheService.cachedquestions.get(category);
   }
 }
