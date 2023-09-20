@@ -5,30 +5,35 @@ import 'package:interview_prep/src/utils/constants/constant.dart';
 import 'package:interview_prep/src/data/datasources/local/base/base_cache_service.dart';
 
 abstract class CachedQuestionsSourceDataSource {
-  Future<List<Map<String, dynamic>>> fetchQuestionsFromSource({String? type});
+  Future<List<Map<String, dynamic>>?> fetchQuestionsFromSource({String? category});
 }
 
-class CachedQuestionsSourceDataSourceImpl implements CachedQuestionsSourceDataSource {
-  CachedQuestionsSourceDataSourceImpl({required CacheService cacheService}): _cacheService = cacheService;
-  final CacheService _cacheService;
-
+class CachedQuestionsSourceDataSourceImpl with CachedQuestionsSourceDataSourceMixin implements CachedQuestionsSourceDataSource {
   @override
-  Future<List<Map<String, dynamic>>> fetchQuestionsFromSource({String? type}) async {
-    List<Map<String, dynamic>> questions = [];
+  Future<List<Map<String, dynamic>>?> fetchQuestionsFromSource({String? category}) async {
+    final cachedQuestions = await _getQuestionSourcesFromCache(category);
+    // If there are questions in the cache, it should retrieve them from the cache
+    // without re-reading the file; if there are no questions in the cache, it should
+    // read them from the file and write them to the cache.
+    if(cachedQuestions==null || cachedQuestions.isEmpty) await _writeToCache(category);
+    
+    return _getQuestionSourcesFromCache(category);
+  }
+}
 
-    var jsonV = await rootBundle.loadString('${Constant.questionPath}/$type.json');
-    Map<String, dynamic> jsonMap = await json.decode(jsonV);
+mixin CachedQuestionsSourceDataSourceMixin { 
+  final CacheService _cacheService = CacheService();
 
-
-    var jsonList = jsonMap.values.toList();
-    List<Map<String, dynamic>> typedJsonList = jsonList.cast<Map<String, dynamic>>();
-    questions.addAll(typedJsonList);
-
-    _cacheService.cachedquestions.put(type, questions);
-    return await _completedFetchQuestionsSource(type!);
+  Future<List<Map<String, dynamic>>?> _getQuestionSourcesFromCache(String? category) async {
+    return _cacheService.cachedquestions.get(category);
   }
 
-  Future<List<Map<String, dynamic>>> _completedFetchQuestionsSource(String category) async {
-    return await _cacheService.cachedquestions.get(category);
+  Future<void> _writeToCache(String? category) async {
+    final jsonV = await rootBundle.loadString('${Constant.questionPath}/$category.json');
+    final Map<String, dynamic> jsonMap = await json.decode(jsonV);
+    final List<Map<String, dynamic>> questions = [];
+
+    for (var i = 1; i <= jsonMap.length; i++) {questions.add(jsonMap['$i']);}
+    await _cacheService.cachedquestions.put(category, questions);
   }
 }
