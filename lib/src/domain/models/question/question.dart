@@ -15,6 +15,6 @@ class Question {
   });
 
   Question.fromJson(Map<String, dynamic> data)
-      : question = data['question'],
-        answer = data['answer'];
+      : question = data['question'] as String,
+        answer = data['answer'] as String;
 }
