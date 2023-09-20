@@ -42,7 +42,7 @@ class _HomeViewState extends State<HomeView> {
           padding: const EdgeInsets.only(top: 20),
           child: GridView.builder(
             itemBuilder: (context, index) {
-              final cards = CategoryHelper().cards(ScreenDataPaths().homeCategoryPathNames[index]);
+              final card = CategoryHelper().cards(ScreenDataPaths().homeCategoryPathNames[index]);
               return GestureDetector(
                 onTap: () {
                   _bloc.add(
@@ -50,9 +50,9 @@ class _HomeViewState extends State<HomeView> {
                       InterviewCategories.categories.toList()[index],
                     ),
                   );
-                  setState(() => appBarTitle = cards!.title);
+                  setState(() => appBarTitle = card!.title);
                 },
-                child: cards,
+                child: card,
               );
             },
             addRepaintBoundaries: false,

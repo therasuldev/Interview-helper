@@ -51,6 +51,7 @@ class AllBooksOfCategory extends StatelessWidget {
         itemCount: books.length,
         addRepaintBoundaries: false,
         addAutomaticKeepAlives: false,
+        physics: const BouncingScrollPhysics(),
         gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
           maxCrossAxisExtent: 300,
           childAspectRatio: 5 / 9,

@@ -1,3 +1,5 @@
+// ignore_for_file: invalid_use_of_visible_for_testing_member
+
 import 'package:bloc/bloc.dart';
 
 import 'package:interview_prep/src/data/datasources/remote/books_source_data_source.dart';
