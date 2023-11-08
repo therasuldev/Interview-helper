@@ -72,8 +72,7 @@ class _QuestionViewModel extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Padding(
-          padding:
-              const EdgeInsets.only(top: 50, left: 15, right: 15, bottom: 15),
+          padding: const EdgeInsets.only(top: 50, left: 15, right: 15, bottom: 15),
           child: Row(
             children: [
               const BackButton(color: Colors.white),
@@ -109,12 +108,7 @@ class _AnswerViewModel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(
-        bottom: MediaQuery.of(context).size.width * .2,
-        left: 5,
-        right: 5,
-        top: 5,
-      ),
+      padding: EdgeInsets.only(bottom: MediaQuery.of(context).size.width * .2, left: 5, right: 5, top: 5),
       child: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
         child: Text(

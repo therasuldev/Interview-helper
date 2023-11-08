@@ -14,7 +14,8 @@ dependencies:
 
   cupertino_icons: ^1.0.2
 
-  # connectivity
+  # config
+  go_router: ^12.1.0
   connectivity_plus: ^4.0.2
 
   # Firebase

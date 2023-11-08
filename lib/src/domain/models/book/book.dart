@@ -9,12 +9,10 @@ class Book {
   final String name;
   @HiveField(1)
   final Future<String> url;
-  Book({
-    required this.name,
-    required this.url,
-  });
+  
+  Book({required this.name, required this.url});
 
-  Book.fromJson(Reference ref)
-      : name = ref.name,
-        url = ref.getDownloadURL();
+  factory Book.fromJson(Reference ref) {
+    return Book(name: ref.name, url: ref.getDownloadURL());
+  }
 }

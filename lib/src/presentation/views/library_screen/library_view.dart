@@ -33,11 +33,9 @@ class _LibraryViewState extends State<LibraryView> {
 
   List<Widget> buildLanguageRows(BookState state) {
     List<Widget> rows = [];
-    for (var i = 0;
-        i < ScreenDataPaths().libraryCategoryPathNames.length;
-        i++) {
-      var type = ScreenDataPaths().libraryCategoryPathNames[i];
-      var title = Titles.values[i];
+    for (var i = 0; i < ScreenDataPaths().libraryCategoryPathNames.length; i++) {
+      final type = ScreenDataPaths().libraryCategoryPathNames[i];
+      final title = Titles.values[i];
       rows.addAll([
         _RowTitleWidget(
           title: title.title,

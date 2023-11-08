@@ -1,5 +1,9 @@
+import 'dart:convert';
+
 import 'package:app_bar_with_search_switch/app_bar_with_search_switch.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:interview_prep/src/config/router/app_route_const.dart';
 import 'package:interview_prep/src/utils/constants/app_colors.dart';
 import 'package:interview_prep/src/config/router/app_navigators.dart';
 import 'package:interview_prep/src/domain/models/question/question.dart';
@@ -14,7 +18,7 @@ class QuestionsView extends StatefulWidget {
   });
 
   final List<Question> questions;
-  final String appBarTitle;
+  final String? appBarTitle;
 
   @override
   State<QuestionsView> createState() => _QuestionsViewState();
@@ -49,7 +53,7 @@ class _QuestionsViewState extends State<QuestionsView> with QuestionCardMixin {
       },
       appBarBuilder: (context) => AppBar(
         title: Text(
-          widget.appBarTitle,
+          widget.appBarTitle ?? '',
           style: ViewUtils.ubuntuStyle(fontSize: 22),
         ),
         elevation: 0,
@@ -77,10 +81,13 @@ class _QuestionCard extends StatelessWidget {
       decoration: ViewUtils.questionCardDecor(),
       margin: const EdgeInsets.all(7),
       child: ListTile(
-        onTap: () => AppNavigators.go(
-          context,
-          QuestionView(questions: questions, index: index),
-        ),
+        onTap: () {
+          context.goNamed(
+            AppRouteConstant.questionView,
+            queryParameters: {'index': index.toString()},
+            extra: questions,
+          );
+        },
         title: Text(
           '${index + 1}. ${questions[index].question}',
           maxLines: 1,

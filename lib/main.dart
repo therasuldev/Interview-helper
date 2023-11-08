@@ -3,13 +3,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:workmanager/workmanager.dart';
 
-import 'package:interview_prep/interview_prep_scaffold.dart';
+import 'package:interview_prep/src/config/router/app_route_const.dart';
 import 'package:interview_prep/src/data/datasources/local/notification_prefs.dart';
 import 'package:interview_prep/src/presentation/provider/bloc/books/books_bloc.dart';
 import 'package:interview_prep/src/presentation/provider/bloc/questions/question_bloc.dart';
 import 'package:interview_prep/src/presentation/provider/cubit/feedback/feedback_cubit.dart';
-import 'package:interview_prep/src/presentation/views/home_screen/home_view.dart';
-import 'package:interview_prep/src/presentation/views/library_screen/library_view.dart';
 import 'package:interview_prep/src/utils/application_utils.dart';
 import 'package:interview_prep/src/utils/enum/kpath_event.dart';
 
@@ -41,34 +39,26 @@ void main() async {
     );
   }
 
-  final bookBloc = BookBloc()
-    ..add(BookEvent.fetchBooksStart(_Helper().categories));
-
   await initialization();
-  runApp(
-    MultiBlocProvider(
-      providers: [
-        BlocProvider(create: (context) => FeedbackCubit()),
-        BlocProvider(create: (context) => QuestionBloc()),
-        BlocProvider.value(value: bookBloc)
-      ],
-      child: const MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: Wrapper(),
-      ),
-    ),
-  );
+  runApp(const MyApp());
 }
 
-class Wrapper extends StatelessWidget {
-  const Wrapper({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const InterviewPrepScaffold(screens: [
-      HomeView(),
-      LibraryView(),
-    ]);
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(create: (context) => FeedbackCubit()),
+        BlocProvider(create: (context) => QuestionBloc()),
+        BlocProvider(create: (context) => BookBloc()..add(BookEvent.fetchBooksStart(_Helper().categories)))
+      ],
+      child: MaterialApp.router(
+        debugShowCheckedModeBanner: false,
+        routerConfig: config,
+      ),
+    );
   }
 }
 
