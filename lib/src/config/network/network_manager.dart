@@ -30,9 +30,9 @@ class ConnectivityService {
 
   // isConnected is a getter method to check
   // if device is connected or not. as [BOOLEAN].
-  static Future<bool> get isConnected async {
+   Future<bool> get isConnected async {
     final status = await ConnectivityService().checkConnectivity(
-      notifyStream: false,
+      notifyStream: true,
     );
 
     return status == ConnectivityStatus.online;

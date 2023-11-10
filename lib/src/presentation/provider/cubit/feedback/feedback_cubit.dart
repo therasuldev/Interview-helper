@@ -13,12 +13,12 @@ import 'package:interview_prep/src/domain/models/error/error_model.dart';
 part 'feedback_state.dart';
 
 class FeedbackCubit extends Cubit<FeedbackState> {
+  final  _connectivityService = ConnectivityService();
   FeedbackCubit() : super(FeedbackState.unknown);
 
-  //TODO: fix return null connectivity
   Future<FeedbackState?> _checkConnectivity(FeedbackState state) async {
-    final isConnected = await ConnectivityService.isConnected;
-    if (isConnected) return null;
+    final isConnected = await _connectivityService.isConnected;
+    if (!isConnected) return null;
 
     return state.copyWith(
       loading: false,
@@ -62,5 +62,10 @@ class FeedbackCubit extends Cubit<FeedbackState> {
         ),
       );
     }
+  }
+  @override
+  Future<void> close() {
+    _connectivityService.cancelSubscription();
+    return super.close();
   }
 }

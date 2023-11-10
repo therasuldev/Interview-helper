@@ -48,7 +48,7 @@ class _PDFViewModel extends StatelessWidget {
   Widget build(BuildContext context) {
     return FutureBuilder<String>(
       future: book.url,
-      builder: (ctx, snapshot) {
+      builder: (context, snapshot) {
         if (snapshot.hasData) {
           final child = const PDF().cachedFromUrl(
             snapshot.data!,

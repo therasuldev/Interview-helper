@@ -21,11 +21,9 @@ class BooksView extends StatelessWidget {
           final book = otherBooks[index];
           List<Book> otherBooks1 = [];
           if (allBooks == null) {
-            otherBooks1 = otherBooks.where((currentBook) {
-              return currentBook != book;
-            }).toList();
+            otherBooks1 = otherBooks.getOtherBooks(book);
           } else {
-            otherBooks1 = allBooks!.where((b) => b != book).toList();
+            otherBooks1 = allBooks!.where((bk) => bk != book).toList();
           }
           return GestureDetector(
             onTap: () {
@@ -72,5 +70,13 @@ class BooksView extends StatelessWidget {
         physics: const BouncingScrollPhysics(),
       ),
     );
+  }
+}
+
+extension on List<Book> {
+  List<Book> getOtherBooks(Book book) {
+    return where((currentBook) {
+      return currentBook != book;
+    }).toList();
   }
 }
