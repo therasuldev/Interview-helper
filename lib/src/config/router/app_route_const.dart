@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:interview_prep/interview_prep_scaffold.dart';
@@ -69,7 +67,6 @@ GoRouter config = GoRouter(
                               index: index,
                               key: state.pageKey,
                               questions: questions,
-                              //index: index,
                             ),
                           );
                         },

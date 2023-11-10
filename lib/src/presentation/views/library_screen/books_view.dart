@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:interview_prep/src/presentation/widgets/pdf_view_model.dart';
 import 'package:interview_prep/src/config/router/app_navigators.dart';
@@ -47,7 +48,7 @@ class BooksView extends StatelessWidget {
                   Expanded(
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 3.0),
-                      child: Text(
+                      child: AutoSizeText(
                         book.name,
                         maxLines: 3,
                         textAlign: TextAlign.center,
