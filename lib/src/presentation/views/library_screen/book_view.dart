@@ -42,8 +42,8 @@ class _BookViewState extends State<BookView> {
               const SizedBox(height: 20),
               GestureDetector(
                 onTap: () async {
-                  buildder(_) => OpenPDFView(book: widget.book);
-                  final destination = MaterialPageRoute(builder: buildder);
+                  builder(_) => OpenPDFView(book: widget.book);
+                  final destination = MaterialPageRoute(builder: builder);
                   await Navigator.push(context, destination);
                 },
                 child: Padding(

@@ -1,9 +1,10 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:interview_prep/src/presentation/widgets/pdf_view_model.dart';
-import 'package:interview_prep/src/config/router/app_navigators.dart';
+import 'package:go_router/go_router.dart';
+
+import 'package:interview_prep/src/config/router/app_route_const.dart';
 import 'package:interview_prep/src/domain/models/book/book.dart';
-import 'package:interview_prep/src/presentation/views/library_screen/book_view.dart';
+import 'package:interview_prep/src/presentation/widgets/pdf_view_model.dart';
 import 'package:interview_prep/src/utils/decorations/view_utils.dart';
 
 class BooksView extends StatelessWidget {
@@ -27,11 +28,11 @@ class BooksView extends StatelessWidget {
           }
           return GestureDetector(
             onTap: () {
-              AppNavigators.go(
-                context,
-                BookView(
-                  book: book,
+              context.goNamed(
+                AppRouteConstant.bookView,
+                extra: BookViewDetails(
                   index: index,
+                  book: book,
                   otherBooks: otherBooks1,
                 ),
               );

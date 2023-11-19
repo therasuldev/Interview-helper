@@ -35,10 +35,10 @@ class _LibraryViewState extends State<LibraryView> {
     List<Widget> rows = [];
     for (var i = 0; i < ScreenDataPaths().libraryCategoryPathNames.length; i++) {
       final type = ScreenDataPaths().libraryCategoryPathNames[i];
-      final title = Titles.values[i];
+      final category = Titles.values[i];
       rows.addAll([
         _RowTitleWidget(
-          title: title.title,
+          title: category.title,
           page: AllBooksOfCategory(books: state.library![i][type]!),
         ),
         BooksView(otherBooks: state.library![i][type]!),
