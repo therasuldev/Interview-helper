@@ -24,9 +24,9 @@ base class Application {
 
 interface class _HiveUtils {
   static Future<void> initialize() async {
-    await path
-        .getApplicationDocumentsDirectory()
-        .then((directory) async => await Hive.initFlutter(directory.path));
+    await path.getApplicationDocumentsDirectory().then((directory) async {
+      await Hive.initFlutter(directory.path);
+    });
 
     if (!(Hive.isAdapterRegistered(0))) {
       Hive.registerAdapter(QuestionAdapter());
@@ -36,7 +36,7 @@ interface class _HiveUtils {
   }
 }
 
- interface class NotificationUtils {
+interface class NotificationUtils {
   NotificationUtils._();
   static Future<void> initialize() async {
     const android = AndroidInitializationSettings('app');
@@ -55,8 +55,7 @@ interface class _HiveUtils {
     await _showNotificationWithDefaultSound(notificationsPlugin);
   }
 
-  static Future<void> _showNotificationWithDefaultSound(
-      FlutterLocalNotificationsPlugin notificationsPlugin) async {
+  static Future<void> _showNotificationWithDefaultSound(FlutterLocalNotificationsPlugin notificationsPlugin) async {
     final androidChannel = AndroidNotificationDetails(
       'your_channel_id',
       'your_channel_name',
@@ -66,8 +65,7 @@ interface class _HiveUtils {
     );
     const iOSChannel = DarwinNotificationDetails();
 
-    final channel =
-        NotificationDetails(android: androidChannel, iOS: iOSChannel);
+    final channel = NotificationDetails(android: androidChannel, iOS: iOSChannel);
     await notificationsPlugin.show(
       2,
       'Interview Prep App',

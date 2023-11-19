@@ -23,8 +23,7 @@ class Intl {
     }
 
     int idx;
-    String formatted = localizedValues![key]!.replaceAllMapped(
-        RegExp(r'\%[0-9]{1,3}', multiLine: true), (Match match) {
+    String formatted = localizedValues![key]!.replaceAllMapped(RegExp(r'\%[0-9]{1,3}', multiLine: true), (Match match) {
       idx = int.parse(match[0]!.substring(1)) - 1;
 
       return (args.asMap()[idx] ?? match[0]).str();
@@ -34,8 +33,7 @@ class Intl {
   }
 
   Future<Map<String, dynamic>> load() async {
-    final jsonString =
-        await rootBundle.loadString('assets/i18n/${locale.languageCode}.json');
+    final jsonString = await rootBundle.loadString('assets/i18n/${locale.languageCode}.json');
     Map<String, dynamic> jsonMap = json.decode(jsonString);
 
     localizedValues = jsonMap.map(
@@ -64,38 +62,3 @@ class IntlDelegate extends LocalizationsDelegate<Intl> {
   @override
   bool shouldReload(IntlDelegate old) => false;
 }
-
-
-
-
-
-// class GameRepository extends IRiddlesRepository {
-//   final CacheRepository _cahceRepo;
-//   final String _path;
-//   GameRepository({
-//     required CacheRepository cahceRepo,
-//     required String path,
-//   })  : _cahceRepo = cahceRepo,
-//         _path = path;
-
-//   @override
-//   Future<List<Map<String, dynamic>>> getRiddles(String category) async {
-//     return await _cahceRepo.getGameRiddlesFromCache(category);
-//   }
-
-//   @override
-//   Future<List<Map<String, dynamic>>> loadRiddles(String category) async {
-//     List<Map<String, dynamic>> riddles = [];
-
-//     var jsonStr = await rootBundle.loadString('$_path/$category.json');
-//     Map<String, dynamic> jsonMap = await json.decode(jsonStr);
-
-//     for (var i = 1; i <= jsonMap.length; i++) {
-//       riddles.add(jsonMap['$i']);
-//     }
-
-//     _cahceRepo.putGameRiddlesToCache(category, riddles);
-
-//     return await getRiddles(category);
-//   }
-// }

@@ -1,9 +1,12 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:interview_prep/src/presentation/widgets/pdf_view_model.dart';
-import 'package:interview_prep/src/config/router/app_navigators.dart';
+import 'package:go_router/go_router.dart';
+
+import 'package:interview_prep/src/config/router/app_route_const.dart';
 import 'package:interview_prep/src/domain/models/book/book.dart';
-import 'package:interview_prep/src/presentation/views/library_screen/book_view.dart';
-import 'package:interview_prep/src/utils/decorations/view_utils.dart';
+import '../../../domain/models/book/book_view_details.dart';
+import '../../widgets/pdf_view_model.dart';
+import '../../../utils/decorations/view_utils.dart';
 
 class BooksView extends StatelessWidget {
   const BooksView({super.key, this.allBooks, required this.otherBooks});
@@ -20,19 +23,17 @@ class BooksView extends StatelessWidget {
           final book = otherBooks[index];
           List<Book> otherBooks1 = [];
           if (allBooks == null) {
-            otherBooks1 = otherBooks.where((currentBook) {
-              return currentBook != book;
-            }).toList();
+            otherBooks1 = otherBooks.getOtherBooks(book);
           } else {
-            otherBooks1 = allBooks!.where((b) => b != book).toList();
+            otherBooks1 = allBooks!.where((bk) => bk != book).toList();
           }
           return GestureDetector(
             onTap: () {
-              AppNavigators.go(
-                context,
-                BookView(
-                  book: book,
+              context.goNamed(
+                AppRouteConstant.bookView,
+                extra: BookViewDetails(
                   index: index,
+                  book: book,
                   otherBooks: otherBooks1,
                 ),
               );
@@ -47,7 +48,7 @@ class BooksView extends StatelessWidget {
                   Expanded(
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 3.0),
-                      child: Text(
+                      child: AutoSizeText(
                         book.name,
                         maxLines: 3,
                         textAlign: TextAlign.center,
@@ -71,5 +72,13 @@ class BooksView extends StatelessWidget {
         physics: const BouncingScrollPhysics(),
       ),
     );
+  }
+}
+
+extension on List<Book> {
+  List<Book> getOtherBooks(Book book) {
+    return where((currentBook) {
+      return currentBook != book;
+    }).toList();
   }
 }

@@ -8,6 +8,9 @@ class OpenPDFView extends StatelessWidget {
   final Book book;
 
   @override
-  Widget build(BuildContext context) => Scaffold(
-      body: BookViewModel(book: book).buildBookforEntireScreen(context));
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: BookViewModel(book: book).buildBookforEntireScreen(context),
+    );
+  }
 }

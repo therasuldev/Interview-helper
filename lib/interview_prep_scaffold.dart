@@ -1,31 +1,31 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:interview_prep/src/utils/constants/app_colors.dart';
 import 'package:interview_prep/src/presentation/views/drawer_screen/drawer_view.dart';
 import 'package:interview_prep/src/utils/decorations/view_utils.dart';
 
 class InterviewPrepScaffold extends StatefulWidget {
-  const InterviewPrepScaffold({super.key, required this.screens});
-  final List<Widget> screens;
+  const InterviewPrepScaffold({super.key, required this.body});
+  final StatefulNavigationShell body;
 
   @override
   State<InterviewPrepScaffold> createState() => _InterviewPrepScaffoldState();
 }
 
 class _InterviewPrepScaffoldState extends State<InterviewPrepScaffold> {
-  changeScreen(index) {
-    setState(() => screenIndex = index);
-  }
-
-  int screenIndex = 0;
+  void goBranch(index) => widget.body.goBranch(
+        index,
+        initialLocation: index == widget.body.currentIndex,
+      );
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: appBar(widget.body.currentIndex),
       backgroundColor: Colors.white,
-      appBar: appBar(screenIndex),
-      body: widget.screens.elementAtOrNull(screenIndex),
-      drawer: screenIndex.isEqual(0) ? const DrawerWidget() : null,
-      bottomNavigationBar: _BottomNavBar(screenIndex: screenIndex, changeScreen: changeScreen),
+      body: widget.body,
+      drawer: widget.body.currentIndex.isEqual(0) ? const DrawerView() : null,
+      bottomNavigationBar: _BottomNavBar(changeScreen: goBranch, screenIndex: widget.body.currentIndex),
     );
   }
 

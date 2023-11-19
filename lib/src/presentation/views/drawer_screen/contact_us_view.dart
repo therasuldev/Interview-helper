@@ -16,8 +16,8 @@ class ContactUsScreen extends StatefulWidget {
 }
 
 class _ContactUsScreenState extends State<ContactUsScreen> {
-  final TextEditingController message = TextEditingController();
-  final TextEditingController email = TextEditingController();
+  final message = TextEditingController();
+  final email = TextEditingController();
   final formKey = GlobalKey<FormState>();
   final emailKey = GlobalKey<FormFieldState>();
   final feedbackKey = GlobalKey<FormFieldState>();
@@ -60,8 +60,7 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                       borderSide: BorderSide(color: AppColors.appColor),
                     ),
                   ),
-                  validator: (value) =>
-                      FormValidate.emailFieldIsValidate(value),
+                  validator: (value) => FormValidate.emailFieldIsValidate(value),
                 ),
                 const SizedBox(height: 20),
                 TextFormField(
@@ -79,8 +78,7 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                       borderSide: BorderSide(color: AppColors.appColor),
                     ),
                   ),
-                  validator: (value) =>
-                      FormValidate.feedbackFieldIsValidate(value),
+                  validator: (value) => FormValidate.feedbackFieldIsValidate(value),
                 ),
                 const Spacer(),
                 Center(
@@ -119,22 +117,19 @@ class _SendFeedbackButton extends StatelessWidget {
       child: StreamBuilder(
         stream: ConnectivityService().controller.stream,
         builder: (context, snapshot) {
-          return ElevatedButton(
+          return OutlinedButton(
             onPressed: () {
               final isValidate = formKey.currentState?.validate() ?? false;
               if (!isValidate && snapshot.data != ConnectivityStatus.online) {
                 return;
               }
-              final msgParams =
-                  MSGParams(email: email.text, message: message.text);
+              final msgParams = MSGParams(email: email.text, message: message.text);
               context.read<FeedbackCubit>().send(msgParams: msgParams);
             },
             style: ButtonStyle(
-              elevation: MaterialStateProperty.all(0),
-              backgroundColor: MaterialStateProperty.all(Colors.white),
+              overlayColor : MaterialStateProperty.all(Colors.white),
               foregroundColor: MaterialStateProperty.all(AppColors.appColor),
-              side: MaterialStateProperty.all(
-                  const BorderSide(color: AppColors.appColor, strokeAlign: 10)),
+              side: MaterialStateProperty.all(const BorderSide(color: AppColors.appColor, strokeAlign: 10)),
             ),
             child: BlocConsumer<FeedbackCubit, FeedbackState>(
               listener: (context, state) {
@@ -145,8 +140,7 @@ class _SendFeedbackButton extends StatelessWidget {
                         margin: const EdgeInsets.all(10),
                         backgroundColor: Colors.green,
                         behavior: SnackBarBehavior.floating,
-                        content: Text('Thank you for your feedback.',
-                            style: ViewUtils.ubuntuStyle(fontSize: 12)),
+                        content: Text('Thank you for your feedback.', style: ViewUtils.ubuntuStyle(fontSize: 12)),
                       ),
                     );
                     break;
@@ -156,8 +150,7 @@ class _SendFeedbackButton extends StatelessWidget {
                         backgroundColor: Colors.red,
                         margin: const EdgeInsets.all(10),
                         behavior: SnackBarBehavior.floating,
-                        content: Text(state.exception!.description,
-                            style: ViewUtils.ubuntuStyle()),
+                        content: Text(state.exception!.description, style: ViewUtils.ubuntuStyle()),
                       ),
                     );
                     break;

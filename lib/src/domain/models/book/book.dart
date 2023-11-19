@@ -1,4 +1,4 @@
-import 'package:firebase_storage/firebase_storage.dart';
+
 import 'package:hive/hive.dart';
 
 part 'book.g.dart';
@@ -8,13 +8,15 @@ class Book {
   @HiveField(0)
   final String name;
   @HiveField(1)
-  final Future<String> url;
-  Book({
-    required this.name,
-    required this.url,
-  });
+  final String url;
 
-  Book.fromJson(Reference ref)
-      : name = ref.name,
-        url = ref.getDownloadURL();
+  const Book({required this.name, required this.url});
+
+  factory Book.fromStorage(String name, String url) {
+    return Book(name: name, url: url);
+  }
+
+  Map<String, dynamic> toJson() {
+    return {'name': name, 'url': url};
+  }
 }

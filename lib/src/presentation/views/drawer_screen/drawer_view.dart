@@ -4,8 +4,8 @@ import 'package:interview_prep/gen/assets.gen.dart';
 import 'package:interview_prep/src/presentation/views/drawer_screen/settings_view.dart';
 import 'package:interview_prep/src/utils/decorations/view_utils.dart';
 
-class DrawerWidget extends StatelessWidget {
-  const DrawerWidget({super.key});
+class DrawerView extends StatelessWidget {
+  const DrawerView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -85,11 +85,11 @@ class _ListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final leadingW = color != null ? Icon(icon, color: color) : Icon(icon);
+    final leading = color != null ? Icon(icon, color: color) : Icon(icon);
     return ListTile(
       onTap: onTap,
-      leading: leadingW,
-      horizontalTitleGap: 0,
+      leading: leading,
+      horizontalTitleGap: 20,
       title: Text(title, style: ViewUtils.ubuntuStyle(fontSize: 20)),
     );
   }

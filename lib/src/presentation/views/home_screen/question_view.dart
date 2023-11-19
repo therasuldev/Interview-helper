@@ -41,16 +41,8 @@ class _QuestionViewState extends State<QuestionView> with _QuestionViewMixin {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              _CustomFloatingActionButton(
-                heroTag: 'previous',
-                label: 'previous',
-                onPressed: _goToPreviousQuestion,
-              ),
-              _CustomFloatingActionButton(
-                heroTag: 'next',
-                label: 'next',
-                onPressed: _goToNextQuestion,
-              ),
+              _ActionButton(childText: 'previous', onPressed: _goToPreviousQuestion),
+              _ActionButton(childText: 'next', onPressed: _goToNextQuestion),
             ],
           ),
         ),
@@ -72,18 +64,14 @@ class _QuestionViewModel extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Padding(
-          padding:
-              const EdgeInsets.only(top: 50, left: 15, right: 15, bottom: 15),
+          padding: const EdgeInsets.only(top: 50, left: 15, right: 15, bottom: 15),
           child: Row(
             children: [
               const BackButton(color: Colors.white),
               const Spacer(),
               Text(
                 '${currentIndex + 1}/${questions.length}',
-                style: ViewUtils.ubuntuStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                ),
+                style: ViewUtils.ubuntuStyle(color: Colors.white, fontSize: 20),
               )
             ],
           ),
@@ -109,12 +97,7 @@ class _AnswerViewModel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(
-        bottom: MediaQuery.of(context).size.width * .2,
-        left: 5,
-        right: 5,
-        top: 5,
-      ),
+      padding: EdgeInsets.only(bottom: MediaQuery.of(context).size.width * .2, left: 5, right: 5, top: 5),
       child: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
         child: Text(
@@ -130,33 +113,27 @@ class _AnswerViewModel extends StatelessWidget {
   }
 }
 
-class _CustomFloatingActionButton extends StatelessWidget {
-  _CustomFloatingActionButton({
-    required this.heroTag,
-    required this.label,
+class _ActionButton extends StatelessWidget {
+  _ActionButton({
+    required this.childText,
     required this.onPressed,
   });
 
   final style = ViewUtils.ubuntuStyle(fontSize: 17, color: AppColors.appColor);
 
   @override
-  Widget build(BuildContext context) => FloatingActionButton.extended(
-        elevation: 0,
-        heroTag: heroTag,
-        onPressed: onPressed,
-        foregroundColor: Colors.green,
-        backgroundColor: Colors.white,
-        label: Text(label, style: style),
-        extendedPadding: const EdgeInsets.symmetric(horizontal: 40),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10),
-          side: const BorderSide(color: AppColors.appColor),
+  Widget build(BuildContext context) => OutlinedButton(
+        style: ButtonStyle(
+          overlayColor: MaterialStateProperty.all<Color>(Colors.white),
+          foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
+          side: MaterialStateProperty.all(const BorderSide(color: AppColors.appColor, strokeAlign: 10)),
         ),
+        onPressed: onPressed,
+        child: Text(childText, style: style),
       );
 
-  final String heroTag;
-  final String label;
-  final void Function()? onPressed;
+  final String childText;
+  final VoidCallback onPressed;
 }
 
 mixin _QuestionViewMixin on State<QuestionView> {

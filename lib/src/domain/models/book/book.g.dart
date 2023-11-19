@@ -18,7 +18,7 @@ class BookAdapter extends TypeAdapter<Book> {
     };
     return Book(
       name: fields[0] as String,
-      url: fields[1] as Future<String>,
+      url: fields[1] as String,
     );
   }
 

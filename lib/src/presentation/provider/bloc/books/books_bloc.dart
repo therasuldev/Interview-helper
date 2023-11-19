@@ -31,11 +31,13 @@ class BookBloc extends Bloc<BookEvent, BookState> {
 
       for (var map in data) {
         List<Book> bookList = [];
-        map.forEach((_, value) {
-          for (var result in value!.items) {
-            bookList.add(Book.fromJson(result));
-          }
-        });
+
+        for (var result in map.values.first!.items) {
+          String name = result.name;
+          String url = await result.getDownloadURL();
+
+          bookList.add(Book.fromStorage(name, url));
+        }
 
         library.add({map.keys.first: bookList});
       }
