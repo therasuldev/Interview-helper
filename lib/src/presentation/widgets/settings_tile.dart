@@ -8,7 +8,7 @@ class SettingTile extends StatelessWidget {
   final Color iconColor;
   final Widget icon;
   final EdgeInsets margin;
-  final Function()? onTap;
+  final VoidCallback? onTap;
 
   const SettingTile({
     Key? key,
@@ -68,19 +68,19 @@ class _MainPart extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: Container(
+        alignment: Alignment.center,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
           color: iconColor,
+          borderRadius: BorderRadius.circular(10),
         ),
         height: 30,
         width: 30,
-        child: Center(child: icon),
+        child: icon,
       ),
-      title: Text(title, style: ViewUtils.ubuntuStyle(color: Colors.black)),
-      trailing: tralling ?? const SizedBox.shrink(),
-      contentPadding: EdgeInsets.zero,
       minVerticalPadding: 0,
-      horizontalTitleGap: 0,
+      contentPadding: EdgeInsets.zero,
+      trailing: tralling ?? const SizedBox.shrink(),
+      title: Text(title, style: ViewUtils.ubuntuStyle(color: Colors.black)),
     );
   }
 }

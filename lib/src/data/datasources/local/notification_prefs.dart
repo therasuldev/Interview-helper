@@ -7,7 +7,7 @@ final class NotificationPrefs {
     (await _prefs).setBool('notification', isEnabled);
   }
 
-  /// if it returns true, it means notification settings are enabled.
+  /// if it returns true, it means notification are enabled.
   Future<bool?> notificationCtrlGet() async {
     final result = (await _prefs).getBool('notification');
     return result;

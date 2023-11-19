@@ -1,13 +1,10 @@
-import 'dart:convert';
-
 import 'package:app_bar_with_search_switch/app_bar_with_search_switch.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+
 import 'package:interview_prep/src/config/router/app_route_const.dart';
-import 'package:interview_prep/src/utils/constants/app_colors.dart';
-import 'package:interview_prep/src/config/router/app_navigators.dart';
 import 'package:interview_prep/src/domain/models/question/question.dart';
-import 'package:interview_prep/src/presentation/views/home_screen/question_view.dart';
+import 'package:interview_prep/src/utils/constants/app_colors.dart';
 import 'package:interview_prep/src/utils/decorations/view_utils.dart';
 
 class QuestionsView extends StatefulWidget {

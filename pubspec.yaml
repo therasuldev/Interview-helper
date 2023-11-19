@@ -33,7 +33,7 @@ dependencies:
   # local
   hive: ^2.2.2
   hive_flutter: ^1.1.0
-  path_provider: ^2.0.14
+  shared_preferences: ^2.2.1
 
   # native splash screen
   flutter_native_splash: ^2.2.19
@@ -55,11 +55,11 @@ dependencies:
 
   auto_size_text: ^3.0.0
   google_fonts: ^4.0.4
-  http: ^0.13.6
+  http: ^1.1.0
 
   workmanager: ^0.5.1
+  path_provider: ^2.0.14
   flutter_local_notifications: ^15.1.1
-  shared_preferences: ^2.2.1
 
 dev_dependencies:
   flutter_test:

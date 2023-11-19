@@ -24,7 +24,7 @@ class _InterviewPrepScaffoldState extends State<InterviewPrepScaffold> {
       appBar: appBar(widget.body.currentIndex),
       backgroundColor: Colors.white,
       body: widget.body,
-      drawer: widget.body.currentIndex.isEqual(0) ? const DrawerWidget() : null,
+      drawer: widget.body.currentIndex.isEqual(0) ? const DrawerView() : null,
       bottomNavigationBar: _BottomNavBar(changeScreen: goBranch, screenIndex: widget.body.currentIndex),
     );
   }

@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:interview_prep/src/config/router/app_route_const.dart';
-import 'package:interview_prep/src/presentation/widgets/pdf_view_model.dart';
-import 'package:interview_prep/src/domain/models/book/book.dart';
-import 'package:interview_prep/src/utils/decorations/view_utils.dart';
+
+import '../../../config/router/app_route_const.dart';
+import '../../../domain/models/book/book.dart';
+import '../../../domain/models/book/book_view_details.dart';
+import '../../../utils/decorations/view_utils.dart';
+import '../../widgets/pdf_view_model.dart';
 
 class AllBooksOfCategory extends StatelessWidget {
   const AllBooksOfCategory({super.key, required this.books});

@@ -13,7 +13,7 @@ import 'package:interview_prep/src/utils/enum/kpath_event.dart';
 
 @pragma('vm:entry-point')
 void callbackDispatcher() {
-  Workmanager().executeTask((task, inputData) async {
+  Workmanager().executeTask((_, __) async {
     await NotificationUtils.initialize();
     return Future.value(true);
   });
