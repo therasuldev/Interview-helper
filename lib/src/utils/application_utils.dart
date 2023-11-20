@@ -8,7 +8,7 @@ import 'package:interview_prep/firebase_options.dart';
 import 'package:interview_prep/gen/assets.gen.dart';
 import 'package:interview_prep/src/domain/models/question/question.dart';
 
-base class Application {
+ class Application {
   const Application._();
 
   static start() async {
@@ -22,7 +22,7 @@ base class Application {
   }
 }
 
-interface class _HiveUtils {
+ class _HiveUtils {
   static Future<void> initialize() async {
     await path.getApplicationDocumentsDirectory().then((directory) async {
       await Hive.initFlutter(directory.path);
@@ -36,9 +36,9 @@ interface class _HiveUtils {
   }
 }
 
-interface class NotificationUtils {
-  NotificationUtils._();
-  static Future<void> initialize() async {
+ class NotificationUtils {
+ // NotificationUtils._();
+   Future<void> initialize() async {
     const android = AndroidInitializationSettings('app');
     final notificationsPlugin = FlutterLocalNotificationsPlugin();
 
@@ -55,7 +55,7 @@ interface class NotificationUtils {
     await _showNotificationWithDefaultSound(notificationsPlugin);
   }
 
-  static Future<void> _showNotificationWithDefaultSound(FlutterLocalNotificationsPlugin notificationsPlugin) async {
+   Future<void> _showNotificationWithDefaultSound(FlutterLocalNotificationsPlugin notificationsPlugin) async {
     final androidChannel = AndroidNotificationDetails(
       'your_channel_id',
       'your_channel_name',

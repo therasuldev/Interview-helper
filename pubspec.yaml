@@ -57,7 +57,7 @@ dependencies:
   google_fonts: ^4.0.4
   http: ^1.1.0
 
-  workmanager: ^0.5.1
+  workmanager: ^0.5.2
   path_provider: ^2.0.14
   flutter_local_notifications: ^15.1.1
 

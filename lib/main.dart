@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
@@ -13,8 +14,12 @@ import 'package:interview_prep/src/utils/enum/kpath_event.dart';
 
 @pragma('vm:entry-point')
 void callbackDispatcher() {
+  final NotificationPrefs prefs = NotificationPrefs();
+
   Workmanager().executeTask((_, __) async {
-    await NotificationUtils.initialize();
+    if ((await prefs.notificationCtrlGet()) ?? false) {
+      await NotificationUtils().initialize();
+    }
     return Future.value(true);
   });
 }
@@ -25,19 +30,20 @@ Future initialization() async {
 }
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await Application.start();
 
-  final NotificationPrefs prefs = NotificationPrefs();
-
   // Background local notifications service
-  if ((await prefs.notificationCtrlGet()) ?? false) {
-    await Workmanager().initialize(callbackDispatcher);
-    await Workmanager().registerPeriodicTask(
-      '2',
-      'Interview Questions App',
-      frequency: const Duration(days: 5),
-    );
-  }
+  Workmanager().initialize(
+    callbackDispatcher,
+    isInDebugMode: kDebugMode,
+  );
+
+  Workmanager().registerPeriodicTask(
+    "3",
+    'Interview Questions App',
+    frequency: const Duration(minutes: 15),
+  );
 
   await initialization();
   runApp(const MyApp());
