@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -14,12 +16,12 @@ import 'package:interview_prep/src/utils/enum/kpath_event.dart';
 
 @pragma('vm:entry-point')
 void callbackDispatcher() {
-  final NotificationPrefs prefs = NotificationPrefs();
+  //final NotificationPrefs prefs = NotificationPrefs();
 
   Workmanager().executeTask((_, __) async {
-    if ((await prefs.notificationCtrlGet()) ?? false) {
-      await NotificationUtils().initialize();
-    }
+    //if ((await prefs.notificationCtrlGet()) ?? false) {
+    await NotificationUtils().initialize();
+    //}
     return Future.value(true);
   });
 }
@@ -31,21 +33,21 @@ Future initialization() async {
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Application.start();
+  await Application().start();
+  await initialization();
 
   // Background local notifications service
-  Workmanager().initialize(
+  await Workmanager().initialize(
     callbackDispatcher,
-    isInDebugMode: kDebugMode,
+    //isInDebugMode: kDebugMode,
   );
 
-  Workmanager().registerPeriodicTask(
-    "3",
-    'Interview Questions App',
-    frequency: const Duration(minutes: 15),
+  await Workmanager().registerPeriodicTask(
+    "1",
+    'Interview_Prep_App',
+    //frequency: const Duration(minutes: 15),
   );
 
-  await initialization();
   runApp(const MyApp());
 }
 
@@ -58,7 +60,7 @@ class MyApp extends StatelessWidget {
       providers: [
         BlocProvider(create: (context) => FeedbackCubit()),
         BlocProvider(create: (context) => QuestionBloc()),
-        BlocProvider(create: (context) => BookBloc()..add(BookEvent.fetchBooksStart(_Helper().categories)))
+        BlocProvider(create: (context) => BookBloc()..add(BookEvent.fetchBooksStart(_Helper.categories)))
       ],
       child: MaterialApp.router(
         debugShowCheckedModeBanner: false,
@@ -69,7 +71,7 @@ class MyApp extends StatelessWidget {
 }
 
 final class _Helper {
-  Set<Path> get categories => {
+  static Set<Path> get categories => {
         Path.flutter,
         Path.go,
         Path.java,

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:interview_prep/src/data/datasources/local/notification_prefs.dart';
 import 'package:interview_prep/src/presentation/widgets/settings_tile.dart';
 import 'package:interview_prep/src/utils/decorations/view_utils.dart';
+import 'package:permission_handler/permission_handler.dart';
 import 'package:simple_app_cache_manager/simple_app_cache_manager.dart';
 import 'package:version_tracker/version_tracker.dart';
 
@@ -72,24 +73,29 @@ class _SettingsViewState extends State<SettingsView> with CacheMixin, VersionMix
         iconColor: Colors.orange,
       );
 
-  Widget notificationCard(NotificationPrefs prefs) => SettingTile(
-        icon: const Icon(size: 20, color: Colors.white, Icons.notifications),
-        tralling: ValueListenableBuilder(
-          valueListenable: prefsNotifier,
-          builder: (context, isEnabled, child) {
-            return CupertinoSwitch(
-              value: isEnabled,
-              activeColor: Colors.green,
-              onChanged: (isEnabled) async {
-                prefs.notificationCtrlSet(isEnabled);
-                updateNotificationSettings();
-              },
-            );
-          },
-        ),
-        title: 'Notifications',
-        iconColor: Colors.blueGrey,
-      );
+  Widget notificationCard(NotificationPrefs prefs) {
+    return SettingTile(
+      icon: const Icon(size: 20, color: Colors.white, Icons.notifications),
+      tralling: ValueListenableBuilder(
+        valueListenable: prefsNotifier,
+        builder: (context, isEnabled, child) {
+          return CupertinoSwitch(
+            value: isEnabled,
+            activeColor: Colors.green,
+            onChanged: (isEnabled) async {
+              final isGranted = await Permission.notification.isGranted;
+              if (!isGranted) await Permission.notification.request();
+
+              prefs.notificationCtrlSet(isGranted);
+              updateNotificationSettings();
+            },
+          );
+        },
+      ),
+      title: 'Notifications',
+      iconColor: Colors.blueGrey,
+    );
+  }
 
   Widget showAppVersion() => Center(
         child: ValueListenableBuilder(

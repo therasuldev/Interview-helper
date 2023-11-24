@@ -60,6 +60,7 @@ dependencies:
   workmanager: ^0.5.2
   path_provider: ^2.0.14
   flutter_local_notifications: ^15.1.1
+  permission_handler: ^11.0.1
 
 dev_dependencies:
   flutter_test:
