@@ -79,7 +79,7 @@ class _QuestionCard extends StatelessWidget {
       margin: const EdgeInsets.all(7),
       child: ListTile(
         onTap: () {
-          context.goNamed(
+          context.pushNamed(
             AppRouteConstant.questionView,
             queryParameters: {'index': index.toString()},
             extra: questions,
