@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:interview_prep/src/presentation/widgets/spinkit_circle_loading_widget.dart';
-import 'package:interview_prep/src/presentation/provider/bloc/books/books_bloc.dart';
-import 'package:interview_prep/src/presentation/views/library_screen/books_view.dart';
-import 'package:interview_prep/src/utils/constants/screen_data_paths.dart';
-import 'package:interview_prep/src/presentation/views/library_screen/all_books_of_category_view.dart';
-import 'package:interview_prep/src/utils/decorations/view_utils.dart';
-import '../../../utils/enum/titles.dart';
+import 'package:prepare_for_interview/src/presentation/provider/bloc/books/books_bloc.dart';
+import '../../../utils/constants/constants.dart';
+import '../../../utils/decorations/view_utils.dart';
+import '../../../utils/enum/enums.dart';
+import '../../widgets/widgets.dart';
+import 'library.dart';
 
 class LibraryView extends StatefulWidget {
   const LibraryView({super.key});

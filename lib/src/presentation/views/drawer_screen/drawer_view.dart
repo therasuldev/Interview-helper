@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:interview_prep/src/presentation/views/drawer_screen/contact_us_view.dart';
-import 'package:interview_prep/gen/assets.gen.dart';
-import 'package:interview_prep/src/presentation/views/drawer_screen/settings_view.dart';
-import 'package:interview_prep/src/utils/decorations/view_utils.dart';
+import 'package:prepare_for_interview/gen/assets.gen.dart';
+
+import '../../../utils/decorations/view_utils.dart';
+import 'drawer.dart';
 
 class DrawerView extends StatelessWidget {
   const DrawerView({super.key});
@@ -76,12 +76,11 @@ class DrawerView extends StatelessWidget {
 
 class _ListTile extends StatelessWidget {
   const _ListTile({
-    Key? key,
     this.color,
     required this.icon,
     required this.title,
     required this.onTap,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

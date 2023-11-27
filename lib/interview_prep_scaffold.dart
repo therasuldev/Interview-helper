@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:interview_prep/src/utils/constants/app_colors.dart';
-import 'package:interview_prep/src/presentation/views/drawer_screen/drawer_view.dart';
-import 'package:interview_prep/src/utils/decorations/view_utils.dart';
+
+import 'src/presentation/views/drawer_screen/drawer.dart';
+import 'src/utils/constants/constants.dart';
+import 'src/utils/decorations/view_utils.dart';
 
 class InterviewPrepScaffold extends StatefulWidget {
   const InterviewPrepScaffold({super.key, required this.body});

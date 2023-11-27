@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:interview_prep/src/utils/constants/app_colors.dart';
-import 'package:interview_prep/src/config/network/network_manager.dart';
-import 'package:interview_prep/src/presentation/widgets/form_validate.dart';
-import 'package:interview_prep/src/presentation/widgets/spinkit_circle_loading_widget.dart';
-import 'package:interview_prep/src/domain/models/email/emailjs.dart';
-import 'package:interview_prep/src/presentation/provider/cubit/feedback/feedback_cubit.dart';
-import 'package:interview_prep/src/utils/decorations/view_utils.dart';
+
+import '../../../config/network/network_manager.dart';
+import '../../../domain/models/models.dart';
+import '../../../utils/constants/constants.dart';
+import '../../../utils/decorations/view_utils.dart';
+import '../../provider/cubit/feedback/feedback_cubit.dart';
+import '../../widgets/widgets.dart';
 
 class ContactUsScreen extends StatefulWidget {
   const ContactUsScreen({super.key});

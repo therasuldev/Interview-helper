@@ -2,23 +2,21 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:path_provider/path_provider.dart' as path;
+import 'package:prepare_for_interview/firebase_options.dart';
 
-import 'package:interview_prep/firebase_options.dart';
-import 'package:interview_prep/gen/assets.gen.dart';
-import 'package:interview_prep/src/domain/models/question/question.dart';
+import '../domain/models/models.dart';
+
 
 class Application {
-  Future<void> start() async {
+  static Future<void> start() async {
+    //! FIREBASE INITIALIZE
+
     await Firebase.initializeApp(
       options: DefaultFirebaseOptions.currentPlatform,
     );
 
-    await _HiveUtils().initialize();
-  }
-}
+    //! HIVE INITIALIZE
 
-class _HiveUtils {
-  Future<void> initialize() async {
     await path.getApplicationDocumentsDirectory().then((directory) async {
       await Hive.initFlutter(directory.path);
     });
@@ -28,6 +26,7 @@ class _HiveUtils {
     }
     await Hive.openBox('questions');
     await Hive.openBox('books');
+    
   }
 }
 

@@ -1,11 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:interview_prep/src/data/datasources/local/notification_prefs.dart';
-import 'package:interview_prep/src/presentation/widgets/settings_tile.dart';
-import 'package:interview_prep/src/utils/decorations/view_utils.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:simple_app_cache_manager/simple_app_cache_manager.dart';
 import 'package:version_tracker/version_tracker.dart';
+
+import 'package:prepare_for_interview/src/data/datasources/local/notification_prefs.dart';
+
+import '../../../utils/decorations/view_utils.dart';
+import '../../widgets/widgets.dart';
 
 class SettingsView extends StatefulWidget {
   const SettingsView({super.key});

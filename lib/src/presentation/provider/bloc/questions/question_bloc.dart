@@ -4,13 +4,12 @@ import 'dart:convert';
 
 import 'package:bloc/bloc.dart';
 import 'package:flutter/services.dart';
-import 'package:interview_prep/src/data/datasources/local/base/base_cache_service.dart';
+import 'package:prepare_for_interview/src/data/datasources/local/base/base_cache_service.dart';
+import 'package:prepare_for_interview/src/data/datasources/local/cached_questions_source_data_source.dart';
 
-import 'package:interview_prep/src/data/datasources/local/cached_questions_source_data_source.dart';
-import 'package:interview_prep/src/domain/models/error/error_model.dart';
-import 'package:interview_prep/src/domain/models/question/question.dart';
-import 'package:interview_prep/src/utils/constants/constant.dart';
-import 'package:interview_prep/src/utils/enum/question.dart';
+import '../../../../domain/models/models.dart';
+import '../../../../utils/constants/constants.dart';
+import '../../../../utils/enum/enums.dart';
 
 part 'question_event.dart';
 part 'question_state.dart';

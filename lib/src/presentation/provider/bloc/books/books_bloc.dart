@@ -1,12 +1,10 @@
 // ignore_for_file: invalid_use_of_visible_for_testing_member
 
 import 'package:bloc/bloc.dart';
+import 'package:prepare_for_interview/src/data/datasources/remote/books_source_data_source.dart';
 
-import 'package:interview_prep/src/data/datasources/remote/books_source_data_source.dart';
-import 'package:interview_prep/src/domain/models/book/book.dart';
-import 'package:interview_prep/src/domain/models/error/error_model.dart';
-import 'package:interview_prep/src/utils/enum/book.dart';
-import 'package:interview_prep/src/utils/enum/kpath_event.dart';
+import '../../../../domain/models/models.dart';
+import '../../../../utils/enum/enums.dart';
 
 part 'books_event.dart';
 part 'books_state.dart';

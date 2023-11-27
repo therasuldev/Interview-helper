@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:interview_prep/src/utils/constants/app_colors.dart';
-import 'package:interview_prep/src/presentation/widgets/appbar_clipper.dart';
-import 'package:interview_prep/src/domain/models/question/question.dart';
-import 'package:interview_prep/src/utils/decorations/view_utils.dart';
+
+import '../../../domain/models/models.dart';
+import '../../../utils/constants/constants.dart';
+import '../../../utils/decorations/view_utils.dart';
+import '../../widgets/widgets.dart';
 
 class QuestionView extends StatefulWidget {
-  const QuestionView({
-    super.key,
-    required this.questions,
-    required this.index,
-  });
+  const QuestionView({super.key, required this.questions, required this.index});
 
   final List<Question> questions;
   final int index;

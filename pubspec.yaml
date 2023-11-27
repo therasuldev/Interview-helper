@@ -1,12 +1,12 @@
-name: interview_prep
-description: A InterviewPrep App for preparing an interview.
+name: prepare_for_interview
+description: "A Prepare for interview App for preparing an interview."
 
 publish_to: 'none'
 
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.1.1 <4.0.0'
+  sdk: '>=3.2.0 <4.0.0'
 
 dependencies:
   flutter:
@@ -16,7 +16,7 @@ dependencies:
 
   # config
   go_router: ^12.1.0
-  connectivity_plus: ^4.0.2
+  connectivity_plus: ^5.0.2
 
   # Firebase
   firebase_storage: ^11.2.1
@@ -48,28 +48,28 @@ dependencies:
 
   # app features
   share_plus: ^7.0.0
-  rate_my_app: ^1.1.4
+  rate_my_app: ^2.0.0
   rating_dialog: ^2.0.4
   store_redirect: ^2.0.1
   version_tracker: ^2.2.0
 
   auto_size_text: ^3.0.0
-  google_fonts: ^4.0.4
+  google_fonts: ^6.1.0
   http: ^1.1.0
 
   workmanager: ^0.5.2
   path_provider: ^2.0.14
-  flutter_local_notifications: ^15.1.1
+  flutter_local_notifications: ^16.2.0
   permission_handler: ^11.0.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  flutter_lints: ^2.0.0
+  flutter_lints: ^3.0.1
 
   flutter_gen_runner: ^5.3.0
-  hive_generator: ^1.1.3
+  hive_generator: ^2.0.1
   build_runner: ^2.3.3
 
 flutter_native_splash:

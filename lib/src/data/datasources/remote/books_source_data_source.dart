@@ -1,5 +1,6 @@
 import 'package:firebase_storage/firebase_storage.dart';
-import 'package:interview_prep/src/utils/enum/kpath_event.dart';
+
+import '../../../utils/enum/enums.dart';
 
 abstract class BooksSourceDataSource {
   Future<Set<Map<String, ListResult?>>> getBooksSources(Set<Path> path);
@@ -11,11 +12,12 @@ class BooksSourceDataSourceImpl implements BooksSourceDataSource {
     final Set<Map<String, ListResult?>> bookSources = {};
     final List<Future<Map<String, ListResult?>>> futures = [];
 
-    for (var i in path) {
-      final Map<String, ListResult?> result = {
-        i.name: await FirebaseStorage.instance.ref(Path.getPath(i)).listAll(),
-      };
-      futures.add(Future.value(result));
+    for (final p in path) {
+      futures.add(
+        FirebaseStorage.instance.ref(p.getPath()).listAll().then(
+              (listResult) => {p.name: listResult},
+            ),
+      );
     }
 
     final results = await Future.wait(futures);

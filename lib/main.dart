@@ -1,27 +1,27 @@
-import 'dart:developer';
-
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:workmanager/workmanager.dart';
 
-import 'package:interview_prep/src/config/router/app_route_const.dart';
-import 'package:interview_prep/src/data/datasources/local/notification_prefs.dart';
-import 'package:interview_prep/src/presentation/provider/bloc/books/books_bloc.dart';
-import 'package:interview_prep/src/presentation/provider/bloc/questions/question_bloc.dart';
-import 'package:interview_prep/src/presentation/provider/cubit/feedback/feedback_cubit.dart';
-import 'package:interview_prep/src/utils/application_utils.dart';
-import 'package:interview_prep/src/utils/enum/kpath_event.dart';
+import './src/utils/enum/enums.dart';
+import 'src/config/router/app_route_const.dart';
+import 'src/data/datasources/local/notification_prefs.dart';
+import 'src/presentation/provider/bloc/books/books_bloc.dart';
+import 'src/presentation/provider/bloc/questions/question_bloc.dart';
+import 'src/presentation/provider/cubit/feedback/feedback_cubit.dart';
+import 'src/utils/application_utils.dart';
+
+const _backgroundServiceUniqueName = '1';
+const _backgroundServiceTaskName = 'InterviewPrepApp';
 
 @pragma('vm:entry-point')
 void callbackDispatcher() {
-  //final NotificationPrefs prefs = NotificationPrefs();
-
-  Workmanager().executeTask((_, __) async {
-    //if ((await prefs.notificationCtrlGet()) ?? false) {
-    await NotificationUtils().initialize();
-    //}
+  final NotificationPrefs prefs = NotificationPrefs();
+  Workmanager().executeTask((task, data) async {
+    if ((await prefs.notificationCtrlGet()) ?? false) {
+      NotificationUtils().initialize();
+    }
     return Future.value(true);
   });
 }
@@ -33,22 +33,31 @@ Future initialization() async {
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Application().start();
+  BackgroundService.init();
+
+  await Application.start();
   await initialization();
 
-  // Background local notifications service
-  await Workmanager().initialize(
-    callbackDispatcher,
-    //isInDebugMode: kDebugMode,
-  );
-
-  await Workmanager().registerPeriodicTask(
-    "1",
-    'Interview_Prep_App',
-    //frequency: const Duration(minutes: 15),
-  );
+  BackgroundService.registerBackgroundUpdates();
 
   runApp(const MyApp());
+}
+
+class BackgroundService {
+  static void init() {
+    Workmanager().initialize(
+      callbackDispatcher,
+      isInDebugMode: kDebugMode,
+    );
+  }
+
+  static void registerBackgroundUpdates() {
+    Workmanager().registerPeriodicTask(
+      _backgroundServiceUniqueName,
+      _backgroundServiceTaskName,
+      //frequency: const Duration(minutes: 15),
+    );
+  }
 }
 
 class MyApp extends StatelessWidget {
@@ -64,7 +73,7 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp.router(
         debugShowCheckedModeBanner: false,
-        routerConfig: config,
+        routerConfig: AppRouterConfig.instance.config,
       ),
     );
   }

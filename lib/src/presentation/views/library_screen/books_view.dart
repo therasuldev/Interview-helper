@@ -1,10 +1,10 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:prepare_for_interview/src/config/router/app_route_const.dart';
 
-import 'package:interview_prep/src/config/router/app_route_const.dart';
-import 'package:interview_prep/src/domain/models/book/book.dart';
 import '../../../domain/models/book/book_view_details.dart';
+import '../../../domain/models/models.dart';
 import '../../widgets/pdf_view_model.dart';
 import '../../../utils/decorations/view_utils.dart';
 

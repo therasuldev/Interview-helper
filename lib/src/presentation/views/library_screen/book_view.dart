@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'package:interview_prep/src/presentation/widgets/pdf_view_model.dart';
-import 'package:interview_prep/src/domain/models/book/book.dart';
-import 'package:interview_prep/src/presentation/views/library_screen/books_view.dart';
-import 'package:interview_prep/src/presentation/views/library_screen/open_pdf_view.dart';
-import 'package:interview_prep/src/utils/decorations/view_utils.dart';
+import '../../../domain/models/models.dart';
+import '../../../utils/decorations/view_utils.dart';
+import '../../widgets/widgets.dart';
+import 'library.dart';
+
 
 class BookView extends StatefulWidget {
   const BookView({

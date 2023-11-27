@@ -1,4 +1,4 @@
-import 'package:interview_prep/src/data/datasources/local/base/base_cache_service.dart';
+import 'base/base_cache_service.dart';
 
 abstract class CachedBooksSourceDataSource {
   bool containsKey(dynamic key);

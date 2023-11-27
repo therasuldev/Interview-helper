@@ -4,11 +4,10 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:http/http.dart' as http;
+import 'package:prepare_for_interview/src/config/network/network_manager.dart';
 
-import 'package:interview_prep/src/config/network/network_manager.dart';
-import 'package:interview_prep/src/data/datasources/base/api_config.dart';
-import 'package:interview_prep/src/domain/models/email/emailjs.dart';
-import 'package:interview_prep/src/domain/models/error/error_model.dart';
+import '../../../../data/datasources/base/api_config.dart';
+import '../../../../domain/models/models.dart';
 
 part 'feedback_state.dart';
 

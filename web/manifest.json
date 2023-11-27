@@ -1,6 +1,6 @@
 {
-    "name": "interview_prep",
-    "short_name": "interview_prep",
+    "name": "prepare_for_interview",
+    "short_name": "prepare_for_interview",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
