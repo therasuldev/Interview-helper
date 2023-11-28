@@ -2,11 +2,11 @@ import 'package:firebase_storage/firebase_storage.dart';
 
 import '../../../utils/enum/enums.dart';
 
-abstract class BooksSourceDataSource {
+abstract class BooksSourceData {
   Future<Set<Map<String, ListResult?>>> getBooksSources(Set<Path> path);
 }
 
-class BooksSourceDataSourceImpl implements BooksSourceDataSource {
+class BooksSourceDataImpl implements BooksSourceData {
   @override
   Future<Set<Map<String, ListResult?>>> getBooksSources(Set<Path> path) async {
     final Set<Map<String, ListResult?>> bookSources = {};

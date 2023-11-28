@@ -7,15 +7,15 @@ abstract class CachedBooksSourceDataSource {
 }
 
 class CachedBooksSourceDataSourceImpl implements CachedBooksSourceDataSource {
-  CachedBooksSourceDataSourceImpl({required this.cacheService});
-  final CacheService cacheService;
+  CachedBooksSourceDataSourceImpl():_cacheService = CacheService();
+  late final CacheService _cacheService;
 
   @override
-  bool containsKey(key) => cacheService.cachedBooks.containsKey(key);
+  bool containsKey(key) => _cacheService.cachedBooks.containsKey(key);
 
   @override
-  dynamic getBookSources(key) async => await cacheService.cachedBooks.get(key);
+  dynamic getBookSources(key) async => await _cacheService.cachedBooks.get(key);
 
   @override
-  Future<void> putBooks(key, value) async => await cacheService.cachedBooks.put(key, value);
+  Future<void> putBooks(key, value) async => await _cacheService.cachedBooks.put(key, value);
 }
