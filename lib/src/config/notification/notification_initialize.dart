@@ -1,7 +1,6 @@
-
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
-class Notifications{
+class Notifications {
   static Future<void> initialize() async {
     const android = AndroidInitializationSettings('@drawable/app');
     const settings = InitializationSettings(android: android);
@@ -23,11 +22,11 @@ class Notifications{
     const channel = NotificationDetails(android: android);
 
     await notificationsPlugin.show(
-      2,
+      1,
       'Interview_Prep_App',
       'Get ready for the interview',
       channel,
-      payload: 'Default_Sound',
+      payload: 'payload',
     );
   }
 }
