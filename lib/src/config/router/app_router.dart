@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../interview_prep_scaffold.dart';
+import '../../../app_scaffold.dart';
 import '../../domain/models/models.dart';
 import '../../presentation/views/home_screen/home.dart';
 import '../../presentation/views/library_screen/library.dart';
@@ -15,7 +15,9 @@ class AppRouteConstant {
   static String questionView = 'question_view';
 
   static String libraryView = '/library_view';
+  static String allBooks = 'all_books';
   static String bookView = 'book_view';
+  static String openBook = 'open_book';
 }
 
 final GlobalKey<NavigatorState> _rootNavigatorKey = GlobalKey<NavigatorState>();
@@ -34,7 +36,7 @@ class AppRouterConfig {
     routes: <RouteBase>[
       StatefulShellRoute.indexedStack(
         builder: (context, state, body) {
-          return InterviewPrepScaffold(body: body);
+          return AppScaffold(body: body);
         },
         branches: [
           StatefulShellBranch(
@@ -110,6 +112,33 @@ class AppRouterConfig {
                         ),
                       );
                     },
+                    routes: [
+                      GoRoute(
+                        parentNavigatorKey: _rootNavigatorKey,
+                        path: AppRouteConstant.openBook,
+                        name: AppRouteConstant.openBook,
+                        pageBuilder: (BuildContext context, GoRouterState state) {
+                          final book = state.extra as Book;
+                          return MaterialPage(
+                            child: OpenPDFView(
+                              key: state.pageKey,
+                              book: book,
+                            ),
+                          );
+                        },
+                      ),
+                    ],
+                  ),
+                  GoRoute(
+                    parentNavigatorKey: _rootNavigatorKey,
+                    path: AppRouteConstant.allBooks,
+                    name: AppRouteConstant.allBooks,
+                    pageBuilder: (BuildContext context, GoRouterState state) {
+                      final books = (state.extra as List).cast<Book>();
+                      return MaterialPage(
+                        child: AllBooksOfCategory(key: state.pageKey, books: books),
+                      );
+                    },
                   ),
                 ],
               ),
@@ -118,7 +147,6 @@ class AppRouterConfig {
         ],
       )
     ],
-    debugLogDiagnostics: true,
     navigatorKey: _rootNavigatorKey,
     initialLocation: AppRouteConstant.homeView,
   );
