@@ -2,7 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:path_provider/path_provider.dart' as path;
 
-import 'package:prepare_for_interview/firebase_options.dart';
+import 'package:prepare_for_interview/src/config/firebase_options.dart';
 
 import '../../domain/models/models.dart';
 
