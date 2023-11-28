@@ -4,29 +4,30 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:workmanager/workmanager.dart';
 
-import './src/utils/enum/enums.dart';
-import 'src/config/router/app_route_const.dart';
-import 'src/data/datasources/local/notification_prefs.dart';
+import 'src/config/init/application_initialize.dart';
+import 'src/config/notification/notification_initialize.dart';
+import 'src/config/router/app_router.dart';
+import 'src/data/datasources/local/notification_prefs_service.dart';
 import 'src/presentation/provider/bloc/books/books_bloc.dart';
 import 'src/presentation/provider/bloc/questions/question_bloc.dart';
 import 'src/presentation/provider/cubit/feedback/feedback_cubit.dart';
-import 'src/utils/application_utils.dart';
+import 'src/utils/constants/helper.dart';
 
 const _backgroundServiceUniqueName = '1';
 const _backgroundServiceTaskName = 'InterviewPrepApp';
 
 @pragma('vm:entry-point')
 void callbackDispatcher() {
-  final NotificationPrefs prefs = NotificationPrefs();
+  final NotificationPrefsServiceImpl prefs = NotificationPrefsServiceImpl();
   Workmanager().executeTask((task, data) async {
-    if ((await prefs.notificationCtrlGet()) ?? false) {
-      NotificationUtils().initialize();
+    if ((await prefs.getNotificationState()) ?? false) {
+      Notifications.initialize();
     }
     return Future.value(true);
   });
 }
 
-Future initialization() async {
+Future splashInitialize() async {
   await Future.delayed(const Duration(seconds: 3));
   FlutterNativeSplash.remove();
 }
@@ -35,11 +36,10 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   BackgroundService.init();
 
-  await Application.start();
-  await initialization();
+  await Application.initialize();
+  await splashInitialize();
 
   BackgroundService.registerBackgroundUpdates();
-
   runApp(const MyApp());
 }
 
@@ -55,7 +55,7 @@ class BackgroundService {
     Workmanager().registerPeriodicTask(
       _backgroundServiceUniqueName,
       _backgroundServiceTaskName,
-      //frequency: const Duration(minutes: 15),
+      frequency: const Duration(days: 7),
     );
   }
 }
@@ -69,7 +69,7 @@ class MyApp extends StatelessWidget {
       providers: [
         BlocProvider(create: (context) => FeedbackCubit()),
         BlocProvider(create: (context) => QuestionBloc()),
-        BlocProvider(create: (context) => BookBloc()..add(BookEvent.fetchBooksStart(_Helper.categories)))
+        BlocProvider(create: (context) => BookBloc()..add(BookEvent.fetchBooksStart(Helper.categories)))
       ],
       child: MaterialApp.router(
         debugShowCheckedModeBanner: false,
@@ -77,28 +77,4 @@ class MyApp extends StatelessWidget {
       ),
     );
   }
-}
-
-final class _Helper {
-  static Set<Path> get categories => {
-        Path.flutter,
-        Path.go,
-        Path.java,
-        Path.python,
-        Path.ruby,
-        Path.kotlin,
-        Path.typescript,
-        Path.rust,
-        Path.js,
-        Path.react,
-        Path.csharp,
-        Path.nodejs,
-        Path.perl,
-        Path.php,
-        Path.scala,
-        Path.swift,
-        Path.cplusplus,
-        Path.git,
-        Path.cybersecurity,
-      };
 }

@@ -5,6 +5,7 @@ class QuestionState {
   final List<Question>? questions;
   final bool? loading;
   final ExceptionModel? error;
+
   QuestionState({
     this.event,
     this.loading,
@@ -26,11 +27,12 @@ class QuestionState {
     );
   }
 
-  QuestionState.unknown([questions = const <Question>[]])
-      : this(
-          event: null,
-          questions: questions,
-          loading: true,
-          error: null,
-        );
+  factory QuestionState.unknown([questions = const <Question>[]]) {
+    return QuestionState(
+      event: null,
+      questions: questions,
+      loading: true,
+      error: null,
+    );
+  }
 }

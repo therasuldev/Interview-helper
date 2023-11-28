@@ -1,7 +1,7 @@
 import 'package:app_bar_with_search_switch/app_bar_with_search_switch.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:prepare_for_interview/src/config/router/app_route_const.dart';
+import 'package:prepare_for_interview/src/config/router/app_router.dart';
 
 import '../../../domain/models/models.dart';
 import '../../../utils/constants/constants.dart';

@@ -57,10 +57,10 @@ dependencies:
   google_fonts: ^6.1.0
   http: ^1.1.0
 
-  workmanager: ^0.5.2
   path_provider: ^2.0.14
   flutter_local_notifications: ^16.2.0
   permission_handler: ^11.0.1
+  workmanager: ^0.5.2
 
 dev_dependencies:
   flutter_test:

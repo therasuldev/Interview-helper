@@ -10,7 +10,6 @@ part 'books_event.dart';
 part 'books_state.dart';
 
 class BookBloc extends Bloc<BookEvent, BookState> {
-  final BooksSourceDataSourceImpl _bookSource = BooksSourceDataSourceImpl();
   BookBloc() : super(BookState.unknown()) {
     on<BookEvent>((event, emit) {
       switch (event.type) {
@@ -18,6 +17,7 @@ class BookBloc extends Bloc<BookEvent, BookState> {
           return _onFetchBookStart(event);
         default:
       }
+      _bookSource = BooksSourceDataImpl();
     });
   }
   _onFetchBookStart(dynamic event) async {
@@ -58,4 +58,6 @@ class BookBloc extends Bloc<BookEvent, BookState> {
       );
     }
   }
+
+  late final BooksSourceDataImpl _bookSource;
 }

@@ -5,15 +5,15 @@ import 'src/presentation/views/drawer_screen/drawer.dart';
 import 'src/utils/constants/constants.dart';
 import 'src/utils/decorations/view_utils.dart';
 
-class InterviewPrepScaffold extends StatefulWidget {
-  const InterviewPrepScaffold({super.key, required this.body});
+class AppScaffold extends StatefulWidget {
+  const AppScaffold({super.key, required this.body});
   final StatefulNavigationShell body;
 
   @override
-  State<InterviewPrepScaffold> createState() => _InterviewPrepScaffoldState();
+  State<AppScaffold> createState() => _AppScaffoldState();
 }
 
-class _InterviewPrepScaffoldState extends State<InterviewPrepScaffold> {
+class _AppScaffoldState extends State<AppScaffold> {
   void goBranch(index) => widget.body.goBranch(
         index,
         initialLocation: index == widget.body.currentIndex,
@@ -30,15 +30,17 @@ class _InterviewPrepScaffoldState extends State<InterviewPrepScaffold> {
     );
   }
 
-  AppBar appBar(int screenIndex) => AppBar(
-        title: Text(
-          screenIndex.isEqual(0) ? 'Categories' : 'Library',
-          style: ViewUtils.ubuntuStyle(fontSize: 22),
-        ),
-        backgroundColor: AppColors.appColor,
-        centerTitle: true,
-        elevation: 0,
-      );
+  AppBar appBar(int screenIndex) {
+    return AppBar(
+      title: Text(
+        screenIndex.isEqual(0) ? 'Categories' : 'Library',
+        style: ViewUtils.ubuntuStyle(fontSize: 22),
+      ),
+      backgroundColor: AppColors.appColor,
+      centerTitle: true,
+      elevation: 0,
+    );
+  }
 }
 
 class _BottomNavBar extends StatelessWidget {

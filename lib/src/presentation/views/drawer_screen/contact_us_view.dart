@@ -102,7 +102,7 @@ class _SendFeedbackButton extends StatelessWidget {
     required this.email,
     required this.message,
     required this.formKey,
-  }) : super();
+  });
 
   final TextEditingController email;
   final TextEditingController message;
@@ -121,13 +121,15 @@ class _SendFeedbackButton extends StatelessWidget {
             onPressed: () {
               final isValidate = formKey.currentState?.validate() ?? false;
               if (!isValidate && snapshot.data != ConnectivityStatus.online) {
+                const snackBar = SnackBar(content: Text('Connection error'));
+                ScaffoldMessenger.of(context).showSnackBar(snackBar);
                 return;
               }
               final msgParams = MSGParams(email: email.text, message: message.text);
               context.read<FeedbackCubit>().send(msgParams: msgParams);
             },
             style: ButtonStyle(
-              overlayColor : MaterialStateProperty.all(Colors.white),
+              overlayColor: MaterialStateProperty.all(Colors.white),
               foregroundColor: MaterialStateProperty.all(AppColors.appColor),
               side: MaterialStateProperty.all(const BorderSide(color: AppColors.appColor, strokeAlign: 10)),
             ),
@@ -144,7 +146,7 @@ class _SendFeedbackButton extends StatelessWidget {
                       ),
                     );
                     break;
-                  case FeedbackEvents.fail:
+                  case FeedbackEvents.failure:
                     ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(
                         backgroundColor: Colors.red,

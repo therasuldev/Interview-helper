@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:prepare_for_interview/src/config/router/app_route_const.dart';
+import 'package:prepare_for_interview/src/config/router/app_router.dart';
 import 'package:prepare_for_interview/src/presentation/provider/bloc/questions/question_bloc.dart';
 
 import '../../../utils/constants/constants.dart';

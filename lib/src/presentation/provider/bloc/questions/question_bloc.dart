@@ -15,8 +15,6 @@ part 'question_event.dart';
 part 'question_state.dart';
 
 class QuestionBloc extends Bloc<QuestionEvent, QuestionState> {
-  final questionRepository = CachedQuestionsSourceDataSourceImpl(cacheService: CacheService());
-
   QuestionBloc() : super(QuestionState.unknown()) {
     on<QuestionEvent>((event, emit) {
       switch (event.type) {
@@ -26,6 +24,7 @@ class QuestionBloc extends Bloc<QuestionEvent, QuestionState> {
           return _onFetchQuestionStart(event);
         default:
       }
+      _questionRepository = CachedQuestionsSourceDataImpl();
     });
   }
 
@@ -44,7 +43,7 @@ class QuestionBloc extends Bloc<QuestionEvent, QuestionState> {
     emit(state.copyWith(loading: true));
 
     try {
-      final questionSources = await questionRepository.getQuestionsFromSource(category: event.payload);
+      final questionSources = await _questionRepository.getQuestionsFromSource(category: event.payload);
       final questions = questionSources.map((question) => Question.fromJson(question)).toList();
 
       emit(
@@ -65,4 +64,6 @@ class QuestionBloc extends Bloc<QuestionEvent, QuestionState> {
       );
     }
   }
+
+  late final CachedQuestionsSourceDataImpl _questionRepository;
 }

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:prepare_for_interview/src/config/router/app_router.dart';
 
 import '../../../domain/models/models.dart';
 import '../../../utils/decorations/view_utils.dart';
 import '../../widgets/widgets.dart';
 import 'library.dart';
-
 
 class BookView extends StatefulWidget {
   const BookView({
@@ -41,10 +42,8 @@ class _BookViewState extends State<BookView> {
               BookViewModel(book: widget.book).buildBookforViewScreen(context),
               const SizedBox(height: 20),
               GestureDetector(
-                onTap: () async {
-                  builder(_) => OpenPDFView(book: widget.book);
-                  final destination = MaterialPageRoute(builder: builder);
-                  await Navigator.push(context, destination);
+                onTap: () {
+                  context.pushNamed(AppRouteConstant.openBook, extra: widget.book);
                 },
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 10),
