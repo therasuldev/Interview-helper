@@ -10,14 +10,15 @@ part 'books_event.dart';
 part 'books_state.dart';
 
 class BookBloc extends Bloc<BookEvent, BookState> {
-  BookBloc() : super(BookState.unknown()) {
+  BookBloc()
+      : _bookSource = BooksSourceDataImpl(),
+        super(BookState.unknown()) {
     on<BookEvent>((event, emit) {
       switch (event.type) {
         case BookEvents.fetchBookStart:
           return _onFetchBookStart(event);
         default:
       }
-      _bookSource = BooksSourceDataImpl();
     });
   }
   _onFetchBookStart(dynamic event) async {

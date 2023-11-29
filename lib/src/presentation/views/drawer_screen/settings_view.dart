@@ -84,13 +84,11 @@ class _SettingsViewState extends State<SettingsView> with CacheMixin, VersionMix
             value: isEnabled,
             activeColor: Colors.green,
             onChanged: (state) async {
-              final isGranted = await notificationPrefs.isGranted;
-              if (!isGranted) {
-                await notificationPrefs.askPermission();
-              } else {
-                await notificationPrefs.setNotificationState(state);
-                updateNotificationSettings();
-              }
+              final status = await notificationPrefs.askPermission();
+              if (!(status ?? false)) return;
+
+              await notificationPrefs.setNotificationState(state);
+              updateNotificationSettings();
             },
           );
         },

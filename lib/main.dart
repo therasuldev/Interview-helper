@@ -55,7 +55,7 @@ class BackgroundService {
     Workmanager().registerPeriodicTask(
       _backgroundServiceUniqueName,
       _backgroundServiceTaskName,
-      frequency: const Duration(days: 7),
+      frequency: const Duration(hours: 1),
     );
   }
 }

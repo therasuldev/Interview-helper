@@ -15,7 +15,9 @@ part 'question_event.dart';
 part 'question_state.dart';
 
 class QuestionBloc extends Bloc<QuestionEvent, QuestionState> {
-  QuestionBloc() : super(QuestionState.unknown()) {
+  QuestionBloc()
+      : _questionRepository = CachedQuestionsSourceDataImpl(),
+        super(QuestionState.unknown()) {
     on<QuestionEvent>((event, emit) {
       switch (event.type) {
         case QuestionEvents.addQuestionsInitial:
@@ -24,7 +26,6 @@ class QuestionBloc extends Bloc<QuestionEvent, QuestionState> {
           return _onFetchQuestionStart(event);
         default:
       }
-      _questionRepository = CachedQuestionsSourceDataImpl();
     });
   }
 

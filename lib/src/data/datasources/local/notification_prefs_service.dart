@@ -20,12 +20,29 @@ final class NotificationPrefsServiceImpl implements NotificationPrefsService {
   @override
   Future<bool?> getNotificationState() async {
     final result = (await _notificationPrefs).getBool('notification');
-    return result;
+    final granted = await isGranted;
+    return (result ?? false) && granted;
   }
 
   @override
-  Future<void> askPermission() async {
-    await Permission.notification.request();
+  Future<bool?> askPermission() async {
+    bool? result;
+    await Permission.notification.request().then((status) async {
+      switch (status) {
+        case PermissionStatus.permanentlyDenied:
+        case PermissionStatus.denied:
+          await openAppSettings();
+          result = false;
+          break;
+        case PermissionStatus.granted:
+          result = true;
+          break;
+        default:
+          result = null;
+          break;
+      }
+    });
+    return result;
   }
 
   @override

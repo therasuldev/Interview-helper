@@ -16,21 +16,11 @@ class FeedbackCubit extends Cubit<FeedbackState> {
       : _connectivityService = ConnectivityService(),
         super(FeedbackState.unknown());
 
-  Future<FeedbackState?> _checkConnectivity(FeedbackState state) async {
-    final isConnected = await _connectivityService.isConnected;
+  void send({required Message message}) async {
+    final emailJS = EmailJS(message: message);
+
+    final isConnected = await _connectivityService.getConnectivityStatus();
     if (!isConnected) return null;
-
-    return state.copyWith(
-      loading: false,
-      exception: ExceptionModel(description: 'no internet!'),
-    );
-  }
-
-  void send({required MSGParams msgParams}) async {
-    final emailJS = EmailJS(msgParams: msgParams);
-    final connectionState = await _checkConnectivity(state);
-
-    if (connectionState == null) return;
 
     try {
       emit(state.copyWith(loading: true));
@@ -61,12 +51,6 @@ class FeedbackCubit extends Cubit<FeedbackState> {
         ),
       );
     }
-  }
-
-  @override
-  Future<void> close() {
-    _connectivityService.cancelSubscription();
-    return super.close();
   }
 
   late final ConnectivityService _connectivityService;
