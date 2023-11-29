@@ -3,7 +3,7 @@ part of 'feedback_cubit.dart';
 enum FeedbackEvents {
   start,
   success,
-  fail,
+  failure,
 }
 
 @immutable
@@ -30,5 +30,7 @@ class FeedbackState {
     );
   }
 
-  static get unknown => const FeedbackState(loading: false);
+  factory FeedbackState.unknown() {
+    return const FeedbackState(loading: false);
+  }
 }

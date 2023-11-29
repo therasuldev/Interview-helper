@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_cached_pdfview/flutter_cached_pdfview.dart';
 
-import 'package:interview_prep/src/domain/models/book/book.dart';
-import 'package:interview_prep/src/presentation/widgets/shimmer_loading.dart';
+import '../../domain/models/models.dart';
+import 'widgets.dart';
 
 abstract class IBookViewModel {
   Widget buildBookforEntireScreen(BuildContext context);

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../config/router/app_route_const.dart';
+import '../../../config/router/app_router.dart';
 import '../../../domain/models/book/book.dart';
 import '../../../domain/models/book/book_view_details.dart';
 import '../../../utils/decorations/view_utils.dart';
@@ -15,6 +15,7 @@ class AllBooksOfCategory extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: const Text('All books'), centerTitle: false),
       body: GridView.builder(
         itemBuilder: (context, index) {
           final book = books[index];

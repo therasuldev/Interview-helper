@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:interview_prep/src/presentation/widgets/pdf_view_model.dart';
-import 'package:interview_prep/src/domain/models/book/book.dart';
+
+import '../../../domain/models/models.dart';
+import '../../widgets/widgets.dart';
 
 class OpenPDFView extends StatelessWidget {
   const OpenPDFView({super.key, required this.book});
@@ -10,6 +11,7 @@ class OpenPDFView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: BookViewModel(book: book).buildBookforEntireScreen(context),
     );
   }

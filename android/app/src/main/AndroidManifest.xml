@@ -1,18 +1,12 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.interview_prep">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-   <application
-        android:label="interview_prep"
+    <application
+        android:label="prepare_for_interview"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
-          <receiver android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationBootReceiver">
-    <intent-filter>
-        <action android:name="android.intent.action.BOOT_COMPLETED"/>
-        <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
-    </intent-filter>
-  </receiver>
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -40,10 +34,12 @@
             android:name="flutterEmbedding"
             android:value="2" />
     </application>
-        <queries>
+          <queries>
     <intent>
       <action android:name="android.intent.action.SENDTO" />
       <data android:scheme="mailto" />
     </intent>
   </queries>
+      <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
 </manifest>

@@ -3,23 +3,23 @@ class EmailJS {
   final String _serviceId = 'service_o2y9q97';
   final String _templateId = 'template_gxhao98';
 
-  final MSGParams msgParams;
-  EmailJS({required this.msgParams});
+  final Message message;
+  EmailJS({required this.message});
 
   Map<String, dynamic> toJson() {
     return {
       'user_id': _userId,
       'service_id': _serviceId,
       'template_id': _templateId,
-      'template_params': msgParams.toJson(),
+      'template_params': message.toJson(),
     };
   }
 }
 
-class MSGParams {
+class Message {
   final String email;
   final String message;
-  MSGParams({required this.email, required this.message});
+  Message({required this.email, required this.message});
 
   Map<String, dynamic> toJson() {
     return {'user_email': email.trim(), 'user_message': message.trim()};

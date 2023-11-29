@@ -1,5 +1,4 @@
-
-import 'package:interview_prep/src/domain/models/book/book.dart';
+import 'book.dart';
 
 class BookViewDetails {
   final int index;

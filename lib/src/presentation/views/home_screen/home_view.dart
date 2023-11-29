@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:prepare_for_interview/src/config/router/app_router.dart';
+import 'package:prepare_for_interview/src/presentation/provider/bloc/questions/question_bloc.dart';
 
-import 'package:interview_prep/src/config/router/app_route_const.dart';
-import 'package:interview_prep/src/presentation/provider/bloc/questions/question_bloc.dart';
-import 'package:interview_prep/src/utils/constants/categories.dart';
-import 'package:interview_prep/src/utils/constants/interview_categories.dart';
-import 'package:interview_prep/src/utils/constants/screen_data_paths.dart';
+import '../../../utils/constants/constants.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});

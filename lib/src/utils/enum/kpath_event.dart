@@ -24,8 +24,8 @@ enum Path {
   scala,
   swift;
 
-  static String? getPath(Path path) {
-    switch (path) {
+  String? getPath() {
+    switch (this) {
       case Path.flutter:
         return 'flutter/';
       case Path.go:

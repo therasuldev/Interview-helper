@@ -2,9 +2,10 @@ part of 'books_bloc.dart';
 
 class BookState {
   final BookEvents? event;
-  List<Map<String, List<Book>>>? library;
+  final List<Map<String, List<Book>>>? library;
   final bool? loading;
   final ExceptionModel? error;
+
   BookState({
     this.event,
     this.loading,
@@ -26,11 +27,12 @@ class BookState {
     );
   }
 
-  BookState.unknown([library = const <Map<String, List<Book>>>[]])
-      : this(
-          event: null,
-          library: library,
-          loading: true,
-          error: null,
-        );
+  factory BookState.unknown([library = const <Map<String, List<Book>>>[]]) {
+    return BookState(
+      event: null,
+      library: library,
+      loading: true,
+      error: null,
+    );
+  }
 }

@@ -4,21 +4,20 @@ import 'dart:convert';
 
 import 'package:bloc/bloc.dart';
 import 'package:flutter/services.dart';
-import 'package:interview_prep/src/data/datasources/local/base/base_cache_service.dart';
+import 'package:prepare_for_interview/src/data/datasources/local/base/base_cache_service.dart';
+import 'package:prepare_for_interview/src/data/datasources/local/cached_questions_source_data_source.dart';
 
-import 'package:interview_prep/src/data/datasources/local/cached_questions_source_data_source.dart';
-import 'package:interview_prep/src/domain/models/error/error_model.dart';
-import 'package:interview_prep/src/domain/models/question/question.dart';
-import 'package:interview_prep/src/utils/constants/constant.dart';
-import 'package:interview_prep/src/utils/enum/question.dart';
+import '../../../../domain/models/models.dart';
+import '../../../../utils/constants/constants.dart';
+import '../../../../utils/enum/enums.dart';
 
 part 'question_event.dart';
 part 'question_state.dart';
 
 class QuestionBloc extends Bloc<QuestionEvent, QuestionState> {
-  final questionRepository = CachedQuestionsSourceDataSourceImpl(cacheService: CacheService());
-
-  QuestionBloc() : super(QuestionState.unknown()) {
+  QuestionBloc()
+      : _questionRepository = CachedQuestionsSourceDataImpl(),
+        super(QuestionState.unknown()) {
     on<QuestionEvent>((event, emit) {
       switch (event.type) {
         case QuestionEvents.addQuestionsInitial:
@@ -45,7 +44,7 @@ class QuestionBloc extends Bloc<QuestionEvent, QuestionState> {
     emit(state.copyWith(loading: true));
 
     try {
-      final questionSources = await questionRepository.getQuestionsFromSource(category: event.payload);
+      final questionSources = await _questionRepository.getQuestionsFromSource(category: event.payload);
       final questions = questionSources.map((question) => Question.fromJson(question)).toList();
 
       emit(
@@ -66,4 +65,6 @@ class QuestionBloc extends Bloc<QuestionEvent, QuestionState> {
       );
     }
   }
+
+  late final CachedQuestionsSourceDataImpl _questionRepository;
 }

@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:interview_prep/src/presentation/widgets/spinkit_circle_loading_widget.dart';
-import 'package:interview_prep/src/presentation/provider/bloc/books/books_bloc.dart';
-import 'package:interview_prep/src/presentation/views/library_screen/books_view.dart';
-import 'package:interview_prep/src/utils/constants/screen_data_paths.dart';
-import 'package:interview_prep/src/presentation/views/library_screen/all_books_of_category_view.dart';
-import 'package:interview_prep/src/utils/decorations/view_utils.dart';
-import '../../../utils/enum/titles.dart';
+import 'package:go_router/go_router.dart';
+import 'package:prepare_for_interview/src/config/router/app_router.dart';
+import 'package:prepare_for_interview/src/domain/models/models.dart';
+import 'package:prepare_for_interview/src/presentation/provider/bloc/books/books_bloc.dart';
+import '../../../utils/constants/constants.dart';
+import '../../../utils/decorations/view_utils.dart';
+import '../../../utils/enum/enums.dart';
+import '../../widgets/widgets.dart';
+import 'library.dart';
 
 class LibraryView extends StatefulWidget {
   const LibraryView({super.key});
@@ -39,7 +41,7 @@ class _LibraryViewState extends State<LibraryView> {
       rows.addAll([
         _RowTitleWidget(
           title: category.title,
-          page: AllBooksOfCategory(books: state.library![i][type]!),
+          books: state.library![i][type]!,
         ),
         BooksView(otherBooks: state.library![i][type]!),
       ]);
@@ -50,11 +52,11 @@ class _LibraryViewState extends State<LibraryView> {
 
 class _RowTitleWidget extends StatelessWidget {
   const _RowTitleWidget({
-    required this.page,
+    required this.books,
     required this.title,
   });
 
-  final Widget page;
+  final List<Book> books;
   final String title;
 
   @override
@@ -73,13 +75,23 @@ class _RowTitleWidget extends StatelessWidget {
           ),
           TextButton(
             onPressed: () {
-              Navigator.pushAndRemoveUntil(
-                context,
-                MaterialPageRoute(builder: (_) => page),
-                (route) => true,
+              // Navigator.pushAndRemoveUntil(
+              //   context,
+              //   MaterialPageRoute(builder: (_) => AllBooksOfCategory(books: books)),
+              //   (route) => true,
+              // );
+              context.goNamed(
+                AppRouteConstant.allBooks,
+                extra: books,
               );
             },
-            child: Text('All', style: ViewUtils.ubuntuStyle(fontSize: 20)),
+            child: Text(
+              'All',
+              style: ViewUtils.ubuntuStyle(
+                fontSize: 20,
+                color: Colors.blue,
+              ),
+            ),
           )
         ],
       ),

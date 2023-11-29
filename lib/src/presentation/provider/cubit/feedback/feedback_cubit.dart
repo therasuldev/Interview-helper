@@ -4,34 +4,23 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:http/http.dart' as http;
+import 'package:prepare_for_interview/src/config/network/network_manager.dart';
 
-import 'package:interview_prep/src/config/network/network_manager.dart';
-import 'package:interview_prep/src/data/datasources/base/api_config.dart';
-import 'package:interview_prep/src/domain/models/email/emailjs.dart';
-import 'package:interview_prep/src/domain/models/error/error_model.dart';
+import '../../../../data/datasources/base/api_config.dart';
+import '../../../../domain/models/models.dart';
 
 part 'feedback_state.dart';
 
 class FeedbackCubit extends Cubit<FeedbackState> {
-  final  _connectivityService = ConnectivityService();
-  FeedbackCubit() : super(FeedbackState.unknown);
+  FeedbackCubit()
+      : _connectivityService = ConnectivityService(),
+        super(FeedbackState.unknown());
 
-  Future<FeedbackState?> _checkConnectivity(FeedbackState state) async {
-    final isConnected = await _connectivityService.isConnected;
+  void send({required Message message}) async {
+    final emailJS = EmailJS(message: message);
+
+    final isConnected = await _connectivityService.getConnectivityStatus();
     if (!isConnected) return null;
-
-    return state.copyWith(
-      loading: false,
-      exception: ExceptionModel(description: 'no internet!'),
-    );
-  }
-
-  void send({required MSGParams msgParams}) async {
-    final emailJS = EmailJS(msgParams: msgParams);
-
-    final connectionState = await _checkConnectivity(state);
-
-    if (connectionState == null) return;
 
     try {
       emit(state.copyWith(loading: true));
@@ -50,22 +39,19 @@ class FeedbackCubit extends Cubit<FeedbackState> {
       }
       emit(state.copyWith(
         loading: false,
-        event: FeedbackEvents.fail,
+        event: FeedbackEvents.failure,
         exception: ExceptionModel(description: "${response.reasonPhrase}"),
       ));
     } on SocketException catch (exception) {
       emit(
         state.copyWith(
           loading: false,
-          event: FeedbackEvents.fail,
+          event: FeedbackEvents.failure,
           exception: ExceptionModel(description: exception.message),
         ),
       );
     }
   }
-  @override
-  Future<void> close() {
-    _connectivityService.cancelSubscription();
-    return super.close();
-  }
+
+  late final ConnectivityService _connectivityService;
 }

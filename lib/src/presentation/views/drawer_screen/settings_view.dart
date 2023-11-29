@@ -1,10 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:interview_prep/src/data/datasources/local/notification_prefs.dart';
-import 'package:interview_prep/src/presentation/widgets/settings_tile.dart';
-import 'package:interview_prep/src/utils/decorations/view_utils.dart';
 import 'package:simple_app_cache_manager/simple_app_cache_manager.dart';
 import 'package:version_tracker/version_tracker.dart';
+
+import 'package:prepare_for_interview/src/data/datasources/local/notification_prefs_service.dart';
+
+import '../../../utils/decorations/view_utils.dart';
+import '../../widgets/widgets.dart';
 
 class SettingsView extends StatefulWidget {
   const SettingsView({super.key});
@@ -24,7 +26,7 @@ class _SettingsViewState extends State<SettingsView> with CacheMixin, VersionMix
     versionTracker = VersionTracker();
     updateVersion();
 
-    prefs = NotificationPrefs();
+    notificationPrefs = NotificationPrefsServiceImpl();
     updateNotificationSettings();
   }
 
@@ -41,7 +43,7 @@ class _SettingsViewState extends State<SettingsView> with CacheMixin, VersionMix
               Text('Settings', style: ViewUtils.ubuntuStyle(fontSize: 25)),
               const SizedBox(height: 10),
               clearCacheCard(),
-              notificationCard(prefs),
+              notificationCard(),
               const Spacer(),
               showAppVersion()
             ],
@@ -72,24 +74,29 @@ class _SettingsViewState extends State<SettingsView> with CacheMixin, VersionMix
         iconColor: Colors.orange,
       );
 
-  Widget notificationCard(NotificationPrefs prefs) => SettingTile(
-        icon: const Icon(size: 20, color: Colors.white, Icons.notifications),
-        tralling: ValueListenableBuilder(
-          valueListenable: prefsNotifier,
-          builder: (context, isEnabled, child) {
-            return CupertinoSwitch(
-              value: isEnabled,
-              activeColor: Colors.green,
-              onChanged: (isEnabled) async {
-                prefs.notificationCtrlSet(isEnabled);
-                updateNotificationSettings();
-              },
-            );
-          },
-        ),
-        title: 'Notifications',
-        iconColor: Colors.blueGrey,
-      );
+  Widget notificationCard() {
+    return SettingTile(
+      icon: const Icon(size: 20, color: Colors.white, Icons.notifications),
+      tralling: ValueListenableBuilder(
+        valueListenable: notificationPrefsNotifier,
+        builder: (context, isEnabled, child) {
+          return CupertinoSwitch(
+            value: isEnabled,
+            activeColor: Colors.green,
+            onChanged: (state) async {
+              final status = await notificationPrefs.askPermission();
+              if (!(status ?? false)) return;
+
+              await notificationPrefs.setNotificationState(state);
+              updateNotificationSettings();
+            },
+          );
+        },
+      ),
+      title: 'Notifications',
+      iconColor: Colors.blueGrey,
+    );
+  }
 
   Widget showAppVersion() => Center(
         child: ValueListenableBuilder(
@@ -125,11 +132,11 @@ mixin VersionMixin on State<SettingsView> {
 }
 
 mixin NotificationMixin on State<SettingsView> {
-  late final NotificationPrefs prefs;
-  final prefsNotifier = ValueNotifier<bool>(false);
+  late final NotificationPrefsServiceImpl notificationPrefs;
+  final notificationPrefsNotifier = ValueNotifier<bool>(false);
 
   void updateNotificationSettings() async {
-    var isEnabled = await prefs.notificationCtrlGet();
-    prefsNotifier.value = isEnabled ?? false;
+    var isEnabled = await notificationPrefs.getNotificationState();
+    notificationPrefsNotifier.value = isEnabled ?? false;
   }
 }

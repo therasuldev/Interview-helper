@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:interview_prep/gen/assets.gen.dart';
+import 'package:prepare_for_interview/gen/assets.gen.dart';
 import 'package:rating_dialog/rating_dialog.dart';
 import 'package:store_redirect/store_redirect.dart';
 

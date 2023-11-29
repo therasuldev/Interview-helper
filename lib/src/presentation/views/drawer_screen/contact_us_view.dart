@@ -1,12 +1,15 @@
+import 'dart:async';
+
+import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:interview_prep/src/utils/constants/app_colors.dart';
-import 'package:interview_prep/src/config/network/network_manager.dart';
-import 'package:interview_prep/src/presentation/widgets/form_validate.dart';
-import 'package:interview_prep/src/presentation/widgets/spinkit_circle_loading_widget.dart';
-import 'package:interview_prep/src/domain/models/email/emailjs.dart';
-import 'package:interview_prep/src/presentation/provider/cubit/feedback/feedback_cubit.dart';
-import 'package:interview_prep/src/utils/decorations/view_utils.dart';
+
+import '../../../config/network/network_manager.dart';
+import '../../../domain/models/models.dart';
+import '../../../utils/constants/constants.dart';
+import '../../../utils/decorations/view_utils.dart';
+import '../../provider/cubit/feedback/feedback_cubit.dart';
+import '../../widgets/widgets.dart';
 
 class ContactUsScreen extends StatefulWidget {
   const ContactUsScreen({super.key});
@@ -82,7 +85,7 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                 ),
                 const Spacer(),
                 Center(
-                  child: _SendFeedbackButton(
+                  child: _FeedbackButton(
                     email: email,
                     message: message,
                     formKey: formKey,
@@ -97,12 +100,12 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
   }
 }
 
-class _SendFeedbackButton extends StatelessWidget {
-  const _SendFeedbackButton({
+class _FeedbackButton extends StatefulWidget {
+  const _FeedbackButton({
     required this.email,
     required this.message,
     required this.formKey,
-  }) : super();
+  });
 
   final TextEditingController email;
   final TextEditingController message;
@@ -110,61 +113,91 @@ class _SendFeedbackButton extends StatelessWidget {
   final GlobalKey<FormState> formKey;
 
   @override
+  State<_FeedbackButton> createState() => _FeedbackButtonState();
+}
+
+class _FeedbackButtonState extends State<_FeedbackButton> {
+  @override
+  void initState() {
+    super.initState();
+    _subscription = Connectivity().onConnectivityChanged.listen((event) {
+      checkConnectivityStatus(event);
+    });
+  }
+
+  @override
+  void dispose() {
+    _subscription.cancel();
+    super.dispose();
+  }
+
+  void checkConnectivityStatus(ConnectivityResult event) {
+    switch (event) {
+      case ConnectivityResult.mobile:
+      case ConnectivityResult.wifi:
+        break;
+      default:
+        const snackBar = SnackBar(content: Text('Connection error'));
+        ScaffoldMessenger.of(context).showSnackBar(snackBar);
+        break;
+    }
+  }
+
+  late StreamSubscription<ConnectivityResult> _subscription;
+
+  @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: 50,
       width: MediaQuery.of(context).size.width * .9,
-      child: StreamBuilder(
-        stream: ConnectivityService().controller.stream,
-        builder: (context, snapshot) {
-          return OutlinedButton(
-            onPressed: () {
-              final isValidate = formKey.currentState?.validate() ?? false;
-              if (!isValidate && snapshot.data != ConnectivityStatus.online) {
-                return;
-              }
-              final msgParams = MSGParams(email: email.text, message: message.text);
-              context.read<FeedbackCubit>().send(msgParams: msgParams);
-            },
-            style: ButtonStyle(
-              overlayColor : MaterialStateProperty.all(Colors.white),
-              foregroundColor: MaterialStateProperty.all(AppColors.appColor),
-              side: MaterialStateProperty.all(const BorderSide(color: AppColors.appColor, strokeAlign: 10)),
-            ),
-            child: BlocConsumer<FeedbackCubit, FeedbackState>(
-              listener: (context, state) {
-                switch (state.event) {
-                  case FeedbackEvents.success:
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(
-                        margin: const EdgeInsets.all(10),
-                        backgroundColor: Colors.green,
-                        behavior: SnackBarBehavior.floating,
-                        content: Text('Thank you for your feedback.', style: ViewUtils.ubuntuStyle(fontSize: 12)),
-                      ),
-                    );
-                    break;
-                  case FeedbackEvents.fail:
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(
-                        backgroundColor: Colors.red,
-                        margin: const EdgeInsets.all(10),
-                        behavior: SnackBarBehavior.floating,
-                        content: Text(state.exception!.description, style: ViewUtils.ubuntuStyle()),
-                      ),
-                    );
-                    break;
-                  default:
-                    break;
-                }
-              },
-              builder: (context, state) {
-                if (state.loading) return const KSpinKitCircle();
-                return Text('Send feedback', style: ViewUtils.ubuntuStyle());
-              },
-            ),
-          );
+      child: OutlinedButton(
+        onPressed: () async {
+          final connectivity = await ConnectivityService().getConnectivityStatus();
+          if (!connectivity) return;
+
+          final isValidate = widget.formKey.currentState?.validate() ?? false;
+          if (!isValidate) return;
+
+          final message = Message(email: widget.email.text, message: widget.message.text);
+          if (context.mounted) context.read<FeedbackCubit>().send(message: message);
         },
+        style: ButtonStyle(
+          overlayColor: MaterialStateProperty.all(Colors.white),
+          foregroundColor: MaterialStateProperty.all(AppColors.appColor),
+          side: MaterialStateProperty.all(const BorderSide(color: AppColors.appColor, strokeAlign: 10)),
+        ),
+        child: BlocConsumer<FeedbackCubit, FeedbackState>(
+          listener: (context, state) {
+            switch (state.event) {
+              case FeedbackEvents.success:
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    margin: const EdgeInsets.all(10),
+                    backgroundColor: Colors.green,
+                    behavior: SnackBarBehavior.floating,
+                    content: Text('Thank you for your feedback.', style: ViewUtils.ubuntuStyle(fontSize: 12)),
+                  ),
+                );
+                break;
+              case FeedbackEvents.failure:
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    backgroundColor: Colors.red,
+                    margin: const EdgeInsets.all(10),
+                    behavior: SnackBarBehavior.floating,
+                    content: Text(state.exception!.description, style: ViewUtils.ubuntuStyle()),
+                  ),
+                );
+                break;
+              default:
+                break;
+            }
+          },
+          builder: (context, state) {
+            if (state.loading) return const KSpinKitCircle();
+            return Text('Send feedback', style: ViewUtils.ubuntuStyle());
+          },
+        ),
       ),
     );
   }

@@ -1,6 +1,7 @@
-import 'package:interview_prep/src/utils/enum/titles.dart';
-import 'package:interview_prep/gen/assets.gen.dart';
-import 'package:interview_prep/src/presentation/widgets/category_card.dart';
+import 'package:prepare_for_interview/gen/assets.gen.dart';
+
+import '../../presentation/widgets/widgets.dart';
+import '../enum/enums.dart';
 
 class CategoryHelper {
   CategoryCard? cards(String name) {

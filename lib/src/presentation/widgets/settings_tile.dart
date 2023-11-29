@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:interview_prep/src/utils/decorations/view_utils.dart';
+
+import '../../utils/decorations/view_utils.dart';
 
 class SettingTile extends StatelessWidget {
   final String title;
@@ -11,14 +12,14 @@ class SettingTile extends StatelessWidget {
   final VoidCallback? onTap;
 
   const SettingTile({
-    Key? key,
+    super.key,
     required this.title,
     required this.iconColor,
     required this.icon,
     this.tralling,
     this.margin = const EdgeInsets.symmetric(vertical: 10),
     this.onTap,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
