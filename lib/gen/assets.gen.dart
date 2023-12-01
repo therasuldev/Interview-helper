@@ -126,6 +126,19 @@ class $AssetsImageDataGen {
       ];
 }
 
+class $AssetsLottiesGen {
+  const $AssetsLottiesGen();
+
+  /// File path: assets/lotties/books.json
+  String get books => 'assets/lotties/books.json';
+
+  /// File path: assets/lotties/interview.json
+  String get interview => 'assets/lotties/interview.json';
+
+  /// List of all assets
+  List<String> get values => [books, interview];
+}
+
 class $AssetsQuestionsDataGen {
   const $AssetsQuestionsDataGen();
 
@@ -239,6 +252,7 @@ class Assets {
 
   static const AssetGenImage app = AssetGenImage('assets/app.png');
   static const $AssetsImageDataGen imageData = $AssetsImageDataGen();
+  static const $AssetsLottiesGen lotties = $AssetsLottiesGen();
   static const $AssetsQuestionsDataGen questionsData =
       $AssetsQuestionsDataGen();
 
