@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:prepare_for_interview/src/presentation/views/onboarding_screen.dart';
 
 import '../../../app_scaffold.dart';
 import '../../domain/models/models.dart';
@@ -8,16 +9,17 @@ import '../../presentation/views/library_screen/library.dart';
 
 class AppRouteConstant {
   AppRouteConstant._();
-  static String initial = '/';
+  static const String initial = '/';
+  static const String onboarding = '/onboarding';
 
-  static String homeView = '/home_view';
-  static String questionsView = 'questions_view';
-  static String questionView = 'question_view';
+  static const String homeView = '/home_view';
+  static const String questionsView = 'questions_view';
+  static const String questionView = 'question_view';
 
-  static String libraryView = '/library_view';
-  static String allBooks = 'all_books';
-  static String bookView = 'book_view';
-  static String openBook = 'open_book';
+  static const String libraryView = '/library_view';
+  static const String allBooks = 'all_books';
+  static const String bookView = 'book_view';
+  static const String openBook = 'open_book';
 }
 
 final GlobalKey<NavigatorState> _rootNavigatorKey = GlobalKey<NavigatorState>();
@@ -34,9 +36,16 @@ class AppRouterConfig {
 
   final GoRouter config = GoRouter(
     routes: <RouteBase>[
+      GoRoute(
+        path: AppRouteConstant.onboarding,
+        name: AppRouteConstant.onboarding,
+        pageBuilder: (BuildContext context, GoRouterState state) {
+          return NoTransitionPage(child: AppOnBoarding(key: state.pageKey));
+        },
+      ),
       StatefulShellRoute.indexedStack(
         builder: (context, state, body) {
-          return AppScaffold(body: body);
+          return AppScaffold(key: state.pageKey, body: body);
         },
         branches: [
           StatefulShellBranch(
@@ -147,7 +156,8 @@ class AppRouterConfig {
         ],
       )
     ],
+    debugLogDiagnostics: true,
     navigatorKey: _rootNavigatorKey,
-    initialLocation: AppRouteConstant.homeView,
+    initialLocation: AppRouteConstant.onboarding,
   );
 }
