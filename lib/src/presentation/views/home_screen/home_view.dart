@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:prepare_for_interview/src/config/router/app_router.dart';
+import 'package:prepare_for_interview/src/data/datasources/local/application_prefs.dart';
 import 'package:prepare_for_interview/src/presentation/provider/bloc/questions/question_bloc.dart';
 
 import '../../../utils/constants/constants.dart';
@@ -17,18 +18,19 @@ class _HomeViewState extends State<HomeView> {
   @override
   void initState() {
     super.initState();
-    bloc = BlocProvider.of<QuestionBloc>(context);
+       
+    _bloc = BlocProvider.of<QuestionBloc>(context);
     addQuestionsToCache();
   }
 
-  late QuestionBloc bloc;
-  String appBarTitle = '';
-
   void addQuestionsToCache() {
     for (var category in InterviewCategories.categories.toList()) {
-      bloc.add(QuestionEvent.addQuestionsInitial(category));
+      _bloc.add(QuestionEvent.addQuestionsInitial(category));
     }
   }
+
+  String appBarTitle = '';
+  late QuestionBloc _bloc;
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +51,7 @@ class _HomeViewState extends State<HomeView> {
             final card = CategoryHelper().cards(ScreenDataPaths().homeCategoryPathNames[index]);
             return GestureDetector(
               onTap: () {
-                bloc.add(
+                _bloc.add(
                   QuestionEvent.fetchQuestionStart(
                     InterviewCategories.categories.toList()[index],
                   ),
