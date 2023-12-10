@@ -82,7 +82,7 @@ class InterviewHelper extends StatelessWidget {
       ],
       child: MaterialApp.router(
         debugShowCheckedModeBanner: false,
-        routerConfig: AppRouterConfig.instance.config,
+        routerConfig: AppRouterConfig.init.config,
       ),
     );
   }
