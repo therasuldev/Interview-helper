@@ -53,9 +53,9 @@ class _BottomNavBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return BottomNavigationBar(
       items: _buildItems,
+      onTap: changeScreen,
       currentIndex: screenIndex,
       selectedItemColor: AppColors.appColor,
-      onTap: (index) => changeScreen.call(index),
       selectedLabelStyle: ViewUtils.ubuntuStyle(fontSize: 16),
       unselectedLabelStyle: ViewUtils.ubuntuStyle(fontSize: 14),
     );
@@ -70,7 +70,5 @@ class _BottomNavBar extends StatelessWidget {
 }
 
 extension on int {
-  bool isEqual(int value) {
-    return this == value;
-  }
+  bool isEqual(int value) => this == value;
 }
