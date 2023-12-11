@@ -1,7 +1,7 @@
 // ignore_for_file: invalid_use_of_visible_for_testing_member
 
 import 'package:bloc/bloc.dart';
-import 'package:prepare_for_interview/src/data/datasources/remote/books_source_data_source.dart';
+import 'package:interview_helper/src/data/datasources/remote/books_source_data_source.dart';
 
 import '../../../../domain/models/models.dart';
 import '../../../../utils/enum/enums.dart';
@@ -25,17 +25,14 @@ class BookBloc extends Bloc<BookEvent, BookState> {
     emit(state.copyWith(loading: true));
 
     try {
-      final data = await _bookSource.getBooksSources(event.payload);
+      final data = await _bookSource.getBooksSources();
       List<Map<String, List<Book>>> library = [];
 
       for (var map in data) {
         List<Book> bookList = [];
 
-        for (var result in map.values.first!.items) {
-          String name = result.name;
-          String url = await result.getDownloadURL();
-
-          bookList.add(Book.fromStorage(name, url));
+        for (var bookJson in map.values.first!) {
+          bookList.add(Book.fromJson(bookJson));
         }
 
         library.add({map.keys.first: bookList});
