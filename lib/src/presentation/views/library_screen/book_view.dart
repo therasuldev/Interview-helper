@@ -101,13 +101,6 @@ class _BookViewState extends State<BookView> with _DownloaderMixin {
                     Padding(
                       padding: const EdgeInsets.only(left: 10.0),
                       child: _DynamicButton(
-                        onHighlightChanged: (pressed) {
-                          if (pressed) {
-                            detailsNotifier.value = detailsNotifier.value.copyWith(buttonColor: Colors.green.shade800);
-                          } else {
-                            detailsNotifier.value = detailsNotifier.value.copyWith(buttonColor: Colors.green);
-                          }
-                        },
                         onTap: () => onProgress(widget.book.url),
                         details: details,
                       ),
@@ -140,34 +133,29 @@ class _BookViewState extends State<BookView> with _DownloaderMixin {
 
 class _DynamicButton extends StatelessWidget {
   const _DynamicButton({
-    required this.onHighlightChanged,
     required this.onTap,
     required this.details,
   });
 
-  final ValueChanged onHighlightChanged;
   final VoidCallback? onTap;
   final _Details details;
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onHighlightChanged: onHighlightChanged,
-      onTap: onTap,
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(5),
-        child: SizedBox(
-          height: 50,
-          width: MediaQuery.sizeOf(context).width * .4,
-          child: ColoredBox(
-            color: details.buttonColor,
-            child: Center(
-              child: Text(
-                details.buttonText,
-                style: ViewUtils.ubuntuStyle(color: Colors.white, fontSize: 18),
-              ),
-            ),
+    return SizedBox(
+      height: 50,
+      width: MediaQuery.sizeOf(context).width * .45,
+      child: ElevatedButton(
+        onPressed: onTap,
+        style: ButtonStyle(
+          backgroundColor: MaterialStatePropertyAll<Color>(details.buttonColor),
+          shape: MaterialStatePropertyAll(
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
           ),
+        ),
+        child: Text(
+          details.buttonText,
+          style: ViewUtils.ubuntuStyle(color: Colors.white, fontSize: 18),
         ),
       ),
     );
@@ -216,6 +204,10 @@ mixin _DownloaderMixin on State<BookView> {
     DefaultCacheManager().getFileStream(url, withProgress: true).listen((fileResponse) async {
       if (cached) {
         // the file has been downloaded
+        detailsNotifier.value = detailsNotifier.value.copyWith(
+          buttonText: _ButtonText.open.text,
+          buttonColor: Colors.grey,
+        );
         return;
       } else if (fileResponse is DownloadProgress) {
         // start process
