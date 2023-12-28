@@ -24,4 +24,32 @@ class ViewUtils {
       color: color,
     );
   }
+
+  // App Snackbar
+  static final scaffoldMessengerKey = GlobalKey<ScaffoldMessengerState>();
+
+  static void showInterviewHelperSnackBar({
+    required String snackbarTitle,
+    required Color backgroundColor,
+  }) {
+    final snackBar = SnackBar(
+      backgroundColor: backgroundColor,
+      behavior: SnackBarBehavior.floating,
+      margin: const EdgeInsetsDirectional.all(10),
+      content: SizedBox(
+        height: 35,
+        child: Center(
+          child: Text(
+            snackbarTitle,
+            style: ViewUtils.ubuntuStyle(fontSize: 16),
+          ),
+        ),
+      ),
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.all(Radius.circular(20)),
+      ),
+    );
+
+    scaffoldMessengerKey.currentState?.showSnackBar(snackBar);
+  }
 }
