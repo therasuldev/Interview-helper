@@ -8,7 +8,7 @@ abstract class NotificationPrefsService {
   Future<bool> get isGranted;
 }
 
-final class NotificationPrefsServiceImpl implements NotificationPrefsService {
+class NotificationPrefsServiceImpl implements NotificationPrefsService {
   NotificationPrefsServiceImpl() : _notificationPrefs = SharedPreferences.getInstance();
   late final Future<SharedPreferences> _notificationPrefs;
 
