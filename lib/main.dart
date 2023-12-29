@@ -1,71 +1,32 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
-import 'package:workmanager/workmanager.dart';
+import 'package:interview_helper/src/config/notification/one_signal_config.dart';
 
-import 'src/config/init/application_initialize.dart';
-import 'src/config/notification/notification_initialize.dart';
-import 'src/config/router/app_router.dart';
-import 'src/data/datasources/local/notification_prefs_service.dart';
+import 'src/config/app/app_config.dart';
+
+import 'src/config/hive/hive_config.dart';
+import 'src/config/router/router_config.dart';
+import 'src/config/theme/theme_config.dart';
+
 import 'src/presentation/provider/bloc/books/books_bloc.dart';
 import 'src/presentation/provider/bloc/introduction/introduction_bloc.dart';
 import 'src/presentation/provider/bloc/questions/question_bloc.dart';
 import 'src/presentation/provider/cubit/feedback/feedback_cubit.dart';
-import 'src/utils/constants/helper.dart';
-
-const _backgroundServiceUniqueName = '1';
-const _backgroundServiceTaskName = 'InterviewPrepApp';
-
-@pragma('vm:entry-point')
-void callbackDispatcher() {
-  final NotificationPrefsServiceImpl prefs = NotificationPrefsServiceImpl();
-  Workmanager().executeTask((task, data) async {
-    //if ((await prefs.getNotificationState()) ?? false) {
-    await Notifications.initialize();
-    //}
-    return Future.value(true);
-  });
-}
-
-Future splashInitialize() async {
-  await Future.delayed(const Duration(seconds: 3));
-  FlutterNativeSplash.remove();
-}
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  //BackgroundService.init();
+  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
-  await Application.initialize();
-  await splashInitialize();
+  // Push notifications service
+  await OneSignalConfig.config.init();
+  // Hive service
+  await HiveConfig.config.init();
+  // Firebase and Orientation config
+  await AppConfig.config.init();
 
-  //BackgroundService.registerBackgroundUpdates();
-  //   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-  //   statusBarColor: AppPalette.transparentColor,
-  // ));
-
-  // SystemChrome.setPreferredOrientations(
-  //     [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
-
+  FlutterNativeSplash.remove();
   runApp(const InterviewHelper());
-}
-
-class BackgroundService {
-  static void init() {
-    Workmanager().initialize(
-      callbackDispatcher,
-      isInDebugMode: kDebugMode,
-    );
-  }
-
-  static void registerBackgroundUpdates() {
-    Workmanager().registerPeriodicTask(
-      _backgroundServiceUniqueName,
-      _backgroundServiceTaskName,
-      frequency: const Duration(hours: 1),
-    );
-  }
 }
 
 class InterviewHelper extends StatelessWidget {
@@ -78,10 +39,12 @@ class InterviewHelper extends StatelessWidget {
         BlocProvider(create: (context) => AppBloc()..add(AppEvent.get())),
         BlocProvider(create: (context) => FeedbackCubit()),
         BlocProvider(create: (context) => QuestionBloc()),
-        BlocProvider(create: (context) => BookBloc()..add(BookEvent.fetchBooksStart(Helper.categories)))
+        BlocProvider(create: (context) => BookBloc()..add(BookEvent.fetchBooksStart()))
       ],
       child: MaterialApp.router(
+        title: 'Interview Helper App',
         debugShowCheckedModeBanner: false,
+        theme: ThemeConfig.init.theme,
         routerConfig: AppRouterConfig.init.config,
       ),
     );
