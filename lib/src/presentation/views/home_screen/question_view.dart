@@ -34,36 +34,32 @@ class _QuestionViewState extends State<QuestionView> with _QuestionViewMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: LayoutBuilder(
-        builder: (ctx, constraints) {
-          return CustomScrollView(
-            key: ValueKey(currentIndex),
-            controller: _scrollController,
-            physics: const BouncingScrollPhysics(),
-            slivers: [
-              SliverAppBar(
-                actions: [
-                  Padding(
-                    padding: const EdgeInsets.all(12.0),
-                    child: Text(
-                      '${currentIndex + 1}/${questions.length}',
-                      style: ViewUtils.ubuntuStyle(color: Colors.white, fontSize: 20),
-                    ),
-                  )
-                ],
-                pinned: true,
-                backgroundColor: appBarColor,
-                expandedHeight: MediaQuery.sizeOf(context).height * .5,
-                flexibleSpace: _QuestionView(questions: questions, currentIndex: currentIndex),
-              ),
-              SliverToBoxAdapter(
-                child: _AnswerView(
-                  question: questions[currentIndex],
+      body: CustomScrollView(
+        key: ValueKey(currentIndex),
+        controller: _scrollController,
+        physics: const BouncingScrollPhysics(),
+        slivers: [
+          SliverAppBar(
+            actions: [
+              Padding(
+                padding: const EdgeInsets.all(12.0),
+                child: Text(
+                  '${currentIndex + 1}/${questions.length}',
+                  style: ViewUtils.ubuntuStyle(color: Colors.white, fontSize: 20),
                 ),
-              ),
+              )
             ],
-          );
-        },
+            pinned: true,
+            backgroundColor: appBarColor,
+            expandedHeight: MediaQuery.sizeOf(context).height * .5,
+            flexibleSpace: _QuestionView(questions: questions, currentIndex: currentIndex),
+          ),
+          SliverToBoxAdapter(
+            child: _AnswerView(
+              question: questions[currentIndex],
+            ),
+          ),
+        ],
       ),
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
