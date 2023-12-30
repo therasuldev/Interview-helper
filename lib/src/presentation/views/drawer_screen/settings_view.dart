@@ -1,5 +1,4 @@
 import 'package:app_settings/app_settings.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:simple_app_cache_manager/simple_app_cache_manager.dart';
 import 'package:version_tracker/version_tracker.dart';
