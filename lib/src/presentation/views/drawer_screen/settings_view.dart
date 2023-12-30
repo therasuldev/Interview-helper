@@ -1,12 +1,13 @@
+import 'package:app_settings/app_settings.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:simple_app_cache_manager/simple_app_cache_manager.dart';
 import 'package:version_tracker/version_tracker.dart';
 
-import 'package:prepare_for_interview/src/data/datasources/local/notification_prefs_service.dart';
+import 'package:interview_helper/src/data/datasources/local/notification_prefs_service.dart';
 
 import '../../../utils/decorations/view_utils.dart';
-import '../../widgets/widgets.dart';
+import '../../widgets/index.dart';
 
 class SettingsView extends StatefulWidget {
   const SettingsView({super.key});
@@ -15,39 +16,61 @@ class SettingsView extends StatefulWidget {
   State<SettingsView> createState() => _SettingsViewState();
 }
 
-class _SettingsViewState extends State<SettingsView> with CacheMixin, VersionMixin, NotificationMixin {
+class _SettingsViewState extends State<SettingsView> with WidgetsBindingObserver, CacheMixin, VersionMixin, NotificationMixin {
   @override
   void initState() {
     super.initState();
+
+    WidgetsBinding.instance.addObserver(this);
+
+    notificationPrefs = NotificationPrefsServiceImpl();
+    updateNotificationSettings();
 
     cacheManager = SimpleAppCacheManager();
     updateCacheSize();
 
     versionTracker = VersionTracker();
     updateVersion();
+  }
 
-    notificationPrefs = NotificationPrefsServiceImpl();
-    updateNotificationSettings();
+  @override
+  void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
+    super.dispose();
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    super.didChangeAppLifecycleState(state);
+    if (state == AppLifecycleState.resumed) {
+      // Re-check notification permission when app is resumed
+      recheckNotificationPermission();
+    }
+  }
+
+  void recheckNotificationPermission() async {
+    notificationPrefs.askPermission().then((status) {
+      notificationPrefs.getNotificationState().then((status) {
+        updateNotificationSettings(status: status);
+      });
+    });
   }
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: Padding(
-          padding: const EdgeInsets.all(15),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const SizedBox(height: 10),
-              Text('Settings', style: ViewUtils.ubuntuStyle(fontSize: 25)),
-              const SizedBox(height: 10),
-              clearCacheCard(),
-              notificationCard(),
-              const Spacer(),
-              showAppVersion()
-            ],
-          ),
+    return Scaffold(
+      appBar: AppBar(title: const Text('Settings'), centerTitle: false),
+      body: Padding(
+        padding: const EdgeInsets.all(15),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const SizedBox(height: 10),
+            clearCacheCard(),
+            notificationCard(),
+            const Spacer(),
+            showAppVersion(),
+          ],
         ),
       ),
     );
@@ -63,12 +86,37 @@ class _SettingsViewState extends State<SettingsView> with CacheMixin, VersionMix
           valueListenable: cacheSizeNotifier,
           builder: (context, cacheSize, child) => Text(
             cacheSize,
-            style: ViewUtils.ubuntuStyle(color: Colors.red, fontSize: 19),
+            style: ViewUtils.ubuntuStyle(
+              color: Colors.red,
+              fontSize: 19,
+            ),
           ),
         ),
         onTap: () async {
-          cacheManager.clearCache();
-          updateCacheSize();
+          showDialog(
+            context: context,
+            builder: (BuildContext context) {
+              return _AlertDialog(
+                actions: <Widget>[
+                  TextButton(
+                    child: Text(
+                      'Yes',
+                      style: ViewUtils.ubuntuStyle(color: Colors.red),
+                    ),
+                    onPressed: () {
+                      cacheManager.clearCache();
+                      updateCacheSize();
+                      Navigator.of(context).pop();
+                    },
+                  ),
+                  TextButton(
+                    child: Text('No', style: ViewUtils.ubuntuStyle(color: Colors.black)),
+                    onPressed: () => Navigator.of(context).pop(),
+                  ),
+                ],
+              );
+            },
+          );
         },
         title: 'Clear cache',
         iconColor: Colors.orange,
@@ -80,15 +128,12 @@ class _SettingsViewState extends State<SettingsView> with CacheMixin, VersionMix
       tralling: ValueListenableBuilder(
         valueListenable: notificationPrefsNotifier,
         builder: (context, isEnabled, child) {
-          return CupertinoSwitch(
+          return Switch(
             value: isEnabled,
             activeColor: Colors.green,
+            inactiveTrackColor: Colors.transparent,
             onChanged: (state) async {
-              final status = await notificationPrefs.askPermission();
-              if (!(status ?? false)) return;
-
-              await notificationPrefs.setNotificationState(state);
-              updateNotificationSettings();
+              AppSettings.openAppSettings(type: AppSettingsType.notification);
             },
           );
         },
@@ -109,6 +154,35 @@ class _SettingsViewState extends State<SettingsView> with CacheMixin, VersionMix
           },
         ),
       );
+}
+
+class _AlertDialog extends StatelessWidget {
+  const _AlertDialog({required this.actions});
+
+  final List<Widget>? actions;
+
+  @override
+  Widget build(BuildContext context) {
+    final style = ViewUtils.ubuntuStyle(color: Colors.black);
+    const subtitle = 'All interrupted questions and books will be permanently deleted.';
+
+    return Theme(
+      data: ThemeData(
+        useMaterial3: false,
+        colorScheme: const ColorScheme.light(),
+      ),
+      child: AlertDialog(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(15),
+        ),
+        title: Text('Clear cache?', style: style),
+        content: SingleChildScrollView(
+          child: ListBody(children: <Widget>[Text(subtitle, style: style)]),
+        ),
+        actions: actions,
+      ),
+    );
+  }
 }
 
 mixin CacheMixin on State<SettingsView> {
@@ -135,8 +209,8 @@ mixin NotificationMixin on State<SettingsView> {
   late final NotificationPrefsServiceImpl notificationPrefs;
   final notificationPrefsNotifier = ValueNotifier<bool>(false);
 
-  void updateNotificationSettings() async {
+  void updateNotificationSettings({bool? status}) async {
     var isEnabled = await notificationPrefs.getNotificationState();
-    notificationPrefsNotifier.value = isEnabled ?? false;
+    notificationPrefsNotifier.value = status ?? isEnabled ?? false;
   }
 }
