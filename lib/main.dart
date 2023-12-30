@@ -18,12 +18,12 @@ void main() async {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
-  // Push notifications service
-  await OneSignalConfig.config.init();
-  // Hive service
-  await HiveConfig.config.init();
   // Firebase and Orientation config
-  await AppConfig.config.init();
+  AppConfig.config.init();
+  // Push notifications service
+  OneSignalConfig.config.init();
+  // Hive service
+  HiveConfig.config.init();
 
   FlutterNativeSplash.remove();
   runApp(const InterviewHelper());
