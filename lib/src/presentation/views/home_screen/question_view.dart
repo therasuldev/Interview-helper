@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:interview_helper/src/utils/index.dart';
 
-import '../../../domain/models/models.dart';
-import '../../../utils/constants/constants.dart';
-import '../../../utils/decorations/view_utils.dart';
-import '../../widgets/widgets.dart';
+import '../../../domain/models/index.dart';
+import '../../widgets/index.dart';
 
 class QuestionView extends StatefulWidget {
   const QuestionView({super.key, required this.questions, required this.index});
@@ -16,35 +15,55 @@ class QuestionView extends StatefulWidget {
 }
 
 class _QuestionViewState extends State<QuestionView> with _QuestionViewMixin {
+  late ScrollController _scrollController;
+  Color appBarColor = Colors.transparent;
+
+  @override
+  void initState() {
+    super.initState();
+    _scrollController = ScrollController()
+      ..addListener(() {
+        if (_scrollController.offset > 200) {
+          setState(() => appBarColor = AppColors.primary);
+        } else if (_scrollController.offset <= 200) {
+          setState(() => appBarColor = Colors.transparent);
+        }
+      });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      body: CustomScrollView(
-        key: ValueKey(currentIndex),
-        physics: const BouncingScrollPhysics(),
-        slivers: [
-          SliverAppBar(
-            actions: [
-              Padding(
-                padding: const EdgeInsets.all(12.0),
-                child: Text(
-                  '${currentIndex + 1}/${questions.length}',
-                  style: ViewUtils.ubuntuStyle(color: Colors.white, fontSize: 20),
+      body: LayoutBuilder(
+        builder: (ctx, constraints) {
+          return CustomScrollView(
+            key: ValueKey(currentIndex),
+            controller: _scrollController,
+            physics: const BouncingScrollPhysics(),
+            slivers: [
+              SliverAppBar(
+                actions: [
+                  Padding(
+                    padding: const EdgeInsets.all(12.0),
+                    child: Text(
+                      '${currentIndex + 1}/${questions.length}',
+                      style: ViewUtils.ubuntuStyle(color: Colors.white, fontSize: 20),
+                    ),
+                  )
+                ],
+                pinned: true,
+                backgroundColor: appBarColor,
+                expandedHeight: MediaQuery.sizeOf(context).height * .5,
+                flexibleSpace: _QuestionView(questions: questions, currentIndex: currentIndex),
+              ),
+              SliverToBoxAdapter(
+                child: _AnswerView(
+                  question: questions[currentIndex],
                 ),
-              )
+              ),
             ],
-            backgroundColor: Colors.transparent,
-            iconTheme: const IconThemeData(color: Colors.white),
-            expandedHeight: MediaQuery.sizeOf(context).height * .5,
-            flexibleSpace: _QuestionView(questions: questions, currentIndex: currentIndex),
-          ),
-          SliverToBoxAdapter(
-            child: _AnswerView(
-              question: questions[currentIndex],
-            ),
-          ),
-        ],
+          );
+        },
       ),
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
@@ -71,16 +90,19 @@ class _QuestionView extends StatelessWidget {
     return FlexibleSpaceBar(
       background: ClipPath(
         clipper: MyClipper(),
-        child: Container(
-          height: 300,
-          color: AppColors.appColor,
-          alignment: Alignment.center,
-          child: Text(
-            questions[currentIndex].question,
-            textAlign: TextAlign.center,
-            style: ViewUtils.ubuntuStyle(
-              color: Colors.white,
-              fontSize: 25,
+        child: ColoredBox(
+          color: AppColors.primary,
+          child: Padding(
+            padding: const EdgeInsets.all(12.0),
+            child: Center(
+              child: Text(
+                questions[currentIndex].question,
+                textAlign: TextAlign.center,
+                style: ViewUtils.ubuntuStyle(
+                  color: Colors.white,
+                  fontSize: 25,
+                ),
+              ),
             ),
           ),
         ),
@@ -96,12 +118,15 @@ class _AnswerView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      question.answer,
-      textAlign: TextAlign.center,
-      style: ViewUtils.ubuntuStyle(
-        fontSize: 25,
-        color: const Color.fromARGB(255, 89, 97, 107),
+    return Padding(
+      padding: const EdgeInsets.all(12.0),
+      child: Text(
+        question.answer,
+        textAlign: TextAlign.justify,
+        style: ViewUtils.ubuntuStyle(
+          fontSize: 25,
+          color: const Color.fromARGB(255, 89, 97, 107),
+        ),
       ),
     );
   }
@@ -110,14 +135,14 @@ class _AnswerView extends StatelessWidget {
 class _ChangeButton extends StatelessWidget {
   _ChangeButton({required this.childText, required this.onPressed});
 
-  final style = ViewUtils.ubuntuStyle(fontSize: 17, color: AppColors.appColor);
+  final style = ViewUtils.ubuntuStyle(fontSize: 17, color: AppColors.primary);
 
   @override
   Widget build(BuildContext context) => OutlinedButton(
         style: ButtonStyle(
           overlayColor: MaterialStateProperty.all<Color>(Colors.white),
           foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
-          side: MaterialStateProperty.all(const BorderSide(color: AppColors.appColor, strokeAlign: 10)),
+          side: MaterialStateProperty.all(const BorderSide(color: AppColors.primary, strokeAlign: 10)),
         ),
         onPressed: onPressed,
         child: Text(childText, style: style),
