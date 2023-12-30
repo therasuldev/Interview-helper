@@ -24,15 +24,9 @@ if (flutterVersionName == null) {
 }
 
 android {
-    namespace "com.example.prepare_for_interview"
-    compileSdkVersion 34
+    namespace "com.example.interview_helper"
+    compileSdkVersion flutter.compileSdkVersion
     ndkVersion flutter.ndkVersion
-
-    packagingOptions {
-        jniLibs {
-            pickFirsts += ['lib/x86/libc++_shared.so', 'lib/x86_64/libc++_shared.so', 'lib/armeabi-v7a/libc++_shared.so', 'lib/arm64-v8a/libc++_shared.so']
-        }
-    }
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -49,10 +43,10 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "com.example.prepare_for_interview"
+        applicationId "com.example.interview_helper"
         // You can update the following values to match your application needs.
         // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
-        minSdkVersion 23
+        minSdkVersion 19
         multiDexEnabled true
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
@@ -73,6 +67,5 @@ flutter {
 }
 
 dependencies {
-    implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.8.0"))
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+   implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.8.0"))
 }
