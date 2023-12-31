@@ -18,8 +18,8 @@ class ThemeConfig {
       titleTextStyle: ViewUtils.ubuntuStyle(fontSize: 22),
     ),
     drawerTheme: DrawerThemeData(
-      surfaceTintColor: Colors.grey.shade600,
-      backgroundColor: Colors.white,
+      surfaceTintColor: Colors.grey.shade100,
+      backgroundColor: Colors.grey.shade100,
     ),
     floatingActionButtonTheme: const FloatingActionButtonThemeData(
       backgroundColor: AppColors.primary,

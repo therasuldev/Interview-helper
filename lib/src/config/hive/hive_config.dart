@@ -1,7 +1,7 @@
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:path_provider/path_provider.dart' as path;
 
-import '../../domain/models/models.dart';
+import '../../domain/models/index.dart';
 
 class HiveConfig {
   HiveConfig._();

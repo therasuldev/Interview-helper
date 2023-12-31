@@ -1,3 +1,5 @@
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:interview_helper/src/data/datasources/local/notification_prefs_service.dart';
 import 'package:onesignal_flutter/onesignal_flutter.dart';
 
 class OneSignalConfig {
@@ -8,7 +10,10 @@ class OneSignalConfig {
 
   Future<void> init() async {
     await OneSignal.Debug.setLogLevel(OSLogLevel.verbose);
-    OneSignal.initialize('8e7cb16b-8128-400a-8bfd-60848ca3ef4c');
-    await OneSignal.Notifications.requestPermission(true);
+    OneSignal.initialize(dotenv.env['ONE_SIGNAL_APP_ID']!);
+
+    await OneSignal.Notifications.requestPermission(true).then((isEnabled) async {
+      await NotificationPrefsServiceImpl().setNotificationState(isEnabled);
+    });
   }
 }

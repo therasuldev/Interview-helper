@@ -3,9 +3,9 @@ import 'package:go_router/go_router.dart';
 import 'package:interview_helper/src/presentation/views/introduction_screen.dart';
 
 import '../../../app_scaffold.dart';
-import '../../domain/models/models.dart';
-import '../../presentation/views/home_screen/home.dart';
-import '../../presentation/views/library_screen/library.dart';
+import '../../domain/models/index.dart';
+import '../../presentation/views/home_screen/index.dart';
+import '../../presentation/views/library_screen/index.dart';
 
 final GlobalKey<NavigatorState> _rootNavigatorKey = GlobalKey<NavigatorState>();
 final GlobalKey<NavigatorState> _homeNavigatorKey = GlobalKey<NavigatorState>();
