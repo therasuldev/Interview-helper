@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:interview_helper/src/config/notification/one_signal_config.dart';
 
@@ -18,12 +19,14 @@ void main() async {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
+  // .env config
+  await dotenv.load(fileName: '.env');
   // Firebase and Orientation config
-  AppConfig.config.init();
-  // Push notifications service
-  OneSignalConfig.config.init();
+  await AppConfig.config.init();
   // Hive service
-  HiveConfig.config.init();
+  await HiveConfig.config.init();
+  // Push notification service
+  OneSignalConfig.config.init();
 
   FlutterNativeSplash.remove();
   runApp(const InterviewHelper());
