@@ -8,7 +8,7 @@ class ShareApp {
 
     await Share.share(
       //TODO: fix
-      "https://play.google.com/store/apps/details?id=com.riddle.game.en",
+      "",
       subject: '',
       sharePositionOrigin: box!.localToGlobal(Offset.zero) & box.size,
     );

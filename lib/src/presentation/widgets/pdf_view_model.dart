@@ -1,12 +1,15 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_cached_pdfview/flutter_cached_pdfview.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:interview_helper/gen/assets.gen.dart';
+import 'package:interview_helper/src/utils/extensions/to_percent.dart';
 
-import '../../domain/models/models.dart';
-import 'widgets.dart';
+import '../../domain/models/index.dart';
+import 'index.dart';
 
 abstract class IBookViewModel {
-  Widget buildBookforEntireScreen(BuildContext context);
-  Widget buildBookforViewScreen(BuildContext context);
+  Widget bigSizeBookView(BuildContext context);
+  Widget smallSizeBookView(BuildContext context);
 }
 
 class BookViewModel extends IBookViewModel {
@@ -14,7 +17,7 @@ class BookViewModel extends IBookViewModel {
 
   BookViewModel({required this.book});
   @override
-  Widget buildBookforEntireScreen(BuildContext context) {
+  Widget bigSizeBookView(BuildContext context) {
     return _PDFViewModel(
       book: book,
       width: MediaQuery.of(context).size.height,
@@ -23,7 +26,7 @@ class BookViewModel extends IBookViewModel {
   }
 
   @override
-  Widget buildBookforViewScreen(BuildContext context) {
+  Widget smallSizeBookView(BuildContext context) {
     return _PDFViewModel(
       book: book,
       width: MediaQuery.of(context).size.width * .5,
@@ -45,11 +48,18 @@ class _PDFViewModel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final child = const PDF().cachedFromUrl(
-      book.url,
-      key: ValueKey(book.name),
-      placeholder: (p) => KShimmer(progress: '${p.toInt()} %'),
+    final child = CachedNetworkImage(
+      imageUrl: book.imageUrl,
+      progressIndicatorBuilder: (context, url, progress) {
+        return KShimmer(progress: (progress.progress ?? 0).toPercent());
+      },
+      errorWidget: (context, url, error) {
+        return Transform.scale(
+          scale: .2,
+          child: SvgPicture.asset(Assets.svg.connectionLost),
+        );
+      },
     );
-    return SizedBox(height: height, width: width, child: child);
+    return Hero(tag: book.name, child: SizedBox(height: height, width: width, child: child));
   }
 }

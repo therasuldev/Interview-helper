@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:prepare_for_interview/gen/assets.gen.dart';
+import 'package:interview_helper/gen/assets.gen.dart';
 import 'package:rating_dialog/rating_dialog.dart';
 import 'package:store_redirect/store_redirect.dart';
 
@@ -21,7 +21,7 @@ class RateApp {
       commentHint: 'Tell us your comment',
       onSubmitted: (_) {
         //TODO: change androidAppId
-        StoreRedirect.redirect(androidAppId: "com.riddle.game.en");
+        StoreRedirect.redirect(androidAppId: "");
       },
     );
   }
