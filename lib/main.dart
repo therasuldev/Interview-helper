@@ -14,13 +14,14 @@ import 'src/presentation/provider/bloc/books/books_bloc.dart';
 import 'src/presentation/provider/bloc/introduction/introduction_bloc.dart';
 import 'src/presentation/provider/bloc/questions/question_bloc.dart';
 import 'src/presentation/provider/cubit/feedback/feedback_cubit.dart';
+import 'src/utils/index.dart';
 
 void main() async {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
   // .env config
-  await dotenv.load(fileName: '.env');
+  await dotenv.load(fileName: ".env");
   // Firebase and Orientation config
   await AppConfig.config.init();
   // Hive service
@@ -49,6 +50,7 @@ class InterviewHelper extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: ThemeConfig.init.theme,
         routerConfig: AppRouterConfig.init.config,
+        scaffoldMessengerKey: ViewUtils.scaffoldMessengerKey,
       ),
     );
   }
