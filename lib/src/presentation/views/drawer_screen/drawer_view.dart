@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:prepare_for_interview/gen/assets.gen.dart';
+import 'package:interview_helper/gen/assets.gen.dart';
 
 import '../../../utils/decorations/view_utils.dart';
-import 'drawer.dart';
+import 'index.dart';
 
 class DrawerView extends StatelessWidget {
   const DrawerView({super.key});
@@ -10,16 +10,22 @@ class DrawerView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      backgroundColor: Colors.white,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           DrawerHeader(
-            decoration: const BoxDecoration(color: Colors.white),
+            decoration: BoxDecoration(color: Colors.grey.shade100),
             child: Row(
               children: [
                 const Spacer(),
-                Image.asset(Assets.app.path),
+                Transform.scale(
+                  scale: 1.5,
+                  child: Image.asset(
+                    Assets.app.path,
+                    color: Colors.grey.shade100,
+                    colorBlendMode: BlendMode.difference,
+                  ),
+                ),
                 const Spacer(),
               ],
             ),

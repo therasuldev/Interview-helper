@@ -3,13 +3,12 @@ import 'dart:async';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:interview_helper/src/utils/index.dart';
 
-import '../../../config/network/network_manager.dart';
-import '../../../domain/models/models.dart';
-import '../../../utils/constants/constants.dart';
-import '../../../utils/decorations/view_utils.dart';
+import '../../../config/network/connectivity_config.dart';
+import '../../../domain/models/index.dart';
 import '../../provider/cubit/feedback/feedback_cubit.dart';
-import '../../widgets/widgets.dart';
+import '../../widgets/index.dart';
 
 class ContactUsScreen extends StatefulWidget {
   const ContactUsScreen({super.key});
@@ -34,65 +33,63 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
-          child: Form(
-            key: formKey,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Contact us',
-                  style: ViewUtils.ubuntuStyle(fontSize: 30),
-                ),
-                const SizedBox(height: 20),
-                TextFormField(
-                  maxLines: 1,
-                  key: emailKey,
-                  controller: email,
-                  style: ViewUtils.ubuntuStyle(),
-                  textInputAction: TextInputAction.done,
-                  keyboardType: TextInputType.emailAddress,
-                  decoration: InputDecoration(
-                    hintText: 'Your email',
-                    hintStyle: ViewUtils.ubuntuStyle(),
-                    border: const OutlineInputBorder(),
-                    focusedBorder: const OutlineInputBorder(
-                      borderSide: BorderSide(color: AppColors.appColor),
-                    ),
-                  ),
-                  validator: (value) => FormValidate.emailFieldIsValidate(value),
-                ),
-                const SizedBox(height: 20),
-                TextFormField(
-                  maxLines: 7,
-                  key: feedbackKey,
-                  controller: message,
-                  style: ViewUtils.ubuntuStyle(),
-                  textInputAction: TextInputAction.done,
-                  keyboardType: TextInputType.text,
-                  decoration: InputDecoration(
-                    hintText: 'Write your feedback here...',
-                    hintStyle: ViewUtils.ubuntuStyle(),
-                    border: const OutlineInputBorder(),
-                    focusedBorder: const OutlineInputBorder(
-                      borderSide: BorderSide(color: AppColors.appColor),
-                    ),
-                  ),
-                  validator: (value) => FormValidate.feedbackFieldIsValidate(value),
-                ),
-                const Spacer(),
-                Center(
-                  child: _FeedbackButton(
-                    email: email,
-                    message: message,
-                    formKey: formKey,
+    return Scaffold(
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+        child: Form(
+          key: formKey,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Contact us',
+                style: ViewUtils.ubuntuStyle(fontSize: 30),
+              ),
+              const SizedBox(height: 20),
+              TextFormField(
+                maxLines: 1,
+                key: emailKey,
+                controller: email,
+                style: ViewUtils.ubuntuStyle(),
+                textInputAction: TextInputAction.done,
+                keyboardType: TextInputType.emailAddress,
+                decoration: InputDecoration(
+                  hintText: 'Your email',
+                  hintStyle: ViewUtils.ubuntuStyle(),
+                  border: const OutlineInputBorder(),
+                  focusedBorder: const OutlineInputBorder(
+                    borderSide: BorderSide(color: AppColors.primary),
                   ),
                 ),
-              ],
-            ),
+                validator: (value) => FormValidate.emailFieldIsValidate(value),
+              ),
+              const SizedBox(height: 20),
+              TextFormField(
+                maxLines: 7,
+                key: feedbackKey,
+                controller: message,
+                style: ViewUtils.ubuntuStyle(),
+                textInputAction: TextInputAction.done,
+                keyboardType: TextInputType.text,
+                decoration: InputDecoration(
+                  hintText: 'Write your feedback here...',
+                  hintStyle: ViewUtils.ubuntuStyle(),
+                  border: const OutlineInputBorder(),
+                  focusedBorder: const OutlineInputBorder(
+                    borderSide: BorderSide(color: AppColors.primary),
+                  ),
+                ),
+                validator: (value) => FormValidate.feedbackFieldIsValidate(value),
+              ),
+              const Spacer(),
+              Center(
+                child: _FeedbackButton(
+                  email: email,
+                  message: message,
+                  formKey: formKey,
+                ),
+              ),
+            ],
           ),
         ),
       ),
@@ -121,7 +118,7 @@ class _FeedbackButtonState extends State<_FeedbackButton> {
   void initState() {
     super.initState();
     _subscription = Connectivity().onConnectivityChanged.listen((event) {
-      checkConnectivityStatus(event);
+      _checkConnectivityStatus(event);
     });
   }
 
@@ -131,16 +128,29 @@ class _FeedbackButtonState extends State<_FeedbackButton> {
     super.dispose();
   }
 
-  void checkConnectivityStatus(ConnectivityResult event) {
+  void _checkConnectivityStatus(ConnectivityResult event) {
     switch (event) {
       case ConnectivityResult.mobile:
       case ConnectivityResult.wifi:
         break;
       default:
-        const snackBar = SnackBar(content: Text('Connection error'));
-        ScaffoldMessenger.of(context).showSnackBar(snackBar);
+        ViewUtils.showInterviewHelperSnackBar(
+          snackbarTitle: 'A problem has occurred with the internet!',
+          backgroundColor: Colors.red,
+        );
         break;
     }
+  }
+
+  void _sendFeedback() async {
+    final connectivity = await ConnectivityService().hasActiveInternetConnection();
+    if (!connectivity) return;
+
+    final isValidate = widget.formKey.currentState?.validate() ?? false;
+    if (!isValidate) return;
+
+    final message = Message(email: widget.email.text, message: widget.message.text);
+    if (context.mounted) context.read<FeedbackCubit>().send(message: message);
   }
 
   late StreamSubscription<ConnectivityResult> _subscription;
@@ -151,42 +161,25 @@ class _FeedbackButtonState extends State<_FeedbackButton> {
       height: 50,
       width: MediaQuery.of(context).size.width * .9,
       child: OutlinedButton(
-        onPressed: () async {
-          final connectivity = await ConnectivityService().getConnectivityStatus();
-          if (!connectivity) return;
-
-          final isValidate = widget.formKey.currentState?.validate() ?? false;
-          if (!isValidate) return;
-
-          final message = Message(email: widget.email.text, message: widget.message.text);
-          if (context.mounted) context.read<FeedbackCubit>().send(message: message);
-        },
+        onPressed: () => _sendFeedback(),
         style: ButtonStyle(
           overlayColor: MaterialStateProperty.all(Colors.white),
-          foregroundColor: MaterialStateProperty.all(AppColors.appColor),
-          side: MaterialStateProperty.all(const BorderSide(color: AppColors.appColor, strokeAlign: 10)),
+          foregroundColor: MaterialStateProperty.all(AppColors.primary),
+          side: MaterialStateProperty.all(const BorderSide(color: AppColors.primary, strokeAlign: 10)),
         ),
         child: BlocConsumer<FeedbackCubit, FeedbackState>(
           listener: (context, state) {
             switch (state.event) {
               case FeedbackEvents.success:
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(
-                    margin: const EdgeInsets.all(10),
-                    backgroundColor: Colors.green,
-                    behavior: SnackBarBehavior.floating,
-                    content: Text('Thank you for your feedback.', style: ViewUtils.ubuntuStyle(fontSize: 12)),
-                  ),
+                ViewUtils.showInterviewHelperSnackBar(
+                  snackbarTitle: 'Thank you for your feedback 🥳',
+                  backgroundColor: Colors.green,
                 );
                 break;
               case FeedbackEvents.failure:
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(
-                    backgroundColor: Colors.red,
-                    margin: const EdgeInsets.all(10),
-                    behavior: SnackBarBehavior.floating,
-                    content: Text(state.exception!.description, style: ViewUtils.ubuntuStyle()),
-                  ),
+                ViewUtils.showInterviewHelperSnackBar(
+                  snackbarTitle: state.exception!.description,
+                  backgroundColor: Colors.red,
                 );
                 break;
               default:
