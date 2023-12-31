@@ -1,0 +1,21 @@
+enum BookCollectionPaths {
+  flutter,
+  go,
+  cplusplus,
+  csharp,
+  cybersecurity,
+  git,
+  java,
+  js,
+  nodejs,
+  perl,
+  php,
+  python,
+  react,
+  ruby,
+  kotlin,
+  typescript,
+  rust,
+  scala,
+  swift;
+}

@@ -1,4 +1,4 @@
-enum Titles {
+enum CategoryCardTitles {
   flutter('Flutter'),
   go('Go Lang'),
   java('Java'),
@@ -24,6 +24,6 @@ enum Titles {
   dataanalyst('Data analyst'),
   cybersecurity('Cyber security');
 
-  const Titles(this.title);
+  const CategoryCardTitles(this.title);
   final String title;
 }
