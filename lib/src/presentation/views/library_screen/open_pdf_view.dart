@@ -95,9 +95,14 @@ class _PageInputField extends StatelessWidget {
             borderSide: BorderSide(color: Colors.grey.shade300),
           ),
         ),
+        style: TextStyle(color: Colors.grey.shade300),
+        textAlign: TextAlign.center,
         keyboardType: TextInputType.number,
         inputFormatters: [
+          // Only numbers will be written
           FilteringTextInputFormatter.allow(RegExp(r'^\d*$')),
+          // Cannot write more than 3 digits
+          FilteringTextInputFormatter.allow(RegExp(r'^\d{0,3}$')),
         ],
       ),
     );
