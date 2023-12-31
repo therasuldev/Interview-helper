@@ -8,10 +8,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:prepare_for_interview/main.dart';
+import 'package:interview_helper/main.dart';
 
 void main() {
-  TestWidgetsFlutterBinding.ensureInitialized();
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
     await tester.pumpWidget(const MyApp());
