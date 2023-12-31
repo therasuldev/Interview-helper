@@ -3,12 +3,14 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_onboarding_slider/flutter_onboarding_slider.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
-import 'package:interview_helper/src/presentation/views/splash.dart';
+
 import 'package:interview_helper/gen/assets.gen.dart';
-import 'package:interview_helper/src/config/router/app_router.dart';
 import 'package:interview_helper/src/presentation/provider/bloc/introduction/introduction_bloc.dart';
-import 'package:interview_helper/src/utils/constants/description_texts.dart';
+import 'package:interview_helper/src/presentation/views/splash.dart';
+import 'package:interview_helper/src/utils/constants/introduction_screen_description_texts.dart';
 import 'package:interview_helper/src/utils/decorations/view_utils.dart';
+
+import 'library_screen/index.dart';
 
 class IntroductionScreen extends StatefulWidget {
   const IntroductionScreen({super.key});
@@ -17,7 +19,7 @@ class IntroductionScreen extends StatefulWidget {
   State<IntroductionScreen> createState() => _IntroductionScreenState();
 }
 
-class _IntroductionScreenState extends State<IntroductionScreen> with TickerProviderStateMixin {
+class _IntroductionScreenState extends State<IntroductionScreen> {
   @override
   Widget build(BuildContext context) {
     return BlocListener<AppBloc, AppState>(
