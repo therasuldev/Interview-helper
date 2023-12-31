@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:prepare_for_interview/src/config/router/app_router.dart';
-import 'package:prepare_for_interview/src/domain/models/models.dart';
-import 'package:prepare_for_interview/src/presentation/provider/bloc/books/books_bloc.dart';
-import '../../../utils/constants/constants.dart';
-import '../../../utils/decorations/view_utils.dart';
-import '../../../utils/enum/enums.dart';
-import '../../widgets/widgets.dart';
-import 'library.dart';
+import 'package:interview_helper/src/domain/models/index.dart';
+import 'package:interview_helper/src/presentation/provider/bloc/books/books_bloc.dart';
+import 'package:interview_helper/src/utils/index.dart';
+import '../../widgets/index.dart';
+import 'index.dart';
 
 class LibraryView extends StatefulWidget {
   const LibraryView({super.key});
@@ -25,28 +22,31 @@ class _LibraryViewState extends State<LibraryView> {
         if (state.loading!) {
           return const Center(child: KSpinKitCircle());
         } else if (!state.loading!) {
-          return ListView(children: buildLanguageRows(state));
-        } else {
-          return Center(child: Text(state.error.toString()));
+          return ListView(children: buildLanguageColumn(state));
         }
+        return Center(child: Text(state.error.toString()));
       },
     );
   }
 
-  List<Widget> buildLanguageRows(BookState state) {
-    List<Widget> rows = [];
-    for (var i = 0; i < ScreenDataPaths().libraryCategoryPathNames.length; i++) {
-      final type = ScreenDataPaths().libraryCategoryPathNames[i];
-      final category = Titles.values[i];
-      rows.addAll([
+  List<Widget> buildLanguageColumn(BookState state) {
+    List<Widget> column = [];
+    for (var i = 0; i < state.library!.length; i++) {
+      final categoryTitle = CategoryTitles.libraryCategory[i];
+      final category = state.library![i].keys.first;
+
+      column.addAll([
         _RowTitleWidget(
-          title: category.title,
-          books: state.library![i][type]!,
+          title: categoryTitle,
+          books: state.library![i][category]!,
         ),
-        BooksView(otherBooks: state.library![i][type]!),
+        CategoryCollection(
+          category: categoryTitle,
+          otherBooks: state.library![i][category]!,
+        ),
       ]);
     }
-    return rows;
+    return column;
   }
 }
 
@@ -75,14 +75,10 @@ class _RowTitleWidget extends StatelessWidget {
           ),
           TextButton(
             onPressed: () {
-              // Navigator.pushAndRemoveUntil(
-              //   context,
-              //   MaterialPageRoute(builder: (_) => AllBooksOfCategory(books: books)),
-              //   (route) => true,
-              // );
               context.goNamed(
                 AppRouteConstant.allBooks,
                 extra: books,
+                queryParameters: {'category': title},
               );
             },
             child: Text(

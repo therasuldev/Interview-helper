@@ -1,17 +1,23 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:prepare_for_interview/src/config/router/app_router.dart';
 
-import '../../../domain/models/models.dart';
-import '../../widgets/pdf_view_model.dart';
+import '../../../domain/models/index.dart';
 import '../../../utils/decorations/view_utils.dart';
+import '../../widgets/pdf_view_model.dart';
+import 'index.dart';
 
-class BooksView extends StatelessWidget {
-  const BooksView({super.key, this.allBooks, required this.otherBooks});
+class CategoryCollection extends StatelessWidget {
+  const CategoryCollection({
+    super.key,
+    this.allBooks,
+    required this.category,
+    required this.otherBooks,
+  });
 
   final List<Book>? allBooks;
   final List<Book> otherBooks;
+  final String category;
 
   @override
   Widget build(BuildContext context) {
@@ -21,10 +27,8 @@ class BooksView extends StatelessWidget {
         itemBuilder: (context, index) {
           final book = otherBooks[index];
           List<Book> otherBooks1 = [];
-          
-          otherBooks1 = allBooks == null 
-          ? otherBooks.getOtherBooks(book) 
-          : allBooks!.where((bk) => bk != book).toList();
+
+          otherBooks1 = allBooks == null ? otherBooks.getOtherBooks(book) : allBooks!.where((bk) => bk != book).toList();
 
           return GestureDetector(
             onTap: () {
@@ -33,6 +37,7 @@ class BooksView extends StatelessWidget {
                 extra: BookViewDetails(
                   index: index,
                   book: book,
+                  category: category,
                   otherBooks: otherBooks1,
                 ),
               );
@@ -42,7 +47,7 @@ class BooksView extends StatelessWidget {
               width: MediaQuery.of(context).size.width * .6,
               child: Column(
                 children: [
-                  BookViewModel(book: book).buildBookforViewScreen(context),
+                  BookViewModel(book: book).smallSizeBookView(context),
                   const SizedBox(height: 15),
                   Expanded(
                     child: Padding(
@@ -53,8 +58,8 @@ class BooksView extends StatelessWidget {
                         textAlign: TextAlign.center,
                         overflow: TextOverflow.ellipsis,
                         style: ViewUtils.ubuntuStyle(
-                          fontSize: 19,
                           fontWeight: FontWeight.w300,
+                          fontSize: 19,
                         ),
                       ),
                     ),

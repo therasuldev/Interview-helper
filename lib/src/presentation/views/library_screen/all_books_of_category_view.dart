@@ -1,16 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../config/router/app_router.dart';
 import '../../../domain/models/book/book.dart';
-import '../../../domain/models/book/book_view_details.dart';
+import '../../../domain/models/book_view_details.dart';
 import '../../../utils/decorations/view_utils.dart';
 import '../../widgets/pdf_view_model.dart';
+import 'index.dart';
 
 class AllBooksOfCategory extends StatelessWidget {
-  const AllBooksOfCategory({super.key, required this.books});
+  const AllBooksOfCategory({
+    super.key,
+    required this.books,
+    required this.category,
+  });
 
   final List<Book> books;
+  final String category;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +30,12 @@ class AllBooksOfCategory extends StatelessWidget {
 
               context.goNamed(
                 AppRouteConstant.bookView,
-                extra: BookViewDetails(index: index, book: book, otherBooks: otherBooks),
+                extra: BookViewDetails(
+                  index: index,
+                  book: book,
+                  otherBooks: otherBooks,
+                  category: category,
+                ),
               );
             },
             child: Container(
@@ -33,7 +43,7 @@ class AllBooksOfCategory extends StatelessWidget {
               margin: const EdgeInsets.all(5),
               child: Column(
                 children: [
-                  BookViewModel(book: book).buildBookforViewScreen(context),
+                  BookViewModel(book: book).smallSizeBookView(context),
                   const SizedBox(height: 15),
                   Expanded(
                     child: Padding(
