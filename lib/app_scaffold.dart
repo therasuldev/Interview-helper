@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import 'src/presentation/views/drawer_screen/drawer.dart';
-import 'src/utils/constants/constants.dart';
-import 'src/utils/decorations/view_utils.dart';
+import 'src/presentation/views/drawer_screen/index.dart';
+import 'src/utils/index.dart';
 
 class AppScaffold extends StatefulWidget {
   const AppScaffold({super.key, required this.body});
@@ -32,11 +31,7 @@ class _AppScaffoldState extends State<AppScaffold> {
 
   AppBar appBar(int screenIndex) {
     return AppBar(
-      title: Text(
-        screenIndex.isEqual(0) ? 'Categories' : 'Library',
-        style: ViewUtils.ubuntuStyle(fontSize: 22),
-      ),
-      backgroundColor: AppColors.appColor,
+      title: Text(screenIndex.isEqual(0) ? 'Categories' : 'Library'),
       centerTitle: true,
       elevation: 0,
     );
@@ -55,7 +50,7 @@ class _BottomNavBar extends StatelessWidget {
       items: _buildItems,
       onTap: changeScreen,
       currentIndex: screenIndex,
-      selectedItemColor: AppColors.appColor,
+      selectedItemColor: AppColors.primary,
       selectedLabelStyle: ViewUtils.ubuntuStyle(fontSize: 16),
       unselectedLabelStyle: ViewUtils.ubuntuStyle(fontSize: 14),
     );
