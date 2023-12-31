@@ -4,12 +4,11 @@ import 'dart:convert';
 
 import 'package:bloc/bloc.dart';
 import 'package:flutter/services.dart';
-import 'package:prepare_for_interview/src/data/datasources/local/base/base_cache_service.dart';
-import 'package:prepare_for_interview/src/data/datasources/local/cached_questions_source_data_source.dart';
+import 'package:interview_helper/src/data/datasources/local/base/base_cache_service.dart';
+import 'package:interview_helper/src/data/datasources/local/cached_questions_source_data_source.dart';
+import 'package:interview_helper/src/utils/index.dart';
 
-import '../../../../domain/models/models.dart';
-import '../../../../utils/constants/constants.dart';
-import '../../../../utils/enum/enums.dart';
+import '../../../../domain/models/index.dart';
 
 part 'question_event.dart';
 part 'question_state.dart';
@@ -29,8 +28,8 @@ class QuestionBloc extends Bloc<QuestionEvent, QuestionState> {
     });
   }
 
-  _onAddQuestionsToCache(dynamic event) async {
-    final jsonStr = await rootBundle.loadString('${Constant.questionPath}/${event.payload}.json');
+  _onAddQuestionsToCache(QuestionEvent event) async {
+    final jsonStr = await rootBundle.loadString('${AssetsPath.questionPath}/${event.payload}.json');
     final Map<String, dynamic> jsonMap = json.decode(jsonStr);
 
     final List<Map<String, dynamic>> questions = [];
@@ -40,7 +39,7 @@ class QuestionBloc extends Bloc<QuestionEvent, QuestionState> {
     await CacheService().cachedquestions.put(event.payload, questions);
   }
 
-  _onFetchQuestionStart(dynamic event) async {
+  _onFetchQuestionStart(QuestionEvent event) async {
     emit(state.copyWith(loading: true));
 
     try {

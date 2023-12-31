@@ -4,10 +4,10 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:http/http.dart' as http;
-import 'package:prepare_for_interview/src/config/network/network_manager.dart';
+import 'package:interview_helper/src/config/network/connectivity_config.dart';
 
 import '../../../../data/datasources/base/api_config.dart';
-import '../../../../domain/models/models.dart';
+import '../../../../domain/models/index.dart';
 
 part 'feedback_state.dart';
 
@@ -19,8 +19,8 @@ class FeedbackCubit extends Cubit<FeedbackState> {
   void send({required Message message}) async {
     final emailJS = EmailJS(message: message);
 
-    final isConnected = await _connectivityService.getConnectivityStatus();
-    if (!isConnected) return null;
+    final hasConnection = await _connectivityService.hasActiveInternetConnection();
+    if (!hasConnection) return null;
 
     try {
       emit(state.copyWith(loading: true));

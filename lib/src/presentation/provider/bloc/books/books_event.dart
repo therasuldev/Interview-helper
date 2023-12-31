@@ -1,5 +1,11 @@
 part of 'books_bloc.dart';
 
+enum BookEvents {
+  fetchBookStart,
+  fetchBookSuccess,
+  fetchBookError,
+}
+
 class BookEvent {
   BookEvents? type;
 

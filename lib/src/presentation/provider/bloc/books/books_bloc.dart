@@ -3,8 +3,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:interview_helper/src/data/datasources/remote/books_source_data_source.dart';
 
-import '../../../../domain/models/models.dart';
-import '../../../../utils/enum/enums.dart';
+import '../../../../domain/models/index.dart';
 
 part 'books_event.dart';
 part 'books_state.dart';

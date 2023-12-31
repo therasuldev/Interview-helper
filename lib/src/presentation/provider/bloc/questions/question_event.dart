@@ -1,5 +1,12 @@
 part of 'question_bloc.dart';
 
+enum QuestionEvents {
+  addQuestionsInitial,
+  fetchQuestionStart,
+  fetchQuestionSuccess,
+  fetchQuestionError,
+}
+
 class QuestionEvent {
   QuestionEvents? type;
   dynamic payload;
