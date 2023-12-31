@@ -9,93 +9,87 @@
 
 import 'package:flutter/widgets.dart';
 
-class $AssetsImageDataGen {
-  const $AssetsImageDataGen();
+class $AssetsIconsGen {
+  const $AssetsIconsGen();
 
-  /// File path: assets/image_data/backend.png
-  AssetGenImage get backend =>
-      const AssetGenImage('assets/image_data/backend.png');
+  /// File path: assets/icons/backend.png
+  AssetGenImage get backend => const AssetGenImage('assets/icons/backend.png');
 
-  /// File path: assets/image_data/cplusplus.png
+  /// File path: assets/icons/cplusplus.png
   AssetGenImage get cplusplus =>
-      const AssetGenImage('assets/image_data/cplusplus.png');
+      const AssetGenImage('assets/icons/cplusplus.png');
 
-  /// File path: assets/image_data/csharp.png
-  AssetGenImage get csharp =>
-      const AssetGenImage('assets/image_data/csharp.png');
+  /// File path: assets/icons/csharp.png
+  AssetGenImage get csharp => const AssetGenImage('assets/icons/csharp.png');
 
-  /// File path: assets/image_data/cybersecurity.png
+  /// File path: assets/icons/cybersecurity.png
   AssetGenImage get cybersecurity =>
-      const AssetGenImage('assets/image_data/cybersecurity.png');
+      const AssetGenImage('assets/icons/cybersecurity.png');
 
-  /// File path: assets/image_data/dataanalyst.png
+  /// File path: assets/icons/dataanalyst.png
   AssetGenImage get dataanalyst =>
-      const AssetGenImage('assets/image_data/dataanalyst.png');
+      const AssetGenImage('assets/icons/dataanalyst.png');
 
-  /// File path: assets/image_data/datascientist.png
+  /// File path: assets/icons/datascientist.png
   AssetGenImage get datascientist =>
-      const AssetGenImage('assets/image_data/datascientist.png');
+      const AssetGenImage('assets/icons/datascientist.png');
 
-  /// File path: assets/image_data/engineer.png
+  /// File path: assets/icons/engineer.png
   AssetGenImage get engineer =>
-      const AssetGenImage('assets/image_data/engineer.png');
+      const AssetGenImage('assets/icons/engineer.png');
 
-  /// File path: assets/image_data/flutter.png
-  AssetGenImage get flutter =>
-      const AssetGenImage('assets/image_data/flutter.png');
+  /// File path: assets/icons/flutter.png
+  AssetGenImage get flutter => const AssetGenImage('assets/icons/flutter.png');
 
-  /// File path: assets/image_data/frontend.png
+  /// File path: assets/icons/frontend.png
   AssetGenImage get frontend =>
-      const AssetGenImage('assets/image_data/frontend.png');
+      const AssetGenImage('assets/icons/frontend.png');
 
-  /// File path: assets/image_data/git.png
-  AssetGenImage get git => const AssetGenImage('assets/image_data/git.png');
+  /// File path: assets/icons/git.png
+  AssetGenImage get git => const AssetGenImage('assets/icons/git.png');
 
-  /// File path: assets/image_data/go.png
-  AssetGenImage get go => const AssetGenImage('assets/image_data/go.png');
+  /// File path: assets/icons/go.png
+  AssetGenImage get go => const AssetGenImage('assets/icons/go.png');
 
-  /// File path: assets/image_data/java.png
-  AssetGenImage get java => const AssetGenImage('assets/image_data/java.png');
+  /// File path: assets/icons/java.png
+  AssetGenImage get java => const AssetGenImage('assets/icons/java.png');
 
-  /// File path: assets/image_data/js.png
-  AssetGenImage get js => const AssetGenImage('assets/image_data/js.png');
+  /// File path: assets/icons/js.png
+  AssetGenImage get js => const AssetGenImage('assets/icons/js.png');
 
-  /// File path: assets/image_data/kotlin.png
-  AssetGenImage get kotlin =>
-      const AssetGenImage('assets/image_data/kotlin.png');
+  /// File path: assets/icons/kotlin.png
+  AssetGenImage get kotlin => const AssetGenImage('assets/icons/kotlin.png');
 
-  /// File path: assets/image_data/nodejs.png
-  AssetGenImage get nodejs =>
-      const AssetGenImage('assets/image_data/nodejs.png');
+  /// File path: assets/icons/nodejs.png
+  AssetGenImage get nodejs => const AssetGenImage('assets/icons/nodejs.png');
 
-  /// File path: assets/image_data/perl.png
-  AssetGenImage get perl => const AssetGenImage('assets/image_data/perl.png');
+  /// File path: assets/icons/perl.png
+  AssetGenImage get perl => const AssetGenImage('assets/icons/perl.png');
 
-  /// File path: assets/image_data/php.png
-  AssetGenImage get php => const AssetGenImage('assets/image_data/php.png');
+  /// File path: assets/icons/php.png
+  AssetGenImage get php => const AssetGenImage('assets/icons/php.png');
 
-  /// File path: assets/image_data/python.png
-  AssetGenImage get python =>
-      const AssetGenImage('assets/image_data/python.png');
+  /// File path: assets/icons/python.png
+  AssetGenImage get python => const AssetGenImage('assets/icons/python.png');
 
-  /// File path: assets/image_data/react.png
-  AssetGenImage get react => const AssetGenImage('assets/image_data/react.png');
+  /// File path: assets/icons/react.png
+  AssetGenImage get react => const AssetGenImage('assets/icons/react.png');
 
-  /// File path: assets/image_data/ruby.png
-  AssetGenImage get ruby => const AssetGenImage('assets/image_data/ruby.png');
+  /// File path: assets/icons/ruby.png
+  AssetGenImage get ruby => const AssetGenImage('assets/icons/ruby.png');
 
-  /// File path: assets/image_data/rust.png
-  AssetGenImage get rust => const AssetGenImage('assets/image_data/rust.png');
+  /// File path: assets/icons/rust.png
+  AssetGenImage get rust => const AssetGenImage('assets/icons/rust.png');
 
-  /// File path: assets/image_data/scala.png
-  AssetGenImage get scala => const AssetGenImage('assets/image_data/scala.png');
+  /// File path: assets/icons/scala.png
+  AssetGenImage get scala => const AssetGenImage('assets/icons/scala.png');
 
-  /// File path: assets/image_data/swift.png
-  AssetGenImage get swift => const AssetGenImage('assets/image_data/swift.png');
+  /// File path: assets/icons/swift.png
+  AssetGenImage get swift => const AssetGenImage('assets/icons/swift.png');
 
-  /// File path: assets/image_data/typescript.png
+  /// File path: assets/icons/typescript.png
   AssetGenImage get typescript =>
-      const AssetGenImage('assets/image_data/typescript.png');
+      const AssetGenImage('assets/icons/typescript.png');
 
   /// List of all assets
   List<AssetGenImage> get values => [
@@ -126,96 +120,96 @@ class $AssetsImageDataGen {
       ];
 }
 
-class $AssetsLottiesGen {
-  const $AssetsLottiesGen();
+class $AssetsIntroductionGen {
+  const $AssetsIntroductionGen();
 
-  /// File path: assets/lotties/books.json
-  String get books => 'assets/lotties/books.json';
+  /// File path: assets/introduction/books.svg
+  String get books => 'assets/introduction/books.svg';
 
-  /// File path: assets/lotties/interview.json
-  String get interview => 'assets/lotties/interview.json';
+  /// File path: assets/introduction/questions.svg
+  String get questions => 'assets/introduction/questions.svg';
 
   /// List of all assets
-  List<String> get values => [books, interview];
+  List<String> get values => [books, questions];
 }
 
-class $AssetsQuestionsDataGen {
-  const $AssetsQuestionsDataGen();
+class $AssetsQuestionsGen {
+  const $AssetsQuestionsGen();
 
-  /// File path: assets/questions_data/backend.json
-  String get backend => 'assets/questions_data/backend.json';
+  /// File path: assets/questions/backend.json
+  String get backend => 'assets/questions/backend.json';
 
-  /// File path: assets/questions_data/cplusplus.json
-  String get cplusplus => 'assets/questions_data/cplusplus.json';
+  /// File path: assets/questions/cplusplus.json
+  String get cplusplus => 'assets/questions/cplusplus.json';
 
-  /// File path: assets/questions_data/csharp.json
-  String get csharp => 'assets/questions_data/csharp.json';
+  /// File path: assets/questions/csharp.json
+  String get csharp => 'assets/questions/csharp.json';
 
-  /// File path: assets/questions_data/cybersecurity.json
-  String get cybersecurity => 'assets/questions_data/cybersecurity.json';
+  /// File path: assets/questions/cybersecurity.json
+  String get cybersecurity => 'assets/questions/cybersecurity.json';
 
-  /// File path: assets/questions_data/dataanalyst.json
-  String get dataanalyst => 'assets/questions_data/dataanalyst.json';
+  /// File path: assets/questions/dataanalyst.json
+  String get dataanalyst => 'assets/questions/dataanalyst.json';
 
-  /// File path: assets/questions_data/datascientist.json
-  String get datascientist => 'assets/questions_data/datascientist.json';
+  /// File path: assets/questions/datascientist.json
+  String get datascientist => 'assets/questions/datascientist.json';
 
-  /// File path: assets/questions_data/engineer.json
-  String get engineer => 'assets/questions_data/engineer.json';
+  /// File path: assets/questions/engineer.json
+  String get engineer => 'assets/questions/engineer.json';
 
-  /// File path: assets/questions_data/flutter.json
-  String get flutter => 'assets/questions_data/flutter.json';
+  /// File path: assets/questions/flutter.json
+  String get flutter => 'assets/questions/flutter.json';
 
-  /// File path: assets/questions_data/frontend.json
-  String get frontend => 'assets/questions_data/frontend.json';
+  /// File path: assets/questions/frontend.json
+  String get frontend => 'assets/questions/frontend.json';
 
-  /// File path: assets/questions_data/git.json
-  String get git => 'assets/questions_data/git.json';
+  /// File path: assets/questions/git.json
+  String get git => 'assets/questions/git.json';
 
-  /// File path: assets/questions_data/go.json
-  String get go => 'assets/questions_data/go.json';
+  /// File path: assets/questions/go.json
+  String get go => 'assets/questions/go.json';
 
-  /// File path: assets/questions_data/help.json
-  String get help => 'assets/questions_data/help.json';
+  /// File path: assets/questions/help.json
+  String get help => 'assets/questions/help.json';
 
-  /// File path: assets/questions_data/java.json
-  String get java => 'assets/questions_data/java.json';
+  /// File path: assets/questions/java.json
+  String get java => 'assets/questions/java.json';
 
-  /// File path: assets/questions_data/js.json
-  String get js => 'assets/questions_data/js.json';
+  /// File path: assets/questions/js.json
+  String get js => 'assets/questions/js.json';
 
-  /// File path: assets/questions_data/kotlin.json
-  String get kotlin => 'assets/questions_data/kotlin.json';
+  /// File path: assets/questions/kotlin.json
+  String get kotlin => 'assets/questions/kotlin.json';
 
-  /// File path: assets/questions_data/nodejs.json
-  String get nodejs => 'assets/questions_data/nodejs.json';
+  /// File path: assets/questions/nodejs.json
+  String get nodejs => 'assets/questions/nodejs.json';
 
-  /// File path: assets/questions_data/perl.json
-  String get perl => 'assets/questions_data/perl.json';
+  /// File path: assets/questions/perl.json
+  String get perl => 'assets/questions/perl.json';
 
-  /// File path: assets/questions_data/php.json
-  String get php => 'assets/questions_data/php.json';
+  /// File path: assets/questions/php.json
+  String get php => 'assets/questions/php.json';
 
-  /// File path: assets/questions_data/python.json
-  String get python => 'assets/questions_data/python.json';
+  /// File path: assets/questions/python.json
+  String get python => 'assets/questions/python.json';
 
-  /// File path: assets/questions_data/react.json
-  String get react => 'assets/questions_data/react.json';
+  /// File path: assets/questions/react.json
+  String get react => 'assets/questions/react.json';
 
-  /// File path: assets/questions_data/ruby.json
-  String get ruby => 'assets/questions_data/ruby.json';
+  /// File path: assets/questions/ruby.json
+  String get ruby => 'assets/questions/ruby.json';
 
-  /// File path: assets/questions_data/rust.json
-  String get rust => 'assets/questions_data/rust.json';
+  /// File path: assets/questions/rust.json
+  String get rust => 'assets/questions/rust.json';
 
-  /// File path: assets/questions_data/scala.json
-  String get scala => 'assets/questions_data/scala.json';
+  /// File path: assets/questions/scala.json
+  String get scala => 'assets/questions/scala.json';
 
-  /// File path: assets/questions_data/swift.json
-  String get swift => 'assets/questions_data/swift.json';
+  /// File path: assets/questions/swift.json
+  String get swift => 'assets/questions/swift.json';
 
-  /// File path: assets/questions_data/typescript.json
-  String get typescript => 'assets/questions_data/typescript.json';
+  /// File path: assets/questions/typescript.json
+  String get typescript => 'assets/questions/typescript.json';
 
   /// List of all assets
   List<String> get values => [
@@ -247,14 +241,24 @@ class $AssetsQuestionsDataGen {
       ];
 }
 
+class $AssetsSvgGen {
+  const $AssetsSvgGen();
+
+  /// File path: assets/svg/connection-lost.svg
+  String get connectionLost => 'assets/svg/connection-lost.svg';
+
+  /// List of all assets
+  List<String> get values => [connectionLost];
+}
+
 class Assets {
   Assets._();
 
   static const AssetGenImage app = AssetGenImage('assets/app.png');
-  static const $AssetsImageDataGen imageData = $AssetsImageDataGen();
-  static const $AssetsLottiesGen lotties = $AssetsLottiesGen();
-  static const $AssetsQuestionsDataGen questionsData =
-      $AssetsQuestionsDataGen();
+  static const $AssetsIconsGen icons = $AssetsIconsGen();
+  static const $AssetsIntroductionGen introduction = $AssetsIntroductionGen();
+  static const $AssetsQuestionsGen questions = $AssetsQuestionsGen();
+  static const $AssetsSvgGen svg = $AssetsSvgGen();
 
   /// List of all assets
   List<AssetGenImage> get values => [app];
