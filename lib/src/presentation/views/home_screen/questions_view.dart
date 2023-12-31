@@ -1,12 +1,9 @@
 import 'package:app_bar_with_search_switch/app_bar_with_search_switch.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:prepare_for_interview/src/config/router/app_router.dart';
+import 'package:interview_helper/src/utils/index.dart';
 
-import '../../../domain/models/models.dart';
-import '../../../utils/constants/constants.dart';
-import '../../../utils/decorations/view_utils.dart';
-
+import '../../../domain/models/index.dart';
 
 class QuestionsView extends StatefulWidget {
   const QuestionsView({
@@ -50,17 +47,13 @@ class _QuestionsViewState extends State<QuestionsView> with QuestionCardMixin {
         }).toList();
       },
       appBarBuilder: (context) => AppBar(
-        title: Text(
-          widget.appBarTitle ?? '',
-          style: ViewUtils.ubuntuStyle(fontSize: 22),
-        ),
-        elevation: 0,
-        centerTitle: true,
+        centerTitle: false,
+        title: Text(widget.appBarTitle ?? ''),
         actions: const [AppBarSearchButton()],
-        backgroundColor: AppColors.appColor,
       ),
       elevation: 0,
-      backgroundColor: AppColors.appColor,
+      backgroundColor: AppColors.primary,
+      titleTextStyle: const TextStyle(),
     );
   }
 }

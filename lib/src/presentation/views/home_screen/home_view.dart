@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:prepare_for_interview/src/config/router/app_router.dart';
-import 'package:prepare_for_interview/src/data/datasources/local/application_prefs.dart';
-import 'package:prepare_for_interview/src/presentation/provider/bloc/questions/question_bloc.dart';
-
-import '../../../utils/constants/constants.dart';
+import 'package:interview_helper/src/presentation/provider/bloc/questions/question_bloc.dart';
+import 'package:interview_helper/src/utils/index.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -18,7 +15,7 @@ class _HomeViewState extends State<HomeView> {
   @override
   void initState() {
     super.initState();
-       
+
     _bloc = BlocProvider.of<QuestionBloc>(context);
     addQuestionsToCache();
   }
@@ -48,7 +45,7 @@ class _HomeViewState extends State<HomeView> {
         padding: const EdgeInsets.only(top: 20),
         child: GridView.builder(
           itemBuilder: (context, index) {
-            final card = CategoryHelper().cards(ScreenDataPaths().homeCategoryPathNames[index]);
+            final card = CategoryCards.cards(CategoryTitles.homeCategory[index]);
             return GestureDetector(
               onTap: () {
                 _bloc.add(
