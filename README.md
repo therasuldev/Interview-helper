@@ -21,6 +21,20 @@ Interview Helper - a comprehensive tool designed to assist job seekers in prepar
 - **Book Recommendations:** Curated list of books to provide deeper insights into effective interview strategies.
 - **User-Friendly Interface:** Easy navigation to enhance your learning experience.
 
+## Environment Setup
+
+**Follow these steps to set up the project:**
+
+- Create a `.env` file in the root directory.
+
+- Add the following variables to your `.env` file:
+
+```
+SEND_EMAIL_API=your_email_api_key
+ONE_SIGNAL_APP_ID=your_one_signal_app_id
+```
+
+
 ## Getting Started
 
 1. Clone the repo: `git clone https://github.com/therasuldev/Interview-helper.git`
