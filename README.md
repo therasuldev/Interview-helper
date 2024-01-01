@@ -3,6 +3,8 @@
 
 Interview Helper - a comprehensive tool designed to assist job seekers in preparing for interviews across various industries. This app offers a rich collection of interview questions and insightful book recommendations to boost your preparation.
 
+<img src="https://github.com/therasuldev/Interview-helper/assets/74558294/2cb1a4d5-89f8-433b-b3a9-d2a054b5463a" width="100" height="100">
+
 ![0](https://github.com/therasuldev/Interview-helper/assets/74558294/2cb1a4d5-89f8-433b-b3a9-d2a054b5463a)
 ![9](https://github.com/therasuldev/Interview-helper/assets/74558294/1ebc81dd-c8a2-4ce2-976d-8bb565a70fd9)
 ![image1](https://github.com/therasuldev/Interview-helper/assets/74558294/ce94c9da-77e7-4e01-95f4-b56841a2872d)
