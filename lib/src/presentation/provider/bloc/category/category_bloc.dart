@@ -16,23 +16,65 @@ class CategoryBloc extends Bloc<CategoryEvent, CategoryState> {
     on<CategoryEvent>((event, emit) {
       switch (event.type) {
         case CategoryEvents.addCategoryInitial:
-          return _onaddCategoryInitial(event);
+          _onaddCategoryInitial(event);
+          break;
+        case CategoryEvents.removeQuestionFromCategory:
+          _onRemoveQuestionFromCategory(event);
+          break;
         case CategoryEvents.fetchCategoriesStart:
-          return _onFetchCategoriesStart(event);
+          _onFetchCategoriesStart(event);
+          break;
+        case CategoryEvents.fetchQuestionsForCategory:
+          _onLoadQuestionsForCategory(event);
+          break;
         default:
       }
     });
   }
 
-  _onaddCategoryInitial(CategoryEvent event) async {
-   // var box = Hive.box<Category>('categories');
-    final category = CacheService().cachedCategories.get(event.payload) ?? Category(name: event.payload, questions: [event.question!]);
-    category.addQuestion(event.question!);
+  void _onaddCategoryInitial(CategoryEvent event) async {
+    var category = CacheService().cachedCategories.get(event.payload);
 
-    await CacheService().cachedCategories.putAll({event.payload: category});
+    if (category == null) {
+      category = Category(name: event.payload, questions: []);
+      category.addQuestion(event.question!);
+    } else {
+      category.addQuestion(event.question!);
+    }
+
+    //TODO:fix
+    await CacheService().cachedCategories.put(event.payload, category);
+    final questions = await _questionRepository.getQuestionsByCategory(event.payload);
+
+    emit(
+      state.copyWith(
+        loading: false,
+        questions: questions,
+        event: CategoryEvents.fetchQuestionsForCategory,
+      ),
+    );
   }
 
-  _onFetchCategoriesStart(CategoryEvent event) async {
+  void _onRemoveQuestionFromCategory(CategoryEvent event) async {
+    var category = CacheService().cachedCategories.get(event.payload);
+
+    if (category != null) {
+      category.removeQuestion(event.question!);
+
+      await CacheService().cachedCategories.put(event.payload, category);
+      final questions = await _questionRepository.getQuestionsByCategory(event.payload);
+
+      emit(
+        state.copyWith(
+          loading: false,
+          questions: questions,
+          event: CategoryEvents.fetchQuestionsForCategory,
+        ),
+      );
+    }
+  }
+
+  void _onFetchCategoriesStart(CategoryEvent event) async {
     emit(state.copyWith(loading: true));
 
     try {
@@ -51,6 +93,31 @@ class CategoryBloc extends Bloc<CategoryEvent, CategoryState> {
           categories: [],
           loading: true,
           event: CategoryEvents.fetchCategoriesError,
+          error: ExceptionModel(description: exp.toString()),
+        ),
+      );
+    }
+  }
+
+  void _onLoadQuestionsForCategory(CategoryEvent event) async {
+    emit(state.copyWith(loading: true));
+
+    try {
+      final questions = await _questionRepository.getQuestionsByCategory(event.payload);
+
+      emit(
+        state.copyWith(
+          loading: false,
+          questions: questions,
+          event: CategoryEvents.fetchQuestionsForCategory,
+        ),
+      );
+    } catch (exp) {
+      emit(
+        state.copyWith(
+          questions: [],
+          loading: true,
+          event: CategoryEvents.fetchQuestionsForCategoryError,
           error: ExceptionModel(description: exp.toString()),
         ),
       );
