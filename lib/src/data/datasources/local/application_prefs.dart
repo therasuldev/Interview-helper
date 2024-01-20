@@ -13,8 +13,8 @@ class AppIntroductionPrefsImpl implements AppIntroductionPrefs {
 
   @override
   Future<bool> getIntroducedState() async {
-    final app = (await _applicationPrefs).getBool('introduced');
-    return app ?? false;
+    final introduced = (await _applicationPrefs).getBool('introduced');
+    return introduced ?? false;
   }
 
   /// application opens first time
