@@ -21,7 +21,7 @@ class QuestionBloc extends Bloc<QuestionEvent, QuestionState> {
       switch (event.type) {
         case QuestionEvents.addQuestionsInitial:
           return _onAddQuestionsToCache(event);
-        case QuestionEvents.fetchQuestionStart:
+        case QuestionEvents.fetchQuestionsStart:
           return _onFetchQuestionStart(event);
         default:
       }
@@ -50,7 +50,7 @@ class QuestionBloc extends Bloc<QuestionEvent, QuestionState> {
         state.copyWith(
           loading: false,
           questions: questions,
-          event: QuestionEvents.fetchQuestionSuccess,
+          event: QuestionEvents.fetchQuestionsSuccess,
         ),
       );
     } catch (exp) {
@@ -58,7 +58,7 @@ class QuestionBloc extends Bloc<QuestionEvent, QuestionState> {
         state.copyWith(
           questions: [],
           loading: true,
-          event: QuestionEvents.fetchQuestionError,
+          event: QuestionEvents.fetchQuestionsError,
           error: ExceptionModel(description: exp.toString()),
         ),
       );

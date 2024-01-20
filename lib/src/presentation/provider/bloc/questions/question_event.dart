@@ -2,9 +2,9 @@ part of 'question_bloc.dart';
 
 enum QuestionEvents {
   addQuestionsInitial,
-  fetchQuestionStart,
-  fetchQuestionSuccess,
-  fetchQuestionError,
+  fetchQuestionsStart,
+  fetchQuestionsSuccess,
+  fetchQuestionsError,
 }
 
 class QuestionEvent {
@@ -16,13 +16,13 @@ class QuestionEvent {
     payload = category;
   }
   QuestionEvent.fetchQuestionStart(String category) {
-    type = QuestionEvents.fetchQuestionStart;
+    type = QuestionEvents.fetchQuestionsStart;
     payload = category;
   }
   QuestionEvent.fetchQuestionSuccess() {
-    type = QuestionEvents.fetchQuestionSuccess;
+    type = QuestionEvents.fetchQuestionsSuccess;
   }
   QuestionEvent.fetchQuestionError() {
-    type = QuestionEvents.fetchQuestionError;
+    type = QuestionEvents.fetchQuestionsError;
   }
 }
