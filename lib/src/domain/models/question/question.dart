@@ -5,7 +5,7 @@ import 'package:hive/hive.dart';
 
 part 'question.g.dart';
 
-@HiveType(typeId: 0)
+@HiveType(typeId: 3)
 class Question {
   @HiveField(0)
   final String question;

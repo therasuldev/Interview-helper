@@ -2,7 +2,7 @@ import 'package:hive/hive.dart';
 
 part 'book.g.dart';
 
-@HiveType(typeId: 0)
+@HiveType(typeId: 1)
 class Book {
   @HiveField(0)
   final String imageUrl;
