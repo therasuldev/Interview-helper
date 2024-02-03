@@ -1,17 +1,16 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'dart:convert';
-
+import 'package:equatable/equatable.dart';
 import 'package:hive/hive.dart';
 
 part 'question.g.dart';
 
 @HiveType(typeId: 3)
-class Question {
+class Question extends Equatable {
   @HiveField(0)
   final String question;
   @HiveField(1)
   final String answer;
-  Question({
+
+  const Question({
     required this.question,
     required this.answer,
   });
@@ -20,14 +19,6 @@ class Question {
       : question = data['question'],
         answer = data['answer'];
 
-  Map<String, dynamic> toMap() {
-    final result = <String, dynamic>{};
-
-    result.addAll({'question': question});
-    result.addAll({'answer': answer});
-
-    return result;
-  }
-
-  String toJson() => json.encode(toMap());
+  @override
+  List<Object?> get props => [question, answer];
 }

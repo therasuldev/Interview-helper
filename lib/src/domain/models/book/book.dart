@@ -1,9 +1,10 @@
+import 'package:equatable/equatable.dart';
 import 'package:hive/hive.dart';
 
 part 'book.g.dart';
 
 @HiveType(typeId: 1)
-class Book {
+class Book extends Equatable {
   @HiveField(0)
   final String imageUrl;
   @HiveField(1)
@@ -13,11 +14,14 @@ class Book {
 
   const Book({required this.name, required this.url, required this.imageUrl});
 
-  factory Book.fromJson(Map<String,dynamic> json) {
+  factory Book.fromJson(Map<String, dynamic> json) {
     return Book(name: json['name'], url: json['url'], imageUrl: json['image']);
   }
 
-  Map<String, dynamic> toJson() {
-    return {'name': name, 'url': url, 'imageUrl': imageUrl};
-  }
+  // Map<String, dynamic> toJson() {
+  //   return {'name': name, 'url': url, 'imageUrl': imageUrl};
+  // }
+
+  @override
+  List<Object?> get props => [imageUrl, name, url];
 }
