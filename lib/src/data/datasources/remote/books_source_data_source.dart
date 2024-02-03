@@ -33,4 +33,15 @@ class BooksSourceDataImpl implements BooksSourceData {
 
     return bookSources;
   }
+
+  Future<List<Map<String, dynamic>>> getBooksByCategory(String categoryName) async {
+    final category = CategoryTitles.getRelatedCollectionName(categoryName);
+    final QuerySnapshot querySnapshot = await FirebaseFirestore.instance.collection(category).get();
+    final List<DocumentSnapshot> documents = querySnapshot.docs;
+    final List<Map<String, dynamic>> bookJsons = documents.map((doc) {
+      return doc.data() as Map<String, dynamic>;
+    }).toList();
+    
+    return bookJsons;
+  }
 }
