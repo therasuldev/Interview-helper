@@ -26,7 +26,7 @@ class _HomeViewState extends State<HomeView> {
     }
   }
 
-  String appBarTitle = '';
+  String category = '';
   late QuestionBloc _bloc;
 
   @override
@@ -36,7 +36,7 @@ class _HomeViewState extends State<HomeView> {
         if (!state.loading!) {
           context.goNamed(
             AppRouteConstant.questionsView,
-            queryParameters: {"appBarTitle": appBarTitle},
+            queryParameters: {"category": category},
             extra: state.questions,
           );
         }
@@ -53,7 +53,7 @@ class _HomeViewState extends State<HomeView> {
                     InterviewCategories.categories.toList()[index],
                   ),
                 );
-                setState(() => appBarTitle = card!.title);
+                setState(() => category = card!.category);
               },
               child: card,
             );

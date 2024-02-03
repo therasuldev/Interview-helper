@@ -1,13 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:interview_helper/src/presentation/provider/bloc/category/category_bloc.dart';
 import 'package:interview_helper/src/utils/index.dart';
 
 import '../../../domain/models/index.dart';
 import '../../widgets/index.dart';
 
 class QuestionView extends StatefulWidget {
-  const QuestionView({super.key, required this.questions, required this.index});
+  const QuestionView({
+    super.key,
+    required this.questions,
+    required this.category,
+    required this.index,
+  });
 
   final List<Question> questions;
+  final String category;
   final int index;
 
   @override
@@ -15,62 +23,76 @@ class QuestionView extends StatefulWidget {
 }
 
 class _QuestionViewState extends State<QuestionView> with _QuestionViewMixin {
-  late ScrollController _scrollController;
-  Color appBarColor = Colors.transparent;
-
-  @override
-  void initState() {
-    super.initState();
-    _scrollController = ScrollController()
-      ..addListener(() {
-        if (_scrollController.offset > 200) {
-          setState(() => appBarColor = AppColors.primary);
-        } else if (_scrollController.offset <= 200) {
-          setState(() => appBarColor = Colors.transparent);
-        }
-      });
-  }
-
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: CustomScrollView(
-        key: ValueKey(currentIndex),
-        controller: _scrollController,
-        physics: const BouncingScrollPhysics(),
-        slivers: [
-          SliverAppBar(
-            actions: [
-              Padding(
-                padding: const EdgeInsets.all(12.0),
-                child: Text(
-                  '${currentIndex + 1}/${questions.length}',
-                  style: ViewUtils.ubuntuStyle(color: Colors.white, fontSize: 20),
+    return BlocBuilder<CategoryBloc, CategoryState>(
+      builder: (context, state) {
+        if (state.loading!) return const SizedBox.shrink();
+        final cachedQuestionsForCategory = state.questions ?? [];
+        bool isSaved = cachedQuestionsForCategory.isSaved(questions[currentIndex]);
+        return Scaffold(
+          body: CustomScrollView(
+            key: ValueKey(currentIndex),
+            controller: _scrollController,
+            physics: const BouncingScrollPhysics(),
+            slivers: [
+              SliverAppBar(
+                actions: [
+                  Padding(
+                    padding: const EdgeInsets.all(12.0),
+                    child: Text(
+                      '${currentIndex + 1}/${questions.length}',
+                      style: ViewUtils.ubuntuStyle(color: Colors.white, fontSize: 20),
+                    ),
+                  ),
+                  IconButton(
+                    onPressed: () {
+                      if (isSaved) {
+                        BlocProvider.of<CategoryBloc>(context).add(
+                          CategoryEvent.removeBookmarkedQuestion(
+                            widget.category,
+                            questions[currentIndex],
+                          ),
+                        );
+                      } else {
+                        BlocProvider.of<CategoryBloc>(context).add(
+                          CategoryEvent.bookmarkQuestionInitial(
+                            widget.category,
+                            questions[currentIndex],
+                          ),
+                        );
+                      }
+                    },
+                    icon: Icon(
+                      Icons.bookmark,
+                      color: isSaved ? Colors.red : Colors.grey,
+                    ),
+                  )
+                ],
+                pinned: true,
+                backgroundColor: appBarColor,
+                expandedHeight: MediaQuery.sizeOf(context).height * .5,
+                flexibleSpace: _QuestionView(questions: questions, currentIndex: currentIndex),
+              ),
+              SliverToBoxAdapter(
+                child: _AnswerView(
+                  question: questions[currentIndex],
                 ),
-              )
+              ),
             ],
-            pinned: true,
-            backgroundColor: appBarColor,
-            expandedHeight: MediaQuery.sizeOf(context).height * .5,
-            flexibleSpace: _QuestionView(questions: questions, currentIndex: currentIndex),
           ),
-          SliverToBoxAdapter(
-            child: _AnswerView(
-              question: questions[currentIndex],
+          bottomNavigationBar: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                _ChangeButton(child: 'previous', onPressed: _goToPreviousQuestion),
+                _ChangeButton(child: 'next', onPressed: _goToNextQuestion),
+              ],
             ),
           ),
-        ],
-      ),
-      bottomNavigationBar: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            _ChangeButton(childText: 'previous', onPressed: _goToPreviousQuestion),
-            _ChangeButton(childText: 'next', onPressed: _goToNextQuestion),
-          ],
-        ),
-      ),
+        );
+      },
     );
   }
 }
@@ -129,7 +151,7 @@ class _AnswerView extends StatelessWidget {
 }
 
 class _ChangeButton extends StatelessWidget {
-  _ChangeButton({required this.childText, required this.onPressed});
+  _ChangeButton({required this.child, required this.onPressed});
 
   final style = ViewUtils.ubuntuStyle(fontSize: 17, color: AppColors.primary);
 
@@ -141,22 +163,38 @@ class _ChangeButton extends StatelessWidget {
           side: MaterialStateProperty.all(const BorderSide(color: AppColors.primary, strokeAlign: 10)),
         ),
         onPressed: onPressed,
-        child: Text(childText, style: style),
+        child: Text(child, style: style),
       );
 
-  final String childText;
+  final String child;
   final VoidCallback onPressed;
 }
 
 mixin _QuestionViewMixin on State<QuestionView> {
-  late List<Question> questions;
   late int currentIndex;
+  late List<Question> questions;
+  late ScrollController _scrollController;
+
+  Color appBarColor = Colors.transparent;
 
   @override
   void initState() {
     super.initState();
     questions = widget.questions;
     currentIndex = widget.index;
+
+    _scrollController = ScrollController()
+      ..addListener(() {
+        if (_scrollController.offset > 200) {
+          setState(() => appBarColor = AppColors.primary);
+        } else if (_scrollController.offset <= 200) {
+          setState(() => appBarColor = Colors.transparent);
+        }
+      });
+
+    BlocProvider.of<CategoryBloc>(context).add(
+      CategoryEvent.fetchBookmarkedQuestionsForCategory(widget.category),
+    );
   }
 
   void _goToNextQuestion() {
@@ -169,5 +207,13 @@ mixin _QuestionViewMixin on State<QuestionView> {
     if (currentIndex > 0) {
       setState(() => currentIndex--);
     }
+  }
+}
+
+extension on List<Question> {
+  bool isSaved(Question question) {
+    return any((bookmarkedQuestion) {
+      return bookmarkedQuestion.question == question.question;
+    });
   }
 }

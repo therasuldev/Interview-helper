@@ -9,11 +9,11 @@ class QuestionsView extends StatefulWidget {
   const QuestionsView({
     super.key,
     required this.questions,
-    required this.appBarTitle,
+    required this.category,
   });
 
   final List<Question> questions;
-  final String? appBarTitle;
+  final String? category;
 
   @override
   State<QuestionsView> createState() => _QuestionsViewState();
@@ -26,7 +26,11 @@ class _QuestionsViewState extends State<QuestionsView> with QuestionCardMixin {
       appBar: _appBarWithSearchSwitch(),
       body: ListView.builder(
         itemBuilder: (context, index) {
-          return _QuestionCard(questions: searchedList, index: index);
+          return _QuestionCard(
+            questions: searchedList,
+            category: widget.category!,
+            index: index,
+          );
         },
         padding: const EdgeInsets.only(top: 20),
         physics: const BouncingScrollPhysics(),
@@ -48,7 +52,7 @@ class _QuestionsViewState extends State<QuestionsView> with QuestionCardMixin {
       },
       appBarBuilder: (context) => AppBar(
         centerTitle: false,
-        title: Text(widget.appBarTitle ?? ''),
+        title: Text(widget.category ?? ''),
         actions: const [AppBarSearchButton()],
       ),
       elevation: 0,
@@ -59,9 +63,14 @@ class _QuestionsViewState extends State<QuestionsView> with QuestionCardMixin {
 }
 
 class _QuestionCard extends StatelessWidget {
-  const _QuestionCard({required this.questions, required this.index});
+  const _QuestionCard({
+    required this.questions,
+    required this.category,
+    required this.index,
+  });
 
   final List<Question> questions;
+  final String category;
   final int index;
 
   @override
@@ -75,7 +84,7 @@ class _QuestionCard extends StatelessWidget {
         onTap: () {
           context.pushNamed(
             AppRouteConstant.questionView,
-            queryParameters: {'index': index.toString()},
+            queryParameters: {'index': index.toString(), "category": category},
             extra: questions,
           );
         },
