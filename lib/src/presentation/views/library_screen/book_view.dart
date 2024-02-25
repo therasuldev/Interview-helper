@@ -1,14 +1,19 @@
 import 'dart:async';
+
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
-import 'package:interview_helper/src/config/network/connectivity_config.dart';
 
-import 'package:interview_helper/src/utils/extensions/to_percent.dart';
+import 'package:interview_helper/gen/assets.gen.dart';
+import 'package:interview_helper/src/config/network/connectivity_config.dart';
+import 'package:interview_helper/src/presentation/provider/bloc/category/category_bloc.dart';
 
 import '../../../domain/models/index.dart';
-import '../../../utils/decorations/view_utils.dart';
+import '../../../utils/index.dart';
 import '../../widgets/index.dart';
 import 'index.dart';
 
@@ -16,13 +21,12 @@ class BookView extends StatefulWidget {
   const BookView({
     super.key,
     required this.book,
-    required this.index,
     required this.otherBooks,
     required this.category,
   });
 
   final Book book;
-  final int index;
+
   final List<Book> otherBooks;
   final String category;
 
@@ -55,7 +59,7 @@ class _BookViewState extends State<BookView> with _DownloaderMixin {
   void _deletefromCache(String url) async {
     DefaultCacheManager().removeFile(url).then((_) {
       detailsNotifier.value = detailsNotifier.value.copyWith(
-        buttonText: _ButtonText.download.text,
+        buttonText: ButtonText.download.text,
         buttonColor: Colors.green,
         cached: false,
         path: '',
@@ -69,19 +73,19 @@ class _BookViewState extends State<BookView> with _DownloaderMixin {
       detailsNotifier.value = detailsNotifier.value.copyWith(cached: cached);
       if (cached) {
         detailsNotifier.value = detailsNotifier.value.copyWith(
-          buttonText: _ButtonText.open.text,
+          buttonText: ButtonText.open.text,
           buttonColor: Colors.grey,
           path: fileInfo?.file.path,
         );
       } else {
         detailsNotifier.value = detailsNotifier.value.copyWith(
-          buttonText: _ButtonText.download.text,
+          buttonText: ButtonText.download.text,
         );
       }
     });
   }
 
-  _onTap({required _Details details}) async {
+  void _onTap({required Details details}) async {
     if (details.cached) {
       context.pushNamed(AppRouteConstant.openBook, extra: details.path);
     } else {
@@ -99,6 +103,8 @@ class _BookViewState extends State<BookView> with _DownloaderMixin {
 
   @override
   Widget build(BuildContext context) {
+    final double width = MediaQuery.sizeOf(context).width * 0.5;
+    final double height = MediaQuery.sizeOf(context).height * 0.3;
     return Scaffold(
       appBar: AppBar(title: Text(widget.category), centerTitle: false),
       body: SingleChildScrollView(
@@ -107,7 +113,33 @@ class _BookViewState extends State<BookView> with _DownloaderMixin {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(height: MediaQuery.of(context).padding.top),
-            Center(child: BookViewModel(book: widget.book).smallSizeBookView(context)),
+            Center(
+              child: Hero(
+                tag: widget.book.name,
+                child: Stack(
+                  clipBehavior: Clip.none,
+                  children: [
+                    SizedBox(
+                      height: height,
+                      width: width,
+                      child: CachedNetworkImage(
+                        imageUrl: widget.book.imageUrl,
+                        progressIndicatorBuilder: (context, url, progress) {
+                          return const KShimmer();
+                        },
+                        errorWidget: (context, url, error) {
+                          return Transform.scale(
+                            scale: .2,
+                            child: SvgPicture.asset(Assets.svg.connectionLost),
+                          );
+                        },
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
             const SizedBox(height: 20),
             Center(
               child: Padding(
@@ -122,49 +154,29 @@ class _BookViewState extends State<BookView> with _DownloaderMixin {
             const SizedBox(height: 20),
             ValueListenableBuilder(
               valueListenable: detailsNotifier,
-              builder: (context, details, child) => Row(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 10.0),
-                    child: _DynamicButton(
-                      onTap: () => _onTap(details: details),
-                      details: details,
-                    ),
-                  ),
-                  const SizedBox(width: 20),
-                  if (details.cached)
-                    Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.only(right: 5.0),
-                        child: SizedBox(
-                          height: 50,
-                          width: MediaQuery.sizeOf(context).width * .35,
-                          child: ElevatedButton(
-                            onPressed: () => _deletefromCache(widget.book.url),
-                            style: ButtonStyle(
-                              backgroundColor: const MaterialStatePropertyAll<Color>(Colors.red),
-                              shape: MaterialStatePropertyAll(
-                                RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                              ),
-                            ),
-                            child: Text(
-                              'Delete',
-                              style: ViewUtils.ubuntuStyle(color: Colors.white, fontSize: 18),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                ],
+              builder: (context, details, child) => BookActionButtonRow(
+                book: widget.book,
+                category: widget.category,
+                details: details,
+                bookUrl: widget.book.url,
+                onTap: () => _onTap(details: details),
+                onDelete: () => _deletefromCache(widget.book.url),
               ),
             ),
             const SizedBox(height: 40),
             Padding(
               padding: const EdgeInsets.only(left: 10),
-              child: Text(
-                'Discover More from Flutter',
-                textAlign: TextAlign.center,
-                style: ViewUtils.ubuntuStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              child: Text.rich(
+                TextSpan(
+                  text: 'Discover more from ',
+                  style: ViewUtils.ubuntuStyle(fontSize: 17),
+                  children: [
+                    TextSpan(
+                      text: widget.category,
+                      style: ViewUtils.ubuntuStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    )
+                  ],
+                ),
               ),
             ),
             const SizedBox(height: 10),
@@ -180,20 +192,20 @@ class _BookViewState extends State<BookView> with _DownloaderMixin {
   }
 }
 
-class _DynamicButton extends StatelessWidget {
-  const _DynamicButton({
+class DynamicButton extends StatelessWidget {
+  const DynamicButton({
+    super.key,
     required this.onTap,
     required this.details,
   });
 
   final VoidCallback? onTap;
-  final _Details details;
+  final Details details;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: 50,
-      width: MediaQuery.sizeOf(context).width * .55,
       child: ElevatedButton(
         onPressed: onTap,
         style: ButtonStyle(
@@ -220,7 +232,7 @@ class _DynamicButton extends StatelessWidget {
   }
 }
 
-class _Details {
+class Details {
   final Color buttonColor;
   final double process;
   final bool downloading;
@@ -228,7 +240,7 @@ class _Details {
   final String path;
   final bool cached;
 
-  _Details({
+  Details({
     required this.buttonColor,
     required this.process,
     required this.downloading,
@@ -237,8 +249,8 @@ class _Details {
     required this.cached,
   });
 
-  factory _Details.initial() {
-    return _Details(
+  factory Details.initial() {
+    return Details(
       buttonColor: Colors.green,
       process: 0,
       downloading: false,
@@ -248,7 +260,7 @@ class _Details {
     );
   }
 
-  _Details copyWith({
+  Details copyWith({
     Color? buttonColor,
     double? process,
     bool? downloading,
@@ -256,7 +268,7 @@ class _Details {
     String? path,
     bool? cached,
   }) {
-    return _Details(
+    return Details(
       buttonColor: buttonColor ?? this.buttonColor,
       process: process ?? this.process,
       path: path ?? this.path,
@@ -276,14 +288,14 @@ mixin _DownloaderMixin on State<BookView> {
         // start downloading process
         final process = (fileResponse.downloaded / (fileResponse.totalSize ?? 0));
         detailsNotifier.value = detailsNotifier.value.copyWith(
-          buttonText: _ButtonText.downloading.text,
+          buttonText: ButtonText.downloading.text,
           downloading: true,
           process: process,
         );
       } else if (fileResponse is FileInfo) {
         // when the downloading process has been completed
         detailsNotifier.value = detailsNotifier.value.copyWith(
-          buttonText: _ButtonText.open.text,
+          buttonText: ButtonText.open.text,
           path: fileResponse.file.path,
           buttonColor: Colors.grey,
           downloading: false,
@@ -298,14 +310,122 @@ mixin _DownloaderMixin on State<BookView> {
   late List<Book> allBooks;
   late StreamSubscription _streamSubscription;
 
-  final detailsNotifier = ValueNotifier(_Details.initial());
+  final detailsNotifier = ValueNotifier(Details.initial());
 }
 
-enum _ButtonText {
+enum ButtonText {
   downloading(''),
   download('Download'),
   open('Open');
 
   final String text;
-  const _ButtonText(this.text);
+  const ButtonText(this.text);
+}
+
+class BookActionButtonRow extends StatelessWidget {
+  final Details details;
+  final String bookUrl;
+  final VoidCallback onTap;
+  final VoidCallback onDelete;
+  final Book book;
+  final String category;
+
+  const BookActionButtonRow({
+    super.key,
+    required this.details,
+    required this.bookUrl,
+    required this.onTap,
+    required this.onDelete,
+    required this.book,
+    required this.category,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: details.cached ? MainAxisAlignment.spaceBetween : MainAxisAlignment.center,
+      children: [
+        Expanded(
+          child: Padding(
+            padding: const EdgeInsets.only(left: 5.0),
+            child: DynamicButton(
+              onTap: onTap,
+              details: details,
+            ),
+          ),
+        ),
+        const SizedBox(width: 5),
+        if (details.cached)
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.only(right: 5.0),
+              child: SizedBox(
+                height: 50,
+                child: ElevatedButton(
+                  onPressed: onDelete,
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all<Color>(Colors.red),
+                    shape: MaterialStateProperty.all(
+                      RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                    ),
+                  ),
+                  child: Text(
+                    'Delete',
+                    style: ViewUtils.ubuntuStyle(color: Colors.white, fontSize: 18),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        BlocBuilder<CategoryBloc, CategoryState>(
+          builder: (context, state) {
+            final isSaved = state.books?.isBookmerked(book);
+
+            return GestureDetector(
+              onTap: () {
+                if (isSaved ?? false) {
+                  BlocProvider.of<CategoryBloc>(context).add(
+                    CategoryEvent.removeBookmarkedBook(
+                      category,
+                      book,
+                    ),
+                  );
+                } else {
+                  BlocProvider.of<CategoryBloc>(context).add(
+                    CategoryEvent.bookmarkBookInitial(
+                      category,
+                      book,
+                    ),
+                  );
+                }
+              },
+              child: Container(
+                height: 50,
+                alignment: Alignment.center,
+                padding: const EdgeInsets.all(7),
+                margin: const EdgeInsets.only(right: 5),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(color: AppColors.primary, width: 2),
+                  color: Colors.white,
+                ),
+                child: SvgPicture.asset(
+                  Assets.svg.bookmark,
+                  height: 35,
+                  width: 35,
+                  color: isSaved ?? false ? AppColors.primary : Colors.blue.shade200,
+                ),
+              ),
+            );
+          },
+        )
+      ],
+    );
+  }
+}
+
+extension on List<Book> {
+  bool isBookmerked(Book book) {
+    return any((bk) => bk == book);
+  }
 }
