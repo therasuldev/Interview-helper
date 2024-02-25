@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:interview_helper/src/presentation/views/home_screen/bookmark_view.dart';
 import 'package:interview_helper/src/presentation/views/introduction_screen.dart';
+import 'package:interview_helper/src/presentation/views/library_screen/bookmarked_book_viewing.dart';
 
 import '../../../app_scaffold.dart';
 import '../../domain/models/index.dart';
@@ -42,14 +44,40 @@ class AppRouterConfig {
                 },
                 routes: [
                   GoRoute(
+                      parentNavigatorKey: _rootNavigatorKey,
+                      path: AppRouteConstant.bookmark,
+                      name: AppRouteConstant.bookmark,
+                      pageBuilder: (BuildContext context, GoRouterState state) {
+                        return MaterialPage(
+                          child: BookmarkedDatas(key: state.pageKey),
+                        );
+                      },
+                      routes: [
+                        GoRoute(
+                          parentNavigatorKey: _rootNavigatorKey,
+                          path: AppRouteConstant.bookmarkedBookViewing,
+                          name: AppRouteConstant.bookmarkedBookViewing,
+                          pageBuilder: (BuildContext context, GoRouterState state) {
+                            final bookViewDetails = state.extra as BookViewDetails;
+                            return MaterialPage(
+                              child: BookmarkedBookViewing(
+                                key: ValueKey(bookViewDetails.book.name),
+                                category: bookViewDetails.category ?? '',
+                                book: bookViewDetails.book,
+                              ),
+                            );
+                          },
+                        ),
+                      ]),
+                  GoRoute(
                     parentNavigatorKey: _rootNavigatorKey,
                     path: AppRouteConstant.questionsView,
                     name: AppRouteConstant.questionsView,
                     pageBuilder: (BuildContext context, GoRouterState state) {
                       final questions = (state.extra as List).cast<Question>();
-                      final appBarTitle = state.uri.queryParameters['appBarTitle'];
+                      final category = state.uri.queryParameters['category'];
                       return MaterialPage(
-                        child: QuestionsView(key: state.pageKey, questions: questions, appBarTitle: appBarTitle),
+                        child: QuestionsView(key: state.pageKey, questions: questions, category: category),
                       );
                     },
                     routes: [
@@ -60,8 +88,14 @@ class AppRouterConfig {
                         pageBuilder: (BuildContext context, GoRouterState state) {
                           final questions = (state.extra as List).cast<Question>();
                           final index = int.parse(state.uri.queryParameters['index']!);
+                          final category = state.uri.queryParameters['category']!;
                           return MaterialPage(
-                            child: QuestionView(index: index, key: state.pageKey, questions: questions),
+                            child: QuestionView(
+                              index: index,
+                              key: state.pageKey,
+                              questions: questions,
+                              category: category,
+                            ),
                           );
                         },
                       ),
@@ -92,7 +126,6 @@ class AppRouterConfig {
                           key: ValueKey(bookViewDetails.book.name),
                           category: bookViewDetails.category ?? '',
                           book: bookViewDetails.book,
-                          index: bookViewDetails.index,
                           otherBooks: bookViewDetails.otherBooks,
                         ),
                       );
@@ -138,7 +171,7 @@ class AppRouterConfig {
                             child: BookView(
                               key: ValueKey(bookViewDetails.book.name),
                               category: bookViewDetails.category!,
-                              index: bookViewDetails.index,
+                              // index: bookViewDetails.index,
                               book: bookViewDetails.book,
                               otherBooks: bookViewDetails.otherBooks,
                             ),
