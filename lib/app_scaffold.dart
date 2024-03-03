@@ -32,8 +32,16 @@ class _AppScaffoldState extends State<AppScaffold> {
   AppBar appBar(int screenIndex) {
     return AppBar(
       title: Text(screenIndex.isEqual(0) ? 'Categories' : 'Library'),
-      centerTitle: true,
+      centerTitle: false,
       elevation: 0,
+      actions: [
+        IconButton(
+          icon: const Icon(Icons.bookmark),
+          onPressed: () {
+            context.goNamed(AppRouteConstant.bookmark);
+          },
+        ),
+      ],
     );
   }
 }
