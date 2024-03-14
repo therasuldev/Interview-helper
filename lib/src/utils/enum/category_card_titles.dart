@@ -24,6 +24,6 @@ enum CategoryCardTitles {
   dataanalyst('Data analyst'),
   cybersecurity('Cyber security');
 
-  const CategoryCardTitles(this.title);
-  final String title;
+  const CategoryCardTitles(this.category);
+  final String category;
 }

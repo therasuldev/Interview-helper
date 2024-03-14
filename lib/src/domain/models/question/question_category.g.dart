@@ -17,7 +17,7 @@ class QuestionCategoryAdapter extends TypeAdapter<QuestionCategory> {
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
     return QuestionCategory(
-      name: fields[0] as String,
+      name: fields[0] as String?,
       questions: (fields[1] as List?)?.cast<Question>(),
     );
   }

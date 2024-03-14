@@ -3,15 +3,10 @@ import 'package:flutter/material.dart';
 import '../../utils/decorations/view_utils.dart';
 
 class CategoryCard extends StatelessWidget {
-  const CategoryCard({super.key, required String image, required String title})
-      : _image = image,
-        _title = title;
+  const CategoryCard({super.key, required this.image, required this.category});
 
-  final String _image;
-  final String _title;
-
-  String get image => _image;
-  String get title => _title;
+  final String image;
+  final String category;
 
   @override
   Widget build(BuildContext context) {
@@ -24,10 +19,10 @@ class CategoryCard extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const Spacer(),
-          SizedBox(height: 100, child: Image.asset(_image)),
+          SizedBox(height: 100, child: Image.asset(image)),
           const Spacer(),
           Text(
-            _title,
+            category,
             textAlign: TextAlign.center,
             style: ViewUtils.ubuntuStyle(
               fontSize: 22,

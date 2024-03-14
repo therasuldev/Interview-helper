@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
+import 'package:interview_helper/gen/assets.gen.dart';
 
 import 'src/presentation/views/drawer_screen/index.dart';
 import 'src/utils/index.dart';
@@ -36,7 +38,7 @@ class _AppScaffoldState extends State<AppScaffold> {
       elevation: 0,
       actions: [
         IconButton(
-          icon: const Icon(Icons.bookmark),
+          icon: SvgPicture.asset(Assets.svg.bookmark, color: Colors.white),
           onPressed: () {
             context.goNamed(AppRouteConstant.bookmark);
           },

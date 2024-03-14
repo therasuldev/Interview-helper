@@ -4,9 +4,9 @@ import 'package:shimmer/shimmer.dart';
 import '../../utils/decorations/view_utils.dart';
 
 class KShimmer extends StatelessWidget {
-  const KShimmer({super.key, required this.progress});
+  const KShimmer({super.key, this.progress});
 
-  final String progress;
+  final String? progress;
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class KShimmer extends StatelessWidget {
         alignment: Alignment.center,
         width: MediaQuery.of(context).size.width * 0.5,
         height: MediaQuery.of(context).size.height * 0.3,
-        child: Text(progress, style: ViewUtils.ubuntuStyle(fontSize: 30)),
+        child: Text(progress ?? '', style: ViewUtils.ubuntuStyle(fontSize: 30)),
       ),
     );
   }

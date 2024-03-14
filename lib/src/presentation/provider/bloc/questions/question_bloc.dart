@@ -5,7 +5,7 @@ import 'dart:convert';
 import 'package:bloc/bloc.dart';
 import 'package:flutter/services.dart';
 import 'package:interview_helper/src/data/datasources/local/base/base_cache_service.dart';
-import 'package:interview_helper/src/data/datasources/local/cached_questions_source_data_source.dart';
+import 'package:interview_helper/src/data/datasources/local/cached_questions_source_data.dart';
 import 'package:interview_helper/src/utils/index.dart';
 
 import '../../../../domain/models/index.dart';

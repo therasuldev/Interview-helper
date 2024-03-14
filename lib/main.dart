@@ -11,6 +11,7 @@ import 'src/config/router/router_config.dart';
 import 'src/config/theme/theme_config.dart';
 
 import 'src/presentation/provider/bloc/books/books_bloc.dart';
+import 'src/presentation/provider/bloc/category/category_bloc.dart';
 import 'src/presentation/provider/bloc/introduction/introduction_bloc.dart';
 import 'src/presentation/provider/bloc/questions/question_bloc.dart';
 import 'src/presentation/provider/cubit/feedback/feedback_cubit.dart';
@@ -43,10 +44,12 @@ class InterviewHelper extends StatelessWidget {
         BlocProvider(create: (context) => AppBloc()..add(AppEvent.get())),
         BlocProvider(create: (context) => FeedbackCubit()),
         BlocProvider(create: (context) => QuestionBloc()),
-        BlocProvider(create: (context) => BookBloc()..add(BookEvent.fetchBooksStart()))
+        BlocProvider(create: (context) => BookBloc()..add(BookEvent.fetchAllBooksStart())),
+        BlocProvider(create: (context) => CategoryBloc()),
       ],
       child: MaterialApp.router(
         title: 'Interview Helper App',
+        restorationScopeId: 'interview_helper',
         debugShowCheckedModeBanner: false,
         theme: ThemeConfig.init.theme,
         routerConfig: AppRouterConfig.init.config,

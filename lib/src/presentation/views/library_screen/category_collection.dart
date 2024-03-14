@@ -1,11 +1,13 @@
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
+import 'package:interview_helper/gen/assets.gen.dart';
 
 import '../../../domain/models/index.dart';
-import '../../../utils/decorations/view_utils.dart';
-import '../../widgets/pdf_view_model.dart';
-import 'index.dart';
+import '../../../utils/index.dart';
+import '../../widgets/index.dart';
 
 class CategoryCollection extends StatelessWidget {
   const CategoryCollection({
@@ -21,6 +23,8 @@ class CategoryCollection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double width = MediaQuery.sizeOf(context).width * 0.5;
+    final double height = MediaQuery.sizeOf(context).height * 0.3;
     return SizedBox(
       height: MediaQuery.of(context).size.height * .4,
       child: ListView.builder(
@@ -29,13 +33,11 @@ class CategoryCollection extends StatelessWidget {
           List<Book> otherBooks1 = [];
 
           otherBooks1 = allBooks == null ? otherBooks.getOtherBooks(book) : allBooks!.where((bk) => bk != book).toList();
-
           return GestureDetector(
             onTap: () {
               context.goNamed(
                 AppRouteConstant.bookView,
                 extra: BookViewDetails(
-                  index: index,
                   book: book,
                   category: category,
                   otherBooks: otherBooks1,
@@ -47,7 +49,31 @@ class CategoryCollection extends StatelessWidget {
               width: MediaQuery.of(context).size.width * .6,
               child: Column(
                 children: [
-                  BookViewModel(book: book).smallSizeBookView(context),
+                  Hero(
+                    tag: book.name,
+                    child: Stack(
+                      clipBehavior: Clip.none,
+                      children: [
+                        SizedBox(
+                          height: height,
+                          width: width,
+                          child: CachedNetworkImage(
+                            imageUrl: book.imageUrl,
+                            progressIndicatorBuilder: (context, url, progress) {
+                              return const KShimmer();
+                            },
+                            errorWidget: (context, url, error) {
+                              return Transform.scale(
+                                scale: .2,
+                                child: SvgPicture.asset(Assets.svg.connectionLost),
+                              );
+                            },
+                            fit: BoxFit.contain,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                   const SizedBox(height: 15),
                   Expanded(
                     child: Padding(

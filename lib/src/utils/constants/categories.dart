@@ -9,122 +9,122 @@ class CategoryCards {
       case 'flutter':
         return CategoryCard(
           image: Assets.icons.flutter.path,
-          title: CategoryCardTitles.flutter.title,
+          category: CategoryCardTitles.flutter.category,
         );
       case 'go':
         return CategoryCard(
           image: Assets.icons.go.path,
-          title: CategoryCardTitles.go.title,
+          category: CategoryCardTitles.go.category,
         );
       case 'java':
         return CategoryCard(
           image: Assets.icons.java.path,
-          title: CategoryCardTitles.java.title,
+          category: CategoryCardTitles.java.category,
         );
       case 'python':
         return CategoryCard(
           image: Assets.icons.python.path,
-          title: CategoryCardTitles.python.title,
+          category: CategoryCardTitles.python.category,
         );
       case 'ruby':
         return CategoryCard(
           image: Assets.icons.ruby.path,
-          title: CategoryCardTitles.ruby.title,
+          category: CategoryCardTitles.ruby.category,
         );
       case 'kotlin':
         return CategoryCard(
           image: Assets.icons.kotlin.path,
-          title: CategoryCardTitles.kotlin.title,
+          category: CategoryCardTitles.kotlin.category,
         );
       case 'typescript':
         return CategoryCard(
           image: Assets.icons.typescript.path,
-          title: CategoryCardTitles.typescript.title,
+          category: CategoryCardTitles.typescript.category,
         );
       case 'rust':
         return CategoryCard(
           image: Assets.icons.rust.path,
-          title: CategoryCardTitles.rust.title,
+          category: CategoryCardTitles.rust.category,
         );
       case 'js':
         return CategoryCard(
           image: Assets.icons.js.path,
-          title: CategoryCardTitles.js.title,
+          category: CategoryCardTitles.js.category,
         );
       case 'react':
         return CategoryCard(
           image: Assets.icons.react.path,
-          title: CategoryCardTitles.react.title,
+          category: CategoryCardTitles.react.category,
         );
       case 'csharp':
         return CategoryCard(
           image: Assets.icons.csharp.path,
-          title: CategoryCardTitles.csharp.title,
+          category: CategoryCardTitles.csharp.category,
         );
       case 'nodejs':
         return CategoryCard(
           image: Assets.icons.nodejs.path,
-          title: CategoryCardTitles.nodejs.title,
+          category: CategoryCardTitles.nodejs.category,
         );
       case 'perl':
         return CategoryCard(
           image: Assets.icons.perl.path,
-          title: CategoryCardTitles.perl.title,
+          category: CategoryCardTitles.perl.category,
         );
       case 'php':
         return CategoryCard(
           image: Assets.icons.php.path,
-          title: CategoryCardTitles.php.title,
+          category: CategoryCardTitles.php.category,
         );
       case 'scala':
         return CategoryCard(
           image: Assets.icons.scala.path,
-          title: CategoryCardTitles.scala.title,
+          category: CategoryCardTitles.scala.category,
         );
       case 'swift':
         return CategoryCard(
           image: Assets.icons.swift.path,
-          title: CategoryCardTitles.swift.title,
+          category: CategoryCardTitles.swift.category,
         );
       case 'git':
         return CategoryCard(
           image: Assets.icons.git.path,
-          title: CategoryCardTitles.git.title,
+          category: CategoryCardTitles.git.category,
         );
       case 'frontend':
         return CategoryCard(
           image: Assets.icons.frontend.path,
-          title: CategoryCardTitles.frontend.title,
+          category: CategoryCardTitles.frontend.category,
         );
       case 'engineer':
         return CategoryCard(
           image: Assets.icons.engineer.path,
-          title: CategoryCardTitles.engineer.title,
+          category: CategoryCardTitles.engineer.category,
         );
       case 'datascientist':
         return CategoryCard(
           image: Assets.icons.datascientist.path,
-          title: CategoryCardTitles.datascientist.title,
+          category: CategoryCardTitles.datascientist.category,
         );
       case 'dataanalyst':
         return CategoryCard(
           image: Assets.icons.dataanalyst.path,
-          title: CategoryCardTitles.dataanalyst.title,
+          category: CategoryCardTitles.dataanalyst.category,
         );
       case 'cybersecurity':
         return CategoryCard(
           image: Assets.icons.cybersecurity.path,
-          title: CategoryCardTitles.cybersecurity.title,
+          category: CategoryCardTitles.cybersecurity.category,
         );
       case 'cplusplus':
         return CategoryCard(
           image: Assets.icons.cplusplus.path,
-          title: CategoryCardTitles.cplusplus.title,
+          category: CategoryCardTitles.cplusplus.category,
         );
       case 'backend':
         return CategoryCard(
           image: Assets.icons.backend.path,
-          title: CategoryCardTitles.backend.title,
+          category: CategoryCardTitles.backend.category,
         );
       default:
         return null;

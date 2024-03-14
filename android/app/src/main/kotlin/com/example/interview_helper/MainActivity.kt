@@ -1,4 +1,4 @@
-package com.example.interview_helper
+package com.interview.helper.app
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
@@ -9,6 +10,7 @@ import 'package:interview_helper/gen/assets.gen.dart';
 import 'package:interview_helper/src/config/network/connectivity_config.dart';
 
 import 'package:interview_helper/src/domain/models/index.dart';
+import 'package:interview_helper/src/presentation/provider/bloc/category/category_bloc.dart';
 import 'package:interview_helper/src/presentation/widgets/index.dart';
 import 'package:interview_helper/src/utils/index.dart';
 
@@ -31,11 +33,11 @@ class _BookmarkedBookViewingState extends State<BookmarkedBookViewing> {
   @override
   void initState() {
     super.initState();
-    // allBooks = [...widget.otherBooks, widget.book];
 
     _streamSubscription = _checkCachedFile(widget.book.url).listen((fileInfo) {
       _checkStatus(fileInfo);
     });
+    context.read<CategoryBloc>().add(CategoryEvent.fetchBookmarkedBooksForCategory(widget.category));
   }
 
   @override
@@ -154,7 +156,7 @@ class _BookmarkedBookViewingState extends State<BookmarkedBookViewing> {
                           child: SvgPicture.asset(Assets.svg.connectionLost),
                         );
                       },
-                      fit: BoxFit.cover,
+                      fit: BoxFit.contain,
                     ),
                   ),
                 ],

@@ -43,6 +43,8 @@ class _BookViewState extends State<BookView> with _DownloaderMixin {
     _streamSubscription = _checkCachedFile(widget.book.url).listen((fileInfo) {
       _checkStatus(fileInfo);
     });
+
+    context.read<CategoryBloc>().add(CategoryEvent.fetchBookmarkedBooksForCategory(widget.category));
   }
 
   @override
@@ -133,7 +135,7 @@ class _BookViewState extends State<BookView> with _DownloaderMixin {
                             child: SvgPicture.asset(Assets.svg.connectionLost),
                           );
                         },
-                        fit: BoxFit.cover,
+                        fit: BoxFit.contain,
                       ),
                     ),
                   ],
@@ -209,24 +211,16 @@ class DynamicButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: onTap,
         style: ButtonStyle(
-          backgroundColor: MaterialStatePropertyAll<Color>(details.buttonColor),
-          shape: MaterialStatePropertyAll(
-            RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-          ),
+          backgroundColor: MaterialStatePropertyAll<Color>(Colors.green.shade100),
+          shape: MaterialStatePropertyAll(RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
         ),
         child: details.downloading
-            ? Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  const CupertinoActivityIndicator(radius: 15, color: Colors.white),
-                  const SizedBox(width: 7),
-                  Text(details.process.toPercent(), style: ViewUtils.ubuntuStyle(fontSize: 18, color: Colors.white)),
-                ],
+            ? Text(
+                details.process.toPercent(),
+                textAlign: TextAlign.center,
+                style: ViewUtils.ubuntuStyle(fontSize: 18, color: Colors.black),
               )
-            : Text(
-                details.buttonText,
-                style: ViewUtils.ubuntuStyle(color: Colors.white, fontSize: 18),
-              ),
+            : SvgPicture.asset(details.cached ? Assets.svg.openBook : Assets.svg.download),
       ),
     );
   }
@@ -343,40 +337,37 @@ class BookActionButtonRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: details.cached ? MainAxisAlignment.spaceBetween : MainAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Expanded(
-          child: Padding(
-            padding: const EdgeInsets.only(left: 5.0),
+        Padding(
+          padding: const EdgeInsets.only(left: 5.0),
+          child: SizedBox(
+            width: 100,
             child: DynamicButton(
               onTap: onTap,
               details: details,
             ),
           ),
         ),
-        const SizedBox(width: 5),
+        const SizedBox(width: 30),
         if (details.cached)
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.only(right: 5.0),
-              child: SizedBox(
-                height: 50,
-                child: ElevatedButton(
-                  onPressed: onDelete,
-                  style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all<Color>(Colors.red),
-                    shape: MaterialStateProperty.all(
-                      RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                    ),
-                  ),
-                  child: Text(
-                    'Delete',
-                    style: ViewUtils.ubuntuStyle(color: Colors.white, fontSize: 18),
+          Padding(
+            padding: const EdgeInsets.only(right: 5.0),
+            child: SizedBox(
+              height: 50,
+              child: ElevatedButton(
+                onPressed: onDelete,
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all<Color>(Colors.red),
+                  shape: MaterialStateProperty.all(
+                    RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
                   ),
                 ),
+                child: SvgPicture.asset(Assets.svg.bin, color: Colors.white),
               ),
             ),
           ),
+        const SizedBox(width: 30),
         BlocBuilder<CategoryBloc, CategoryState>(
           builder: (context, state) {
             final isSaved = state.books?.isBookmerked(book);

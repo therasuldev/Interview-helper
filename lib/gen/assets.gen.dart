@@ -244,16 +244,34 @@ class $AssetsQuestionsGen {
 class $AssetsSvgGen {
   const $AssetsSvgGen();
 
+  /// File path: assets/svg/bin.svg
+  String get bin => 'assets/svg/bin.svg';
+
+  /// File path: assets/svg/bookmark-outlined.svg
+  String get bookmarkOutlined => 'assets/svg/bookmark-outlined.svg';
+
+  /// File path: assets/svg/bookmark.svg
+  String get bookmark => 'assets/svg/bookmark.svg';
+
   /// File path: assets/svg/connection-lost.svg
   String get connectionLost => 'assets/svg/connection-lost.svg';
 
+  /// File path: assets/svg/download.svg
+  String get download => 'assets/svg/download.svg';
+
+  /// File path: assets/svg/open-book.svg
+  String get openBook => 'assets/svg/open-book.svg';
+
   /// List of all assets
-  List<String> get values => [connectionLost];
+  List<String> get values =>
+      [bin, bookmarkOutlined, bookmark, connectionLost, download, openBook];
 }
 
 class Assets {
   Assets._();
 
+  static const AssetGenImage appOriginal =
+      AssetGenImage('assets/app-original.png');
   static const AssetGenImage app = AssetGenImage('assets/app.png');
   static const $AssetsIconsGen icons = $AssetsIconsGen();
   static const $AssetsIntroductionGen introduction = $AssetsIntroductionGen();
@@ -261,7 +279,7 @@ class Assets {
   static const $AssetsSvgGen svg = $AssetsSvgGen();
 
   /// List of all assets
-  List<AssetGenImage> get values => [app];
+  List<AssetGenImage> get values => [appOriginal, app];
 }
 
 class AssetGenImage {

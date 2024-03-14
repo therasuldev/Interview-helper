@@ -1,44 +1,76 @@
 part of 'category_bloc.dart';
 
 enum CategoryEvents {
-  addCategoryInitial,
-  fetchCategoriesStart,
-  fetchCategoriesSuccess,
-  fetchCategoriesError,
+  bookmarkQuestionInitial,
+  fetchBookmarkedQuestionsStart,
+  fetchBookmarkedQuestionsSuccess,
+  fetchBookmarkedQuestionsError,
 
-  fetchQuestionsForCategory,
-  fetchQuestionsForCategoryError,
-  removeQuestionFromCategory
+  fetchBookmarkedQuestionsForCategory,
+  fetchBookmarkedQuestionsForCategoryError,
+  removeBookmarkedQuestion,
+
+  bookmarkBookInitial,
+  fetchBookmarkedBooksStart,
+  fetchBookmarkedBooksSuccess,
+  fetchBookmarkedBooksError,
+
+  fetchBookmarkedBooksForCategory,
+  fetchBookmarkedBooksForCategoryError,
+  removeBookmarkedBook,
 }
 
 class CategoryEvent {
   CategoryEvents? type;
   dynamic payload;
   Question? question;
+  Book? book;
 
-  CategoryEvent.addCategoryInitial(String category, this.question) {
-    type = CategoryEvents.addCategoryInitial;
+  CategoryEvent.bookmarkQuestionInitial(String category, this.question) {
+    type = CategoryEvents.bookmarkQuestionInitial;
     payload = category;
   }
-  CategoryEvent.fetchCategoriesStart() {
-    type = CategoryEvents.fetchCategoriesStart;
+  CategoryEvent.fetchBookmarkedQuestionsStart() {
+    type = CategoryEvents.fetchBookmarkedQuestionsStart;
   }
-  CategoryEvent.fetchCategoriesSuccess() {
-    type = CategoryEvents.fetchCategoriesSuccess;
+  CategoryEvent.fetchBookmarkedQuestionsSuccess() {
+    type = CategoryEvents.fetchBookmarkedQuestionsSuccess;
   }
-  CategoryEvent.fetchCategoriesError() {
-    type = CategoryEvents.fetchCategoriesError;
+  CategoryEvent.fetchBookmarkedQuestionsError() {
+    type = CategoryEvents.fetchBookmarkedQuestionsError;
   }
 
-  CategoryEvent.fetchQuestionsForCategory(String categoryName) {
-    type = CategoryEvents.fetchQuestionsForCategory;
+  CategoryEvent.fetchBookmarkedQuestionsForCategory(String categoryName) {
+    type = CategoryEvents.fetchBookmarkedQuestionsForCategory;
     payload = categoryName;
   }
-  CategoryEvent.removeQuestionFromCategory(String categoryName, this.question) {
-    type = CategoryEvents.removeQuestionFromCategory;
+  CategoryEvent.removeBookmarkedQuestion(String categoryName, this.question) {
+    type = CategoryEvents.removeBookmarkedQuestion;
     payload = categoryName;
   }
-  CategoryEvent.fetchQuestionsForCategoryError() {
-    type = CategoryEvents.fetchQuestionsForCategoryError;
+  CategoryEvent.fetchBookmarkedQuestionsForCategoryError() {
+    type = CategoryEvents.fetchBookmarkedQuestionsForCategoryError;
+  }
+
+  CategoryEvent.bookmarkBookInitial(String category, this.book) {
+    type = CategoryEvents.bookmarkBookInitial;
+    payload = category;
+  }
+  CategoryEvent.fetchBookmarkedBooksStart() {
+    type = CategoryEvents.fetchBookmarkedBooksStart;
+  }
+
+  CategoryEvent.fetchBookmarkedBooksForCategory(String categoryName) {
+    type = CategoryEvents.fetchBookmarkedBooksForCategory;
+    payload = categoryName;
+  }
+
+  CategoryEvent.fetchBookmarkedBooksForCategoryError() {
+    type = CategoryEvents.fetchBookmarkedBooksForCategoryError;
+  }
+
+  CategoryEvent.removeBookmarkedBook(String categoryName, this.book) {
+    type = CategoryEvents.removeBookmarkedBook;
+    payload = categoryName;
   }
 }

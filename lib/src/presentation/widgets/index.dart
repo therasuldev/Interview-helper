@@ -1,7 +1,6 @@
 export 'appbar_clipper.dart'; 
 export 'category_card.dart';
 export 'form_validate.dart'; 
-export 'pdf_view_model.dart'; 
 export 'rate_app.dart'; 
 export 'settings_tile.dart'; 
 export 'share_app.dart'; 

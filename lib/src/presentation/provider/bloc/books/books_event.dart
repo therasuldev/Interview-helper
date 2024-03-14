@@ -1,21 +1,29 @@
 part of 'books_bloc.dart';
 
 enum BookEvents {
-  fetchBookStart,
-  fetchBookSuccess,
-  fetchBookError,
+  fetchAllBooksStart,
+  fetchBooksSuccess,
+  fetchBooksError,
+
+  fetchBooksByCategory,
 }
 
 class BookEvent {
   BookEvents? type;
+  dynamic payload;
 
-  BookEvent.fetchBooksStart() {
-    type = BookEvents.fetchBookStart;
+  BookEvent.fetchAllBooksStart() {
+    type = BookEvents.fetchAllBooksStart;
   }
   BookEvent.fetchBooksSuccess() {
-    type = BookEvents.fetchBookSuccess;
+    type = BookEvents.fetchBooksSuccess;
   }
   BookEvent.fetchBooksError() {
-    type = BookEvents.fetchBookError;
+    type = BookEvents.fetchBooksError;
+  }
+
+  BookEvent.fetchBooksByCategory(String category) {
+    type = BookEvents.fetchBooksByCategory;
+    payload = category;
   }
 }

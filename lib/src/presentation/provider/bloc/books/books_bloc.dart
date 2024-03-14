@@ -14,17 +14,19 @@ class BookBloc extends Bloc<BookEvent, BookState> {
         super(BookState.unknown()) {
     on<BookEvent>((event, emit) {
       switch (event.type) {
-        case BookEvents.fetchBookStart:
-          return _onFetchBookStart(event);
+        case BookEvents.fetchAllBooksStart:
+          return _onFetchAllBooksStart();
+        case BookEvents.fetchBooksByCategory:
+          return _onfetchBooksByCategory(event);
         default:
       }
     });
   }
-  _onFetchBookStart(dynamic event) async {
+  void _onFetchAllBooksStart() async {
     emit(state.copyWith(loading: true));
 
     try {
-      final data = await _bookSource.getBooksSources();
+      final data = await _bookSource.getAllBooksSources();
       List<Map<String, List<Book>>> library = [];
 
       for (var map in data) {
@@ -39,7 +41,7 @@ class BookBloc extends Bloc<BookEvent, BookState> {
 
       emit(
         state.copyWith(
-          event: BookEvents.fetchBookSuccess,
+          event: BookEvents.fetchBooksSuccess,
           library: library,
           loading: false,
         ),
@@ -49,7 +51,37 @@ class BookBloc extends Bloc<BookEvent, BookState> {
         state.copyWith(
           library: [],
           loading: false,
-          event: BookEvents.fetchBookError,
+          event: BookEvents.fetchBooksError,
+          error: ExceptionModel(description: exp.toString()),
+        ),
+      );
+    }
+  }
+
+  void _onfetchBooksByCategory(BookEvent event) async {
+    emit(state.copyWith(loading: true));
+
+    try {
+      final data = await _bookSource.getBooksByCategory(event.payload);
+      List<Book> books = [];
+
+      for (var bookJson in data) {
+        books.add(Book.fromJson(bookJson));
+      }
+
+      emit(
+        state.copyWith(
+          event: BookEvents.fetchBooksSuccess,
+          loading: false,
+          books: books,
+        ),
+      );
+    } catch (exp) {
+      emit(
+        state.copyWith(
+          books: [],
+          loading: false,
+          event: BookEvents.fetchBooksError,
           error: ExceptionModel(description: exp.toString()),
         ),
       );

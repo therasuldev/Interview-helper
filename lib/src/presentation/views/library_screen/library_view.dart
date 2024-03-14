@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:interview_helper/src/domain/models/index.dart';
 import 'package:interview_helper/src/presentation/provider/bloc/books/books_bloc.dart';
+import 'package:interview_helper/src/presentation/provider/bloc/category/category_bloc.dart';
 import 'package:interview_helper/src/utils/index.dart';
 import '../../widgets/index.dart';
 import 'index.dart';
@@ -15,6 +16,11 @@ class LibraryView extends StatefulWidget {
 }
 
 class _LibraryViewState extends State<LibraryView> {
+  @override
+  void initState() {
+    super.initState();
+    BlocProvider.of<CategoryBloc>(context).add(CategoryEvent.fetchBookmarkedBooksStart());
+  }
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<BookBloc, BookState>(

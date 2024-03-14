@@ -4,12 +4,13 @@ import 'package:interview_helper/src/utils/index.dart';
 typedef BookJsonList = List<Map<String, dynamic>>;
 
 abstract class BooksSourceData {
-  Future<Set<Map<String, BookJsonList?>>> getBooksSources();
+  Future<Set<Map<String, BookJsonList?>>> getAllBooksSources();
+  Future<List<Map<String, dynamic>>> getBooksByCategory(String categoryName);
 }
 
 class BooksSourceDataImpl implements BooksSourceData {
   @override
-  Future<Set<Map<String, BookJsonList?>>> getBooksSources() async {
+  Future<Set<Map<String, BookJsonList?>>> getAllBooksSources() async {
     final Set<Map<String, BookJsonList?>> bookSources = {};
 
     final List<Future<List<DocumentSnapshot>>> futures = BookCollectionPaths.values.map((collectionName) {
@@ -34,6 +35,7 @@ class BooksSourceDataImpl implements BooksSourceData {
     return bookSources;
   }
 
+  @override
   Future<List<Map<String, dynamic>>> getBooksByCategory(String categoryName) async {
     final category = CategoryTitles.getRelatedCollectionName(categoryName);
     final QuerySnapshot querySnapshot = await FirebaseFirestore.instance.collection(category).get();
@@ -41,7 +43,7 @@ class BooksSourceDataImpl implements BooksSourceData {
     final List<Map<String, dynamic>> bookJsons = documents.map((doc) {
       return doc.data() as Map<String, dynamic>;
     }).toList();
-    
+
     return bookJsons;
   }
 }

@@ -1,10 +1,17 @@
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
+import 'package:interview_helper/gen/assets.gen.dart';
 import 'package:interview_helper/src/data/datasources/remote/books_source_data_source.dart';
 import 'package:interview_helper/src/domain/models/index.dart';
 import 'package:interview_helper/src/presentation/provider/bloc/category/category_bloc.dart';
 import 'package:interview_helper/src/presentation/widgets/index.dart';
+import 'package:interview_helper/src/presentation/widgets/question_card.dart';
 import 'package:interview_helper/src/utils/index.dart';
 
 class BookmarkedDatas extends StatefulWidget {
@@ -29,11 +36,16 @@ class _BookmarkedDatasState extends State<BookmarkedDatas> with SingleTickerProv
     if (controller.indexIsChanging) return;
 
     if (controller.index == 0) {
+      appBarTitle = AppBarTitle.questions;
       context.read<CategoryBloc>().add(CategoryEvent.fetchBookmarkedQuestionsStart());
     } else {
+      appBarTitle = AppBarTitle.books;
       context.read<CategoryBloc>().add(CategoryEvent.fetchBookmarkedBooksStart());
     }
+    setState(() {});
   }
+
+  AppBarTitle appBarTitle = AppBarTitle.questions;
 
   @override
   void dispose() {
@@ -47,14 +59,27 @@ class _BookmarkedDatasState extends State<BookmarkedDatas> with SingleTickerProv
 
   @override
   Widget build(BuildContext context) {
+    final width = MediaQuery.sizeOf(context).width * 0.5;
+    final height = MediaQuery.sizeOf(context).height * 0.3;
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Saved Questions'),
+        title: Text(appBarTitle.title),
         bottom: PreferredSize(
-          preferredSize: const Size.fromHeight(100),
+          preferredSize: const Size.fromHeight(50),
           child: TabBar(
             controller: controller,
-            tabs: const [Tab(text: 'Questions'), Tab(text: 'Books')],
+            tabs: [
+              AnimatedDefaultTextStyle(
+                style: const TextStyle().isActive(controller.index == 0),
+                duration: const Duration(milliseconds: 200),
+                child: const Text('Questions'),
+              ),
+              AnimatedDefaultTextStyle(
+                duration: const Duration(milliseconds: 200),
+                style: const TextStyle().isActive(controller.index == 1),
+                child: const Text('Books'),
+              ),
+            ],
           ),
         ),
       ),
@@ -69,7 +94,7 @@ class _BookmarkedDatasState extends State<BookmarkedDatas> with SingleTickerProv
               final qCategories = state.questionCategories;
               if (qCategories!.isEmpty) {
                 return const Center(
-                  child: Text('No Saved Categories'),
+                  child: Text('No Saved Questions'),
                 );
               }
               return ListView.builder(
@@ -77,32 +102,24 @@ class _BookmarkedDatasState extends State<BookmarkedDatas> with SingleTickerProv
                 itemBuilder: (context, index) {
                   final qCategory = qCategories[index];
                   return ExpansionTile(
-                    title: Align(
-                      alignment: Alignment.centerLeft,
-                      child: Container(
-                        padding: const EdgeInsets.all(5),
-                        decoration: BoxDecoration(
-                          border: Border.all(color: Colors.black),
-                          borderRadius: BorderRadius.circular(5),
-                        ),
-                        child: Text(
-                          qCategory.name,
-                          style: ViewUtils.ubuntuStyle(fontSize: 18, color: Colors.black, fontWeight: FontWeight.w700),
-                        ),
-                      ),
+                    title: Text(
+                      qCategory.name!,
+                      style: ViewUtils.ubuntuStyle(fontSize: 20, color: Colors.black),
                     ),
-                    children: qCategory.questions!.map((q) {
-                      return ListTile(
-                        title: Text(q.question, style: ViewUtils.ubuntuStyle(fontSize: 20, color: Colors.black)),
-                        subtitle: Text(
-                          q.answer,
-                          style: ViewUtils.ubuntuStyle(
-                            fontSize: 18,
-                            color: Colors.blueGrey.withOpacity(.6).withBlue(155),
-                          ),
-                        ),
-                      );
-                    }).toList(),
+                    children: [
+                      ListView.builder(
+                        physics: const NeverScrollableScrollPhysics(),
+                        shrinkWrap: true,
+                        itemCount: qCategory.questions!.length,
+                        itemBuilder: (context, qIndex) {
+                          return QuestionCard(
+                            questions: qCategory.questions!,
+                            category: qCategory.name!,
+                            index: qIndex,
+                          );
+                        },
+                      ),
+                    ],
                   );
                 },
               );
@@ -116,7 +133,7 @@ class _BookmarkedDatasState extends State<BookmarkedDatas> with SingleTickerProv
               final bCategories = state.bookCategories;
               if (bCategories!.isEmpty) {
                 return const Center(
-                  child: Text('No Saved Categories'),
+                  child: Text('No Saved Books'),
                 );
               }
               return ListView.builder(
@@ -124,41 +141,72 @@ class _BookmarkedDatasState extends State<BookmarkedDatas> with SingleTickerProv
                 shrinkWrap: true,
                 itemBuilder: (context, index) {
                   final bCategory = bCategories[index];
-                  return ExpansionTile(
-                    title: Text(bCategory.name),
+                  if (bCategory.books!.isEmpty) return const SizedBox.shrink();
+
+                  return Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      Align(
+                        alignment: Alignment.topLeft,
+                        child: Padding(
+                          padding: const EdgeInsets.only(top: 5.0, left: 5.0),
+                          child: Text(
+                            bCategory.name,
+                            style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 18),
+                          ),
+                        ),
+                      ),
                       SizedBox(
-                        height: 250, // Yatay listelenen kitapların yüksekliği. İhtiyaca göre ayarlayın.
-                        child: ListView.builder(
-                          itemCount: bCategory.books!.length,
+                        height: 250,
+                        child: SingleChildScrollView(
                           scrollDirection: Axis.horizontal,
-                          itemBuilder: (context, index) {
-                            final book = bCategory.books![index];
-                            return GestureDetector(
-                              onTap: () async {
-                                List<Book> books = [];
-
-                                final data = await booksSourceDataImpl.getBooksByCategory(bCategory.name);
-                                for (var bookJson in data) {
-                                  books.add(Book.fromJson(bookJson));
-                                }
-
-                                final otherBooks = books.getOtherBooks(book);
-                                if (!context.mounted) return;
-
-                                context.goNamed(
-                                  AppRouteConstant.bookView,
-                                  extra: BookViewDetails(
-                                    index: index,
-                                    book: book,
-                                    category: bCategory.name,
-                                    otherBooks: otherBooks,
+                          child: Row(
+                            children: [
+                              ...bCategory.books!.map((book) {
+                                return GestureDetector(
+                                  onTap: () {
+                                    context.goNamed(
+                                      AppRouteConstant.bookmarkedBookViewing,
+                                      extra: BookViewDetails(
+                                        book: book,
+                                        category: bCategory.name,
+                                        otherBooks: [],
+                                      ),
+                                    );
+                                  },
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(5.0),
+                                    child: Hero(
+                                      tag: book.name,
+                                      child: Stack(
+                                        clipBehavior: Clip.none,
+                                        children: [
+                                          SizedBox(
+                                            height: height,
+                                            width: width,
+                                            child: CachedNetworkImage(
+                                              imageUrl: book.imageUrl,
+                                              progressIndicatorBuilder: (context, url, progress) {
+                                                return const KShimmer();
+                                              },
+                                              errorWidget: (context, url, error) {
+                                                return Transform.scale(
+                                                  scale: .15,
+                                                  child: SvgPicture.asset(Assets.svg.connectionLost),
+                                                );
+                                              },
+                                              fit: BoxFit.contain,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
                                   ),
                                 );
-                              },
-                              child: SmallSizeBookView(book: book, category: bCategory.name),
-                            );
-                          },
+                              })
+                            ],
+                          ),
                         ),
                       ),
                     ],
@@ -173,10 +221,28 @@ class _BookmarkedDatasState extends State<BookmarkedDatas> with SingleTickerProv
   }
 }
 
-extension on List<Book> {
-  List<Book> getOtherBooks(Book book) {
-    return where((currentBook) {
-      return currentBook != book;
-    }).toList();
+enum AppBarTitle {
+  questions('Saved questions'),
+  books('Saved books');
+
+  const AppBarTitle(this.title);
+  final String title;
+}
+
+extension on TextStyle {
+  isActive(bool isActive) {
+    switch (isActive) {
+      case true:
+        return const TextStyle(
+          color: Colors.white,
+          fontSize: 18,
+        );
+
+      default:
+        return const TextStyle(
+          color: Colors.white70,
+          fontSize: 16,
+        );
+    }
   }
 }

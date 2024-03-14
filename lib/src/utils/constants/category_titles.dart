@@ -1,4 +1,30 @@
 class CategoryTitles {
+  static String getRelatedCollectionName(String category) {
+    final categoryCollectionMap = {
+      'Flutter & Dart': 'flutter',
+      'Go(Lang)': 'go',
+      'C++': 'cplusplus',
+      'C#': 'csharp',
+      'Cyber Security': 'cybersecurity',
+      'Git': 'git',
+      'Java': 'java',
+      'Java Script': 'js',
+      'NodeJs': 'nodejs',
+      'Perl': 'perl',
+      'PHP': 'php',
+      'Python': 'python',
+      'React': 'react',
+      'Ruby': 'ruby',
+      'Kotlin': 'kotlin',
+      'Typescript': 'typescript',
+      'Rust': 'rust',
+      'Scala': 'scala',
+      'Swift': 'swift',
+    };
+
+    return categoryCollectionMap[category] ?? 'unknown';
+  }
+
   static final Set<String> _libraryCategory = {
     'Flutter & Dart',
     'Go(Lang)',
