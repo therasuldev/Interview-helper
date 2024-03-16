@@ -6,12 +6,14 @@ import 'package:interview_helper/src/utils/index.dart';
 class QuestionCard extends StatelessWidget {
   const QuestionCard({
     super.key,
+    required this.fromBookmarkPage,
     required this.questions,
     required this.category,
     required this.index,
   });
 
   final List<Question> questions;
+  final bool fromBookmarkPage;
   final String category;
   final int index;
 
@@ -24,11 +26,17 @@ class QuestionCard extends StatelessWidget {
       margin: const EdgeInsets.all(7),
       child: ListTile(
         onTap: () {
-          context.pushNamed(
-            AppRouteConstant.questionView,
-            queryParameters: {'index': index.toString(), "category": category},
-            extra: questions,
-          );
+          fromBookmarkPage
+              ? context.pushNamed(
+                  AppRouteConstant.bookmarkedQuestionView,
+                  queryParameters: {'index': index.toString(), "category": category},
+                  extra: questions,
+                )
+              : context.pushNamed(
+                  AppRouteConstant.questionView,
+                  queryParameters: {'index': index.toString(), "category": category},
+                  extra: questions,
+                );
         },
         title: Text(
           '${index + 1}. ${questions[index].question}',

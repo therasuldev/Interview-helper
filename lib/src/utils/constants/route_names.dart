@@ -5,7 +5,8 @@ class AppRouteConstant {
 
   static const String homeView = '/home_view';
   static const String bookmark = 'bookmark_view';
-  static const String bookmarkedBookViewing = 'bookmarked_book_viewing';
+  static const String bookmarkedBookView = 'bookmarked_book_view';
+  static const String bookmarkedQuestionView = 'bookmarked_question_view';
   static const String questionsView = 'questions_view';
   static const String questionView = 'question_view';
 

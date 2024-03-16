@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:interview_helper/src/domain/models/question_view_details.dart';
 import 'package:interview_helper/src/presentation/views/home_screen/bookmark_view.dart';
+import 'package:interview_helper/src/presentation/views/home_screen/bookmarked_question_viewing.dart';
 import 'package:interview_helper/src/presentation/views/introduction_screen.dart';
 import 'package:interview_helper/src/presentation/views/library_screen/bookmarked_book_viewing.dart';
 
@@ -55,8 +57,8 @@ class AppRouterConfig {
                       routes: [
                         GoRoute(
                           parentNavigatorKey: _rootNavigatorKey,
-                          path: AppRouteConstant.bookmarkedBookViewing,
-                          name: AppRouteConstant.bookmarkedBookViewing,
+                          path: AppRouteConstant.bookmarkedBookView,
+                          name: AppRouteConstant.bookmarkedBookView,
                           pageBuilder: (BuildContext context, GoRouterState state) {
                             final bookViewDetails = state.extra as BookViewDetails;
                             return MaterialPage(
@@ -64,6 +66,21 @@ class AppRouterConfig {
                                 key: ValueKey(bookViewDetails.book.name),
                                 category: bookViewDetails.category ?? '',
                                 book: bookViewDetails.book,
+                              ),
+                            );
+                          },
+                        ),
+                        GoRoute(
+                          parentNavigatorKey: _rootNavigatorKey,
+                          path: AppRouteConstant.bookmarkedQuestionView,
+                          name: AppRouteConstant.bookmarkedQuestionView,
+                          pageBuilder: (BuildContext context, GoRouterState state) {
+                            final questionViewDetails = state.extra as QuestionViewDetails;
+                            return MaterialPage(
+                              child: BookmarkedQuestionViewing(
+                                key: ValueKey(questionViewDetails.question.question),
+                                category: questionViewDetails.category ?? '',
+                                question: questionViewDetails.question,
                               ),
                             );
                           },

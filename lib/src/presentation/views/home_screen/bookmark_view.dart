@@ -115,6 +115,7 @@ class _BookmarkedDatasState extends State<BookmarkedDatas> with SingleTickerProv
                           return QuestionCard(
                             questions: qCategory.questions!,
                             category: qCategory.name!,
+                            fromBookmarkPage: true,
                             index: qIndex,
                           );
                         },
@@ -167,7 +168,7 @@ class _BookmarkedDatasState extends State<BookmarkedDatas> with SingleTickerProv
                                 return GestureDetector(
                                   onTap: () {
                                     context.goNamed(
-                                      AppRouteConstant.bookmarkedBookViewing,
+                                      AppRouteConstant.bookmarkedBookView,
                                       extra: BookViewDetails(
                                         book: book,
                                         category: bCategory.name,

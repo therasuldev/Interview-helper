@@ -417,6 +417,6 @@ class BookActionButtonRow extends StatelessWidget {
 
 extension on List<Book> {
   bool isBookmerked(Book book) {
-    return any((bk) => bk == book);
+    return any((bb) => bb == book);
   }
 }

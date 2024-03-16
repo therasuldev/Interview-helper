@@ -18,10 +18,6 @@ class Book extends Equatable {
     return Book(name: json['name'], url: json['url'], imageUrl: json['image']);
   }
 
-  // Map<String, dynamic> toJson() {
-  //   return {'name': name, 'url': url, 'imageUrl': imageUrl};
-  // }
-
   @override
   List<Object?> get props => [imageUrl, name, url];
 }

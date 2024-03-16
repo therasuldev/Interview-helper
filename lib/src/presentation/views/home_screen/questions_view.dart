@@ -27,8 +27,9 @@ class _QuestionsViewState extends State<QuestionsView> with QuestionCardMixin {
       body: ListView.builder(
         itemBuilder: (context, index) {
           return QuestionCard(
-            questions: searchedList,
             category: widget.category!,
+            fromBookmarkPage: false,
+            questions: searchedList,
             index: index,
           );
         },

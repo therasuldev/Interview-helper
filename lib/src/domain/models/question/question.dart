@@ -10,14 +10,11 @@ class Question extends Equatable {
   @HiveField(1)
   final String answer;
 
-  const Question({
-    required this.question,
-    required this.answer,
-  });
+  const Question({required this.question, required this.answer});
 
-  Question.fromJson(Map<String, dynamic> data)
-      : question = data['question'],
-        answer = data['answer'];
+  factory Question.fromJson(Map<String, dynamic> data) {
+    return Question(question: data['question'], answer: data['answer']);
+  }
 
   @override
   List<Object?> get props => [question, answer];
