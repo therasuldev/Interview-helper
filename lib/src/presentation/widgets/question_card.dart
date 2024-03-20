@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:interview_helper/src/domain/models/index.dart';
+import 'package:interview_helper/src/domain/models/question_view_details.dart';
 import 'package:interview_helper/src/utils/index.dart';
 
 class QuestionCard extends StatelessWidget {
@@ -27,10 +28,12 @@ class QuestionCard extends StatelessWidget {
       child: ListTile(
         onTap: () {
           fromBookmarkPage
-              ? context.pushNamed(
+              ? context.goNamed(
                   AppRouteConstant.bookmarkedQuestionView,
-                  queryParameters: {'index': index.toString(), "category": category},
-                  extra: questions,
+                  extra: QuestionViewDetails(
+                    category: category,
+                    question: questions[index],
+                  ),
                 )
               : context.pushNamed(
                   AppRouteConstant.questionView,

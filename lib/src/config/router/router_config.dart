@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:interview_helper/src/domain/models/question_view_details.dart';
@@ -60,6 +62,7 @@ class AppRouterConfig {
                           path: AppRouteConstant.bookmarkedBookView,
                           name: AppRouteConstant.bookmarkedBookView,
                           pageBuilder: (BuildContext context, GoRouterState state) {
+                            log("ss ${state.extra.runtimeType}");
                             final bookViewDetails = state.extra as BookViewDetails;
                             return MaterialPage(
                               child: BookmarkedBookViewing(
@@ -75,6 +78,7 @@ class AppRouterConfig {
                           path: AppRouteConstant.bookmarkedQuestionView,
                           name: AppRouteConstant.bookmarkedQuestionView,
                           pageBuilder: (BuildContext context, GoRouterState state) {
+                            log(state.extra.runtimeType.toString());
                             final questionViewDetails = state.extra as QuestionViewDetails;
                             return MaterialPage(
                               child: BookmarkedQuestionViewing(

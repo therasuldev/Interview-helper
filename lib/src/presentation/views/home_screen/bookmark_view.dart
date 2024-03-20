@@ -101,6 +101,7 @@ class _BookmarkedDatasState extends State<BookmarkedDatas> with SingleTickerProv
                 itemCount: qCategories.length,
                 itemBuilder: (context, index) {
                   final qCategory = qCategories[index];
+                  if (qCategory.questions!.isEmpty) return const SizedBox.shrink();
                   return ExpansionTile(
                     title: Text(
                       qCategory.name!,
@@ -129,7 +130,7 @@ class _BookmarkedDatasState extends State<BookmarkedDatas> with SingleTickerProv
           BlocBuilder<CategoryBloc, CategoryState>(
             builder: (context, state) {
               if (state.loading!) {
-                return const CircularProgressIndicator();
+                return const Center(child: CircularProgressIndicator());
               }
               final bCategories = state.bookCategories;
               if (bCategories!.isEmpty) {

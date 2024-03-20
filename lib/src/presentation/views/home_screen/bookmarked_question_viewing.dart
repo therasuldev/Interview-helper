@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:interview_helper/gen/assets.gen.dart';
 import 'package:interview_helper/src/presentation/provider/bloc/category/category_bloc.dart';
 import 'package:interview_helper/src/utils/index.dart';
 
@@ -22,12 +24,18 @@ class BookmarkedQuestionViewing extends StatefulWidget {
 
 class _BookmarkedQuestionViewingState extends State<BookmarkedQuestionViewing> with _QuestionViewMixin {
   @override
+  void initState() {
+    super.initState();
+    context.read<CategoryBloc>().add(CategoryEvent.fetchBookmarkedQuestionsForCategory(widget.category));
+  }
+
+  @override
   Widget build(BuildContext context) {
     return BlocBuilder<CategoryBloc, CategoryState>(
       builder: (context, state) {
         if (state.loading!) return const SizedBox.shrink();
-        final cachedQuestionsForCategory = state.questions ?? [];
-        bool isSaved = cachedQuestionsForCategory.isSaved(widget.question);
+
+        final isSaved = state.questions?.isSaved(widget.question);
         return Scaffold(
           body: CustomScrollView(
             key: ValueKey(widget.question.question),
@@ -38,7 +46,7 @@ class _BookmarkedQuestionViewingState extends State<BookmarkedQuestionViewing> w
                 actions: [
                   IconButton(
                     onPressed: () {
-                      if (isSaved) {
+                      if (isSaved ?? false) {
                         BlocProvider.of<CategoryBloc>(context).add(
                           CategoryEvent.removeBookmarkedQuestion(
                             widget.category,
@@ -54,9 +62,9 @@ class _BookmarkedQuestionViewingState extends State<BookmarkedQuestionViewing> w
                         );
                       }
                     },
-                    icon: Icon(
-                      Icons.bookmark,
-                      color: isSaved ? Colors.red : Colors.grey,
+                    icon: SvgPicture.asset(
+                      Assets.svg.bookmark,
+                      color: (isSaved ?? false) ? Colors.blue.shade200 : Colors.white,
                     ),
                   )
                 ],

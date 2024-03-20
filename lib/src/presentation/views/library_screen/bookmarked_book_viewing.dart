@@ -98,9 +98,7 @@ class _BookmarkedBookViewingState extends State<BookmarkedBookViewing> {
 
   void downloadPdf(String url) {
     DefaultCacheManager().getFileStream(url, withProgress: true).listen((fileResponse) async {
-      if (cached) {
-        return;
-      } else if (fileResponse is DownloadProgress) {
+      if (fileResponse is DownloadProgress) {
         // start downloading process
         final process = (fileResponse.downloaded / (fileResponse.totalSize ?? 0));
         detailsNotifier.value = detailsNotifier.value.copyWith(
