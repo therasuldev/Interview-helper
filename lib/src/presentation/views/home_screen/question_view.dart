@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:interview_helper/gen/assets.gen.dart';
 import 'package:interview_helper/src/presentation/provider/bloc/category/category_bloc.dart';
 import 'package:interview_helper/src/utils/index.dart';
 
@@ -63,9 +65,9 @@ class _QuestionViewState extends State<QuestionView> with _QuestionViewMixin {
                         );
                       }
                     },
-                    icon: Icon(
-                      Icons.bookmark,
-                      color: isSaved ? Colors.red : Colors.grey,
+                    icon: SvgPicture.asset(
+                      Assets.svg.bookmark,
+                      color: isSaved ? Colors.blue.shade200 : Colors.white,
                     ),
                   )
                 ],
@@ -212,8 +214,6 @@ mixin _QuestionViewMixin on State<QuestionView> {
 
 extension on List<Question> {
   bool isSaved(Question question) {
-    return any((bookmarkedQuestion) {
-      return bookmarkedQuestion.question == question.question;
-    });
+    return any((bq) => bq == question);
   }
 }
