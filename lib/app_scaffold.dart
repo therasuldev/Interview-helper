@@ -37,12 +37,14 @@ class _AppScaffoldState extends State<AppScaffold> {
       centerTitle: false,
       elevation: 0,
       actions: [
-        IconButton(
-          icon: SvgPicture.asset(Assets.svg.bookmark, color: Colors.white),
-          onPressed: () {
-            context.goNamed(AppRouteConstant.bookmark);
-          },
-        ),
+        screenIndex.isEqual(0)
+            ? IconButton(
+                icon: SvgPicture.asset(Assets.svg.bookmark, color: Colors.white),
+                onPressed: () {
+                  context.goNamed(AppRouteConstant.bookmark);
+                },
+              )
+            : const SizedBox.shrink(),
       ],
     );
   }
@@ -61,6 +63,7 @@ class _BottomNavBar extends StatelessWidget {
       onTap: changeScreen,
       currentIndex: screenIndex,
       selectedItemColor: AppColors.primary,
+      backgroundColor: Colors.white,
       selectedLabelStyle: ViewUtils.ubuntuStyle(fontSize: 16),
       unselectedLabelStyle: ViewUtils.ubuntuStyle(fontSize: 14),
     );
