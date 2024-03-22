@@ -131,6 +131,7 @@ class _BookmarkedBookViewingState extends State<BookmarkedBookViewing> {
     final double width = MediaQuery.sizeOf(context).width * 0.5;
     final double height = MediaQuery.sizeOf(context).height * 0.3;
     return Scaffold(
+      appBar: AppBar(title: Text(widget.book.name), centerTitle: false),
       body: Column(
         children: [
           SizedBox(height: MediaQuery.of(context).padding.top),
