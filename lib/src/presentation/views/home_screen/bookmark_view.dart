@@ -64,6 +64,7 @@ class _BookmarkedDatasState extends State<BookmarkedDatas> with SingleTickerProv
     return Scaffold(
       appBar: AppBar(
         title: Text(appBarTitle.title),
+        centerTitle: false,
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(50),
           child: TabBar(
