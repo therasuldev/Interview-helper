@@ -1,0 +1,170 @@
+{
+    "1": {
+        "question": "JavaScript'te birinci sınıf bir işlev nedir?",
+        "answer": "Fonksiyonlar diğer değişkenler gibi işlenebildiğinde, bu fonksiyonlar birinci sınıf işlevlerdir. Scala, Haskell gibi birçok başka programlama dili de JS dahil olmak üzere bunu takip eder. Bu nedenle bir işlev başka bir işleve parametre olarak (geri çağrı) geçirilebilir veya bir işlev başka bir işlevi döndürebilir (yüksek dereceli işlev). map() ve filter() popüler olarak kullanılan yüksek dereceli işlevlerdir."
+    },
+    "2": {
+        "question": "Node.js nedir ve nasıl çalışır?",
+        "answer": "Node.js, JavaScript'i betik dili olarak kullanan ve Chrome'un V8 JavaScript motorunu çalıştıran sanal bir makinedir. Temelde, Node.js giriş/çıkış işlemlerinin asenkron olarak çalıştığı bir olay odaklı mimariye dayanır, bu da onu hafif ve verimli yapar. Ayrıca, popüler bir çerçeve olan elektron ile masaüstü uygulamaları geliştirmede de kullanılmaktadır çünkü dosya sistemine, ağa vb. erişim sağlayan bir API sunar."
+    },
+    "3": {
+        "question": "Node.js projenizde paketleri nasıl yönetirsiniz?",
+        "answer": "Paketler, bir dizi paket yükleyici ve bunların yapılandırma dosyası tarafından yönetilebilir. Bunlar arasında çoğunlukla npm veya yarn kullanılır. Her ikisi de neredeyse tüm JavaScript kütüphanelerini ve ortama özgü yapılandırma ayarlarını kontrol etme özelliklerini sağlar. Bir projeye kurulan kütüphanelerin sürümlerini korumak için package.json ve package-lock.json kullanırız, böylece bu uygulamayı farklı bir ortama taşıdığımızda bir sorunla karşılaşmayız."
+    },
+    "4": {
+        "question": "Node.js diğer en popüler kullanılan çerçevelere göre nasıl daha iyidir?",
+        "answer": "* Node.js, geliştirme sürecinde basitlik sağlar çünkü bloke olmayan giriş/çıkış ve olay odaklı modeli kısa yanıt süresi ve eş zamanlı işlemeyle sonuçlanır, diğer çerçevelerde geliştiricilerin iş parçacığı yönetimi kullanması gerekirken. \n* Chrome V8 motorunda çalışır, bu da c++ ile yazılmış ve sürekli iyileştirmelerle yüksek performanslıdır. \n* Ayrıca, hem ön uçta hem de arka uçta JavaScript kullanacağımız için geliştirme çok daha hızlı olacaktır. \n* Ve son olarak, tekerleği yeniden icat etmemek için bol miktarda kütüphane bulunur."
+    },
+    "5": {
+        "question": "“Kontrol Akışı”nın işlev çağrılarını nasıl kontrol ettiğini açıklayın?",
+        "answer": "* Yürütme sırasını kontrol edin\n* Veri toplayın\n* Eşzamanlılık sınırlarını belirleyin\n* Programın bir sonraki adımını çağırın."
+    },
+    "6": {
+        "question": "Node.js'in yaygın olarak kullanılan zamanlama özellikleri nelerdir?",
+        "answer": "* setTimeout/clearTimeout – Kodun yürütülmesinde gecikmeleri uygulamak için kullanılır.\n* setInterval/clearInterval – Kod bloğunun birden çok kez çalıştırılmasında kullanılır.\n* setImmediate/clearImmediate – setImmediate() bağımsız değişkeni olarak iletilen herhangi bir işlev, olay döngüsünün bir sonraki yinelemesinde yürütülen bir geri çağrıdır.\n* process.nextTick – Hem setImmediate hem de process.nextTick aynı şeyi yapar gibi görünse de, geri çağrınızın aciliyetine bağlı olarak birini diğerine tercih edebilirsiniz. "
+    },
+    "7": {
+        "question": "Geribildirimler yerine vadilerin kullanılmasının avantajları nelerdir?",
+        "answer": "Vadilerin kullanımının temel avantajı, asenkron görevin tamamlandıktan sonra yapılacak işlemi belirleme olanağıdır. Bu, daha yönetilebilir kod sağlar ve geri çağrı cehennemini önler."
+    },
+    "8": {
+        "question": "Node.js'de fork nedir?",
+        "answer": "Genel olarak bir çatallama, alt işlem oluşturmak için kullanılır. Node'da, kodu yürütmek için birden çok işçiyi çalıştırmak için yeni bir v8 motoru örneği oluşturmak için kullanılır."
+    },
+    "9": {
+        "question": "Node.js neden tek iş parçacıklıdır?",
+        "answer": "Node.js, özellikle asenkron işlemeyi denemek için açıkça oluşturulmuştur. Bu, farklı çerçeveler aracılığıyla ölçeklendirmedeki mevcut iş parçacığı tabanlı uygulamanın üzerine tek bir iş parçacığında asenkron işleme yapma yeni bir teoriyi denemek içindi."
+    },
+    "10": {
+        "question": "Node.js'de basit bir sunucu nasıl oluşturulur ve Hello World döndürülür?",
+        "answer": "var http = require('http');\nhttp.createServer(function (request, response) {\nresponse.writeHead(200, {'Content-Type': 'text/plain'});\nresponse.end('Hello World\n');\n}).listen(3000);\n"
+    },
+    "11": {
+        "question": "Node.js'de kaç tür API işlevi vardır?",
+        "answer": "İki tür API işlevi vardır:\n\n* Asenkron, bloklamayan işlevler - genellikle ana döngüden çatallanan çoğunlukla G/Ç işlemleri.\n* Senkron, bloklayan işlevler - genellikle ana döngüde çalışan işlemi etkileyen işlemler."
+    },
+    "12": {
+        "question": "REPL nedir?",
+        "answer": "Node.js'te REPL, Oku, Değerlendir, Yazdır ve Döngü anlamına gelir, bu da kodu anlık olarak değerlendirmeyi içerir."
+    },
+    "13": {
+        "question": "async.queue'un girdi olarak aldığı iki argümanı listeleyin.",
+        "answer": "* Görev İşlevi\n* Eşzamanlılık Değeri"
+    },
+    "14": {
+        "question": "module.exports'ün amacı nedir?",
+        "answer": "Bu, bir modülün veya dosyanın belirli işlevlerini projenin başka bir yerinde kullanılmak üzere açığa çıkarmak için kullanılır. Bu, bir dosyadaki tüm benzer işlevleri kapsüllemek için kullanılabilir, bu da proje yapısını daha da iyileştirir."
+    },
+    "15": {
+        "question": "Tutarlı kod stili sağlamak için hangi araçlar kullanılabilir?",
+        "answer": "Herhangi bir IDE ile birlikte kullanılmak üzere ESLint, kod tabanını korumada yardımcı olan tutarlı bir kodlama stili sağlamak için kullanılabilir. "
+    },
+    "16": {
+        "question": "Node JS'te olay döngüsü nedir?",
+        "answer": "Asenkron olan her şey, olay döngüsü tarafından bir kuyruk ve dinleyici kullanılarak yönetilir.\n\nBir asenkron işlevin yürütülmesi gerektiğinde (veya G/Ç) ana iş parçacığı, ana kodu devam ettirirken bunu başka bir iş parçacığına gönderir. Olay döngüsü, belirli görevlerle farklı aşamalardan oluşur, bu aşamalar zamanlayıcılar, bekleyen geri çağrılar, boş veya hazırla, anket, kontrol ve kapat geri çağrılarıdır ve bunlar farklı FIFO kuyruklara sahiptir. Ayrıca, iterasyonlar arasında asenkron G/Ç veya zamanlayıcılar için kontrol edilir ve yoksa temiz bir şekilde kapatılır."
+    },
+    "17": {
+        "question": "process.nextTick() ve setImmediate() arasındaki fark nedir?",
+        "answer": "Her ikisi de dinleyici işlevleri ile asenkron çalışma moduna geçmek için kullanılabilir. \n\nprocess.nextTick() geri çağrıyı yürütmek için ayarlar, ancak setImmediate() geri çağrıyı yürütmek için kuyruğa iter. Bu nedenle, olay döngüsü şu şekilde çalışır\n\ntimers–>pending callbacks–>idle,prepare–>connections(poll,data,etc)–>check–>close callbacks\n\nBu işlemde process.nextTick() yöntemi, geri çağrı işlevini bir sonraki olay kuyruğunun başına ekler ve setImmediate() yöntemi, geri çağrı işlevini bir sonraki olay kuyruğunun kontrol aşamasına yerleştirir."
+    },
+    "18": {
+        "question": "Node.js I/O işlemlerinin engellenmesi sorununu nasıl aşar?",
+        "answer": "Node'un ana işlevi bloke etmeden tüm G/Ç işlemlerini asenkron bir şekilde ele almak için kullanılabilen bir olay döngüsüne sahip olması nedeniyle. \n\nÖrneğin, bir ağ çağrısı yapılması gerekiyorsa, bu, ana iş parçacığında değil, olay döngüsünde zamanlanır (tek iş parçacığı). Ve birden çok bu tür I/O çağrısı varsa, her biri sıraya alınır ve ayrı ayrı yürütülür (ana iş parçacığı dışında).\n\nBu nedenle, tek iş parçacıklı JS'ye rağmen, I/O işlemleri bloklanmadan işlenir."
+    },
+    "19": {
+        "question": "Node.js akışları nedir?",
+        "answer": "Akışlar, Node.js'te akışlı verilerle çalışmak için kullanılan EventEmitter örnekleridir. Büyük dosyaların (videolar, mp3, vb.) akışı üzerinde çalışmak ve manipüle etmek için kullanılabilirler. Geçici depolama olarak tamponları kullanır.\n\nGenellikle dört tür akış vardır:\n* Yazılabilir: Veri yazılabilecek akışlar (örneğin, fs.createWriteStream()).\n* Okunabilir: Veri okunabilecek akışlar (örneğin, fs.createReadStream()).\n* Çift Yönlü: Hem Okunabilir hem de Yazılabilir akışlar (örneğin, net.Socket).\n* Dönüştür: Yazılırken ve okunurken veriyi değiştirebilen veya dönüştürebilen Çift Yönlü akışlar (örneğin, zlib.createDeflate())."
+    },
+    "20": {
+        "question": "Node.js bufferları nedir?",
+        "answer": "Genel olarak, bufferlar geçici bir bellektir ve öncelikle bir akış tarafından tüketilene kadar bazı verileri tutmak için kullanılır. Buffers, JavaScript'in Uint8Array'ından farklı ek kullanım alanları ile tanıtılmıştır ve genellikle sabit uzunluktaki bayt dizilerini temsil etmek için kullanılır. Bu ayrıca ASCII, utf-8 vb. gibi eski kodlamaları destekler. V8 dışında sabit (yeniden boyutlandırılamaz) bir bellek tahsis edilir."
+    },
+    "21": {
+        "question": "Middleware nedir?",
+        "answer": "Middleware, isteğiniz ve iş mantığınız arasına gelir. Genellikle günlükleri yakalamak ve sınırlandırma, yönlendirme, kimlik doğrulama gibi iş mantığının bir parçası olmayan şeyleri etkinleştirmek için kullanılır. body-parser gibi üçüncü taraf middleware'ler de vardır ve belirli bir kullanım durumu için kendi middleware'inizi yazabilirsiniz."
+    },
+    "22": {
+        "question": "Node.js'de Reactor Pattern nedir?",
+        "answer": "Reactor modeli tekrarlayan I/O işlemleri için bir modeldir. Ancak genel olarak, bu herhangi bir olay tabanlı mimaride kullanılır. \n\nBu modelde iki bileşen bulunur: 1. Reactor 2. Handler.\nReactor: I/O olayını uygun işleyicilere göndermekle görevlidir.\nHandler: Bu olayları gerçekten işlemekle görevlidir."
+    },
+    "23": {
+        "question": "Express uygulamasını ve sunucuyu neden ayırmalısınız?",
+        "answer": "Sunucu, rotaları, ara yazılımları ve diğer uygulama mantığını başlatmakla görevlidir, oysa uygulama tüm iş mantığını içerir ve sunucu tarafından başlatılan rotalar tarafından sunulur. Bu, iş mantığının uygulama mantığından ayrılmasını ve bağımsızlaştırılmasını sağlar, bu da projeyi daha okunabilir ve bakımı daha kolay hale getirir."
+    },
+    "24": {
+        "question": "Node.js için Google neden V8 motorunu kullanıyor?",
+        "answer": "Başka seçenekler var mı? Evet, elbette, Firefox'tan Spidermonkey, Edge'den Chakra'ya sahibiz, ancak Google'ın V8'i en gelişmiş (açık kaynak olduğu için özelliklerin geliştirilmesine ve hataların düzeltilmesine yardımcı olan büyük bir topluluk olduğu için) ve en hızlı (çünkü C++ ile yazılmıştır) şu ana kadar JavaScript ve WebAssembly motoru olarak gördüğümüz şeydir. Ve neredeyse her bilgisayarda taşınabilir."
+    },
+    "25": {
+        "question": "Node.js'in çıkış kodlarını açıklayın.",
+        "answer": "Çıkış kodları, bir işlemin nasıl sonlandığını/sonlandırma nedenini bize anlatır. \n\nBunlardan bazıları şunlardır:\n\n* Yakalanmamış ölümcül istisna - (kod - 1) - İşlenmemiş bir istisna olmuştur\n* Kullanılmayan - (kod - 2) - Bu, bash tarafından ayrılmıştır\n* Ölümcül Hata - (kod - 5) - V8'de bir hata olmuştur ve hata açıklamasının stderr çıktısı vardır\n* İç İstisna işleyici Çalışma zamanı hatası - (kod - 7) - Başlatma işlevi çağrıldığında bir istisna olmuştur\n* İç JavaScript Değerlendirme Başarısızlığı - (kod - 4) - Başlatma sürecinde bir işlev değeri döndürme başarısızlığı olmuştur."
+    },
+    "26": {
+        "question": "Node.js'te stub kavramını açıklayın.",
+        "answer": "Stublar, geliştirme sürecinin önemli bir parçası olan testlerde kullanılır. Test edilmekte olan tüm işlevi değiştirir.  \n\nBu, aşağıdaki senaryolarda yardımcı olur:\n* Testleri yavaş ve zor yazan harici çağrılar (örneğin HTTP çağrıları/DB çağrıları)\n* Bir kod parçası için farklı sonuçları tetikleme (örneğin bir hata atılırsa ne olur/ geçerse ne olur)"
+    },
+    "27": {
+        "question": "Node.js'te bir Olay Yayıncısı nedir?",
+        "answer": "EventEmitter, temel olarak olaylar yayınlama yeteneğine sahip tüm nesneleri içeren bir Node.js sınıfıdır. Bu, bir nesne tarafından kullanılan adlandırılmış olayları takmak için bir eventEmitter.on() işlevini kullanarak yapılabilir. Böylece bu nesne bir olay attığında ekli işlevler eşzamanlı olarak çağrılır."
+    },
+    "28": {
+        "question": "Kümeleme yoluyla Node.js performansını artırma.",
+        "answer": "Node.js uygulamaları varsayılan olarak tek bir işlemci üzerinde çalışır, bu da çok çekirdekli bir sistemden yararlanmadıkları anlamına gelir. Küme modu, birden çok node.js işlemi başlatmak için kullanılır ve böylece olay döngüsünün çoklu örneklerine sahip olunur. Bir nodejs uygulamasında küme kullanmaya başladığımızda, sahnede birden çok node.js işlemi oluşturulur, ancak aynı zamanda uygulamamızın bireysel örneklerinin sağlığını izlemekten sorumlu olan küme yöneticisi olarak adlandırılan bir ana işlem de vardır."
+    },
+    "29": {
+        "question": "WASI nedir ve neden tanıtılıyor?",
+        "answer": "Web montajı, WebAssembly Sistemi Arabirimi belirtimi uygulamasını node.js'de WASI sınıfı kullanılarak uygulanan WASI API aracılığıyla sağlar. WASI'nin tanıtılmasının nedeni, altta yatan işletim sistemini POSIX benzeri bir işlevler koleksiyonu aracılığıyla kullanmanın mümkün olabileceği göz önünde bulundurularak yapılmıştır, böylece uygulamanın kaynakları daha verimli kullanmasına ve sistem düzeyinde erişim gerektiren özelliklere olanak sağlar."
+    },
+    "30": {
+        "question": "Senkron ve asenkron işlevler arasındaki fark nedir?",
+        "answer": "Senkron işlevler genellikle I/O işlemleri için kullanılır. Sunucudaki veri hareketine anında yanıt verirler ve gereksinimlere göre veriyi takip ederler. Yanıt yoksa, API bir hata fırlatacaktır.\n\nÖte yandan, adından da anlaşılacağı gibi, asenkron işlevler senkron olmamak prensibi üzerine çalışır. Burada HTTP istekleri, gönderildiğinde başlamak için yanıt beklemeyeceklerdir. Önceki isteklere verilen yanıtlar devam edecek, hatta sunucu yanıtı çoktan almışsa bile."
+    },
+    "31": {
+        "question": "Olay döngüsünde hangi asenkron görevler gerçekleşmelidir?",
+        "answer": "Aşağıdaki işlemler, bir olay döngüsünü kullanarak asenkron olarak gerçekleştirilebilecek bazı görevlerdir:\n\n* Engellenen gönderme istekleri\n* Yüksek hesaplama gereksinimi\n* Gerçek zamanlı I/O işlemleri"
+    },
+    "32": {
+        "question": "Kontrol akışı ifadelerinde yürütme sırası nedir?",
+        "answer": "Kontrol akışı ifadelerinin işlev çağrılarını işlemek için kullanılan sırası aşağıdaki gibidir:\n\n* Yürütme ve sıra işleme\n* Veri toplama ve depolama\n* Eş zamanlı işleme ve sınırlama\n* Kodun bir sonraki parçasının yürütülmesi"
+    },
+    "33": {
+        "question": "Bir asenkron kuyruk için giriş argümanları nelerdir?",
+        "answer": "Bir asenkron kuyruk tarafından kullanılan iki temel argüman vardır. Bunlar şunlardır:\n\n* Eşzamanlılık değeri\n* Görev işlevi"
+    },
+    "34": {
+        "question": "Node.js'te olay tabanlı modeli kullanmanın temel nedeni nedir?",
+        "answer": "Node.js'teki olay tabanlı model, I/O kanalında bloke edici işlemler kullanıldığında ortaya çıkan sorunları aşmak için kullanılır.\n\nBu blogdaki bir sonraki bölümde, Node.js'e kütüphanelerin nasıl aktarılacağını anlamanız gerekecek."
+    },
+    "35": {
+        "question": "Node.js'te olay tabanlı programlamadan ne anlaşılır?",
+        "answer": "Olay tabanlı programlama, bir programın iş akışı yürütmesinin temel olarak dış programlardan veya diğer kaynaklardan gelen olayların meydana gelmesiyle kontrol edildiği bir tekniktir.\nOlay tabanlı mimari, iki varlık içerir:\n* Olay işleme\n* Olay seçimi"
+    },
+    "36": {
+        "question": "Node.js'te mevcut olan güvenlik uygulamaları nelerdir?",
+        "answer": "Aşağıdaki, güvenlik için önemli uygulamalardır:\n\n* Hata işleme protokolleri\n* Kimlik doğrulama boru hatları"
+    },
+    "37": {
+        "question": "Test piramidinin anlamı nedir?",
+        "answer": "Test piramidi, birim testi, entegrasyon testi ve birleşik test (bu sırayla) olarak yürütülen test vakalarının sayısını belirtmek için kullanılan bir metodolojidir. Bu, bir proje için uçtan uca geliştirme için yeterli sayıda test vakasının yürütüldüğünden emin olmak için korunur."
+    },
+    "38": {
+        "question": "Libuv nedir?",
+        "answer": "Libuv, Node.js'te bulunan yaygın olarak kullanılan bir kütüphanedir. Node.js'nin asenkron G/Ç işlevselliğini tamamlamak için kullanılır. İçerde geliştirilmiş ve Luvit, Julia ve daha fazlası gibi sistemlerle birlikte kullanılmıştır.\n\nLibuv'un bazı özellikleri şunlardır:\n* Dosya sistem etkinlik işleme\n* Çocuk çatallanması ve işleme\n* Asenkron UDP ve TCP soketler\n* Asenkron dosya işleme ve işlemler"
+    },
+    "39": {
+        "question": "Node.js'te global nesneler nelerdir?",
+        "answer": "Global nesneler, Node.js uygulamasının tüm modüllerinde erişilebilir bir kapsama sahip olan nesnelerdir. Nesnelerin her bir modüle eklenmesine gerek yoktur. Bir nesne global olarak bildirilir. Böylece, bu, herhangi bir işlevi, dizeyi veya nesneyi uygulama genelinde erişim sağlamak için yapılır."
+    },
+    "40": {
+        "question": "Node.js'te readFile ve createReadStream arasındaki fark nedir?",
+        "answer": "* readFile: Bu, belirtilen bir dosyanın tüm içeriğini asenkron olarak okumak için kullanılır. Kullanıcılar erişebilmeden önce tüm içerik belleğe okunur.\n* createReadStream: Bu, dosyayı daha küçük parçalara böler ve ardından okur. Varsayılan parça boyutu 64 KB'dır ve gereğinde değiştirilebilir."
+    },
+    "41": {
+        "question": "Node.js'te crypto modülünün amacı nedir?",
+        "answer": "Node.js'teki crypto modülü, kullanıcılara kriptografik işlevsellikler sağlamak için kullanılır. Bu, şifreleme, deşifreleme, imzalama ve karmalama gibi çeşitli işlemleri gerçekleştirmek için çeşitli sarmallar sağlar."
+    },
+    "42": {
+        "question": "Node.js'te bir pasaport nedir?",
+        "answer": "Pasaport, Node.js'te yaygın olarak kullanılan bir ara yazılımdır. Temel olarak kimlik doğrulaması için kullanılır ve herhangi bir Express.js tabanlı web uygulamasına kolayca uyarlanabilir.\n\nHer oluşturulan uygulama, benzersiz kimlik doğrulama mekanizmaları gerektirir. Bu, bir pasaport kullanarak tek modüller olarak sağlanır ve gereksinimlere dayalı olarak uygulamalara stratejiler atamak kolay hale gelir, böylelikle herhangi bir tür bağımlılıktan kaçınılır."
+    }
+}

@@ -1,0 +1,158 @@
+{
+    "1": {
+        "question": "Kriptografi nedir?",
+        "answer": "Kriptografi, bilgi ve iletişimin güvenliğini sağlamak için kullanılan tekniklerin uygulanması ve incelenmesidir, özellikle verinin amacı dışında olan üçüncü taraflardan korunması için kullanılır."
+    },
+    "2": {
+        "question": "Simetrik ve Asimetrik şifreleme arasındaki fark nedir?",
+        "answer": "* Simetrik Şifreleme *\n\n1. Şifreleme ve şifre çözme için aynı anahtar\n2. Şifreleme hızlıdır ancak daha savunmasızdır\n3. DES, 3DES, AES ve RC4\n4. Toplu veri iletimi için kullanılır\n\n* Asimetrik Şifreleme *\n\n1. Şifreleme ve şifre çözme için farklı anahtarlar\n2. Yüksek hesaplama nedeniyle şifreleme yavaştır\n3. Diffie-Hellman, RSA\n4. Genellikle gizli anahtarlar güvenli bir şekilde alışveriş için kullanılır"
+    },
+    "3": {
+        "question": "IDS ve IPS arasındaki fark nedir?",
+        "answer": "IDS, Saldırı Tespit Sistemi anlamına gelir ve yalnızca saldırıları tespit eder ve yönetici saldırıyı önlemekle ilgilenmelidir. IPS yani Saldırı Önleme Sistemi'nde, sistem sadece saldırıyı tespit etmekle kalmaz, aynı zamanda saldırıyı önlemek için de harekete geçer."
+    },
+    "4": {
+        "question": "CIA üçgenini açıklayın.",
+        "answer": "CIA, Gizlilik (Confidentiality), Bütünlük (Integrity) ve Erişilebilirlik (Availability) kelimelerinin baş harflerinden oluşur. CIA, Bilgi Güvenliği politikalarını yönlendirmek için tasarlanmış bir modeldir. Kuruluşlar tarafından en yaygın kullanılan modellerden biridir.\n\nGizlilik\n\nBilgi sadece yetkililer tarafından erişilebilir ve okunabilir olmalıdır. Yetkisiz kişiler tarafından erişilememelidir. Bilgi, biri verilere erişirse dahi okunamayacak veya anlaşılmayacak şekilde güçlü bir şekilde şifrelenmelidir.\n\nBütünlük\n\nBir bilginin yetkisiz bir tarafından değiştirilmediğinden emin olma. Bütünlük, bilginin yetkisiz kişiler tarafından bozulmamasını veya değiştirilmemesini sağlar. Eğer bir yetkili kişi/sistem bilgiyi değiştirmeye çalışırsa ve değişiklik başarısız olursa, veri geri döndürülmeli ve bozulmamalıdır.\n\nErişilebilirlik\n\nKullanıcı bilgiyi ne zaman isterse kullanılabilir olmalıdır. Donanımın bakımı, düzenli olarak yükseltilmesi, Veri Yedekleme ve Kurtarma, Ağ Engelleri göz önünde bulundurulmalıdır."
+    },
+    "5": {
+        "question": "Şifreleme Hashing'den nasıl farklıdır?",
+        "answer": "Şifreleme ve Hashing, okunabilir verileri okunamaz bir formata dönüştürmek için kullanılır. Fark, şifrelenmiş verilerin şifre çözme işlemiyle orijinal veriye dönüştürülebilmesidir, ancak karmalanmış verilerin orijinal veriye dönüştürülememesidir."
+    },
+    "6": {
+        "question": "Firewall nedir ve neden kullanılır?",
+        "answer": "Firewall, ağ trafiğini izleyen ve kontrol eden sistem/ağın sınırlarına kurulan bir ağ güvenlik sistemiidir. Firewall'lar başta virüslerden, solucanlardan, kötü amaçlı yazılımlardan vb. sistemi/ağı korumak için kullanılır. Ayrıca uzaktan erişimi engellemek ve içerik filtrelemek için de kullanılabilirler."
+    },
+    "7": {
+        "question": "VA (Zafiyet Değerlendirmesi) ile PT (Sızma Testi) arasındaki fark nedir?",
+        "answer": "Zafiyet Değerlendirmesi, hedef üzerindeki eksiklikleri bulma sürecidir. Burada, organizasyonun sistem/ağında zayıflıklar veya eksiklikler olduğunu bilir ve bu zayıflıkları bulmak ve düzeltmek için önceliklendirir. Öte yandan, Sızma Testi, hedef üzerindeki zafiyetleri bulma sürecidir. Bu durumda, organizasyon düşünebildiği tüm güvenlik önlemlerini almış olabilir ve sistem/ağlarının başka bir şekilde hacklenebilecek olup olmadığını test etmek isteyebilir."
+    },
+    "8": {
+        "question": "Üç yönlü el sıkışma nedir?",
+        "answer": "Üç yönlü el sıkışma, bir TCP/IP ağındaki bir ana bilgisayar ve bir istemci arasında bir bağlantı oluşturmak için kullanılan bir yöntemdir. Üç yönlü el sıkışma olarak adlandırılmasının nedeni, istemci ve sunucunun paketlerini değiştirdiği üç adımlı bir yöntem olmasıdır. Üç adım şöyledir:\n\n1. İstemci, sunucunun açık portlara sahip olup olmadığını kontrol etmek için bir SYN(Synchronize) paketi gönderir\n2. Sunucu, açık portlara sahipse istemciye bir SYN-ACK paketi gönderir\n3. İstemci bunu kabul eder ve sunucuya bir ACK(Acknowledgment) paketi gönderir"
+    },
+    "9": {
+        "question": "Bir Web Uygulamasından alınabilecek yanıt kodları nelerdir?",
+        "answer": "1xx – Bilgilendirme yanıtları\n2xx – Başarı\n3xx – Yönlendirme\n4xx – İstemci tarafından oluşan hata\n5xx – Sunucu tarafından oluşan hata"
+    },
+    "10": {
+        "question": "Traceroute nedir? Neden kullanılır?",
+        "answer": "Traceroute, bir paketin yolunu gösteren bir araçtır. Paketin geçtiği tüm noktaları (genellikle yönlendiricileri) listeler. Bu genellikle paket hedefine ulaşmıyorsa kullanılır. Bağlantının nerede durduğunu veya neden başarısız olduğunu belirlemek için Traceroute kullanılır."
+    },
+    "11": {
+        "question": "HIDS ve NIDS arasındaki fark nedir?",
+        "answer": "HIDS (Ana Bilgisayar IDS) ve NIDS (Ağ IDS) ikisi de Sızma Tespit Sistemi'dir ve aynı amaç için çalışır, yani sızmaları tespit etmek. Tek fark, HIDS'in belirli bir ana bilgisayara/aygıta kurulmuş olmasıdır. Belirli bir aygıtın trafiğini ve şüpheli sistem etkinliklerini izler. Öte yandan, NIDS ağa kurulur. Ağın tüm aygıtlarının trafiğini izler."
+    },
+    "12": {
+        "question": "Bir güvenlik duvarı nasıl kurulur?",
+        "answer": "Güvenlik duvarı kurmak için izlenmesi gereken adımlar şunlardır:\n\n1. Kullanıcı adı/şifre: Bir güvenlik duvarı cihazı için varsayılan şifreyi değiştirin\n2. Uzak yönetim: Uzaktan yönetim özelliğini devre dışı bırakın\n3. Port yönlendirme: Belirli uygulamaların düzgün çalışması için uygun port yönlendirme yapılandırın, örneğin bir web sunucusu veya FTP sunucusu\n4. DHCP sunucusu: Mevcut bir DHCP sunucusu olan bir ağa bir güvenlik duvarı kurmak çakışmaya neden olur, bunun için güvenlik duvarının DHCP'sini devre dışı bırakın\n5. Günlükleme: Güvenlik duvarı sorunlarını veya potansiyel saldırıları gidermek için günlüğün etkin olduğundan ve günlükleri nasıl görüntüleyeceğinizden emin olun\n6. Politikalar: Sağlam güvenlik politikalarınız olmalı ve güvenlik duvarının bu politikaları uygulayacak şekilde yapılandırıldığından emin olun."
+    },
+    "13": {
+        "question": "SSL Şifrelemesini açıklayın",
+        "answer": "SSL (Güvenli Yuvalar Katmanı), Web Sunucusu ve Tarayıcı arasında şifreli bağlantılar oluşturan endüstri standardı güvenlik teknolojisidir. Bu, veri gizliliğini korumak ve çevrimiçi işlemlerdeki bilgileri korumak için kullanılır. Bir SSL bağlantısını kurmanın adımları şunlardır:\n\nBir tarayıcı, SSL ile güvenli hale getirilmiş bir web sunucusuna bağlanmaya çalışır\n1. Tarayıcı, SSL sertifikasının bir kopyasını sunucuya gönderir\n2. Tarayıcı, SSL sertifikasının güvenilir olup olmadığını kontrol eder. Güvenilirse, tarayıcı, şifreli bir bağlantı kurmak için sunucuya bir mesaj gönderir\n3. Web sunucusu, bir SSL şifreli bağlantıyı başlatmak için bir onay gönderir\n4. SSL şifreli iletişim tarayıcı ve web sunucusu arasında gerçekleşir"
+    },
+    "14": {
+        "question": "Bir sunucuyu güvence altına almak için alınacak adımlar nelerdir?",
+        "answer": "Güvenli sunucular, verileri yetkisiz ele geçirmeye karşı korumak için veri şifreleme ve şifre çözme için Güvenli Yuvalar Katmanı (SSL) protokolünü kullanır.\n\nİşte bir sunucuyu güvence altına almak için dört basit yol:\n\nAdım 1: Kök ve yönetici kullanıcılarınız için güvenli bir şifre olduğundan emin olun\n\nAdım 2: Yapmanız gereken bir sonraki şey, sistemde yeni kullanıcılar oluşturmaktır. Bunlar, sistemi yönetmek için kullandığınız kullanıcılardır\n\nAdım 3: Varsayılan kök/yönetici hesaplarından uzaktan erişimi kaldırın\n\nAdım 4: Bir sonraki adım, uzaktan erişim için güvenlik duvarı kurallarını yapılandırmaktır"
+    },
+    "15": {
+        "question": "Veri Sızıntısını açıklayın",
+        "answer": "Veri Sızıntısı, örgüt içindeki verilerin istem dışı veya kasıtlı olarak yetkisiz bir hedefe aktarılmasıdır. Bu, gizli bilgilerin yetkisiz bir varlığa açıklanmasıdır. Veri Sızıntısı, nasıl meydana geldiğine bağlı olarak 3 kategoriye ayrılabilir:\n\n1. Kazara İhlal: Bir varlık, bir hatadan veya yanlıştan dolayı verileri istem dışı olarak yetkisiz bir kişiye gönderir\n2. Kasıtlı İhlal: Yetkili varlık verileri kasıtlı olarak yetkisiz bir varlığa gönderir\n3. Sistem Hakkı: Veri sızıntısı meydana getirmek için hackleme teknikleri kullanılır\n\nVeri Sızıntısı, DLP (Veri Sızıntısı Önleme) Araçları olarak bilinen araçlar, yazılımlar ve stratejiler kullanılarak önlenebilir."
+    },
+    "16": {
+        "question": "Yaygın Siber Saldırılar nelerdir?",
+        "answer": "Aşağıda sistemizi olumsuz etkileyebilecek bazı yaygın siber saldırılar yer almaktadır.\n\n1. Kötü Amaçlı Yazılım\n2. Kimlik Avı\n3. Şifre Saldırıları\n4. DDoS\n5. Orta Adam\n6. Sürükle ve Bırak İndirmeleri\n7. Kötü Amaçlı Reklamcılık\n8. Sahte Yazılım"
+    },
+    "17": {
+        "question": "Brute Force Saldırısı nedir? Nasıl önlenir?",
+        "answer": "Brute Force, mümkün olan tüm permütasyonları ve kombinasyonları tekrarlayarak doğru kimlik bilgilerini bulma yöntemidir. Çoğu durumda, brute force saldırıları, araç/yazılımın otomatik olarak bir kimlik bilgisi listesiyle giriş yapmaya çalıştığı otomatikleştirilmiş saldırılardır. Brute Force saldırılarını önlemenin çeşitli yolları vardır. Bunlardan bazıları şunlardır:\n\n** Şifre Uzunluğu: Bir şifre için minimum uzunluk belirleyebilirsiniz. Şifre ne kadar uzun olursa, bulması o kadar zor olur.\n** Şifre Karmaşıklığı: Şifrede farklı karakter biçimlerini kullanmak brute force saldırılarını zorlaştırır. Alfasayısal şifrelerin yanı sıra özel karakterler ve büyük ve küçük harfler kullanarak şifre karmaşıklığını artırır ve kırılmasını zorlaştırır.\n** Giriş Deneme Sınırlandırma: Giriş hatalarına bir sınır belirleyin. Örneğin, giriş hatalarını 3 olarak belirleyebilirsiniz. 3 ardışık giriş hatası olduğunda, kullanıcının bir süre oturum açmasını engelleyin veya bir sonraki oturumda oturum açmak için E-posta veya OTP gönderin. Brute force otomatik bir süreç olduğu için, giriş deneme sınırlandırması brute force işlemini durduracaktır."
+    },
+    "18": {
+        "question": "Port Taraması nedir?",
+        "answer": "Port Taraması, bir ana bilgisayarda açık portları ve sunucuda mevcut olan servisleri belirlemek için kullanılan bir tekniktir. Hackerlar, zayıflıkları sömürmek için yararlı olabilecek bilgileri bulmak için port taraması kullanırlar. Yöneticiler, ağın güvenlik politikalarını doğrulamak için Port Taraması yaparlar. Yaygın Port Tarama Tekniklerinden bazıları şunlardır:\n\n1.Ping Taraması\n2.TCP Yarım Açık\n3.TCP Bağlantısı\n4.UDP\n5.Gizli Tarama"
+    },
+    "19": {
+        "question": "OSI modelinin farklı katmanları nelerdir?",
+        "answer": "Bir OSI modeli, uygulamaların bir ağ üzerinde nasıl iletişim kurduğuna dair bir referans modelidir. Bir OSI referansının amacı, dijital iletişim ürünlerinin ve yazılım programlarının birlikte çalışabilir olmasını sağlamak için satıcıları ve geliştiricileri yönlendirmektir.\n\n* Fiziksel Katman: Dijital verilerin iletişim ortamı aracılığıyla göndericiden alıcıya iletilmesinden sorumludur.\n\n* Veri Bağlantı Katmanı: Verinin fiziksel bağlantıdan alınıp gönderilmesini işler. Ayrıca veri bitlerinin kodlanması ve çözülmesinden sorumludur.\n\n* Ağ Katmanı: Paket yönlendirme ve ağ iletişimi için yönlendirme yolları sağlamaktan sorumludur.\n\n* Taşıma Katmanı: Ağ üzerinde uçtan uca iletişimden sorumludur. Veriyi yukarıdaki katmandan böler ve Ağ Katmanına ileterek tüm verilerin başarıyla alıcıya ulaştığından emin olur.\n\n* Oturum Katmanı: Gönderici ve alıcı arasındaki bağlantıyı kontrol eder. Oturumu başlatma, sonlandırma ve yönetme ve gönderici ile alıcı arasında etkileşimi kurma, sürdürme ve senkronize etme sorumluluğuna sahiptir.\n\n* Sunum Katmanı: Verileri ham veri paketleri yerine doğru bir formatta ve veri yapısında sunma ile ilgilenir.\n\n* Uygulama Katmanı: Uygulama ve ağ arasında bir arayüz sağlar. Süreçten sürece iletişime odaklanır ve bir iletişim arayüzü sağlar."
+    },
+    "20": {
+        "question": "VPN nedir?",
+        "answer": "Neredeyse tüm Siber Güvenlik Mülakat Sorularında bu soru bulunacaktır. VPN, Sanal Özel Ağ anlamına gelir. Güvenli ve şifrelenmiş bir bağlantı oluşturmak için kullanılır. Bir VPN kullandığınızda, istemciden gelen veriler VPN'deki bir noktaya gönderilir, burada şifrelenir ve ardından internet aracılığıyla başka bir noktaya gönderilir. Bu noktada, veri şifrelenir ve sunucuya gönderilir. Sunucu bir yanıt gönderdiğinde, yanıt bir VPN noktasına gönderilir, burada şifrelenir ve bu şifrelenmiş veri başka bir VPN noktasına gönderilir. Ve nihayet, şifrelenmiş veri istemciye gönderilir. Bir VPN kullanmanın temel amacı, şifreli veri transferini sağlamaktır."
+    },
+    "21": {
+        "question": "Ağda Risk, Zayıflık ve Tehlike ne anlama gelir?",
+        "answer": "1.Tehdit: Bir sistemi veya bir organizasyonu zarar verebilecek potansiyele sahip biri\n2.Zayıflık: Bir sistemin sömürülebilecek bir zayıflığı\n3.Risk: Tehdit, bir zayıflığı sömürdüğünde oluşabilecek kayıp veya zarar potansiyeli"
+    },
+    "22": {
+        "question": "Kimlik hırsızlığı nasıl önlenir?",
+        "answer": "Kimlik hırsızlığını önlemek için aşağıdakileri yapabilirsiniz:\n\n* Güçlü ve benzersiz bir şifre kullanın\n* Özellikle sosyal medyada çevrimiçi olarak gizli bilgileri paylaşmaktan kaçının\n* Bilinen ve güvenilir web sitelerinden alışveriş yapın\n* Tarayıcıların en son sürümünü kullanın\n* Gelişmiş kötü amaçlı yazılım ve casus yazılım araçlarını yükleyin\n* Finansal verilere karşı özel güvenlik çözümleri kullanın\n* Sistemi ve yazılımı her zaman güncelleyin\n* Sosyal Güvenlik Numaranızı koruyun (SSN)"
+    },
+    "23": {
+        "question": "Black hat, white hat ve grey hat hackerlar nedir?",
+        "answer": "Black hat hackerlar, bilgisayar ağlarına sızma konusunda geniş bilgiye sahip olanlar olarak bilinirler. Bu sistemlere erişim elde etmek için kullanılabilecek kötü amaçlı yazılımlar yazabilirler. Bu tür hackerlar, becerilerini bilgi çalmak veya hacklenmiş sistemi kötü niyetli amaçlar için kullanmak için kötüye kullanırlar.\n\nWhite hat hackerlar, güçlerini iyi işler için kullanırlar ve bu yüzden Etik Hackerlar olarak da adlandırılırlar. Güvenlik açıklarını bulmak ve düzeltmek için şirketler tarafından güvenlik uzmanı olarak kiralanırlar. Güvenlik deliklerini bulmak ve düzeltmek için becerilerini kullanırlar. \n\nGri şapka hackerlar, beyaz şapka ve siyah şapka hackerlarının birleşimidir. Sahibinin izni olmadan sistem zayıflıklarını ararlar. Herhangi bir zayıflık bulurlarsa, sahibine rapor ederler. Siyah şapka hackerlarının aksine, bulunan zayıflıkları sömürmezler."
+    },
+    "24": {
+        "question": "Yama yönetimini ne sıklıkla gerçekleştirmelisiniz?",
+        "answer": "Yama yönetimi, yayınlandığı anda yapılmalıdır. Windows için, yama yayınlandığında tüm makinelerde bir ayı geçmeden uygulanmalıdır. Aynı durum ağ cihazları için de geçerlidir, yayınlandığı anda yamayı uygulayın. Doğru yama yönetimi uygulanmalıdır."
+    },
+    "25": {
+        "question": "Şifre korumalı BIOS yapılandırmasını nasıl sıfırlarsınız?",
+        "answer": "BIOS, önyükleme öncesi bir sistem olduğu için kendi depolama mekanizmasına sahiptir. Sıfırlamanın basit bir yolu, CMOS pilini çıkarmaktır, böylece ayarları depolayan bellek güç kaynağını kaybeder ve sonuç olarak ayarlarını kaybeder."
+    },
+    "26": {
+        "question": "MITM saldırısını açıklayın ve nasıl önlenir?",
+        "answer": "MITM(Man-in-the-Middle) saldırısı, bir hacker'ın iki taraf arasındaki iletişime kendisini yerleştirdiği ve bilgileri çaldığı bir saldırı türüdür. Diyelim ki A ve B adında iki taraf iletişim kuruyor. Sonra hacker bu iletişime katılır. A'dan B'ye B gibi rol yapar ve B'nin önünde A gibi rol yapar. Her iki tarafın verileri de hacker'a gönderilir ve hacker, gereken verileri çaldıktan sonra verileri hedef partisine yönlendirir. İki taraf da birbirleriyle iletişim kurduklarını düşünürken, gerçekte hacker ile iletişim kuruyorlar.\n\nMITM saldırısını aşağıdaki uygulamaları kullanarak önleyebilirsiniz:\n\nVPN kullanın\n* Güçlü WEP/WPA şifrelemesi kullanın\n* Sızma Algılama Sistemleri kullanın\n* HTTPS zorunlu\n* Kamu Anahtar Çift Tabanlı Kimlik Doğrulama"
+    },
+    "27": {
+        "question": "DDOS saldırısını açıklayın ve nasıl önlenir?",
+        "answer": "Bu tekrar önemli bir Siber Güvenlik Mülakat Sorusudur. Bir DDOS (Dağıtık Hizmet Reddi) saldırısı, sunucuların gerçek müşterilere hizmet vermeyi reddetmesine neden olan bir siber saldırıdır. DDOS saldırısı iki türe ayrılabilir:\n\n1.Sel Saldırıları: Bu türde, hacker, sunucuya sunucunun işleyemeyeceği büyük miktarda trafik gönderir. Ve bu nedenle sunucu çalışmayı durdurur. Bu tür saldırılar genellikle sürekli paket gönderen otomatik programlar kullanılarak gerçekleştirilir.\n2.Çökme Saldırıları: Bu türde, hackerlar sunucudaki bir hatayı sömürürler ve sistem çöker, böylece sunucu müşterilere hizmet veremez.\n\nDDOS saldırılarını şu uygulamaları kullanarak önleyebilirsiniz:\n\n* Anti-DDOS hizmetleri kullanın\n* Güvenlik duvarları ve yönlendiricileri yapılandırın\n* Ön Uç Donanımı Kullanın\n* Yük Dengeleme kullanın\n* Trafikteki Ani Artışları İşleyin"
+    },
+    "28": {
+        "question": "XSS saldırısını açıklayın ve nasıl önlenir?",
+        "answer": "XSS (Cross-Site Scripting), kötü niyetli istemci tarafı komut dosyalarının web sayfalarına enjekte edilmesine olanak tanıyan bir siber saldırıdır. XSS, oturumları ele geçirmek ve çerezleri çalmak, DOM'u değiştirmek, uzak kod yürütme, sunucuyu çökertme vb. amaçlarla kullanılabilir.\n\nXSS saldırılarını aşağıdaki uygulamaları kullanarak önleyebilirsiniz:* Kullanıcı girişlerini doğrulayın\n* Kullanıcı girişlerini temizleyin\n* Özel karakterleri kodlayın\n* Anti-XSS hizmetleri/araçları kullanın\n* XSS HTML Filtresi kullanın"
+    },
+    "29": {
+        "question": "ARP nedir ve nasıl çalışır?",
+        "answer": "Address Resolution Protocol (ARP), bir Internet Protokol adresini (IP adresi) yerel ağda tanınan bir fiziksel makine adresine eşlemek için kullanılan bir protokoldür.\n\nBelirli bir yerel ağdaki bir ana makineye yönlendirilmek üzere gelen bir paket bir ağ geçidinde varış yaptığında, ağ geçidi, IP adresiyle eşleşen bir fiziksel ana makine veya MAC adresi bulmak için ARP programına sorar.\n\nARP programı ARP önbelleğine bakar ve adresi bulursa, paketin doğru paket uzunluğuna ve biçimine dönüştürülmesi ve makineye gönderilmesi için adresi sağlar.\n\nIP adresi için hiçbir giriş bulunamazsa, ARP, o IP adresinin kendisine atanmış olduğunu bilen bir makinenin olup olmadığını görmek için LAN'daki tüm makineler için özel bir formatta bir istek paketi yayınlar."
+    },
+    "30": {
+        "question": "LAN içinde port engelleme nedir?",
+        "answer": "Yerel ağ içindeki bir dizi hizmete erişimi kısıtlamak port engelleme olarak adlandırılır.\n\nUygulamanın portlarda çalıştığı için, kaynak erişimin, güvenlik deliklerini doldurarak erişimini engellemek için portlar engellenir."
+    },
+    "31": {
+        "question": "Botnet nedir?",
+        "answer": "Botnet, internete bağlı cihazların bir numarasıdır, her cihazda bir veya daha fazla bot çalışır. Cihazlardaki botlar ve kötü amaçlı komut dosyaları bir kurbanı hacklemek için kullanılır. Botnet'ler veri çalmak, spam göndermek ve bir DDOS saldırısını gerçekleştirmek için kullanılabilir."
+    },
+    "32": {
+        "question": "Tuzlu hash'ler nedir?",
+        "answer": "Tuz, rastgele bir veridir. Bir sağlam korumalı şifre sistemi, yeni bir şifre aldığında, şifrenin bir hash değerini, rastgele bir tuz değeri ve ardından birleşik değeri oluşturur ve bu değer veritabanında saklanır. Bu, sözlük saldırılarına ve bilinen hash saldırılarına karşı koruma sağlar.\n\nÖrnek: Birisi iki farklı sistemde aynı şifreyi kullanırsa ve bunlar aynı karma algoritmasını kullanılarak kullanılırsa, karma değeri aynı olur, ancak sistemlerden biri bile hash'leri tuzla kullansa, değer farklı olur."
+    },
+    "33": {
+        "question": "SSL ve TLS'yi açıklayın",
+        "answer": "SSL, gönderenin kimliğini doğrulamayı amaçlar ancak bundan daha fazlasını aramaz. SSL, konuştuğunuz kişiyi takip etmenize yardımcı olabilir ancak bazen bunun da aldatılması mümkündür.\n\nTLS de SSL gibi bir kimlik doğrulama aracıdır, ancak daha iyi güvenlik özellikleri sunar. Verilere ek koruma sağlar ve bu nedenle SSL ve TLS genellikle daha iyi koruma için birlikte kullanılır."
+    },
+    "34": {
+        "question": "Veri koruması hareket halindeyken ve dinlenirken ne anlama gelir?",
+        "answer": "1. Hareket halindeki veri koruması\n\n   * Veri sunucudan istemciye giderken\n   * Hareket halindeki veri için etkili veri koruma önlemleri kritiktir çünkü veri hareket halindeyken daha az güvenlidir.\n\n2. Dinlenme halindeki veri koruması\n\n   * Verinin veritabanında veya sabit diskte olduğu zaman\n   * Dinlenme halindeki veri, bazen hareket halindeki veriden daha az savunmasız olarak kabul edilir."
+    },
+    "35": {
+        "question": "2FA nedir ve nasıl kamu web siteleri için uygulanabilir?",
+        "answer": "Bilinen 'çoklu faktör kimlik doğrulaması' olarak da adlandırılan ek bir güvenlik katmanıdır.\n\nSadece bir şifre ve kullanıcı adı değil, aynı zamanda sadece, ve sadece, kullanıcının üzerinde olan bir şey gerektirir, yani sadece onların bilmeleri veya hemen ellerinde bulunması gereken bir bilgi parçası - örneğin, fiziksel bir belirteç.\n\nDoğrulayıcı uygulamalar, bir doğrulama kodunu metin, sesli çağrı veya e-posta yoluyla almayı gerektirmez."
+    },
+    "36": {
+        "question": "Bilişsel Siber Güvenlik nedir?",
+        "answer": "Bilişsel Siber Güvenlik, tehditleri tespit etmek ve fiziksel ve dijital sistemleri korumak için insan düşünme süreçlerine modellemiş yapay zeka teknolojilerinin bir uygulamasıdır.\n\nKendi kendine öğrenen güvenlik sistemleri, insan beynini taklit etmek için veri madenciliği, desen tanıma ve doğal dil işleme kullanır, ancak güçlü bir bilgisayar modelinde."
+    },
+    "37": {
+        "question": "VPN ve VLAN arasındaki fark nedir?",
+        "answer": "1. VPN\n\n   * Aynı konumlarda olmayan iş istasyonlarını aynı yayın alanına gruplamaya yardımcı olur\n   * Fiziksel anahtarları kullanmadan ağları mantıksal olarak ayırmak için bir araçtır\n   * Transit halindeki verileri izinsiz erişimlerden korur ve ağda kimse paketleri yakalayamaz ve verileri okuyamaz\n\n2. VLAN\n\n   * Bir şirketin ağına uzaktan erişimle ilgilidir\n   * Güvenli ve şifrelenmiş bir tünelde iki noktayı bağlamak için kullanılır\n   * Herhangi bir şifreleme tekniği içermez, ancak sadece mantıksal ağınızı yönetim ve güvenlik amaçları için farklı bölümlere ayırmak için kullanılır"
+    },
+    "38": {
+        "question": "Phishing'i açıklayın ve nasıl önlenir?",
+        "answer": "Phishing, bir hacker'ın güvenilir bir kişi veya işletme gibi kılık değiştirerek ve dolandırıcı e-posta veya anlık mesaj yoluyla hassas finansal veya kişisel bilgileri çalmaya çalıştığı bir Siber Saldırıdır.\n\nPhishing saldırılarını şu uygulamaları kullanarak önleyebilirsiniz:\n\n* Güvenmediğiniz web sayfalarına hassas bilgiler girmeyin\n* Site'nin güvenliğini doğrulayın\n* Güvenlik duvarları kullanın\n* İnternet Güvenliği olan AntiVirus Yazılımı kullanın\n* Anti-Phishing Araç Çubuğu kullanın"
+    },
+    "39": {
+        "question": "SQL Injection'ı açıklayın ve nasıl önlenir?",
+        "answer": "SQL Injection (SQLi), bir saldırganın sunucuya gönderilen veriyi manipüle ederek kötü amaçlı SQL ifadelerini çalıştırmasına ve böylece bir web uygulamasının veritabanı sunucusunu kontrol etmesine, erişmesine, değiştirmesine ve izinsiz veri silmesine olanak tanıyan bir kod enjeksiyon saldırısıdır. Bu saldırı genellikle veritabanı sunucularını ele geçirmek için kullanılır.\n\nSQL Injection saldırılarını şu uygulamaları kullanarak önleyebilirsiniz:\n\n* Hazırlanmış ifadeleri kullanın\n* Saklı Prosedürleri Kullanın\n* Kullanıcı girişlerini doğrulayın"
+    }
+}

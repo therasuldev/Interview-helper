@@ -1,0 +1,126 @@
+{
+    "1": {
+        "question": "Bir programlama görevi için gereksinimlerden teslimata kadar sürecinizi açıklayın.",
+        "answer": "Yazılım geliştirme süreci veya yaşam döngüsü, bir yazılım ürününün geliştirilmesine uygulanan bir yapıdır. Bu süreçler için birkaç model vardır (örneğin çevik yöntem gibi), her biri süreç boyunca gerçekleşen çeşitli görevleri veya faaliyetleri açıklayan yaklaşımları tanımlar.\n\n1. Gereksinimler analizi. İstenen bir yazılım ürününün gereksinimlerini çıkarmak, onu oluşturmanın ilk adımıdır. Müşteriler muhtemelen yazılımın ne yapması gerektiğini bildiklerini düşünse de, eksik, belirsiz veya çelişkili gereksinimleri tanımak için yazılım mühendisliğinde beceri ve deneyim gerekebilir.\n2. Spesifikasyon. Spesifikasyon, yazılacak yazılımı kesin bir şekilde, sıkı bir şekilde tanımlama görevidir. Uygulamada, çoğu başarılı spesifikasyon, genellikle zaten iyi geliştirilmiş olan uygulamaları anlamak ve ayarlamak için yazılır, ancak güvenlikle ilgili kritik yazılım sistemleri genellikle uygulama geliştirilmeden önce dikkatlice belirtilir. Spesifikasyonlar, sabit kalmaları gereken harici arabirimler için en önemlidir.\n3. Yazılım mimarisi. Bir yazılım sisteminin mimarisi, o sistemin soyut bir temsilini ifade eder. Mimarlık, yazılım sisteminin ürünün gereksinimlerini karşılayacağından ve gelecekteki gereksinimlerin ele alınabileceğinden emin olma ile ilgilidir."
+    },
+    "2": {
+        "question": "Hangi programlama dillerini kullanıyorsunuz? Hangi üçünü tercih ediyorsunuz veya en çok tanıdık olanlar hangileridir?",
+        "answer": "Mülakatçılar, mühendislerin birden fazla dilde deneyimli olmasını beklerler. Başvurulan kişinin hızla yeni bir dil öğrenebilme yeteneğini göstermek için C++ ve Java ile deneyime sahip olmasını bekleyebilirler. Python çok aranan bir dildir. Eğer tam yığın rolü için başvuruyorsanız, o zaman React ve Node gibi JavaScript çerçeveleri hakkında bilgi sahibi olmanız gerekir. (İşte 84 en çok sorulan tam yığın mülakat sorusu ve onlara en iyi şekilde cevap vermenin yolları rehberi.)\n\nPerl veya Python ile bazı betikleme deneyimine sahip olmak da büyük bir artıdır."
+    },
+    "3": {
+        "question": "Hata işleme sürecinizi nasıl uygularsınız?",
+        "answer": "Testler yazma, kodu istisnaları yakalamak için sarmalama, try/catch ifadelerini deneme ve WOMM geliştirme sürecine bakma hakkında konuşun. Bu soruya iyi düşünülmüş bir cevabınızın olduğundan emin olun."
+    },
+    "4": {
+        "question": "Yazılım geliştirme yaşam döngüsü nedir? Bunlar arasındaki farklar nelerdir?",
+        "answer": "SDLC veya Yazılım Geliştirme Yaşam Döngüsü, yazılımı en yüksek kalitede, en düşük maliyetle ve en kısa sürede üreten bir süreçtir. SDLC, bir yazılım sisteminin nasıl geliştirileceğine, değiştirileceğine, bakılacağına ve değiştirileceğine dair ayrıntılı bir plan içerir.\n\nSDLC, planlama, tasarım, inşa, test etme ve dağıtma gibi birkaç farklı aşamayı içerir. Popüler SDLC modelleri arasında şelale modeli, spiral model ve Çevik model bulunmaktadır."
+    },
+    "5": {
+        "question": "Eğer varsa, bir Çevik yazılım geliştirme sürecinin bir parçası olarak deneyiminiz nasıl oldu?",
+        "answer": "Çevik yazılım geliştirme, gereksinimlerin ve çözümlerin birlikte çalışma ile evrildiği yinelemeli bir geliştirme etrafında odaklanan yazılım geliştirme metodolojilerini ifade eder. Çevik gelişimin nihai değeri, ekiplerin değeri daha hızlı, daha yüksek kalitede ve tahmin edilebilirlikle daha hızlı bir şekilde teslim etmelerini ve değişikliklere yanıt verme yeteneğinin daha yüksek olmasını sağlamaktır."
+    },
+    "6": {
+        "question": "Duyarlı tasarım nedir? Sabit ve akışkan düzenler arasındaki fark nedir?",
+        "answer": "1. Duyarlı web sitesi tasarımı. Duyarlı tasarım kullanılarak oluşturulan web siteleri, medya sorgularını kullanarak resimleri ölçeklendirir, metni sargılar ve web sitesinin herhangi bir ekran boyutuna 'uyum sağlayabilmesi' için düzeni ayarlar, masaüstü ve mobil cihazlar arasındaki fark gibi.\n2. Akışkan web sitesi tasarımı. Akışkan tasarım kullanılarak oluşturulan web siteleri, genişlikler için göreli"
+    },
+    "7": {
+        "question": "Uygulamada hata bulma ve test etme süreciniz nasıl işler?",
+        "answer": "Yazılım testi, yazılım geliştirmenin evrensel olarak beklenen bir parçasıdır. Farklı geliştirme aşamalarında yapılacak testler ve değerlendirmeler oluşturmanız gereklidir. Aslında, test, ana lansmanınızdan sonra da dahil olmak üzere tüm geliştirme aşamalarında gerçekleştirilmelidir. Şeyler değişir, platformlar güncellenir ve önceki bir işletim sistemi güncellemesi öncesinde görünmeyen mobil uygulamalardaki hatalar büyük sorunlara yol açabilir.\n\nGenellikle, bu, uygulamayı bütünüyle ve bileşen parçalarıyla birlikte göz önünde bulundurmak ve daha fazla risk altında olduğunu düşündüğünüz alanlara öncelik vermek anlamına gelir. Daha sonra işlevselliği doğrulamak için testler yapılır ve tespit edilen hatalar kaydedilir. Bu hatalar daha sonra etkilerine ve ciddiyetlerine bağlı olarak önceliklendirilebilir."
+    },
+    "8": {
+        "question": "Algoritmalar ve Veri Yapıları Soruları",
+        "answer": "Yazılım mühendisliği mülakatlarında birçok teknik soru, temel algoritmaların ve veri yapılarının temellerini sorgular—bu kritik konuların temel bilginizi değerlendirmek için. Bu, formal bir süreç gibi görünüyor ve çoğu yazılım mühendisinin bu veri yapılarının ve algoritmaların verimli uygulamalarını soyutlayan kütüphaneleri kullanacağından formal bir bilgisayar bilimi derecesi almayanları cezalandırmak için tasarlanmıştır. Ancak, bu sürecin önemli bir parçasıdır.\n\nBu veri yapılarının ve algoritmaların aslında nasıl çalıştığını anlamanız önemlidir, özellikle de bu konuların mülakat ortamlarında çözümünüzü kağıt ve kalemle (bir bilgisayar yerine) beyaz tahtada yapmanız gerektiğinde karşınıza çıkacağından. İşte pratik yapmanız için birkaç örnek soru."
+    },
+    "9": {
+        "question": "Stack nedir? Bir yığının iki temel işlemi nedir?",
+        "answer": "Yığın, üç temel işlemi olan bir lineer veri yapısıdır: itme (bir elemanın en üstten yığına eklenmesi), çıkarma (yığına en son eklenen elemanın çıkarılması). Bazı yığın uygulamaları, değiştirilmeden bir yığındaki bir öğeyi görebilmenizi sağlayan peek işlemine de izin verir. Yığınlar son giren, ilk çıkar (LIFO) yapısı kullanır, bu nedenle yığına en son eklenen eleman, çıkarılabilen ilk elemandır. Kuyruklar, birinci giren, birinci çıkar (FIFO) yapısıyla çalışan benzer bir veri yapısıdır. Yığınlar genellikle bir dizi veya bağlı liste ile uygulanır. Bir mülakatta bir yığını uygulamamız ve farklı işlemleri uygulamamız istenebilir."
+    },
+    "10": {
+        "question": "QuickSort'u Big O notasyonunu kullanarak açıklayın.",
+        "answer": "QuickSort genellikle ortalama durumlarda en iyi şekilde çalışır, ancak en kötü durum senaryoları da vardır. Ortalama olarak, O(N log N) dur, ancak en kötü durumda O(N2) olur. En iyi ortalama performans önemli olduğunda QuickSort'u kullanmak istersiniz, en kötü durumda takılmak yerine. Bir algoritmanın ve performans/uygulamanın nasıl çalıştığını derinlemesine ve nüanslı bir şekilde anlamanız gerekir."
+    },
+    "11": {
+        "question": "Bir dizi, bir yığından nasıl farklıdır?",
+        "answer": "Bir dizinin veri eklemek veya almak için sabit bir yapısı yoktur, ancak bir yığının katı bir LIFO yaklaşımı (en son eklenen ilk çıkar) vardır. Bu tür sorular, veri yapılarının nüanslarını anlamanızı ve bunu hatırlama yeteneğinizi test eder."
+    },
+    "12": {
+        "question": "Dijkstra'nın En Kısa Yolu algoritmasını tercih ettiğiniz programlama dilinde nasıl uygularsınız?",
+        "answer": "Dijkstra'nın algoritması, bir grafikteki pozitif kenar ağırlıklarına sahip düğümler arasındaki en kısa yolu bulmak için kullanılır. Bu, mülakatçıların bir algoritmanın nasıl uygulanacağını anlama düzeyinizi test ettiği klasik bir algoritma sorusudur ve genellikle daha üst düzey yazılım geliştirme rolleri için görürsünüz. Dijkstra bir örnektir: Bellman-Ford, Floyd-Warshall gibi diğer algoritmalar da bulunmaktadır. Farklı algoritmaları ve uygulamalarını ve bu uygulamaları çeşitli şekillerde pratik etmek isteyeceksiniz."
+    },
+    "13": {
+        "question": "Blocking ve non-blocking çağrılar arasındaki fark nedir ve Node.js ile ilişkisi nedir? Her birinin bir örneğini verebilir misiniz?",
+        "answer": "Engelleyici çağrılar, ek JavaScript'in (örneğin giriş veya çıkışla ilgili bir şey) tamamlanana veya bitene kadar beklemek zorunda olduğu çağrılardır. Bunu senkron bir eylem olarak düşünebilirsiniz. Engelsiz çağrılar asenkron olarak çalışabilir ve bu nedenle performans avantajına sahip olacaktır.\n\nBu önemlidir çünkü JavaScript tek iş parçacıklıdır, yani belirli bir sırayla kodu yürütür ve her işlem, bir sonraki işleme geçmeden önce tamamlanmalıdır. JavaScript'in sadece bir çağrı yığını ve bir bellek yığını vardır. JavaScript motoru, tarayıcıda asenkron kodu işlemeye yardımcı olabilir.\n\nNode.js'deki çoğu G/Ç yöntemi hem senkron hem de asenkron bir yöntem sunar. Zorunlu senkron dosya okuması örneği, fs.readFileSync yöntemi olurken, fs.readFile yöntemi asenkron olacaktır."
+    },
+    "14": {
+        "question": "HTML5'teki web workers nedir ve neden önemlidir?",
+        "answer": "JavaScript tek iş parçacıklı olduğundan, eşzamanlılık ve aynı anda yapılan işlemler zor ve setTimeout ve setInterval gibi işlevlerle simüle edilmelidir. HTML5'teki web işçileri, bir web uygulamasında arka planda betiklerin çalışmasına yardımcı olurken, UI'da yapılan değişiklikleri engellemeden çalışmasına yardımcı olur. Etki olarak, web işçileri JavaScript'te çoklu iş parçacıklı işlemi simüle eder ve aynı anda çalışan betiklere izin verir."
+    },
+    "15": {
+        "question": "CSS dosyalarını nasıl düzenlersiniz? Bu yaklaşımın avantajları ve dezavantajları nelerdir?",
+        "answer": "Bu soru, organizasyon yeteneğinizi ve web geliştirme ön uç prensipleriyle olan aşinalığınızı test eder, özellikle de söz konusu rol daha çok ön uç odaklıysa. \n\nİşte mantıklı bir CSS dosyası düzeni için bir dosya şeması örneği:\n\n* reset.css: sıfırlama ve normalleştirme stilleri; minimal renk, kenar veya yazı tipiyle ilgili bildirimler\n* typography.css: başlık ve gövde metni için yazı tipi yüzleri, kalınlıkları, satır yükseklikleri, boyutları ve stilleri\n* layouts.css: sayfa düzenlerini ve segmentleri yöneten stiller, dahilinde ızgaralar\n* forms.css: form kontrolleri ve etiketleri için stiller\n* lists.css: listeyle ilgili stiller\n* tables.css: tablo ile ilgili stiller\n* carousel.css: karousel bileşenleri için gerekli stiller\n* accordion.css: akordeon bileşenleri için stiller."
+    },
+    "16": {
+        "question": "Rahat hissettiğiniz bir çerçeve kullanarak çoklu bölümlü bir tek sayfalık uygulama oluşturun",
+        "answer": "Mülakatçılar 2020'de React.js ve React Router'ı tercih edebilirler, ancak istediğiniz herhangi bir şeyi kullanabilirsiniz. Bu testin amacı, nasıl uygulama oluşturduğunuzu görmektir, hatta basit olanları bile, ve bunları hiç yapabilir misiniz. Sıklıkla, bir mülakatçı sizi bir çift programlama ortamında gözlemleyecek ve çalışma sürecinizin her adımını gözlemleyecektir."
+    },
+    "17": {
+        "question": "Black box testi nedir? White box testi nedir?",
+        "answer": "Yazılım Testi büyük ölçüde iki kategoriye ayrılabilir:\n\n* Black Box Testi, test edilen öğenin iç yapısının/ tasarımının/ uygulamasının test edici tarafından bilinmediği bir yazılım testi yöntemidir.\n\n* White Box Testi, test edilen öğenin iç yapısının/ tasarımının/ uygulamasının test edici tarafından bilindiği bir yazılım testi yöntemidir."
+    },
+    "18": {
+        "question": "Web sitelerini daha hızlı hale getirmenin bazı yolları nelerdir? Mümkün olduğunca çok farklı teknik isimlendirin.",
+        "answer": "1. Kendi içerik teslim ağı (CDN) uygulayın.\n2. Uyumlu görüntüler kullanın.\n3. Önbelleği kullanın, önbelleği kullanın, önbelleği kullanın.\n4. Eklentilerinizi değerlendirin.\n5. Görüntüleri CSS spreylerine birleştirin.\n6. HTTP keep-alive yanıt başlıklarını etkinleştirin.\n7. İçeriğinizi sıkıştırın.\n8. Bitiş başlıklarını yapılandırın.\n9. JavaScript ve CSS'yi küçültün.\n10. Barındırma paketinizi gözden geçirin."
+    },
+    "19": {
+        "question": "Fonksiyonel gereksinimler ile fonksiyonel olmayan gereksinimler arasındaki fark nedir?",
+        "answer": "Fonksiyonel gereksinimler, geliştirilmiş bir yazılım ürününün gerçekleştirmesi beklenen özelliklerdir. Örneğin, bir e-ticaret web sitesine ödeme seçeneği eklemek bir fonksiyonel gereksinim olacaktır. Fonksiyonel olmayan gereksinimler, Uygulamanın kullanılabilirliğini ölçer, kullanıcı arayüzü görünümü ve hissi, Güvenlik, Performans, Uyum, Güvenilirlik gibi."
+    },
+    "20": {
+        "question": "ReactJS'in en küçük yapı taşı nedir?",
+        "answer": "En küçük yapı taşları React.js elementleridir, bileşenler veya props olan daha büyük öğelerin aksine."
+    },
+    "21": {
+        "question": "Neden bir mikroservis yaklaşımını, tek parça bir uygulamaya tercih edersiniz?",
+        "answer": "Uygulamanızı bir mikroservis olarak inşa ettiyseniz, bu birbirinden bağımsız ve güçlü bir şekilde çalışan farklı hizmetlerin kombinasyonudur ve birbirlerine bağımlı değillerdir. Bunun nedenini çoklu arıza noktaları veya her uygulama için daha hızlı performans veya verimlilik istediğinizde yapabilirsiniz. Burada kararınızı savunmaya hazır olmalı ve ölçekleme sorunlarından bilgiye dayalı bir görüşe sahip olmalısınız."
+    },
+    "22": {
+        "question": "Bir yazılım geliştirme problemi hakkında bana biraz bilgi verin ve nasıl çözdüğünüzü anlatın.",
+        "answer": "Kısa bir tanım yapın. Diğer kişinin özel terimleri veya endüstriye özgü zorlukları bilmediğini varsayın. Mülakatçı hakkında anlatmak istediğiniz konuya ne kadar hakim olduğunu sorabilir ve cevabınızı bu kişinin seviyesine göre şekillendirebilirsiniz (daha teknik veya daha az teknik bir cevap)."
+    },
+    "23": {
+        "question": "Kişisel projeleriniz var mı? Onlardan bahseder misiniz?",
+        "answer": "Bazen bir proje fikrine karar vermek zordur. Bu sorunla karşılaşıyorsanız, farklı bir teknoloji yığını veya başka bir uygulamanın bir kopyasını yapmaya başlayarak işe başlayın. Bu, beyninizi hareketlendirecek ve sonunda yapmayı tercih edeceğiniz bir şey bulmanıza yardımcı olacaktır. Anahtar, harika bir fikir bulmak değil. Anahtar, bir şeyde başlamaktır.\n\nBir süre kopyanız üzerinde çalıştıktan sonra, uygulamadaki bazı eksiklikleri fark edebilir ve düzeltebilirsiniz. Veya bu kopyayı daha fazla yapmak istemediğinizi fark edebilir ve başka bir şeye başlarsınız. Varolan bir uygulamanın kopyasını yapmanın amacı, gerçekten kopyayı yapmak değildir. Amaç, gerçekten yapmak istediğiniz şeyi bulmanızı sağlamaktır."
+    },
+    "24": {
+        "question": "Bulut bilişim kavramını yaşça büyük (teknik olmayan) anneme açıklar mısınız?",
+        "answer": "En basit terimlerle, bulut bilişim, veri ve programlara İnternet üzerinden, kendi bilgisayarınızın sabit diski yerine, Google ve Amazon gibi bulut hizmeti sağlayıcılarının makinelerinde depolama ve erişim anlamına gelir."
+    },
+    "25": {
+        "question": "Patronunuz veya yöneticinizle hiç anlaşmazlığa düştünüz mü? Ne yaptınız?",
+        "answer": "Hedefiniz, patronunuzla anlaşmazlığa düştüğünüz ve bu anlaşmazlık konusunda haklı olduğunuz bir hikayeyi paylaşmaktır. Haklı olmanızın nedeni, hikayenizin ideal olarak ne kadar işinin ehli olduğunuzu göstermesidir, bu da işverenin sizi işe almaktan emin olmasını sağlar. Bu cevap ayrıca pazarlık yapma, bir fikri satma ve diğerleri üzerinde ilham verme gibi diğer harika becerileri de gösterebilir."
+    },
+    "26": {
+        "question": "[Şirket adı]'de çalışmak için nedeni nedir? Ürünlerimizi kullandınız mı?",
+        "answer": "Şirketin başarısına nasıl yardımcı olabilirsiniz? Şirketle ve endüstrisiyle ilgili olarak neler olup bittiğini araştırın. Şirketin büyüme aşaması nedir? Son zamanlarda ürün veya hizmet sunumlarını değiştirdi mi? Hangi rekabet baskılarıyla karşı karşıya? Bu manzarayı düşünün ve “Bu işverene bu büyüme ve/veya değişim zamanında özellikle yararlı olacak bilgi ve deneyime sahip miyim?” diye düşünün."
+    },
+    "27": {
+        "question": "Bir ürünü ne zaman tamamlanmış kabul edersiniz?",
+        "answer": "Yazılım geliştirme süreci asla bitmeyen bir döngüdür. Bir yazılım uygulamasının ilk sürümü nadiren “tamamlanmıştır”. Genellikle tasarlanması, geliştirilmesi ve dağıtılması için bekleyen ek özellikler ve hata düzeltmeleri vardır.\n\nKullanıcı arayüzü hataları hakkında gelen geri bildirimler ve kullanılamazlık yazılımları raporları, yazılım geliştirme sürecine geri döner ve yeni özellik istekleri ve mevcut özelliklerin iyileştirmeleri haline gelir."
+    },
+    "28": {
+        "question": "10 dakika boyunca bana bir şey öğretin.",
+        "answer": "Basit bir konu veya kavram seçin, bu, mülakatçının anlayabileceği ve anlamanın kolay olacağı bir şey olsun. Cevabı eğlenceli hale getirmek, mülakatçının dikkatini çekmeye yardımcı olacaktır. Cevabı neşeli tutun. İçerik, iletişim ve öğretme becerilerinizi göstermek kadar önemli değildir."
+    },
+    "29": {
+        "question": "Hangi web teknolojilerinden heyecan duyuyorsunuz ve neden gelecek on yıl içinde kazanacaklarını/direneceklerini düşünüyorsunuz?",
+        "answer": "Bir web teknolojisi seçin ve kazanma olasılığını diğer web teknolojilerine karşı nedenleriyle birlikte açıklayın (örneğin, teknik ve topluluk desteği). Bu soru, web geliştirme ve ortaya çıkan teknolojileri takip etme tutkunuzu, ayrıca web geliştirme alanının geleceği için stratejik vizyonunuzu ölçmeye çalışır."
+    },
+    "30": {
+        "question": "Açık kaynaklı projelere katkıda bulunuyor musunuz? Sorunlar bildirdiniz mi?",
+        "answer": "Bu soruda, açık kaynak ekosistemine olan tutkunuzu, yazılım mühendisliğine olan tutkunuzun bir göstergesi olarak işaretlemek isteyeceksiniz ve katkıda bulunma konusunda proaktif olma yeteneğinizi göstermek."
+    },
+    "31": {
+        "question": "Yazılım mühendisliğinde güncel kalmak için en sevdiğiniz kaynaklar nelerdir?",
+        "answer": "Hazırda bir kaynak listesine sahip olmak isteyeceksiniz, ancak daha da önemlisi, bu alandaki kaynakları gerçekten takip etme konusunda oldukça keskin olmak isteyeceksiniz. Bu, yeni şeyler öğrenme yeteneğinizi ve bunu yapmaktaki tutkunuzu gösterir; bu, sürekli değişen bir alanda önemli bir özelliktir. İşte öğrenebileceğiniz Hackernoon kaynaklarından biri."
+    }
+}

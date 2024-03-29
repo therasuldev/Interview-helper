@@ -1,0 +1,222 @@
+{
+    "1": {
+        "question": "Statik ve dinamik web siteleri arasındaki fark nedir?",
+        "answer": "* Statik Web Sitesi *\n\n1. Betik çalıştırıldıktan sonra içerik değiştirilemez\n2. İçeriği değiştirme yolu yoktur, çünkü önceden tanımlanmıştır\n\n* Dinamik Web Sitesi *\n\n1. İçerik çalışma zamanında değiştirilebilir\n2. İçerik, manipülasyon ve yeniden yükleme ile kolayca değiştirilebilir"
+    },
+    "2": {
+        "question": "PHP en çok hangi amaçlar için kullanılır?",
+        "answer": "PHP, geliştiriciler için birçok kullanıma sahiptir ve aşağıda belirtilenler PHP'nin sunduğu en yaygın kullanılan kavramlardan bazılarıdır:\n\n* PHP ile, web sitesinin gereken içeriğine kısıtlı erişim sağlamak çok kolaydır.\n* Kullanıcıların bireysel çerezlere erişmesine ve bunları gereğine göre ayarlamasına izin verir.\n* Veritabanı manipülasyon işlemleri, eklemeler, silmeler ve değiştirmeler gibi işlemler kolayca yapılabilir.\n* Form işleme, dosya işleme kavramlarını içeren özelliklerin yanı sıra e-posta entegrasyonu yaygın olarak kullanılır.\n* Sistem modülü, kullanıcılara açma, okuma, yazma vb. çeşitli sistem işlevlerini gerçekleştirmelerini sağlar."
+    },
+    "3": {
+        "question": "PHP, büyük-küçük harfe duyarlı bir betik dili midir?",
+        "answer": "Bu sorunun cevabı hem evet hem de hayır. PHP'de değişkenler ve bildirimleri tamamen büyük-küçük harfe duyarlıdır, ancak fonksiyon adları değildir.\n\nÖrneğin, PHP'de kullanıcı tanımlı fonksiyonlar büyük harfle tanımlanabilir, ancak daha sonra küçük harfle başvurulabilir ve normal şekilde çalışır.\n\nYeni başlayanlar için PHP mülakat soruları arasında, PEAR'ın ne olduğunu anlamanız gerekir."
+    },
+    "4": {
+        "question": "PHP'de PEAR'ın anlamı nedir?",
+        "answer": "PEAR, PHP Extension and Application Repository kelimelerinin kısaltmasıdır. Yeniden kullanılabilir PHP bileşenlerinin tümünü barındıran çerçevelerden biridir ve bir depodur. PHP kütüphanelerinin bazılarını içermesinin yanı sıra, otomatik olarak paketlerin kurulmasını sağlamak için PHP'de basit bir arayüz sunar."
+    },
+    "5": {
+        "question": "Bir PHP betiği nasıl çalıştırılır?",
+        "answer": "PHP betikleri, komut satırı arabiriminden (CLI) kolayca çalıştırılabilir. Sözdizimi aşağıdaki gibidir:\n\nphp dosyaadı.php\n\nBurada, dosyaadı betikleri içeren dosyayı temsil eder. .php uzantısı dosyaadının yanında gereklidir."
+    },
+    "6": {
+        "question": "PHP'de hangi türde değişkenler bulunur?",
+        "answer": "PHP'de sekiz temel veri türü vardır:\n\n* Dizi: Adlandırılmış ve sıralı veri koleksiyonu\n* Boolean: Mantıksal bir değer (Doğru veya Yanlış)\n* Double: 5.1525 gibi kayan noktalı sayılar\n* Tamsayı: Ondalık kısmı olmayan tam sayılar\n* Nesne: Veri ve işlevler içeren sınıfın bir örneği\n* NULL: Yalnızca NULL verisini destekleyen özel bir veri türü\n* Kaynak: Dış kaynaklara referanslar içeren özel değişkenler\n* Dize: 'Merhaba öğrenciler!' gibi karakter dizisi"
+    },
+    "7": {
+        "question": "PHP'de değişken adlandırma kuralları nelerdir?",
+        "answer": "PHP'de bir değişkeni adlandırırken takip etmeniz gereken iki temel kural vardır. Bunlar şunlardır:\n\n* Değişkenler sadece harflerle veya alt çizgilerle başlayabilir.\n* +, %, -, &, vb. gibi özel karakterler kullanılamaz."
+    },
+    "8": {
+        "question": "PHP değişkenlerinin başlıca özellikleri nelerdir?",
+        "answer": "PHP'de değişkenlerin kullanımının en önemli yönleri aşağıda belirtilmiştir:\n\n* Değişkenler, değer atamasından önce bildirilebilir.\n* Bir değişken değeri ataması ‘=’ operatörü kullanılarak yapılır.\n* PHP'de her değişken bir $ (dolar) işareti ile belirtilir.\n* Bir değişkenin değeri, en son atanan değere bağlıdır.\n* PHP değişkenleri özgün değildir. Açık bir bildirim yoktur.\n* PHP mülakat soruları arasında, NULL'ın ne olduğunu anlamanız gerekir."
+    },
+    "9": {
+        "question": "PHP'de NULL nedir?",
+        "answer": "NULL, sadece bir değerin varlığını belirtmek için kullanılan PHP'de özel bir veri türüdür. Başka hiçbir değer atayamazsınız.\n\nPHP'de NULL büyük-küçük harfe duyarlı değildir ve aşağıdaki gibi iki şekilde bildirilebilir:\n$var = NULL:\nVeya,\n$var = null;"
+    },
+    "10": {
+        "question": "PHP'de sabitler nasıl tanımlanır?",
+        "answer": "Sabitler, PHP'de define() işlevini kullanarak kolayca tanımlanabilir. Bu işlev, sabitlerin değerlerini tanımlamak ve çekmek için kullanılır.\n\nAdı üstünde, sabitler tanımlamadan sonra değiştirilemezler. Geleneksel $ işaretiyle başlama PHP sözdizimine ihtiyaç duymazlar."
+    },
+    "11": {
+        "question": "PHP'de constant() işlevinin kullanımı nedir?",
+        "answer": "constant() işlevi, önceden tanımlanmış bir sabit değişkenindeki değerleri almak için kullanılır. Özellikle değişkenin adını bilmiyorsanız kullanılır"
+    },
+    "12": {
+        "question": "PHP'de önceden tanımlanmış çeşitli sabitler nelerdir?",
+        "answer": "PHP birçok sabit içerir ve aşağıdakiler daha yaygın olarak kullanılanlardan bazılarıdır:\n\n* _METHOD_: Sınıf adını temsil eder\n* _CLASS_: Sınıf adını döndürür\n* _FUNCTION_: İşlev adını belirtir\n* _LINE_: Çalışma satır numarasını belirtir\n* _FILE_: Yolu ve dosya adını temsil eder"
+    },
+    "13": {
+        "question": "PHP'de değişkenler ile sabitler arasındaki fark nedir?",
+        "answer": "* Değişken *\n\n1. Değişkenlerin değişen yolları olabilir\n2. Varsayılan kapsam geçerli erişim kapsamıdır\n3. Tanımlama için $ ataması kullanılır\n4. Başlangıçta $ işaretinin zorunlu kullanımı\n\n* Sabit *\n\n1. Sabitler değiştirilemez\n2. Sabitler, herhangi bir kapsam kuralı olmadan her yerden erişilebilir\n3. Sabitler, define() işlevi kullanılarak tanımlanır\n4. Sabitler için $ işareti gerekmez"
+    },
+    "14": {
+        "question": "PHP kaçış (escape) deyimi ne anlama gelir?",
+        "answer": "PHP kaçışı, belirli kod öğelerinin PHP kodundan farklı olduğunu PHP ayrıştırıcısına belirtmek için kullanılan bir mekanizmadır. Bu, PHP kodunun diğer programın diğer yönlerinden farklı olduğunu belirtmek için temel araçları sağlar."
+    },
+    "15": {
+        "question": "PHP'de iki nesne nasıl karşılaştırılır?",
+        "answer": "PHP, iki nesneyi aynı anda karşılaştırmak için ‘==’ operatörünü sağlar. Bu, karşılaştırılan nesneler arasında niteliklerin ve değerlerin ortak varlığını kontrol etmek için kullanılır.\n\n‘===’ operatörü de, dikkate alınan her iki nesnenin de aynı sınıfa referans yaptığını kontrol etmek için kullanılır.\n\nPHP mülakat sorularında bir sonraki konu için temel bir kavramı anlamanız gerekir."
+    },
+    "16": {
+        "question": "PHP'de break ve continue deyimlerinin anlamı nedir?",
+        "answer": "Break: Bu deyim, bir döngü yapıda döngünün yürütülmesini sonlandırmak ve hemen ardından döngü dışındaki kod parçasını yürütmek için kullanılır.\n\nContinue: Bu deyim, döngünün mevcut yinelemesini atlamak ve döngü yapısının çıkış yapılana kadar bir sonraki yinelemeyi yürütmeye devam etmek için kullanılır."
+    },
+    "17": {
+        "question": "PHP'de popüler çerçeveler nelerdir?",
+        "answer": "PHP'de kullanılan birçok çerçeve vardır. İşte bunlardan bazıları:\n\n* CodeIgniter\n* CakePHP\n* Laravel\n* Zend\n* Phalcon\n* Yii 2"
+    },
+    "18": {
+        "question": "PHP'de final sınıf ve final yöntemin kullanımı nedir?",
+        "answer": "'final' anahtar kelimesi, bir bildirimde bulunuyorsa, mevcut yöntemin diğer sınıflar tarafından geçersiz kılınmadığını belirtir. Bu, değiştirilemez bir sınıf oluşturma gereksinimi olduğunda kullanılır.\n\nNot: Özellikler final olarak tanımlanamaz. Yalnızca yöntemler ve sınıflar final olabilir.\n\nBu temel PHP mülakat soruları ve cevapları blogunda, özellikle ara sorulara bir göz atalım."
+    },
+    "19": {
+        "question": "JavaScript PHP ile nasıl etkileşime geçer?",
+        "answer": "JavaScript bir istemci tarafı programlama dili iken, PHP bir sunucu tarafı betik diliidir. PHP, JavaScript değişkenlerini oluşturma yeteneğine sahiptir ve bu, tarayıcıda kolayca yürütülebilir, böylece değişkenlerin PHP'ye basit bir URL kullanarak iletilmesini mümkün kılar."
+    },
+    "20": {
+        "question": "PHP HTML ile etkileşime geçer mi?",
+        "answer": "Evet, HTML ve PHP etkileşimi, PHP'nin işlevselliğini sağlayan temel noktadır. PHP betikleri HTML modunu oluşturma ve bilgiyi çok kolay bir şekilde taşıma yeteneğine sahiptir.\nPHP bir sunucu tarafı betik dili iken, HTML bir istemci tarafı diliidir. Bu etkileşim, boşlukları kapatır ve her iki dilin en iyisini kullanır."
+    },
+    "21": {
+        "question": "PHP tarafından desteklenen dizi türleri nelerdir?",
+        "answer": "PHP'de kullanılan üç ana dizi türü vardır.\n\n* İndeksli diziler: Sayısal veriler içeren dizilerdir. Veri erişimi ve depolaması indeksli dizilerde lineerdir.\n* İlişkilendirilmiş diziler: Öğelerin indekslenmesi için dizeler içeren dizilerdir.\n* Çok boyutlu diziler: Birden fazla dizin ve boyut içeren dizilerdir."
+    },
+    "22": {
+        "question": "PHP'de 'foreach' döngüsü nasıl çalışır?",
+        "answer": "foreach ifadesi, PHP'de dizilerdeki verileri yinelemek ve döngü yapmak için kullanılan bir döngü yapısıdır. foreach'ün çalışması basittir; her geçişte, değerlere bir değer atanır ve işaretçiler artırılır. Bu işlem, dizi sonuna kadar tekrarlanır."
+    },
+    "23": {
+        "question": "require() ve require_once() işlevleri arasındaki fark nedir?",
+        "answer": "* require() *\n\n1.Dosyaların dahil edilmesi ve değerlendirilmesi\n2.Daha az işlevi olan dosyalar için tercih edilir\n\n* require_once() *\n\n1.Önce dahil edilmediyse dosyaları içerir\n2.Çok sayıda işlev olduğunda tercih edilir"
+    },
+    "24": {
+        "question": "PHP'de sonsuz çalışma zamanı ayarlamak mümkün müdür?",
+        "answer": "Evet, bir betik için PHP'de sonsuz çalışma zamanına sahip olmak mümkündür. Bunun için bir betiğin başına set_time_limit(0) işlevini eklemek gerekir.\n\nBu ayrıca betiğin başlangıcında değilse 'php.ini' dosyasında da gerçekleştirilebilir."
+    },
+    "25": {
+        "question": "PHP'de yapılandırıcılar ve yıkıcılar ne işe yarar?",
+        "answer": "Yapılandırıcılar, PHP'de nesne oluşturulurken otomatik olarak çağrılan özel yöntemlerdir. Başlıca amacı, nesnenin özelliklerini başlatmak ve gerekli kurulum görevlerini gerçekleştirmektir. Yapılandırıcılar, bir nesnenin geçerli ve kullanılabilir bir durumda olmasını sağlamak için özellikle yararlıdır. Yapılandırıcılar, nesnenin özelliklerinin başlangıç değerlerini tanımlamak ve ayarlamak veya diğer başlangıç işlemlerini gerçekleştirmek için geliştiricilere olanak tanır. Yapılandırıcıları kullanarak, nesne uygun şekilde yapılandırılabilir ve hemen kullanıma hazır hale getirilebilir.\n\nYıkıcılar, bir nesnenin kapsam dışına çıktığında otomatik olarak çağrılır. Temel amacı, nesnenin yok edilmeden önce ve sonrasında belleğinin serbest bırakılmasından önce temizlik işlemlerini gerçekleştirmektir. Yıkıcılar, kaynakları serbest bırakmak, veritabanı bağlantılarını kapatmak ve gerekli temizlik işlemlerini gerçekleştirmek için değerlidir. Yıkıcıların uygulanmasıyla, artık gerekli olmadığında kaynakların uygun şekilde yönetilmesi ve serbest bırakılması sağlanabilir, böylece bellek sızıntıları ve diğer potansiyel sorunlar etkili bir şekilde önlenir."
+    },
+    "26": {
+        "question": "PHP ile yapılmış bazı üst düzey İçerik Yönetim Sistemleri (CMS) nelerdir?",
+        "answer": "PHP ile yapılmış birçok CMS bulunmaktadır. Popüler olanlar aşağıda belirtilmiştir:\n\n* WordPress\n* Joomla\n* Magento\n* Drupal"
+    },
+    "27": {
+        "question": "PHP'de şifreleri karmaşıklaştırmak için en çok kullanılan yöntem nedir?",
+        "answer": "crypt() işlevi, bu işlevselliği sağlamak için yaygın olarak kullanılır çünkü kullanılabilecek birçok karmaşıklaştırma algoritması sunar. Bu algoritmalar md5, sha1 veya sha256 gibi şeyleri içerir."
+    },
+    "28": {
+        "question": "İndeksli dizi ile ilişkisel dizi arasındaki fark nedir?",
+        "answer": "İndeksli diziler, sayısal bir dizin değeri içeren öğeleri içerir.\nÖrnek: $color=array('kırmızı','yeşil','mavi');\n\nBurada, kırmızı 0 endeksinde, yeşil 1 endeksinde ve mavi 2 endeksindedir.\n\nÖte yandan, ilişkisel diziler aşağıdaki gibi dize indeksleriyle öğeleri tutar:\nÖrnek: $salary=array('Jacob'=>'20000','John'=>'44000','Josh'=>'60000');"
+    },
+    "29": {
+        "question": "PHP'de oturumlar ve çerezler nedir?",
+        "answer": "Oturumlar, mimari içinde sunucuda depolanan global değişkenlerdir. Her bir oturum, daha sonra değerlerin depolanması ve alınması için kullanılan benzersiz bir sunucu kimliğiyle etiketlenir.\n\nÇerezler, mimaride benzersiz kullanıcıları tanımlamak için kullanılan varlıklardır. Bu, sunucunun istemci sisteme küçük bir dosya yerleştirmesini sağlar. Bu, istemciden çeşitli sunucu bileşenlerinin geliştirilmesi için yararlı bilgiler almak için yapılır."
+    },
+    "30": {
+        "question": "PHP'de tür dönüştürme destekleniyor mu?",
+        "answer": "Evet, tür dönüştürme PHP tarafından desteklenir ve çok kolay bir şekilde yapılabilir. PHP'de dönüştürülebilecek türler aşağıdaki gibidir:\n\n* (int), (integer): Tamsayıya dönüştürme\n* (bool), (boolean): Mantıksal değere dönüştürme\n* (float), (double), (real): Ondalık sayıya dönüştürme\n* (string): Dizeye dönüştürme\n* (array): Diziye dönüştürme\n* (object): Obje'ye dönüştürme"
+    },
+    "31": {
+        "question": "PHP'de bir form, bir gönder düğmesi kullanmadan gönderilebilir mi?",
+        "answer": "Evet, bir form, açıkça bir düğme kullanmadan gönderilebilir. Bu, JavaScript'in submit() işlevinin kullanılmasıyla kolayca yapılır.\n\nPHP geliştirici mülakat soruları serisinde bir sonraki soruda, PHP hakkında detaylı bilgi sahibi olmanız önemlidir. Devam edelim."
+    },
+    "32": {
+        "question": "session_start() ve session_destroy() işlevlerinin kullanımı nedir?",
+        "answer": "PHP'de, session_start() işlevi yeni bir oturumu başlatmak için kullanılır. Ancak, durdurulmuş bir oturumu da devam ettirebilir. Bu durumda, dönüş, devam edilen mevcut oturum olacaktır."
+    },
+    "33": {
+        "question": "PHP'de bir dosyayı nasıl açabilirsiniz?",
+        "answer": "PHP, kullanıcılara dosya ile ilgili birçok işlev sağlayarak dosya işlemlerini destekler.\n\nBir dosyayı açma durumunda, fopen() işlevi kullanılır. Bu işlev isteğe bağlı olarak bir dosya veya URL'yi açabilir. İki argüman alır: $filename ve $mode."
+    },
+    "34": {
+        "question": "PHP'de farklı türde hatalar nelerdir?",
+        "answer": "PHP'de üç temel hata türü vardır. Bunlar aşağıdaki gibidir:\n\n* Notice: Bir uyarı, kullanıcıya gösterilmeyen önemsiz bir hatadır.\n* Warning: Bir uyarı, komut dosyası çalışırken kullanıcıya gösterilen bir hatadır.\n* Fatal error: Bu en kritik hata türüdür. Ölümcül bir hata, komut dosyasının derhal sonlandırılmasına neden olur."
+    },
+    "35": {
+        "question": "PHP'de bir istemcinin IP adresini nasıl alabilirsiniz?",
+        "answer": "Bağlı olan bir istemcinin IP adresi, PHP'de aşağıdaki sözdizimini kullanarak kolayca alınabilir:\n\n$_SERVER['REMOTE_ADDR'];"
+    },
+    "36": {
+        "question": "PHP'de $message ve $$message'ın kullanımı nedir?",
+        "answer": "$message ve $$message, PHP'de değişkenlerdir ve fark, isimde yatar. $message sabit bir isme sahip bir değişkendir, $$message ise aslında $message içinde depolanan bir isme sahip bir değişkendir."
+    },
+    "37": {
+        "question": "PHP'de GET ve POST yöntemleri arasındaki fark nedir?",
+        "answer": "* GET Yöntemi *\n\n1. GET yöntemi aynı anda maksimum 1024 karakter gönderebilir\n2. GET, ikili veri göndermeyi desteklemez\n3. Gönderilen verilere erişmek için QUERY_STRING ortam değişkeni kullanılır\n4. Gönderilen bilgilere erişmek için $_GET ilişkilendirilmiş dizisi kullanılır\n\n* POST Yöntemi *\n\n1. Veri boyutu üzerinde kısıtlama yoktur\n2. POST, ikili verileri ve ASCII'yi destekler\n3. Veriyi itmek için HTTP protokolü ve başlık kullanılır\n4. Gönderilen bilgilere burada erişmek için $_POST ilişkilendirilmiş dizisi kullanılır"
+    },
+    "38": {
+        "question": "PHP'de lambda işlevlerinin kullanımı nedir?",
+        "answer": "Anonim bir işlev olan lambda işlevi, önce veriyi bir değişkene depolamak ve sonra onu başka yöntemlerde veya işlevlerde kullanmak için argüman olarak geçirmek için kullanılır.\nAşağıdaki örneği düşünün:\n\n$input = array(2, 5, 10);\n\n$output = array_filter($input, function ($x) { return $x > 2; });\n\nBuradaki lambda işlevi tanımı:\nfunction ($x) { return $x > 2; });\nBu daha sonra bir değişkene veri depolamak için kullanılır ve ardından tekrar tanımlama gereksinimi olmadan gerektiğinde kullanılabilir."
+    },
+    "39": {
+        "question": "PHP'de derleme zamanı istisna ile çalışma zamanı istisna arasındaki fark nedir?",
+        "answer": "Adından da anlaşılacağı gibi, betik derlenirken herhangi bir istisna oluşursa, buna derleme zamanı istisnası denir. FileNotFoundException, bir derleme zamanı istisnası için iyi bir örnektir.\n\nÇalışma zamanı istisnası, betik çalışırken betiği kesen bir istisnadır. ArrayIndexOutOfBoundException, bir çalışma zamanı istisnası için bir örnektir."
+    },
+    "40": {
+        "question": "PHP'de tür belirtmenin anlamı nedir?",
+        "answer": "Tür belirtme, bir işlevi geçirirken bir argümanın veri türünü açıkça tanımlamanın gerektiği durumlarda PHP'de kullanılır.\n\nBu işlev ilk çağrıldığında, PHP belirtilen tüm veri türlerinin varlığını analiz etmek için hızlı bir kontrol çalıştıracaktır. Eğer farklıysa, o zaman çalışma zamanı duracak ve bir istisna yükseltilir."
+    },
+    "41": {
+        "question": "Bir URL nasıl PHP ile bağlantılıdır?",
+        "answer": "Herhangi bir URL, PHP'nin standart kurulumuyla birlikte gelen cURL adlı kütüphaneyi kullanarak kolayca PHP ile bağlantılı hale getirilebilir.\n\n‘cURL’ terimi, kullanıcıların bir URL'ye bağlanmasına ve o sayfadan bilgi almasına olanak tanıyan bir istemci tarafı URL'sini ifade eder."
+    },
+    "42": {
+        "question": "MySQL ve PHP kullanarak yeni bir veritabanı oluşturmanın adımları nelerdir?",
+        "answer": "PHP'de yeni bir MySQL veritabanı oluşturmak için kullanılan dört temel adım vardır. Bunlar şöyledir:\n\n* İlk olarak, PHP betiği kullanılarak MySQL sunucusuna bir bağlantı kurulur.\n* İkincisi, bağlantı doğrulanır. Bağlantı başarılıysa, bir örnek sorgu yazabilirsiniz.\n* Veritabanını oluşturan sorgular girilir ve daha sonra bir dize değişkenine depolanır.\n* Ardından, oluşturulan sorgular birbirini takip ederek yürütülür."
+    },
+    "43": {
+        "question": "PHP'de dizgenin birleştirilmesi nasıl çalışır?",
+        "answer": "Dizgenin birleştirilmesi, PHP'de nokta(.) operatörü kullanılarak kolayca gerçekleştirilir. Aşağıdaki örneği göz önünde bulundurun:\n<?php $string1='Welcome'; $string2='to Intellipaat'; echo $string1 . ' ' . $string2; ?>"
+    },
+    "44": {
+        "question": "Zaten bir Boolean değeri olmayan herhangi bir değerin 'doğruluğunu' belirlemek için hangi kurallar vardır?",
+        "answer": "Bir değer, ya boş olmayan bir dizge ya da sıfırdan farklı bir sayı ise \"doğru\" olarak kabul edilir. Null değeri veya boş bir dizge gibi diğer her şey yanlış olarak kabul edilir. Ayrıca, bir dizi açıksa yanlış, en az bir giriş varsa doğru kabul edilir. Null da yanlış olarak kabul edilir."
+    },
+    "45": {
+        "question": "PHP ile bir şifreyi nasıl şifreleyebiliriz?",
+        "answer": "crypt() işlevi tek yönlü şifreleme oluşturmak için kullanılır. Bir giriş dizesi ve bir isteğe bağlı parametre alır. İşlev şu şekilde tanımlanır:\ncrypt($input_string, $salt)\n\nBurada, $input_string şifrelenmesi gereken giriş dizesini oluşturur ve $salt da bir dize parametresidir ve burada güçlü bir parola oluşturmak ve bu işlemde temel olarak hareket eder. PHP şifreleme için DES kullanır."
+    },
+    "46": {
+        "question": "Bir gönderim düğmesi olmadan bir form nasıl gönderilir?",
+        "answer": "Bir form, aşağıdaki şekillerde düğme olmadan gönderilebilir veya post edilebilir:\n* Formdaki bir etiketin OnClick olayında bir JavaScript işlevi çağrılabilir.\nÖrnek:\n document.form_name.submit()\n* Bir Bağlantı Kullanarak: Bağlantıya tıklandığında bir JavaScript işlevi çağrılabilir.\n* Aşağıdaki şekillerde de bir gönderim düğmesi olmadan bir form gönderilebilir:\n** Bir bağlantıya tıklayarak bir form göndermek\n** Bir değişiklik olayının çağrılmasıyla bir açılır kutudan bir seçenek seçerek bir form göndermek\n** JavaScript kullanarak:\ndocument.form.submit();\n* header(\"location:page.php\"); kullanarak"
+    },
+    "47": {
+        "question": "Bir PHP betiğinin yürütme süresini nasıl artırabiliriz?",
+        "answer": "* Bir PHP betiğinin yürütülmesine izin verilen varsayılan süre php.ini dosyasında belirtilmiş olup 30 saniyedir. Kullanılan işlev set_time_limit(int sec)’dir. Geçilen değer ‘0’ ise sınırsız süre alır. Varsayılan zamanlayıcı 30 saniye ayarlanmış ve set_time_limit() içine 20 saniye belirtilirse, betik 45 saniye çalışır.\n* Bu süre, saniye cinsinden max_execution_time değiştirilerek artırılabilir. Zaman, sunucunun ortamını göz önünde bulundurarak değiştirilmelidir. Çünkü yürütme zamanının değiştirilmesi sunucu tarafından barındırılan tüm siteleri etkileyecektir.\n* Betik yürütme süresi şu şekillerde artırılabilir:\n** PHP betiğinde sleep() işlevi kullanarak\n** set_time_limit() işlevini kullanarak\n\nVarsayılan sınırlama 30 saniyedir. Zaman sınırı sıfıra ayarlanarak sınırsız süre kısıtlanabilir"
+    },
+    "48": {
+        "question": "Zend Engine nedir?",
+        "answer": "Zend Engine, PHP tarafından içsel olarak derleyici ve çalışma zamanı motoru olarak kullanılır. PHP betikleri belleğe yüklenir ve Zend OPCodes'e derlenir.\nBu OPCodes yürütülür ve oluşturulan HTML istemciye gönderilir.\nZend Engine, PHP dil için bellek ve kaynak yönetimi ile diğer standart hizmetleri sağlar. Performansı, güvenilirliği ve genişletilebilirliği, PHP'nin giderek artan popülerliğinde önemli bir rol oynamıştır."
+    },
+    "49": {
+        "question": "PHP'de PDF için hangi kütüphane kullanılır?",
+        "answer": "PHP'deki PDF işlevleri, PDFlib sürüm 6'yı kullanarak PDF dosyaları oluşturabilir. PDFlib, PHP5 için bir nesne yönelimli API sunar ve PHP4 için işlev yönelimli API'ye ek olarak.\nAyrıca Â» Panda modülü bulunmaktadır.\nFPDF, PHP sınıfıdır ve saf PHP kullanarak PDF dosyaları oluşturmayı sağlar (PDFlib kullanılmadan). FPDF'deki F, Free için geçerlidir: herhangi bir gereksinim için kullanabilir ve ihtiyacımıza göre değiştirebiliriz. FPDF, sıkıştırmayı etkinleştirmek için zlib dışında (ve GIF desteği için GD) herhangi bir uzantı gerektirmez ve PHP4 ve PHP5 ile çalışır."
+    },
+    "50": {
+        "question": "htaccess nedir? Neden ve nerede kullanırız?",
+        "answer": ".htaccess dosyaları, Apache Sunucusunun yapılandırma dosyalarıdır ve dizin bazında yapılandırma değişiklikleri yapmanın bir yolunu sağlar. Bir veya daha fazla yapılandırma yönergesi içeren bir dosya, belirli bir belge dizinine yerleştirilir; yönergeler bu dizine ve bu dizinin tüm alt dizinlerine uygulanır.\nBu .htaccess dosyaları, Apache web sunucusunun işlevselliğini ve özelliklerini değiştirmek için kullanılır.\nÖrneğin:\n\n* .htaccess dosyası URL yeniden yazma için kullanılır.\n* Siteye parola koruması eklemek için kullanılır.\n* Bazı IP adreslerini sınırlayabilir, böylece bu kısıtlı IP adreslerinde site açılmaz."
+    },
+    "51": {
+        "question": "PHP'de PEAR ne anlama gelir?",
+        "answer": "PEAR, PHP Extension and Application Repository'nin kısaltmasıdır. PEAR'ın amacı şunları sağlamaktır:\n\n* PHP kullanıcıları için açık kaynaklı kodların yapılandırılmış bir kütüphanesi\n* Kodun dağıtımı ve paket bakımı için bir sistem\n* PHP'de kod yazmak için standart bir stil\n* PHP Foundation Classes (PFC)\n* PHP Extension Community Library (PECL)\n* PHP/PEAR topluluğunu desteklemek için web sitesi, posta listeleri ve indirme aynaları"
+    },
+    "52": {
+        "question": "soundex() ve metaphone() işlevlerini açıklayın.",
+        "answer": "soundex() işlevi, bir dizgenin ses dizisini hesaplar. Bir ses dizesi, bir kelimenin İngilizce telaffuzunu temsil eden 4 karakter uzunluğunda alfanümerik bir dizidir. soundex() işlevi, yazım uygulamaları için kullanılabilir.\n\nmetaphone() işlevi, bir dizgenin metafon anahtarını hesaplar. Bir metafon anahtarı, bir dizgenin bir İngiliz (yerli) kişi tarafından telaffuz edilirse nasıl ses çıkaracağını temsil eder. Bu işlev de yazım uygulamaları için kullanılabilir."
+    },
+    "53": {
+        "question": "Smarty nedir?",
+        "answer": "Smarty, PHP'de yazılmış bir şablon motorudur. Genellikle, bu şablonlar {$variable} gibi değişkenleri içerecek ve şablonlar içinde adapte olabilirliği sağlamak için çeşitli mantıksal ve döngü operatörlerini içerecektir."
+    },
+    "54": {
+        "question": "Memcache nedir?",
+        "answer": "Memcache, nesneleri bellekte önbelleğe alır ve bir web uygulamasının bunlara gerçekten hızlı bir şekilde ulaşmasını sağlar. Digg, Facebook ve NowPublic gibi siteler tarafından kullanılmaktadır ve herhangi bir LAMP'ın ölçeklendirilmesinde temel bir bileşen olarak tanınır."
+    },
+    "55": {
+        "question": "Bir PHP betiğini komut satırı kullanarak nasıl çalıştırabiliriz?",
+        "answer": "PHP CLI (Komut Satırı Arayüzü) programını çalıştırıp PHP betik dosyasının adını komut satırı argümanı olarak sağlamamız yeterlidir, örneğin, php myScript.php, php'yi CLI programını çağırmak için komut olarak varsayarak.\n\nPHP betiğimiz Web CGI arabirimine yazılmışsa, komut satırı ortamında düzgün çalışmayabilir."
+    }
+}

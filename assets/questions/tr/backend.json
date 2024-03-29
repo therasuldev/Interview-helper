@@ -1,0 +1,186 @@
+{
+    "1": {
+        "question": "Arka uçta yeni bir özelliği uygulamak için tipik iş akışı nedir?",
+        "answer": "Arka uçta özelliklerin uygulanmasında kullanılan iş akışları, şirketin hangi teknoloji yığınını kullandığına bağlı olarak değişebilir. Tipik bir iş akışı, özelliği paydaşlarla tartışmayı, prototip oluşturmayı ve tasarımını yapmayı, kod yazmayı ve kalite güvencesi (QA) yapmayı içerebilir.\n\nArka uç geliştiricisi genellikle verilerin istemci ile sunucu arasında uygun şekilde iletilmesini sağlamak için ön uç geliştiricisi ile birlikte çalışır. Ayrıca, yeni özelliklerin uygulamanın eski sürümleri ile uyumlu olduğundan emin olmak da önemlidir."
+    },
+    "2": {
+        "question": "Web sunucusu nedir?",
+        "answer": "Web sunucusu, web sayfalarını depolayan ve dağıtan bir bilgisayar olarak tanımlanabilir. Bir URL'yi tarayıcıya girdiğinizde, tarayıcı sayfayı istemek için bir web sunucusuna başvurur. Sayfa daha sonra web sunucusu tarafından tarayıcıya geri gönderilir ve ekranda görüntülenir.\n\nNGINX ve Apache, arka uç uygulamaları tarafından en yaygın kullanılan iki web sunucusudur. Web sunucuları ayrıca videolar ve resimler gibi diğer kaynakları da barındırabilir."
+    },
+    "3": {
+        "question": "DRY ve DIE prensipleri nedir?",
+        "answer": "Yazılım geliştiriciler, kodu tekrar etmemeli ve DRY prensibine (Kendini Tekrar Etme) göre hareket etmelidir. Tekrarlanan kod, birden fazla değişiklik yapılması gerektiğinde bakım sorunlarına neden olabilir. DRY prensibine benzer şekilde, DIE (Duplikasyonun Kötülüğü) bir adım daha ileri giderek hatta küçük miktarlardaki tekrarlamaların bile kaçınılması gerektiğini belirtir."
+    },
+    "4": {
+        "question": "GET ve POST arasındaki fark nedir?",
+        "answer": "Bir GET sorgusu veri alırken, bir POST sorgusu veri gönderir. Bir GET isteği parametreleri URL'de iletilir. Bir POST isteğinde ise parametreler isteğin gövdesinde bulunur."
+    },
+    "5": {
+        "question": "Yazılım mimarisi ile yazılım tasarımı arasındaki fark nedir?",
+        "answer": "Yazılım mimarisi, program yapısına atıfta bulunur. Bu nedenle, çıplak bir program iskeleti olarak anlaşılabilir. Yazılım tasarımı, yazılım gereksinimlerine yönelik kodun gerçek uygulanmasına atıfta bulunur. Bu nedenle, yazılım mimarisi programın temel taslağı olarak düşünülebilir ve yazılım tasarımı programın nasıl oluşturulacağı süreci olarak düşünülebilir.\n\nGeliştirme açısından, yazılım tasarımı detaylara iner. Yazılım mimarisi ve yazılım tasarımı, entegre bir geliştirme süreci oluşturmak için birlikte çalışan iki ayrı süreçtir."
+    },
+    "6": {
+        "question": "Sürekli entegrasyon ve sürekli teslimat hakkında konuşun.",
+        "answer": "Sürekli entegrasyon ve sürekli teslimat, birbirine bağlı iki yazılım mühendisliği sürecidir. Sürekli entegrasyon, programın düzenli olarak inşa edilip test edilmesini sağlamak için sürekli olarak gerçekleşen bir süreçtir. Sürekli teslimat ise, üretimden hemen önce program yaşam döngüsünün sonraki kısmında gerçekleşen sürekli geliştirme sürecidir.\n\nBu iki süreç, geliştirme ve operasyon ekipleri arasındaki tutarsızlıkları ortadan kaldırarak çalışmayı izlemekte ve üretim hızını artırmak için birbiriyle uyumlu otomatik bir süreç oluşturmaktadır."
+    },
+    "7": {
+        "question": "Bir yazılım programına ölçeklenebilirlik nasıl entegre edilir?",
+        "answer": "Ölçeklenebilirlik, özellikle daha yüksek kullanıcı talepleri ve daha yüksek miktarda kullanıcı verisi adaptasyonu göz önünde bulundurularak verimliliği artırmak için önemli bir husustur. Bir yazılım programının ömür değerini belirlemek için, ölçeklenebilirliğini kontrol etmek gerekir.\n\nÖlçeklenebilirlik eksikliği, uygulamanın büyümeye uyum sağlayan yeni bir teknoloji yığını ile yeniden yazılma ihtiyacını gerektirir. Bir programın ölçeklenebilirliği özelliklerle artabilir, bu özellikler arasında önbellek, durumlar, API, sıralama ve asenkron programlama bulunur. Ayrıca, bazı diğer araçlar gibi veritabanları ve çerçeveler, bazı diğerlerinden daha büyük ölçeklenebilirliğe sahiptir."
+    },
+    "8": {
+        "question": "NoSQL veritabanları nedir? Farklı NoSQL veritabanı türlerini belirtin.",
+        "answer": "Büyük verinin artmasıyla, internet karmaşık bir yer haline gelmiştir. NoSQL veritabanları bu sorunu çözmeye yardımcı olur. NoSQL veritabanları, ne geleneksel ne de ilişkisel veritabanı yönetim sistemleridir.\n\nNoSQL, 'Sadece SQL Değil' anlamına gelir. Verinin artan miktarlarıyla, büyük bir yüzde, yaklaşık %85, yapısal olmayan, dağınık ve karmaşık veridir. NoSQL veritabanı, bu tür verileri işler ve sıralar. Bu nedenle, NoSQL, ilişkisel Veritabanı Yönetim Sistemi'nde (RDBMS) kullanılan tablo ilişkileri yerine diğer yöntemlerle modelleme yapılan veriler için bir depolama ve alım mekanizması sunar.\n\nNoSQL veritabanlarının türleri şunları içerir\n\n* Grafik\n* Anahtar-değer\n* Belge odaklı\n* Sütun odaklı"
+    },
+    "9": {
+        "question": "Neden Mikro Hizmet Mimarisi kullanılır?",
+        "answer": "Mikro hizmet mimarisi, bir uygulamada birkaç küçük ancak bağımsız olarak dağıtılabilir hizmetin entegrasyonuyla karakterize edilir. İşlemi daha esnek hale getirir, çünkü farklı programlama dilleri bireysel hizmetlerin yazılmasında kullanılabilir. Dolayısıyla, farklı diller farklı hizmetler için kullanılabilir.\n\nBakım da daha kolaydır, çünkü hizmetler entegre edilmiş olsa da, gevşek bağlantılıdırlar. Mikro hizmet mimarisi modeli daha büyük ekiplerle iyi çalışır ve tercih edilir, ancak hata ayıklama gibi bazı zorluklardan tamamen muaf olmayabilir."
+    },
+    "10": {
+        "question": "SQL enjeksiyonunu açıklayın.",
+        "answer": "Bir SQL enjeksiyonu, kötü niyetli kod enjekte ederek veritabanını yok edebilir veya veritabanınızı bir hacker kodu enjekte ederek hackleyebilir. Bu, program kodu ile kullanıcı girdisi arasında az bir ayrım olduğu için meydana gelir. SQL enjeksiyonu, veritabanlarında yaygın bir enjeksiyon saldırı türüdür.\n\nBir enjeksiyon saldırısı şu yollarla engellenebilir:\n\n* Tanımlı parametrelere sahip sorgularla hazırlık ifadeleri oluşturun\n* Önceden tanımlı ve saklanmış prosedürler kullanın\n* Giriş için bir doğrulama süreci oluşturun, böylece girişi karaliste veya beyazliste yapabilirsiniz\n* En az ayrıcalık ilkesini kullanın, yani kamuya açık veritabanı sunucusuna premium yönetici türü erişim sağlamayın. Bu nedenle, hacker uygulamaya sızabilirse bile, veritabanının bütünlüğünü tehlikeye atmaz çünkü buna erişemezler."
+    },
+    "11": {
+        "question": "Kabul ve işlevsel testler arasındaki farkı açıklayın.",
+        "answer": "Farklar şöyledir:\n\nİşlevsel test: İşlevsel test, özellikle uygulamanın, ürünün gerektiği gibi çalışıp çalışmadığını doğrulamak için yapılır. Oluşturulan yazılımın iş gereksinimlerini karşılayıp karşılamadığını belirler.\n\nKabul testi: Kabul testi, doğru ürünü oluşturup oluşturmadığınızı doğrulamak için yapılır. Ürünün müşterinin gereksinimlerini karşıladığını doğrular. Kabul testleri, kullanıcının (müşterinin) üründen gerçekten faydalandığını ve amaçlandığı şekilde kullanıldığını belirler."
+    },
+    "12": {
+        "question": "Performans testi adımlarından bazılarını belirtin.",
+        "answer": "* Test için ortamı belirleyin\n* Hangi performans ölçütlerinin kullanılacağını kesinleştirin\n* Performans testi için bir plan ve tasarım oluşturun\n* Test için ortamı yapılandırın\n* Test için tasarımı uygulayın\n* Performans testlerini gerçekleştirin\n* Test analizi yapın, test raporu oluşturun ve performansı düşük olan uygulamalar için yeniden test etmeyi önerin"
+    },
+    "13": {
+        "question": "Web servislerinin bazı avantajlarını belirtin.",
+        "answer": "* Etkileşimlilik: Web servislerine ağ üzerinden erişilebilir ve HTTP/SOAP protokolleri kullanılarak çalıştırılabilir. Veri taşıma işlemi için web servisleri XML/JSON kullanır, böylece farklı programlama dillerinde kullanılabilirler. Örneğin, Java'da yazılmış bir web servisine ağ üzerinden erişilebilir, HTTP/SOAP protokolünde çalışır ve veri taşıma işlemi için XML/JSON kullanır, bu nedenle herhangi bir programlama dilinde geliştirilebilir. Web servisi, Java programlama diliyle yazılabilir ve istemci olarak PHP kullanılabilir ve tersi de geçerlidir.\n* Yeniden Kullanılabilirlik: Birçok istemci uygulaması aynı web servisini aynı anda kullanabilir.\n* Gevşek Bağlantı: Web servisleri istemci kodunun sunucu koduna bağlı olmadığı için, uygulamada gevşek bağlantı mümkündür.\n* Dağıtımı ve entegrasyonu kolaydır, tam olarak web uygulamaları gibi.\n* Birden fazla hizmet sürümü aynı anda çalıştırılabilir."
+    },
+    "14": {
+        "question": "Kümeleme ve kümeleme olmayan dizinler arasındaki farkı açıklayın?",
+        "answer": "Kümeleme dizini, satırları diskte dizinde göründükleri sırayla fiziksel olarak depolar. Bu nedenle, yalnızca bir kümeleme dizini mümkündür. Kümeleme dizini, diskte birbirlerine yakın değerleri saklamak için veritabanına talimat verir.\n\nKümeleme olmayan bir dizinin, fiziksel satırlara işaretçilerle ikinci bir listesi bulunur. Birden çok küme olmayan dizin olabilir, her yeni dizin yeni kayıtların yazılma süresini artırır.\n\nTüm sütunlar olduğu gibi gerekiyorsa, bir Kümeleme dizininden okuma daha hızlıdır. Sırayla dizine ve tabloya gitmeniz gerekmez. Ancak, verilerin yeniden düzenlenmesi gerekiyorsa, kümeleme dizinine sahip bir tabloya yazma işlemi yavaşlayabilir."
+    },
+    "15": {
+        "question": "ORM'lerle ilgili bazı yaygın sorunlar nelerdir?",
+        "answer": "ORM'ler genellikle performans sorunları, yanlış veri eşleştirmeleri ve karmaşık sorgularla ilgili zorluklarla karşılaşır."
+    },
+    "16": {
+        "question": "CAP teoremi nedir?",
+        "answer": "CAP teoremi, aynı zamanda Brewer'ın teoremi olarak da bilinir ve dağıtılmış veritabanı sistemlerinin yalnızca üç özelliğinden ikisini garanti edebileceğini belirtir: tutarlılık, kullanılabilirlik ve bölüm toleransı.\n\nBu teorem, modern dağıtılmış hesaplama yöntemlerinin temelidir. Dünyanın en büyük trafiğe sahip şirketleri (örneğin, Amazon, Google, Facebook), uygulama mimarileri için bu temeli kullanır."
+    },
+    "17": {
+        "question": "REST kelimesinin açılımı nedir?",
+        "answer": "Temsil Durumları Aktarımı (REST), bir API'nin nasıl çalışması gerektiğini belirleyen bir yazılım mimarisidir. REST, internet gibi karmaşık ağlarda iletişimi yönetmek için ilk olarak oluşturulmuştur."
+    },
+    "18": {
+        "question": "Nesne yönelimli programlama nedir?",
+        "answer": "Nesne Yönelimli Programlama (OOP), bir tür bilgisayar programlamasıdır ve yazılım tasarımını işlevler ve mantık yerine nesneler veya veri etrafında düzenler."
+    },
+    "19": {
+        "question": "Çeşitli türlerdeki kurucular nelerdir?",
+        "answer": "1. Varsayılan Kurucu: Argüman olmayan bir kurucu. Veri üyelerini gerçek değerlerle başlatır.\n2. Parametreli Kurucu: Kurucuda argümanlar içerir. Burada birden fazla argüman geçebiliriz.\n3. Kopyalama kurucusu: Aynı sınıfın başka bir nesnesini kullanarak bir nesneyi başlatır."
+    },
+    "20": {
+        "question": "Serileştirme nedir?",
+        "answer": "Serileştirme, nesnenin durumunu bir bayt akışına dönüştüren bir süreç veya mekanizmayı ifade eder. Serileştirme tam tersini yapar. Bir nesneyi serileştirmek, bayt akışını nesnenin bir kopyasına kolayca dönüştürmeyi sağlar."
+    },
+    "21": {
+        "question": "finally, final ve finalize arasındaki fark nedir?",
+        "answer": "Final bir erişim belirleyicisidir, finally bir bloktur ve finalize bir nesne sınıfının bir metodudur. Final metod çağrıldığında yürütülür. Finally, try-catch bloğu yürütüldükten sonra yürütülür. Bu yürütme istisnaya bağlı değildir. Finalize metodu nesnenin yok edilmeden önce yürütülür."
+    },
+    "22": {
+        "question": "Primitive Veri Türleri ile Sarmalayıcı Sınıflar arasındaki fark nedir?",
+        "answer": "Sarmalayıcı sınıflar, int veya boolean gibi çeşitli ilkel veri tiplerini nesneler olarak kullanmaya olanak tanır. Sarmalayıcı sınıf, bir ilkel türü bir nesneye dönüştürür. Bir ilkel tür, Java programlama dilinin sunduğu önceden tanımlanmış bir veri türüdür."
+    },
+    "23": {
+        "question": "HashMap nasıl çalışır?",
+        "answer": "Java'daki HashMap çeşitli karma prensipleriyle çalışır. Girişleri haritada statik iç sınıflarını kullanarak depolar. HashMap birçok kovayı kullanır. HashMap'ın her kovası, Tek Bağlı Liste'ye işaret eder.\n\nAncak Java 8'de, kovadaki öğe sayısı bir eşiğe ulaştığında, HashMap Bağlı Listeleri bir ikili ağaçla değiştirir. HashMap birden çok null değerini destekler, ancak yalnızca bir null anahtarı."
+    },
+    "24": {
+        "question": "Thread nedir?",
+        "answer": "Thread, bir program içindeki yürütme iş parçacığıdır. Thread'ler, aynı anda birden fazla görevi yerine getirerek Java uygulamalarının daha duyarlı ve daha hızlı olmasını sağlar."
+    },
+    "25": {
+        "question": "Thread ve işlem arasındaki fark nedir?",
+        "answer": "Bir işlem, programın yürütülmesidir ve kullanıcılara programda belirtilen işlemleri gerçekleştirme olanağı sağlar.\n\nBir thread ise, bir yürütme birimidir. Ayrı bir zamanlayıcı tarafından ayrı olarak yönetilebilir. Bir işlem, aynı anda çalışan birden çok thread'e sahip olabilir."
+    },
+    "26": {
+        "question": "Tasarım deseni nedir?",
+        "answer": "Bir tasarım deseni, yazılım tasarımında ortak sorunlar için tekrarlanabilir veya yeniden kullanılabilir bir çözümdür. Bu desenler, mavi baskılar gibi benzerdir ve genellikle sınıflar veya nesneler arasındaki etkileşimleri gösterir."
+    },
+    "27": {
+        "question": "MySQL ve SQL arasındaki fark nedir?",
+        "answer": "SQL (Structured Query Language), veritabanları ile iletişim kurmak için kullanılan bir programlama dilidir. MySQL, SQL'in birincil dil olarak kullandığı ilişkisel veritabanı yönetim sistemidir. SQL, veritabanlarını oluşturmak, değiştirmek ve silmek için kullanılırken, MySQL, veritabanları içindeki verileri depolamak ve erişmek için kullanılır."
+    },
+    "28": {
+        "question": "SQL'de çeşitli alt kümeler nelerdir?",
+        "answer": "1. Veri Tanımlama Dili (DDL): Bu, veritabanında çeşitli işlemleri gerçekleştirmenizi sağlar, CREATE, ALTER ve DELETE gibi.\n\n2. Veri İşleme Dili (DML): Bu, verilere erişmenize ve bunları değiştirmenize izin verir. Veritabanından veri eklemeyi, güncellemeyi ve silmeyi sağlar.\n\n3. Veri Kontrol Dili (DCL): Bu, veri tanımı ve veri işleme işlemlerini kontrol etmenizi sağlar, kullanıcı erişim izinlerini vermek ve geri almak gibi ve tablolar ve görünümler gibi veritabanı nesnelerini oluşturmak, değiştirmek ve silmek gibi."
+    },
+    "29": {
+        "question": "RDBMS nedir?",
+        "answer": "İlişkisel Veritabanı Yönetim Sistemi (RDBMS), bir ilişkisel veritabanını yönetmek için kullanılan bir programdır. MySQL, Microsoft Access, Microsoft SQL Server ve Oracle gibi modern veritabanı sistemlerinin temelini oluşturur. RDBMS, veritabanından veri almak için SQL'i kullanır."
+    },
+    "30": {
+        "question": "'SELECT' ifadesi nedir?",
+        "answer": "SELECT ifadesi, SQL veritabanlarından veri seçmenizi sağlar. Sonuç kümesi, dönen verileri bir sonuç tablosunda saklar."
+    },
+    "31": {
+        "question": "OLTP nedir?",
+        "answer": "Online işlemeli işleme (OLTP), büyük grupların internet aracılığıyla gerçek zamanlı olarak büyük veritabanı işlemleri yapmasına olanak tanır. Veritabanı işlemleri, verinin değiştirildiği, eklendiği, silindiği veya sorgulandığı zamanlardır."
+    },
+    "32": {
+        "question": "OLAP ve OLTP arasındaki farklar nelerdir?",
+        "answer": "OLTP çevrimiçi işlem işleme için ve OLAP çevrimiçi analitik işleme için kullanılan terimlerdir. OLTP, çevrimiçi bir veritabanı değişikliği olarak tanımlanabilirken, OLAP bir çevrimiçi veritabanı sorgu yanıt sistemi olarak tanımlanır."
+    },
+    "33": {
+        "question": "Statik ve dinamik web siteleri arasındaki fark nedir?",
+        "answer": "Statik ve dinamik web siteleri arasındaki fark nedir?"
+    },
+    "34": {
+        "question": "Yüksek Erişilebilirlik (HA) ne anlama gelir?",
+        "answer": "Erişilebilirlik, kullanıcının sisteme erişme yeteneğini ifade eder. Kullanıcı uygulamaya erişemezse, uygulamanın kullanılamaz olduğu varsayılır. Yüksek erişilebilirlik, uygulamanın kesintisiz olarak her zaman erişilebilir olacağı anlamına gelir.\n\nYüksek erişilebilirliği sağlamanın yaygın bir yolu, web uygulamaları için gereksiz sunucu düğümleri ile kümelenmektir. Erişilebilirlik genellikle belirli bir süre içinde çalışma süresi yüzdesi olarak ifade edilir."
+    },
+    "35": {
+        "question": "Neden Mikroservis mimarisini seçersiniz?",
+        "answer": "Mikroservis mimarisi birçok fayda sunar. İşte bazı avantajlar:\n\n* Mikroservisler kolayca diğer çerçevelere ve teknolojilere adapte olabilir.\n\n* Bir işlem hatası genellikle tüm sistemi etkilemez.\n\n* Küçük ve büyük şirketlere destek verir.\n\n* Bağımsız olarak kullanılabilir ve nispeten az zaman alır."
+    },
+    "36": {
+        "question": "Kapsayıcılık nedir?",
+        "answer": "Kapsayıcılık, hipervizör tabanlı sanallaştırmanın bir alternatifi olarak geliştirilen bir sanallaştırma biçimidir.\n\nKapsayıcılık, işletim sisteminin, her makine için klonlanmak yerine, kapsayıcılarda paylaşıldığı anlamına gelir. Örneğin, Docker, hipervizör tabanlı düzenlemeler yerine kullanılabilecek bir kapsayıcı sanallaştırma platformudur."
+    },
+    "37": {
+        "question": "Acceptance Test ile Fonksiyonel Test arasındaki fark nedir?",
+        "answer": "Fonksiyonel test, uygun bir ürün oluşturup oluşturmadığımızı belirlemek için bir doğrulama testidir. Yazılım iş gereksinimlerini karşılıyor mu? Fonksiyonel testler, programın geliştiricinin inandığı şekilde çalıştığını onaylar.\n\nKabul Testi, doğru ürün oluşturduğumuzu doğrulamak için bir etkinliktir. Müşteri gerçekten bunu istiyor mu? Kabul testleri, ürünün tasarlandığı sorunu çözebileceğini doğrulamak için yapılır. Bu, yazılımın yardımcı olduğu görevleri yapan kullanıcılar gibi kullanıcıların yardımıyla en iyi şekilde yapılır."
+    },
+    "38": {
+        "question": "Denormalizasyon ne anlama gelir?",
+        "answer": "Denormalizasyon, bir veritabanının daha yüksekten daha düşük formlarına veri erişmek için kullanılan bir tekniktir. Veritabanı yöneticilerine, tablolara gereksiz veri ekleyerek genel altyapının verimliliğini artırmalarına yardımcı olur. Bu, veritabanı sorgularını birden çok tablodan gelen verileri bir tabloda birleştiren birleştirme işlemlerini içeren gereksiz veriyi bir tabloya dahil eder."
+    },
+    "39": {
+        "question": "İndeks nedir?",
+        "answer": "Bir indeks, performansı iyileştirmek ve veritabanındaki kayıtları almayı kolaylaştırmak için bir yaklaşımdır. Her değer için bir giriş oluşturur. Dolayısıyla, bilgiye erişmek daha hızlıdır."
+    },
+    "40": {
+        "question": "DISTINCT ifadesi nedir? Kullanımı nedir?",
+        "answer": "Bu DISTINCT sorgusu, SELECT sorgusu ile birlikte kullanılarak yinelenenleri kaldırmak ve yalnızca benzersiz kayıtları döndürmek için kullanılır. Bazen bir tablo tamamen yinelenen kayıtlarla doludur. SQL'deki DISTINCT ifadesi, bir SELECT ifadesinin sonuç kümesindeki yinelenenleri kaldırmak için kullanılır."
+    },
+    "41": {
+        "question": "SQL'de 'Trigger' nedir?",
+        "answer": "SQL'de, bir Tetikleyici, belirli bir tablo üzerinde veri değişiklikleri gerçekleştirildikten sonra otomatik olarak yürütülecek şekilde tanımlanmış özel bir tür depolanan prosedürdür. Bir güncelleme, ekleme veya başka bir sorgu gerçekleştirildiğinde bir dizi kodu yürütmenize olanak tanır."
+    },
+    "42": {
+        "question": "Doğal birleştirme ve çapraz birleştirme arasındaki fark nedir?",
+        "answer": "Çapraz birleştirme, iki tablodan çapraz ürün veya Kartez ürün oluşturur. Doğal birleştirme, her iki tabloda aynı ada ve veri türlerine sahip olan tüm sütunlar üzerine kurulmuştur."
+    },
+    "43": {
+        "question": "NULL nedir?",
+        "answer": "NULL veri türü, özel bir tek-değerli veri türüdür. Bir NULL veri türü değişkeni değerli olmayan bir değişkendir. Aşağıdaki gibi atanabilir: $var = NULL; veya $var = null;"
+    },
+    "44": {
+        "question": "Benzersiz kısıtlama nedir?",
+        "answer": "Benzersiz kısıtlama, aynı sütun değerlerinin birden fazla kayıtta görünmesini engeller. Benzersiz kısıtlama, bir sütun içindeki her değerin benzersiz olduğunu sağlar."
+    },
+    "45": {
+        "question": "Unpickling ve pickling nedir?",
+        "answer": "Pickling ve unpickling, Python'da nesnelerin seri hale getirilmesi ve seri hale getirilmiş nesnelerin geri dönüştürülmesi işlemleriyle ilgilidir. Pickling, bir nesneyi bir bayt akışına dönüştürme işlemidir, unpickling ise ters işlem yani bir bayt akışını orijinal nesne hiyerarşisine geri dönüştürme işlemidir. Pickling, karmaşık nesnelerin bir bütün olarak depolanmasını ve iletilebilmesini sağlar, unpickling ise bayt akışını orijinal nesne hiyerarşisine geri dönüştürme işlemine olanak tanır."
+    },
+    "46": {
+        "question": "Veritabanı Black Box Testi nedir?",
+        "answer": "Black Box Testi, yazılımın işlevlerini test etmenin bir yöntemidir ve dahili kod yapısını, uygulama ayrıntılarını veya dahili rotalarını bilmezsiniz. Yalnızca yazılım uygulamalarının giriş ve çıkışına odaklanır. Tamamen özellikler ve yazılım gereksinimleri tarafından yönlendirilir. Başka bir adı da davranışsal testtir."
+    }
+}

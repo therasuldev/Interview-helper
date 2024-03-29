@@ -1,0 +1,142 @@
+{
+    "1": {
+        "question": "CDN nedir?",
+        "answer": "İçerik dağıtım ağı (CDN), coğrafi konuma dayalı olarak kullanıcılara içerik sağlayan bir sistemdir. CDN'ler web sitelerini, yazılım uygulamalarını ve diğer dijital içerik türlerini dağıtabilir."
+    },
+    "2": {
+        "question": "AJAX nedir?",
+        "answer": "AJAX, asenkron web uygulamaları oluşturmak için bir web geliştirme tekniğidir. AJAX, sayfayı yeniden yüklemeden dinamik, duyarlı web uygulamaları oluşturmanıza olanak tanır."
+    },
+    "3": {
+        "question": "HTML ve XHTML arasındaki farklar nelerdir?",
+        "answer": "HTML, web sayfaları oluşturmak için standart işaretleme dilidir. XHTML, HTML'nin daha katı ve daha iyi tanımlı bir sürümüdür. Genellikle belirli bir sınıflandırmada daha karmaşık belgelerin biçimlendirilmesi için kullanılır."
+    },
+    "4": {
+        "question": "Duyarlı tasarım nedir?",
+        "answer": "Duyarlı tasarım, farklı ekran boyutlarına sahip birden çok cihazla uyumlu web siteleri oluşturan bir web geliştirme tekniğidir. Duyarlı web siteleri masaüstü ve mobil cihazlarda iyi görünmesi için tasarlanmıştır."
+    },
+    "5": {
+        "question": "CSS seçicilerinin farklı türleri nelerdir?",
+        "answer": "CSS seçicileri, bir HTML belgesindeki öğeleri seçmek için kullanılır. Sınıf seçicileri, Kimlik seçicileri ve Öznitelik seçicileri gibi birkaç tür CSS seçici bulunmaktadır."
+    },
+    "6": {
+        "question": "Pseudo-sınıf nedir?",
+        "answer": "Pseudo-sınıf, bir öğenin durumuna göre bir öğeyi biçimlendiren bir seçicidir. Örneğin, :hover pseudo-sınıfı, kullanıcı fareyi üzerine getirdiğinde bir öğeyi biçimlendirir, ancak fare üzerine getirilmediğinde bir şey yapmaz."
+    },
+    "7": {
+        "question": "CSS sıfırlama nedir?",
+        "answer": "CSS sıfırlama, HTML öğelerinin varsayılan biçimlendirmesini normalize etmek için tüm tarayıcılara uygulanan bir dizi kuraldır. HTML öğelerinin biçimlendirmesini kaldırmak için özellikle kullanışlıdır."
+    },
+    "8": {
+        "question": "CSS ızgara sistemi nedir?",
+        "answer": "CSS ızgara sistemi, duyarlı bir düzen oluşturmak için kullanılan bir dizi kuraldır. Birçok farklı ızgara sistemi bulunmasına rağmen, en popüler olanı Bootstrap'tir. Bootstrap, tekerleği yeniden icat etmeden öngörülebilir şekilde tepki veren düzenler oluşturmayı kolaylaştırır."
+    },
+    "9": {
+        "question": "CSS ön işleyici nedir?",
+        "answer": "CSS ön işleyici, CSS'i daha özlü ve yapılandırılmış bir şekilde yazmanıza olanak tanıyan bir araçtır. En popüler CSS ön işleyicileri Less ve Sass'tır. Küçük projeler için pek yararlı olmasa da, bir proje büyüdükçe eksponansiyel olarak daha güçlü hale gelirler."
+    },
+    "10": {
+        "question": "CSS ön işleyici kullanmanın faydaları nelerdir?",
+        "answer": "CSS ön işleyici kullanmanın birkaç faydası vardır, örneğin kodu daha yapılandırılmış ve özlü bir şekilde yazma, yazılması gereken kod miktarını azaltma ve kodu daha kolay sürdürme ve güncelleme. Daha da önemlisi, büyük sayıda geliştirici arasında bir projeyi yönetmeyi kolaylaştırır."
+    },
+    "11": {
+        "question": "Bootstrap nedir?",
+        "answer": "Bootstrap, duyarlı düzenler oluşturmak için bir dizi kural sağlayan popüler bir CSS çerçevesidir."
+    },
+    "12": {
+        "question": "Bootstrap kullanmanın faydaları nelerdir?",
+        "answer": "Bootstrap kullanmanın bazı faydaları arasında gereken yazılı kodu azaltma, birden çok projede tutarlı bir çerçeve kullanma ve duyarlı düzenlerin daha kolay oluşturulması bulunmaktadır."
+    },
+    "13": {
+        "question": "Bir görev çalıştırıcısı nedir?",
+        "answer": "Görev çalıştırıcıları, minifikasyon, derleme, kod denetimi vb. geliştirme sürecindeki yaygın görevleri otomatikleştirmeye yardımcı olan araçlardır. En popüler görev çalıştırıcılarından bazıları Gulp ve Grunt'tur."
+    },
+    "14": {
+        "question": "Görev çalıştırıcıları, minifikasyon, derleme, kod denetimi vb. geliştirme sürecindeki yaygın görevleri otomatikleştirmeye yardımcı olan araçlardır. En popüler görev çalıştırıcılarından bazıları Gulp ve Grunt'tur.",
+        "answer": "Bir görev çalıştırıcısı kullanmanın faydaları arasında tekrarlayan görevler için harcanan zamanın azaltılması, sıkıcı ve hata eğilimli görevlerin otomatikleştirilmesi ve geliştirme sürecini yönetmeyi kolaylaştırma bulunmaktadır."
+    },
+    "15": {
+        "question": "Hangi tür ön uç geliştirme konusunda uzmanlaştınız?",
+        "answer": "Birçok ön uç geliştiricisi her şeyde birazdır. Ancak mülakatçınız deneyiminizin çoğunun nerede olduğunu bilmek istiyor. Angular mı React'tan daha fazla deneyiminiz var? Bir çerçeve kullanmak yerine saf JavaScript'i mi tercih ediyorsunuz?"
+    },
+    "16": {
+        "question": "En sevdiğiniz CSS çerçevesi nedir?",
+        "answer": "Bootstrap'un ızgara sistemi mi hoşunuza gidiyor? Foundation'ın basitliği mi? Çoğu mülakatçı en popüler sistemlerle biraz aşina olacaktır, ancak onları şaşırtabilir ve cevabınızı haklı çıkarabilirseniz daha fazla puan kazanabilirsiniz."
+    },
+    "17": {
+        "question": "Bir web sitesinin performansını nasıl optimize edersiniz?",
+        "answer": "Bu, pek çok potansiyel cevabı olan geniş bir sorudur. \n\nİlk olarak, kodunuzun minifikasyon ve sıkıştırma işlemlerinin yapıldığından emin olmalısınız. Bu, dosyalarınızın boyutunu azaltır ve indirilmeleri daha hızlı hale getirir. \n\nİkinci olarak, mümkün olduğunca önbelleği kullanmalısınız. Bu, sık kullanılan dosyaları yerel olarak depolar, böylece kullanıcılar sitenizi ziyaret ettiklerinde her zaman indirilmeleri gerekmez. Ancak bunu abartmayın, aksi takdirde siteniz istediğiniz kadar dinamik olmaz - güncellemeler güvenilir şekilde gerçekleştirilmez.\n\nSon olarak, bir içerik dağıtım ağı (CDN) kullanmalısınız. Bu, dosyalarınızı birden çok sunucuya dağıtır, böylece kullanıcılar dosyaları kendi konumlarından indirebilirler."
+    },
+    "18": {
+        "question": "En sevdiğiniz ön uç geliştirme aracı nedir?",
+        "answer": "Bir ön uç geliştirme aracı, bir web sitesi veya web uygulaması geliştirmeye yardımcı olan herhangi bir yazılımdır. En popüler ön uç geliştirme araçları kod düzenleyicileri ve IDE'ler, görev çalıştırıcıları ve CSS ön işleyicileridir. Sass veya Git gibi bir şeylerden bahsederek güvenli bir şekilde ilerleyebilir veya daha özelleştirilmiş bir araçla daha detaylı bir şekilde ilgilenebilirsiniz. Favori aracınızın bir renk seçici veya bir UI test cihazı olduğunu bile öne sürebilirsiniz."
+    },
+    "19": {
+        "question": "Bir web sitesinin hata ayıklamasını nasıl yaparsınız?",
+        "answer": "Bir web sitesinin hata ayıklaması da bir web sitesinin hızlandırılmasıyla aynı şekilde geniştir. Ancak aslında sordukları şey genel olarak atacağınız adımlardır. En yaygın yöntemler arasında tarayıcının geliştirici araçlarını kullanma, otomatik kalite güvence paketini kullanma, kodu satır satır hata ayıklama veya 'lastik ördek' yöntemiyle hata ayıklama bulunur."
+    },
+    "20": {
+        "question": "Çapraz tarayıcı uyumluluğuyla ilgili karşılaştığınız yaygın sorunlar nelerdir?",
+        "answer": "Çapraz tarayıcı uyumluluğuyla ilgili en yaygın sorunlardan bazıları farklı tarayıcıların CSS'yi farklı şekillerde işlemesi, farklı tarayıcıların farklı HTML ve CSS özelliklerini desteklemesi ve farklı tarayıcıların standartlara farklı düzeylerde destek sunmasıdır. Bu özellikle zorlu bir durumdur çünkü birçok tarayıcı platforma bağlı olarak değişir ve platformlar oldukça farklılık gösterir; biri bugün bir akıllı buzdolabında Chrome OS'u açabilir."
+    },
+    "21": {
+        "question": "Karşılaştığınız yaygın ön uç geliştirme zorlukları nelerdir?",
+        "answer": "Karşılaştığınız en yaygın ön uç geliştirme zorluklarından bazıları çapraz tarayıcı uyumluluk sorunları, eski kodlarla uğraşma ve web sitesi performansını optimize etme konularını içerir. Geliştiricilerin sıkça karşılaştığı başka bir sorun da (ancak ne yazık ki daha az sıklıkla ele alınan) kodlarını ADA uyumlu hale getirme yeteneğidir."
+    },
+    "22": {
+        "question": "Kariyerinizdeki en büyük başarıyı tartışın.",
+        "answer": "Bir projeye önemli bir etki yaptığınız bir zamanı tartışmaya hazır olun. Bu gerçekten kendinizi satma fırsatınızdır, bu yüzden anlatacak harika bir hikayeniz olduğundan emin olun. Mümkünse, başarınızı şirketin değerleri veya misyon beyanıyla ilişkilendirin. Bir ekip üyesinin veya yöneticinin size nasıl yardımcı olduğunu vurgulamaktan çekinmeyin. Bu, takım oyuncusu olduğunuzu gösterir."
+    },
+    "23": {
+        "question": "Kariyerinizdeki en büyük zorluktan bahsedin.",
+        "answer": "Bu, kişisel bir zorluk hakkında konuşma zamanı değildir, mesela kamusal konuşma korkusunu yenmek gibi. Bunun yerine, karşılaştığınız ve üstesinden geldiğiniz bir profesyonel zorluğa odaklanın, mesela devre dışı kalmış bir sistem için geliştirme yapmak veya belirli bir UI/UX zorluğuyla karşılaşmak. Sorunun ne olduğu, nasıl üstesinden geldiğiniz ve sonucun ne olduğu hakkında konuşun. Önceki soruda olduğu gibi, hikayenizi şirketin değerleri veya misyonuyla ilişkilendirmeye çalışın."
+    },
+    "24": {
+        "question": "Son proje nedir? Nasıl gitti?",
+        "answer": "Bu, tutkuyla konuşma fırsatıdır. Son projeniz özellikle zorlayıcı veya başarılıysa bahsedin. Kullandığınız teknolojiler hakkında spesifik olun ve bunları kullanma şekliniz hakkında herhangi benzersiz yönlerden bahsedin."
+    },
+    "25": {
+        "question": "Zamanınızı nasıl etkili bir şekilde yönetiyorsunuz?",
+        "answer": "Bu, herhangi bir geliştirici için önemli bir sorudur, çünkü iş değişken ve öngörülemeyebilir. Zamanınızı yönetmek için kullandığınız araçlar hakkında konuşun (örneğin, bir Pomodoro zamanlayıcı). Ayrıca, görevlerinizi nasıl önceliklendirdiğiniz ve beklenmedik kesintilerle nasıl başa çıktığınızı tartışabilirsiniz."
+    },
+    "26": {
+        "question": "Sıkıştığınızda ne yaparsınız?",
+        "answer": "Kimse sıkışmayı sevmez, ancak her programcının başına gelen bir durumdur. Sıkışmış durumdan nasıl çıktığınızı konuşun, yardım isteme, araştırma yapma veya ara verme gibi kullanılan yöntemler hakkında. Ayrıca, kendinizi ilk baştan sıkışmış duruma düşmekten nasıl koruduğunuzdan bahsedin, örneğin önceden araştırma yapma ve projenin kapsamını aşırıya kaçırmamaya dikkat etme."
+    },
+    "27": {
+        "question": "Bir şeyi yanlış yaptığınızda ne yaparsınız?",
+        "answer": "Herkes hata yapar. Önemli olan hata yaptığınızda nasıl tepki verdiğinizdir. Hataları düzeltmek için attığınız adımları, değişikliklerinizi geri alma veya test yazma gibi konuşun. Ayrıca, aynı hatayı tekrar yapmamak için nasıl önlem aldığınızı, daha iyi belgelendirme gibi, belirtin."
+    },
+    "28": {
+        "question": "HTML5 ve HTML4 arasındaki farklar nelerdir?",
+        "answer": "HTML5, HTML'nin en son sürümü olup birkaç yeni öğe ve nitelik içerir. Ayrıca, ses ve video oynatımını destekler ve yerel depolama desteği sunar."
+    },
+    "29": {
+        "question": "Özel bir hata sayfası nasıl oluşturulur?",
+        "answer": "Özel bir hata sayfası, bir hata oluştuğunda görüntülenen bir sayfadır. Özel bir hata sayfası oluşturmak için önce 'error.php' veya 'error.html' adında bir dosya oluşturmanız gerekir. Daha sonra, .htaccess dosyasını özel hata sayfasına işaret edecek şekilde düzenlemeniz gerekir."
+    },
+    "30": {
+        "question": "Farklı ekran boyutları için medya sorgularını nasıl kullanırsınız?",
+        "answer": "Medya sorguları, CSS3'ün bir özelliğidir ve ekran genişliğine bağlı olarak farklı stiller uygulamanıza olanak tanır. Medya sorgularını kullanmak için önce HTML'nize bir viewport meta etiketi eklemeniz gerekir. Daha sonra, CSS'nizi medya sorgularını kullanarak yazmanız gerekir - ancak HTML'e entegre etmek de önemlidir."
+    },
+    "31": {
+        "question": "== ve === arasındaki fark nedir?",
+        "answer": "== değer eşitliğini kontrol ederken, === hem değer hem de tür eşitliğini kontrol eder."
+    },
+    "32": {
+        "question": "Anonim bir fonksiyon ile isimli bir fonksiyon arasındaki fark nedir?",
+        "answer": "Bir isimli fonksiyon, kodun herhangi bir yerinden gelecekte referans alınabilirken, anonim bir fonksiyon olamaz - ancak içinde oluşturulduğunda çalışacaktır."
+    },
+    "33": {
+        "question": "Satır içi, gömülü ve harici stildeki farklar nelerdir?",
+        "answer": "Satır içi stiller kodun bir parçası olarak yazılır (<div style=”background-color: blue”>), gömülü stiller sayfanın başlığına gömülü stildir ve harici stiller sayfanın başlığı içinde bağlantı verilerek kullanılır."
+    },
+    "34": {
+        "question": "Duyarlı bir düzen nasıl oluşturulur?",
+        "answer": "Bootstrap gibi bir çerçeve kullanarak duyarlı bir düzen oluşturabilirsiniz. Alternatif olarak, ekranın boyutunu manuel olarak algılayıp değişiklikler yapmanız gerekecektir. Duyarlı düzen en iyi uygulamaları, öğelerin görüntülenmesi için çok küçük olduğunda bunların çökmesini sağlayan 'hataya dayanıklı' bir sistem oluşturmayı içerir."
+    },
+    "35": {
+        "question": "Animasyon ve geçişleri nasıl kullanırsınız?",
+        "answer": "Çoğu animasyon ve geçiş, CSS'e JavaScript aracılığıyla getirilir; CSS, JavaScript ve HTML'in birbirine ne kadar sıkı bir şekilde bağlı olduğu bir başka yol. CSS'de bir öğeyi adlandırabilir ve CSS ile parametrelerini ayarlayabilirsiniz, ancak animasyonu JavaScript ile işlemek için. CSS'de bazı yerleşik animasyonlar ve geçişler vardır, ancak genellikle oldukça temel düzeydedir."
+    }
+}

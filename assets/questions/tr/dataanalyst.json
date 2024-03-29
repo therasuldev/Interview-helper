@@ -1,0 +1,202 @@
+{
+    "1": {
+        "question": "Data Analizi ile Veri Madenciliği arasındaki temel farklar nelerdir?",
+        "answer": "Veri analizi, veriyi temizleme, düzenleme ve anlamlı içgörüler üretmek için kullanma sürecini içerir. Veri madenciliği ise verideki gizli desenleri aramak için kullanılır.\n\nVeri analizi, veri madenciliğinden elde edilen sonuçlardan çok daha anlaşılabilir sonuçlar üretir."
+    },
+    "2": {
+        "question": "Veri Doğrulama nedir?",
+        "answer": "Veri doğrulama, adından da anlaşılacağı gibi, verinin doğruluğunu ve kaynağın kalitesini belirleme sürecini içerir. Veri doğrulamada birçok süreç vardır, ancak başlıca olanlar veri tarama ve veri doğrulamadır.\n\n* Veri tarama: Verinin doğru olduğundan ve gereksiz verilerin bulunmadığından emin olmak için çeşitli modellerin kullanılması.\n* Veri doğrulama: Bir gereksizlik varsa, birden fazla adımda değerlendirilir ve ardından veri öğesinin varlığını sağlamak için bir karar alınır."
+    },
+    "3": {
+        "question": "Kısaca Veri Analizi nedir?",
+        "answer": "Veri analizi, veriyle çalışmayı içeren yapılandırılmış bir prosedürdür. Bu prosedür, veriyi alıp, temizleme, dönüştürme ve değerlendirme gibi aktiviteleri gerçekleştirerek, gelir elde etmek için kullanılabilecek içgörüler sağlar.\nVeri, çeşitli kaynaklardan toplanır. Veri ham bir varlık olduğundan, eksik değerleri doldurmak ve kullanım kapsamından çıkan herhangi bir varlığı kaldırmak için temizlenip işlenmesi gerekir.\nVeri ön işlendikten sonra, veriyle bazı analizler yapmak için kullanılan modellerin yardımıyla analiz edilebilir.\nSon adım, veri çıktısının aynı zamanda analistlerin yanı sıra teknik olmayan bir kitleye de hitap edebilecek bir formata dönüştürülmesini ve raporlanmasını içerir."
+    },
+    "4": {
+        "question": "Bir veri modelinin iyi çalışıp çalışmadığını nasıl anlarız?",
+        "answer": "Bu soru subjektiftir, ancak bir veri modelinin doğruluğunu değerlendirmek için belirli basit değerlendirme noktaları kullanılabilir. Bunlar şunlardır:\n\n* İyi tasarlanmış bir model, ihtiyaç duyulduğunda gelecekteki içgörüleri kolayca tahmin edebilme yeteneği sunmalıdır.\n* Yuvarlatılmış bir model, gerektiğinde veri veya boru hattındaki herhangi bir değişikliğe kolayca adapte olmalıdır.\n* Model, veriyi büyük ölçekte genişletme ihtiyacı ortaya çıktığında başa çıkabilir olmalıdır.\n* Modelin çalışması kolay olmalı ve müşteriler arasında gereken sonuçları elde etmelerine yardımcı olacak şekilde kolayca anlaşılabilir olmalıdır."
+    },
+    "5": {
+        "question": "Veri Temizleme kısaca nasıl açıklanır?",
+        "answer": "Veri Temizleme aynı zamanda Veri Düzenleme olarak da adlandırılır. Adından da anlaşılacağı gibi, verideki hatalı içeriği bulma ve bunları güvenli bir şekilde kaldırma yapılandırılmış bir yoldur. İşte veri temizlemede kullanılan bazı yöntemler:\n\n* Bir veri bloğunu tamamen kaldırma\n* Gereksiz tekrarları oluşturmadan veri siyahı doldurma yollarını bulma\n* Veriyi ortalama veya medyan değerleriyle değiştirme\n* Boşluklar için yer tutucular kullanma"
+    },
+    "6": {
+        "question": "Bir Çalışan Veri Analisti'nin karşılaşabileceği bazı sorunlar neler olabilir?",
+        "answer": "Veri ile çalışırken bir Veri Analisti'nin karşılaşabileceği birçok sorun olabilir. İşte bazıları:\n\n* Aynı varlıkla ilgili birden fazla giriş ve yazım hataları ve yanlış veriler varsa, geliştirme aşamasındaki modelin doğruluğu düşük olacaktır.\n* Verinin alındığı kaynak doğrulanmamışsa, analize başlamadan önce veri temizleme ve ön işlem gerektirebilir.\n* Aynı şey, veriyi birden fazla kaynaktan çıkartıp birleştirme işlemi için de geçerlidir.\n* Eğer elde edilen veri eksik veya doğru değilse, analiz geri adım atabilir."
+    },
+    "7": {
+        "question": "Veri Profilleme nedir?",
+        "answer": "Veri profilleme, veride bulunan tüm varlıkları daha derinlemesine analiz etmeyi içeren bir metodolojidir. Buradaki amaç, veri ve veri özelliklerine dayalı olarak son derece doğru bilgiler sağlamaktır, örneğin, veri türü, sıklıkla ortaya çıkma sıklığı vb."
+    },
+    "8": {
+        "question": "Bir modelin yeniden eğitilmesine neden olabilecek senaryolar nelerdir?",
+        "answer": "Veri asla durağan bir varlık değildir. İşletmenin genişlemesi durumunda, bu veride bir değişiklik gerektiren ani fırsatlar doğurabilir. Ayrıca, modelin durumunu kontrol etmek için modelin değerlendirilmesi, analistin modelin yeniden eğitilip eğitilmeyeceğini analiz etmesine yardımcı olabilir.\n\nAncak, genel kural, iş protokollerinde ve tekliflerinde bir değişiklik olduğunda modellerin yeniden eğitilmesini sağlamaktır."
+    },
+    "9": {
+        "question": "Bir Veri Analisti olabilmek için gereksinimler nelerdir?",
+        "answer": "Yeni yetişen bir veri analistinin ihtiyaç duyabileceği birçok beceri vardır. İşte bazıları:\n\n* XML, JavaScript ve ETL çerçeveleri gibi programlama dillerinde iyi derecede olmak\n* SQL, MongoDB ve daha fazlası gibi veritabanlarında uzman olmak\n* Veri toplama ve analiz etme becerisi\n* Veritabanı tasarlama ve veri madenciliği konusunda bilgi sahibi olmak\n* Büyük veri kümeleriyle çalışma yeteneği/deneyimi olmak"
+    },
+    "10": {
+        "question": "Veri Analizi yapmak için en çok kullanılan araçlar nelerdir?",
+        "answer": "Veri analizi alanında kullanılan geniş bir araç yelpazesi bulunmaktadır. İşte bazı popüler olanlar:\n\n* Google Arama Operatörleri\n* RapidMiner\n* Tableau\n* KNIME\n* OpenRefine"
+    },
+    "11": {
+        "question": "Aykırı Değer nedir?",
+        "answer": "Aykırı değer, bir veri kümesindeki bir değerdir ve bu değer, veri kümesinin karakteristik özelliğinin ortalamasından uzak olarak kabul edilir. Aykırı değerlerin iki türü vardır: tek değişkenli ve çok değişkenli."
+    },
+    "12": {
+        "question": "Verinin çeşitli kaynaklardan gelmesi durumunda ortaya çıkan sorunlarla nasıl başa çıkabiliriz?",
+        "answer": "Çoklu kaynak sorunlarıyla başa çıkmak için birçok yol vardır. Ancak, bunlar öncelikle şu sorunların çözümü için yapılır:\n\n* Benzer/aynı kayıtların varlığını tanımlama ve bunları tek bir kayıta birleştirme\n* İyi bir şema entegrasyonu sağlamak için şemayı yeniden yapılandırma"
+    },
+    "13": {
+        "question": "Büyük Veri'de kullanılan popüler araçlardan bazıları nelerdir?",
+        "answer": "Büyük veriyi işlemek için kullanılan birden fazla araç bulunmaktadır. En popüler olanlardan bazıları şunlardır:\n* Hadoop\n* Spark\n* Scala\n* Hive\n* Flume\n* Mahout"
+    },
+    "14": {
+        "question": "Pivot tablosunun kullanımı nedir?",
+        "answer": "Pivot tabloları, Excel'in anahtar özelliklerinden biridir. Kullanıcıya büyük veri kümelerini görüntüleme ve özetleme olanağı sağlar. Pivot tablolarıyla yapılan işlemlerin çoğu, raporların hızlı bir şekilde oluşturulmasına yardımcı olan sürükle ve bırak işlemlerini içerir."
+    },
+    "15": {
+        "question": "KNN doldurma yöntemini kısaca açıklayın.",
+        "answer": "KNN, birkaç en yakın komşunun seçilmesini ve aynı zamanda bir mesafe ölçütünün seçilmesini gerektiren bir yöntemdir. KNN, bir veri kümesinin hem kesikli hem de sürekli niteliklerini tahmin edebilir.\n\nBurada, iki veya daha fazla özelliğin benzerliğini bulmak için bir mesafe fonksiyonu kullanılır, bu da daha sonra daha fazla analize yardımcı olacaktır."
+    },
+    "16": {
+        "question": "Dağıtılmış bir hesaplama ortamında kullanılan en iyi Apache çerçeveleri nelerdir?",
+        "answer": "Bir veri kümesiyle dağıtılmış bir çalışma ortamında çalışmanın gerektiği durumlarda, MapReduce ve Hadoop en iyi Apache çerçeveleri olarak kabul edilir."
+    },
+    "17": {
+        "question": "Hiyerarşik Kümeleme nedir?",
+        "answer": "Hiyerarşik kümeleme veya hiyerarşik küme analizi, benzer nesneleri ortak gruplara, yani kümelere gruplayan bir algoritmadır. Amaç, farklı olan her küme, diğerinden farklı olan ve tek tek benzer varlıkları içeren bir küme oluşturmaktır."
+    },
+    "18": {
+        "question": "Bir veri analizi projesi üzerinde çalışırken hangi adımlar bulunmaktadır?",
+        "answer": "Bir veri analizi projesinde baştan sona birçok adım bulunmaktadır. Önemli adımlardan bazıları aşağıda belirtilmiştir:\n\n* Sorun tanımı\n* Veri temizleme/ön işleme\n* Veri keşfi\n* Modelleme\n* Veri doğrulama\n* Uygulama\n* Doğrulama"
+    },
+    "19": {
+        "question": "Veri analistleri tarafından kullanılan bazı istatistiksel metodolojileri isimlendirebilir misiniz?",
+        "answer": "Veri analizi yaparken birçok istatistiksel teknik oldukça faydalıdır. İşte önemli olanlardan bazıları:\n\n* Markov süreci\n* Küme analizi\n* Tamamlama teknikleri\n* Bayes yöntemleri\n* Sıralama istatistikleri"
+    },
+    "20": {
+        "question": "Zaman serisi analizi nedir?",
+        "answer": "Zaman serisi analizi veya TSA, trend analizi ve özellikle zaman serisi verileriyle çalışırken yaygın olarak kullanılan bir istatistiksel tekniktir. Zaman serisi verileri, belirli zaman aralıklarında veya belirli dönemlerde verinin varlığını içerir."
+    },
+    "21": {
+        "question": "Zaman serisi analizi nerede kullanılır?",
+        "answer": "Zaman serisi analizi (TSA) çok geniş bir kullanım alanına sahip olduğundan, birçok alanda kullanılabilir. TSA'nın önemli bir rol oynadığı yerlerden bazıları şunlardır:\n\n* İstatistik\n* Sinyal işleme\n* Ekonometri\n* Hava tahmini\n* Deprem tahmini\n* Astronomi\n* Uygulamalı bilim"
+    },
+    "22": {
+        "question": "Kümeleme algoritmalarının bazı özellikleri nelerdir?",
+        "answer": "Herhangi bir kümeleme algoritması, uygulandığında aşağıdaki özelliklere sahip olacaktır:\n\n* Düz veya hiyerarşik\n* Yinelemeli\n* Ayrık"
+    },
+    "23": {
+        "question": "İşbirlikçi filtreleme nedir?",
+        "answer": "İşbirlikçi filtreleme, bir müşterinin veya kullanıcının davranış verilerine dayalı olarak öneri sistemleri oluşturmak için kullanılan bir algoritmadır. \n\nÖrneğin, e-ticaret sitelerinde gezinirken, 'Size Önerilenler' adlı bir bölüm bulunmaktadır. Bu, gezinme geçmişi, önceki satın alımların analizi ve işbirlikçi filtreleme kullanılarak yapılır."
+    },
+    "24": {
+        "question": "Bugün kullanılan hipotez testi türleri nelerdir?",
+        "answer": "Birçok hipotez testi türü vardır. Bunlardan bazıları şunlardır:\n\n* Varyans analizi (ANOVA): Burada, birden fazla grubun ortalama değerleri arasında analiz yapılır.\n\n* T-testi: Bu test türü, standart sapma bilinmediğinde ve örnek büyüklüğü nispeten küçük olduğunda kullanılır.\n\n* Ki-kare Testi: Bu tür hipotez testi, örneklemin kategorik değişkenleri arasındaki ilişki düzeyini bulma gereksinimi olduğunda kullanılır."
+    },
+    "25": {
+        "question": "Veri analizinde kullanılan bazı veri doğrulama metodolojileri nelerdir?",
+        "answer": "Bugün birçok veri doğrulama tekniği kullanılmaktadır. Bunlardan bazıları şunlardır:\n\n* Alan düzeyinde doğrulama: Kullanıcı tarafından girilen veride hata olmadığından emin olmak için her bir alan üzerinde doğrulama yapılır.\n* Form düzeyinde doğrulama: Burada, kullanıcı form ile çalışmayı tamamladıktan sonra ancak bilgiler kaydedilmeden önce doğrulama yapılır.\n* Veri kaydetme doğrulaması: Bu tür doğrulama, dosya veya veritabanı kaydı kaydedilirken gerçekleşir.\n* Arama kriteri doğrulaması: Bu tür doğrulama, kullanıcı bir şey ararken geçerli sonuçların döndürülüp döndürülmediğini kontrol etmek için kullanılır."
+    },
+    "26": {
+        "question": "K-means algoritması nedir?",
+        "answer": "K-means algoritması, veri noktalarının birbirlerine ne kadar yakın olduklarına bağlı olarak veriyi farklı kümeler halinde gruplandırır. Küme sayısı, k-means algoritmasında 'k' ile belirtilir. Her bir kümeyi arasında iyi bir ayrımın sağlanmaya çalışıldığından emin olur.\n\nAncak, denetimsiz bir şekilde çalıştığından, kümelerin herhangi bir tür etiketi olmayacaktır."
+    },
+    "27": {
+        "question": "Geri çağırma ve gerçek pozitif oranı kavramları arasındaki fark nedir?",
+        "answer": "Geri çağırma ve gerçek pozitif oranı, tamamen aynıdır. İşte formülü:\nGeri çağırma = (Gerçek pozitif)/(Gerçek pozitif + Yanlış negatif)"
+    },
+    "28": {
+        "question": "Hangi durumlarda t-testi veya z-testi kullanılabilir?",
+        "answer": "Genellikle, bir örnekleme büyüklüğü 30'dan küçük olduğunda t-testi kullanılır ve örnekleme büyüklüğü 30'u aştığında z-testi tercih edilir."
+    },
+    "29": {
+        "question": "Neden Naive Bayes 'saf' olarak adlandırılır?",
+        "answer": "Naive Bayes, mevcut tüm verilerin mutlak olarak önemli ve birbirinden bağımsız olduğu genel varsayımını yapar. Bu gerçek değil ve gerçek dünya senaryosunda geçerli olmaz."
+    },
+    "30": {
+        "question": "Standartlaştırılmış ve standartlaştırılmamış katsayılar arasındaki basit fark nedir?",
+        "answer": "Standartlaştırılmış katsayılar durumunda, katsayılar standart sapma değerlerine dayalı olarak yorumlanır. Standartlaştırılmamış katsayı, veri setinde bulunan gerçek değere dayalı olarak ölçülür."
+    },
+    "31": {
+        "question": "Aykırı değerler nasıl tespit edilir?",
+        "answer": "Aykırı değerleri tespit etmek için birçok metodoloji kullanılabilir, ancak en yaygın kullanılan iki yöntem şunlardır:\n* Standart sapma yöntemi: Burada, değer, değerin ortalama değerinden üç standart sapma daha düşük veya daha yüksekse aykırı olarak kabul edilir.\n* Kutu grafiği yöntemi: Burada, bir değer, 1.5 katı kadar daha az veya daha fazla olduğunda aykırı olarak kabul edilir."
+    },
+    "32": {
+        "question": "Verideki eksik sayıların belirlenmesinde neden KNN tercih edilir?",
+        "answer": "K-En Yakın Komşu (KNN) burada tercih edilir çünkü KNN, belirlenmesi gereken değeri en yakın değerlere dayanarak kolayca yaklaştırabilir."
+    },
+    "33": {
+        "question": "Analiz yapılırken bir veri setinde şüpheli veya eksik verilerle nasıl başa çıkılır?",
+        "answer": "Veride herhangi bir uyumsuzluk varsa, bir kullanıcı aşağıdaki yöntemlerden herhangi birini kullanabilir:\n\n* Tartışılan veri hakkında ayrıntılı bir doğrulama raporu oluşturma\n* Aynı sorunu incelemek ve bir karar vermek için deneyimli bir veri analistine yükseltme\n* Geçersiz veriyi karşılık gelen geçerli ve güncel veriyle değiştirme\n* Eksik değerleri bulmak için bir araya getirilmiş birçok strateji kullanma ve gerektiğinde yaklaşım kullanma"
+    },
+    "34": {
+        "question": "Temel Bileşen Analizi (PCA) ile Faktör Analizi (FA) arasındaki fark nedir?",
+        "answer": "PCA ve FA arasındaki temel fark, faktör analizinin değişkenler arasındaki varyansı belirtmek ve çalışmak için kullanılmasıdır, oysa PCA, mevcut bileşenlerin veya değişkenlerin kovaryansını açıklamayı amaçlar. \n\nToplu veri analisti mülakat soruları ve cevapları listesinde bir sonraki adıma geçmeden önce, ileri düzey kategoriden bazı üst soruları inceleyelim."
+    },
+    "35": {
+        "question": "Sürüm kontrolünü kullanmanın faydaları nelerdir?",
+        "answer": "Sürüm kontrolünün birçok faydası vardır, aşağıda gösterildiği gibi:\n\n* Dosyaları karşılaştırmanın, farklılıkları belirlemenin ve herhangi bir değişiklik yapılırsa birleştirmenin kolay bir yolu oluşturur.\n* Bir uygulama derleme yaşam döngüsünü, geliştirme, üretim, test vb. gibi her aşamayı takip etmenin kolay bir yolunu oluşturur.\n* İşbirlikçi bir çalışma kültürü oluşturmanın iyi bir yolunu getirir\n* Kodun her sürümünü ve varyantını güvenli ve güvende tutar"
+    },
+    "36": {
+        "question": "Veri analizinde gelecek trendler nelerdir?",
+        "answer": "Bu soru ile röportaj yapan, konudaki hakimiyetinizi ve alandaki bilginizi değerlendirmeye çalışıyor olacaktır. Geçerli gerçekleri belirtmek ve bunların kaynaklarından gelen doğrulamasını ekleyerek adaylığınıza olumlu bir katkı sağlamak önemlidir. Ayrıca, yapay zekanın veri analizi üzerindeki büyük etkisini ve potansiyelini açıklamaya çalışın."
+    },
+    "37": {
+        "question": "Neden şirketimizde veri analisti rolüne başvurdunuz?",
+        "answer": "Burada, mülakatçı sizden konudaki uzmanlığınızı, başvurduğunuz firma içinde veri analizi ihtiyacınızı ne kadar iyi ikna edebildiğinizi görmeye çalışıyor olacaktır. İş tanımını detaylı bir şekilde bilmek her zaman bir avantajdır, ayrıca maaş ve şirketin detayları hakkında bilgi sahibi olmanız da önemlidir."
+    },
+    "38": {
+        "question": "Veri analizi konusundaki yeteneklerinizi 1-10 arasında bir ölçekte nasıl değerlendirirsiniz?",
+        "answer": "Bu soru ile mülakatçı, konuya olan anlayışınızı, güveniniz ve spontaneliğinizi anlamaya çalışıyor olacaktır. Burada en önemli şey, kapasitenize dayanarak dürüstçe cevap vermeniz gerektiğidir."
+    },
+    "39": {
+        "question": "Üniversite diplomanız veri analizi konusunda size yardımcı oldu mu?",
+        "answer": "Bu, son olarak üniversitede tamamladığınız programla ilgili bir sorudur. Elde ettiğiniz derece hakkında, nasıl yararlı olduğu ve gelecekte firmaya katıldıktan sonra nasıl tam anlamıyla kullanmayı planladığınız hakkında konuşun."
+    },
+    "40": {
+        "question": "Bu veri analisti rolünü aldıktan sonra planınız nedir?",
+        "answer": "Bu soruya cevap verirken, planınızın şirket yapısıyla nasıl çalışacağına dair açıklayıcı bir şekilde açıklama yapın ve planın işe yarayıp yaramadığını performans doğrulama testi yaparak nasıl uygulayacağınızı vurgulayın. İleriki günlerde nasıl daha iyi hale getirilebileceğine dair daha fazla iterasyonla."
+    },
+    "41": {
+        "question": "Veri analitiğinin dezavantajları nelerdir?",
+        "answer": "Avantajlarının çokluğuna kıyasla, veri analitiğinin bazı dezavantajları vardır. Dezavantajlardan bazıları aşağıda listelenmiştir:\n\n* Veri analitiği, müşteri gizliliğini ve işlemler, satın alma ve abonelikler gibi bilgileri ihlal edebilir.\n\n* Bazı araçlar karmaşıktır ve önceden eğitim gerektirir.\n\n* Her zaman doğru analitik aracı seçmek için çok fazla beceri ve uzmanlık gerektirir."
+    },
+    "42": {
+        "question": "Başarılı bir veri analistinde hangi beceriler bulunmalıdır?",
+        "answer": "Bu, analitik düşünme becerileriniz ne kadar olduğuna bağlı olarak açıklayıcı bir sorudur. Veri analisti uzmanlığına sahip olmanız gereken birçok araç vardır. Python, R ve SAS gibi programlama dilleri, olasılık, istatistik, regresyon, korelasyon ve daha fazlası, bir veri analistinin sahip olması gereken temel becerilerdir."
+    },
+    "43": {
+        "question": "Why do you think you are the right fit for this data analyst role?",
+        "answer": "Bu soru ile mülakatçı, iş tanımınızı anlama ve veri analizi bilginizle nereden geldiğinizi değerlendirme niyetindedir. Şirketin yapısıyla nasıl eşleştiğini açıklayarak bu soruya kısa ve detaylı bir şekilde cevap verin, ilgi alanlarınızı, hedeflerinizi ve vizyonlarınızı ve bunların şirketin yapısıyla nasıl uyuştuğunu açıklayın."
+    },
+    "44": {
+        "question": "Geçmiş veri analizi çalışmalarınızdan bahsedin.",
+        "answer": "Bu, veri analizi mülakatlarında çok sık sorulan bir sorudur. Mülakatçı, iletişim netliğinizi, iş deneyiminizden alınan somut görüşleri, konularla ilgili sorgulandığınızda tartışma becerilerinizi ve analitik becerilerinizde ne kadar düşünceli olduğunuzu değerlendirecektir."
+    },
+    "45": {
+        "question": "Kasım 2019'da Tac Mahal'i ziyaret eden ziyaretçi sayısını nasıl tahmin edersiniz?",
+        "answer": "Bu klasik bir davranışsal sorudur. Bilgisayar veya herhangi bir veri kümesi kullanmadan düşünme sürecinizi kontrol etmek içindir. Aşağıdaki şablonu kullanarak cevabınıza başlayabilirsiniz:\n\n“İlk olarak, bazı verileri toplarım. Tac Mahal'in bulunduğu Agra'nın nüfusunu öğrenirim. 2019'da mekanı ziyaret eden turist sayısını öğrenirim. Bunun ardından, kalan ortalama konaklama süresi gelir, bu faktörler dikkate alınarak daha fazla analiz edilebilir: yaş, cinsiyet, gelir ve Hindistan'daki tatil günleri ve banka tatilleri sayısı. Mevcut verileri yerel turizm ofislerinden analiz ederim.”"
+    },
+    "46": {
+        "question": "Daha önce aynı endüstride çalışma deneyiminiz var mı?",
+        "answer": "Bu çok açık bir sorudur. Bu, mevcut rol için gerekli olan endüstriye özgü becerilere sahip olup olmadığınızı değerlendirmeyi amaçlar. Tüm becerilere sahip olmasanız bile, geçmişte edindiğiniz becerileri nasıl kullanabileceğinizi ayrıntılı bir şekilde açıklayın ve bunun şirkete nasıl fayda sağlayabileceğini belirtin."
+    },
+    "47": {
+        "question": "Veri analisti adayı olarak fırsatlarınızı artırmak için herhangi bir sertifika aldınız mı?",
+        "answer": "Her zamanki gibi, mülakatçılar, adayların kariyer olanaklarını artırmak için ek araçlar kullanma konusunda ciddi olduklarını gösteren adayları ararlar. Sertifikalar, yeni beceriler öğrenmek, bunları ustalaşmak ve bunları en iyi şekilde kullanmak için tüm çabayı gösterdiğinizin güçlü kanıtıdır. Herhangi bir sertifikalarınızı listeleyin ve bunlardan kısaca bahsedin, programdan ne öğrendiğinizi ve şimdiye kadar size nasıl yardımcı olduğunu açıklayın."
+    },
+    "48": {
+        "question": "Veri analizi çeşitli aşamalarında hangi araçları tercih edersiniz?",
+        "answer": "Bu, hangi araçların ilgili görevler için yararlı olduğunu düşündüğünüzü kontrol etmek için bir sorudur. Bahsettiğiniz araçlardan ne kadar rahat olduğunuz ve bugün piyasada ne kadar popüler oldukları hakkında konuşun."
+    },
+    "49": {
+        "question": "Bir veri analizi projesinin hangi adımını en çok seversiniz?",
+        "answer": "Belirli araç ve görevleri diğerlerine tercih etmek normaldir. Ancak, veri analizi yaparken her zaman analitik yaşam döngüsünün tamamıyla uğraşmanız beklenir, bu nedenle veri analizinin herhangi bir adımı veya aracı hakkında negatif konuşmaktan kaçının.\n\nSon olarak, bu veri analisti blogunda bu soruyu nasıl dikkatli bir şekilde ele alacağımızı ve en iyi şekilde cevaplayacağımızı anlamalıyız."
+    },
+    "50": {
+        "question": "Veri analiziyle ilgili teknik içerikleri teknik olmayan bir kitleye açıklama konusunda ne kadar iyisiniz?",
+        "answer": "Bu, çoğu veri analitiği mülakatında sorulan başka bir klasik sorudur. Burada, teknik içeriği aktarma iletişim becerilerinizden, sabrınızın seviyesinden ve içeriği daha iyi anlamalarına yardımcı olmak için içeriği daha küçük parçalara ayırma yeteneğinizden bahsetmelisiniz.\n\nMülakatçıya, teknik veya teknik olmayan farklı arka planlardan gelen insanlarla etkili bir şekilde çalışabileceğinizi göstermek her zaman avantajlıdır."
+    }
+}

@@ -1,0 +1,118 @@
+{
+    "1": {
+        "question": "Kotlin'in Özellikleri",
+        "answer": "Kotlin, geliştiricilerin yaşamını kolaylaştıran birkaç özellikle gelir. Kotlin'in göz kamaştırıcı özelliklerinden bazıları şunlardır:\n\n1. Kompakt Kod - Kotlin, Java'ya kıyasla daha az kod satırına sahip bir OOP tabanlı programlama dilidir. Bu özellik, yazılım geliştiricileri için mükemmel bir seçim yapar.\n\n2. Açık Kaynaklı - Kotlin, OOPs ve işlevsel programlamanın özelliklerini birleştirir. Android için açık kaynaklı olarak bilinir ve JVM'i kullanır.\n\n3. Anlaşılması Kolay - Kotlin'deki kodlama basittir, bu da onu okunabilir ve anlaşılabilir kılar. Unutmamak gerekir ki bu aynı zamanda Android Geliştirme performansını da artırır.\n\n4. Çok Sayıda Uzantı - Bu kod, kodu değiştirmeden çeşitli uzantı fonksiyonlarını destekleyebilir. Mevcut kodu geliştirmeye ve daha verimli hale getirmeye yardımcı olur.\n\n5. Birleştirmesi Kolay - Java Kodundan Kotlin Koduna hızlıca geçilebilir, çünkü her iki kod da bir arada kullanılabilir. Kısacası, OOPs programlamasına dair biraz bilgiye sahipseniz, Kotlin geliştirmeye geçmek sizin için büyük bir sorun olmamalıdır.\n\n6. Maliyet Etkin - Kotlin, yüksek verimli ve maliyet etkin bir teknik olan Akıllı Dökme'yi destekler. Bu teknik, bir uygulamanın maliyetini düşürmeye ve programlamayı daha verimli hale getirmeye yardımcı olur.\n\n7. Öğrenmesi Kolay - Kotlin, genel deneyimi daha kolay ve verimli hale getiren basit bir kod dilini getirir. Diğer kodlara kıyasla geliştiriciler için öğrenmesi basittir."
+    },
+    "2": {
+        "question": "Kotlin'in Java'ya Göre Avantajları Nelerdir?",
+        "answer": "* Kolay İşlem - Java'da her nesne için getter ve setter oluşturmak gereklidir. Ayrıca, hashCode ve equals yazmak zorundadır. Ancak, Kotlin Programlama Dili'nde her şey sınıflar tarafından ele alınır - bu da işlemi kolaylaştırır.\n\n* Yöntemi Yeniden Yazma - Java kullanıyorsanız, her değişken için getter ve setter yöntemini yeniden yazmak/zaman alıcıdır. Kotlin'de yeniden yazma işlemi çok daha az zaman alır.\n\n* Uzantı Desteği - Java'da uzantı işlevlerinden yararlanılamaz. Ancak, Kotlin'de, kod dilinin ve işleminin daha net olduğu güçlü uzantı fonksiyonları desteği vardır.\n\n* Hata Yok/Daha Az Hata - Kotlin'de hata olasılıkları, Java'dan daha azdır."
+    },
+    "3": {
+        "question": "Kotlin'in Hedef Platformu Nedir? Kotlin-Java uyumluluğu nasıl mümkün olabilir?",
+        "answer": "Java Virtual Machine, Kotlin'in Hedef Platformu olarak bilinir. Evet, Kotlin-Java uyumluluğu mümkündür çünkü her ikisi de derleme sırasında bayt kodu üretir. Bu nedenle, Java'dan Kotlin kodunu çağırmak ve tersi mümkündür."
+    },
+    "4": {
+        "question": "val ve var bildirimini nasıl ayırt edersiniz?",
+        "answer": "val değişkenleri değiştirilemez. Java'da final değiştiriciler olarak kabul edilirler. Öte yandan, var aynı veri türü değeriyle yeniden atanabilir."
+    },
+    "5": {
+        "question": "Bir String'i bir Int'e dönüştürmek mümkün müdür?",
+        "answer": "Evet, toInt() yöntemiyle bir String'i bir Int'e dönüştürmek mümkündür."
+    },
+    "6": {
+        "question": "Elvis Operatörü nedir?",
+        "answer": "Elvis Operatörü, değeri Null değerden güvenle açığa çıkarmaya yardımcı olur. Null olabilen türün üzerine ?: olarak tanımlanabilir."
+    },
+    "7": {
+        "question": "Null Güvenliği nedir?",
+        "answer": "Null Güvenliği, değişkenin olası yürütmesi için 'null' değerinin başlatılmasını ifade eder. Null Güvenliği ile, tüm çalışma zamanı null-dereferans hataları derleme zamanında yansıtılacaktır."
+    },
+    "8": {
+        "question": "Kotlin'de Null Olabilen Türler Nelerdir?",
+        "answer": "Kotlin'de Null Olabilen Türler şunlardır: String?, Int?, Float?."
+    },
+    "9": {
+        "question": "Kotlin'de int, float ve double gibi ilkel tipleri kullanabilir miyiz?",
+        "answer": "Giriş seviyesinde ilkel tipleri kullanmak mümkün değildir. Ancak, derlenmiş JVM bayt kodunda bunu deneyimleyebilirsiniz."
+    },
+    "10": {
+        "question": "Kotlin Programının giriş noktası nedir?",
+        "answer": "Kotlin Programının giriş noktası olarak birincil işlev kabul edilir. Bu programlama dilinde, sınıfın merkezi bölümünü yok saymayı seçebilirsiniz. Daha sonra, Array<String> komut kodunda iletilen dizeler, komut satırı argümanlarını geri almak için kullanılır."
+    },
+    "11": {
+        "question": "const ile val arasındaki benzerlik yoktur?",
+        "answer": "Bir değişken veya birey olarak const kullanmak mümkün değildir. Const yerel bir değişkende izin verilmez. Öte yandan, val özellikleri çalışma zamanında tanımlanır. Val'a const değiştiricisi eklemek derleme zamanı sabitine dönüştürebilir."
+    },
+    "12": {
+        "question": "Bir fonksiyonun tanımlandığını nasıl belirtirsiniz?",
+        "answer": "Bir fonksiyonun dönüş türü, : den sonra belirtilir\n\nÖrneğin -\n\nfun sumOf(a: Int, b: Int): Int{\n\nreturn a + b}"
+    },
+    "13": {
+        "question": "== ve === operatörlerini Kotlin'de nasıl ayırt edersiniz?",
+        "answer": "==, değerlerin eşit olup olmadığını belirlemek için kullanılır. ===, referansın eşit olup olmadığını kontrol etmek için kullanılır."
+    },
+    "14": {
+        "question": "Kotlin'de tanımlanan görünürlük değiştiricileri nelerdir?",
+        "answer": "Kotlin'de Görünürlük Değiştiricileri şunlardır: Public, Internal, Private ve Protected."
+    },
+    "15": {
+        "question": "Varsayılan görünürlük değiştirici nedir?",
+        "answer": "Varsayılan görünürlük değiştirici olarak public bilinir."
+    },
+    "16": {
+        "question": "Kotlin'de yapılandırıcıların türlerini tanımlayın?",
+        "answer": "Kotlin'de yapılandırıcılar iki türde tanımlanabilir: Birincil ve İkincil.\n\nBirincil: Birincil yapılandırıcılar sınıf başlıklarında vurgulanır. Herhangi bir mantık barındıramazlar. Bu nedenle, her sınıf başına yalnızca bir birincil yapılandırıcı hizalanır.\n\nİkincil: İkincil yapılandırıcılar sınıf gövdesinde tanımlanır. Mantık barındırmak için uygundurlar. Birden fazla ikincil yapılandırıcı belirtilebilir."
+    },
+    "17": {
+        "question": "Kotlin'de init bloğunu tanımlayın?",
+        "answer": "init, Kotlin'de başlatıcı blok olarak tanımlanır. Birincil yapılandırıcı başlatıldıktan sonra yalnızca bir kez çalıştırılabilir. Ancak, birisi ikincil bir yapılandırıcı çağırırsa, zinciri takip eden birincil yapılandırıcının ardından çalışmaya başlar."
+    },
+    "18": {
+        "question": "Kotlin'de Dize İçi İşleme nasıl çalışır?",
+        "answer": "Dize İçi İşleme, dize şablonlarını değerlendirmek için kullanılır. Bir Dize içine değişkenleri eklemek için $ simgesi kullanılır."
+    },
+    "19": {
+        "question": "Yapılandırıcı içindeki argümanların türünü nasıl belirlersiniz?",
+        "answer": "Varsayılan olarak, yapılandırıcı argümanları val ve var olarak ayarlanır."
+    },
+    "20": {
+        "question": "Kotlin'de 'new' kelimesini bir anahtar kelime olarak tanımlar mısınız?",
+        "answer": "Hayır, Kotlin'de 'new' kelimesi yoktur. Ancak, aynı şeyi Java'da tanımlayabilirsiniz."
+    },
+    "21": {
+        "question": "Kotlin'de bir sınıf nesnesi nasıl örneklendirilir?",
+        "answer": "İşte bunun nasıl ayarlanacağına dair hızlı bir örnek-\n\nclass A\n\nvar a = A()\n\nVal new = A()"
+    },
+    "22": {
+        "question": "Kotlin'de Eşlik Eden Nesneler hakkında ne anlıyorsunuz?",
+        "answer": "Java gibi diğer programlama dillerinde, sınıf üyelerini/adını belirtmek için statik bir anahtar kelime kullanılır. Kotlin'de bir static anahtar kelimesi bulunmadığından, statik üye işlevlerinin işlevselliğini elde etmek için eşlik eden bir nesne kullanılır. Eşlik Eden Nesne aynı zamanda Nesne Uzantısı olarak da bilinir."
+    },
+    "23": {
+        "question": "Kotlin'de Açık ve Genel anahtar kelimeleri arasındaki fark nedir?",
+        "answer": "Açık, Genişletmeye Açık anlamına gelir. Java'da, yöntemler varsayılan olarak geçersiz kılınabilir. Kotlin'de, geçersiz kılınabilir ancak varsayılan olarak yapılamaz.\n\nKotlin'de herhangi bir görünürlük değiştirici belirtilmemişse, varsayılan olarak genel kullanılır. Bu, deklarasyonların programın her yerinden erişilebilir olacağı anlamına gelir."
+    },
+    "24": {
+        "question": "Kotlin bağlamında 'when' anahtar kelimesini nasıl anlarsınız?",
+        "answer": "'when' anahtar kelimesi, yerine geçerler anlamına gelir. Diğer dillerdeki gibi Java gibi anahtar değiştiriciyi yerine koymak için kullanılır. Belirli bir koşul karşılandığında, belirli bir kod bloğu çalıştırılmalıdır. \n\nBu ifadede, tüm dallar birbirleriyle karşılaştırılır. Hedef, eşleşmeyi belirlemektir. İlk eşleşme bulunduğunda, when bloğunun sonuna gider ve hemen kodu yürütmeye odaklanır."
+    },
+    "25": {
+        "question": "lazy ile lateinit arasındaki farkı nasıl ayırt edersiniz?",
+        "answer": "* Her iki özellik de Kotlin'de özelliğin başlatılmasını geciktirmek için bilinir. \n\n* Lateinit, bir var ile kullanılan bir değiştiricidir. Değeri daha sonra var'a atamak için kullanılır.\n\nlazy yöntemi veya lambda ifadesi yalnızca bir val üzerinde geliştirilmiştir. Değer, gerektiğinde çalışma zamanında oluşturulur."
+    },
+    "26": {
+        "question": "Kotlin'de static anahtar kelimesi var mı?",
+        "answer": "Hayır, Kotlin'de static anahtar kelimesi bulunmamaktadır. Bir static anahtar kelimesi oluşturmak için, eşlik eden bir nesne kullanmak gerekmektedir."
+    },
+    "27": {
+        "question": "Kotlin'de val mutableList veya var immutableList kullanmak daha mı iyidir?",
+        "answer": "Değişken ve değişmez listeler, koleksiyonun amacını düşünmeye ve netleştirmeye ittiği için tasarım açıklığını artırır. Değişken listeler, koleksiyonun tasarımın bir parçası olarak değişeceği durumlarda kullanılır ve değişmez listeler, modelin görüntülenmesi amaçlandığında kullanılır. \n\nVal ve var yine, belirli amaçlara sahiptir. Bir değişkenin değerinin veya referansının nasıl ele alınacağını belirtirler. Değer veya referans herhangi bir anda değiştirilebiliyorsa var kullanılır ve değişkenin değeri veya referansı bir kez atanabilir ve daha sonra değiştirilemezse val kullanılır. \n\nGenellikle, değişmez listeler tercih edilir çünkü işlevsel programlamayı teşvik ederler, burada durum bir sonraki işleve iletildiğinde. Bu şekilde, yeni bir durum, üzerine dayandığı bir sonraki işleme göre oluşturulur, değiştirilmez. \n\nAyrıca, programı anlamak ve hata ayıklamak da sıkça daha kolay olur. Değiştirilemez kaynaklar, çoklu iş parçacıklı sistemlerde yazma erişimi gerektirmediğinden yarış koşullarına neden olmaz. \n\nAncak, dezavantajları da vardır. Değişmez listelerde tek bir parça eklemek veya kaldırmak için büyük koleksiyonları kopyalamak maliyetlidir. Tek bir alanı sık sık değiştirmeniz gerektiğinde kod daha zor hale gelebilir."
+    },
+    "28": {
+        "question": "Kotlin'de kotaların tanımı nedir?",
+        "answer": "Kotlin'de async ve await anahtar kelimeleri yoktur. Kotlinx.coroutines, yüksek seviyeli kotalara sahip zengin bir kütüphanedir. Kotlin kotaları, sıralı olarak asenkron kod yazmak için bir API sunar. Yeni bir iş parçacığı oluşturulmadığından hafif iş parçacıkları gibi oldukları için benzerdirler. \n\nKotalar yürütme sırasında askıya alınabilir ve yeniden başlatılabilir. Tek tek uzun süren bir görevin yürütülmesine izin verebilirsiniz. "
+    },
+    "29": {
+        "question": "Mühürlü Sınıfı kullanmanın Enum'dan daha iyi olmasının nedeni nedir?",
+        "answer": "Mühürlü sınıfların farklı türlerde alt sınıfları vardır ve durumu içerirler. Mühürlü sınıfları genişleten alt sınıflar iç içe sınıflar veya Mühürlü sınıfın aynı dosyada bildirilmiş olması gerekmektedir. "
+    }
+}

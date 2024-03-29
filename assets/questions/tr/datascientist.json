@@ -1,0 +1,346 @@
+{
+    "1": {
+        "question": "Veri Bilimi nedir?",
+        "answer": "Veri Bilimi, veriyi bilgiye dönüştürme ve ondan anlamlı içgörüler çıkarma konusunda açıkça uğraşan bir bilgisayar bilimi alanıdır. Veri Bilimi'nin neden bu kadar popüler olduğu, sunduğu içgörülerin, birçok üründe ve şirkette bazı büyük yeniliklere yol açmasından kaynaklanmaktadır. Bu içgörüler sayesinde, belirli bir müşterinin zevkini, belirli bir pazarda bir ürünün başarılı olma olasılığını vb. belirleyebiliyoruz."
+    },
+    "2": {
+        "question": "Veri Analitiği ile Veri Bilimi arasındaki fark nedir?",
+        "answer": "1. Veri Analitiği\n\n   * Veri Analitiği, Veri Bilimi'nin bir alt kümesidir.\n   * Veri analitiğinin amacı elde edilen içgörülerin kesin detaylarını göstermektir.\n   * Sadece temel programlama dillerini gerektirir.\n   * Sadece çözümleri bulmaya odaklanır.\n   * Bir veri analistinin işi, kararlar almak için veriyi analiz etmektir.\n\n2. Veri Bilimi\n\n   * Veri Bilimi, Veri Analitiği, Veri Madenciliği, Veri Görselleştirme vb. gibi çeşitli alt kümeleri içeren geniş bir teknolojidir.\n   * Veri biliminin amacı, büyük veri kümelerinden anlamlı içgörüler keşfetmek ve iş problemlerini çözmek için en iyi çözümleri türetmektir.\n   * Gelişmiş programlama dilleri, istatistik ve özel makine öğrenme algoritmalarında bilgi gerektirir.\n   * Veri Bilimi sadece çözümleri bulmakla kalmaz, aynı zamanda geçmiş desenlere veya içgörülere dayanarak geleceği tahmin eder.\n   * Bir veri bilimcinin işi, ham verilerden anlamlı veri görselleştirmeleri sağlamaktır."
+    },
+    "3": {
+        "question": "Python'un faydaları nelerdir?",
+        "answer": "Python, çok yönlülüğü ve basitliği nedeniyle son derece avantajlı bir programlama dili olarak geniş çapta tanınmaktadır. Uygulama alanının geniş olması ve bu alanla ilişkilendirilen avantajlar, geliştiriciler arasında tercih edilme nedenlerini oluşturmuştur. Özellikle, Python, okunabilirlik ve kullanıcı dostuluğu açısından öne çıkmaktadır.\n\nSözdizimi, sezgisel ve özlü bir şekilde tasarlanmıştır, bu da kodlama, anlama ve bakım açısından kolaylık sağlar. Ayrıca, Python, çeşitli önceden oluşturulmuş modül ve işlevlerin kapsamlı bir standart kütüphanesini sunar. Bu zengin kaynaklar, geliştiricilerin rutin programlama görevlerini yürütme sürecini önemli ölçüde azaltır."
+    },
+    "4": {
+        "question": "Veri Bilimi Alanında R Nasıl Faydalıdır?",
+        "answer": "İşte R'nin veri bilimi alanında nasıl faydalı olduğuna dair bazı yollar:\n\n* Veri Manipülasyonu ve Analizi: R, etkili veri manipülasyonu, dönüşüm ve istatistiksel analiz için geniş bir kütüphane ve işlev koleksiyonu sunar.\n* İstatistiksel Modelleme ve Makine Öğrenimi: R, gelişmiş istatistiksel modelleme ve makine öğrenimi görevleri için geniş bir paket yelpazesi sunar, bu da veri bilimcilerin öngörü modelleri oluşturmasına ve karmaşık analizler yapmasına olanak tanır.\n* Veri Görselleştirme: R'nin kapsamlı görselleştirme kütüphaneleri, görsel olarak çekici ve anlamlı çizimler, grafikler ve grafikler oluşturmayı sağlar.\n* Tekrarlanabilir Araştırma: R, kodu, veriyi ve belgelemeyi entegre etmeyi destekler, tekrarlanabilir iş akışlarını kolaylaştırır ve veri bilimi projelerinde şeffaflığı sağlar."
+    },
+    "5": {
+        "question": "Gözetimli Öğrenme nedir?",
+        "answer": "Gözetimli öğrenme, bir algoritmanın etiketlenmiş eğitim verilerinden öğrenerek tahminlerde bulunması veya yeni, görülmemiş verileri sınıflandırması için bir makine öğrenimi yaklaşımıdır. Giriş verileri ve karşılık gelen çıktı etiketleri kullanılır, bu da algoritmanın desenleri ve ilişkileri öğrenmesine olanak tanır. Amaç, öğrenilen desenleri genelleştirmek ve öğrenilen desenlere dayanarak yeni giriş verileri için çıktıları doğru bir şekilde tahmin etmektir."
+    },
+    "6": {
+        "question": "Unsupervised Learning nedir?",
+        "answer": "Unsupervised learning, etiketlenmemiş veriler içinde desenler ve yapılar ortaya çıkaran bir makine öğrenimi yaklaşımıdır. Açık bir yönlendirme veya önceden belirlenmiş çıkış etiketleri olmadan çalışır. Amacı, verideki gizli ilişkileri, desenleri ve kümeleri ortaya çıkarmaktır. Denetimli öğrenmeden farklı olarak, algoritma veriyi keşfetmek ve içsel yapıları tanımlamak için otonom olarak veriyi keşfeder, bu da keşifsel veri analizi ve yeni içgörülerin keşfi için değerli olur."
+    },
+    "7": {
+        "question": "Doğrusal Regresyon hakkında ne anlıyorsunuz?",
+        "answer": "Doğrusal regresyon, bağımlı ve bağımsız değişkenler arasındaki doğrusal ilişkiyi anlamada yardımcı olur. Doğrusal regresyon, iki değişken arasındaki doğrusal ilişkiyi bulmada yardımcı olan bir denetimli öğrenme algoritmasıdır. Bir tanesi tahmin edici veya bağımsız değişken, diğeri ise yanıt veya bağımlı değişkendir. Doğrusal regresyonda, bağımlı değişkenin bağımsız değişkene göre nasıl değiştiğini anlamaya çalışırız. Eğer yalnızca bir bağımsız değişken varsa, buna basit doğrusal regresyon denir ve eğer birden fazla bağımsız değişken varsa, çoklu doğrusal regresyon olarak bilinir."
+    },
+    "8": {
+        "question": "Lojistik regresyonu ne anlıyorsunuz?",
+        "answer": "Lojistik regresyon, bağımlı değişkenin ikili olduğu durumlarda kullanılabilecek bir sınıflandırma algoritmasıdır. Bir örnek alalım. Burada, sıcaklık ve nem temel alınarak yağmur yağacağını belirlemeye çalışıyoruz.\n\nSıcaklık ve nem bağımsız değişkenlerdir ve yağmur bağımlı değişkendir. Bu nedenle, lojistik regresyon algoritması aslında bir S şeklinde bir eğri oluşturur.\n\nYani, lojistik regresyonda, Y değeri 0 ve 1 aralığında bulunur. Bu, lojistik regresyonun çalışma şeklidir."
+    },
+    "9": {
+        "question": "Karmaşıklık matrisi nedir?",
+        "answer": "Karmaşıklık matrisi, bir modelin performansını tahmin etmek için kullanılan bir tablodur. Gerçek değerleri ve tahmin edilen değerleri 2x2'lik bir matriste tablolar.\n\nGerçek Pozitif (d): Bu, gerçek değerlerin doğru ve tahmin edilen değerlerin de doğru olduğu tüm kayıtları belirtir. Bu nedenle, bunlar tüm gerçek pozitifleri belirtir. Yanlış Negatif (c): Bu, gerçek değerlerin doğru olduğu, ancak tahmin edilen değerlerin yanlış olduğu tüm kayıtları belirtir. Yanlış Pozitif (b): Burada, gerçek değerler yanlış, ancak tahmin edilen değerler doğrudur. Gerçek Negatif (a): Burada, gerçek değerler yanlış ve tahmin edilen değerler de yanlıştır. Yani, doğru değerleri elde etmek istiyorsanız, doğru değerler temel olarak tüm gerçek pozitifleri ve tüm gerçek negatifleri temsil eder. İşte karmaşıklık matrisinin çalışma şekli."
+    },
+    "10": {
+        "question": "Gerçek pozitif oranı ve yanlış pozitif oranı hakkında ne anlıyorsunuz?",
+        "answer": "Gerçek pozitif oranı: Makine Öğrenimi'nde, hassasiyet veya hatırlama olarak da adlandırılan gerçek pozitif oranları, doğru tanımlanan gerçek pozitiflerin yüzdesini ölçmek için kullanılır. Formül: \nGerçek Pozitif Oranı = Gerçek Pozitifler/Pozitifler\n\nYanlış pozitif oranı: Yanlış pozitif oranı, belirli bir test için null hipotezinin yanlış bir şekilde reddedilme olasılığıdır. Yanlış pozitif oranı, yanlışlıkla pozitif olarak sınıflandırılan negatif olayların (yanlış pozitif) toplam gerçek olay sayısına bölünmesiyle hesaplanır. Formül:\nYanlış Pozitif Oranı = Yanlış Pozitifler/Negatifler."
+    },
+    "11": {
+        "question": "Veri Bilimi, geleneksel uygulama programlamasından nasıl farklıdır?",
+        "answer": "Veri Bilimi, değer sağlayan sistemler inşa etme konusunda geleneksel uygulama geliştirmeden temel olarak farklı bir yaklaşım benimser.\n\nGeleneksel programlama paradigmalarında, girişi analiz eder, beklenen çıktıyı belirler ve sağlanan girişi beklenen çıktıya dönüştürmek için gereken kuralları ve ifadeleri içeren kod yazardık. Bu kuralların, hatta bilgisayarların bile anlamakta zorlandığı veriler için yazmak kolay olmadığını hayal edebiliriz, örneğin, resimler, videolar, vb.\n\nVeri Bilimi bu süreci biraz değiştirir. Büyük miktarda veriye erişim sağlamamız gerekir ki bu veriler gerekli girişleri ve beklenen çıktıları eşleyen veri bilimi algoritmalarını kullanabiliriz.\n\nBu kural oluşturma sürecine eğitim denir. Eğitimden sonra, eğitim aşamasından önce kenara ayırdığımız bazı verileri kullanarak sistemin doğruluğunu test etmek ve kontrol etmek için bu verileri kullanırız. Oluşturulan kurallar bir tür siyah kutu gibidir ve girişlerin nasıl çıktılara dönüştürüldüğünü anlayamayız.\n\nAncak, doğruluk yeterince iyiyse, o zaman sistemi (aynı zamanda model denir) kullanabiliriz.\n\nYukarıda açıklandığı gibi, geleneksel programlamada, girişi çıktıya eşlemek için kuralları yazmak zorundaydık, ancak Veri Bilimi'nde kurallar otomatik olarak oluşturulur veya verilen verilerden öğrenilir. Bu, birkaç şirketin karşılaştığı gerçekten zor zorlukları çözmeye yardımcı oldu."
+    },
+    "12": {
+        "question": "Uzun format veri ile geniş format veri arasındaki fark nedir?",
+        "answer": "1.Uzun Format Veri\n\n   * Uzun formatlı bir verinin olası değişken türleri için bir sütunu ve bu değişkenlerin değerleri için bir sütunu vardır.\n   * Uzun formatın her satırı bir konuya ait bir zaman noktasını temsil eder. Sonuç olarak, her konu birçok veri satırını içerir.\n   * Bu veri formatı genellikle R analizinde ve her deneyin sonunda günlük dosyalarına yazma için kullanılır.\n   * Uzun format, birinci sütunda tekrarlanan değerler içerir.\n   * Geniş biçimi uzun forma dönüştürmek için df.melt() kullanın.\n\n2.Geniş Format Veri\n\n   * Oysa, Geniş verinin her değişken için bir sütunu vardır.\n   * Bir konunun tekrarlayan yanıtları, geniş formatta bir satırda olacaktır, her bir yanıt kendi sütununda olacaktır.\n   * Bu veri formatı, genellikle tekrarlı ölçümler için veri manipülasyonları ve istatistiksel programlar için kullanılır ve nadiren R analizinde kullanılır.\n   * Geniş biçim, birinci sütunda tekrarlanmayan değerler içerir.\n   * Uzun formu geniş forma dönüştürmek için df.pivot().reset_index() kullanın."
+    },
+    "13": {
+        "question": "Örnekleme için kullanılan bazı teknikleri belirtin. Örneklemede ana avantaj nedir?",
+        "answer": "Örnekleme, araştırma amaçları için bir grup insan veya belirli bir türden örnek seçme süreci olarak tanımlanır. Araştırma/anket sonuçlarının doğruluğunu belirleyen en önemli faktörlerden biridir.\n\nTemel olarak iki tür örnekleme tekniği vardır:\n\nOlasılık örnekleme: Her elemanın seçilme şansı olduğu rastgele seçimi içerir. Olasılık örneklemede aşağıda belirtilen çeşitli alt tipler bulunmaktadır:\n\n   * Basit Rastgele Örnekleme\n   * Tabakalı Örnekleme\n   * Sistematik Örnekleme\n   * Küme Örnekleme\n   * Çok Aşamalı Örnekleme\n\nOlasılık dışı örnekleme: Olasılık dışı örnekleme, rastgele olmayan seçimi takip eder, yani seçim kolaylığınıza veya diğer gereken kriterlere dayalı olarak yapılır. Bu, verileri kolayca toplamanıza yardımcı olur. Aşağıda çeşitli örnekleme türleri bulunmaktadır:\n\n   * Kolaylık Örnekleme\n   * Amaçlı Örnekleme\n   * Kota Örnekleme\n   * Yönlendirme/Kar Topu Örnekleme"
+    },
+    "14": {
+        "question": "Veri biliminde önyargı nedir?",
+        "answer": "Önyargı, veri bilimi modelinde, veride var olan temel desenleri veya eğilimleri yakalayamayan yeterince güçlü bir algoritma kullanılmasından kaynaklanan bir tür hatadır. Başka bir deyişle, bu hata, verinin algoritmanın anlaması için çok karmaşık olması nedeniyle ortaya çıkar, bu nedenle basit varsayımlarla bir model oluşturur. Bu, alt uygunluktan kaynaklanan daha düşük doğrulukla sonuçlanır. Yüksek önyargıya yol açabilen algoritmalar arasında lineer regresyon, lojistik regresyon vb. bulunmaktadır."
+    },
+    "15": {
+        "question": "Boyut azaltma nedir?",
+        "answer": "Boyut azaltma, yüksek boyutta (alanlarda) bir veri kümesini daha düşük boyutta bir veri kümesine dönüştürme işlemidir. Bu, veri kümesinden bazı alanları veya sütunları atarak yapılır. Ancak, bu rastgele yapılmaz. Bu işlemde, boyutlar veya alanlar yalnızca geriye kalan bilgilerin benzer bilgileri hala özetleyecek kadar olacağından emin olduktan sonra atılır."
+    },
+    "16": {
+        "question": "Veri Görselleştirmede neden R kullanılır?",
+        "answer": "R, veri analizi ve görselleştirmede en iyi ekosistemi sağlar ve Açık Kaynak depolarında 12.000'den fazla pakete sahiptir. Bu, StackOverflow gibi çeşitli platformlarda sorunlarınıza kolayca çözüm bulabileceğiniz büyük bir topluluğa sahiptir.\n\nR, daha iyi veri yönetimi sağlar ve işlemleri birden çok görev ve düğme arasında bölerek dağıtılmış hesaplamayı destekler, bu da büyük veri kümelerinin karmaşıklığını ve yürütme zamanını azaltır."
+    },
+    "17": {
+        "question": "Veri Bilimi için popüler kütüphaneler nelerdir?",
+        "answer": "Aşağıda, veri çıkarma, temizleme, görselleştirme ve DS modellerini dağıtma için kullanılan popüler kütüphaneler bulunmaktadır:\n\n* TensorFlow: Google tarafından desteklenen kusursuz kütüphane yönetimi ile paralel hesaplamayı destekler.\n* SciPy: Genellikle fark denklemlerini çözmek, çok boyutlu programlama, veri manipülasyonu ve grafikler ve grafikler aracılığıyla görselleştirme için kullanılır.\n* Pandas: İş uygulamalarında veri çıkarma, dönüştürme ve yükleme (ETL) yeteneklerini uygulamak için kullanılır.\n* Matplotlib: Ücretsiz ve açık kaynak olması nedeniyle MATLAB yerine kullanılabilir, bu da daha iyi performans ve düşük bellek tüketimi sağlar.\n* PyTorch: Makine öğrenimi algoritmaları ve derin sinir ağlarını içeren projeler için en iyisidir."
+    },
+    "18": {
+        "question": "Veri Biliminde kullanılan önemli işlevler nelerdir?",
+        "answer": "Veri bilimi alanında, çeşitli kritik görevlerde çeşitli kilit işlevler önemli roller üstlenir. Bunların arasında, iki temel işlev maliyet fonksiyonu ve kayıp fonksiyonudur.\n\nMaliyet fonksiyonu: Ayrıca amaç fonksiyonu olarak da adlandırılan maliyet fonksiyonu, özellikle iyileştirme senaryolarında makine öğrenimi algoritmaları içinde önemli bir işleve sahiptir. Amacı, tahmin edilen değerler ile gerçek değerler arasındaki farkı ölçmektir. Maliyet fonksiyonunu en aza indirmek, modelin parametrelerini veya katsayılarını optimize etmeyi amaçlayarak optimal bir çözüm elde etmeyi hedefler.\n\nKayıp fonksiyonu: Kayıp fonksiyonları, denetimli öğrenme çabalarında önemli bir öneme sahiptir. Tahmin edilen değerler ile gerçek etiketler arasındaki farkı veya hatayı değerlendirirler. Belirli bir kayıp fonksiyonunun seçimi, kullanılan probleme bağlıdır, örneğin regresyon görevleri için ortalama kare hatası (MSE) veya sınıflandırma görevleri için çapraz entropi kaybı kullanılabilir. Kayıp fonksiyonu, modelin eğitimi sırasında modelin optimizasyon sürecini yönlendirir ve nihayetinde doğruluğu ve genel performansı artırır."
+    },
+    "19": {
+        "question": "k-katlamalı çapraz doğrulama nedir?",
+        "answer": "k-katlamalı çapraz doğrulamada, veri kümesini k eşit parçaya böleriz. Bundan sonra, veri kümesinin tamamını k kez döngüye alırız. Döngünün her tekrarında, k parçadan biri test etmek için kullanılır ve diğer k − 1 parça eğitim için kullanılır. k-katlamalı çapraz doğrulama kullanılarak, veri kümesinin her bir k parçası eğitim ve test amacıyla kullanılır."
+    },
+    "20": {
+        "question": "Bir öneri sistemi nasıl çalışır?",
+        "answer": "Bir öneri sistemi, birçok tüketici odaklı, içerik tabanlı, çevrimiçi platformun kullanıcılara mevcut içerik kütüphanesinden öneriler oluşturmak için kullandığı bir sistemdir. Bu sistemler, platformdaki kullanıcıların aktivitelerinden elde ettikleri kullanıcıların zevklerine ilişkin bilgilere dayanarak öneriler oluşturur.\n\nÖrneğin, Netflix veya Amazon Prime gibi bir film yayın platformumuz olduğunu hayal edelim. Bir kullanıcı daha önce aksiyon ve korku türlerinden filmleri izlemiş ve beğenmişse, bu, kullanıcının bu tür filmleri izlemeyi sevdiği anlamına gelir. Bu durumda, bu belirli kullanıcıya böyle filmleri önermek daha iyi olacaktır. Bu öneriler ayrıca benzer zevklere sahip kullanıcıların ne izlediğine göre de oluşturulabilir."
+    },
+    "21": {
+        "question": "Poisson Dağılımı nedir?",
+        "answer": "Poisson dağılımı, belirli bir zaman aralığında veya alanda meydana gelen olayları temsil etmek için kullanılan istatistiksel bir olasılık dağılımıdır. Bağımsız ve tutarlı bir ortalama hızda meydana gelen seyrek olayları karakterize etmek için yaygın olarak kullanılır, örneğin belirli bir saat içinde alınan gelen telefon çağrılarının sayısını belirlemek için."
+    },
+    "22": {
+        "question": "Normal Dağılım nedir?",
+        "answer": "Veri dağılımı, verinin nasıl yayıldığını veya dağıldığını analiz etmek için bir görselleştirme aracıdır. Veri çeşitli şekillerde dağıtılabilir. Örneğin, sola veya sağa eğilimli olabilir veya tamamen karışık olabilir.\n\nVeri ayrıca merkezi bir değer etrafında, yani ortalama, medyan vb. dağıtılabilir. Bu tür bir dağılım, ne sola ne de sağa bir eğilime sahiptir ve çan şeklinde bir eğri formundadır. Bu dağılımın ortalaması da medyanı ile eşittir. Bu tür bir dağılıma normal dağılım denir."
+    },
+    "23": {
+        "question": "Derin Öğrenme nedir?",
+        "answer": "Derin Öğrenme, sinir ağlarının insan beyninin yapısını taklit etmek için kullanıldığı bir tür Makine Öğrenmesidir ve bir beyin bilgi alıştığı gibi, makineler de kendilerine verilen bilgilerden öğrenmek üzere yapılır.\n\nDerin Öğrenme, makinelerin veriden öğrenmesini sağlamak için gelişmiş bir sinir ağı versiyonudur. Derin Öğrenmede, sinir ağları birbirine bağlı birçok gizli katmana (bu yüzden 'derin' öğrenme olarak adlandırılır) sahiptir ve önceki katmanın çıktısı, mevcut katmanın girdisidir."
+    },
+    "24": {
+        "question": "CNN (Evrişimli Sinir Ağı) nedir?",
+        "answer": "Evrişimli Sinir Ağı (CNN), özellikle görüntü ve videolar gibi görsel verileri analiz etmek için tasarlanmış gelişmiş derin öğrenme mimarisidir. Girdi verilerinden anlamlı özellikler çıkarmak için evrişim işlemlerini kullanan birbirine bağlı nöron katmanlarından oluşur. CNN'ler, veri içinde hiyerarşik temsilleri otomatik olarak öğrenme ve veri içindeki uzamsal ilişkileri yakalama yetenekleri sayesinde görüntü sınıflandırma, nesne tespiti ve görüntü tanıma gibi görevlerde dikkate değer etkilidir, bu da açık özellik mühendisliği gereksinimini ortadan kaldırır."
+    },
+    "25": {
+        "question": "RNN (tekrarlayan sinir ağı) nedir?",
+        "answer": "Tekrarlayan sinir ağı veya kısa adıyla RNN, yapay sinir ağı kullanan bir Makine Öğrenmesi algoritması türüdür. RNN'ler, zaman serileri, borsa, sıcaklık vb. gibi veri dizilerinden desenler bulmak için kullanılır. RNN'ler, bir katmandan diğerine bilgi akışını sağlayan ve ağdaki her düğümün veri üzerinde matematiksel işlemler gerçekleştirdiği bir tür ileri besleme ağıdır. Bu işlemler zamansaldır, yani RNN'ler ağdaki önceki hesaplamalar hakkında bağlamsal bilgiler saklar. Tekrar eden, her seferinde bazı veriler üzerinde aynı işlemleri gerçekleştirir çünkü önceki hesaplamalara ve sonuçlarına dayalı olarak çıktı farklı olabilir."
+    },
+    "26": {
+        "question": "Seçim önyargısı nedir?",
+        "answer": "Seçim önyargısı, verinin örnekleme sırasında ortaya çıkan önyargıdır. Bu tür bir önyargı, bir örneklemenin, istatistiksel bir çalışmada analiz edilecek popülasyonu temsil etmemesi durumunda ortaya çıkar."
+    },
+    "27": {
+        "question": "Metni analiz etmek için Python ve R arasında hangisini seçersiniz ve neden?",
+        "answer": "Aşağıdaki faktörler nedeniyle metin analizi için Python'un R'yi geride bırakacağını düşünüyoruz:\n\n* Python'un Pandas modülü, yüksek performanslı veri analizi yetenekleri sunar ve kullanımı kolay veri yapıları sunar.\n\n* Python, her türlü metin analizini daha hızlı yapar."
+    },
+    "28": {
+        "question": "Veri temizlemenin amacını açıklayın",
+        "answer": "Veri temizlemenin temel amacı, bir veri kümesinden yanlış, bozuk, yanlış biçimlendirilmiş, yinelenen veya eksik verileri düzeltmek veya ortadan kaldırmaktır. Bu genellikle pazarlama ve iletişim çabaları için daha iyi sonuçlar ve daha yüksek bir yatırım getirisi sağlar."
+    },
+    "29": {
+        "question": "Öneri Sistemi'nden ne anlıyorsunuz? ve Uygulamasını belirtin",
+        "answer": "Öneri Sistemleri, bir ürüne bir kullanıcı tarafından verilen tercihleri veya puanları tahmin etmek için tasarlanmış bilgi filtreleme sistemlerinin bir alt sınıfıdır.\n\nAmazon ürün önerileri sayfası, kullanılan bir öneri sisteminin bir örneğidir. Kullanıcının arama geçmişi ve önceki siparişlerine dayanarak, bu alan ürünler içerir."
+    },
+    "30": {
+        "question": "Gradient İniş nedir?",
+        "answer": "Bir verilen işlevin yerel minimum ve maksimumunu bulmak için kullanılan tekrarlayan bir birinci sıra optimizasyon işlemi olan gradyan inişi (GD) adlı yinelenen bir optimizasyon işlemidir. Bu teknik, lineer regresyonda olduğu gibi bir maliyet/kayıp fonksiyonunu en aza indirmek için makine öğrenimi (ML) ve derin öğrenme (DL) alanında sıkça kullanılır."
+    },
+    "31": {
+        "question": "Veri Bilimcisi olmak için gereken çeşitli beceriler nelerdir?",
+        "answer": "Sertifikalı bir Veri Bilimcisi olabilmek için aşağıdaki yeteneklere sahip olmak gereklidir:\n\n* Listeler, demetler, kümeler ve benzeri gibi yerleşik veri türlerine aşinalık.\n* N-boyutlu NumPy dizisi bilgisine sahip olmak.\n* Pandas ve Veri Çerçeveleri kullanabilme.\n* Tek elemanlı vektörlerde güçlü performans.\n* Tableau ve PowerBI ile pratik deneyim."
+    },
+    "32": {
+        "question": "TensorFlow nedir?",
+        "answer": "TensorFlow, makine öğrenimi ve yapay zeka için ücretsiz ve açık kaynaklı bir yazılım kütüphanesidir. Programcılara, veri işleme düğümleri arasındaki veri akışını temsil eden veri akışı grafikleri oluşturma imkanı sağlar."
+    },
+    "33": {
+        "question": "Dropout nedir?",
+        "answer": "Veri Bilimi'nde, 'dropout' terimi, görünür ve gizli ağ birimlerinin rastgele olarak kaldırılma sürecini ifade eder. Düğümlerin %20'sine kadarını ortadan kaldırarak, veriyi aşırı uyum sorunlarından kaçınır ve ağın yinelemeli yakınsama süreci için gerekli alanı oluşturur."
+    },
+    "34": {
+        "question": "Beş Derin Öğrenme Çerçevesi belirtin.",
+        "answer": "Derin Öğrenme çerçevelerinden bazıları:\n\n* Caffe\n* Keras\n* TensorFlow\n* Pytorch\n* Chainer\n* Microsoft Cognitive Toolkit"
+    },
+    "35": {
+        "question": "Sinir Ağları nedir ve türleri nelerdir?",
+        "answer": "Sinir Ağları, prensiplerini insan beyninin yapısından ve işlevselliğinden alan hesaplamalı modellerdir. Bağlantılı yapay sinir hücrelerinden oluşan katmanlar halinde düzenlenmiş sinir ağları, veri kümeleri içinde desenleri öğrenme ve ayırt etme konusunda dikkate değer yeteneklere sahiptir. Bu nedenle, yapay zeka alanında desen tanıma, sınıflandırma ve optimizasyon gibi çeşitli alanlarda hayati çözümler sağlarlar.\n\nÇeşitli Sinir Ağı türleri mevcuttur, bunlar arasında:\n\nİleri Beslemeli Sinir Ağları: Bu ağlar, girdiden çıktıya doğru ilerleyen bilgi akışını sağlar. Genellikle desen tanıma ve sınıflandırma gibi görevlerde kullanılırlar.\n\n* Evrişimli Sinir Ağları (CNN'ler): İmajlar veya videolar gibi ızgara şeklindeki veriler için özel olarak tasarlanmış olan CNN'ler, anlamlı özellikler çıkarmak için evrişim katmanlarından yararlanır. İmaj sınıflandırma ve nesne tespiti gibi görevlerde uzmanlaşmışlardır.\n\n* Tekrarlayan Sinir Ağları (RNN'ler): RNN'ler, geçmiş girişlerin mevcut çıktıyı etkilediği sıralı verileri işlemek için özellikle uygundur. Dil modelleme ve zaman serisi analizi gibi alanlarda yaygın olarak kullanılırlar.\n\n* Uzun Kısa Süreli Hafıza (LSTM) Ağları: Bu RNN varyantı, kaybolan gradyan sorununu ele alır ve verideki uzun süreli bağımlılıkları yakalamakta üstündür. LSTM ağları, konuşma tanıma ve doğal dil işleme gibi alanlarda geniş bir uygulama alanına sahiptir.\n\n* Üretken Rakipli Ağlar (GAN'lar): GAN'lar, bir üreteci ve bir belirleyiciden oluşan ve rekabetçi bir şekilde eğitilen ağlardır. Yeni veri örnekleri oluşturmak için kullanılırlar ve imaj oluşturma ve metin sentezi gibi görevler için faydalıdırlar."
+    },
+    "36": {
+        "question": "ROC eğrisi nedir?",
+        "answer": "ROC (Alıcı İşletim Karakteristiği) eğrisi, gerçek pozitif oran ile yanlış pozitif oran arasında bir çizimdir ve bize tahmin edilen değerlerin farklı olasılık eşikleri için gerçek pozitif oran ve yanlış pozitif oran arasında doğru dengeyi bulmamıza yardımcı olur. Dolayısıyla, eğri ne kadar sol üst köşeye yakınsa, model o kadar iyidir. Başka bir deyişle, hangi eğri daha büyük alanı altında ise, o model daha iyidir."
+    },
+    "37": {
+        "question": "Veri modelleme, Veritabanı tasarımından nasıl farklıdır?",
+        "answer": "Veri Modelleme: Bu, bir veritabanının tasarımına doğru atılan ilk adım olarak düşünülebilir. Veri modelleme, çeşitli veri modelleri arasındaki ilişkiye dayalı olarak kavramsal bir model oluşturur. Süreç, kavramsal aşamadan mantıksal modele ve fiziksel şemaya geçişi içerir. Veri modelleme tekniklerinin sistemli bir şekilde uygulanmasını içerir.\n\nVeritabanı Tasarımı: Bu, veritabanının tasarım sürecidir. Veritabanı tasarımı, veritabanının ayrıntılı bir veri modelini oluşturan bir çıktı oluşturur. Kesin olarak konuşursak, veritabanı tasarımı bir veritabanının ayrıntılı mantıksal modelini içerir, ancak aynı zamanda fiziksel tasarım seçeneklerini ve depolama parametrelerini içerebilir."
+    },
+    "38": {
+        "question": "Precision nedir?",
+        "answer": "Hassasiyet: Veri sınıflandırması veya bilgi çekme algoritmalarını uygularken, hassasiyet bize doğru pozitif sınıf değerlerinin pozitif olarak tahmin edilen bir kısmını alarak yardımcı olur. Temelde, doğru pozitif tahminlerin doğruluğunu ölçer. Hassasiyeti hesaplamak için aşağıdaki formülü kullanırız:\n\nhassasiyet = (gerçek pozitifler) / (gerçek pozitifler + yanlış pozitifler)"
+    },
+    "39": {
+        "question": "Recall nedir?",
+        "answer": "Recall: Bu, toplam pozitif örneklerin tüm pozitif tahminlerden oluşan bir kümesidir. Recall, yanlış sınıflandırılmış pozitif tahminleri tanımamıza yardımcı olur. Recall'i hesaplamak için aşağıdaki formülü kullanırız:\n\nrecall = (gerçek pozitifler) / (gerçek pozitifler + yanlış negatifler)"
+    },
+    "40": {
+        "question": "P-değeri nedir?",
+        "answer": "P-değeri, bir gözlemin istatistiksel önemini ölçen bir ölçüdür. Bu, çıktının veriye olan önemini gösteren olasılıktır. P-değerini hesaplamak için modelin test istatistiklerini bilmemiz gerekir. Genellikle, nihai hipotezi kabul edip etmeyeceğimize karar vermemize yardımcı olur."
+    },
+    "41": {
+        "question": "Neden p-değerini kullanırız?",
+        "answer": "P-değerini kullanarak verilen verinin gerçekten gözlemlenen etkiyi açıklıyor olup olmadığını anlamaya çalışırız. Aşağıdaki formülü kullanarak 'E' etkisi için p-değerini ve 'H0' nüll hipotezinin doğru olduğunu varsayalım:\n\nP Değeri = P(E | H0)"
+    },
+    "42": {
+        "question": "Hata ile kalıntı hata arasındaki fark nedir?",
+        "answer": "Hata, tahminin, bir veri kümesinin gözlemlenen değerleri ile gerçek değerleri arasındaki farklılıklardır. Öte yandan, kalıntı hata, gözlemlenen değerler ile tahmin edilen değerler arasındaki farktır. Algoritmanın performansını değerlendirmek için neden kalıntı hatayı kullandığımızın nedeni gerçek değerlerin asla bilinmemesidir. Bu nedenle, hatayı gözlemlenen değerler kullanarak ölçeriz. Bu, hatanın kesin bir tahminini elde etmemize yardımcı olur."
+    },
+    "43": {
+        "question": "Veri Bilimi ve Makine Öğrenimi birbirleriyle nasıl ilişkilidir?",
+        "answer": "Veri Bilimi ve Makine Öğrenimi, birbiriyle yakından ilişkilendirilen ancak sıklıkla yanlış anlaşılan iki terimdir. Her ikisi de veri ile ilgilidir. Ancak, ikisi arasındaki bazı temel farklılıklar, nasıl birbirinden farklı olduklarını gösterir.\n\nVeri Bilimi, büyük veri miktarları ile uğraşan ve bu hacimli veriden içgörüler çıkarmamıza izin veren geniş bir alandır. Veri bilimi süreci, mevcut veriden içgörüler çıkarma ile ilgili birden fazla adımı ele alır. Bu süreç, veri toplama, veri analizi, veri manipülasyonu, veri görselleştirme vb. gibi kritik adımları içerir.\n\nMakine Öğrenimi, diğer taraftan, Veri Biliminin bir alt alanı olarak düşünülebilir. Makine Öğrenimi de veri ile ilgilenir, ancak burada, işlenmiş veriyi girdileri çıktılara eşleyebilecek işlevsel bir modele dönüştürmenin nasıl öğrenileceğine odaklanırız, örneğin, bir giriş olarak bir resim bekleyen ve bu resmin içinde bir çiçek olup olmadığını söyleyen bir model.\n\nKısacası, veri bilimi, veri toplama, veri işleme ve son olarak bu veriden içgörüler çıkarma ile ilgilenir. Algoritmalar kullanarak modeller oluşturma işiyle uğraşan veri bilimi alanı Makine Öğrenimi olarak adlandırılır. Dolayısıyla, makine öğrenimi veri biliminin ayrılmaz bir parçasıdır."
+    },
+    "44": {
+        "question": "Tek değişkenli, çift değişkenli ve çok değişkenli analizleri açıklayın.",
+        "answer": "Veri analiziyle uğraştığımızda, sıklıkla tek değişkenli, çift değişkenli ve çok değişkenli terimlerle karşılaşırız. Bu terimlerin ne anlama geldiğini anlamaya çalışalım.\n\n* Tek değişkenli analiz: Tek değişkenli analiz, yalnızca bir değişkenle veri analizini içerir veya diğer bir deyişle, verinin tek bir sütunu veya vektörüyle analiz edilir. Bu analiz, veriyi anlamamıza ve veriden desenler ve eğilimler çıkarmamıza olanak tanır. Örnek: Bir grup insanın ağırlığını analiz etmek.\n\n* Çift değişkenli analiz: Çift değişkenli analiz, tam olarak iki değişkenle veri analizini içerir veya diğer bir deyişle, veri iki sütunlu bir tabloya yerleştirilebilir. Bu tür analiz, değişkenler arasındaki ilişkiyi anlamamıza yardımcı olur. Örnek: Sıcaklık ve yükseklik içeren verileri analiz etmek.\n\n* Çok değişkenli analiz: Çok değişkenli analiz, iki değişkenden daha fazla değişkenle veri analizini içerir. Verinin sütun sayısı iki veya daha fazla olabilir. Bu tür analiz, diğer tüm değişkenlerin (giriş değişkenleri) bir değişken üzerindeki etkilerini anlamamıza olanak tanır (çıktı değişkeni)."
+    },
+    "45": {
+        "question": "Eksik verilerle nasıl başa çıkabiliriz?",
+        "answer": "Eksik verilerle başa çıkabilmek için öncelikle belirli bir sütundaki eksik verilerin yüzdesini bilmemiz gerekir, böylece durumu ele almak için uygun bir strateji seçebiliriz.\n\nÖrneğin, bir sütunda verilerin çoğu eksikse, sütunu bırakmak en iyi seçenektir, eğer eksik değerler hakkında eğitimli tahminler yapmak için bir yolumuz yoksa. Ancak, eksik veri miktarı düşükse, onları doldurmak için birkaç stratejimiz vardır.\n\nBir yol, tüm eksik değerleri varsayılan bir değer veya o sütundaki en yüksek frekansa sahip bir değerle doldurmaktır, örneğin, 0 veya 1 gibi. Bu, sütundaki verilerin çoğunluğunun bu değerleri içerdiği durumlarda kullanışlı olabilir.\n\nBaşka bir yol, sütundaki eksik değerleri o sütundaki tüm değerlerin ortalaması ile doldurmaktır. Bu teknik genellikle tercih edilir çünkü eksik değerlerin moddan ziyade ortalamaya daha yakın olma olasılığı daha yüksektir.\n\nSon olarak, büyük bir veri kümesine sahipsek ve birkaç sütunda eksik değerler varsa, en kolay ve en hızlı yol bu sütunları bırakmaktır. Veri kümesi büyük olduğundan, birkaç sütunu bırakmak sorun oluşturmayacaktır."
+    },
+    "46": {
+        "question": "Boyut azaltmanın faydaları nelerdir?",
+        "answer": "Boyut azaltma, tüm veri kümesinin boyutlarını ve büyüklüğünü azaltır. Gereksiz özellikleri bırakırken verideki genel bilgiyi korur. Boyutların azaltılması verinin daha hızlı işlenmesine neden olur.\n\nYüksek boyutlara sahip verilerin işlenmesinin neden zor olduğu, verinin işlenmesi ve bir modele eğitilmesi sırasında yüksek zaman tüketimine neden olmasıdır. Boyutların azaltılması bu süreci hızlandırır, gürültüyü ortadan kaldırır ve ayrıca daha iyi model doğruluğuna yol açar."
+    },
+    "47": {
+        "question": "Veri Bilimi'nde bias-varyans takasının ne olduğu nedir?",
+        "answer": "Veri Bilimi veya Makine Öğrenimi kullanarak bir model oluştururken, amacımız düşük bias ve varyansa sahip bir model oluşturmaktır. Bias ve varyansın ikisi de ya aşırı basit bir modelden ya da aşırı karmaşık bir modelden kaynaklanan hatalardır. Dolayısıyla bir model oluştururken, yüksek doğruluk elde etme amacı, bias ve varyans arasındaki takasın farkında olmamız durumunda gerçekleştirilecektir.\n\nBias, bir modelin bir veri kümesindeki desenleri yakalamak için çok basit olması durumunda ortaya çıkan bir hatadır. Bias'i azaltmak için modelimizi daha karmaşık hale getirmemiz gerekmektedir. Modeli daha karmaşık hale getirmek, bias'i azaltabilir, ancak modeli çok karmaşık hale getirirsek, sonuçta yüksek varyanslı olabilir. Bu nedenle, bias ve varyans arasındaki takas şudur: Karmaşıklığı artırırsak, bias azalır ve varyans artar, ve karmaşıklığı azaltırsak, bias artar ve varyans azalır. Amacımız, modelimizin düşük bias'e sahip olacak kadar karmaşık olmasını ancak varyansın yüksek olmamasını sağlayacak bir noktayı bulmaktır."
+    },
+    "48": {
+        "question": "RMSE nedir?",
+        "answer": "RMSE, kök ortalama kare hatası anlamına gelir. Regresyonun doğruluğunu ölçen bir metriktir. RMSE, bir regresyon modelinin ürettiği hata büyüklüğünü hesaplamamıza olanak tanır. RMSE'nin hesaplanma şekli şu şekildedir:\n\nÖncelikle, regresyon modeli tarafından yapılan tahminlerdeki hataları hesaplarız. Bunun için, gerçek ve tahmin edilen değerler arasındaki farkları hesaplarız. Daha sonra, hataları kare alırız.\n\nBu adımdan sonra, kare hataların ortalamasını hesaplarız ve nihayetinde bu kare hataların ortalamasının karekökünü alırız. Bu sayı RMSE'dir ve daha düşük bir RMSE değerine sahip bir modelin daha düşük hatalar ürettiği kabul edilir, yani model daha doğru olacaktır."
+    },
+    "49": {
+        "question": "SVM'de çekirdek fonksiyonu nedir?",
+        "answer": "SVM algoritmasında, bir çekirdek fonksiyonu özel bir matematiksel fonksiyondur. Basitçe söylemek gerekirse, bir çekirdek fonksiyonu veriyi alır ve istenen bir forma dönüştürür. Bu veri dönüşümü, çekirdek hilesi olarak adlandırılan bir şeye dayanır, bu da çekirdek fonksiyonuna adını veren şeydir. Çekirdek fonksiyonunu kullanarak, doğrusal olarak ayrılabilir olmayan veriyi (düz çizgi kullanılarak ayrılamayan) doğrusal olarak ayrılabilir hale getirebiliriz."
+    },
+    "50": {
+        "question": "K-means'te uygun bir k değeri nasıl seçilir?",
+        "answer": "Doğru k değerini seçmek, k-means kümeleme için önemli bir unsurdur. Uygun k değerini seçmek için dirsek yönteminden faydalanabiliriz. Bunun için, k-means algoritmasını bir dizi değer üzerinde çalıştırırız, örneğin 1 ile 15 arası. Her k değeri için ortalama bir puan hesaplarız. Bu puan ayrıca atalet veya küme içi değişkenlik olarak adlandırılır.\n\nBu, bir kümedeki tüm değerlerin mesafelerinin karelerinin toplamı olarak hesaplanır. k bir düşük değerden başlayıp yüksek bir değere kadar gittiğinde, atalet değerinde keskin bir azalma görmeye başlarız. Bir kritik k değerinden sonra, düşüş atalet değerinde oldukça küçük hale gelir. Bu, k-means kümeleme algoritması için seçmemiz gereken k değeridir."
+    },
+    "51": {
+        "question": "Aykırı değerlerle nasıl başa çıkabiliriz?",
+        "answer": "Aykırı değerler birkaç farklı şekilde ele alınabilir. Bir yol onları bırakmaktır. Aykırı değerleri yalnızca yanlış veya aşırı değerlere sahip olduklarında bırakabiliriz. Örneğin, bir bebeklerin ağırlıklarını içeren bir veri kümesinde 98.6 derece Fahrenheit gibi bir değer yanlıştır. Şimdi, eğer değer 187 kg ise, bu kullanışlı olmayan aşırı bir değerdir.\n\nEğer aykırı değerler o kadar aşırı değilse, o zaman şunları deneyebiliriz:\n\n* Farklı bir model türü kullanmak. Örneğin, eğer lineer bir model kullanıyorsak, o zaman doğrusal olmayan bir model seçebiliriz.\n\n* Veriyi normalleştirmek, bu aşırı değerleri diğer veri noktalarına daha yakın bir konuma kaydıracaktır.\n\n* Aykırı değerlerden etkilenmeyen algoritmalar kullanmak, örneğin rastgele orman, vb."
+    },
+    "52": {
+        "question": "Bir ikili sınıflandırma algoritmasının karışıklık matrisini kullanarak doğruluğunu nasıl hesaplarız?",
+        "answer": "Bir ikili sınıflandırma algoritmasında yalnızca İstenen ve Yanlış olmak üzere iki etiket bulunur. Doğruluğu hesaplamadan önce, birkaç temel terimi anlamamız gerekmektedir:\n\n* Doğru pozitifler: Doğru bir şekilde Tan olarak sınıflandırılmış gözlemlerin sayısı\n* Doğru negatifler: Doğru bir şekilde Yanlış olarak sınıflandırılmış gözlemlerin sayısı\n* Yanlış pozitifler: Yanlış bir şekilde Tan olarak sınıflandırılmış gözlemlerin sayısı\n* Yanlış negatifler: Yanlış bir şekilde Yanlış olarak sınıflandırılmış gözlemlerin sayısı\n* Doğruluğu hesaplamak için, doğru bir şekilde sınıflandırılmış gözlemlerin toplam sayısını toplam gözlem sayısına bölmeliyiz."
+    },
+    "53": {
+        "question": "Ensemble learning nedir?",
+        "answer": "Veri Bilimi ve Makine Öğrenimi kullanarak modeller oluşturduğumuzda, amacımız eğitim verilerindeki temel eğilimleri anlayabilen ve yüksek doğrulukla tahminler veya sınıflandırmalar yapabilen bir model elde etmektir.\n\nAncak bazen bazı veri kümeleri çok karmaşıktır ve bu veri kümelerindeki temel eğilimleri bir modelin anlaması zordur. Bu tür durumlarda, performansı artırmak için birkaç bireysel modeli bir araya getiririz. İşte buna ensemble learning denir."
+    },
+    "54": {
+        "question": "Tavsiye sistemlerinde işbirlikçi filtrelemeyi açıklayın.",
+        "answer": "İşbirlikçi filtreleme, tavsiye sistemleri oluşturmak için kullanılan bir tekniktir. Bu teknikte, öneriler üretmek için diğer kullanıcılara benzer kullanıcılar hakkındaki beğenileri ve beğenmeme durumlarıyla ilgili verilerden yararlanırız. Bu benzerlik, yaş, cinsiyet, konum gibi çeşitli faktörlere dayalı olarak tahmin edilir.\n\nKullanıcı A, Kullanıcı B'ye benzerse ve bir film izleyip beğenmişse, o zaman bu film Kullanıcı B'ye önerilecektir, ve benzer şekilde, Kullanıcı B bir film izleyip beğenmişse, o zaman bu film Kullanıcı A'ye önerilecektir.\n\nBaşka bir deyişle, filmin içeriği çok da önemli değildir. Bir kullanıcıya önerildiğinde, önemli olan, o belirli kullanıcıya benzeyen diğer kullanıcıların filmin içeriğini beğenip beğenmediğidir."
+    },
+    "55": {
+        "question": "Tavsiye sistemlerinde içerik tabanlı filtrelemeyi açıklayın.",
+        "answer": "İçerik tabanlı filtreleme, tavsiye sistemleri oluşturmak için kullanılan tekniklerden biridir. Bu teknikte, öneriler, bir kullanıcının ilgilendiği içeriğin özelliklerinden yararlanılarak üretilir.\n\nÖrneğin, bir kullanıcı aksiyon ve gizem türündeki filmleri izliyorsa ve bunlara iyi puanlar veriyorsa, bu kullanıcının bu tür filmleri sevdiği açık bir işarettir. Benzer türdeki filmleri önerildiğinde, kullanıcının bu önerileri beğenme olasılığı daha yüksektir.\n\nBaşka bir deyişle, burada filmin içeriği, kullanıcılara öneriler oluşturulurken dikkate alınır."
+    },
+    "56": {
+        "question": "Veri Biliminde bagging'i açıklayın.",
+        "answer": "Bagging, bir ensemble learning yöntemidir. Bootstrap aggregating'in kısaltmasıdır. Bu teknikte, bootstrap yöntemini kullanarak bazı veriler oluştururuz, bu yöntemde zaten mevcut bir veri kümesini kullanır ve N boyutunda birden çok örneği üretiriz. Bu bootstrap edilmiş veri, ardından birden çok modeli paralel olarak eğitmek için kullanılır, bu da bagging modelini basit bir modele göre daha sağlam hale getirir.\n\nTüm modeller eğitildikten sonra, tahmin yapma zamanı gelir, tüm eğitilmiş modelleri kullanarak tahminler yaparız ve regresyon durumunda sonuçları ortalama alırız, sınıflandırma durumunda ise en yüksek frekansı olan modeller tarafından üretilen sonuçları seçeriz."
+    },
+    "57": {
+        "question": "Veri biliminde boosting'i açıklayın.",
+        "answer": "Boosting, ensemble learning yöntemlerinden biridir. Bagging'in aksine, modellerimizi paralel olarak eğitmek için kullanılan bir teknik değildir. Boosting'de, birden fazla model oluşturur ve zayıf modelleri bir araya getirerek yeni bir modelin eğitimini önceki modellere dayanarak bir şekilde ardışık olarak gerçekleştiririz.\n\nBunu yaparken, önceki bir model tarafından öğrenilen kalıpları alır ve yeni modeli eğitirken bir veri kümesinde test ederiz. Her iterasyonda, önceki modeller tarafından yanlış işlenen veya tahmin edilen gözlemlere daha fazla önem verilir. Boosting, modellerdeki önyargıyı azaltmada da kullanışlıdır."
+    },
+    "58": {
+        "question": "Veri biliminde stacking'i açıklayın.",
+        "answer": "Bagging ve boosting gibi, stacking de bir ensemble learning yöntemidir. Bagging ve boosting'de, aynı öğrenme algoritmalarını kullanan zayıf modelleri birleştirebilirdik, örneğin, lojistik regresyon. Bu modellere homojen öğreniciler denir.\n\nAncak stacking'de, farklı öğrenme algoritmaları kullanan zayıf modelleri bir araya getirebiliriz. Bu öğrenicilere heterojen öğreniciler denir. Stacking, birden çok (ve farklı) zayıf modeli veya öğreniciyi eğitmek ve ardından bu birden çok zayıf model tarafından döndürülen tahminlerin çıktılarına dayanarak başka bir model olan bir meta-model eğitmek suretiyle bunları birlikte kullanır."
+    },
+    "59": {
+        "question": "Makine öğrenimi ile derin öğrenme arasındaki fark nedir?",
+        "answer": "Bilgisayar biliminde bir alan olan makine öğrenimi, farklı görevleri yerine getirmek için yeni beceriler öğrenmek için mevcut verilerin kullanılmasıyla ilgilenen veri biliminin bir alt alanıdır ve açık kurallar olmadan programlanmış olması gerekir.\n\nÖte yandan, derin öğrenme, bilgi işlemedeki bir alan olan makine öğreniminde, insan beyninin bilgiyi nasıl öğrendiğini taklit etmeye çalışan algoritmalardan yararlanarak makine öğrenimi modelleri oluşturmayla ilgilenen bir alandır. Derin öğrenmede, çok katmanlı derinlemesine bağlı sinir ağlarını yoğun bir şekilde kullanırız."
+    },
+    "60": {
+        "question": "Naive Bayes'teki 'Naive' kelimesi ne anlama gelir?",
+        "answer": "Naive Bayes, bir veri bilimi algoritmasıdır. 'Bayes' kelimesi, başka bir olayın gerçekleştiğinde bir olayın olma olasılığıyla ilgilenen Bayes teoremine dayandığı için kullanılmıştır.\n\n'Naive' kelimesi ise, veri kümesindeki her değişkenin birbirinden bağımsız olduğu varsayımını yapması nedeniyle kullanılmıştır. Bu tür bir varsayım, gerçek dünya verileri için gerçekçi değildir. Bununla birlikte, bu varsayımla bile, bir dizi karmaşık problemi çözmek için çok kullanışlıdır, örneğin, spam e-posta sınıflandırması, vb."
+    },
+    "61": {
+        "question": "Batch normalization nedir?",
+        "answer": "Yapay sinir ağının işlevselliğini ve istikrarını artırmaya yönelik bir yöntem batch normalization'dır. Bunun için, her bir katmandaki girdileri normalize ederiz, böylece ortalama çıkış aktivasyonu 0'da kalır ve standart sapma 1'e ayarlanır."
+    },
+    "62": {
+        "question": "Küme örnekleme ve sistemli örnekleme nedir?",
+        "answer": "Küme örnekleme, bir popülasyonu bölgelere, örneğin ilçelere veya okullara bölebileceğiniz ve ardından bu gruplardan rastgele bir temsilci örnek seçebileceğiniz bir olasılık örnekleme yaklaşımı olarak da bilinir. Her bir kümede, genel nüfusun mütevazi bir temsili bulunmalıdır.\n\nSistemli örnekleme adı verilen bir olasılık örnekleme stratejisi, bir popülasyondan belirli aralıklarla insanlar seçmeyi içerir, örneğin, bir nüfus listesinde her 15 kişiden biri. Popülasyon, basit rastgele örnekleme avantajlarını taklit etmek için rastgele düzenlenebilir."
+    },
+    "63": {
+        "question": "Hesaplama Grafiği nedir?",
+        "answer": "Değişkenlerin veya işlemlerin düğümler olarak kullanıldığı yönlendirilmiş bir grafik, bir hesaplama grafiğidir. Değişkenler değerleriyle işlemlere katkıda bulunabilir ve işlemler diğer işlemlere çıktılarını sağlayabilir. Bu şekilde, grafikteki her düğüm, değişkenlerin bir fonksiyonunu belirler."
+    },
+    "64": {
+        "question": "Batch ve Stokastik Gradyan İniş arasındaki fark nedir?",
+        "answer": "Batch ve Stokastik Gradyan İniş arasındaki farklar şunlardır:\n\n1. Batch\n\n   * Tüm veri kümesini kullanarak gradyanı hesaplamada yardımcı olur.\n   * Yakınsaması zaman alır.\n   * Analiz için yeterince büyük bir hacme sahiptir.\n   * Ağırlıkları nadiren günceller.\n\n2. Stokastik Gradyan İniş\n\n   * Sadece tek bir örneği kullanarak gradyanı hesaplamada yardımcı olur.\n   * Yakınsaması daha hızlıdır.\n   * Analiz amacıyla hacim daha düşüktür.\n   * Ağırlıkları daha sık günceller."
+    },
+    "65": {
+        "question": "Aktivasyon fonksiyonu nedir?",
+        "answer": "Aktivasyon fonksiyonu, yapay sinir ağına eklenen bir fonksiyondur ve ağın giriş verilerindeki karmaşık desenleri öğrenmesine yardımcı olur. İnsan beyninde görülen bir nöron tabanlı modelin aksine, aktivasyon fonksiyonu, sonraki nörona hangi sinyallerin gönderilmesi gerektiğini belirler."
+    },
+    "66": {
+        "question": "Rastgele Orman modeli nasıl oluşturulur?",
+        "answer": "Rastgele Orman modeli oluşturmanın adımları şunlardır: \n\n* k kaydından oluşan bir veri kümesinden n seçin. \n* Dikkate alınan n veri değerleri için farklı karar ağaçları oluşturun. Her birinden, bir tahmini sonuç elde edilir.  \n* Her bir sonuç bir oylama mekanizmasına tabi tutulur.  \n* Sonuç, tahminlerin hangisinin en fazla desteği aldığına göre belirlenir."
+    },
+    "67": {
+        "question": "Modelinizi aşırı uyumu önleyebilir misiniz? evetse, nasıl?",
+        "answer": "Gerçekte, veri modelleri aşırı uyum sağlayabilirler. Bunun için aşağıdaki stratejiler uygulanabilir:\n\n* İncelenen veri kümesindeki veri miktarını artırarak giriş ve çıkış değişkenleri arasındaki bağlantıları daha kolay ayırt etmeyi sağlamak.\n* Önemli özellikleri veya incelenmesi gereken parametreleri keşfetmek için özellik seçimi kullanın.\n* Sonuçların varyansını azaltmak için düzenleme stratejileri kullanın.\n* Nadiren, biraz gürültülü veri eklenerek veri kümeleri dengelenir. Bu uygulamaya veri artırma denir."
+    },
+    "68": {
+        "question": "Çapraz Doğrulama nedir?",
+        "answer": "Çapraz doğrulama, istatistiksel analiz sonuçlarının genelleştirilebilirliğini diğer veri kümelerine nasıl ölçeceğimizi değerlendirmek için kullanılan bir model doğrulama yöntemidir. Tahminin ana hedefi olduğunda ve bir modelin gerçek dünya uygulamalarında nasıl çalışacağını ölçmek istediğinizde sıklıkla uygulanır.\n\nAşırı uyumun önlenmesi ve modelin farklı veri kümelerinde nasıl genelleşeceğine dair bilgi edinilmesi amacıyla, çapraz doğrulama, modeli eğitim aşamasında test etmek için bir veri kümesi oluşturmayı amaçlar (yani doğrulama veri kümesi)."
+    },
+    "69": {
+        "question": "Veri Biliminde varyans nedir?",
+        "answer": "Varyans, bir Veri Bilimi modelinde ortaya çıkan bir hata türüdür; model, verilerdeki gürültü ile birlikte özellikleri öğrenirken çok karmaşık hale gelir. Bu tür bir hata, modeli eğitmek için kullanılan algoritmanın yüksek karmaşıklığa sahip olması durumunda ortaya çıkabilir, hatta veriler ve altında yatan desenler ve eğilimler oldukça kolay keşfedilebilir. Bu, modelin eğitim veri setinde iyi performans gösterdiği ancak test veri setinde kötü performans gösterdiği ve modelin henüz görmediği herhangi bir veri üzerinde kötü performans gösterdiği çok hassas bir model yapar. Varyans genellikle testlerde düşük doğruluğa yol açar ve aşırı uydurmaya neden olur."
+    },
+    "70": {
+        "question": "Karar ağacı algoritmasında budama nedir?",
+        "answer": "Bir karar ağacını budamak, gerekli olmayan veya gereksiz olan ağacın bölümlerini kaldırma işlemidir. Budama, daha küçük bir karar ağacına yol açar, bu da daha iyi performans ve daha yüksek doğruluk ve hız sağlar."
+    },
+    "71": {
+        "question": "Karar ağacı algoritmasında hangi bilgi kazanılır?",
+        "answer": "Karar ağacı oluşturulurken, her adımda, verileri bölmek için hangi özelliği kullanacağımızı, yani hangi özelliğin verilerimizi en iyi şekilde böleceğini belirleyen bir düğüm oluşturmalıyız. Bu karar, verileri bölmek için belirli bir özellik kullanıldığında ne kadar entropinin azaldığının bir ölçüsü olan bilgi kazancı kullanılarak alınır. En yüksek bilgi kazancı sağlayan özellik, verileri bölmek için seçilen özelliktir.\n\nBilgi kazancının karar ağacı algoritmasındaki işleyişini daha iyi anlamak için pratik bir örnek üzerinden düşünelim. Yaş, gelir ve satın alma geçmişi gibi müşteri bilgilerini içeren bir veri kümesimiz olduğunu varsayalım. Amacımız, bir müşterinin satın alma yapma olasılığını tahmin etmektir.\n\nHangi özelliğin en değerli bilgiyi sağladığını belirlemek için her özellik için bilgi kazancını hesaplarız. Verileri gelire göre bölmek, entropisi önemli ölçüde azalan alt kümeler oluşturuyorsa, bu, gelirin satın alma davranışını tahmin etmede önemli bir rol oynadığını gösterir. Dolayısıyla, gelir değerli bilgiler sunar, bu nedenle karar ağacını oluştururken önemli bir faktördür.\n\nBilgi kazancını maksimize ederek, karar ağacı algoritması belirli öznitelikleri tanımlar ve belirsizliği etkili bir şekilde azaltan ve doğru bölmeleri sağlayan öznitelikleri belirler. Bu süreç, modelin tahmin doğruluğunu artırır ve müşteri satın almalarıyla ilgili bilgilendirilmiş kararlar alınmasını sağlar."
+    },
+    "72": {
+        "question": "Zaman serisi verilerinin durağan olduğunu nasıl tespit edebiliriz?",
+        "answer": "Zaman serisi verisi, varyans veya ortalama zamana bağlı olarak sabit olduğunda durağan olarak kabul edilir. Eğer varyans veya ortalama zamanla değişmiyorsa, bu dönem için verilerin durağan olduğu sonucuna varabiliriz."
+    },
+    "73": {
+        "question": "Kök neden analizi ne anlama gelir?",
+        "answer": "Kök neden analizi, belirli hatalara veya başarısızlıklara neden olan kök nedenleri bulma sürecidir. Bir faktör, onu ortadan kaldırdıktan sonra, bir hataya, hataya veya istenmeyen sonuca yol açan bir işlem dizisi çalışıyorsa, kök neden olarak kabul edilir. Kök neden analizi, başlangıçta endüstriyel kazaların analizinde geliştirilen ve kullanılan bir tekniktir, ancak şimdi birçok farklı alanda kullanılmaktadır."
+    },
+    "74": {
+        "question": "A/B testi nedir?",
+        "answer": "A/B testi, iki değişkenli rastgele deneyler için istatistiksel bir hipotez testi türüdür. Bu değişkenler A ve B olarak temsil edilir. Bir üründe yeni bir özelliği test etmek istediğimizde A/B testi kullanılır. A/B testinde, kullanıcılara ürünün iki farklı varyantı verilir ve bu varyantlar A ve B olarak etiketlenir.\n\nA varyantı, yeni özelliği eklenmiş ürün olabilirken, B varyantı, yeni özelliği içermeyen ürün olabilir. Kullanıcılar bu iki ürünü kullandıktan sonra, ürün için puanlarını yakalarız.\n\nEğer ürün varyantı A'nın puanı istatistiksel olarak ve önemli ölçüde daha yüksekse, o zaman yeni özellik bir iyileştirme ve faydalı olarak kabul edilir ve kabul edilir. Aksi takdirde, yeni özellik üründen kaldırılır."
+    },
+    "75": {
+        "question": "İşbirlikçi filtreleme ve içerik tabanlı filtreleme arasından hangisi daha iyi kabul edilir ve neden?",
+        "answer": "İçerik tabanlı filtreleme, öneriler oluşturmak için işbirlikçi filtreleme yerine daha iyi kabul edilir. Bu, işbirlikçi filtrelemenin kötü öneriler ürettiği anlamına gelmez.\n\nAncak, işbirlikçi filtreleme, diğer kullanıcıların beğenilerine dayandığı için buna çok fazla güvenemeyiz. Ayrıca, kullanıcıların beğenileri gelecekte değişebilir.\n\nÖrneğin, bir kullanıcının şu anda beğendiği ancak 10 yıl önce beğenmediği bir film olabilir. Ayrıca, bazı özelliklerde benzer olan kullanıcılar, platformun sunduğu içerik türünde aynı tadı taşımayabilir.\n\nİçerik tabanlı filtrelemede, kullanıcıların kendi beğenilerini ve beğenilerini kullanırız ve bu çok daha güvenilir ve daha olumlu sonuçlar verir. Bu nedenle, Netflix, Amazon Prime, Spotify vb. gibi platformlar, kullanıcılarına öneriler oluşturmak için içerik tabanlı filtrelemeyi kullanır."
+    },
+    "76": {
+        "question": "Pekiştirme öğrenme nedir?",
+        "answer": "Pekiştirme öğrenme, en kümülatif ödülleri elde etmek için eylemler gerçekleştiren yazılı ajanlar oluşturma ile ilgili bir Makine Öğrenmesi türüdür.\n\nBir ödül, burada (eğitim sırasında) bir belirli bir eylemin hedefe ulaşılmasına veya ona daha da yaklaştırmasına yol açıp açmadığını modelin bilmesi için kullanılır. Örneğin, bir video oyunu oynayan bir ML modeli oluşturuyorsak, ödül ya oyunda toplanan puanlar ya da ulaşılan seviye olacaktır.\n\nPekiştirme öğrenme, bu tür gerçek dünya kararlarını alabilen ajanlar oluşturmak için kullanılır, bu kararlar modeli belirli bir hedefe doğru yönlendirmelidir."
+    },
+    "77": {
+        "question": "TF/IDF vektörleştirmesini açıklayın.",
+        "answer": "TF/IDF ifadesi, Terim Frekansı-Ters Belge Frekansı anlamına gelir. Bir belge koleksiyonu olan bir korpusta bir kelimenin bir belgeye ne kadar önemli olduğunu belirlememizi sağlayan bir sayısal ölçüdür. TF/IDF sıklıkla metin madenciliği ve bilgi erişiminde kullanılır."
+    },
+    "78": {
+        "question": "Doğrusal regresyon için gereken varsayımlar nelerdir?",
+        "answer": "Doğrusal regresyon için gereken birkaç varsayım vardır. Bunlar şunlardır:\n\n* Modeli eğitmek için kullanılan örneklem, bir populasyondan çekilmiş bir örnektir ve populasyonun temsilcisi olmalıdır.\n* Bağımsız değişkenler ile bağımlı değişkenin ortalaması arasındaki ilişki lineer olmalıdır.\n* Kalıntının varyansı, bir bağımsız değişkenin herhangi bir değeri için aynı olacaktır. Ayrıca X olarak da ifade edilir.\n* Her gözlem, diğer tüm gözlemlerden bağımsızdır.\n* Herhangi bir bağımsız değişken değeri için, bağımlı değişken normal dağılmıştır."
+    },
+    "79": {
+        "question": "Doğrusal regresyon için gerekli bazı varsayımlar ihlal edildiğinde ne olur?",
+        "answer": "Bu varsayımlar hafifçe ihlal edilebilir (örneğin, bazı küçük ihlaller) veya güçlü bir şekilde ihlal edilebilir (örneğin, verilerin çoğunluğu ihlaller içerir). Her iki ihlalin de doğrusal regresyon modeli üzerinde farklı etkileri olacaktır.\n\nBu varsayımların güçlü bir şekilde ihlal edilmesi sonuçları tamamen gereksiz kılar. Bu varsayımların hafifçe ihlal edilmesi sonuçların daha büyük bir önyargı veya değişkenliğe sahip olmasına neden olur."
+    },
+    "80": {
+        "question": "Dengesiz ikili sınıflandırma nasıl ele alınır?",
+        "answer": "Dengesiz ikili sınıflandırmayla başa çıkmak için aşağıdaki adımları izleyebilirsiniz:\n\n* Modelin performansını belirlemek için diğer formülleri kullanın, örneğin hassasiyet/duyarlılık, F1 puanı vb.\n* Veriyi yeniden örnekleme yaparak, az örneklenen sınıfın örnekleme boyutunu azaltarak (azaltma), fazla örneklenen sınıfın örnekleme boyutunu artırarak (artırma), tekrarlamayla, SMOTE ve diğer benzer stratejileri kullanarak ve benzeri.\n* K-katlamalı çapraz doğrulama kullanılır\n* Büyük sınıfın her bir karar ağacının yalnızca bir kısmını ve küçük sınıfın tam örneğini dikkate alan toplu öğrenme kullanın."
+    },
+    "81": {
+        "question": "Zaman serisi veri yığını için hangi çapraz doğrulama yöntemini kullanırsınız?",
+        "answer": "Zaman serisi, temel olarak kronolojik sıraya göre düzenlenmiş ve rastgele dağılmış verilerden oluşmadığı için k-fold çapraz doğrulama yerine, daha önceki verilere modelleme ve ardından ileriye yönelik verilere bakma gibi yaklaşımları kullanmanız gerektiğini bilmelisiniz. Zaman serisi verileriyle uğraşırken ileri zincirleme gibi yaklaşımları kullanın."
+    },
+    "82": {
+        "question": "Zaman serisi verisi nasıl durağan olarak ilan edilir?",
+        "answer": "Zaman serisi, temel bileşenlerinin zaman içinde değişmediği zaman durağan olarak kabul edilir. Bu değişkenler varyans veya ortalama olabilir. Statik zaman serilerinde trendler veya mevsimsel etkiler yoktur. Veri bilimi modelleri için durağan zaman serilerinden gelen verilere ihtiyaç vardır."
+    },
+    "83": {
+        "question": "Nokta Tahminleri ve Güven Aralığı arasındaki fark nedir?",
+        "answer": "Nokta Tahminleri: Nokta tahmini olarak bilinen belirli bir sayı, populasyon parametresinin bir tahminini sağlar. Maksimum Olabilirlik tahmincisi ve Momentler Yöntemi, Popülasyon Parametre Nokta tahmincileri üretmek için kullanılan iki yaygın tekniktir.\n\nGüven Aralığı: Güven aralığı, populasyon parametresini içerdiği düşünülen değerlerin bir aralığını sağlar. Ayrıca, populasyon parametresinin bu belirli aralıkta bulunma olasılığını ortaya koyar. Olasılık veya benzerlik, 1-alfa tarafından gösterilen Güven Katsayısı (veya Güven düzeyi) ile temsil edilir. Anlamlılık düzeyi alfa ile gösterilir."
+    },
+    "84": {
+        "question": "KPI, kaldırma, model uyumu, sağlamlık ve DOE terimlerini tanımlayın.",
+        "answer": "* KPI: KPI, bir şirketin hedeflerini ne kadar başarıyla gerçekleştirdiğini değerlendiren Anahtar Performans Göstergesi'nin kısaltmasıdır.\n* Kaldırma: Kaldırma, hedef modelin rastgele bir seçim modeline göre performans göstergesidir. Kaldırma, modelin hiçbir model olmadan tahmin etme yeteneğini ölçer.\n* Model uyumu: Bu, önerilen modelin mevcut verilere ne kadar iyi uyduğunu açıklar.\n* Sağlamlık: Bu, sistemin nasıl değişiklikleri ve değişiklikleri yönetebildiğini belirtir.\n* DOE: DOE, önceden varsayılan koşullar altında bilgi varyansını açıklamak ve açıklamak için tasarlanmış görev tasarımını ifade eder."
+    },
+    "85": {
+        "question": "LLM'ler nedir?",
+        "answer": "Büyük Dil Modelleri veya kısaltılmış haliyle LLM'ler, aldıkları girişe dayanarak insan diline benzeyen metinleri işleyen ve üreten sofistike yapay zeka modelleridir. Derin öğrenme gibi ileri teknikleri, özellikle sinir ağlarını kullanarak dil kalıplarını anlamak ve üretmek için kullanırlar. Bu, onların soruları yanıtlamasını, konuşmalar yapmasını ve geniş bir konu yelpazesinde bilgi sağlamasını sağlar.\nLLM'ler, kitaplar, web siteleri ve diğer metin tabanlı materyaller de dahil olmak üzere çeşitli kaynaklardan gelen geniş kapsamlı metin veri setlerini kullanarak eğitilirler. Bu eğitim sürecinde, desenleri tanıma, bağlamı anlama ve tutarlı ve bağlamsal olarak uygun yanıtlar üretme yeteneği kazanırlar.\nGPT-3.5 mimarisine dayanan ChatGPT gibi dikkate değer LLM örnekleri, farklı alanlarda doğru ve değerli bilgi sunmak için kapsamlı ve çeşitli veri kümeleri üzerinde eğitilmişlerdir. Bu modeller, doğal dil anlama yeteneklerine sahiptir ve dil çevirisi, içerik oluşturma ve metin tamamlama gibi çeşitli görevleri üstlenebilirler.\nEsneklikleri, onların kullanıcıları çeşitli sorular ve görevlerle yardımcı olmalarını sağlar ve bu da onları eğitim, müşteri hizmetleri, içerik oluşturma ve araştırma gibi birçok alanda değerli araçlar haline getirir."
+    },
+    "86": {
+        "question": "Makine Öğreniminde bir Transformer nedir?",
+        "answer": "Makine öğrenimi alanında, 'Transformer' terimi, öncelikle doğal dil işleme (NLP) görevleri alanında önemli bir üne sahip olan bir sinir ağı mimarisini ifade eder. Tanıtımı, 2017'de Vaswani ve diğerlerinin kaleme aldığı 'Attention Is All You Need' başlıklı öncü araştırma makalesinde gerçekleşti. O zamandan beri, Transformer, NLP alanındaki birçok uygulamada temel bir çerçeve olarak ortaya çıkmıştır.\n\nTransformer mimarisi, geleneksel tekrarlayan sinir ağları (RNN'ler) tarafından karşılaşılan sınırlamaları aşmak için özellikle tasarlanmıştır. RNN'lerin aksine, Transformer'lar ardışık işleme dayanmaz ve hesaplamaları paralelleştirebilme yeteneğine sahiptir, bu da daha iyi verimlilik ve ölçeklenebilirlik sağlar."
+    }
+}

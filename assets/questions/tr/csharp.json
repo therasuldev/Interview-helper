@@ -1,0 +1,334 @@
+{
+    "1": {
+        "question": "C# nedir?",
+        "answer": "C#, Microsoft Intermediate Language oluşturmak için .Net çerçevesi tarafından derlenen nesne yönelimli bir programlama dilidir."
+    },
+    "2": {
+        "question": "Static, public ve void arasındaki fark nedir?",
+        "answer": "Public olarak belirtilen değişkenlere herhangi bir yerden uygulamaya erişilebilir. Static olarak belirtilen değişkenler, sınıfın bir örneğini oluşturmadan küresel olarak erişilebilir. Void, bir yöntemin türünü belirten ve C# dilinde bir yöntemin dönüş türünü belirtmek için kullanılan bir tür değiştiricisidir."
+    },
+    "3": {
+        "question": "Nedir bir nesne?",
+        "answer": "Nesne, bir sınıf örneğidir ve sınıf yöntemlerine erişmek için kullanılabilir. 'New' anahtar kelimesi bir nesne oluşturmak için kullanılabilir."
+    },
+    "4": {
+        "question": "Yapıcılar nasıl tanımlanır?",
+        "answer": "Bir yapıcı, kendi sınıfı ile aynı ada sahip bir üye fonksiyondur. Yapıcı, bir nesne oluşturulduğunda otomatik olarak çağrılır. Sınıf başlatılırken, tüm veri üyelerinin değerleri oluşturulur."
+    },
+    "5": {
+        "question": "Parçalı Diziler nedir?",
+        "answer": "Dizinin türünden öğeler içeren Dizilere Parçalı Dizi denir. Parçalı Dizilerdeki öğeler çeşitli boyutlarda ve boyutlarda olabilir."
+    },
+    "6": {
+        "question": "Out ve ref parametreleri arasındaki fark nedir?",
+        "answer": "Bir argüman bir ref olarak geçirildiğinde, bir yönteme geçirilmeden önce başlatılmalıdır. Öte yandan, bir out parametresi, bir yönteme geçirilmeden önce başlatılmak zorunda değildir."
+    },
+    "7": {
+        "question": "C#'da 'using' ifadesinin faydası nedir?",
+        "answer": "'Using' ifadesi, bir kaynağı işlem için elde etmek için kullanılabilir ve yürütme tamamlandığında otomatik olarak atılır."
+    },
+    "8": {
+        "question": "Serileştirme nedir?",
+        "answer": "Bir nesneyi bir ağ üzerinden taşımak için, onu bir bayt akışına dönüştürmemiz gerekebilir. Bu işlem Serileştirme olarak adlandırılır."
+    },
+    "9": {
+        "question": "'This' komutu bir static yöntem içinde kullanılabilir mi?",
+        "answer": "Hayır. Bu, yalnızca static değişkenler/yöntemler bir static yöntemde kullanılabilir."
+    },
+    "10": {
+        "question": "Break ve Continue İfadesi arasındaki fark nedir?",
+        "answer": "Continue ifadesi - Belirli bir yinelemeyi atlamak ve döngünün bir sonraki yinelemesine geçmek için kullanılır.\n\nBreak ifadesi - Mevcut yinelemenin bir sonraki ifadelerini atlamak ve döngüden çıkmak için kullanılır."
+    },
+    "11": {
+        "question": "C# kod derleme işleminde yer alan dört adımı açıklayın.",
+        "answer": "C# kod derleme işleminde dört adım şunlardır -\n\n* Yönetilen kod içeren kaynak kodun derlenmesi.\n* Yeni oluşturulan kod, derleme kodu ile birleştirilir.\n* Ortak Dil Çalışma Zamanı (CLR) yüklenir.\n* CLR aracılığıyla derleme yürütülür."
+    },
+    "12": {
+        "question": "Bir yönteme parametre aktarma yöntemlerini tartışın.",
+        "answer": "Bir yönteme parametre aktarma yöntemlerinin çeşitleri şunlardır -\n\n* Çıktı parametreleri: Yöntemin birden fazla değer döndürmesine izin verir.\n* Değer parametreleri: Biçimsel değer, gerçek argümanın değerini kopyalar ve saklar, bu da biçimsel parametrenin değiştirilmesine gerçek parametrenin değerini etkilemeden izin verir.\n* Referans parametreleri: Gerçek parametrenin bellek adresi biçimsel argümanda saklanır, bu da biçimsel parametre üzerinde yapılan herhangi bir değişikliğin gerçek argümanda da yansıtılacağı anlamına gelir."
+    },
+    "13": {
+        "question": "C# dilinin tüm erişim belirleyicilerini adlandırın.",
+        "answer": "C# erişim belirleyicileri şunlardır -\n\n* Özel Erişim Belirleyicisi - Bir özellik veya yöntem özelliği yalnızca sınıf içinden erişilebilen bir özelliktir.\n* Genel Erişim Belirleyicisi - Bir özellik veya yöntem genel olarak belirtildiğinde, kodun herhangi bir yerinden erişilebilir.\n* Dahili Erişim Belirleyicisi - Bir özellik veya yöntem dahili olarak tanımlandığında, bu sınıfın geçerli derleme noktasından erişilebilir.\n* Korunan Erişim Belirleyicisi - Bir kullanıcı bir yöntemi veya özelliği korunan olarak belirttiğinde, o yönteme veya özelliğe yalnızca o sınıfın üyeleri ve onu miras alanlar erişebilir."
+    },
+    "14": {
+        "question": "C#'ın tüm avantajlarını belirtin.",
+        "answer": "Aşağıdakiler C#'ın avantajlarıdır -\n\n* C#, bileşen odaklı bir dildir.\n* Nesne yönelimlidir.\n* Sözdizimi oldukça kolaydır.\n* Öğrenmesi daha kolaydır.\n* C#, .NET çerçevesinin bir parçasıdır."
+    },
+    "15": {
+        "question": "Microsoft tarafından sağlanan C# geliştirme için önemli IDE'leri belirtin.",
+        "answer": "Aşağıdaki IDE'ler, C# geliştirmesi için yararlıdır -\n\n* MonoDevelop\n* Visual Studio Code (VS Code)\n* Browxy\n* Visual Studio Express (VSE)\n* Visual Web Developer (VWD)"
+    },
+    "16": {
+        "question": "Neden C# dilini kullanırız?",
+        "answer": "Aşağıdakiler, C# dilini neden kullandığımızı açıklar -\n\n* C#, bileşen odaklı bir dildir.\n* C# dilinde parametre aktarmak kolaydır.\n* C# dili birçok platformda derlenebilir.\n* C# dilinin yapılandırılmış bir yaklaşımı vardır.\n* Öğrenmesi ve anlaması kolaydır.\n* C# dili son derece verimli ve okunaklı programlar üretir."
+    },
+    "17": {
+        "question": "C#'ın özelliklerini kısaca belirtin.",
+        "answer": "C#'ın başlıca özellikleri şunlardır -\n\n* C#, güvenli bir şekilde yazılmış ve yönetilen bir dildir.\n* C#, nesne yönelimlidir.\n* C#, Çok platforma uygun bir dildir.\n* C#, derleme aşamasında platformdan bağımsız bir dildir.\n* C#, genel amaçlı bir dildir.\n* C#, Yıkıcılar ve Yapıcıların uygulanmasında kullanılır.\n* C#, .NET çerçevesinin bir parçasıdır.\n* C#, öğrenmesi ve anlaması kolaydır.\n* C#, yapılandırılmış bir dildir."
+    },
+    "18": {
+        "question": "Yönetilmeyen veya Yönetilen Kod ne anlama gelir?",
+        "answer": "Basit bir ifadeyle, yönetilen kod, CLR (Ortak Dil Çalışma Zamanı) tarafından yürütülen koddur. Bu, her uygulama kodunun tamamen .NET platformuna bağımlı olduğu ve buna göre gözetildiği anlamına gelir. .NET platformunun bir parçası olmayan bir çalışma zamanı programı tarafından yürütülen kod yönetilmeyen kod olarak kabul edilir. Bellek, güvenlik ve yürütme ile ilgili diğer faaliyetler uygulamanın çalışma zamanı tarafından işlenir."
+    },
+    "19": {
+        "question": "Bir Soyut Sınıf ne anlama gelir?",
+        "answer": "Bir tür sınıf örneği oluşturulamayan ve 'soyut' terimi ile belirtilen bir sınıf türüdür. Bir yöntem veya tek bir yaklaşımı içerir."
+    },
+    "20": {
+        "question": "Finalize blokları ile finalize arasındaki fark nedir?",
+        "answer": "Try ve catch blokları tamamlandıktan sonra finalize bloğu çağrılır çünkü bu, istisna işleme için kullanılır. Bu kod bloğu, istisna yakalansa bile çalıştırılır. Genel olarak, bu bloktaki kod daha temizdir.\n\nÇöp toplama işleminden hemen önce finalize yöntemi çağrılır. Finalize yönteminin başlıca öncelikleri, herhangi bir örneğin yeniden çağrılmadığı her zaman tetiklenen yönetilmeyen kodu temizlemektir."
+    },
+    "21": {
+        "question": "Bir Arayüz ne anlama gelir?",
+        "answer": "Bir arayüz, herhangi bir uygulamaya sahip olmayan bir sınıftır. Yalnızca olayların, özelliklerin ve özniteliklerin bildirimleri dahil edilir."
+    },
+    "22": {
+        "question": "Kısmi Sınıf ne anlama gelir?",
+        "answer": "Bir kısmi sınıf, bir sınıf tanımını aynı veya farklı kaynak kodu dosyalarında farklı sınıflara böler. Bir sınıf tanımı birçok dosyada yazılabilir, ancak çalışma zamanında tek bir sınıf olarak derlenir ve bir sınıf oluşturulduğunda, tüm yöntemler tüm kaynak dosyalarından aynı nesne kullanılarak erişilebilir. 'Partial' anahtar kelimesi bunu belirtir."
+    },
+    "23": {
+        "question": "Sadece okunur (read-only) ve sabitler (constants) arasındaki fark nedir?",
+        "answer": "Derleme zamanında, sabit değişkenler hem bildirilir hem de başlatılır. Bu belirli değeri daha sonra değiştirmek mümkün değildir. Öte yandan, sadece okunur, bir değer çalışma zamanında atandıktan sonra kullanılır."
+    },
+    "24": {
+        "question": "Bir arayüz sınıfı nedir?",
+        "answer": "Bir arayüz sınıfı, yalnızca genel soyut yöntemlere sahip soyut bir sınıftır. Bu yöntemlerde yalnızca bildirim bulunur, ancak tanım değil. Bunlar, miras alan sınıflarda uygulanmalıdır."
+    },
+    "25": {
+        "question": "Referans türleri ve değer türleri nedir?",
+        "answer": "Bir değer türü, bellek alanı içinde bir veri değerini tutar. Öte yandan, bir referans türü, değerin depolandığı bellek adresini tutar. Temelde, farklı bir bellek konumuna bir işaretçidir."
+    },
+    "26": {
+        "question": "Kullanıcı Kontrolü ve Özel Kontrol nedir?",
+        "answer": "Özel Kontroller derlenmiş kod olarak oluşturulur. Bunlar kullanımı kolaydır ve araç kutusuna eklenebilir. Geliştiriciler bu kontrolleri web formlarına sürükleyip bırakabilirler. Kullanıcı Kontrolleri neredeyse ASP include dosyaları ile aynıdır. Ayrıca, kolayca oluşturulabilirler. Bununla birlikte, Kullanıcı Kontrolleri araç kutusuna konamaz. Ayrıca, araç kutusundan sürüklenip bırakılamazlar."
+    },
+    "27": {
+        "question": "C#'da mühürlü sınıflar nedir?",
+        "answer": "Kalıtılması gereken sınıfa kısıtlama getirilmesi gerektiğinde mühürlü sınıflar oluşturulur. Bir sınıftan herhangi bir kalıtımı önlemek için mühürlü bir belirleyici kullanılır. Bir mühürlü sınıf zorla belirtiltiğinde derleme zamanında hata oluşur."
+    },
+    "28": {
+        "question": "Yöntem aşırı yükleme nedir?",
+        "answer": "Yöntem aşırı yükleme, aynı sınıfta aynı isme sahip ancak farklı imzalara sahip birçok yöntemin oluşturulması sürecidir. Derleyici, derleme sırasında hangi yöntemin çağrılacağını belirlemek için aşırı yük çözümlemesi kullanır."
+    },
+    "29": {
+        "question": "Arraylist ve Array arasındaki fark nedir?",
+        "answer": "Bir dizi yalnızca aynı türdeki öğelere sahiptir ve boyutu sabittir. Arraylist de benzerdir ancak sabit bir boyuta sahip değildir."
+    },
+    "30": {
+        "question": "Bir özel sanal yöntemin geçersiz kılınması mümkün müdür?",
+        "answer": "Bir özel sanal yöntem dışarıdan erişilemeyeceği için geçersiz kılınmaz."
+    },
+    "31": {
+        "question": "Erişim belirleyici “protected internal” nasıl tanımlanır?",
+        "answer": "Korumalı İç olarak belirtilen değişkenler veya yöntemler, aynı derlemeden ve üst sınıfından türetilen sınıflardan erişilebilir."
+    },
+    "32": {
+        "question": "System.String ve System.Text.StringBuilder sınıfları arasındaki farklar nelerdir?",
+        "answer": "System.String mutlaktır. Bir dize değişkeninin değeri değiştirildiğinde, yeni bir bellek yeni değere atanır. Önceki bellek tahsisi serbest bırakılır. Öte yandan, System.Text.StringBuilder, bir dizenin değiştirilmiş hali için ayrı bir bellek konumu tahsis etmeden bir dizi işlem gerçekleştirebilecek şekilde tasarlanmıştır."
+    },
+    "33": {
+        "question": "System.Array.CopyTo() ve System.Array.Clone() yöntemleri arasındaki fark nedir?",
+        "answer": "Clone() yönteminde, tüm orijinal Dizi öğeleri kullanılarak yeni bir dizi nesnesi oluşturulur. Temelde, mevcut dizide bulunan tüm öğeler başka bir mevcut diziye kopyalanır."
+    },
+    "34": {
+        "question": "Dizi öğeleri nasıl azalan sırada sıralanır?",
+        "answer": "Sort() yöntemlerini kullanabilir ve ardından Reverse() yöntemini kullanabilirsiniz."
+    },
+    "35": {
+        "question": "Abstract ve arayüz sınıfları arasındaki fark nedir?",
+        "answer": "Arayüzlerdeki tüm yöntemler sadece bir bildirim içerir, ancak bir tanım yoktur. Bir soyut sınıfta bazı güçlü yöntemler olabilir. Bir arayüz sınıfındaki tüm yöntemler geneldir. Bir soyut sınıfta özel yöntemler bulunabilir."
+    },
+    "36": {
+        "question": "Dispose() ve Finalize() yöntemleri arasındaki fark nedir?",
+        "answer": "Dispose(), bir nesnenin içindeki yönetilmeyen kaynakları serbest bırakmak için kullanılır. Öte yandan, Finalize(), aynı işlev için kullanılsa da bir nesnenin çöp toplama işlemini garanti etmez."
+    },
+    "37": {
+        "question": "Dairesel referanslar nedir?",
+        "answer": "İki veya daha fazla kaynağın birbirine bağımlı olduğunda, bir kilit durumu oluşur ve kaynaklar kullanılamaz hale gelir. Buna dairesel referans denir."
+    },
+    "38": {
+        "question": "C# .NET'te generic yapılar nedir?",
+        "answer": "Kod tekrarını azaltmak, tip güvenliğini artırmak ve performansı artırmak için, yeniden kullanılabilen kod sınıfları oluşturmak için generic yapılar kullanılabilir. Generic yapılar kullanılarak koleksiyon sınıfları oluşturulabilir."
+    },
+    "39": {
+        "question": ".NET'te bir nesne havuzu nedir?",
+        "answer": "Kullanılmaya hazır nesnelerin bulunduğu bir konteyner bir nesne havuzu olarak bilinir. Hangi nesnenin şu anda kullanımda olduğunu ve havuzda bulunan toplam nesne sayısını izlemeye yardımcı olur. Bu, nesnelerin oluşturulması ve yeniden oluşturulması gereksinimini azaltır."
+    },
+    "40": {
+        "question": "Özel İstisnalar nedir?",
+        "answer": "Bazı durumlarda hatalar kullanıcı gereksinimlerine göre ele alınmalıdır. Bu tür durumlarda özel istisnalar kullanılır."
+    },
+    "41": {
+        "question": "Delegeler nedir?",
+        "answer": "Delegeler, temelde C++'taki işlev işaretçileriyle aynıdır. İkisi arasındaki tek ve ana fark, delegelerin tür güvenli olmasıdır, işlev işaretçileri ise değildir. Delegeler, genel tür güvenli işlevlerin oluşturulmasına izin verdiği için önemlidir."
+    },
+    "42": {
+        "question": "Yöntem aşırı yüklemesi ile yöntem geçersiz kılma arasındaki fark nedir?",
+        "answer": "Yöntem geçersiz kılma durumunda, ilgili yöntem tanımı, yöntem davranışını değiştiren türetilmiş sınıfta değiştirilir. Yöntem aşırı yüklemesi durumunda ise, aynı isimde bir yöntem oluşturulur ve aynı sınıfta farklı imzalar bulunur."
+    },
+    "43": {
+        "question": "C# dilinde bir sınıfın başka bir sınıfa miras alınması nasıl yapılır?",
+        "answer": "C# dilinde, iki nokta üye işareti olarak kullanılabilir. İki noktanın yanına sınıf adı yazılmalıdır."
+    },
+    "44": {
+        "question": "Bir yöntemin aşırı yüklenmesi için çeşitli yollar nelerdir?",
+        "answer": "Bir yöntemin aşırı yüklenmesi için farklı veri tipleri kullanılabilir; aynı zamanda farklı sıralarda ve farklı sayılarda parametreler kullanılabilir."
+    },
+    "45": {
+        "question": "Arayüz içindeki yöntemler için erişilebilirlik belirleyici belirtilmemesi durumunda ne olur?",
+        "answer": "Arayüzde, yöntem tanımı olmayan sanal yöntemler bulunur. Tüm yöntemlerin genel olması gerektiği ve türetilmiş sınıfta geçersiz kılınması gerektiği için, bu nedenle hepsi geneldir."
+    },
+    "46": {
+        "question": "Bir sınıfın miras alınmasını sağlamak, ancak yöntemin geçersiz kılınmasını önlemek için ne yapılabilir?",
+        "answer": "Bir sınıfın miras alınması için, sınıfın genel olarak bildirilmiş olması gerekir. Yöntemin geçersiz kılınması, herhangi bir geçersiz kılma işlemini önlemek için mühürlenmelidir."
+    },
+    "47": {
+        "question": "Miras alınan arayüzlerde yöntem isimleri çakışırsa ne olur?",
+        "answer": "Farklı arayüzlerden gelen yöntemlerin farklı veri türleri beklemesi durumunda bir sorun ortaya çıkabilir. Ancak derleyici açısından bir sorun olmamalıdır."
+    },
+    "48": {
+        "question": "Struct ve Class arasındaki fark nedir?",
+        "answer": "Struct'lar temel olarak değer türü değişkenlerdir, sınıflar ise referans türleridir."
+    },
+    "49": {
+        "question": ".Net'te nullable türler nasıl kullanılır?",
+        "answer": "Normal değerler veya bir boş değer alabilen değer türlerine, nullable türler denir."
+    },
+    "50": {
+        "question": "Standart olmayan değerlere sahip bir dizi nasıl oluşturulur?",
+        "answer": "Standart olmayan değerlere sahip bir dizi, Enumerable.Repeat kullanılarak oluşturulabilir."
+    },
+    "51": {
+        "question": "C#'da “is” ve “as” operatörleri arasındaki fark nedir?",
+        "answer": "Bir “is” operatörü, bir nesnenin belirli bir tipe uyumluluğunu kontrol etmek için kullanılabilir ve sonuç bir Boolean olarak döner. Bir “as” operatörü, bir nesneyi bir tipe veya sınıfa dönüştürmek için kullanılabilir."
+    },
+    "52": {
+        "question": "Multicast delegesi nedir?",
+        "answer": "Multicast delegesi, tek bir delegeye birden fazla işleyiciyle gelir. Her işleyici bir yönteme atanmıştır."
+    },
+    "53": {
+        "question": "C# .NET'te indexler nedir?",
+        "answer": "C# dilinde, indexler akıllı diziler olarak adlandırılır. Indexler, sınıf örneklerinin diziler gibi dizinlenmesine izin verir."
+    },
+    "54": {
+        "question": "'throw' ve 'throw ex' arasındaki fark nedir?",
+        "answer": "'Throw' ifadesi, orijinal hata yığınını korur. Ancak 'throw ex', onları fırlattıkları noktadaki yığın izini korur."
+    },
+    "55": {
+        "question": "C# öznitelikleri nedir ve önemi nedir?",
+        "answer": "C#, geliştiricilere birkaç varlık üzerinde deklaratif etiketler tanımlama seçeneği sunar. Örneğin, sınıf ve yöntem öznitelikleri olarak adlandırılır. Öznitelikle ilgili bilgiler, Reflection yardımıyla çalışma zamanında alınabilir."
+    },
+    "56": {
+        "question": "C# dilinde tekil desen tasarımını nasıl uygularsınız?",
+        "answer": "Tekil deseninde, bir sınıfa yalnızca bir örnek verilir ve buna küresel bir erişim noktası sağlanır."
+    },
+    "57": {
+        "question": "DirectCast ve CType arasındaki fark nedir?",
+        "answer": "Bir nesnenin başka bir nesneye benzer bir çalışma zamanı türüne ihtiyacı varsa, bunu dönüştürmek için DirectCast kullanılır. Dönüşüm ifadesi ile tür arasında dönüşüm yapıldığında ise CType kullanılır."
+    },
+    "58": {
+        "question": "C# kodu yönetilen mi yoksa yönetilmeyen kod mu?",
+        "answer": "C#, Ortak Dil Çalışma Zamanı'nın C# kodunu Ara Dil'e derleyebilmesi nedeniyle yönetilen bir koddur."
+    },
+    "59": {
+        "question": "Konsol uygulaması nedir?",
+        "answer": "Komut istem penceresinde çalışabilen bir uygulamaya konsol uygulaması denir."
+    },
+    "60": {
+        "question": "C# dilinde isim alanları nedir?",
+        "answer": "Isim alanları, farklı diğerlerinden farklı bir ad setini korumanızı sağlar. Bir isim alanının büyük avantajı, bir isim alanında tanımlanan sınıf adlarının başka bir isim alanında tanımlananlarla çakışmamasıdır."
+    },
+    "61": {
+        "question": "Dispose() ve Finalize() yöntemleri arasındaki fark nedir?",
+        "answer": "Isim alanları, arabirimler, yapılar ve delegelerin tümü üye olabilir."
+    },
+    "62": {
+        "question": "C#'de Generics'in özellikleri nelerdir?",
+        "answer": "Generics, generic sınıflar oluşturma ve kodu yeniden kullanma dahil olmak üzere programınızı çeşitli yollarla geliştirmenin bir tekniğidir."
+    },
+    "63": {
+        "question": "C#'da SortedList ve SortedDictionary arasındaki fark nedir?",
+        "answer": "SortedList, anahtarlarına göre sıralanmış değer çiftlerinden oluşan bir koleksiyondur. SortedDictionary, anahtar üzerinde sıralama yapılan değer çiftlerini sıralı bir şekilde depolamak için kullanılan bir koleksiyondur."
+    },
+    "64": {
+        "question": "C# Singleton tasarım deseni nedir?",
+        "answer": "C# Singleton tasarım deseni, yalnızca bir örneği olan ve ona genel erişim sağlayan bir desendir."
+    },
+    "65": {
+        "question": "C#'da tuple nedir?",
+        "answer": "Tuple, birbirleriyle ilişkili olabilen birden çok değeri temsil etmek için kullanılan bir veri yapısıdır."
+    },
+    "66": {
+        "question": "Events nedir?",
+        "answer": "Bir olay, bir şeyin meydana geldiğine dair bir bildirimdir."
+    },
+    "67": {
+        "question": "C#'da Constructor Chaining nedir?",
+        "answer": "Constructor Chaining ile, bir aşırı yüklenmiş yapılandırıcı başka bir yapılandırıcıdan çağrılabilir. Yapılandırıcı, aynı sınıfa ait olmalıdır."
+    },
+    "68": {
+        "question": "C#'da multicasting delegate nedir?",
+        "answer": "Delegelerin multicast yapılması, kullanıcılara tek bir çağrıda birden fazla yönteme işaret etme imkanı sağlar."
+    },
+    "69": {
+        "question": "C#'da Erişim Modifikatörleri nedir?",
+        "answer": "Erişim Modifikatörleri, bir programın üyesi, sınıfı veya veri türünün erişilebilirliğini belirleyen terimlerdir."
+    },
+    "70": {
+        "question": "C#'da Sanal Yöntem nedir?",
+        "answer": "Sanal bir yöntem, bir üst sınıfta belirtilen ve alt sınıfta geçersiz kılınabilen bir yöntemdir. Sanal bir yöntemi, temel sınıfta virtual anahtar kelimesini kullanarak oluştururuz ve bu işlev, türetilmiş sınıfta Override anahtar kelimesi ile geçersiz kılınır."
+    },
+    "71": {
+        "question": ".NET'te Çoklu İş Parçacığı (Multithreading) nedir?",
+        "answer": "Çoklu iş parçacığı, tek bir işlem içinde birden çok iş parçacığının kullanılmasını ifade eder. Her iş parçacığı burada farklı bir işlevi yerine getirir."
+    },
+    "72": {
+        "question": "C# dilinde bir Hash tablosu sınıfı nedir?",
+        "answer": "Hash tablosu sınıfı, anahtarın hash koduna göre düzenlenmiş anahtar/değer çiftlerinin bir koleksiyonunu temsil eder."
+    },
+    "73": {
+        "question": "C# dilinde LINQ nedir?",
+        "answer": "LINQ, Language Integrated Query kısaltmasıdır. Bu, .NET dillerine (örneğin C#) veri kaynağından veri almak için sorgular oluşturma yeteneği sağlar."
+    },
+    "74": {
+        "question": "Neden C# dilinde özel bir sanal prosedür geçersiz kılınmaz?",
+        "answer": "Özel sanal yöntemler, sınıfın dışından erişilemez."
+    },
+    "75": {
+        "question": "C# dilinde Dosya İşleme nedir?",
+        "answer": "Dosya işleme, dosya oluşturma, dosyadan okuma ve dosyaya ekleme gibi işlemleri içerir."
+    },
+    "76": {
+        "question": "Get ve Set Erişimci özellikleri hakkında ne anlıyorsunuz?",
+        "answer": "C# dilinde Get ve Set, özellikler kullanılarak erişimciler olarak adlandırılır. Bu tür özel alanlar, erişimciler aracılığıyla erişilir."
+    },
+    "77": {
+        "question": "C# dilinde Yarış Koşulu nedir?",
+        "answer": "Bir yarış koşulu, 2 iş parçacığının aynı kaynağa erişip aynı anda değiştirmeye çalıştığında oluşur."
+    },
+    "78": {
+        "question": "C# dilinde Neden Async ve Await kullanılır?",
+        "answer": "Asenkron programlama işlemleri, başlıca işlem veya diğer işlemlerden bağımsız olarak çalışır. C# dilindeki asenkron yöntemler, Async ve Await anahtar kelimeleri kullanılarak oluşturulur."
+    },
+    "79": {
+        "question": "C# dilinde Indexer nedir?",
+        "answer": "Indexer, başka bir sınıfın bir üye değişkenine dizi özellikleri kullanarak erişmenizi sağlayan bir sınıf özelliğidir."
+    },
+    "80": {
+        "question": "C# dilinde Thread Pooling nedir?",
+        "answer": "C# dilinde Thread Pool, bir grup iş parçacığıdır. Bu iş parçacıkları, ana iş parçacığının işleyişini etkilemeden çalışacak şekilde kullanılır."
+    },
+    "81": {
+        "question": "C# dilinde XSD dosyası hakkında hangi bilgileri sağlayabilirsiniz?",
+        "answer": "XSD, XML Schema Definition kısaltmasıdır. Bir XML dosyası ile ilişkilendirilmiş bir XSD dosyası yoksa, XML dosyasında herhangi bir özellik ve öğe olabilir."
+    },
+    "82": {
+        "question": "C# dilinde I/O sınıfları nelerdir?",
+        "answer": "C# dilinde, System.IO ad alanı, oluşturma, silme, kapatma ve açma gibi farklı dosya işlemleri için kullanılan çeşitli sınıfları içerir."
+    },
+    "83": {
+        "question": "C# dilinde düzenli ifadeler tam olarak ne anlama gelir?",
+        "answer": "Düzenli ifade, bir girdi kümesiyle eşleşmek için kullanılan bir desendir. Yapılar, karakterler ve operatörler gibi çeşitli öğeleri içerebilir."
+    }
+}

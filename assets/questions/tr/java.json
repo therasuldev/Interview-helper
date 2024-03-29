@@ -1,0 +1,226 @@
+{
+    "1": {
+        "question": "JDK ile JRE arasındaki fark nedir?",
+        "answer": "JDK, Java uygulamaları oluşturmak için bir yazılım geliştirme ortamını temsil eder. JRE ise Java programlarını çalıştırmak için gereklidir."
+    },
+    "2": {
+        "question": "Java neden platform bağımsız bir dil olarak kabul edilir?",
+        "answer": "Java, sanal makineye dayanarak platform bağımsızlığını elde eder. Uygulamada, bu, Java programlama dilinin ve ilişkili API'lerinin her birinin birden çok platformda çalışabilen bytecode'lar haline derlenmesi anlamına gelir. Ardından, sanal makine bu bytecode'ların farklı platformlarda nasıl yürütüldüğüne ilişkin herhangi bir farklılığı ele alır."
+    },
+    "3": {
+        "question": "Soyut sınıf ile arayüz arasındaki fark nedir?",
+        "answer": "Bir soyut sınıf, örneklenemeyen ve yalnızca miras alınabilen bir sınıftır. Bir arayüz, yalnızca soyut yöntemler ve sabitler içeren bir sınıfın planını sağlar."
+    },
+    "4": {
+        "question": "final, finally ve finalize arasındaki fark nedir?",
+        "answer": "Final, bir değişkeni veya yöntemi sabit yapmak için kullanılır ve daha sonra değiştirilemez. finally, bir try-catch bloğunda, bir istisna oluşturulup oluşturulmadığına bakılmaksızın belirli bir kod bloğunu çalıştırmak için kullanılır. finalize, bir nesne artık kullanılmadığında çöp toplayıcısı tarafından çağrılan bir yöntemdir."
+    },
+    "5": {
+        "question": "Yığın ve heap belleği arasındaki fark nedir?",
+        "answer": "Yığın belleği, yerel değişkenleri ve işlev çağrısını saklamak için kullanılırken, heap belleği nesneleri ve bunların örnek değişkenlerini saklamak için kullanılır."
+    },
+    "6": {
+        "question": "Yöntem aşırı yükleme ile yöntem geçersiz kılma arasındaki fark nedir?",
+        "answer": "Yöntem aşırı yükleme, aynı adı taşıyan ancak farklı parametrelere sahip birden çok yöntemin bir sınıfta oluşturulmasıdır, yöntem geçersiz kılma ise alt sınıfta, üst sınıfında bir yöntemin adı ve parametreleri ile aynı olan bir yöntemin oluşturulmasıdır."
+    },
+    "7": {
+        "question": "Soyut sınıf ile arayüz arasındaki fark nedir?",
+        "answer": "Bir soyut sınıf hem soyut hem de somut yöntemlere sahip olabilirken, bir arayüz yalnızca soyut yöntemlere sahip olabilir. Bir sınıf yalnızca bir soyut sınıfı genişletebilir, ancak birden fazla arayüzü uygulayabilir."
+    },
+    "8": {
+        "question": "Özel ve korumalı değiştiriciler arasındaki fark nedir?",
+        "answer": "Özel bir değiştirici, bir üyenin yalnızca aynı sınıf içinde erişilebilir olmasını sağlar, korumalı bir değiştirici ise bir üyenin aynı sınıf ve alt sınıflar içinde erişilebilir olmasını sağlar."
+    },
+    "9": {
+        "question": "Java'da kurucu aşırı yükleme nedir?",
+        "answer": "Kurucu aşırı yükleme, bir sınıfın farklı parametre listelerine sahip birden fazla kurucuya sahip olabilmesi olan nesne yönelimli programlama konseptidir. Her kurucu, o sınıfın nesnelerini başlatmanın farklı bir yolunu sağlar."
+    },
+    "10": {
+        "question": "Java'da super anahtar kelimesinin kullanımı nedir?",
+        "answer": "Super anahtar kelimesi, eğer bir üst sınıfın ve alt sınıflarının veri üyelerinin adı aynıysa, üst sınıfın veri üyelerine erişmek için, alt sınıflar içinde varsayılan ve parametrelendirilmiş kurucuyu çağırmak için ve alt sınıfların bunları geçersiz kıldığı yöntemlere erişmek için kullanılır."
+    },
+    "11": {
+        "question": "Java'da statik yöntemler, statik değişkenler ve statik sınıflar arasındaki fark nedir?",
+        "answer": "Statik yöntemler ve statik değişkenler, java programının sınıfına ait olan yöntemler ve değişkenlerdir, sınıfın nesnesine ait değildir. Bunlar, sınıf yüklendiğinde hafızaya alınır ve doğrudan sınıf adlarıyla çağrılabilirler. Bir java programındaki bir sınıfın, iç sınıf olduğu sürece, başka bir statik ü"
+    },
+    "12": {
+        "question": "Java'da System.out.println tam olarak nedir?",
+        "answer": "System.out.println(), konsola bir ileti yazdırmak için kullanılan bir yöntemdir. System - java.lang paketinde bulunan bir sınıftır. Out, System sınıfında bulunan PrintStream sınıfının statik değişkenidir. println(), PrintStream sınıfında bulunan bir yöntemdir."
+    },
+    "13": {
+        "question": "Hafıza temizleme sürecinde hangi bellek bölümü - Yığın mı yoksa Heap mi - temizlenir?",
+        "answer": "Çöp Toplama işlemi, nesnelerin herhangi bir referansa sahip olmayan hafızayı serbest bırakmak için heap belleğinde gerçekleştirilir. Heap alanında oluşturulan herhangi bir nesne, genel erişime sahiptir ve uygulamanın herhangi bir yerinden referans alınabilir."
+    },
+    "14": {
+        "question": "Java tarafından desteklenen Nesne Yönelimli Özellikler nelerdir?",
+        "answer": "Java bir nesne yönelimli programlama dilidir ve aşağıdaki nesne yönelimli özellikleri destekler:\n\n Kapsülleme: Java, bir nesnenin uygulama ayrıntılarını diğer nesnelerden gizleme pratiğine olanak tanır. Bu, erişim değiştiricilerinin kullanımıyla elde edilir*.\n\n Kalıtım: Java, kalıtımı destekler, bu da yeni bir sınıfın varolan bir sınıfa dayandığı ve özelliklerini ve yöntemlerini miras aldığı anlamına gelir. Bu, kodun yeniden kullanılmasını sağlar ve var olan sınıflarla ortak özelliklere sahip yeni sınıfların oluşturulmasını kolaylaştırır.\n\n Polimorfizm: Java, polimorfizmi destekler, bu da farklı sınıfların nesnelerinin bir üst sınıfın nesneleriymiş gibi işlenmesine izin verir. Bu, yöntem geçersiz kılma ve yöntem aşırı yükleme aracılığıyla elde edilebilir.\n\n Soyutlama: Java, soyutlamayı destekler, bu, karmaşık uygulama ayrıntılarını gizleme ve kullanıcıya basitleştirilmiş bir arayüz sağlama sürecidir. Bu, soyut sınıflar ve arayüzler aracılığıyla elde edilebilir.\n\n Sınıflar ve Nesneler: Java, sınıf temelli bir dildir, yani sınıfları tanımlamak ve bu sınıflardan nesneler oluşturmak için yapılar sağlar."
+    },
+    "15": {
+        "question": "Java'da kullanılan farklı erişim belirleyiciler nelerdir?",
+        "answer": "Java'nın 4 erişim belirleyicisi vardır.\n\n Public Herhangi bir sınıf veya yöntem tarafından erişilebilir\n\nKorumalı Aynı paketteki sınıf tarafından erişilebilir veya bu sınıfın alt sınıfları tarafından veya aynı sınıfta\n\nVarsayılan Yalnızca paket içinde erişilebilir, tüm sınıflar, yöntemler ve değişkenler için varsayılan seçenektir.\n\nÖzel Yalnızca sınıf içinde erişilebilir"
+    },
+    "16": {
+        "question": "Kompozisyon ile kalıtım arasındaki fark nedir?",
+        "answer": "Kompozisyon, bir sınıfın başka bir sınıfın nesnesini bir üye değişkeni olarak içerdiği 'bir- sahip' ilişkisidir. Kalıtım, bir alt sınıfın bir üst sınıfı genişletmesi ve özelliklerini ve yöntemlerini miras alması olan 'bir' ilişkisidir."
+    },
+    "17": {
+        "question": "Soyut bir sınıfın amacı nedir?",
+        "answer": "Soyut bir sınıf, örneklendirilemeyen ve diğer sınıfların miras alması için bir temel sınıf olarak kullanılan bir sınıftır. Soyut sınıflar, soyut yöntemler içerebilir, bu yöntemler soyut sınıfta bildirilir ancak uygulanmaz ve alt sınıflarda uygulanmak zorundadır."
+    },
+    "18": {
+        "question": "Java'da bir sınıfın kurucusu ile yöntemi arasındaki farklar nelerdir?",
+        "answer": "Kurucu nesnenin durumunu başlatmak için kullanılırken yöntem, nesnenin davranışını açığa çıkarmak için kullanılır. Kurucuların bir dönüş türü yoktur, ancak Yöntemlerin bir dönüş türü olmalıdır. Hiçbir şey döndürmese bile, dönüş türü void'dir. Kurucu tanımlanmamışsa, java derleyicisi tarafından varsayılan bir kurucu sağlanır. Kurucu adı sınıf adıyla eşit olmalıdır. Bir kurucu final olarak işaretlenemez çünkü bir sınıf devralındığında kurucular devralınmaz. Bir yöntem final olarak tanımlanabilir ancak alt sınıflarında geçersiz kılınmaz."
+    },
+    "19": {
+        "question": "Java'da elmas problemi nedir ve nasıl çözülür?",
+        "answer": "Elmas problemi, ortak bir üst sınıfa sahip olan iki veya daha fazla sınıfın miras alındığı programlama dillerinde ortaya çıkabilen bir sorundur. Bu, yöntem çözüm sırasında belirsizlik yaratabilir ve öngörülemeyen davranışlara neden olabilir. Java'da, çoklu kalıtım doğrudan desteklenmez, ancak arabirimler kullanılarak simüle edilebilir. Bir sınıf, bir veya daha fazla arabirimi uygulayabilir ve etkin bir şekilde özelliklerini ve yöntemlerini miras alabilir."
+    },
+    "20": {
+        "question": "Java'da yerel ve örnek değişkenler arasındaki fark nedir?",
+        "answer": "Örnek değişkenler sınıftaki tüm yöntemler tarafından erişilebilir. Onlar, yöntemler dışında ve sınıf içinde bildirilirler. Bu değişkenler bir nesnenin özelliklerini tanımlar ve ona bağlı kalır. Yerel değişkenler, bir blok, işlev veya kurucu içinde bulunan ve sadece onlar içinde erişilebilen değişkenlerdir. Değişkenin kullanımı blok kapsamı ile sınırlıdır."
+    },
+    "21": {
+        "question": "Java'da bir İşaretçi arabirimi nedir?",
+        "answer": "İşaretçi arabirimleri veya etiketleme arabirimleri, içlerinde hiç yöntem ve sabit tanımlanmamış olanlardır. Bunlar, derleyiciye ve JVM'ye çalışma zamanıyla ilgili nesne bilgisi sağlarlar."
+    },
+    "22": {
+        "question": "Java'da dizeler neden değiştirilemez?",
+        "answer": "Java heap belleğindeki bu depolama alanı, String literallerini depolamak için özel olarak kullanılır ve geçici String nesnelerinin oluşturulmasını paylaşarak azaltmayı amaçlar. Paylaşımın mümkün olabilmesi için değiştirilemez bir sınıfa ihtiyaç vardır. Ayrıca, String nesneleri değiştirilemezse, dizelerin dış eşitlemesi gerekmeksizin dış eşitleme yapılır. Karma Tablolarda ve Hash Maplerde, anahtarlar String nesneleridir ve değiştirilemez olmalıdır böylece değiştirilmeyi önlemek için."
+    },
+    "23": {
+        "question": "new() kullanarak bir String oluşturmak ile bir literalle oluşturmak arasındaki fark nedir?",
+        "answer": "Eğer new() kullanarak bir String oluşturursak, o zaman bu değerin heap belleğinde zaten var olması durumunda bile yeni bir nesne oluşturulur. Eğer bir String'i String literali kullanarak oluşturursak ve bu değer string havuzunda zaten varsa, o zaman bu String değişkeni de o değeri işaret eder ve string havuzunda yeni bir String oluşturulmaz."
+    },
+    "24": {
+        "question": "Collections framework nedir?",
+        "answer": "Collections framework, listeler, setler ve haritalar gibi yaygın veri yapılarını sağlayan bir dizi arabirim ve sınıftır."
+    },
+    "25": {
+        "question": "ArrayList ve LinkedList arasındaki fark nedir?",
+        "answer": "ArrayList, ihtiyaca göre büyüyebilen veya küçülebilen bir dinamik dizidir, LinkedList ise hızlı ekleme ve silme işlemlerine izin veren çift yönlü bir bağlı listedir."
+    },
+    "26": {
+        "question": "HashMap ve TreeMap arasındaki fark nedir?",
+        "answer": "HashMap, anahtar-değer çiftlerini depolayan bir hash tablosudur, TreeMap ise anahtar-değer çiftlerini sıralı düzende depolayan bir kırmızı-siyah ağaçtır."
+    },
+    "27": {
+        "question": "HashSet ve TreeSet arasındaki fark nedir?",
+        "answer": "HashSet, benzersiz elemanları sırasız bir şekilde depolayan bir kümedir, TreeSet ise benzersiz elemanları sıralı bir şekilde depolayan bir kümedir."
+    },
+    "28": {
+        "question": "Iterator ile ListIterator arasındaki fark nedir?",
+        "answer": "Iterator, bir koleksiyonu ileri yönde dolaşmak için kullanılırken, ListIterator, bir listeyi hem ileri hem de geri yönde dolaşmak için kullanılır."
+    },
+    "29": {
+        "question": "ArrayList ve LinkedList arasındaki fark nedir?",
+        "answer": "ArrayList, ihtiyaca göre büyüyebilen veya küçülebilen bir dinamik dizidir, LinkedList ise hızlı ekleme ve silme işlemlerine izin veren çift yönlü bir bağlı listedir. Bir ArrayList'te bir öğeye erişmek ortalama olarak O(1) iken, bir LinkedList'te bir öğeye erişmek ortalama olarak O(n)'dir."
+    },
+    "30": {
+        "question": "Comparable arabiriminin amacı nedir?",
+        "answer": "Comparable arabirimi, bir sınıf için doğal bir sıralama sağlamak için kullanılır. İçinde, mevcut nesneyi aynı sınıfın başka bir nesnesiyle karşılaştıran ve mevcut nesnenin diğer nesneden daha küçük, eşit veya daha büyük olup olmadığına bağlı olarak negatif bir tamsayı, sıfır veya pozitif bir tamsayı döndüren compareTo() adında tek bir yöntem bulunur."
+    },
+    "31": {
+        "question": "HashSet ve TreeSet arasındaki fark nedir?",
+        "answer": "Bir HashSet, benzersiz elemanların sırasız bir koleksiyonudur, bir TreeSet ise benzersiz elemanların sıralı bir koleksiyonudur. Bir HashSet, elemanlarını depolamak için bir hash tablosu kullanırken, bir TreeSet, dengeli bir ikili ağaç kullanır."
+    },
+    "32": {
+        "question": "java.util.concurrent paketinin amacı nedir?",
+        "answer": "java.util.concurrent paketi, iş parçacıklı programlamada, iş parçacığı havuzları, kilitler, atomik değişkenler ve iş parçacığı uyumlu koleksiyonlar da dahil olmak üzere sınıflar sağlar. Çoklu iş parçacıklı uygulamalarda performansı ve ölçeklenebilirliği artırmak için tasarlanmıştır."
+    },
+    "33": {
+        "question": "Bir istisna nedir?",
+        "answer": "Bir istisna, bir programın çalışması sırasında meydana gelen ve normal talimat akışını bozan bir olaydır."
+    },
+    "34": {
+        "question": "Bir istisna Java kodu boyunca nasıl yayılır?",
+        "answer": "Bir istisna meydana geldiğinde, eşleşen catch bloğunu bulmaya çalışır. Eşleşen catch bloğu bulunursa, o blok çalıştırılır. Aksi takdirde, istisna yöntem çağrı yığını boyunca yayılır ve eşleşen catch bloğu bulunana kadar çağırıcı yönteme gider. Bu durumda eşleşme bulunmazsa, program ana yöntemde sonlandırılır."
+    },
+    "35": {
+        "question": "Kontrol edilen ve kontrol edilmeyen istisnalar arasındaki fark nedir?",
+        "answer": "Kontrol edilen istisnalar derleme zamanında kontrol edilirken, kontrol edilmeyen istisnalar çalışma zamanında kontrol edilir."
+    },
+    "36": {
+        "question": "Java'da try-catch bloğunun kullanımı nedir?",
+        "answer": "try-catch bloğu, Java'da istisnaları işlemek için kullanılır."
+    },
+    "37": {
+        "question": "throw ve throws arasındaki fark nedir?",
+        "answer": "Throw, açıkça bir istisna fırlatmak için kullanılırken, throws, potansiyel olarak bir istisna fırlatabilecek bir yöntemi bildirmek için kullanılır."
+    },
+    "38": {
+        "question": "finally bloğunun kullanımı nedir?",
+        "answer": "finally bloğu, bir istisna fırlatılıp fırlatılmadığına bakılmaksızın bir kod bloğunu çalıştırmak için kullanılır."
+    },
+    "39": {
+        "question": "Tüm istisna sınıflarının temel sınıfı nedir?",
+        "answer": "Java'da, Java.lang.Throwable tüm istisna sınıflarının üst sınıfıdır ve tüm istisna sınıfları bu temel sınıftan türetilmiştir."
+    },
+    "40": {
+        "question": "Java Enterprise Edition (Java EE) nedir?",
+        "answer": "Java Enterprise Edition (Java EE), Java'da kurumsal uygulamalar geliştirmek için bir dizi spesifikasyon ve API'yi içeren bir platformdur. Servletler, JSP'ler, EJB'ler, JPA, JMS ve JNDI gibi çeşitli teknolojileri içerir."
+    },
+    "41": {
+        "question": "Servlet ve JSP arasındaki fark nedir?",
+        "answer": "Bir Servlet, HTTP isteklerini işleyen ve HTTP yanıtları üreten bir Java sınıfıdır. Bir JSP (JavaServer Pages), bir Servlet'e derlenen metin tabanlı bir belgedir. JSP'ler, sunum mantığını iş mantığından ayırma imkanı sağlar."
+    },
+    "42": {
+        "question": "Java Persistence API (JPA)’nın amacı nedir?",
+        "answer": "Java Persistence API (JPA), Java'da nesne ilişkisel eşlemesi (ORM) için bir spesifikasyondur. Java nesnelerini ilişkisel veritabanı tablolarına ve tersi şekilde eşlemek için bir dizi arayüz ve işaret sağlar."
+    },
+    "43": {
+        "question": "Stateful ve stateless oturum fasulyeleri arasındaki fark nedir?",
+        "answer": "Stateful oturum fasulyeleri, istemciyle bir konuşma durumunu korurken, stateless oturum fasulyeleri korumaz. Stateful oturum fasulyeleri, istemciyle uzun süreli konuşmalar için kullanılırken, stateless oturum fasulyeleri kısa ömürlü görevler için kullanılır."
+    },
+    "44": {
+        "question": "Thread nedir ve yaşam döngüsünde farklı aşamaları nelerdir?",
+        "answer": "Thread, bir programda diğer thread'lerle eş zamanlı olarak çalışabilen hafif bir süreçtir. Java thread yaşam döngüsü 5 aşamaya sahiptir: Yeni, Çalışabilir, Çalışan, Çalışabilir Değil (Engellenmiş/Bekleyen), Sonlanmış."
+    },
+    "45": {
+        "question": "İşlem ve thread arasındaki fark nedir?",
+        "answer": "Bir işlem, yürütülmekte olan bir program iken, bir thread bir işlemin alt kümesidir. Thread'ler belleği paylaşırken, işlemler yapmaz."
+    },
+    "46": {
+        "question": "Java'da farklı türdeki thread öncelikleri nelerdir?",
+        "answer": "Java'da toplamda 3 farklı öncelik türü bulunmaktadır. MIN_PRIORITY: Integer değeri 1. MAX_PRIORITY: Integer değeri 10.NORM_PRIORITY: Integer değeri 5"
+    },
+    "47": {
+        "question": "Java'da bağlam değiştirme nedir?",
+        "answer": "Java'da bağlam değiştirme, işletim sistemi zamanlayıcısının bir thread'den diğerine geçiş yapma işlemidir. Bağlam değiştirme sırasında, mevcut thread'in bağlamı, register değerleri ve program sayacı dahil olmak üzere kaydedilir ve bir sonraki thread'in bağlamı geri yüklenir."
+    },
+    "48": {
+        "question": "Kullanıcı thread'leri ve Daemon thread'leri arasındaki fark nedir?",
+        "answer": "Java'da, kullanıcı thread'lerinin belirli bir yaşam döngüsü vardır ve yaşamı diğer thread'lerden bağımsızdır ve kritik görevler için kullanılır. Daemon thread'leri, temelde kullanıcı thread'lerine hizmet ve destek sağlayan bir servis sağlayıcı olarak kabul edilir. JVM, daemon thread'lerin görevlerini tamamlamadan önce sonlanmasını beklemez, ancak kullanıcı thread'lerini bekler."
+    },
+    "49": {
+        "question": "Senkronizasyon nedir?",
+        "answer": "Senkronizasyon, yalnızca bir thread'in bir seferde paylaşılan bir kaynağa erişebilmesini sağlayan mekanizmadır."
+    },
+    "50": {
+        "question": "Bir dead lock nedir?",
+        "answer": "Bir dead lock, iki veya daha fazla thread'in birbirlerinin ihtiyaç duyduğu kaynakları serbest bırakmalarını beklerken bloklanmış olduğu bir durumdur."
+    },
+    "51": {
+        "question": "wait() ve notify() metodlarının kullanımı nedir?",
+        "answer": "Wait() ve notify() metodları, Java'da threadler arası iletişim için kullanılır."
+    },
+    "52": {
+        "question": "Java'da bir thread ve bir işlem arasındaki fark nedir?",
+        "answer": "Bir işlem, kendi bellek alanında çalışan bağımsız bir programdır, bir thread ise aynı işlemde diğer threadlerle eş zamanlı olarak çalışan bir alt kümedir."
+    },
+    "53": {
+        "question": "Java'da synchronized ve volatile arasındaki fark nedir?",
+        "answer": "Synchronized, yalnızca bir thread'in bir seferde bir paylaşılan kaynağa erişimini sağlamak için kullanılırken, volatile, paylaşılan bir değişkene yapılan değişikliklerin görünürlüğünü sağlamak için kullanılır ve tüm thread'lerin aynı değeri görmesini garanti eder."
+    },
+    "54": {
+        "question": "Java'da sleep() metodunun amacı nedir?",
+        "answer": "Sleep() metodu, bir thread'in belirli bir süre boyunca çalışmasını duraklatmak için kullanılır ve bu sırada diğer thread'lerin çalışmasına izin verir."
+    },
+    "55": {
+        "question": "Java'da wait() ve sleep() arasındaki fark nedir?",
+        "answer": "Wait(), bir thread'in çalışmasını duraklatmak ve bir nesnenin kilidini serbest bırakmak için kullanılan Object sınıfının bir metodudur, sleep() ise bir thread'in çalışmasını duraklatmak için kullanılan Thread sınıfının bir metodudur ve herhangi bir kilidi serbest bırakmadan çalışır."
+    },
+    "56": {
+        "question": "Java'da notify() ve notifyAll() arasındaki fark nedir?",
+        "answer": "Notify(), bir nesne üzerinde bekleyen tek bir thread'i uyandırmak için kullanılırken, notifyAll(), bir nesne üzerinde bekleyen tüm thread'leri uyandırmak için kullanılır."
+    }
+}

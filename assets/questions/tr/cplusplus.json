@@ -1,0 +1,202 @@
+{
+    "1": {
+        "question": "C++'ta nesneler nedir?",
+        "answer": "Bir sınıfın örneğine nesne denir. Bir sınıf, kullanıcı tanımlı bir veri türü olduğundan, bir nesne o veri türünün bir değişkeni olarak adlandırılabilir."
+    },
+    "2": {
+        "question": "C++'ta STL nedir?",
+        "answer": "STL (Standard Template Library), C++ kütüphanesidir. Vektörler, listeler, kuyruklar ve yığınlar gibi genel amaçlı programlama verileri ve işlevleri sağlayan güçlü bir C++ şablon sınıfları kümesidir. STL, bileşenlerinin büyük ölçüde parametreli olduğu yapıdadır.\n\nSTL, Algoritmalar, Kaplar ve İteratörler olmak üzere üç iyi yapılandırılmış bileşenden oluşur."
+    },
+    "3": {
+        "question": "C++'ta yıkıcılar nedir?",
+        "answer": "Bir yıkıcı, bir nesnenin belirli bir sınıfın bir örneği kapsam dışına çıktığında veya bir işaretçiye o sınıfın bir nesnesi için kullanılan delete ifadesi kullanıldığında çağrılan bir sınıf üye işlevidir. Bir yıkıcı, sınıf adının aynı adını taşır, ancak bir tilde (~) ile başlar. Herhangi bir değeri döndüremez veya herhangi bir parametreyi kabul edemez."
+    },
+    "4": {
+        "question": "C++'ta yıkıcıların kullanımı nedir?",
+        "answer": "Yıkıcılar, bir sınıf nesnesi ve üyeleri silindiğinde bellek serbest bırakma ve diğer temizlik işlemleri için kullanılır."
+    },
+    "5": {
+        "question": "C++'ta Şablonlar nedir?",
+        "answer": "C++ şablonu, genel bir sınıf veya yöntem oluşturmak için bir plana dönüşür. Veri türlerini parametre olarak göndermek için kullanılır. Şablonları birden çok veri türüyle çalışabilen tek bir işlev veya sınıf oluşturmak için kullanabiliriz.\n\nC++'ta iki tür Şablon bulunmaktadır:\n\n* Fonksiyon şablonları\n* Sınıf şablonları"
+    },
+    "6": {
+        "question": "Eşit (==) ve atama (=) operatörleri arasındaki fark nedir?",
+        "answer": "Eşit veya (==) operatörü, iki değerin özdeş olup olmadığını belirler. Değerler eşitse, true döndürür. Eşit değillerse false döndürür. Buna karşılık, atama veya (=) operatörünü kullanarak veriyi sağ taraftan değişkene atarız."
+    },
+    "7": {
+        "question": "Neden statik üye değişkenlerini kullanırız?",
+        "answer": "Bir statik üye yöntemi, sınıfın hiçbir nesnesi olmasa bile çağrılabilir. Başlıca olarak, bir sınıftaki tüm nesnelerle paylaşılan bilgileri depolamak için kullanılır."
+    },
+    "8": {
+        "question": "C++'ta isim alanının kullanımı nedir?",
+        "answer": "Bunlar kodları mantıksal olarak gruplamak ve kodumuzda birden fazla kütüphane bulunduğunda oluşabilecek isim çakışmalarını önlemek için kullanılır. İsim alanı kapsamında, tüm tanımlayıcılar birbirlerine nitelik gerekmeden erişilebilir."
+    },
+    "9": {
+        "question": "C++'ta operatör aşırı yükleme nedir?",
+        "answer": "C++'ta çoğu operatör, operatör aşırı yükleme kullanılarak yeniden tanımlanabilir veya aşırı yüklenebilir. Bu, operatörlerin kullanıcı tercihine göre farklı anlamlarla sağlanabileceği anlamına gelir. Bu işlevsellik, operatör aşırı yükleme olarak bilinir."
+    },
+    "10": {
+        "question": "C++'ta referans ve işaretçi arasındaki fark nedir?",
+        "answer": "* Referans *\n\n1. Bir referans, zaten var olan bir değişken için bir takma adıdır.\n2. Referans değişkeni, var olan değişkenle aynı bellek adresini paylaşır.\n3. Tanımlama sırasında bir değerle başlatmak gerekir.\n4. Bir null değeri atanamaz.\n\n* İşaretçi *\n\n1. Bir işaretçi, başka bir değişkenin bellek adresini tutan bir değişkendir.\n2. İşaretçinin kendi bellek adresi vardır.\n3. İşaretçi değişkeni başlatılmadan bildirilebilir.\n4. Bir null değeri atanabilir."
+    },
+    "11": {
+        "question": "C++'ta çağrıya değer ve çağrıya referans arasındaki fark nedir?",
+        "answer": "Çağrıya değer: Çağrıya değerle, parametrenin kopyasını işlevlere göndeririz. Bu kopyalanan değerlere yeni bir bellek adresi verilir ve bu değerler üzerinde yapılan herhangi bir değişiklik, ana kodda kullanılan değişkene herhangi bir etki yapmaz.\n\nÇağrıya referans: Burada, değişkenin adresinin bir referansını veririz ve işlevi çağırmak için kullanılan gerçek argümanı bulmak için bu adresi kullanır. Parametrelerde yapılan değişiklikler dolayısıyla, aktarım argümanı üzerinde bir etkiye sahiptir."
+    },
+    "12": {
+        "question": "C++'ta arkadaş işlev nedir?",
+        "answer": "C++'ta, bir arkadaş işlevi, bir sınıfın özel, korumalı ve genel üyelerine erişebilen bir işlevdir. Arkadaş işlev, sınıfın içinde friend anahtar kelimesini kullanarak bildirilebilir."
+    },
+    "13": {
+        "question": "C++'ta Sanal işlev nedir?",
+        "answer": "C++'ta sanal bir işlev, türetilmiş sınıflarda çok biçimlilik elde etmek için yeniden tanımlamak istediğimiz bir temel sınıfın üye işlevidir. Bir sanal işlev, temel sınıfta virtual anahtar kelimesi kullanılarak bildirilebilir."
+    },
+    "14": {
+        "question": "C++'ta OOPS kavramı nedir ve neden ihtiyacımız var?",
+        "answer": "Nesne Yönelimli Programlama (OOP), miras, kapsülleme, çok biçimlilik ve benzeri birçok ilkeyi içeren bir programlama paradigmasıdır. Önceki programlama dillerinde, C gibi, prosedürel yönelimli programlama kullandık. Bu yaklaşım etkili değildi çünkü bazı sınırlamaları vardı, örneğin, kodun program içinde yeniden kullanılamaması. Bu nedenle, OOPS bize kod kullanılabilirliği ve veri gizleme gibi işlevsellikler sağlar."
+    },
+    "15": {
+        "question": "C++'ta sınıf nasıl veri gizler?",
+        "answer": "C++'ta sınıf, üç erişim belirleyicisi kullanarak veri üyelerini ve işlevlerini bölebilir: özel (private), korumalı (protected) ve genel (public). Burada, özel ve korumalı üyeler dış dünyadan gizlenir ve böylece yalnızca ilgili bilgi kullanıcıya açıklanır."
+    },
+    "16": {
+        "question": "C++'ta miras nedir?",
+        "answer": "Miras, mevcut sınıfları değiştirmeden ve bunları genişleterek önceden var olan sınıfları yeniden kullanma yöntemidir. Mevcut sınıfa temel sınıf veya üst sınıf, özelliklerini devralan yeni sınıfa ise türetilmiş sınıf denir."
+    },
+    "17": {
+        "question": "C++'ta neden yapıcıları kullanırız?",
+        "answer": "C++'ta, yapıcılar aynı isimdeki özel üye işlevlerdir. Bir nesnenin veri üyelerine değerler atamak için kullanılabilir. Bir sınıfın herhangi bir örneği oluşturulduğunda, otomatik olarak yürütülür."
+    },
+    "18": {
+        "question": "C++'ta kopya yapıcı ne anlama gelir?",
+        "answer": "C++'ta, bir kopya yapıcı, daha önce oluşturulan aynı sınıfın bir nesnesiyle başlatılarak bir sınıf örneği oluşturan aşırı yüklenmiş bir yapıcıdır."
+    },
+    "19": {
+        "question": "C++'ta Kapsülleme nedir ve nasıl elde edilir?",
+        "answer": "Kapsülleme, veri üyelerini ve üye işlevlerini birleştirerek ve bunları hassas verileri kullanıcılardan gizlemek için tek bir sınıf içine paketleyerek gerçekleştirilen bir süreçtir. Doğrudan veri erişimini önlemeye yardımcı olur. Kapsülleme, tüm veri üyelerini ve işlevleri özel yaparak elde edilebilir. Ve bunlara erişmek için get ve set işlevleri oluşturmak."
+    },
+    "20": {
+        "question": "C++'ta sanal yıkıcılar nedir?",
+        "answer": "C++'ta, temel sınıf, türetilmiş sınıftan da nesnenin yok edilmesini sağlamak için sanal bir yıkıcı kullanır. Yapıcıdan önce, tilde (~) operatörü ve sanal anahtar kelimesi kullanılarak bir sanal yıkıcı bildirilir."
+    },
+    "21": {
+        "question": "C++'ta içi boş bir işlev nedir?",
+        "answer": "Bir işlevi C++'ta içi boş olarak bildirebiliriz. Burada işlev, derleme zamanında işlev çağrısının adresine kopyalanır. Bu, programın daha hızlı çalışmasına yardımcı olabilir."
+    },
+    "22": {
+        "question": "C++'ta bir bölüm hatası ne anlama gelir?",
+        "answer": "Bir bölüm hatası, programınızın erişmesine izin verilmeyen bir belleğe erişmeye çalıştığında oluşur. Başka bir deyişle, programınız işletim sistemi tarafından belirlenen sınırları aşan belleğe erişmeye çalıştığında."
+    },
+    "23": {
+        "question": "C++'ta bir sınıfın özel üyelerine nasıl erişilir?",
+        "answer": "Sınıfın özel üyelerine sınıf dışından herhangi bir nesne veya yöntem tarafından erişilemez. Yalnızca sınıf içindeki işlevler veya arkadaş işlevler bunlara erişebilir. Ancak sınıf dışında, özel veri üyelerine erişmek için işaretçiler kullanılabilir."
+    },
+    "24": {
+        "question": "Global ve yerel değişkenler arasındaki fark nedir?",
+        "answer": "Genel değişkenler, bir oturum kimliği gibi genellikle sabit olan veriler veya kod içinde birkaç işlev tarafından kullanılması gereken veriler için faydalıdır. Öte yandan, bir yerel değişkenin sınırlı bir kapsamı vardır. Yalnızca bildirildiği blok içinde mevcuttur. Blok bittiğinde, değişken yok edilir ve değerleri kaybolur."
+    },
+    "25": {
+        "question": "C++'ta yapı ve sınıf arasındaki fark nedir?",
+        "answer": "* Yapı *\n\n1. Bir yapıdaki veri üyeleri varsayılan olarak geneldir.\n2. Yapılar, veri gizleme yeteneğine sahip değildir.\n3. Yapılar yalnızca veri üyelerini içerebilir.\nNot: Son sürümlerde, veri işlevlerini de içerebiliriz.\n4. Yapılar yığında depolanır\n\n* Sınıf *\n\n1. Varsayılan olarak, bir sınıfın veri üyeleri özeldir.\n2. Sınıfların veri gizleme yeteneği vardır.\n3. Sınıflar, veri üyeleri yanı sıra işlevleri içerebilir.\n4. Sınıflar için bellek yığında ayrılır"
+    },
+    "26": {
+        "question": "C++'ta bir taşma hatası nedir?",
+        "answer": "Bir taşma hatası, bir kodun, işleyemeyeceği bir sayı, değer veya değişkene verildiğinde oluşur. Tamsayılar veya diğer rakamlarla çalışmak yaygın bir programlama hatasıdır."
+    },
+    "27": {
+        "question": "Çoklu miras nedir? Onunla hangi sorunlar ortaya çıkabilir?",
+        "answer": "Bir çocuk sınıfı, birden fazla üst sınıftan özellikler ve işlevsellikler miras aldığında, bu tür mirasa çoklu miras denir.\nBir fonksiyonun adı birden fazla üst sınıfta bulunduğunda ve çocuk sınıfı o fonksiyonu çağırdığında. Burada, derleyici hangi üye işlevini çağıracağı konusunda karışık hale gelir. Bu sorun, çoklu miras kullanıldığında ortaya çıkar."
+    },
+    "28": {
+        "question": "C++'ta çok iş parçacıklılık tam olarak nedir?",
+        "answer": "Çok görevlilik, bilgisayarınızın aynı anda iki veya daha fazla programı çalıştırma yeteneği anlamına gelir. Çok iş parçacıklılık ise daha sofistike bir çok görevliliktir.\n\nÇok iş parçacıklı bir program, aynı anda çalışabilen iki veya daha fazla bileşenden oluşur. İş parçacığı, programın bileşenlerinden biridir ve her iş parçacığı kendi yürütme yolunu belirler."
+    },
+    "29": {
+        "question": "Sanal işlevlerle saf sanal işlevler arasındaki fark nedir?",
+        "answer": "Sanal İşlev: Bir temel sınıfın bir türetilmiş sınıfta değiştirilebilen bir üye işlevi, sanal bir işlev olarak bilinir. Anahtar kelime olan virtual kullanılarak bildirilir.\n\nSaf Sanal İşlev: Saf sanal bir işlevin uygulaması yoktur ve değeri 0 olarak ayarlanarak tanımlanır. Vücuda sahip değil. Tek rolü, işlevin boş ve saf olacağını derleyiciye bildirmektir."
+    },
+    "30": {
+        "question": "C++'ta bellek nasıl ayrılır ve geri alınır?",
+        "answer": "Bellek, C++'ta new operatörünü kullanarak ayrılır ve bellek deletes operatörü kullanılarak geri alınır.\nint *nums = new int[ 10 ];  // 10 tamsayı depolamak için bellek ayırır\ndelete [ ] nums;  // nums tarafından alınan belleği geri alır"
+    },
+    "31": {
+        "question": "C++'ta işlevler nasıl sınıflandırılır?",
+        "answer": "C++'ta işlevler şu şekilde sınıflandırılır:\n\n* Dönüş türü\n* İşlev Adı\n* Parametreler\n* İşlev gövdesi"
+    },
+    "32": {
+        "question": "Kapsam çözünürlük operatörü nedir?",
+        "answer": ":: (kapsam çözünürlüğü) operatörü gizlenmiş adları niteler, böylece kullanılabilir hale gelir. Bir blokta veya sınıfta aynı adın açık bir bildirimi bir ad alanı kapsamını veya genel kapsam adını karartırsa, tekil kapsam operatörünü kullanabilirsiniz."
+    },
+    "33": {
+        "question": "Operatör aşırı yükleme ile işlev aşırı yükleme arasındaki fark nedir?",
+        "answer": "Operatör aşırı yükleme: Bir operatörün standart anlamını yeniden tanımlayarak, bir sınıf örneğine uygulandığında yeni bir anlam alabilen yeteneği olarak tanımlanır.\nİşlev aşırı yükleme: Bir işlevin birden fazla versiyonu olabilir. İşlevin imzası değişir ve her dönemde farklı bir parametre kümesine sahiptir."
+    },
+    "34": {
+        "question": "Dizi ile liste arasındaki fark nedir?",
+        "answer": "* Bir liste heterojen öğelerden oluşurken, bir dizi homojen bileşenlerden oluşur.\n* Bir dizide bellek tahsisi statik ve sürekli iken, bir listede bellek tahsisi dinamik ve öngörülemezdir.\n* Dizi kullanıcıları, bir sonraki bellek tahsisini takip etmek zorunda değildir, listenin kullanıcıları ise bir sonraki bellek tahsisini tutmak zorundadır."
+    },
+    "35": {
+        "question": "Soyut bir sınıf nedir ve ne zaman kullanılır?",
+        "answer": "Soyut bir sınıf, oluşturulabilecek bir nesnesi olmayan bir sınıftır. Bu tür bir sınıf, türetilmiş sınıflar için bir ebeveyn olarak var olur. Bir sınıfa saf sanal bir işlev ekleyerek, onu soyut hale getirebiliriz."
+    },
+    "36": {
+        "question": "C++'ta istisna işleme nedir?",
+        "answer": "C++'ta çalışma zamanı hatalarını ele alma pratiğine istisna işleme denir. İstisnaları ele alıyoruz, böylece uygulamanın normal akışı, çalışma zamanı sorunları meydana geldiğinde bile korunabilir. Bir istisna, C++'ta bir çalışma zamanı olayı veya nesnesidir. Tüm istisnaların türetildiği std::exception sınıfı bulunur."
+    },
+    "37": {
+        "question": "Bir DLL'den bir işlevi dışa aktarmanın yöntemleri nelerdir?",
+        "answer": "İki yaklaşım vardır:\n\n* DLL'deki tür kitabını kullanarak.\n* İşlevin bir referansını almak için DLL örneğini kullanarak."
+    },
+    "38": {
+        "question": "Değişkenlerin Yerel ve Küresel Kapsamını tanımlayın.",
+        "answer": "Küresel değişkenler, nispeten sabit veriler veya betiğin birden çok işlevi tarafından erişilmesi gereken veriler için yararlıdır, örneğin bir oturum kimliği gibi. Öte yandan, yerel bir değişkenin sınırlı bir kapsamı vardır: sadece tanımlandığı blok içinde var olur. Değişken, o blok sona erdiğinde yok edilir ve değerleri kaybolur."
+    },
+    "39": {
+        "question": "C++ 'da polimorfizm nedir?",
+        "answer": "Polimorfizm, birkaç biçimin varlığı olarak tanımlanır. Fonksiyonu büyük ölçüde duruma bağlıdır. Birbiriyle miras yoluyla bağlı olan birkaç sınıfımız varken, bu olur. Araba adında bir temel sınıfı düşünün, car brand () adında bir yöntemi var. Mercedes, BMW ve Audi, türetilmiş araba sınıflarının örnekleridir ve her birinin kendi arabası vardır.\n\nPolimorfizmin iki türü vardır,\n\n* Derleme Zamanı Polimorfizmi.\n* Çalışma Zamanı Polimorfizmi."
+    },
+    "40": {
+        "question": "Veri bağlama ve Soyutlama nedir?",
+        "answer": "Veri Bağlama: Veri bağlama, uygulamanın kullanıcı arayüzü ile gösterdiği bilgi arasında bir bağlantı kurmanın yöntemidir. Bağlama doğru parametrelere sahipse ve bilgi uygun bildirimi sağlarsa, verinin değeri değiştiğinde bağlı olan bileşenler hemen değişime uyum sağlar.\n\nVeri Soyutlama: Veri soyutlama, bir bütünün büyük bir miktarını basit bir temsile indirgeme sürecidir. Soyutlama, bir şeyi, özellikleri ortadan kaldırarak veya çıkararak basit özellikler kümesine indirgeyen bir süreçtir."
+    },
+    "41": {
+        "question": "C++ 'da flush ne anlama gelir?",
+        "answer": "std::flush, akış tamponunu kontrol edilen çıkış dizisiyle senkronize eder."
+    },
+    "42": {
+        "question": "C++ 'da bir sınıf nedir?",
+        "answer": "C dili bir nesne tabanlı bir programlama dili olmadığı için, C++ 'ın OOPs'i tanıtma konusunda sürekli bir girişimidir. Sınıf, bir veri türünün şablonunu tanımlayan bir kullanıcı tanımlı veri türüdür. Örneğin,"
+    },
+    "43": {
+        "question": "C++ 'da vektör nedir?",
+        "answer": "Elemanları depolamak için bir dizi konteyner, bir vektör C++ 'ın bir şablon sınıfıdır. Vektörler, değişken veri öğelerini yönetirken kullanılır. Vektör oluşturmanın sözdizimi.\n\nvector <tip> değişken (eleman sayısı)\n\nÖrneğin:\n\nvector <int> odalar (9);"
+    },
+    "44": {
+        "question": "C++ 'da karakter sabitleri nelerdir?",
+        "answer": "Karakter sabiti, bir programın yazıldığı karakter kümesinin bir üyesidir ve tek tırnak işaretleri ('') ile çevrilidir."
+    },
+    "45": {
+        "question": "C++ 'da containership nedir?",
+        "answer": "C++ 'da konteynerlık, bir sınıfın nesnesinin başka bir sınıfın içine gömülü olduğu bir ilişkidir. Nesneyi içeren sınıfa konteyner sınıfı denir ve nesnesi saklanan sınıfa saklanmış sınıf denir."
+    },
+    "46": {
+        "question": "Void() dönüş türü ne zaman kullanılır?",
+        "answer": "void anahtar kelimesi, bir işlevin bir değer döndürmediğini belirttiğinde kullanılır. Bir işlevin parametre listesi olarak kullanıldığında, void, işlevin hiçbir parametre almadığını belirtir. Değer Döndürmeyen işlevler, void işlevleri olarak da bilinir. Bunlar, geriye bir şey döndürmek için tasarlanmadıkları için 'void' olarak adlandırılırlar. Doğru, ancak sadece kısmen. void işlevlerinden değer döndüremeyiz, ancak kesinlikle bir şey döndürebiliriz. void işlevlerin dönüş türü olmamasına rağmen, kesinlikle bir şey döndürebilirler."
+    },
+    "47": {
+        "question": "Anahtar kelime 'Auto' 'nun işlevi nedir?",
+        "answer": "Auto anahtar kelimesi, başvuru sahiplerine, fonksiyon göstericilerine, üyelere atıfta bulunan fonksiyonlar, vb. şablonları içeren başlatma ifadesi gibi karmaşık bir türle bir değişkeni basit bir şekilde bildirmek için kullanılabilir. Tür çıkarım yetenekleri ile, derleyicinin zaten bildiği şeyleri yazmaktan daha az zaman harcayabiliriz. Tüm türler sadece derleyici aşamasında sonuçlandırıldığından, derleme süresi biraz artar ancak programın çalışma zamanını etkilemez."
+    },
+    "48": {
+        "question": "Void işaretçiler nedir?",
+        "answer": "Adından da anlaşılacağı gibi, void işaretçiler herhangi bir şeyle veya herhangi bir veri türüyle ilişkilendirilmemiş olan işaretçilerdir. Bununla birlikte, bir void işaretçisi herhangi bir türün adres değerini tutabilir ve bir veri türünden başka bir veri türüne dönüştürülebilir."
+    },
+    "49": {
+        "question": "Bir sanal işlevi bir kurucudan çağırabilir miyiz?",
+        "answer": "Evet, bir kurucudan bir sanal işlevi çağırabiliriz. Ancak, bu işlem bir geçersizleme istisnası oluşturabilir."
+    },
+    "50": {
+        "question": "Anahtar kelime 'Volatile' 'nin temel kullanımı nedir?",
+        "answer": "Adından da anlaşılacağı gibi, şeyler aniden ve beklenmedik bir şekilde değişebilir; Bu nedenle, değerin her an değişebileceğini derleyiciye bildirmek için kullanılır. Ayrıca, volatile anahtar kelimesi derleyicinin kod üzerinde optimize yapmasını engeller. Bellek eşlemeli donanımla, sinyal işleyicileriyle ve makine kodu talimatlarıyla arayüz oluşturulurken kullanılması amaçlanmıştır."
+    }
+}

@@ -1,0 +1,270 @@
+{
+    "1": {
+        "question": "React nedir?",
+        "answer": "React, 2011 yılında Facebook tarafından geliştirilen deklaratif, verimli, esnek açık kaynaklı bir ön uç JavaScript kütüphanesidir. Tek sayfa uygulamaları için özellikle yeniden kullanılabilir UI bileşenleri oluşturmak için bileşen tabanlı yaklaşımı takip eder. Web ve mobil uygulamaların etkileşimli görünüm katmanını geliştirmek için kullanılır. Jordan Walke tarafından oluşturulmuştur, Facebook'ta bir yazılım mühendisi. İlk olarak 2011'de Facebook'un Haber Beslemesi bölümünde dağıtıldı ve daha sonra WhatsApp ve Instagram gibi ürünlerinde kullanıldı."
+    },
+    "2": {
+        "question": "React'in özellikleri nelerdir?",
+        "answer": "React çerçevesi, web geliştiriciler arasında en iyi çerçeve olarak hızla popülerlik kazanıyor. React'in başlıca özellikleri şunlardır:\n\n * JSX\nBileşenler\n\n * Tek Yönlü Veri Bağlama\n\n * Sanal DOM\n\n * Basitlik\n\n * Performans"
+    },
+    "3": {
+        "question": "React kullanmanın en önemli avantajları nelerdir?",
+        "answer": "React kullanmanın en önemli avantajlarından bazıları şunlardır:\n\n * React öğrenmesi ve kullanması kolaydır *\n\nReact, iyi bir belge, öğretici ve eğitim kaynaklarına iyi erişim sağlar. JavaScript geçmişinden React'e geçmek ve React'i anlayarak ve kullanarak web uygulamaları oluşturmaya başlamak herhangi bir geliştirici için kolaydır. JavaScript hakkında biraz bilgiye sahip olan herkes, React'i kullanarak web uygulamaları oluşturmaya başlayabilir.\n\n * React MVC mimarisini izler. *\n\nReact, MVC (Model-View-Controller) mimari modelinde V (görünüm kısmı) olarak yer alır ve 'JavaScript çerçevelerinden biri' olarak adlandırılır. Tam özellikli değil, ancak daha iyi bir şekilde görevi gerçekleştiren açık kaynaklı JavaScript Kullanıcı Arayüzü (UI) kütüphanesinin birçok avantajına sahiptir.\n\n * React, verimliliği artırmak için Sanal DOM kullanır. * React, görünümü render etmek için sanal DOM kullanır. Sanal DOM, gerçek DOM'un sanal bir temsilidir. Bir React uygulamasında veri değiştikçe, yeni bir sanal DOM oluşturulur. Sanal DOM oluşturmak, UI'nin tarayıcı içinde render edilmesinden çok daha hızlıdır. Bu nedenle, sanal DOM kullanımıyla uygulamanın verimliliği artar. Bu yüzden React harika bir verimlilik sağlar.\n\n * Dinamik web uygulamaları oluşturmak kolaydır. *\n\nReact'te, dinamik bir web uygulaması oluşturmak çok daha kolaydır. Daha az kod gerektirir ve daha fazla işlevsellik sağlar. JSX (JavaScript Uzantısı) kullanır, bu da HTML alıntılarını ve HTML etiket sözdizimini belirli alt bileşenleri render etmek için kullanır.\n\n * React, SEO dostudur. *\n\nReact, geliştiricilere kolayca gezinilebilen etkileşimli bir kullanıcı arayüzü geliştirme olanağı sağlar. Ayrıca, uygulamanızın SEO'sunu artırmaya yardımcı olan sunucu tarafı işleme izni de verir.\n\n * React, yeniden kullanılabilir bileşenlere izin verir. *\n\nReact web uygulamaları, her bir bileşenin kendi mantığını ve kontrollerini sağladığı birden çok bileşenden oluşur. Bu bileşenler, herhangi bir yerde ihtiyacınız olduğunda yeniden kullanılabilecek küçük, yeniden kullanılabilir bir HTML kod parçası sağlar. Kodun yeniden kullanılabilirliği, geliştiricilerin uygulamalarını geliştirmeyi ve bakımını yapmayı daha kolay hale getirir. Ayrıca bileşenlerin iç içe geçmesini kolaylaştırır ve geliştiricilere basit yapı bloklarıyla karmaşık uygulamalar oluşturma imkanı tanır. Bileşenlerin yeniden kullanılabilirliği, gelişimin hızını da artırır.\n\n * Kullanışlı araçların desteği *\n\nReact, görevleri anlaşılır ve kolaylaştıracak birçok kullanışlı araç sağlar. Bu araçları Chrome ve Firefox geliştirme eklentisinde kullanabiliriz, bu sayede sanal DOM'daki React bileşen hiyerarşilerini inceleyebiliriz. Ayrıca, belirli bileşenleri seçmemize ve mevcut özelliklerini ve durumlarını incelememize ve düzenlememize izin verir.\n\n * React'in zengin bir kütüphane seti vardır. * \n\nReact, geniş bir kütüphane ekosistemine sahiptir ve size gereksiniminize göre en iyi uygulamayı geliştirmek için araçları, kütüphaneleri ve mimarileri seçme özgürlüğü sunar.\n\n * Kodların test edilmesi için kapsam *\n\nReact web uygulamaları test etmek kolaydır. Bu uygulamalar, geliştiricinin kodlarını yerel araçlarla test etmesine ve hata ayıklamasına olanak tanır."
+    },
+    "4": {
+        "question": "React'in en büyük sınırlamaları nelerdir?",
+        "answer": "React'in en büyük sınırlamaları şunlardır:\n\n * React sadece bir kütüphanedir. Tam bir çerçeve değildir.\n\n * Anlaması zaman alabilecek büyük bir kütüphaneye sahiptir.\n\n * Yeni programcılar için anlamak ve kodlamak zor olabilir.\n\n * React, iç içe geçmiş şablonlama ve JSX kullanır, bu da zor olabilir ve engel olabilir. Ayrıca kodlamayı karmaşıklaştırır."
+    },
+    "5": {
+        "question": "JSX nedir?",
+        "answer": "JSX, JavaScript XML'nin kısaltmasıdır. JavaScript kodunu HTML'ye benzer bir şekilde yazmanıza izin veren bir React uzantısıdır. HTML dosyasını anlamayı kolaylaştırır. JSX dosyası, React uygulamasını sağlamlaştırır ve performansını artırır. JSX, JavaScript kodunu yazdığınız aynı dosyada XML benzeri sözdizimini yazmanıza ve ardından bu ifadelerin gerçek JavaScript koduna dönüştürülmesini sağlayan önişlemciler (örneğin, Babel gibi) ile ifadelerin gerçekleştirilmesini sağlar. XML/HTML gibi, JSX etiketlerinin bir etiket adı, özellikleri ve çocukları vardır."
+    },
+    "6": {
+        "question": "Neden tarayıcılar JSX'i okuyamaz?",
+        "answer": "Tarayıcılar JSX'i doğrudan okuyamaz çünkü yalnızca JavaScript nesnelerini anlayabilirler ve JSX düzenli bir JavaScript nesnesi değildir. Bu nedenle, JSX dosyasını Babel gibi önişlemciler kullanarak bir JavaScript nesnesine dönüştürmemiz ve ardından tarayıcıya iletmemiz gerekir."
+    },
+    "7": {
+        "question": "JSX'i neden kullanırız?",
+        "answer": "* Normal JavaScript'ten daha hızlıdır çünkü kodu JavaScript'e çevirirken optimizasyon yapar.\n\n * Ayrı teknolojileri ayrı dosyalara yerleştirerek yerine, React, her ikisini de içeren bileşenler kullanır.\n\n * Tip güvenlidir ve hataların çoğu derleme zamanında bulunabilir.\n\n * Şablon oluşturmayı kolaylaştırır."
+    },
+    "8": {
+        "question": "Sanal DOM nedir?",
+        "answer": "Sanal DOM, gerçek DOM'un hafif bir JavaScript nesnesidir ve gerçek DOM'un bellekteki temsilidir. Render işlevinin çağrılması ve öğelerin ekranda görüntülenmesi arasındaki ara bir adımdır. Öğeleri, özelliklerini ve içeriğini nesneler ve özellikleri olarak listeleyen bir düğüm ağacına benzer. Render işlevi, React bileşenlerinin bir düğüm ağacını oluşturur ve ardından bu düğüm ağacını kullanıcı veya sistem tarafından yapılan çeşitli işlemlerle veri modelindeki mutasyonlara yanıt olarak günceller."
+    },
+    "9": {
+        "question": "Sanal DOM'un çalışma prensibi nedir?",
+        "answer": "Sanal DOM, üç adımda çalışır:\n\n1. React uygulamasında herhangi bir veri değiştiğinde, tüm UI Sanal DOM temsilinde yeniden oluşturulur.\n\n2. Şimdi, önceki DOM temsilinin ve yeni DOM'un farkı hesaplanır.\n3. Hesaplamalar tamamlandığında, gerçek DOM, değişen şeylerle sadece güncellenir."
+    },
+    "10": {
+        "question": "Gerçek DOM ile Sanal DOM arasındaki fark nedir?",
+        "answer": "Gerçek DOM, öğe güncellendiğinde yeni bir DOM oluşturur.\n\n * Gerçek DOM *\n\n 1.Gerçek DOM daha yavaş güncellenir.\n2.Gerçek DOM, HTML'yi doğrudan güncelleyebilir.\n3.Sanal DOM, öğe güncellendiğinde JSX'i günceller.\n4.Gerçek DOM'da, DOM manipülasyonu çok pahalıdır.\n5.Gerçek DOM'da çok fazla bellek israfı vardır.\n\n\n* Sanal DOM *\n\n1.Sanal DOM daha hızlı güncellenir.\n2.Sanal DOM, HTML'yi doğrudan güncelleyemez.\n3.Sanal DOM'da, DOM manipülasyonu çok kolaydır.\n4.Sanal DOM'da bellek israfı yoktur."
+    },
+    "11": {
+        "question": "React'te 'Her şey bir bileşendir' ifadesinden ne anlıyorsunuz?",
+        "answer": "React'te, bileşenler, React uygulamalarının yapı taşlarıdır. Bu bileşenler, tüm React uygulamasının UI'sini küçük, bağımsız ve yeniden kullanılabilir kod parçalarına böler. React, her bir bileşeni bağımsız olarak render eder ve uygulamanın geri kalanını etkilemez. Bu nedenle, React'te her şeyin bir bileşen olduğunu söyleyebiliriz."
+    },
+    "12": {
+        "question": "React'teki render() fonksiyonunun amacı nedir?",
+        "answer": "Her React bileşeninin render() fonksiyonuna sahip olması zorunludur. Render işlevi, bir bileşende görüntülemek istediğiniz HTML'yi döndürmek için kullanılır. Birden fazla HTML öğesinin görüntülenmesi gerekiyorsa, bunları tek bir kapsayıcı etiket (ana etiket) içine gruplandırmalısınız, örneğin <div>, <form>, <group> vb. Bu işlev, her çağrıldığında aynı sonucu döndürür.\n\n1.Her render() fonksiyonu bir dönüş ifadesi içerir.\n2.Dönüş ifadesi yalnızca bir ana HTML etiketine sahip olabilir."
+    },
+    "13": {
+        "question": "Props nedir?",
+        "answer": "Props, React'te 'Özellikler' için kısaltılmıştır. Bileşenlere salt okunur girdilerdir. Props, bir etiketin özellik değerlerini depolayan bir nesnedir ve HTML özniteliklerine benzer şekilde çalışır. Bu, uygulamanın her yerindeki bileşkenden çocuk bileşenlere veri aktarmanın bir yolunu sağlar.\n\nFonksiyon argümanlarına benzer ve bileşene, fonksiyonlara argümanlar geçirildiği gibi geçirilir.\n\nProps, değiştirilemez olduğundan bileşenin içinden props'ları değiştiremeyiz. Bileşenlerin içinde, this.props olarak mevcut olan ve render yöntemimizde dinamik verileri render etmek için kullanılan öznitelikler ekleyebiliriz."
+    },
+    "14": {
+        "question": "React'te State nedir?",
+        "answer": "Durum, bileşenin verileri ve bilgilerini tutan güncellenebilir bir yapıdır. Bileşenin ömrü boyunca kullanıcı eylemi veya sistem etkinliği yanıt olarak değiştirilebilir. React bileşeninin kalbi olan ve bileşenin davranışını ve nasıl render edileceğini belirleyen bir parçadır. Mümkün olduğunca basit tutulmalıdır."
+    },
+    "15": {
+        "question": "State ve Props arasındaki fark nedir?",
+        "answer": "* Props *\n\n1.Props salt okunurdur.\n2.Props değiştirilemez.\n3.Props, bir bileşkeden diğer bileşenlere veri aktarmanıza izin verir.\n4.Props, çocuk bileşen tarafından erişilebilir.\n5.Props, bileşenler arasında iletişim kurmak için kullanılır.\n6.Stateless bileşenlerde Props olabilir.\n7.Props, bileşenleri yeniden kullanılabilir hale getirir.\n8.Props, bileşeni render eden her şey tarafından dışsal ve kontrol edilir.\n\n * State * \n\n1.Durum değişiklikleri asenkron olabilir.\n2.Durum değiştirilebilir.\n3.Durum, bileşenler hakkında bilgi tutar.\n4.Durum, çocuk bileşenler tarafından erişilemez.\n5.Durumlar, bileşenle birlikte dinamik değişikliklerin render edilmesi için kullanılabilir.\n6.Stateless bileşenlerde State olamaz.\n7.Durum, bileşenleri yeniden kullanılabilir hale getirmez.\n8.Durum, içsel ve bileşen tarafından kontrol edilir."
+    },
+    "16": {
+        "question": "Bir bileşenin Durumu nasıl güncellenir?",
+        "answer": "Bir bileşenin Durumu, bu.setState() yöntemi kullanılarak güncellenebilir. Bu yöntem Durumu her zaman hemen değiştirmez. Bunun yerine, yalnızca orijinal Duruma değişiklikler ekler. Bu, etkinlik işleyicilerine ve sunucu yanıtlarına yanıt olarak kullanıcı arayüzünü (UI) güncellemek için kullanılan birincil yöntemdir."
+    },
+    "17": {
+        "question": "Durağansız ve duraklı bileşenleri nasıl ayırt edebilirsiniz?",
+        "answer": "* Durağansız Bileşen *\n\n1. Durağansız bileşenler durumu saklamaz veya yönetmez.\n2. Geçmiş, mevcut ve olası gelecek durum değişikliklerinin bilgisine sahip değildir.\n3. Ayrıca, işlevsel bir bileşen olarak da bilinir.\n4. Basit ve anlaşılması kolaydır.\n5. React'ın yaşam döngüsü yöntemleriyle çalışmaz.\n6. Durağansız bileşenler yeniden kullanılamaz.\n\n* Duraklı Bileşen * \n\n1. Duraklı bileşenler durumu saklayabilir veya yönetebilir.\n2. Geçmiş, mevcut ve olası gelecekteki durum değişikliklerinin bilgisine sahip olabilir.\n3. Ayrıca, bir sınıf bileşeni olarak da bilinir.\n4. Durağansız bileşene göre karmaşıktır.\n5. Tüm React yaşam döngüsü yöntemleriyle çalışabilir.\n6. Duraklı bileşenler yeniden kullanılabilir."
+    },
+    "18": {
+        "question": "React'ta ok işlevi nedir? Nasıl kullanılır?",
+        "answer": "Ok işlevi, ES6 standardının yeni bir özelliğidir. Ok işlevlerini kullanmanız gerekiyorsa, 'this' i herhangi bir etkinliğe bağlamak gerekli değildir. Burada, 'this' in kapsamı genel ve herhangi bir çağrılan işlevle sınırlı değildir. Bu nedenle, Ok İşlevini kullanıyorsanız, constructor içinde 'this'i bağlama ihtiyacı yoktur. Ayrıca 'yağlı ok' (=>) işlevleri olarak da adlandırılır."
+    },
+    "19": {
+        "question": "React'ta bir olay nedir?",
+        "answer": "Bir olay, bir kullanıcı eyleminin veya fare tıklaması, bir web sayfasının yüklenmesi, bir tuşa basma, pencere yeniden boyutlandırma vb. gibi bir sistem tarafından üretilen olayın sonucunda tetiklenen bir eylemdir. React'ta, olay işleme sistemi DOM öğelerindeki olayları işlemeyle çok benzerdir. React olay işleme sistemi, tarayıcının doğal olayının çapraz tarayıcı sargısı olarak bilinir.\n\nReact ile olayları işlerken bazı sözdizimsel farklılıklar vardır, bunlar:\n\n  * React olayları küçük harf yerine camelCase olarak adlandırılır.\n  * JSX ile, bir dize yerine bir işlev olay işleyicisi geçirilir."
+    },
+    "20": {
+        "question": "React'ta sentetik olaylar nedir?",
+        "answer": "Sentetik bir olay, tarayıcının doğal olayının etrafında bir çapraz tarayıcı sargısı olarak hareket eden bir nesnedir. Sentetik olay, farklı tarayıcıların doğal olaylarının davranışını bir API içinde birleştirir, stopPropagation() ve preventDefault() dahil."
+    },
+    "21": {
+        "question": "Kontrollü ve kontrolsüz bileşenler arasındaki fark nedir?",
+        "answer": "* Kontrollü *\n\n1. İç durumunu korumaz.\n2. Burada, veriler üst bileşen tarafından kontrol edilir.\n3. Mevcut değerini bir prop olarak kabul eder.\n4. Doğrulama kontrolü sağlar.\n5. Form öğeleri ve veri üzerinde daha iyi kontrol sağlar.\n\n * Kontrolsüz * \n\n1. İç durumunu korur.\n2. Burada, veriler DOM tarafından kontrol edilir.\n3. Geçerli değerleri için bir ref kullanır.\n4. Doğrulama kontrolü sağlamaz.\n5. Form öğeleri ve veri üzerinde sınırlı kontrol sağlar."
+    },
+    "22": {
+        "question": "React'te Listeleri açıklayın.",
+        "answer": "Listeler, verileri düzenli bir formatta göstermek için kullanılır. React'te, Listeleri JavaScript'te olduğu gibi oluşturabiliriz. Listelerin öğelerini map() fonksiyonu kullanarak gezinebiliriz."
+    },
+    "23": {
+        "question": "React'teki anahtarların önemi nedir?",
+        "answer": "Bir anahtar, benzersiz bir tanımlayıcıdır. React'te, Listelerden hangi öğelerin değiştiğini, güncellendiğini veya silindiğini tanımlamak için kullanılır. Anahtarlar, bileşenler dinamik olarak oluşturulduğunda veya kullanıcılar listeleri değiştirdiğinde faydalıdır. Ayrıca, hangi bileşenlerin yeniden render edilmesi gerektiğini belirlemeye yardımcı olur, tüm bileşen setini her zaman yeniden render etmek yerine sadece gerektiğinde yeniden render etmek. Uygulama performansını artırır."
+    },
+    "24": {
+        "question": "React'ta formlar nasıl oluşturulur?",
+        "answer": "Formlar, kullanıcıların uygulamayla etkileşimde bulunmalarına ve kullanıcılardan bilgi toplamalarına izin verir. Formlar, kullanıcı kimlik doğrulaması, kullanıcı ekleme, arama, filtreleme vb. gibi birçok görevi yerine getirebilir. Bir form, metin alanları, düğmeler, onay kutusu, radyo düğmesi vb. içerebilir.\n\nReact, bir form oluşturmak için durumlu, tepkisel bir yaklaşım sunar. React'teki formlar, HTML formlarına benzerdir. Ancak, bileşenin durum özelliği yalnızca setState() ile güncellenir ve bunların gönderimi bir JavaScript işlevi tarafından ele alınır. Bu işlev, kullanıcının bir forma girdiği verilere tam erişime sahiptir."
+    },
+    "25": {
+        "question": "React bileşeninin yaşam döngüsünün farklı aşamaları nelerdir?",
+        "answer": "React bileşeninin yaşam döngüsünün farklı aşamaları şunlardır:\n\nBaşlangıç ​​Aşaması: React bileşeninin DOM yolunda yolculuğuna başladığı doğuş aşamasıdır. Bu aşamada, bir bileşen varsayılan Props ve başlangıç ​​Durumunu içerir. Bu varsayılan özellikler bir bileşenin kurucusunda yapılır.\n\nMontaj Aşaması: Bu aşamada, bir bileşenin örneği oluşturulur ve DOM'a eklenir.\n\nGüncelleme Aşaması: Bu aşama, React yaşam döngüsünün bir sonraki aşamasıdır. Bu aşamada yeni Props alır ve Durumu değiştiririz. Bu aşama, yalnızca bir prop veya durum değişikliği olduğunda potansiyel olarak güncellenir ve yeniden render edilir. Bu aşamanın ana amacı, bileşenin en son sürümünü gösterdiğinden emin olmaktır. Bu aşama tekrar tekrar tekrar edilir.\n\nKaldırma Aşaması: Bu aşama, React yaşam döngüsünün final aşamasıdır, burada bileşen örneği yok edilir ve DOM'dan kaldırılır."
+    },
+    "26": {
+        "question": "React bileşenlerinin yaşam döngüsü yöntemlerini detaylı olarak açıklayınız.",
+        "answer": "Önemli React yaşam döngüsü yöntemleri şunlardır:\n\n  * getInitialState(): this.state'in varsayılan değerini belirtmek için kullanılır. Bileşen oluşturulmadan önce çalıştırılır.\n\n  * componentWillMount(): Bir bileşenin DOM'a işlenmeden önce çalıştırılır.\n\n  * componentDidMount(): Bileşenin render edildiği ve DOM'a yerleştirildiği zaman çalışır. Şimdi herhangi bir DOM sorgulama işlemi yapabilirsiniz.\n\n  * componentWillReceiveProps(): Bir bileşen, yeni props alındığında ve başka bir yeniden render çağrılmadan önce bu öğe tarafından çağrılır. Eğer prop değişikliklerine yanıt olarak Durumu güncellemek istiyorsanız, this.props ve nextProps'i karşılaştırarak bu.setState() yöntemini kullanarak Durum geçişini gerçekleştirmelisiniz.\n\n  * shouldComponentUpdate(): Bir bileşen, DOM'a herhangi bir değişiklik/yenileme yapmaya karar verdiğinde ve belirli koşullara göre true veya false değeri döndürür. Bu yöntem true döndürürse, bileşen güncellenir. Aksi takdirde, bileşen güncelleme işlemini atlar.\n\n  * componentWillUpdate(): Render işleminin gerçekleşmeden önce çağrılır. Burada, bileşen Durumunu bu.setState() yöntemini kullanarak değiştiremezsiniz. shouldComponentUpdate() false döndürürse çağrılmaz.\n\n  * componentDidUpdate(): Render işlemi hemen gerçekleşir gerçekleşmez çağrılır. Bu yöntemde, güncelleme gerçekleştikten sonra çalıştırmak istediğiniz herhangi bir kodu içerebilirsiniz.\n\n  * componentWillUnmount(): Bir bileşen kalıcı olarak yok edilmeden ve DOM'dan kaldırılmadan önce hemen çağrılır. Bellek alanlarını temizlemek için kullanılır, böylece zamanlayıcıları geçersiz kılar, etkinlik dinleyicilerini iptal eder, ağ isteklerini iptal eder veya DOM öğelerini temizler. Bir bileşen örneği kaldırıldığında, yeniden monte edemezsiniz."
+    },
+    "27": {
+        "question": "Saf Bileşenler nedir?",
+        "answer": "Saf bileşenler, React 15.3 sürümünde tanıtıldı. React.Component ve React.PureComponent, shouldComponentUpdate() React yaşam döngüsü yönteminde farklılık gösterir. Bu yöntem, bileşenin yeniden render edilip edilmeyeceğini bir boolean değeri (true veya false) döndürerek belirler. React.Component'te, shouldComponentUpdate() yöntemi varsayılan olarak true döndürür. Ancak React.PureComponent'te, durum veya özelliklerdeki değişiklikleri karşılaştırarak bileşenin yeniden render edilmesini sağlar. Saf bileşen, kodun basitliğini ve uygulamanın performansını artırır."
+    },
+    "28": {
+        "question": "Yüksek Sıralı Bileşenler(HOC) nedir?",
+        "answer": "React'te, Yüksek Sıralı Bileşen, bileşen mantığını yeniden kullanmak için gelişmiş bir tekniktir. Bu, bir bileşeni alan ve yeni bir bileşen döndüren bir işlevdir. Başka bir deyişle, başka bir işlevi bir argüman olarak alan bir işlevdir. Resmi web sitesine göre, bu, React'ın bileşenlerin kompozisyonel doğasından ortaya çıkan bir modeldir, ancak React API'sinin bir parçası değildir."
+    },
+    "29": {
+        "question": "HOC ile neler yapılabilir?",
+        "answer": "HOC ile birçok görev yapılabilir, bunlardan bazıları şunlardır:\n\n* Kod Tekrarlanabilirliği\n* Props manipülasyonu\n* Durum manipülasyonu\n* Render yönlendirmesi"
+    },
+    "30": {
+        "question": "Eleman ve Bileşen arasındaki fark nedir?",
+        "answer": "* Eleman *\n\n 1. Bir eleman, bileşen durumunu, DOM düğümünü ve istenen özelliklerini açıklayan düz bir JavaScript nesnesidir.\n 2. Sadece bileşen türü, özellikleri ve içindeki herhangi bir çocuk öğe hakkında bilgi içerir.\n 3. Değişmezdir.\n 4. Elemanlara herhangi bir yöntem uygulanamaz.\n\n * Bileşen * \n\n 1. Bileşen, React uygulamasının temel yapı taşıdır. Bir girişi kabul eden ve bir React elemanı döndüren bir sınıf veya işlevdir.\n 2. Durumu ve özellikleri içerebilir ve React yaşam döngüsü yöntemlerine erişimi vardır.\n 3. Değişkendir.\n 4. Bileşenlere yöntemler uygulanabilir."
+    },
+    "31": {
+        "question": "Bir bileşen adının neden büyük harfle başlaması gereklidir?",
+        "answer": "React'te, bileşen adlarının büyük harfle başlaması gereklidir. Bileşen adını küçük harfle başlatırsak, tanınmayan bir etiket hatası verir. Bu, JSX'te, küçük harfli etiket adlarının HTML etiketleri olarak kabul edilmesinden kaynaklanır."
+    },
+    "32": {
+        "question": "Fragmanlar nedir?",
+        "answer": "Fragmanlar, React 16.2 sürümünde tanıtıldı. React'te, Fragmanlar, bir bileşenin birden çok öğe döndürmesi için kullanılır. Bir DOM düğümüne ek bir düğüm eklemeksizin birden çok çocuğu gruplamaya olanak tanır."
+    },
+    "33": {
+        "question": "Fragmanların konteyner divlerden daha iyi olmasının nedeni nedir?",
+        "answer": "* Fragmanlar, ekstra bir DOM düğümü oluşturmadığı için daha hızlı ve daha az bellek tüketir.\n* Bazı CSS stillendirme işlemleri, CSS Izgarası ve Flexbox gibi özel üst-alt ilişkisine sahiptir ve ortaya <div> etiketleri ekler, bu da istenen düzeni korumayı zorlaştırır.\n* DOM Denetleyicisi daha az karmaşık hale gelir."
+    },
+    "34": {
+        "question": "React'ta props üzerinde doğrulama nasıl uygulanır?",
+        "answer": "Props doğrulaması, geliştiricilerin gelecekteki hataları ve sorunları önlemelerine yardımcı olan bir araçtır. Kodunuzu daha okunabilir hale getirir. React bileşenleri, geçirilen değerlerin veri türlerini doğrulamak için yardımcı olan PropTypes adlı özel bir özelliği kullanır, ancak bileşenleri propTypes ile tanımlamak zorunlu değildir.\n\nProps üzerinde doğrulama, React bileşeninde App.propTypes kullanılarak uygulanır. Geçersiz bir türle geçirilen bazı props'lar varsa, JavaScript konsolunda uyarılar alırsınız. Doğrulama kalıplarını belirttikten sonra, App.defaultProps'ı ayarlamalısınız."
+    },
+    "35": {
+        "question": "create-react-app nedir?",
+        "answer": "Create React App, Facebook tarafından React uygulamaları oluşturmak için tanıtılan bir araçtır. Tek sayfa React uygulamaları oluşturmanıza olanak tanır. create-react-app, Webpack veya Babel gibi zaman alıcı kurulum ve yapılandırma işlemlerinden sizi kurtaran önceden yapılandırılmıştır. Bir React projesini başlatmak için tek bir komut çalıştırmanız yeterlidir, aşağıdaki gibidir.\n\n$ npx create-react-app my-app \n\nBu komut, bir React uygulaması oluşturmak için gereken her şeyi içerir. Bunlardan bazıları aşağıda verilmiştir:\n* React, JSX, ES6 ve Flow sözdizimi desteği içerir.\n* Autoprefixed CSS içerir, bu nedenle -webkit- veya diğer önekler gerekmez.\n* Dahili kapsama raporu desteği olan hızlı, etkileşimli bir birim test çalıştırıcısı içerir.\n* Ortak hatalar hakkında uyarı veren canlı bir geliştirme sunucusu içerir.\n* JS, CSS ve resimleri üretim için paketlemek için bir yapı scripti içerir, hash'ler ve kaynak haritalarıyla."
+    },
+    "36": {
+        "question": "React'te bir bileşen nasıl oluşturulur?",
+        "answer": "React'te bir bileşen oluşturmanın iki olası yolu vardır:\n\nFonksiyon Bileşenleri: React'te bir bileşen oluşturmanın en basit yoludur. Bunlar, props nesnesini ilk parametre olarak alan ve React öğelerini döndüren saf JavaScript işlevleridir.\n\nSınıf Bileşenleri: Sınıf bileşenleri yöntemi size bir bileşeni tanımlamak için ES6 sınıfını kullanma imkanı sağlar."
+    },
+    "37": {
+        "question": "Bir fonksiyon bileşeni yerine bir sınıf bileşenini ne zaman tercih etmeliyiz?",
+        "answer": "Bir bileşenin duruma veya yaşam döngüsü yöntemlerine ihtiyacı varsa, sınıf bileşenini kullanmalıyız; aksi takdirde, fonksiyon bileşenini kullanın. Ancak, React 16.8'den sonra, Hooks'un eklenmesiyle, durum, yaşam döngüsü yöntemleri ve sadece sınıf bileşeninde mevcut olan diğer özellikleri doğrudan fonksiyon bileşeninizde kullanabilirsiniz."
+    },
+    "38": {
+        "question": "Bir web tarayıcısının JSX'i doğrudan okuması mümkün müdür?",
+        "answer": "Web tarayıcıları JSX'i doğrudan okuyamaz. Bunun nedeni, web tarayıcılarının yalnızca düzenli JS nesnelerini okumak üzere yapılandırılmış olmaları ve JSX'in düzenli bir JavaScript nesnesi olmamasıdır.\n\nBir web tarayıcısının bir JSX dosyasını okumasını istiyorsanız, dosyaları düzenli bir JavaScript nesnesine dönüştürmelisiniz. Bu amaçla, Babel kullanılır."
+    },
+    "39": {
+        "question": "React'te durumu ne anlıyorsunuz?",
+        "answer": "React'te, bir bileşenin durumu, bileşenin ömrü boyunca değişebilecek bazı bilgileri tutan bir nesnedir. Durumu mümkün olduğunca basit tutmaya ve durumlu bileşenlerin sayısını en aza indirmeye çalışmalısınız. Durum, props'a çok benzer, ancak özel ve tamamen bileşen tarafından kontrol edilir. yani, sahibi bileşen geçirmeye karar verene kadar hiçbir başka bileşen tarafından erişilemez."
+    },
+    "40": {
+        "question": "React'te props'ları ne anlıyorsunuz?",
+        "answer": "React'te, props bileşenlere girdilerdir. Bunlar, HTML etiketi özniteliklerine benzer bir adlandırma kuralı kullanılarak bileşenlerin oluşturulması sırasında iletilen tek değerler veya bir dizi değeri içeren nesnelerdir. Bunlar, bir üst bileşenden bir alt bileşene veri geçirmek için kullanılır.\n\nReact'teki props'un ana amacı, aşağıdaki bileşen işlevselliğini sağlamaktır:\n\n 1. Bileşeninize özel veri geçirme.\n 2. Durum değişikliklerini tetikleme.\n 3. bileşenin render() yöntemi içinde this.props.reactProp üzerinden kullanma.\n\nÖrneğin, aşağıdaki gibi bir özellikle bir öğe oluşturalım:\n<Element reactProp={'1'} /> \n\nBu reactProp adı, React'in standart props nesnesine eklenen bir özellik haline gelir, bu nesne zaten tüm React kitaplık bileşenlerinde mevcuttur."
+    },
+    "41": {
+        "question": "React'te refs'leri ne anlıyorsunuz?",
+        "answer": "Refs, React'te referanslar için kullanılan kısaltmadır. Belirli DOM düğümlerine veya React öğelerine bir referansı saklamaya yardımcı olan bir özniteliktir. React DOM düğümlerine veya React öğelerine erişmenin ve onlarla etkileşimde bulunmanın bir yolunu sağlar. Bir alt bileşenin değerini değiştirmek istediğimizde props kullanmadan kullanılır."
+    },
+    "42": {
+        "question": "Refs nasıl oluşturulur?",
+        "answer": "Refs, React.createRef() kullanılarak oluşturulabilir ve ref özniteliği aracılığıyla React öğelerine eklenir. Bir bileşen oluşturulduğunda genellikle bir örnek özelliğine atanır ve ardından bileşen boyunca başvurulabilir."
+    },
+    "43": {
+        "question": "İleriye Yönlendirilen Ref'ler nedir?",
+        "answer": "Ref yönlendirmesi, bir ref'i bir bileşenden bir alt bileşenine aktarmak için kullanılan bir özelliktir. React.forwardRef() yöntemini kullanarak gerçekleştirilebilir. Özellikle yüksek dereceli bileşenlerle kullanışlıdır ve yeniden kullanılabilir bileşen kitaplıklarında özellikle kullanılır."
+    },
+    "44": {
+        "question": "Ref'lerin kullanımı nedir?",
+        "answer": "React'teki Ref, aşağıdaki durumlarda kullanılır:\n\n* Bir öğeye bir referans döndürmek için kullanılır.\n* Odak yönetimi, metin seçimi veya medya oynatma gibi DOM ölçümleri gerektiğinde kullanılır.\n* İmperatif animasyonları tetiklemek için kullanılır.\n* Üçüncü taraf DOM kitaplıklarıyla entegrasyon yaparken kullanılır.\n* Geri çağrılarda da kullanılabilir."
+    },
+    "45": {
+        "question": "React Router nedir?",
+        "answer": "React Router, React üzerine inşa edilmiş bir standart yönlendirme kütüphanesi sistemidir. React Router Paketi kullanılarak React uygulamasında Yönlendirme oluşturmak için kullanılır. Uygulamada birden çok rotayı tanımlamanıza yardımcı olur. Web sayfasında görüntülenecek verilerle birlikte tarayıcının senkron URL'sini sağlar. Uygulamanın standart yapısını ve davranışını korur ve genellikle tek sayfa web uygulamaları geliştirmek için kullanılır."
+    },
+    "46": {
+        "question": "Neden React'te bir Yönlendiriciye ihtiyacımız var?",
+        "answer": "React Yönlendiricisi, tek sayfa uygulamasında birden fazla görünümü görüntülemek için önemli bir rol oynar. Uygulamada birden çok rotayı tanımlamak için kullanılır. Bir kullanıcı belirli bir URL'yi tarayıcıya yazdığında ve bu URL yolunun yönlendirici dosyasındaki herhangi bir 'rota' ile eşleşmesi durumunda, kullanıcı o belirli Rota'ya yönlendirilir. Bu nedenle, React uygulamasına bir Yönlendirici kitaplığı eklememiz gerekmektedir, bu da her biri farklı bir görünüme yönlendiren birden çok rotayı oluşturmamızı sağlar."
+    },
+    "47": {
+        "question": "React Router'ın avantajlarını listeleyin.",
+        "answer": "React Router'ın önemli avantajları aşağıda verilmiştir:\n\n* Bu, tarayıcı geçmişini manuel olarak ayarlamanız gerekmez.\n* Bağlantı, iç bağlantıları gezinmek için kullanılır. Bu, bir çapa etiketine benzer.\n* Rendere etmek için Anahtarı özelliğini kullanır.\n* Yönlendirici yalnızca Tek Bir Çocuk öğesine ihtiyaç duyar.\n* Bu, her bileşen <Route> içinde belirtilir.\n* Paketler Web, Yerel ve Çekirdek olmak üzere üç pakete bölünmüştür. Bu, React uygulamasının kompakt boyutunu destekler."
+    },
+    "48": {
+        "question": "React Yönlendiricisi, Geleneksel Yönlendirmeden nasıl farklıdır?",
+        "answer": "React Yönlendirme ve Geleneksel Yönlendirme arasındaki farklar şunlardır:\n\n * Geleneksel Yönlendirme * \n\n1. Geleneksel Yönlendirmede, her görünüm yeni bir dosyayı içerir.\n2. Karşılık gelen HTML sayfasını almak için sunucuya bir HTTP isteği gönderilir.\n3. Bu, kullanıcının her görünüm için farklı sayfalara gezinmesini sağlar.\n\n * React Yönlendirme * \n\n1. React Yönlendirmede, yalnızca tek bir HTML sayfası bulunur.\n2. Yalnızca Tarih özniteliği <BrowserRouter> değiştirilir.\n3. Bu, kullanıcının farklı sayfalara geziniyormuş gibi düşündüğü, ancak sadece bir illüzyon olduğu anlamına gelir."
+    },
+    "49": {
+        "question": "React Router v4'te switch anahtar sözcüğü neden kullanılır?",
+        "answer": "'switch' anahtar sözcüğü, tanımlanan birkaç Route arasında yalnızca tek bir Route'ın render edilmesi için kullanılır. <Switch> bileşeni, yalnızca yol eşleştiğinde bileşenleri render etmek için kullanılır. Aksi takdirde, bulunamayan bileşene geri döner."
+    },
+    "50": {
+        "question": "React'te stilleri nasıl kullanabiliriz?",
+        "answer": "React uygulamalarında stil özniteliğini kullanabiliriz, bu, render zamanında dinamik olarak hesaplanmış stilleri ekler. CSS dizesi yerine camelCased özelliklere sahip bir JavaScript nesnesi kabul eder. Stil özniteliği, JavaScript'teki DOM düğümlerine erişimle tutarlıdır."
+    },
+    "51": {
+        "question": "React bileşenini kaç farklı şekilde stilize edebiliriz?",
+        "answer": "React bileşenini temel olarak dört farklı şekilde stilize edebiliriz, bunlar aşağıda verilmiştir:\n\n* İnline Stil\n* CSS Stil Sayfası\n* CSS Modülü\n* Stil Bileşenleri"
+    },
+    "52": {
+        "question": "React'te CSS Modülü stili nedir?",
+        "answer": "CSS Modülü, tüm sınıf adlarını ve varsayılan olarak tümleşik olarak kapsanan animasyon adlarını içeren bir CSS dosyasıdır. Yalnızca onu içe aktaran bileşenler için kullanılabilir ve iznin olmadan başka Bileşenlere uygulanamaz. CSS Modülü dosyasını .module.css uzantısıyla oluşturabilirsiniz."
+    },
+    "53": {
+        "question": "Stil Bileşenleri nedir?",
+        "answer": "Styled-Components, React için bir kütüphanedir. CSS Modüllerinin yerini alır. Uygulamanızdaki React bileşen sistemlerini stillemek için geliştirilmiş CSS'yi kullanır, bu da JavaScript ve CSS'nin bir karışımıyla yazılmıştır. Bir tek bileşene kapsanır ve sayfadaki başka hiçbir öğeye sızamaz.\n\nstyled-components, şunları sağlar:\n\n* Otomatik kritik CSS\n* Sınıf adı hatalarını önleme\n* CSS'nin kolay silinmesi\n* Basit dinamik stil\n* Acısız bakım"
+    },
+    "54": {
+        "question": "React'te hooks nedir?",
+        "answer": "Hooks, React'in 16.8 sürümünde tanıtılan yeni bir özelliktir ve bir sınıf yazmadan durum ve diğer React özelliklerini kullanmamızı sağlar."
+    },
+    "55": {
+        "question": "React'te hooks kullanırken hangi kuralları takip etmelisiniz?",
+        "answer": "React'te hooks kullanmak için aşağıdaki iki kuralı izlememiz gerekmektedir:\n\n* React fonksiyonlarınızın en üst düzeyinde yalnızca hooks çağırmalısınız ve bunu döngüler, koşullar veya iç içe fonksiyonlar içinde yapmamalısınız. Bu, hooks'un her bir bileşenin yeniden render edilmesinde aynı sırayla çağrılmasını sağlamak için kullanılır ve ayrıca birden çok useState ve useEffect çağrısı arasında hooks'un durumunu korur.\n\n* Hooks'ları yalnızca React fonksiyonlarından çağırmalısınız. Hooks'ları düzenli JavaScript fonksiyonlarından çağırmayın."
+    },
+    "56": {
+        "question": "React'te formlar nedir?",
+        "answer": "React'te formlar, kullanıcıların web uygulamalarıyla etkileşimde bulunmasını sağlamak için kullanılır. Aşağıda React'te formların en yaygın kullanımı listelenmiştir:\n\n* Formlar, kullanıcıların uygulamayla etkileşime geçmesini sağlar. Formlar kullanılarak, kullanıcılar uygulamayla iletişim kurabilir ve gerektiğinde gerekli bilgileri girebilir.\n* Formlar, metin alanları, düğmeler, onay kutuları, radyo düğmeleri vb. gibi belirli öğeleri içerir ve bu da uygulamayı daha etkileşimli ve güzel hale getirebilir.\n* Formlar, kullanıcılardan girdi almanın en iyi yoludur.\n* Formlar, kullanıcı kimlik doğrulaması, arama, filtreleme, dizinleme vb. gibi birçok farklı görev için kullanılır."
+    },
+    "57": {
+        "question": "Hata sınırları nedir veya hata sınırları nedir?",
+        "answer": "Hata sınırları, React'in 16 sürümünde tanıtılan bir kavramdır. Hata sınırları, render aşamasında meydana gelen hataları bulmanın bir yolunu sağlar. Aşağıdaki yaşam döngüsü yöntemlerinden birini kullanan herhangi bir bileşen bir hata sınırı olarak kabul edilir. Bir hata sınırının bir hatayı tespit edebileceği yerleri görelim:\n\n* Render aşamasında\n* Bir yaşam döngüsü yöntemi içinde\n* Kurucu içinde\n\nBir bileşen içindeki bir hatanın, bileşenin unmount edilmesine neden olduğunu biliyoruz, bu nedenle render yöntemi içinde meydana gelen bir hatayı görüntülemek için hata sınırlarını kullanırız. Hata sınırını kullanmadığımızda, bir hatayı görmek yerine boş bir sayfa görürüz.\n Hata sınırları ile:\n\nDaha önce belirttiğimiz gibi, hata sınırı, aşağıdaki yöntemlerden birini veya her ikisini kullanan bir bileşendir:\n\n * static getDerivedStateFromError\n* componentDidCatch"
+    },
+    "58": {
+        "question": "Hata sınırları hangi durumlarda hataları yakalamaz?",
+        "answer": "Hata sınırlarının hataları yakalamadığı bazı durumlar aşağıdadır:\n\n* Hata sınırları, olay işleyicileri içindeki hataları yakalamaz.\n* Sunucu taraflı işlemlerde.\n* Hata sınırı kodunda kendisi hatalar atıldığında.\n* setTimeout veya requestAnimationFrame geri aramaları kullanarak asenkron kod."
+    },
+    "59": {
+        "question": "MVC çerçevesindeki başlıca sorunlar nelerdir?",
+        "answer": "MVC çerçevesinin başlıca sorunları şunlardır:\n\n* DOM manipülasyonu çok maliyetliydi.\n* Uygulamayı yavaş ve verimsiz hale getirir.\n* Büyük bir bellek israfı vardı.\n* Uygulama hata ayıklamayı zorlaştırır."
+    },
+    "60": {
+        "question": "Redux nedir?",
+        "answer": "Redux, uygulama durumunu yönetmek için kullanılan açık kaynaklı bir JavaScript kitaplığıdır. React, kullanıcı arayüzünü oluşturmak için Redux'i kullanır. Redux uygulaması kolayca test edilebilir ve farklı ortamlarda tutarlı davranış gösterebilir. İlk kez 2015 yılında Dan Abramov ve Andrew Clark tarafından tanıtıldı.\n\nReact Redux, Redux için resmi React bağlamadır. React bileşenlerinin Redux Depodan veri okumasına ve verileri güncellemek için Depoya Eylemler göndermesine izin verir. Redux, uygulamaların ölçeklenmesine yardımcı olur ve bir yönlü veri akışı modeli aracılığıyla mantıklı bir şekilde durumu yönetmenin bir yolunu sağlar. React Redux, kavramsal olarak basittir. Redux deposuna abone olur, bileşeninizin istediği verilerin değişip değişmediğini kontrol eder ve bileşeninizi yeniden render eder."
+    },
+    "61": {
+        "question": "Redux'un izlediği üç ilke nedir?",
+        "answer": "Redux'un izlediği üç ilke şunlardır:\n\n1. Tek kaynak gerçeği: Uygulamanızın tüm durumu, bir Depo içinde bir nesne/durum ağacında saklanır. Tek Durum ağacı, değişikliklerin zaman içinde nasıl korunacağını daha kolay hale getirir. Ayrıca, uygulamayı hata ayıklamak veya incelemek de daha kolaydır.\n2. Durum salt okunur: Durumu değiştirmenin tek yolu, ne olduğunu açıklayan bir nesne olan bir eylem yayınlamaktır. Bu ilke, ne görünümlerin ne de ağ geri çağrılarının doğrudan Duruma yazamayacağından emin olur.\n3. Değişiklikler saf fonksiyonlarla yapılır: Eylemlerin durum ağacını nasıl değiştireceğini belirtmek için, azaltıcıları (saf fonksiyonlar) yazmanız gerekir. Saf fonksiyonlar önceki Durumu ve Eylemi parametre olarak alır ve yeni bir Durum döndürür."
+    },
+    "62": {
+        "question": "Redux'un bileşenleri nelerdir?",
+        "answer": "Redux'un bileşenleri aşağıdadır.\n\n* DEPO: Bir Depo, uygulamanızın tüm Durumunu içeren bir yerdir. Redux'u basit ve öngörülebilir kılan uygulamanın tüm hareketli parçaları için bir beyin gibidir.\n* EYLEM: Olanları açıklayan bir nesne\n* AZALTICI: Durumun nasıl değişeceğini belirler."
+    },
+    "63": {
+        "question": "Azaltıcının rolünü açıklayın.",
+        "answer": "Azaltıcılar, eylemlerden yükleri okur ve ardından Durumu buna göre günceller. Bu, başlangıç Durumundan yeni bir Durum döndüren saf bir işlevdir. Hiçbir iş yapılmayacaksa önceki Durumu olduğu gibi döndürür."
+    },
+    "64": {
+        "question": "Redux'ta Depo'nun önemi nedir?",
+        "answer": "Bir Depo, uygulamanın Durumunu tutan bir nesnedir ve Duruma erişmek, Eylemleri göndermek ve abone olmak için yöntemler sağlar. Bir uygulamanın tüm Durum ağacı tek bir Depoda saklanır, bu da Redux'u basit ve öngörülebilir yapar. Depoya işlemi verileri işleme, aynı zamanda Depo Durumunu değiştiren çeşitli eylemleri günlüğe kaydetme gibi bir dizi işlemi yönetebilen bir ara yazılım geçebiliriz. Tüm Eylemler azaltıcılar aracılığıyla yeni bir durum döndürür."
+    },
+    "65": {
+        "question": "Redux, Flux'tan nasıl farklıdır?",
+        "answer": "* Redux *\n\n1. Redux, uygulama Durumunu yönetmek için kullanılan açık kaynaklı bir JavaScript kitaplığıdır.\n2. Depo'nun Durumu değiştirilemez.\n3. Bu, Depo ve değişiklik mantığını ayrı tutar.\n4. Tek bir Depo vardır.\n5. Redux'un Dağıtıcı kavramı yoktur.\n\n * Flux *\n\n1. Flux ne bir kütüphane ne de bir çerçevedir. Bu, bir mimari türüdür ve görünüm olarak React'i tamamlar ve Tek Yönlü Veri Akışı modelinin bir konseptini izler.\n2. Depo'nun Durumu değiştirilebilir.\n3. Bu, Depo Durumu ve değişiklik mantığını içerir.\n4. Birden fazla Depo olabilir.\n5. Tek bir Dağıtıcı vardır ve tüm eylemler o Dağıtıcıdan geçer."
+    },
+    "66": {
+        "question": "Redux'un avantajları nelerdir?",
+        "answer": "React Redux'un başlıca avantajları şunlardır:\n\n* React Redux, React Uygulaması için resmi UI bağlamasıdır. Beklendiği gibi React bileşenlerinin davranmasını sağlamak için tüm API değişikliklerini güncel tutar.\n* İyi 'React' mimarisini teşvik eder.\n* Dahili olarak birçok performans optimizasyonunu uygular, bu da bileşenlerin yalnızca gerçekten ihtiyaç duyduğunda yeniden render edilmesini sağlar.\n* Kod bakımını kolaylaştırır.\n* Redux'un kodu, test edilebilir ve bağımsız olacak şekilde küçük, saf ve izole edilmiş işlevler olarak yazılmıştır."
+    },
+    "67": {
+        "question": "Bir bileşen dışında Redux deposuna nasıl erişilir?",
+        "answer": "Depoyu createStore() yöntemiyle oluşturulan modülden dışa aktarmanız gerekir. Ayrıca, küresel pencere alanını kirletmemesi için dikkat etmelisiniz.\n\nstore = createStore(myReducer)\nexport default store  "
+    }
+}

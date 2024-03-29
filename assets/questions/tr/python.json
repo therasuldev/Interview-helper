@@ -1,0 +1,254 @@
+{
+    "1": {
+        "question": "Python nedir? Teknoloji dünyasında Python'ın popüler uygulamalarından bazılarını listeleyin.",
+        "answer": "Python, yaygın olarak kullanılan genel amaçlı, yüksek seviyeli bir programlama dilidir. 1991 yılında Guido van Rossum tarafından oluşturulmuş ve Python Yazılım Vakfı tarafından daha da geliştirilmiştir. Kod okunabilirliğine önem verilerek tasarlanmış olup, sözdizimi programcıların kavramlarını daha az kod satırıyla ifade etmelerine olanak tanır. Şu alanlarda kullanılır:\n\n * Sistem Betimleme\n\n * Web Geliştirme\n\n * Oyun Geliştirme\n\n * Yazılım Geliştirme\n\n * Karmaşık Matematik"
+    },
+    "2": {
+        "question": "Python dili kullanmanın şu anki senaryoda sağladığı faydalar nelerdir?",
+        "answer": "Python dilini kullanmanın sağladığı faydalar şunlardır:\n\n * Nesne Yönelimli Dil\n\n * Yüksek Seviyeli Dil\n\n * Dinamik Türli Dil\n\n * Kapsamlı Destek Kütüphaneleri\n\n * Üçüncü taraf modüllerinin bulunması\n\n * Açık kaynak ve topluluk geliştirilmesi\n\n * Taşınabilir ve Etkileşimli\n\n * İşletim sistemlerinde taşınabilir olması"
+    },
+    "3": {
+        "question": "Python derlenmiş bir dil mi yoksa yorumlanmış bir dil mi?",
+        "answer": "Aslında, Python kısmen derlenmiş bir dil ve kısmen yorumlanmış bir dildir. Kodumuzu çalıştırdığımızda derleme kısmı ilk olarak yapılır ve bu içeriden bayt kodunu oluşturur; bu bayt kodu daha sonra Python sanal makinesi (p.v.m) tarafından altındaki platforma (makine+işletim sistemi) göre dönüştürülür."
+    },
+    "4": {
+        "question": "Python'da ‘#’ sembolü ne işe yarar?",
+        "answer": "‘#’ sembolü, satırın sonrasına gelen her şeyi yorumlamak için kullanılır."
+    },
+    "5": {
+        "question": "Değiştirilebilir (Mutable) bir veri türü ile Değiştirilemez (Immutable) bir veri türü arasındaki fark nedir?",
+        "answer": "Değiştirilebilir veri tipleri düzenlenebilir, yani çalışma zamanında değişebilirler. Örnek – Liste, Sözlük, vb.\nDeğiştirilemez veri tipleri düzenlenemez, yani çalışma zamanında değiştirilemezler. Örnek – Dize, Demet, vb."
+    },
+    "6": {
+        "question": "Python'da argümanlar nasıl değer veya referans ile iletilir?",
+        "answer": "Python'da her şey bir nesnedir ve tüm değişkenler nesnelere referans tutar. Referans değerleri fonksiyonlara göredir; sonuç olarak, referans değerlerinin değerini değiştiremezsiniz. Ancak, değişken ise değiştirilebilirse nesneleri değiştirebilirsiniz."
+    },
+    "7": {
+        "question": "Küme (Set) ile Sözlük (Dictionary) arasındaki fark nedir?",
+        "answer": "Küme, tekrar eden öğeleri olmayan, işlenebilir ve değiştirilebilir bir veri türlerinden oluşan sırasız bir koleksiyondur.\n\nPython'daki bir sözlük, bir harita gibi veri değerlerini saklamak için kullanılan, sırasız bir veri değerlerinden oluşan bir koleksiyondur."
+    },
+    "8": {
+        "question": "Liste Anlayışı nedir? Bir örnek verin.",
+        "answer": "Liste anlayışı, mevcut yineleyiciye dayalı olarak bir liste oluşturmayı kolaylaştıran bir sözdizimi yapısıdır.\n\nÖrnek:\n\nmy_list = [i for i in range(1, 10)]"
+    },
+    "9": {
+        "question": "Lambda fonksiyonu nedir?",
+        "answer": "Bir lambda fonksiyonu, anonim bir fonksiyondur. Bu fonksiyonun herhangi bir sayıda parametresi olabilir ancak yalnızca bir ifadeye sahip olabilir. Örnek:\n\na = lambda x, y : x*y\nprint(a(7, 19))"
+    },
+    "10": {
+        "question": "Python'da 'pass' ne anlama gelir?",
+        "answer": "'pass', hiçbir işlem yapmamayı veya diğer bir deyişle, bir bileşik ifadede bir yer tutucu olarak kullanılır, buraya hiçbir şey yazılmamalıdır."
+    },
+    "11": {
+        "question": "Python'da / ve // arasındaki fark nedir?",
+        "answer": "/, taban bölme işaret ederken //, kesin bölme işaret eder. Örnek olarak:\n\n5//2 = 2\n5/2 = 2.5"
+    },
+    "12": {
+        "question": "Python'da İstisna (Exception) işlemesi nasıl yapılır?",
+        "answer": "Python'da hata yakalamak ve kurtarma mekanizmasını uygun şekilde ele almak için kullanılan 3 ana anahtar kelime vardır: try, except ve finally. Try, hatalar için izlenen bir kod bloğudur. Except bloğu bir hata oluştuğunda yürütülür.\nFinal bloğun güzelliği, hata için deneme yapmış olmanın ardından kodu yürütmektir. Bu blok, bir hata oluşmuş olsa da olmasa da yürütülür. Son olarak, blok nesnelerin/değişkenlerin gerekli temizleme işlemlerini yapmak için kullanılır."
+    },
+    "13": {
+        "question": "Python'da swapcase fonksiyonu nedir?",
+        "answer": "Bu, tüm büyük harfleri küçük harflere ve tersi olarak dönüştüren bir dize fonksiyonudur. Dizenin mevcut durumunu değiştirmek için kullanılır. Bu yöntem, tüm karakterleri değiştiren bir dize kopyası oluşturur. Örneğin:\n\nstring = 'GeeksforGeeks'\nstring.swapcase() ---> 'gEEKSFORgEEKS'"
+    },
+    "14": {
+        "question": "Python'da for döngüsü ile while döngüsü arasındaki fark nedir?",
+        "answer": "“for” Döngüsü genellikle Liste, Demet, Küme ve Sözlük gibi çeşitli koleksiyon türlerinin öğeleri üzerinde yinelemek için kullanılır. Geliştiriciler, başlangıç ve bitiş koşullarına sahip oldukları durumlarda “for” döngüsünü kullanırlar. Oysa ki, “while” döngüsü, diğer herhangi bir programlama dilinde kullanılan gerçek döngü özelliğidir. Programcılar, sadece bitiş koşullarına sahip oldukları durumlarda Python while döngüsünü kullanırlar."
+    },
+    "15": {
+        "question": "Python'da bir fonksiyonu bir argüman olarak geçebilir miyiz?",
+        "answer": "Evet, Nesneler, değişkenler (aynı veya farklı veri türlerinden), ve fonksiyonlar da dahil olmak üzere birçok argüman bir fonksiyona geçirilebilir. Fonksiyonlar nesneler olduğu için başka fonksiyonlara parametre olarak geçirilebilir. Yüksek sıralı fonksiyonlar, diğer fonksiyonları argüman olarak alabilen fonksiyonlardır."
+    },
+    "16": {
+        "question": "*args ve **kwargs nedir?",
+        "answer": "Python'da bir fonksiyona değişken sayıda argüman geçirmek için özel sözdizim *args ve **kwargs kullanın. Bu, değişken uzunlukta, anahtar kelime içermeyen bir argüman listesi geçirmek için kullanılır. *, kullanılarak, * ile ilişkilendirdiğimiz değişken yineleyici olur ve bu da üzerinde işlemler yapmanıza olanak tanır, böylece üzerinde yineleme yapabilir ve map ve filter gibi yüksek sıralı işlemleri kullanabilirsiniz."
+    },
+    "17": {
+        "question": "Python'da Girinti (Indentation) Gerekli midir?",
+        "answer": "Evet, Python'da girinti gerekir. Python yorumlayıcısı, Python girintisini kullanarak bir grup ifadenin belirli bir kod bloğuna ait olduğunu bildirilebilir. Girintiler, kodu tüm programlama dilleri için geliştiriciler için okunabilir kılar, ancak Python'da kodun belirli bir düzende girintilenmesi çok önemlidir."
+    },
+    "18": {
+        "question": "Python'da Kapsam (Scope) nedir?",
+        "answer": "Bir değişkeni bulabileceğimiz ve gerekirse erişebileceğimiz konum, bir değişkenin kapsamı olarak adlandırılır.\n\n * Python Yerel değişken: Yerel değişkenler, bir işlev içinde başlatılan ve yalnızca o işlev için benzersiz olan değişkenlerdir. İşlevin dışında erişilemezler.\n\n * Python Global değişkenler: Global değişkenler, herhangi bir işlevin dışında tanımlanan ve bildirilenlerdir ve herhangi bir işleve özgü değildir.\n\n * Modül düzeyi kapsamı: Bu, programda erişilebilen geçerli modülün global nesnelerine atıfta bulunur.\n\n * En dış kapsam: Programın çağırabileceği yerleşik adların bulunduğu alandır. Referans alınan ad, bu kapsamdaki nesneler arasında son sırada bulunur."
+    },
+    "19": {
+        "question": "Python'da docstring nedir?",
+        "answer": "Python belgelendirme dizeleri (veya docstrings), Python modülleri, fonksiyonlar, sınıflar ve yöntemlerle belgelendirme ilişkilendirmenin kullanışlı bir yolunu sağlar.\n\n * Docstring Tanımlama: Docstring'ler, sınıf, yöntem veya fonksiyon tanımının hemen altında 'üçlü tek tırnaklar' veya 'üçlü çift tırnaklar' kullanılarak tanımlanır. Tüm fonksiyonların bir docstring'e sahip olması gerekir.\n\n * Docstring'e Erişme: Docstring'lere, nesnenin __doc__ yöntemi kullanılarak veya help işlevi kullanılarak erişilebilir."
+    },
+    "20": {
+        "question": "Dinamik türü olan bir dil nedir?",
+        "answer": "Tipli diller, veri türünün türünü tanımladığımız dillerdir ve makine tarafından derleme zamanında veya çalışma zamanında bilinir. Tipli diller iki kategoriye ayrılabilir:\n\n * Statik olarak yazılmış diller: Bu tür bir dilde, bir değişkenin veri türü derleme zamanında bilinir, bu da programcının bir değişkenin bildirim anında veri türünü belirtmesi gerektiği anlamına gelir.\n\n * Dinamik olarak yazılmış diller: Bunlar, herhangi bir değişken için önceden tanımlanmış bir veri türü gerektirmeyen dillerdir, çünkü makine tarafından çalışma zamanında yorumlanır. Bu dillerde yorumlayıcılar, bir değişkenin değerine bağlı olarak çalışma zamanında bir değişkene veri türü atar."
+    },
+    "21": {
+        "question": "Python'da break, continue ve pass arasındaki fark nedir?",
+        "answer": "Break ifadesi, içinde bulunduğu döngüyü veya ifadeyi sonlandırmak için kullanılır. Bundan sonra, kontrol, varsa kullanılabilirse break ifadesinden sonra bulunan ifadelere geçer.\n\nContinue da bir döngü kontrol ifadesidir. break ifadesinin tersine, döngüyü sonlandırmaz, sonraki döngüyü yürütmeye zorlar.\n\nPass, hiçbir işlem yapmamayı veya diğer bir deyişle, bileşik ifadede bir yer tutucu olarak kullanılır, buraya hiçbir şey yazılmamalıdır."
+    },
+    "22": {
+        "question": "Python'da Yerleşik veri türleri nelerdir?",
+        "answer": "Aşağıdaki, Python'daki standart veya yerleşik veri tipleridir:\n\n * Sayısal: Python'daki sayısal veri türü, sayısal bir değere sahip verileri temsil eder. Bir sayısal değer bir tam sayı, bir kayan noktalı sayı, bir Boolean veya hatta bir karmaşık sayı olabilir.\n\n * Dizi Türü: Python'daki Dizi Veri Türü, sıralı veya farklı veri türlerinin sıralı koleksiyonunu temsil eder. Python'da birkaç dizi türü vardır:\n\n  * Python Dize\n\n  * Python Liste\n\n  * Python Demet\n\n  * Python aralık\n\nEşleme Türleri: Python'da, karmasal veriler, eşleme nesnesi kullanılarak rastgele nesnelere eşlenir. Şu anda yalnızca bir yaygın eşleme türü olan sözlük vardır ve eşleme nesneleri değiştirilebilir.\n\n  * Python Sözlük\n\n * Set Türleri: Python'da, bir Küme, işlenebilir, değiştirilebilir ve yinelenen öğeler içermeyen bir veri türlerinin sırasız bir koleksiyonudur. Bir küme içindeki öğelerin sırası belirsizdir, ancak çeşitli öğelerden oluşabilir."
+    },
+    "23": {
+        "question": "Python'da bir sayının tabanını nasıl alırsınız?",
+        "answer": "Python math modülü, bir sayının tabanını hesaplamak için kullanılabilecek bir yöntem içerir.\n\n  * Python'da floor() yöntemi, x'in tabanını döndürür, yani x'ten büyük olmayan en büyük tam sayıyı döndürür\n\n  * Ayrıca, Python'da ceil(x) yöntemi, x'in tavan değerini döndürür, yani x'ten büyük veya eşit olan en küçük tam sayıyı döndürür."
+    },
+    "24": {
+        "question": "xrange ve range işlevleri arasındaki fark nedir?",
+        "answer": "range() ve xrange() Python'daki for döngülerinde belirli bir sayıda kez yinelemek için kullanılabilen iki işlevdir. Python 3'te xrange yoktur, ancak range işlevi Python 2'de xrange gibi davranır.\n\n  * range() – Bu, range() işlevini kullanarak oluşturulan bir sayı listesini döndürür.\n\n  * xrange() – Bu işlev, yalnızca döngüleme yaparak sayıları görüntülemek için kullanılabilen üreteç nesnesini döndürür. Yalnızca belirli bir aralık talep edilirse belirli bir aralık görüntülenir ve bu nedenle tembel değerlendirme olarak adlandırılır."
+    },
+    "25": {
+        "question": "Dictionary Kavraması nedir? Bir Örnek veriniz",
+        "answer": "Dictionary Kavraması, mevcut yinelere dayalı olarak bir sözlük oluşturmayı kolaylaştıran bir sözdizimi yapısıdır.\n\n Örneğin: my_dict = {i:1+7 for i in range(1, 10)}"
+    },
+    "26": {
+        "question": "Tuple Kavraması var mı? Eğer varsa, nasıl ve eğer yoksa neden?",
+        "answer": "(i for i in (1, 2, 3))\n\nPython'da Tuple kavraması mümkün değildir çünkü bu, bir demet kavramı değil, bir üreteci sonuçlandıracaktır."
+    },
+    "27": {
+        "question": "Liste ile Tuple arasındaki fark nedir?",
+        "answer": "Liste ve Tuple arasındaki farkları analiz edelim:\n\n * Liste *\n\nListeler Değiştirilebilir veri türüdür.\n\nListeler daha fazla bellek tüketir\n\nListe, ekleme ve silme gibi işlemleri gerçekleştirmek için daha iyidir.\n\nYinelemelerin uygulanması Zaman alıcıdır\n\n * Tuple *\n\nDemetler Değiştirilemez veri türüdür.\n * Tuple, liste ile karşılaştırıldığında daha az bellek tüketir\n * Bir Tuple veri türü, öğelere erişmek için uygundur\n * Yinelemelerin uygulanması göreceli olarak Daha Hızlıdır"
+    },
+    "28": {
+        "question": "Kopma (Shallow copy) ile Derin Kopya (Deep copy) arasındaki fark nedir?",
+        "answer": "Kopma, yeni bir örnek türü oluşturulduğunda ve kopyalanan değerleri saklarken kullanılırken, derin kopya zaten kopyalanmış değerleri saklar.\n\nKopma, daha hızlı program yürütmesine sahipken, derin kopya yavaş hale getirir."
+    },
+    "29": {
+        "question": "Python'un sort() ve sorted() fonksiyonları hangi sıralama tekniğini kullanır?",
+        "answer": "Python, sıralama için Tim Sıralama algoritmasını kullanır. Bu, kötü durumda O(N log N) olan kararlı bir sıralamadır. Birleştirme sıralaması ve ekleme sıralamasından türetilmiş karışık bir sıralama algoritması olup, birçok türde gerçek dünya verisi üzerinde iyi performans göstermek üzere tasarlanmıştır."
+    },
+    "30": {
+        "question": "Dekoratörler nedir?",
+        "answer": "Dekoratörler, Python'da işlevleri kolayca değiştirmek için Python sözdizimini değiştirdiğimiz özel bir değişikliktir."
+    },
+    "31": {
+        "question": "Bir Python programını nasıl hata ayıklarsınız?",
+        "answer": "Bir Python programını hata ayıklamak için şu komutu kullanırız:\n\n $ python -m pdb python-script.py"
+    },
+    "32": {
+        "question": "Python'da Iteratorler nedir?",
+        "answer": "Python'da, iteratorlar bir grup öğeyi (örneğin bir liste gibi) yinellemek için kullanılır. Iteratorler öğelerin koleksiyonlarıdır ve bunlar bir liste, demet veya sözlük olabilir. Python iterator, depolanan öğeleri yinelemek için __itr__ ve next() yöntemlerini uygular. Python'da genellikle döngüler kullanarak koleksiyonları (liste, demet) yineleriz."
+    },
+    "33": {
+        "question": "Python'da Generatörler nedir?",
+        "answer": "Python'da, jeneratör, yineleyicileri nasıl uygulayacağımızı belirten bir yöntemdir. Bu, fonksiyonda ifadede bulunan bir normal işlevdir. __itr__ ve next() yöntemlerini uygulamaz ve ayrıca diğer overhead'leri azaltır.\n\nBir işlev en az bir yield ifadesi içeriyorsa, bir jeneratör olur. yield anahtar kelimesi, mevcut durumu kaydederek mevcut yürütmeyi duraklatır ve gerektiğinde aynı durumdan devam eder."
+    },
+    "34": {
+        "question": "Python çoklu Kalıtımı destekler mi?",
+        "answer": "Python, Java'nın aksine çoklu kalıtımı destekler. Çoklu kalıtım, bir sınıfın birden fazla üst sınıftan türetilmesi anlamına gelir."
+    },
+    "35": {
+        "question": "Python'da Polimorfizm nedir?",
+        "answer": "Polimorfizm, birden fazla formu alabilme yeteneği anlamına gelir. Örneğin, eğer üst sınıfın ABC adında bir yöntemi varsa, alt sınıf da ABC adında kendi parametreleri ve değişkenleri olan bir yönteme sahip olabilir. Python polimorfizme izin verir."
+    },
+    "36": {
+        "question": "Python'da kapsülleme nasıl tanımlanır?",
+        "answer": "Kapsülleme, kodu ve verileri bir araya getirme anlamına gelir. Bir Python sınıfı, kapsüllemenin bir örneğidir."
+    },
+    "37": {
+        "question": "Python'da veri soyutlama nasıl yapılır?",
+        "answer": "Veri Soyutlama, yalnızca gereken ayrıntıları sağlar ve dünyadan uygulamayı gizler. Bu, Python'da arabirimler ve soyut sınıflar kullanılarak elde edilebilir."
+    },
+    "38": {
+        "question": "Python'da bellek yönetimi nasıl yapılır?",
+        "answer": "Python, belleği yönetmek için özel bir bellek alanını kullanır. Temelde, tüm nesneler ve veri yapıları özel bellek alanında saklanır. Programcı bile bu özel alana erişemez çünkü yorumlayıcı bu alandan sorumludur. Python ayrıca, kullanılmayan tüm belleği geri dönüştüren ve belleği boşaltan ve bunu özel bellek alanına kullanılabilir hale getiren yerleşik bir çöp toplayıcıya sahiptir."
+    },
+    "39": {
+        "question": "Python kullanarak bir dosyayı nasıl silersiniz?",
+        "answer": "Python kullanarak bir dosyayı aşağıdaki yaklaşımları izleyerek silebiliriz:\n\n * os.remove()\n\n * os.unlink()"
+    },
+    "40": {
+        "question": "Python'da dilimleme nedir?",
+        "answer": "Python Dilimleme, bir dizginin bir bölümünü veya bir liste parçasını çıkarmak için kullanılan bir dizedir. Bu operatörle, dilimlemeye nereden başlanacağı, nerede biteceği ve adım belirtilebilir. Liste dilimleme, mevcut listeden yeni bir liste döndürür.\n\nSyntax: Lst[ Başlangıç : Son : Endeks Atlama ]"
+    },
+    "41": {
+        "question": "Python'da bir isim alanı nedir?",
+        "answer": "Bir isim alanı, adların çakışmaları önlemek için benzersiz olduğundan emin olmak için kullanılan bir adlandırma sistemidir."
+    },
+    "42": {
+        "question": "PIP nedir?",
+        "answer": "PIP, çeşitli Python modüllerini kurmak için sorunsuz bir arayüz sağlayan Python Yükleyici Paketi (Python Installer Package) kısaltmasıdır. İnternet üzerinden paketler arayabilir ve kullanıcı etkileşimi olmadan bunları kurabilen bir komut satırı aracıdır."
+    },
+    "43": {
+        "question": "Zip fonksiyonu nedir?",
+        "answer": "Python zip() fonksiyonu, benzer indeksleri birden fazla konteynıra eşler. Bir yinelemeyi alır, onu bir yineleyiciye dönüştürür ve geçilen yinelemelere dayanarak öğeleri birleştirir. Tuple'ların bir yineleyicisini döndürür."
+    },
+    "44": {
+        "question": "Pickle ve Unpickle nedir?",
+        "answer": "Pickle modülü, herhangi bir Python nesnesini kabul eder ve onu bir dize temsiline dönüştürür ve bunu bir dosyaya dökerek işleme pickleleme denir. Depolanan dize temsili içinden orijinal Python nesnelerini geri alma işlemine unpickling denir."
+    },
+    "45": {
+        "question": "Python'da monkey patching nedir?",
+        "answer": "Python'da monkey patch terimi, yalnızca bir sınıfın veya modülün çalışma zamanında dinamik olarak değiştirilmesini ifade eder.\n\n# g.py\nclass GeeksClass:\n   def function(self):\n      print 'function()'\n\nimport m\n  def monkey_function(self):\n    print 'monkey_function()' \n\nm.GeeksClass.function = monkey_function\nobj = m.GeeksClass()\nobj.function()"
+    },
+    "46": {
+        "question": "Python'da __init__() nedir?",
+        "answer": "OOP terimleriyle yapılandırıcılarla eşdeğer olan __init__, Python sınıflarındaki özel bir yöntemdir. __init__ yöntemi, yeni bir nesne başlatıldığında otomatik olarak çağrılır. Bu yöntem, nesne oluşturulduğu anda belleği ayırır. Bu yöntem ayrıca değişkenleri başlatmak için kullanılabilir."
+    },
+    "47": {
+        "question": "Mevcut saati gösteren bir kod yazın.",
+        "answer": "currenttime= time.localtime(time.time())\nprint (“Current time is”, currenttime)"
+    },
+    "48": {
+        "question": "Python'da Erişim Belirleyicileri nedir?",
+        "answer": "Python, belirli bir veri üyesinin veya bir sınıfın üye işlevinin erişim kontrolünü belirlemek için ‘_’ simgesini kullanır. Bir Python sınıfında üç tür Python erişim belirleyicisi vardır:\n\n  * Genel Erişim Belirleyici: Bir sınıfın genel olarak bildirilen üyeleri, programın herhangi bir bölümünden kolayca erişilebilir. Bir sınıfın tüm veri üyeleri ve üye işlevleri varsayılan olarak geneldir. \n\n  * Korumalı Erişim Belirleyici: Korumalı olarak bildirilen bir sınıfın üyeleri yalnızca ondan türetilen bir sınıfa erişilebilir. Bir sınıfın tüm veri üyeleri, o sınıfın veri üyelerinin önüne bir tek alt çizgi ‘_’ simgesi eklenerek korumalı olarak belirtilir.\n\n  * Özel Erişim Belirleyici: Özel olarak bildirilen bir sınıfın üyeleri yalnızca sınıf içinde erişilebilir, özel erişim belirleyicisi en güvenli erişim belirleyicisidir. Bir sınıfın veri üyeleri, o sınıfın veri üyelerinin önüne çift alt çizgi ‘__’ simgesi eklenerek özel olarak belirtilir."
+    },
+    "49": {
+        "question": "Python'da birim testleri nedir?",
+        "answer": "Birim Testleri, yazılımın en küçük test edilebilir parçalarının test edildiği birinci düzey yazılım testidir. Bu, yazılımın her bir biriminin tasarlandığı gibi çalıştığını doğrulamak için kullanılır. Birim testi çerçevesi, Python'un xUnit tarzı çerçevesidir. Birim testi için White Box Test yöntemi kullanılır."
+    },
+    "50": {
+        "question": "Python Global Yorumlayıcı Kilidi (GIL) nedir?",
+        "answer": "Python Global Yorumlayıcı Kilidi (GIL), Python'un işlemlerle uğraştığında kullandığı bir tür işlem kilididir. Genellikle, Python yalnızca yazılı ifadelerin bir kümesini yürütmek için yalnızca bir iş parçacığı kullanır. Python'da tek iş parçacıklı işlem ve çok iş parçacıklı işlemin performansı aynı olacaktır ve bunun nedeni Python'daki GIL'dir. Python'da global yorumlayıcı kilidi olduğundan, iş parçacıklarını kısıtlayan ve tek bir iş parçacığı gibi çalışan iş parçacıkları göremeyiz."
+    },
+    "51": {
+        "question": "Python'da Fonksiyon İşaretleri nedir?",
+        "answer": "Fonksiyon İşaretleme, fonksiyon parametrelerine ve dönüş değerlerine meta veri eklemenizi sağlayan bir özelliktir. Bu şekilde, fonksiyon parametrelerinin giriş türünü ve fonksiyonun döndürdüğü değerin dönüş türünü belirtebilirsiniz.\n\nFonksiyon işaretlemeleri, işlevlerin çeşitli kısımlarıyla ilişkilendirilmiş keyfi Python ifadeleridir. Bu ifadeler derleme zamanında değerlendirilir ve Python'un çalışma zamanı ortamında bir yaşama sahip değildir. Python, bu işaretlemelere herhangi bir anlam vermez. Bunlar, örneğin mypy gibi üçüncü taraf kütüphaneleri tarafından yorumlandıklarında hayat kazanırlar."
+    },
+    "52": {
+        "question": "Python'da İstisna Grupları nedir?",
+        "answer": "Python'un en son özelliği olan Python 3.11, İstisna Grupları. ExceptionGroup, yeni bir except* sözdizimi kullanılarak işlenebilir. * sembolü, her except* deyiminin birden fazla istisnanın işlenebileceğini belirtir.\n\nExceptionGroup, farklı türdeki bir koleksiyonu/grubu ifade eder. Birden Çok İstisnanın oluşturulmadan farklı İstisnanları bir araya getirebilir ve gerektiğinde bunları birer birer alabiliriz, İstisna Grubu içindeki İstisnaların sırası, bunları çağırırken önemli değildir.\n\n try:\nraise ExceptionGroup('Örnek ExceptionGroup', (\nTypeError('Örnek TypeError'),\nValueError('Örnek ValueError'),\nKeyError('Örnek KeyError'),\nAttributeError('Örnek AttributeError')\n))\nexcept* TypeError:\n...\nexcept* ValueError as e:\n... \nexcept* (KeyError, AttributeError) as e:\n..."
+    },
+    "53": {
+        "question": "Python'da Switch İfadesi nedir ",
+        "answer": "Python'un 3.10 sürümünden itibaren, Python yapısal desen eşleme adı verilen bir switch case özelliği uygulamıştır. Bu özelliği match ve case anahtar kelimeleriyle uygulayabilirsiniz. Alt çizgi sembolünün, Python'da switch ifadesi için varsayılan bir durumu tanımlamak için kullandığınızı unutmayın.\n\n Not: Python 3.10'dan önce Python, eşleme İfadelerini desteklemiyordu. \n\n eşleştirme terim:\nvaka kalıp-1:\nişlem-1\nvaka kalıp-2:\nişlem-2\nvaka kalıp-3:\nişlem-3\nvaka _:\nişlem-varsayılan"
+    },
+    "54": {
+        "question": "Python projenizde Memcached nasıl kullanılmamalıdır?",
+        "answer": "• Memcached'in yaygın yanlış kullanımı, bunu bir veri deposu olarak kullanmaktır ve önbellek olarak değil\n• Uygulamanızı çalıştırmak için ihtiyacınız olan bilgilerin tek kaynağı olarak Memcached'i asla kullanmayın. Veriler her zaman başka bir kaynaktan da kullanılabilir olmalıdır\n• Memcached sadece bir anahtar veya değer deposudur ve veriler üzerinde sorgu yapamaz veya içeriği üzerinde yineleme yapamaz\n• Memcached, şifreleme veya kimlik doğrulama açısından hiçbir güvenlik biçimi sunmaz"
+    },
+    "55": {
+        "question": "Dogpile etkisi nedir? Bu etkiyi nasıl önleyebilirsiniz?",
+        "answer": "Dogpile etkisi, önbelleğin süresi dolduğunda ve web siteleri müşteri tarafından aynı anda yapılan çoklu isteklerle vurulduğunda ortaya çıkar. Bu etki, semaphore kilidi kullanılarak önlenir. Bu sistemde değer süresi dolduğunda, ilk işlem kilidi alır ve yeni değer oluşturmaya başlar."
+    },
+    "56": {
+        "question": "Flask-WTF nedir ve özellikleri nelerdir?",
+        "answer": "Flask-WTF, WTForms ile basit entegrasyon sunar. Flask WTF için özellikler şunlardır \n\n • wtforms ile entegrasyon\n• csrf belirteciyle güvenli form\n• Global csrf koruması\n• Enternasyonalizasyon entegrasyonu\n• Recaptcha desteği\n• Flask Yüklemeleri ile çalışan dosya yükleme"
+    },
+    "57": {
+        "question": "Django, Pyramid ve Flask arasındaki fark nedir?",
+        "answer": "Flask, öncelikle daha basit gereksinimlere sahip küçük bir uygulama için yapılmış bir 'mikroçerçeve'dir. Flask'ta harici kütüphaneleri kullanmanız gerekir. Flask hazır kullanıma hazırdır.\n\nPyramid, daha büyük uygulamalar için yapılmıştır. Esneklik sağlar ve geliştiricinin projeleri için doğru araçları seçmesine izin verir. Geliştirici, veritabanını, URL yapısını, şablonlama stiline ve daha fazlasını seçebilir. Pyramid ağır yapılandırılabilir.\n\nPyramid gibi, Django da daha büyük uygulamalar için kullanılabilir. Bir ORM içerir."
+    },
+    "58": {
+        "question": "PEP 8 nedir?",
+        "answer": "Python'da PEP, Python Enhancement Proposal (Python Geliştirme Teklifi) anlamına gelir. Bu, Python kodunu en üst düzeyde açıklık ve okunabilirlik sağlamak için en iyi yaklaşımı ve yapısını belirleyen bir dizi yönerge koleksiyonudur."
+    },
+    "59": {
+        "question": "Python'un Temel Özellikleri nelerdir?",
+        "answer": "Python'un temel özellikleri şunlardır:\n\n  * Python yorumlanan bir dildir, bu nedenle C gibi dillerin aksine yürütmeden önce derlenmesine gerek yoktur.\n\n  * Python dinamik bir dil olduğundan, değişkenin veri türünü bildirmenize gerek yoktur. Python yorumlayıcısı, değişkenin değerine göre veri türünü belirleyecektir.\n\n  * Python, bir nesne tabanlı programlama paradigmasını takip eder, ancak erişim belirleyicileri (genel ve özel anahtar kelimeleri dışında), Python'un sınıfları, kalıtımı ve diğer tüm olağan OOP kavramlarına sahiptir.\n\n  * Python, çapraz platform bir dildir, yani Windows sistemde yazılan bir Python programı, Linux sistemde değişiklik yapmadan veya neredeyse hiç değişiklik yapmadan çalışacaktır.\n\n  * Python tam anlamıyla genel amaçlı bir dildir, yani Python, web uygulama geliştirme, otomasyon, Veri Bilimi, Makine Öğrenimi ve daha birçok alanında kullanılır."
+    },
+    "60": {
+        "question": "PYTHONPATH nedir?",
+        "answer": "PYTHONPATH, Python programlama dilinde bir ortam değişkeni olarak hizmet verir ve kullanıcılara modülleri ve paketleri ararken Python'un araması gereken ek dizinleri tanımlama olanağı sağlar. Bu değişken, bir arama yolu olarak işlev görür ve kodu yürütürken Python'un gerekli dosyaları içe aktarmak için gereken dosyaları bulmasına yardımcı olur. PYTHONPATH değişkenini ayarlayarak, kullanıcılar varsayılan arama yolunu genişletebilir ve modül arama davranışını kendi gereksinimlerine göre özelleştirebilirler. Bu özellik, geliştiricilerin Python projelerini verimli bir şekilde düzenlemelerine ve yapılandırmalarına olanak tanır, modül içe aktarma işlemini kolaylaştırır ve kod yeniden kullanılabilirliğini artırır."
+    },
+    "61": {
+        "question": "Python'da shallow ve deep copying nedir?",
+        "answer": "Shallow kopyalamada, kopyalanan nesne, orijinal nesnedeki değerlerin tam bir kopyasını oluştururken, derin kopyalamada, kaynak nesnenin referansını alan nesneleri çoğaltır."
+    },
+    "62": {
+        "question": "Pandas'ta reindexing nedir?",
+        "answer": "Pandas'ta yeniden dizinleme, verileri yeni bir dizine uyacak şekilde düzenleyen yeni bir nesne oluşturma işlemine atıfta bulunur."
+    },
+    "63": {
+        "question": "Python'da neden finalize kullanılır?",
+        "answer": "Finalize, gereksiz kaynakları serbest bırakmak ve çöp toplayıcıyı çağırmadan önce atıkları temizlemek için kullanılır."
+    }
+}

@@ -1,0 +1,242 @@
+{
+    "1": {
+        "question": "JavaScript nedir?",
+        "answer": "JavaScript çok güçlü bir istemci tarafı betik dilidir. JavaScript, genellikle bir kullanıcının web sayfasıyla etkileşimini artırmak için kullanılır. Başka bir deyişle, JavaScript'in yardımıyla web sayfanızı daha canlı ve etkileşimli hale getirebilirsiniz. JavaScript ayrıca oyun geliştirme ve Mobil uygulama geliştirme alanlarında da geniş ölçüde kullanılmaktadır."
+    },
+    "2": {
+        "question": "Java ve JavaScript arasındaki farklar nelerdir?",
+        "answer": "Java tam teşekküllü bir programlama dilidir. Buna karşılık, JavaScript, HTML sayfalarına tanıtılabilecek bir kodlanmış programdır. Bu iki dil hiçbir şekilde birbirine bağımlı değildir ve farklı amaçlar için tasarlanmıştır. Java nesne yönelimli bir programlama (OOPS) veya yapısal programlama dilleri gibi C++ veya C'dir, JavaScript ise bir istemci tarafı betik dilidir."
+    },
+    "3": {
+        "question": "JavaScript Veri Tipleri nelerdir?",
+        "answer": "JavaScript Veri tipleri aşağıdaki gibidir:\n\n * Sayı\n * Dize\n * Boole\n * NesneTanımsız"
+    },
+    "4": {
+        "question": "isNaN fonksiyonunun kullanımı nedir?",
+        "answer": "isNaN fonksiyonu, bağımsız değişkenin bir sayı olmadığı durumda true döndürür; aksi takdirde false döndürür."
+    },
+    "5": {
+        "question": "JavaScript ve bir ASP betik arasında hangisi daha hızlıdır?",
+        "answer": "JavaScript daha hızlıdır. JavaScript bir istemci tarafı dilidir ve bu nedenle çalışması için web sunucusunun yardımına ihtiyaç duymaz. Diğer taraftan, ASP bir sunucu tarafı dilidir ve bu nedenle her zaman JavaScript'ten daha yavaştır. Javascript artık bir sunucu tarafı dili de (nodejs)."
+    },
+    "6": {
+        "question": "Negatif Sonsuzluk nedir?",
+        "answer": "Negatif Sonsuzluk, JavaScript'te negatif bir sayıyı sıfıra bölerek elde edilebilen bir sayıdır."
+    },
+    "7": {
+        "question": "JavaScript Kodunu birden çok satıra bölmek mümkün müdür?",
+        "answer": "Dize ifadesi içinde bir satırın sonunda ters bölü işareti kullanılarak bölünür."
+    },
+    "8": {
+        "question": "JavaScript'i hangi şirket geliştirmiştir?",
+        "answer": "JavaScript'i geliştiren yazılım şirketi Netscape'tir."
+    },
+    "9": {
+        "question": "Tanımlanmamış ve tanımsız değişkenler nedir?",
+        "answer": "Tanımlanmamış değişkenler, bir programda mevcut olmayan ve tanımlanmamış olanlardır. Program, bir tanımlanmamış değişkenin değerini okumaya çalışırsa, çalışma zamanı hatasıyla karşılaşır.\n\nTanımsız değişkenler ise programda tanımlanmış ancak herhangi bir değer verilmemiş olanlardır. Program, bir tanımsız değişkenin değerini okumaya çalışırsa, tanımsız bir değer döndürülür."
+    },
+    "10": {
+        "question": "Global değişkenler nedir? Bu değişkenler nasıl bildirilir?",
+        "answer": "Global değişkenler kodun tamamı boyunca kullanılabilirler, bu yüzden kapsamı yoktur. Bir yerel değişken veya nesne bildirmek için var anahtar kelimesi kullanılır. Var anahtar kelimesi atlanırsa, bir global değişken bildirilir.\n\nÖrnek:\n\n// Global bir değişkeni bildirme: globalVariable = 'Test';\n\nGlobal değişkenlerin kullanılmasıyla karşılaşılan sorunlar yerel ve global kapsamın değişken isimlerinin çakışmasıdır. Ayrıca, global değişkenlere dayalı kodların hata ayıklanması ve test edilmesi zordur."
+    },
+    "11": {
+        "question": "Prompt kutusu nedir?",
+        "answer": "Bir prompt kutusu, kullanıcının bir metin kutusu sağlayarak giriş yapmasına izin veren bir kutudur. Bir etiket ve metin veya sayı girmek için bir kutu sağlanır."
+    },
+    "12": {
+        "question": "JavaScript'teki 'this' anahtar kelimesi nedir?",
+        "answer": "'This' anahtar kelimesi, nereden çağrıldığına göre nesneye atıfta bulunur."
+    },
+    "13": {
+        "question": "JavaScript'te zamanlayıcıların çalışma prensibi nedir?",
+        "answer": "Zamanlayıcılar, belirli bir zamanda bir kod parçasını yürütmek veya belirli bir aralıkta kodu tekrarlamak için kullanılır. Bu, setTimeout, setInterval ve clearInterval fonksiyonları kullanılarak yapılır.\n\nsetTimeout(fonksiyon, gecikme) fonksiyonu, belirtilen gecikmeden sonra belirli bir fonksiyonu çağıran bir zamanlayıcıyı başlatmak için kullanılır. setInterval(fonksiyon, gecikme) fonksiyonu, belirtilen gecikme süresinde verilen fonksiyonu tekrar tekrar yürütür ve yalnızca iptal edildiğinde durur. clearInterval(id) fonksiyonu zamanlayıcının durmasını sağlar.\n\nZamanlayıcılar tek bir iş parçacığında çalışır ve bu nedenle olaylar, yürütülmeyi bekleyen bir sıraya eklenmiş olabilir."
+    },
+    "14": {
+        "question": "ViewState ve SessionState arasındaki fark nedir?",
+        "answer": "‘ViewState’ bir oturumdaki bir sayfaya özeldir.\n‘SessionState’ kullanıcıya özgü veriler için belirli bir oturumdaki tüm web uygulaması sayfalarında erişilebilir."
+    },
+    "15": {
+        "question": "=== operatörü nedir?",
+        "answer": "=== sıkı eşitlik operatörü olarak adlandırılır ve iki operandın dönüşüm olmadan aynı değere sahip olduğunda true değerini döndürür."
+    },
+    "16": {
+        "question": "JavaScript otomatik tür dönüşümünü destekler mi?",
+        "answer": "Evet, JavaScript otomatik tür dönüşümünü destekler. Bu, JavaScript geliştiricileri tarafından kullanılan yaygın bir tür dönüşüm yöntemidir."
+    },
+    "17": {
+        "question": "JavaScript kullanarak nasıl dosya okunur ve yazılır?",
+        "answer": "JavaScript kullanarak dosya okuma ve yazma iki şekilde yapılabilir\n\n * JavaScript uzantılarını kullanarak\n\n * Bir web sayfası ve Active X nesneleri kullanarak"
+    },
+    "18": {
+        "question": "JavaScript'te kullanılan döngü yapıları nelerdir?",
+        "answer": "Aşağıdakiler, Javascript'te kullanılan döngü yapılarıdır:\n\n * For\n * While\n * Do-while döngüleri"
+    },
+    "19": {
+        "question": "JavaScript'te Değişken türleme ne anlama gelir?",
+        "answer": "Değişken türleme, bir değişkene bir sayı atamak için kullanılır. Aynı değişkene bir dize atanabilir.Örnek:\n\ni = 10;\ni = 'dize'\n\nBuna değişken türleme denir."
+    },
+    "20": {
+        "question": "JavaScript'te herhangi bir tabanın dizesini bir tam sayıya nasıl dönüştürebilirsiniz?",
+        "answer": "parseInt() fonksiyonu, farklı tabanlarda sayıları dönüştürmek için kullanılır. parseInt() dönüştürülecek dizesini ilk parametre olarak alır. İkinci parametre, verilen dizinin tabanıdır.\n\n4F (veya taban 16) 'yı tam sayıya dönüştürmek için kullanılan kod –\n\nparseInt ('4F', 16);"
+    },
+    "21": {
+        "question": "==” ve “===” arasındaki fark nedir?",
+        "answer": "“==”, sadece değer eşitliğini kontrol ederken, “===” daha katı bir eşitlik testidir ve iki değişkenin değeri veya türü farklıysa false değerini döndürür."
+    },
+    "22": {
+        "question": "Müşteri makinedeki işletim sistemini nasıl tespit edersiniz?",
+        "answer": "Müşteri makinedeki işletim sistemini tespit etmek için navigator. Platform dizesi (özellik) kullanılmalıdır."
+    },
+    "23": {
+        "question": "JavaScript'te NULL ne anlama gelir?",
+        "answer": "NULL değeri, hiçbir değeri veya hiçbir nesneyi temsil etmek için kullanılır. Bu, geçerli bir boş dize, geçerli bir boolean değeri, geçerli bir sayı ve geçerli bir dizi nesnesi olmadığı anlamına gelir."
+    },
+    "24": {
+        "question": " Silme operatörünün işlevi nedir?",
+        "answer": "Delete anahtar kelimesi, özelliği ve değerini silmek için kullanılır.\n\nÖrnek\nvar öğrenci = {yaş:20, grup:'ABC'};\nÖğrenci. yaşını sil;"
+    },
+    "25": {
+        "question": "JavaScript'te bir tanımsız değer nedir?",
+        "answer": "Tanımsız değer, kodda kullanılan\n\nDeğişken mevcut değil\nDeğişken herhangi bir değere atanmamış\nÖzellik mevcut değil."
+    },
+    "26": {
+        "question": "JavaScript'te mevcut olan tüm Pop-up kutu türleri nelerdir?",
+        "answer": "* Uyarı\n* Onay ve\n* İsteme"
+    },
+    "27": {
+        "question": "Void (0)'ın kullanımı nedir?",
+        "answer": "Void(0), sayfanın yeniden yüklenmesini önlemek için kullanılır ve çağırılırken parametre olarak “sıfır” geçirilir.\n\nVoid(0), sayfayı yenilemeden başka bir yöntemi çağırmak için kullanılır."
+    },
+    "28": {
+        "question": "JavaScript'teki değişkenlerin veri türü nedir?",
+        "answer": "JavaScript'teki tüm değişkenler nesne veri türündedir."
+    },
+    "29": {
+        "question": "Uyarı kutusu ile onay kutusu arasındaki fark nedir?",
+        "answer": "Bir uyarı kutusu yalnızca bir düğmeyi, yani Tamam düğmesini gösterir.\nAncak bir Onay kutusu, Tamam ve İptal düğmeleri olmak üzere iki düğmeyi gösterir."
+    },
+    "30": {
+        "question": "JavaScript Çerezleri nedir?",
+        "answer": "Çerezler, bir bilgisayarda depolanan küçük metin dosyalarıdır ve kullanıcı web sitelerini ziyaret ettiğinde ihtiyaç duydukları bilgileri depolar. Örnekler Kullanıcı Adı ayrıntıları ve önceki ziyaretlerden alışveriş sepeti bilgileri olabilir."
+    },
+    "31": {
+        "question": "JavaScript'te kavram seviyesinde kapsam (scope) var mıdır?",
+        "answer": "Hayır. JavaScript'te kavram seviyesinde kapsam yoktur. Fonksiyon içinde tanımlanan değişken, sadece fonksiyon içinde kapsama sahiptir."
+    },
+    "32": {
+        "question": "JavaScript'te innerHTML kullanmanın dezavantajları nelerdir?",
+        "answer": "Eğer JavaScript'te innerHTML kullanıyorsanız, dezavantajlar şunlardır\n\n * İçerik her yerde değiştirilir\n * Bunu “innerHTML’e ekleme” gibi kullanamayız\n * +=kullanırsak bile “innerHTML = innerHTML + ‘html'” hala eski içerik html ile değiştirilir\n * Tüm innerHTML içeriği yeniden ayrıştırılır ve öğelere dönüştürülür. Bu nedenle, çok daha yavaştır\n * innerHTML doğrulama sağlamaz ve bu nedenle potansiyel olarak geçerli ve bozuk HTML'yi belgeye ekleyebilir ve onu bozabiliriz."
+    },
+    "33": {
+        "question": "What is break and continue statements?",
+        "answer": "Break statement exits from the current loop.\n\nContinue statement continues with next statement of the loop."
+    },
+    "34": {
+        "question": "What are the two basic groups of data types in JavaScript?",
+        "answer": "* They are as—Primitive\n\n* Reference types\n\nPrimitive types are number and Boolean data types. Reference types are more complex types like strings and dates."
+    },
+    "35": {
+        "question": "What is the use of a type of operator?",
+        "answer": "‘Typeof’ is an operator used to return a string description of the type of a variable."
+    },
+    "36": {
+        "question": "How to find an operating system in the client machine using JavaScript?",
+        "answer": "The ‘Navigator. the app version is used to find the operating system’s name in the client machine."
+    },
+    "37": {
+        "question": "What are the different types of errors in JavaScript?",
+        "answer": "There are three types of errors:\n\n * Load time errors: Errors that come up when loading a web page, like improper syntax errors, are known as Load time errors and generate the errors dynamically.\n\n * Runtime errors: Errors that come due to misuse of the command inside the HTML language.\n\n * Logical errors: These are the errors that occur due to the bad logic performed on a function with a different operation."
+    },
+    "38": {
+        "question": "What is the difference between JavaScript and Jscript?",
+        "answer": "Both are almost similar. Netscape and Jscript develop JavaScript was developed by Microsoft."
+    },
+    "39": {
+        "question": "What is the ‘Strict Mode in JavaScript, and how can it be enabled?",
+        "answer": "Strict Mode adds certain compulsions to JavaScript. Under the strict Mode, JavaScript shows errors for a piece of code, which did not show an error before, but might be problematic and potentially unsafe. Strict Mode also solves some mistakes that hamper the JavaScript engines from working efficiently.\n\nStrict mode can be enabled by adding the string literal “use strict” above the file. "
+    },
+    "40": {
+        "question": "How can the OS of the client machine be detected?",
+        "answer": "The navigator. appVersion string can be used to detect the operating system on the client machine."
+    },
+    "41": {
+        "question": "What is a window.onload and onDocumentReady?",
+        "answer": "The onload function is not run until all the information on the page is loaded. This leads to a substantial delay before any code is executed.\n\nonDocumentReady loads the code just after the DOM is loaded. This allows early manipulation of the code."
+    },
+    "42": {
+        "question": "What is event bubbling?",
+        "answer": "JavaScript allows DOM elements to be nested inside each other. In such a case, if the handler of the child is clicked, the handler of the parent will also work as if it were clicked too."
+    },
+    "43": {
+        "question": "Is JavaScript case sensitive? Give its example.",
+        "answer": "Yes, JavaScript is case-sensitive. For example, a function parseInt is not the same as the function Parseint."
+    },
+    "44": {
+        "question": "Write the point of difference between a web garden and a web farm?",
+        "answer": "Both web-garden and web-farm are web hosting systems. The only difference is that web-garden is a setup that includes many processors in a single server. At the same time,web-farm is a larger setup that uses more than one server."
+    },
+    "45": {
+        "question": "How are DOM utilized in JavaScript?",
+        "answer": "DOM stands for Document Object Model and is responsible for how various objects in a document interact with each other. DOM is required for developing web pages, which includes objects like paragraphs, links, etc. These objects can be operated to include actions like add or delete. DOM is also required to add extra capabilities to a web page. On top of that, the use of API gives an advantage over other existing models."
+    },
+    "46": {
+        "question": "How are event handlers utilized in JavaScript?",
+        "answer": "Events are the actions that result from activities, such as clicking a link or filling a form by the user. An event handler is required to manage the proper execution of all these events. Event handlers are an extra attribute of the object. This attribute includes the event’s name and the action taken if the event takes place."
+    },
+    "47": {
+        "question": "JavaScript'te ertelenmiş betiklerin rolü nedir?",
+        "answer": "Varsayılan olarak, sayfa yüklenirken HTML kodunun ayrıştırılması, betiğin çalışması durana kadar duraklatılır. Sunucu yavaşsa veya betik özellikle ağırsa, web sayfası gecikebilir.\n\nErteleme kullanıldığında, betik HTML ayrıştırıcısı çalışırken betiğin yürütülmesi ertelenir. Bu, web sayfalarının yüklenme süresini azaltır ve daha hızlı bir şekilde görüntülenmelerini sağlar."
+    },
+    "48": {
+        "question": "JavaScript'te çeşitli işlevsel bileşenler nelerdir?",
+        "answer": "JavaScript'teki farklı işlevsel bileşenler şunlardır:\n\n * Birinci sınıf işlevler: JavaScript'teki işlevler birinci sınıf nesneler olarak kullanılır. Bu genellikle, bu işlevlerin başka işlevlere argüman olarak iletilmesi, başka işlevlerden değer olarak döndürülmesi, değişkenlere atılması veya veri yapılarında depolanması anlamına gelir.\n\n * İç içe işlevler: Başka işlevler içinde tanımlanan işlevler İç içe işlevler olarak adlandırılır. Bunlar, ana işlev çağrıldığında 'her zaman çağrılır."
+    },
+    "49": {
+        "question": "JavaScript ve ECMA Script arasındaki ilişki nedir?",
+        "answer": "ECMA Script, kurallar ve yönergeler gibidir, JavaScript ise web geliştirme için kullanılan bir betik dilidir."
+    },
+    "50": {
+        "question": "JavaScript'te isim alanı nedir ve nasıl kullanılır?",
+        "answer": "Isim alanı, istenen işlevleri, değişkenleri vb. benzersiz bir isim altında gruplama amacıyla kullanılır. Bu, kodlama içinde modülerliği artırır ve kod yeniden kullanımını sağlar."
+    },
+    "51": {
+        "question": "Yüksek dereceli bir işlev nedir?",
+        "answer": "Diğer işlevleri argüman olarak kabul edebilen ve dönüş değeri olarak işlevleri döndürebilen işlevlerdir."
+    },
+    "52": {
+        "question": "JavaScript'te kaçış karakterleri nelerdir?",
+        "answer": "Bu karakterleri gerçekten yazdırmak veya günlüğe almak istediğimizde özel karakterlerin önüne bir ters bölü çizgi kullanırız. Örneğin, bu kombinasyon çift tırnak işaretini yazdırır."
+    },
+    "53": {
+        "question": "JavaScript'te çöp toplama nedir?",
+        "answer": "Bu tür otomatik bellek yönetimi, artık gerekli olmayan ve JavaScript programı tarafından ihtiyaç duyulan bellek bloklarını geri almak ve serbest bırakmak için bellek tahsisiyi izler."
+    },
+    "54": {
+        "question": "JavaScript'te hata ayıklama araçlarının kullanımı nasıldır?",
+        "answer": "Hata ayıklama araçları, test çalışmalarını yürüterek, kırılma noktalarını ayarlayarak ve değişken değerlerini farklı aşamalarda kontrol ederek kod hatalarını tanımlamaya yardımcı olur. Safari, Chrome, Firefox, Opera vb. gibi popüler web tarayıcıları dahili bir hata ayıklama aracına sahiptir.\n\nJavaScript'in hata ayıklama özelliğine, yalnızca web tarayıcısı ayarlarında hata ayıklamanın etkinleştirilmesi durumunda işlev kazandıran bir debugger anahtar kelimesi vardır."
+    },
+    "55": {
+        "question": "JavaScript'te prototip mirası nedir?",
+        "answer": "JavaScript'te nesnelerin başka nesnelerden özelliklerini ve yöntemlerini miras almalarının bir yoludur. Bir nesne oluşturulduğunda, onun bir prototip adı verilen başka bir nesneye bir referansı vardır ve o prototip nesnenin özelliklerine ve yöntemlerine erişebilir."
+    },
+    "56": {
+        "question": "JavaScript Motoru ile JavaScript Çalışma Zamanı arasındaki fark nedir?",
+        "answer": "JavaScript motoru, JavaScript kodunu bilgisayar tarafından çalıştırılabilecek makine koduna dönüştürürken, JavaScript çalışma zamanı, kodun çalıştırıldığı ortamdır, örneğin bir web tarayıcısı veya Node.js"
+    },
+    "57": {
+        "question": "JavaScript'te olay döngüsü nedir?",
+        "answer": "Bir mekanizma ki bu kodun sürekli olarak mesaj kuyruğunu kontrol ederek bekleyen herhangi bir kodu çalıştırmasına olanak tanır ve bu sayede kodun bloke olmamasını sağlar."
+    },
+    "58": {
+        "question": "JSON nedir?",
+        "answer": "JavaScript Object Notation veya JSON, JavaScript'in nesne sözdizimini kullanarak .json dosya uzantısı ve 'application/json' MIME türü ile verileri ağlar arasında göndermek için kullanılır."
+    },
+    "59": {
+        "question": "Debounce Fonksiyonu nedir?",
+        "answer": "Debounce fonksiyonu, belirli bir süre boyunca çağrılmadığı sürece bir fonksiyonun yürütülmesini geciktirir.\n\nFonksiyonun ne kadar sıklıkla çağrılabileceğini sınırlayarak daha iyi performans sağlayabilir ve tarayıcı donma sorunlarını önleyebilirsiniz. JavaScript'te bir debounce fonksiyonunu uygulamak için setTimeOut() yöntemini kullanın."
+    },
+    "60": {
+        "question": "JavaScript'te Memoization nedir?",
+        "answer": "Memoization, pahalı fonksiyon çağrılarının sonuçlarını saklama tekniğidir ve aynı girişler tekrar ortaya çıktığında önbelleğe alınmış sonuçları döndürür. Bu, gereksiz tekrar hesaplamaları önleyerek fonksiyon performansını optimize etmeye yardımcı olur ve zaman karmaşıklığını azaltır."
+    }
+}

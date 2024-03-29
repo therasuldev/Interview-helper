@@ -1,0 +1,205 @@
+{
+    "1": {
+        "question": "Perl dili nedir?",
+        "answer": "Perl, 'Practical Extraction and Reporting Language' kelimelerinin kısaltmasıdır. Güçlü bir komut dosyası dilidir ve özellikleri bakımından zengindir. Perl kullanarak, önemli projelerde kullanılabilecek güçlü ve verimli kodlar yazabiliriz."
+    },
+    "2": {
+        "question": "Chomp hangi değişkenlerde çalışır ve birbirlerinden nasıl farklıdırlar?",
+        "answer": "Bunlar: Skaler ve Dizi\n\nSkaler genellikle $ sembolü ile gösterilir ve değişken bir dize veya sayı olabilir. Dizi ise @ sembolü ile gösterilir. Bir dizi her zaman birden fazla değere sahiptir. Bu değişkenlerin her birinin farklı bir ad alanı vardır. Skaler değişkenler 1 basamaklı bir değer tutabilirken dizi birden fazla değere sahip olabilir. Her ikisi de ihtiyaç duyulduğunda işlev içinde yürütülebilir."
+    },
+    "3": {
+        "question": "Perl'de kodu tekrar tekrar kullanmak mümkün müdür? Mümkünse, bu işlevi sağlayan özellik hangisidir?",
+        "answer": "Evet, Perl'de bu mümkündür. Ancak, aynı programda aynı kodun kullanımına bir sınırlama vardır. Kullanıcılar, Perl'in kod kırpma özelliğinden endişe etmek zorunda değillerdir. Kodu mümkün olduğunca kısa tutmanın yollarını otomatik olarak kullanıcılara yönlendirir. Kodun tekrar kullanılabilirliği bunun en iyi örneğidir. Kullanıcıları bu hıza doğru yönlendiren özellik 'Kalıtım'dır. Bu özellikteki alt sınıflar, üst sınıflarının yöntemlerini kullanabilir."
+    },
+    "4": {
+        "question": "Perl'de bir hata durumunda uyarı işaretlerini nasıl temsil edebilirsiniz ve bu görevi yerine getirmek için hangi seçenekler vardır?",
+        "answer": "Perl'de bir hata durumunda uyarı işaretlerini temsil etmek için bir seçenek vardır ve bu seçenek Komut Satırı'dır. Tüm uyarı mesajları bu şekilde görüntülenebilir ve pragma işlevi, kullanıcıların uyarı mesajları göründüğünde değişkenleri belirtebilmesini sağlar. Dahili hata ayıklayıcıyı kullanarak programı kolayca gözden geçirebilirsiniz."
+    },
+    "5": {
+        "question": "Program yazarken, kodun mümkün olduğunca kısa olması neden önemlidir?",
+        "answer": "Karmaşık kodlar her zaman kolayca işlenemez. Hatta yeniden kullanılması bile kolay değildir. Dahası, onlarda hata bulmak hiç de zor bir iş değildir. Herhangi bir yazılım veya uygulama, karmaşık veya uzun kodlara sahipse, donanım ile sorunsuz çalışamaz ve genellikle uyumluluk sorunları yaşar. Genellikle daha fazla zaman alır ve bu nedenle çoğu kullanıcı için kullanışsız veya tercih edilmez hale gelir. Kısa kod, projenin kullanıcı dostu hale getirilebileceğinden ve programcıların çok zaman kazanmasını sağlayarak işlevselliği sağlar."
+    },
+    "6": {
+        "question": "Programlamada hata ayıklamanın anlamını söyleyebilir misiniz?",
+        "answer": "Her programcı bu yaklaşımla tanıdırdır. Gerçek şu ki, birçok hata, programlarda her zaman tam olarak bilinmesi gerekli olmayan nedenlerden dolayı varlıklarını ilan eder. Bu hataları ortadan kaldırmak, görevlerin sorunsuz akışı için çok önemlidir. Hata ayıklama olarak bilinen hataları bulmak veya düzeltmek. Programlama dilleri, hata ayıklama için yerleşik seçeneklere sahip olabilir veya programcılar diğer seçenekleri de düşünebilir."
+    },
+    "7": {
+        "question": "Perl'de 'Require' ve 'Use' ifadeleri nedir ve ne zaman kullanılır?",
+        "answer": "Program sırasında doğrudan erişilebilir şekilde işlevleri içe aktarmak söz konusu olduğunda dikkate alınır. Kullanıcılar alt ifadeler doğru değilse sonuçları almakta serbesttir. Öte yandan, kullanma ifadesi genellikle ayrıştırma sırasında yürütülür."
+    },
+    "8": {
+        "question": "Perl'de, programcıların ikili uzantıyı yüklerken dinamik bir yaklaşımı tercih etmeleri mümkün müdür?",
+        "answer": "Evet, mümkün. Bunun için gereken tek şey, bir programcının kullandığı sistemin bunu desteklemesi gerekmektedir. Diğer seçenek, sistem bunu izin vermiyorsa bu görevi statik olarak gerçekleştirmektir. Dinamik yaklaşım, kullanıcıların bazı temel görevleri kendi istedikleri gibi gerçekleştirmelerine olanak tanıdığından zaman kazandırabilir."
+    },
+    "9": {
+        "question": "Perl'de sıkça kullanılan birkaç argümanı adlandırın. Anlamlarını da belirtin",
+        "answer": "Bunlar şunlardır:\n\n* -d hata ayıklama anlamına gelir\n* -w bir uyarıyı belirtir\n* -e yürütmeyi ifade eder\n* -c dönüşsüz derlemeyi belirtir"
+    },
+    "10": {
+        "question": "Perl'de Ortak Diziler hakkında bir şeyler söyleyebilir misiniz ve programcılar için nasıl önemlidirler?",
+        "answer": "Temelde Scalar ve Array'den sonra Perl'de en çok kullanılan veri türlerinden biridirler. Bir hash tablosuna oldukça benzerler ve aynı olan birçok işlev vardır."
+    },
+    "11": {
+        "question": "Perl'de bir modül dosyası eklemek mümkün müdür ve bunu yapmanızı sağlayan fonksiyonlar nelerdir?",
+        "answer": "Evet, mümkündür ve 'Require', 'Or' ve 'Use' bulunur."
+    },
+    "12": {
+        "question": "Perl Modülleri hakkında kullanıcıların dikkat etmeleri ve izlemeleri gereken kurallar nelerdir?",
+        "answer": "Kullanıcıların dikkat etmeleri gereken çeşitli şeyler vardır. Bunlardan bazı önemlileri şunlardır:\n\n* Kullanıcı her zaman bir Paket Adının büyük harfle başlaması gerektiğinden emin olmalıdır\n* Bir dosya adı varsa, uzantısı .pm olabilir\n* Paket, nesne için düşünülmemişse, ihracatçı sınıftan gelmelidir"
+    },
+    "13": {
+        "question": "Perl'de bir programı çalıştırmak için kullanıcıların yerine getirmesi gereken temel bir koşul var mıdır?",
+        "answer": "Kullanıcılar, gerçek yürütmeden önce tamamladıkları programın yorumlayıcıdan geçtiğinden emin olmalıdır. Bu, programı güvenilir bir şekilde derler ve en iyi yanı kullanıcıların aynı programda herhangi bir boşluk veya işareti görmezden gelmeleri gerektiği için serbesttir."
+    },
+    "14": {
+        "question": "Perl bir derleyici mi yoksa yorumlayıcı mıdır?",
+        "answer": "Programlama dili hem derleyici hem de yorumlayıcı olarak kullanılabilir. Kaynak kodları alır ve aynı dili anlayan bayt koduna dönüştürür. Ardından programı yürütüp çalıştırabilirsiniz. Dolayısıyla, programlama dili hem bir yorumlayıcı hem de bir derleyici olarak kabul edilebilir."
+    },
+    "15": {
+        "question": "CPAN ne anlama gelir?",
+        "answer": "CPAN, Kapsamlı Perl Arşiv Ağı anlamına gelir ve Perl ile ilgili tüm belgelerin ve yazılımların büyük bir koleksiyonudur. Programcılar aynıya erişebilir ve karşılaştıkları zorlukları önleyebilirler. CPAN, programcılar için büyük öneme sahiptir ve aynıdan birçok faydalı bilgiyi ücretsiz olarak elde edebilirler."
+    },
+    "16": {
+        "question": "Bir projeye başlarken, Perl'in uygun olup olmadığını nasıl karar vereceksiniz?",
+        "answer": "Dikkat edilmesi gereken ilk şey, yürütme ihtiyacının hızlı olup olmadığıdır. Eğer öyleyse, Perl'i düşünmek için iyi bir seçenektir. Kullanıcılar aynı zamanda esneklikle tempoyu korumakta serbesttirler. Perl son derece esnek bir dil olup, kullanıcıların aynı tempoda kalmalarını sağlayabilir. Perl açık kaynaklıdır ve lisans sorunlarından muzdariptir. Perl'in en iyi ve aslında en büyük ücretsiz kod depolarından birine sahip olması, dikkate alınabilecek en iyi seçeneklerden biri haline getirir. Ayrıca, programcılar için geniş destek sunulan en iyi programlama dillerinden biridir."
+    },
+    "17": {
+        "question": "Perl'de kullanılan ve ortak olan operatörleri adlandırın.",
+        "answer": "1. Atama Operatörleri\n2. Aritmetik Operatörler\n3. Arttırma Operatörleri\n4. Karşılaştırma Operatörleri\n5. Mantıksal Operatörler\n6. Dize Operatörleri"
+    },
+    "18": {
+        "question": "Bir diziyi Perl'de nasıl boş yapabilirsiniz?",
+        "answer": "Bu kolayca yapılabilir. Bunun için, dizinin değeri sıfıra ayarlanır ve kullanıcılar daha sonra buna null listesini atayarak bu görevi gerçekleştirebilirler."
+    },
+    "19": {
+        "question": "Perl'de Terimler veya Listeler arasında en yüksek önceliğe sahip olan hangisidir ve bunu nasıl söyleyebilirsiniz?",
+        "answer": "Terimlerin maksimum önceliğe sahip olduğu. Genellikle ifadeleri, alıntıları içerir ve bunlar karmaşık kelime önceliğine sahiptir."
+    },
+    "20": {
+        "question": "Döngülerde betikleri sarmak için hangi seçeneklerle kullanılabilir?",
+        "answer": "Bunun için -p ve -n seçenekleri vardır. Kullanıcılar bu seçeneği istedikleri kadar kullanabilirler. Betiklerin ve döngülerin boyutu üzerinde hiçbir kısıtlama yoktur."
+    },
+    "21": {
+        "question": "Perl'de uyarı mesajlarının önemi nedir ve kullanıcılara nasıl yardımcı olurlar?",
+        "answer": "Bunlar genellikle kodun kalitesini göz önünde bulundurmayı sağlayan mesajlardır. Uygun mesajlarla, bir kullanıcının sorunları vurgulaması kolaylaşır. Kullanıcılar programlar üzerinde çalışırken mesajları isteğe bağlı olarak ayarlayabilirler."
+    },
+    "22": {
+        "question": "Perl'de hash'lere nasıl bilgi eklenir?",
+        "answer": "Bu programlama dilinde hash, anahtar-değer gruplarıdır. Bunlar skaler değerlerdir. Hash'ler, bir % işareti ile kullanıldıktan sonra yalnızca bir değer atanarak oluşturulabilir.\n\nHash'lere bilgi eklemek için, anahtar-değer çiftleri oluşturulmalıdır ki buna hash'ın açılması denir. Bu durumda, sağ tarafta listelenen çift sayıda öğeler, değerler olarak adlandırılır ve sol tarafta saklananlar anahtarlar olarak adlandırılır."
+    },
+    "23": {
+        "question": "Perl takma adların düşünülmesinin ve referanslardan daha hızlı olmalarının iyi bir nedenini söyleyin.",
+        "answer": "Bunların dereferans yapılmasına gerek yoktur ve bu konuda en iyi şeylerden biridir. Genellikle gereksiz veya gerekli olmayan birçok görev kolayca atlanabilir."
+    },
+    "24": {
+        "question": "Perl'de bellek yönetimi hakkında bir şeyler söyleyin.",
+        "answer": "Programcılar Perl'de bir değişkeni kullandıklarında, bazı bellekler işgal edilir. Kullanıcılar belleğin en iyi şekilde kullanıldığından emin olmalıdırlar. Bir program çalıştırıldıktan sonra, dosyalar kolayca bölümlere ayrılabilir ve ardından yönetilebilir."
+    },
+    "25": {
+        "question": "Perl Grep'i ne zaman kullanabilirsiniz?",
+        "answer": "Temelde Perl'de önemli bir işlevdir ve programcıların Perl'de düşünülen öğelerin uzun süre güvenilir olmasını sağlamasına yardımcı olur. Kullanıcıların, kullanıcılar tarafından belirlenen kriterlere uygun olan öğeleri almasını sağlar."
+    },
+    "26": {
+        "question": "Perl'deki Chop fonksiyonlarının önemi nedir ve kullanıcılar onlarla nasıl tempoyu koruyabilirler?",
+        "answer": "Bazen kullanıcıların ifadeden bazı rasgele karakterleri önlemeleri gerekebilir. Aynı şey Perl'de Chop Fonksiyonları aracılığıyla yapılır."
+    },
+    "27": {
+        "question": "Derlenmiş Form bir dosya olarak Perl'de saklanabilir mi?",
+        "answer": "Hayır, bir dosya olarak saklanamaz"
+    },
+    "28": {
+        "question": "Perl'de Nesneler var mı? Onlar hakkında en iyi şey nedir?",
+        "answer": "Evet, Perl bazı çok kullanışlı Nesnelerle donatılmıştır. En iyi yanı, programcıların görevlerini yerine getirirken bunları kullanmaya zorlanmamalarıdır. Kullanıcılar, kodları yazarken ihtiyaç duymazlarsa bunları kolayca atlayabilirler. Perl'de belirli Nesne Yönelimli modüller bulunur ve kullanıcılar bunları nesneleri anlamadan da düşünebilirler. Ancak, programın çok karmaşık olduğu durumlarda Nesnelerle gitmenin önerilir."
+    },
+    "29": {
+        "question": "Alt rutin veya blok içinde özel değerlere nasıl erişilir?",
+        "answer": "Kullanıcı, bir alt rutinde özel değerlere ulaşmak için iki yol kullanabilir. Yollar, Yerel operatör veya My operatörüdür.\n\n* Yerel operatör - Bu yalnızca genel değişken üzerinde çalışır. Özel değişkeni alır ve düzenlenmiş herhangi bir bloğun sonunda bunları geri yükler.\n* My operatörü - Yeni bir değişken oluşturmak için bu operatör kullanılır. Blok içinde özel olarak kalır."
+    },
+    "30": {
+        "question": "Perl'de Closure nedir ve nasıl yardımcı olur?",
+        "answer": "Bu, Perl'deki bir kod bloğunu temsil eden ve daha sonra bir programın daha sonraki bir bölümünde erişilebilen leksikal değişkenleri yakalamak için kullanılan bir kod bloğu olarak tanımlanır."
+    },
+    "31": {
+        "question": "Perl betiklemesiyle ne anlıyorsunuz?",
+        "answer": "Bu, IT pazarında uygulanan C ve C++ diline benzer önemli bir betik programlama dilidir. Temel olarak ağ işlemleri için kullanılır. Perl betiklemenin kullanımı derleyicide değil yorumlayıcıdadır. Perl genellikle ağ işlemleri, web siteleri geliştirme ve işletim sistemi programları için kullanılır."
+    },
+    "32": {
+        "question": "Perl betikleme neden kullanılır?",
+        "answer": "Perl Betikleme, aynı anda 76 işletim sistemi ve 3000 modül tasarlamak için kullanılır. Bu programlama diliyle diğer işlevsel kavramlar da gerçekleştirilebilir. İşletim sistemlerine ve modüllere desteği genişletmek için kapsamlı Perl arşiv ağı modülleri olarak da bilinir. Basitçe söylemek gerekirse, dilin kullanımı, herhangi bir metin dosyasından bilgi çıkarma ve metin dosyasını dönüştürerek aynı formu yazdırma işlemidir."
+    },
+    "33": {
+        "question": "Perl betik dili kullanarak programlamanın bazı avantajlarını ve dezavantajlarını açıklayın?",
+        "answer": "Avantajlar - Perl, sözdizimi nedeniyle anlaması daha basit olan ve daha esnek ve kolay okunabilir olması nedeniyle daha kolay kullanılabilen bir yüksek düzeyli bir programlama dilidir. Ayrıca, dil, Nesne Yönelimli Programlamayı da destekler. Aynı zamanda birçok dili birleştirme yeteneğine sahip olduğu için daha kolay anlaşılır hale gelir.\n\nDezavantajlar - Bu yazılım taşınabilir değildir ve bazı okunmaz kodlar içerir. Bu, yorumlayıcı bir dil olduğu için diğer programlama dillerine göre daha yavaştır. 200 satırın üzerinde olan herhangi bir kod uygulandığında, program içinde sorun vermeye başlar. Ayrıca, CPAN modülü içerir ve CPAN'ın yüklü olmadığı sistemlerde çalıştırılamaz."
+    },
+    "34": {
+        "question": "Perl uyarılarının önemi nedir ve nasıl açılır?",
+        "answer": "Dil içindeki herhangi bir kodun kalitesini kontrol etmek için uyarılar, yanlış kodları kontrol etmek için temel yöntemlerdir. Sözdizimi analizi aşamasında, bazı yaygın zorunlu sorunlar vurgulanır. Dolayısıyla, tuhaf sonuçları araştırma için harcanan zaman çok yüksektir ve uyarıları açarak bu azaltılabilir.\n\nUyarıları açmanın birkaç yolu vardır.\n\n* Perl tek satırlık için komut satırında -w seçeneği kullanılır\n\n* -w seçeneği aynı zamanda bir Unix veya Windows gibi işletim sistemlerinde shebang satırında da kullanılır. Windows Perl yorumlayıcısı uyarı gerektirmez.\n\nBaşka bir işletim sistemi için derleyici uyarıları seçilmelidir."
+    },
+    "35": {
+        "question": "Kullanım ve Gerek arasındaki farkı belirtin?",
+        "answer": "Kullanım ve gerek, modülleri içe aktarmak için kullanılır ve bunlardan herhangi biri için dosya uzantısı gerekli değildir.\n\nKullanım durumunda, dahil edilen nesneler derleme zamanında farklıdır ve gerek durumunda, nesneler çalışma zamanında doğrulanır."
+    },
+    "36": {
+        "question": "My ve Yerel arasındaki farkı çizin?",
+        "answer": "Kodlama sırasında My ifadesi ile herhangi bir değişken geçerli blokta kalır. Değişken ve değeri bloğun dışına çıkar. Bunun aksine Yerel ifadesi durumunda, herhangi bir değeri bir bloğun dışında global bir değişkene atamak için kullanılır. Yerel ifadesinin değişkeni global olarak kullanılabilir, ancak değer blok içinde olduğu sürece kalır."
+    },
+    "37": {
+        "question": "Perl programlamada nesneler var mı yoksa yok mu?",
+        "answer": "Bu sorunun cevabı evet, bu programlama dilinin kullanımına zorlamaz. Çoğu durumda, Nesne Yönelimli modüller nesneleri anlamadan bile kullanılabilir. Ancak, program büyükse, Nesne Yönelimli hale getirilmesi gereklidir."
+    },
+    "38": {
+        "question": "Perl operatörlerinin kaç türü bulunmaktadır?",
+        "answer": "Bu operatör dört farklı türde bulunur:\n\n* Tekli operatör, not operatörüne benzer\n* Üçlü operatör, koşullu operatöre benzer\n* Liste operatörü, yazdırma operatörüne benzer\n* İkili operatör, ek operatöre benzer"
+    },
+    "39": {
+        "question": "Perl kimlik belirtecinin anlamı nedir?",
+        "answer": "Bu programlama dilini kullanırken bir değişken, modül, sınıf, işlev ve diğer ilgili nesneleri belirtmek için kullanılır. Değişken, @, % veya $ gibi sembollerle başlar ve ardından rakamlar ve alt çizgi ile devam eder."
+    },
+    "40": {
+        "question": "Bu programlama dili hangi tür verileri destekler?",
+        "answer": "Bu programlama dilinde üç tür veri bulunur: skalar diziler, skalarlar ve skalarların karmasık dizileri."
+    },
+    "41": {
+        "question": "Kaç tür temel veri yapısı vardır? Bunlar neyi belirtir?",
+        "answer": "Bu programlama dilinde üç tür temel veri yapısı bulunur. Bunlar diziler, skaler ve ilişkisel dizilerdir.\n\n1. Diziler - '@' işareti ile belirtilir.\n2. Skaler - Bir seferde bir bilgi saklayabilir ve $ simgesi ile belirtilir. Ayrıca bu simge alt çizgi veya alfasayısal olabilir. Bir rakamla başlamamalıdır.\n3. İlişkisel diziler - Bu, diğer dillerde programcılar tarafından kullanılan hash tablolarına benzer şekilde çalışan hash'ler olarak da adlandırılır."
+    },
+    "42": {
+        "question": "Programlama dilinde bir değişken nasıl kullanılır?",
+        "answer": "Bir değişkene bir değer atadığınızda eşittir işaretiyle bir bildirim yapılır. Bu dilde, uygulama içinde bellek alanını yedeklemek için Perl değişkenini bildirmeye gerek yoktur."
+    },
+    "43": {
+        "question": "Bu programlama dilinin bazı özelliklerini açıklayın.",
+        "answer": "Bu programlama dilinin bazı özellikleri şunlardır:\n\n* Basit bir nesne yönelimli programlama sözdizimine sahiptir.\n* Unicode tasarımında yardımcı olur.\n* Aynı anda 25.000 açık modülü destekler.\n* Açık kaynaklı yazılımdır ve çapraz platform dilidir.\n* Oracle, MySQL vb. gibi veritabanlarını da destekler.\n* Bu dilin yardımıyla e-ticaret işlemleri gibi önemli kişisel veriler korunabilir.\n* Bir metin dosyasını HTML veya XML ile uyumlu hale getirmeye yardımcı olan araçlar kullanır.\n* Her türlü metin dosyasını değiştirmek için kullanılan düzenli ifade motorunu sunar."
+    },
+    "44": {
+        "question": "Perl hash ve Perl array arasındaki farkı açıklayın.",
+        "answer": "Perl hash, anahtar değerleri kullanılarak bir düzensiz öğe listesidir. Bir % işaretiyle sembolize edilir.\n\nPerl array, indeks numaraları kullanılarak bir sıralı öğe listesidir ve programlama dilinde bir @ işaretiyle sembolize edilir."
+    },
+    "45": {
+        "question": "Bu dilde çalışırken modüller nasıl kullanılır?",
+        "answer": "Bir modül genellikle bir dosyada belirtilen bir ad alanına atıfta bulunur. Modüller bir dizi işlevdir ve Perl betikleme dilinde bunları uygularken belirli kurallara uyulmalıdır.\n\n* Atanan dosya adı paket adıyla aynı olmalıdır.\n* Paketin adı büyük harfle başlamalıdır.\n* Dosya adlarının uzantısı 'pm' olmalıdır.\n* Paket, modüldeki Nesne Yönelimli teknik uygulanmadığında Exporter sınıfından türetilmelidir.\n* Modüllerde kullanılan nesneler ve değişkenler, @EXPORT ve @EXPORT_OK dizileri aracılığıyla ad alanından türetilmelidir."
+    },
+    "46": {
+        "question": "Perl kalıpları düzenli ifadeler olarak kabul edilebilir mi?",
+        "answer": "Yukarıda belirtilen cevap hayır, Perl kalıpları düzenli ifadeler olarak kabul edilemez çünkü kalıpların referansları yoktur. Düzenli ifade, bir sonraki durum otomasyonunu belirlemeli ve önceki durumu içermelidir. Bir kalıbın yanlış kullanımı düzenli ifadeleri diskalifiye eder."
+    },
+    "47": {
+        "question": "Perl array fonksiyonu ne anlama gelir?",
+        "answer": "Bir dizide, bu işlev öğeleri eklemek veya kaldırmak için kullanılır. Bu işlev dört farklı türde bulunur:\n\n1. Pop - Bir dizinin son öğesini kaldırmaya yardımcı olur.\n2. Push - Bu işlev, bir dizinin sonuna yeni bir öğe eklemeye yardımcı olur.\n3. Shift - Bu işlev, bir dizinin en solundaki öğeyi kaldırmaya yardımcı olur.\n4. Unshift - Bir dizinin başına yeni bir öğe eklemek için bu işlev kullanılır."
+    },
+    "48": {
+        "question": "Perl listesini ve Perl dizisini nasıl ayırt edebiliriz?",
+        "answer": "Perl liste, verileri programlama kaynak koduna bir araya getirme işlemidir. Bu liste, skalerlerin sabit bir koleksiyonudur ve her zaman bir boyutta mevcuttur.\n\nPerl dizi, değişkenlerin bir biçimde veri toplamak için kullanıldığı bir işlemdir ve bunlar çok boyutludur."
+    },"49": {
+        "question": "Kaç tane döngü kontrol anahtarı bulunur ve bunlar neyi ifade eder?",
+        "answer": "Bu dilde, next, redo ve last olmak üzere üç tür döngü kontrol ifadesi bulunur.\n\n1. Next ifadesi - C dilindeki continue ifadesine benzer ve dizideki tüm öğeleri atlayarak bir sonraki öğeye geçmeye yardımcı olur.\n\n2. Redo ifadesi - Geçerli döngüyü kontrol ifadesini göz ardı ederek mevcut döngüyü yeniden başlatmaya yardımcı olur.\n\n3. Last ifadesi - C dilindeki break ifadesine benzer şekilde işlev görür. Bu ifadeyi kullandıktan sonra döngüden çıkmaya yardımcı olur."
+    },
+    "50": {
+        "question": "-I, -n ve -p seçeneklerinin kullanımını açıklayın?",
+        "answer": "Tüm seçenekler arasında, -n ve -p döngü içinde betikleri içermek için kullanılır. İlk seçenek, betiği döngü içinde uygulamak için programlama dilinin etkinleştirilmesi için kullanılır. -p seçenekleri, devamın eklenmesiyle aynı şekilde işlev görür. -i seçeneği dosyaları doğru yerde değiştirmek için kullanılır. Bu seçenek kullanılarak, giriş dosyasının adı değiştirilebilir ve çıkış dosyası orijinal dosya adı ile açılır. Bu seçenekle, herhangi bir dosyanın yedek kopyası oluşturulmaz."
+    },
+    "51": {
+        "question": "Alt program kelimesi neyi ifade eder?",
+        "answer": "Yukarıda belirtilen programlama dilinde herhangi bir görevi yerine getirmek için bir arada uygulanan kod bloğudur. Herhangi bir programın herhangi bir noktasında herhangi bir zamanda yürütülebilir. Bazı avantajlarını belirtmek gerekirse, modüler programlamayı yürütmeye yardımcı olur, bu da anlamını daha kolay hale getirir. Aynı kodu programlama dilindeki herhangi bir programı yeniden kullanarak tekrarlamayı ortadan kaldırmaya da yardımcı olur."
+    }
+}

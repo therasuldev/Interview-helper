@@ -1,0 +1,230 @@
+{
+    "1": {
+        "question": "Ruby programlama dili nedir?",
+        "answer": "Ruby, basitlik ve üretkenlik üzerine odaklanan, dinamik, yansımalı, genel amaçlı, açık kaynaklı bir programlama dilidir. Ruby, Perl, small talk, Eiffel, Ada ve Lisp'in özelliklerini karıştırır. Ruby, İmperatif dillerin işlevselliğiyle denge oluşturacak yeni bir dil oluşturmak amacıyla tasarlanmıştır."
+    },
+    "2": {
+        "question": "Ruby'nin geliştiricisi kimdir?",
+        "answer": "Ruby, Japonya'da 1990'ların ortalarında Yukihiro 'martz' Matsumoto tarafından tasarlanmış ve geliştirilmiştir."
+    },
+    "3": {
+        "question": "Ruby neden esnek bir dil olarak bilinir?",
+        "answer": "Ruby, kullanıcısını kısıtlamaz ve programlama unsurlarını değiştirmesine olanak tanıdığı için esnek bir dil olarak bilinir. Dilin belirli kısımları kaldırılabilir veya yeniden tanımlanabilir. Örneğin, iki sayıyı eklemek için Ruby, + işaretini veya 'plus' kelimesini kullanmayı sağlar. Bu değişiklik, Ruby'nin yerleşik Numeric sınıfıyla yapılabilir."
+    },
+    "4": {
+        "question": "Ruby'nin bazı özelliklerini listeleyin.",
+        "answer": "Ruby'nin birçok özelliği vardır. Bunlardan bazıları aşağıda listelenmiştir.\n\n* Nesne yönelimli\n* Esnek\n* Dinamik yazı tipi ve Duck yazı tipi\n* Çöp toplayıcı\n* Anahtar kelime argümanları"
+    },
+    "5": {
+        "question": "Ruby sınıf kütüphaneleri nedir?",
+        "answer": "Ruby sınıf kütüphaneleri, iplik programlama, veri tipleri, çeşitli alanlar gibi çeşitli alanlar içerir. Aşağıda, ilgili sınıf kütüphanelerine sahip olan alanların bir listesi bulunmaktadır:\n\n* Metin işleme\n* CGI Programlama\n* Ağ programlama\n* GUI programlama\n* XML programlama"
+    },
+    "6": {
+        "question": "Ruby'de kullanılan bazı operatörleri adlandırın.",
+        "answer": "Operatörler, farklı işlemleri gerçekleştirmek için kullanılan bir semboldür.\n\n* Tek operatör\n* Aritmetik operatör\n* Bitişik operatör\n* Mantıksal operatör\n* Üçlü operatör"
+    },
+    "7": {
+        "question": "Ruby programlama dilinde RubyGems nedir?",
+        "answer": "RubyGems, Ruby programlama dili için bir paket yöneticisi olarak çalışırken, ruby programlarını ve kütüphanelerini dağıtmak için standart bir biçim sağlar."
+    },
+    "8": {
+        "question": "Ruby değişkenleri nelerdir?",
+        "answer": "Ruby değişkenleri, verileri daha sonra bir programda kullanmak için tutar. Her değişken bir bellek olarak hareket eder ve farklı bir adı vardır.\n\n* Yerel değişken\n* Sınıf değişkeni\n* Örnek değişken\n* Global değişken"
+    },
+    "9": {
+        "question": "Ruby'de load ve require ne işe yarar?",
+        "answer": "Ruby'de, load ve require, mevcut kodu mevcut kodun içine yükleme işlemi için kullanılır. Kodun her zaman değiştiği veya herkesin URL'yi vurduğu her seferde kodun yüklenmesi gerektiğinde, 'load' kullanılması önerilir.\n\nOtomatik yükleme durumunda, 'require' kullanılması önerilir."
+    },
+    "10": {
+        "question": "Ruby'de case ifadesini açıklayın.",
+        "answer": "Ruby'de, 'switch' yerine 'case' ve 'case' yerine 'when' kullanırız. Case ifadesi, birden çok koşul ile bir ifadeyi eşleştirir, diğer dillerdeki switch ifadesi gibi."
+    },
+    "11": {
+        "question": "Ruby'de for döngüsünü açıklayın.",
+        "answer": "Ruby for döngüsü belirli bir sayı aralığında tekrar eder. Bu nedenle, for döngüsü, bir programın sabit sayıda yinelenmesi durumunda kullanılır.\n\nRuby for döngüsü, ifadedeki her öğe için bir kez çalıştırılır."
+    },
+    "12": {
+        "question": "Ruby'de while döngüsünü açıklayın.",
+        "answer": "Ruby while döngüsü bir programı birkaç kez tekrarlamak için kullanılır. İterasyon sayısı sabit değilse"
+    },
+    "13": {
+        "question": "Ruby'de do while döngüsünü açıklayın.",
+        "answer": "Ruby do while döngüsü bir programın bir bölümünü birkaç kez tekrarlar. Bu durumda, döngü en az bir kez çalıştırılacak çünkü do while koşulu en sonda yazılmıştır."
+    },
+    "14": {
+        "question": "Ruby'de until döngüsünü açıklayın.",
+        "answer": "Ruby until döngüsü verilen koşulun true değerini alana kadar çalışır. Koşul doğru olduğunda döngüden çıkar. Bu, while döngüsünün tersidir."
+    },
+    "15": {
+        "question": "Ruby'de break ifadesini açıklayın.",
+        "answer": "Ruby break ifadesi bir döngüyü sonlandırmak için kullanılır. Genellikle, koşul doğru olduğu sürece bir değer yazdırılan while döngüsünde kullanılır."
+    },
+    "16": {
+        "question": "Ruby'de next ifadesini açıklayın.",
+        "answer": "Ruby next ifadesi, döngünün bir sonraki yinelemesini atlamak için kullanılır. Bir sonraki ifade çalıştırıldığında, başka bir yineleme yapılmaz."
+    },
+    "17": {
+        "question": "Ruby'de redo ifadesini açıklayın.",
+        "answer": "Ruby redo ifadesi, döngünün mevcut yinelemesini tekrar etmek için kullanılır. Redo ifadesi, döngünün koşulunu değerlendirmeden çalıştırılır."
+    },
+    "18": {
+        "question": "Ruby'de retry ifadesini açıklayın.",
+        "answer": "Ruby retry ifadesi, döngünün tamamını baştan tekrarlamak için kullanılır."
+    },
+    "19": {
+        "question": "Ruby'de nasıl yorum eklenir?",
+        "answer": "Ruby yorumları, bir programın yürütmesine katılmayan yürütülemez satırlardır.\n\nTek satırlık yorum sözdizimi:\n#Bu tek satırlık yorumdur.  \n\nÇok satırlı yorum sözdizimi:\n=başla  \nBu  \ncoklu satır  \nyorum  \n=son  "
+    },
+    "20": {
+        "question": "Ruby nesnesini açıklayın.",
+        "answer": "Nesne, tüm Ruby nesnelerinin varsayılan köküdür. Ruby nesneleri, alternatif nesne hiyerarşileri oluşturmayı sağlayan BasicObject'ten miras alır."
+    },
+    "21": {
+        "question": "Ruby nesnesi nasıl oluşturulur?",
+        "answer": "Ruby'de nesneler, sınıfın new yöntemini çağırarak oluşturulur. Bu, benzersiz bir türde yöntemdir ve Ruby kütüphanesinde önceden tanımlanmıştır.\n Sözdizimi:\nnesneAdı=sınısAdı.new  "
+    },
+    "22": {
+        "question": "Ruby sınıfını açıklayın.",
+        "answer": "Her Ruby sınıfı, Ruby sınıfının bir örneğidir. Ruby'deki sınıflar birinci sınıf nesneleridir. Her zaman bir anahtar kelime olan sınıf ve ardından sınıf adı ile başlar.\n\nSözdizimi:\n\nclass SınısAdı  \nkodlar...  \nend  "
+    },
+    "23": {
+        "question": "Ruby yöntemlerini tanımlayın.",
+        "answer": "Ruby yöntemleri, aynı kodu tekrar tekrar yazmaktan kaçınmamızı sağlar. Ruby yöntemleri, diğer dillerdeki işlevlere benzerdir."
+    },
+    "24": {
+        "question": "Ruby blokları nedir?",
+        "answer": "Ruby kod blokları, diğer programlama dillerinde kapanışlar olarak adlandırılır. Bir grup kodu, her zaman parantezlerle çevrilmiş veya do...end arasına yazılmış bir grup kodu içerir."
+    },
+    "25": {
+        "question": "Ruby'de bir blok kaç farklı şekilde yazılabilir?",
+        "answer": "Bir blok iki şekilde yazılır:\n\n* Çok satırlı do ve end arasında\n* Tek satırlık süslü parantezler arasında {}\nHer ikisi de aynıdır ve aynı işlevselliğe sahiptir."
+    },
+    "26": {
+        "question": "Ruby'de yield ifadesi nedir?",
+        "answer": "Yield ifadesi, bir yöntem içinde bir bloğu bir değerle çağırmak için kullanılır."
+    },
+    "27": {
+        "question": "Ruby'de ampersand parametresi (&block) nasıl açıklanır?",
+        "answer": "&block, bir referansın (yerel bir değişkenin yerine) bir yönteme bloğa geçmek için bir yoludur.\n\nBurada, &'den sonra gelen blok kelimesi sadece referans için bir isimdir, bunun yerine başka bir isim de kullanılabilir."
+    },
+    "28": {
+        "question": "Ruby modülünü açıklayın.",
+        "answer": "Ruby modülü, birçok yöntem ve sabitin bir koleksiyonudur. Bir modül yöntemi bir örnek yöntemi veya modül yöntemi olabilir. Sınıflar gibi birçok yöntemi, sınıf tanımlamalarını, sabitleri ve diğer modülleri içerirler. Sınıflar gibi tanımlanırlar. Nesneler veya alt sınıflar modüller kullanılarak oluşturulamaz. Kalıtım modül hiyerarşisi yoktur.\n\nModüllerin temel olarak iki amaçları vardır:\n* Ad alanı olarak hareket ederler. İsim çakışmalarını önlerler.\n* Sınıflar arasında işlev paylaşımı sağlamak için karıştırma olanakı verir.\n Modül adı büyük harfle başlamalıdır.\n Sözdizimi: \n module ModülAdı  \nifade1  \nifade2  \n...........  \nend  "
+    },
+    "29": {
+        "question": "Ruby'de modül karıştırmalarını açıklayın.",
+        "answer": "Ruby, çoklu kalıtımı desteklemez. Modüller, Ruby'de mixin kullanarak çoklu kalıtım ihtiyacını ortadan kaldırır.\n\nBir modül bir sınıf değildir çünkü bir sınıf değildir. Ancak, bir modül bir sınıf içine dahil edilebilir.\n\nBir modül bir sınıfa dahil edildiğinde, sınıf modülün yöntemlerine erişebilir."
+    },
+    "30": {
+        "question": "Ruby dizelerini açıklayın.",
+        "answer": "Ruby dize nesnesi, genellikle karakterleri temsil eden rastgele bir bayt dizisini tutar ve manipüle eder. Bunlar String::new kullanılarak veya alıntılarla oluşturulur."
+    },
+    "31": {
+        "question": "Bir uygulamada Ruby dize öğelerine nasıl erişilir?",
+        "answer": "Köşeli parantezler [] yardımıyla Ruby dize öğelerine farklı yerlerden erişebilirsiniz. Köşeli parantezlerin içine dizini veya dizeyi yazın."
+    },
+    "32": {
+        "question": "Ruby'de çok satırlı dize nasıl yazılır?",
+        "answer": "Çok satırlı dize yazmak Ruby dilinde çok basittir. Çok satırlı dizeyi yazdırmak için üç yöntemi göstereceğiz.\n\n* Dize çift tırnaklar içinde yazılabilir.\n* % karakteri kullanılır ve dize / karakteri içine alınır.\n* Heredoc sözdizimi kullanılır, << ve dize kelimesi içine alınır."
+    },
+    "33": {
+        "question": "Ruby'de global değişken $ kullanımı nedir?",
+        "answer": "Global değişken, uygulamanın herhangi bir yerinde erişebileceğiniz bir değişken olması için Ruby'de bildirilir çünkü uygulamada tam kapsama sahiptir. Global değişkenler, Ruby'de $ ile başlar."
+    },
+    "34": {
+        "question": "Ruby'de dize birleştirme nedir? Dize birleştirmek için kaç farklı yol vardır?",
+        "answer": "Ruby dize birleştirme, birden fazla dizeden tek bir dize oluşturmayı ima eder. Birden fazla diziyi birleştirerek tek bir dize oluşturabilirsiniz.\n\nRuby dizelerini tek bir dizeye birleştirmenin dört yolu vardır:\n* Dizeler arasına artı işareti kullanarak.\n* Dizeler arasına tek bir boşluk kullanarak.\n* Dizeler arasına << işareti kullanarak.\n* Dizeler arasına concat yöntemini kullanarak."
+    },
+    "35": {
+        "question": "Ruby'de dondurulmuş dizeler nedir?",
+        "answer": "Çoğu programlama dilinde dizeler değiştirilemezdir. Bu, mevcut bir dizinin değiştirilemeyeceği, yalnızca yeni bir dize oluşturulabileceği anlamına gelir.\n\nRuby'de, varsayılan olarak dizeler değiştirilemez değildir. Onları değiştirilemez yapmak için freeze yöntemi kullanılabilir."
+    },
+    "36": {
+        "question": "Ruby dizelerini kaç farklı şekilde karşılaştırabilirsiniz?",
+        "answer": "Ruby dizeleri üç operatörle karşılaştırılabilir:\n\n* == operatörü ile: Doğru veya yanlış döndürür\n* eql? Operatörü ile: Doğru veya yanlış döndürür\n* casecmp yöntemi ile: Eşleşirse 0 veya eşleşmezse 1 döndürür"
+    },
+    "37": {
+        "question": "Ruby sınıf kütüphaneleri nedir?",
+        "answer": "Ruby sınıf kütüphaneleri, iplik programlama, veri tipleri ve çeşitli alanlar gibi çeşitli alanları içerir. Gün geçtikçe ek kütüphaneler gelişmektedir. Aşağıdaki alanlar, ilgili sınıf kütüphanelerine sahip olan alanlardır.\n\n* Metin işleme: Hızlı ve temiz metin işleme için Dosya, Dize, Düzenli İfade.\n* CGI Programlama: CGI programlama desteği için veritabanı arayüzü, eRuby, Apache için mod_ruby, metin işleme sınıfları gibi destekleyici sınıf kütüphaneleri bulunmaktadır.\n* Ağ programlama: Ağ programlama için çeşitli iyi tasarlanmış soketler Ruby'de bulunmaktadır.\n* GUI programlama: Ruby/Tk ve Ruby/Gtk, GUI programlama için sınıflardır\n* XML programlama: UTF-8 metin işleme düzenli ifade motoru XML programlamayı Ruby'de çok pratik hale getirir."
+    },
+    "38": {
+        "question": "Ruby dizileri nedir ve nasıl oluşturulurlar?",
+        "answer": "Ruby dizileri, nesnelerin sıralı koleksiyonlarıdır. Integer, sayı, hash, string, sembol veya başka bir dizi gibi nesneleri tutabilirler.\n\nİndeksleme 0'dan başlar. Negatif indeks, dizinin sonundan -1 ile başlar. Örneğin, -1 dizinin son öğesini gösterir ve 0 dizinin ilk öğesini gösterir.\n\nBir Ruby dizisi birçok şekilde oluşturulabilir.\n\n* Alıntı işareti oluşturucu [] kullanarak\n* Yeni sınıf yöntemi kullanarak"
+    },
+    "39": {
+        "question": "Ruby dizisi öğelerine nasıl erişilir? Ruby öğelerine erişmek için kaç yöntem kullanılır?",
+        "answer": "Ruby dizisi öğelerine #[] yöntemi kullanılarak erişilebilir. Bir veya daha fazla argüman veya hatta bir aralık geçirebilirsiniz.\n\nRuby öğelerine erişmek için kullanılan yöntemler:\n\n* at yöntemi\n* slice yöntemi\n* al yöntemi\n* ilk ve son yöntem\n* almak yöntemi\n* bırak yöntemi"
+    },
+    "40": {
+        "question": "Ruby dizisine farklı şekillerde nasıl öğe eklenir?",
+        "answer": "Ruby dizisi öğeleri farklı şekillerde eklenir.\n\n* itme veya <<\n* önden eklemek\n* yerleştirmek"
+    },
+    "41": {
+        "question": "Ruby dizisinden farklı şekillerde nasıl öğe kaldırılır?",
+        "answer": "Ruby dizisi öğeleri farklı şekillerde kaldırılabilir.\n\n* pat\n* kaydır\n* silmek\n* uniq"
+    },
+    "42": {
+        "question": "Ruby hash'lerini açıklayın.",
+        "answer": "Bir Ruby hash, benzersiz anahtarlar ve değerlerinin bir koleksiyonudur. Dizilere benzerler ancak dizi, bir indeks olarak bir tamsayı ve hash herhangi bir nesne türünü kullanır. Ayrıca, ilişkisel diziler, sözlükler veya haritalar olarak da adlandırılırlar.\n\nBir hash, var olmayan bir anahtarla erişildiğinde, yöntem nil değerini döndürecektir."
+    },
+    "43": {
+        "question": "Ruby'de yeni bir zaman örneği nasıl oluşturulur?",
+        "answer": "Yeni bir Zaman örneği ::new ile oluşturulabilir. Bu, geçerli sistem zamanını kullanacaktır. Yıl, ay, gün, saat, dakika vb. gibi zaman parçaları da geçirilebilir.\n\nYeni bir zaman örneği oluştururken en az bir yıl geçirmeniz gerekir. Yalnızca yıl geçirilirse, zaman, o yılın 1 Ocak'ı saat 00:00:00'da geçerli sistem saat diliminde varsayılan olarak ayarlanır."
+    },
+    "44": {
+        "question": "Ruby aralıklarını açıklayın. Aralıkları tanımlamak için hangi yollar vardır?",
+        "answer": "Ruby aralığı, bir başlangıç ve bir son ile bir değer kümesini temsil eder. Onlar s..e ve s...e literalleri veya ::new ile oluşturulabilir.\n\n.. içeren aralıklar, başlangıçtan sona kadar kapsar. ... içeren aralıklar, son değere kadar münhasıran çalışır.\n\nRuby'de aralıkları tanımlamanın birçok yolu vardır.\n\n * Sıralar olarak aralıklar\n * Koşullar olarak aralıklar\n * Aralıklar olarak aralıklar"
+    },
+    "45": {
+        "question": "Ruby yineleyicileri nedir?",
+        "answer": "Yineleyici, nesne yönelimli dilde kullanılan bir kavramdır. Yineleme, bir döngü gibi bir şeyi birçok kez yapmayı içerir.\n\nDöngü yöntemi en basit yineleyicidir. Bunlar, bir koleksiyondan tüm öğeleri, birbirini izleyen şekilde döndürür. Diziler ve hashler, koleksiyon kategorisine girer."
+    },
+    "46": {
+        "question": "Ruby'de kaç tane yineleyici vardır?",
+        "answer": "Ruby'de şu yineleyiciler vardır:\n\n* her bir yineleyici\n* kez yineleyici\n* yukarıya ve aşağıya yineleyici\n* adım yineleyici\n* her_line yineleyici"
+    },
+    "47": {
+        "question": "Ruby'de IO konsolu için farklı yöntemlerin adları nelerdir?",
+        "answer": "IO konsolu, konsolla etkileşimde bulunmak için farklı yöntemler sunar. IO sınıfı temel yöntemleri sağlar:\n\n* IO::konsol\n* IO#ham#ham!\n* IO#cooked\n* IO#cooked!\n* IO#getch"
+    },
+    "48": {
+        "question": "Ruby'de bir dosya nasıl açılır?",
+        "answer": "Ruby'de bir dosya okumak, yazmak veya her ikisini de yapmak için farklı yöntemlerle oluşturulabilir.\n\nBir dosyayı açmanın iki yöntemi vardır.\n\n* Dosya.new yöntemi: Bu yöntemle okuma, yazma veya her ikisi için yeni bir dosya oluşturulabilir.\n* Dosya aç yöntemi: Bu yöntemle yeni bir dosya nesnesi oluşturulur. Bu dosya nesnesi bir dosyaya atanır.\n\n İki yöntem arasındaki fark, Dosya aç yönteminin bir blokla ilişkilendirilebilmesidir, Dosya.new yöntemiyle yapılamaz."
+    },
+    "49": {
+        "question": "Ruby'de sınıf kütüphaneleri nasıl açıklanır?",
+        "answer": "Ruby sınıf kütüphaneleri, iplik programlama, veri tipleri ve çeşitli alanlar gibi çeşitli alanları içerir. Gün geçtikçe ek kütüphaneler gelişmektedir. Aşağıdaki alanlar, ilgili sınıf kütüphanelerine sahip olan alanlardır.\n\n* Metin işleme: Hızlı ve temiz metin işleme için Dosya, Dize, Düzenli İfade.\n* CGI Programlama: CGI programlama desteği için veritabanı arayüzü, eRuby, Apache için mod_ruby, metin işleme sınıfları gibi destekleyici sınıf kütüphaneleri bulunmaktadır.\n* Ağ programlama: Ağ programlama için çeşitli iyi tasarlanmış soketler Ruby'de bulunmaktadır.\n* GUI programlama: Ruby/Tk ve Ruby/Gtk, GUI programlama için sınıflardır\n* XML programlama: UTF-8 metin işleme düzenli ifade motoru XML programlamayı Ruby'de çok pratik hale getirir."
+    },
+    "50": {
+        "question": "Ruby'de sysread yöntemi nedir?",
+        "answer": "sysread yöntemi, bir dosyanın içeriğini okumak için de kullanılır. Bu yöntemin yardımıyla bir dosyayı herhangi bir modda açabilirsiniz."
+    },
+    "51": {
+        "question": "Ruby'de bir dizinin var olup olmadığını nasıl kontrol edilir?",
+        "answer": "Bir dizinin var olup olmadığını kontrol etmek için exists? yöntemi kullanılır.\n\nSözdizimi:\n\nputs Dir.exists? 'dizinAdı'"
+    },
+    "52": {
+        "question": "Ruby istisnalarını açıklayın.",
+        "answer": "Ruby istisnası bir nesnedir, Exception sınıfının bir örneği veya o sınıfın bir alt sınıfıdır. Bir şeyler ters gittiğinde, Ruby programı istisnai bir davranış fırlatır. Varsayılan olarak, Ruby programı bir istisna fırlatıldığında sona erer."
+    },
+    "53": {
+        "question": "Yerleşik Ruby sınıf istisnalarından bazıları nelerdir?",
+        "answer": "İstisna alt sınıflarından bazıları şunlardır:\n\n* NoMemoryError\n* ScriptError\n* SecurityError\n* SignalException"
+    },
+    "54": {
+        "question": "Bir istisna Ruby'de nasıl ele alınır?",
+        "answer": "Bir istisnayı ele almak için, istisna fırlatan kod begin-end bloğu içine alınır. rescue ifadeleri kullanarak ele almak istediğimiz istisna türlerini belirtebiliriz."
+    },
+    "55": {
+        "question": "Ruby'de retry ifadesinin kullanımını açıklayın.",
+        "answer": "Genellikle bir rescue bloğunda, istisna yakalanır ve kod başlangıç bloğundan sonra devam eder. retry ifadesi kullanılarak, bir istisna yakalandıktan sonra rescue blok kodu begin'den devam ettirilebilir."
+    },
+    "56": {
+        "question": "Ruby'de raise ifadesinin kullanımını açıklayın.",
+        "answer": "raise ifadesi bir istisna yükseltmek için kullanılır.\n\nSözdizimi:\n\nraise\n\nVeya,\n\nraise 'Hata Mesajı' \n\nVeya,\n\nraise ExceptionType, 'Hata Mesajı' \n\nVeya,\n\nraise ExceptionType, 'Hata Mesajı' koşul"
+    },
+    "57": {
+        "question": "Ruby'de ensure ifadesinin kullanımını açıklayın.",
+        "answer": "Kodun sonunda bazı işlemlerin garanti edildiği bir ensure ifadesi bulunmaktadır. ensure bloğu, her zaman bir istisna fırlatılsa da veya fırlatılmasa da çalışır. Son rescue bloğundan sonra yerleştirilir ve blok sonlandığında her zaman çalıştırılır.\n\nensure bloğu, bir istisna oluşursa, istisna kurtarılırsa veya kod yakalanmamış bir istisna tarafından sonlandırılırsa bile her durumda çalışacaktır.\n\nSözdizimi:\n\nbegin  \nkod..  \n#.. istisna fırlat  \nrescue  \n#.. istisna kurtarılır  \nensure  \n#.. Bu kod her zaman çalışır.  \nend  "
+    }
+}

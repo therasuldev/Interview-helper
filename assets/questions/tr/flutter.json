@@ -1,0 +1,294 @@
+{
+    "1": {
+        "question": "Flutter nedir ve diğer çapraz platform çerçevelerinden nasıl farklıdır?",
+        "answer": "Flutter, Google tarafından oluşturulan ücretsiz, açık kaynaklı bir mobil uygulama geliştirme çerçevesidir. Dart programlama dilini kullanır ve geliştiricilere tek bir kod tabanı ile hem iOS hem de Android için yüksek kaliteli, natively derlenmiş uygulamalar oluşturma imkanı sağlar. Flutter, React Native ve Xamarin gibi diğer çapraz platform çerçevelerinden birkaç önemli noktada farklılık gösterir. İlk olarak, Flutter, hızlı, akıcı ve çekici uygulama animasyonları ve grafikleri için Skia grafik kütüphanesine dayanan benzersiz ve güçlü bir render motoru kullanır. İkinci olarak, Flutter, yüksek derecede özelleştirilebilir bir widget seti sunar, bu da son derece kişiselleştirilmiş ve benzersiz bir kullanıcı deneyimi sağlar. Son olarak, Flutter ayrıca Hızlı Yükleme (Hot Reload) sunar, bu da geliştirme sırasında daha hızlı iterasyon ve hata düzeltme imkanı sağlar, bu da geliştirme sürecini daha verimli hale getirir."
+    },
+    "2": {
+        "question": "Flutter'da widget nedir?",
+        "answer": "Widget'lar, uygulamanın UI'sinin belirli bir durum ve yapılandırmada nasıl görüneceğini açıklar. Widget'lar, herhangi bir Flutter uygulamasının yapı taşlarıdır."
+    },
+    "3": {
+        "question": "Material ve cupertino arasındaki fark nedir?",
+        "answer": "Material widget'ı, iOS, Android, web ve masaüstü uygulamaları için malzeme tasarım dilini uygular. Diğer taraftan, Cupertino widget'ı, Apple'ın insan arayüzü yönergelerine dayanan mevcut iOS tasarım dilini uygulamak için kullanılır."
+    },
+    "4": {
+        "question": "Flutter'da context nedir?",
+        "answer": "Context, widget ağacındaki bir widget'ın konumuna bir bağlantıdır."
+    },
+    "5": {
+        "question": "Flutter'da key nedir?",
+        "answer": "Key, Widget'lar, Elementler ve SemanticsNodes için bir tanımlayıcıdır."
+    },
+    "6": {
+        "question": "Flutter'da Local Key ve Global Key arasındaki fark nedir?",
+        "answer": "LocalKey, aynı ebeveyni paylaşan öğeler arasında benzersiz olan bir anahtardır. GlobalKey ise uygulama genelinde benzersiz olan bir anahtardır."
+    },
+    "7": {
+        "question": "Vsync nedir?",
+        "answer": "Vsync, ekranın durumunu takip eder, böylece Flutter ekran gösterilmediğinde animasyonları işlemez."
+    },
+    "8": {
+        "question": "Flutter'da state nedir?",
+        "answer": "State, widget oluşturulurken senkronize olarak okunabilen ve widget'ın ömrü boyunca değişebilecek bilgidir."
+    },
+    "9": {
+        "question": "Mixin'i açıklayın, mirasından nasıl farklıdır?",
+        "answer": "Mixin, bir başka sınıfa kod parçalarını yeniden kullanmak için 'iliştirilebilen' bir tür sınıftır ve bunu miras almadan yapar. extends: Bu, yeni özellikler eklemek istediğinizde kullanabileceğiniz tipik bir OOP mirasıdır. Sınıf B extends A {} kullandığınızda, A sınıfının tüm yöntemlerini geçersiz kılmanız GEREKMEZ. Miras almak, istediğiniz kadar yöntemi geçersiz kılmanız için gereklidir."
+    },
+    "10": {
+        "question": "Dart dilinde async'in kullanımı nedir?",
+        "answer": "Async hesaplama, başlatıldığında hemen bir sonuç sağlayamaz çünkü programın bir dış yanıtı beklemesi gerekebilir."
+    },
+    "11": {
+        "question": "async* nedir?",
+        "answer": "async*, bir Stream nesnesi döndüren bir asenkron üreteçtir."
+    },
+    "12": {
+        "question": "Tween nedir?",
+        "answer": "Tween, iki değer arasındaki geçişi tanımlar. Bu görevi gerçekleştirmek için bir Tween, bir başlangıç değeri, bir bitiş değeri ve aradaki geçişi nasıl gerçekleştireceğini söyleyen bir yöntem gerektirir."
+    },
+    "13": {
+        "question": "Animasyon nedir?",
+        "answer": "Bir animasyon, A'dan B'ye zaman içindeki bir görsel değişimdir. Curve sınıfı, değişimin hızını tanımlar."
+    },
+    "14": {
+        "question": "Flexible ve Expanded arasındaki temel fark nedir?",
+        "answer": "Flexible, sadece gereken alanı alır ve Expanded, tüm kullanılabilir alanı, esnek faktöre saygı göstererek alır."
+    },
+    "15": {
+        "question": "Flutter'da MaterialApp'ın ihtiyacı nedir?",
+        "answer": "MaterialApp, Flutter'ın WidgetsApp'inin bir uzantısıdır, temel bir üst düzey widgettir. WidgetsApp, navigasyon ayarlamak ve tüm programa bir tema uygulamak gibi çoğu mobil uygulama için gereken birkaç unsurun soyutlanmasını sağlayan bir kolaylık widget'idir."
+    },
+    "16": {
+        "question": "LayoutBuilder'ın flutter'daki kullanımlarını açıklayın.",
+        "answer": "LayoutBuilder, orijinal widget'ın boyutuna bağlı olarak bir widget ağacı oluşturmaya yardımcı olur. flutter, düzen oluşturucusunu bir parametre olarak alabilir. İki parametresi vardır. BuildContext ve Boxconstrant. BuildContext bir widget'a işaret eder. Ancak kutu kısıtı daha önemlidir, bu da ebeveyn widget'a genişliği verir ve bu da çocuğu ebeveynin boyutuna göre yönetmek için kullanılır."
+    },
+    "17": {
+        "question": "Tree shaking'in gerekliliğini açıklayın.",
+        "answer": "Tree shaking, yalnızca garanti edilen şekilde çalıştırılacak kodu içerecek şekilde ölü kodun ortadan kaldırılma işlemidir."
+    },
+    "18": {
+        "question": "Flutter'da Ephemeral State ile App state arasındaki fark nedir?",
+        "answer": "Ephemeral State - Durumsal değişkenleriniz Stateful widget'ın içindeyse, bu geçici durum olarak bilinir. Durumsal değişkenleriniz Stateful widget'ın dışındaysa, bu App state olarak bilinir (çünkü bu durum birçok widget tarafından kullanılır)."
+    },
+    "19": {
+        "question": "Navigator.push() ve Navigator.pop() yöntemleri arasındaki farkı açıklayın.",
+        "answer": "Yeni bir rotaya geçmek için Navigator.push() yöntemini kullanın. push() yöntemi, Navigator tarafından yönetilen rotalar yığınına bir Route ekler. pop() yöntemi, Navigator tarafından yönetilen rotalar yığınından mevcut Route'yi kaldırır."
+    },
+    "20": {
+        "question": "Flutter'da FormState nedir?",
+        "answer": "FormState nesnesi, ilişkilendirilmiş Form'un bir torunu olan her FormField'ı kaydetmek, sıfırlamak ve doğrulamak için kullanılabilir."
+    },
+    "21": {
+        "question": "Flutter'da SafeArea'nın kullanımını açıklayın.",
+        "answer": "SafeArea, çocuğunu işletim sistemi tarafından oluşabilecek müdahalelerden korumak için yeterli dolgu ile çocuğunu yerleştirir."
+    },
+    "22": {
+        "question": "NetworkImage ve Image.network arasındaki farkı belirtin.",
+        "answer": "NetworkImage sınıfı, ona iletilen src URL'sinden bir resim sağlayan bir nesne oluşturur. Bu bir widget değildir ve ekrana bir resim çıkarmaz. Image.network ise ekranda bir resim görüntüleyen bir widget oluşturur."
+    },
+    "23": {
+        "question": "Gradle nedir?",
+        "answer": "Gradle, android uygulama geliştirme için kullanılan bir yapılandırma dosyasıdır."
+    },
+    "24": {
+        "question": "BLoC nedir?",
+        "answer": "BLoC, Business Logic Components'ın kısaltmasıdır; uygulamanın iş mantığını Kullanıcı Arayüzünden ayırmayı amaçlar, bu da uygulama kodunu daha anlaşılır, ölçeklenebilir ve test edilebilir hale getirir."
+    },
+    "25": {
+        "question": "Hot reload ve hot restart arasındaki fark nedir?",
+        "answer": "Hot reload, kod değişikliklerini VM'e yükler ve widget ağacını yeniden oluşturur, uygulama durumunu korur; main() veya initState() yeniden çalıştırılmaz. Hot restart ise kod değişikliklerini VM'e yükler ve Flutter uygulamasını yeniden başlatır, uygulama durumunu kaybeder."
+    },
+    "26": {
+        "question": "Stateful widget'lar ile stateless widget'lar arasındaki fark nedir?",
+        "answer": "Stateless widget'lar, oluşturulduktan sonra durumları değiştirilemeyen widget'lar. Geliştirildikten sonra bu widget'lar değişmez, yani değişkenler, simgeler, düğmeler veya veri alımı gibi herhangi bir değişiklik uygulanmaz. Stateless widget'lar, Icon, IconButton ve Text gibi widget'ları içerir. Stateful widget'lar, oluşturulduktan sonra durumları değiştirilebilen widget'lar. Bu durumlar değişebilir, yani yaşamları boyunca birkaç kez değişebilirler CheckBox, RadioButton, Form ve TextField bazı örneklerdir."
+    },
+    "27": {
+        "question": "Flutter'da birim testi, widget testi ve entegrasyon testi arasındaki fark nedir?",
+        "answer": "Birim testi, yalnızca tek bir işlevi, yöntemi veya sınıfı test eder. Bir widget testi (diğer UI çerçevelerinde bileşen testi olarak adlandırılır), yalnızca tek bir widget'ı test eder. Bir entegrasyon testi, bir uygulamanın tamamını veya bir uygulamanın büyük bir bölümünü test eder."
+    },
+    "28": {
+        "question": "Null aware operatörler nedir?",
+        "answer": "Dart'taki null aware operatörler, bir değerin null olup olmadığına göre hesaplamalar yapmanıza olanak tanır."
+    },
+    "29": {
+        "question": "Akışların kullanımı nedir?",
+        "answer": "Akışlar, asenkron veri dizisi sağlar."
+    },
+    "30": {
+        "question": "Future nedir?",
+        "answer": "Futures, daha sonra kullanılabilir hale gelecek olan herhangi bir tekil veri türüdür, örneğin bir dize."
+    },
+    "31": {
+        "question": "Akışları nasıl sınıflandırabiliriz?",
+        "answer": "İki tür akış vardır: 'Tek-abonelik' akışlar ve 'yayın' akışları. Tek-abonelik akışı, akışın tüm ömrü boyunca yalnızca tek bir dinleyiciye izin verir. Tek-abonelik akışları genellikle dosya G/Ç gibi daha büyük sürekli veri parçalarını yayınlamak için kullanılır. Bir yayın akışı, herhangi bir sayıda dinleyiciye izin verir ve dinleyiciler olmasa bile olaylarını hazır olduklarında tetikler."
+    },
+    "32": {
+        "question": "Ticker'ın kullanımı nedir?",
+        "answer": "Ticker, Flutter motorunun yeni bir kare çizmeye hazır olduğunda bizi bilgilendirmek için kullanabileceğimiz özel bir periyodik zamanlayıcı olarak düşünebilirsiniz. Bir Ticker'ın görevi, bir kare güncellemesi gerçekleşeceğinde herhangi bir dinleyiciye bir bildirim sağlamaktır. Bir ticker oluşturmak için, State alt sınıfımıza SingleTickerProviderStateMixin eklememiz gerekir. Daha sonra initState() içinde oluşturabilir ve başlatabiliriz: ekran görüntülenmiyorken."
+    },
+    "33": {
+        "question": "Flutter'ın temel özellikleri nelerdir?",
+        "answer": "Hot Reload: Geliştiricilerin kod değişikliklerini gerçek zamanlı olarak görmelerini sağlar, geliştirme sürecini daha hızlı ve verimli hale getirir.\nÖzelleştirilebilir Widget'lar: Flutter, benzersiz ve çekici kullanıcı arayüzleri oluşturmak için kapsamlı bir özelleştirilebilir widget kümesine sahiptir.\nHızlı ve Sorunsuz Performans: Flutter, kendi render motorunu kullanır, bu motor Skia grafik kütüphanesine dayanır ve hızlı ve sorunsuz uygulama performansı sağlar.\nTek Kod Tabanı: Flutter ile geliştiriciler, tek bir kod tabanıyla hem iOS hem de Android için uygulamalar oluşturabilir, geliştirme süresini ve çabasını azaltır.\nYerel Özelliklere Erişim: Flutter, iOS ve Android'de yerel özelliklere ve API'lara kolay erişim sağlar, geliştiricilerin yerel gibi işlevsellikle uygulamalar oluşturmasını sağlar.\nDart Programlama Dili: Flutter, nesne tabanlı dillerde deneyimi olanlar için öğrenmesi kolay olan Dart programlama dilini kullanır.\nBüyük Topluluk: Flutter, geliştiriciler ve katkıda bulunanlar için geniş ve büyüyen bir topluluğa sahiptir, bu da uygulama geliştirme için destek ve kaynak bulmayı kolaylaştırır."
+    },
+    "34": {
+        "question": "Flutter'ın mimarisi nedir ve nasıl çalışır?",
+        "answer": "Flutter, veri değişikliklerini dinler ve veri değiştiğinde kullanıcı arayüzünü otomatik olarak günceller, bu da hızlı, sorunsuz ve tepkisel bir kullanıcı deneyimi sağlar.\n\nFlutter'ın mimarisinin çekirdeğinde, kullanıcı arayüzünü oluşturma, jestleri işleme ve yazı tipleri ve görüntüler gibi kaynakları yönetme gibi işlevlerden sorumlu Flutter Motoru bulunur. Flutter Motoru, ana platformdaki yerel kodla iletişim kurar ve platforma özgü özelliklere erişim sağlar.\n\nFlutter ayrıca, kullanıcı arayüzünün yapı taşları olan zengin ve özelleştirilebilir widget kümesini içerir. Bu widget'lar bir araya getirilip iç içe yerleştirilerek karmaşık ve dinamik kullanıcı arayüzleri oluşturulabilir. Widget'lar Flutter Motoru tarafından çizilir ve gerçek zamanlı olarak güncellenebilir, tam uygulama yeniden yüklemesi gerekmez.\n\nSon olarak, Flutter bir geliştirme araç seti sağlar, bu da Flutter CLI, Flutter çerçevesi ve Dart programlama dilini içerir. Flutter CLI, projeler oluşturmak ve yönetmek, uygulamaları cihazlarda veya simülatörlerde çalıştırmak ve diğer geliştirme görevlerini gerçekleştirmek için kullanılır. Flutter çerçevesi temel işlevselliği ve widget'ları sağlar, Dart programlama dili ise sözdizimini ve programlama araçlarını sağlar.\n\nGenel olarak, Flutter'ın mimarisi hızlı, esnek ve verimli olacak şekilde tasarlanmıştır, bu da mobil uygulama geliştirme için popüler bir seçenek yapar."
+    },
+    "35": {
+        "question": "Flutter nasıl iOS ve Android arasındaki farkları yönetir?",
+        "answer": "Flutter, iOS ve Android arasındaki farkları tek bir kod tabanıyla yönetmek için tasarlanmıştır. Bu, geliştiricilerin her iki platformda da çalışan tek bir kod kümesi yazmalarını sağlar, her platform için ayrı kod tabanları tutmak zorunda kalmadan.\n\nAncak, genellikle bir geliştiricinin platforma özgü işlevsellik eklemesi veya kullanıcı arayüzünü her platformun kurallarına uyarlaması gerekir. Flutter, bu farklılıkları ele almanın birkaç yolunu sağlar:\n\nCupertino (iOS tarzı) Widget'lar: Flutter, iOS için yerel widget'ları andıran bir dizi Cupertino widget içerir. Geliştiriciler bu widget'ları kullanarak iOS tarzı arayüzler oluşturabilir veya kendi özel widget'larını oluşturmak için bir başlangıç noktası olarak kullanabilirler.\n\nPlatforma Özgü Kod: Flutter, Dart'ın koşullu içe aktarmalarını ve Platform sınıfını kullanarak platforma özgü kod yazmayı kolaylaştırır. Bu, yalnızca belirli bir platformda yürütülen kodu yazmalarını sağlar, geliştiricilere platforma özgü işlevsellik üzerinde tam kontrol sağlar.\n\nTema Verisi: Flutter'ın tema verileri, uygulamanın platforma göre görsel stilini özelleştirmenin bir yolunu sağlar. Örneğin, geliştiriciler iOS ve Android için farklı renkler, metin stilleri ve simge boyutları belirtebilirler, bu otomatik olarak çerçeve tarafından uygulanır.\n\nUyumlu Widget'lar: Flutter'ın uyumlu widget'ları, cihazın ekran boyutu ve yönelimine bağlı olarak boyutlarını ve düzenlerini otomatik olarak ayarlar. Bu, telefonlar ve tabletlerde harika görünen uygulamalar oluşturmayı kolaylaştırır, platformdan bağımsız olarak.\n\nGenel olarak, Flutter, iOS ve Android arasındaki farkları ele almak için esnek ve güçlü bir araç seti sunar, bu da onu platformlararası uygulama geliştirme için popüler bir seçenek haline getirir."
+    },
+    "36": {
+        "question": "Bir Flutter uygulamasını nasıl hata ayıklarsınız?",
+        "answer": "Bir Flutter uygulamasını hata ayıklamak, uygulama geliştirme sürecinin kritik bir parçasıdır. Flutter, geliştiricilere uygulamalarındaki hataları bulmaları ve düzeltmeleri için çeşitli araçlar ve teknikler sağlar. İşte bir Flutter uygulamasını hata ayıklamanın en yaygın yollarından bazıları:\n\nHata Ayıklama Konsolu: Hata ayıklama konsolu, mesajları yazdırma, değişkenleri inceleme ve bir uygulama içindeki işlem akışını izleme konusunda güçlü bir araçtır. Geliştiriciler, uygulamalarının nasıl davrandığını daha iyi anlamak ve sorunları izole etmek için hata ayıklama konsolunu kullanabilirler.\n\nFlutter Doktoru: Flutter Doktoru, Flutter geliştirme ortamındaki sorunları teşhis etmeye yardımcı olan bir komut satırı aracıdır. Kurulu araçları ve bağımlılıkları kontrol eder ve herhangi bir sorunu düzeltmek için önerilerde bulunur.\n\nFlutter Gözlemcisi: Flutter Gözlemcisi, Flutter uygulamalarını hata ayıklamak ve profillemek için web tabanlı bir araçtır. Uygulamanın performansı hakkında bilgi sağlar, CPU kullanımı, bellek kullanımı ve widget ağacı dahil.\n\nKırılma Noktaları: Kırılma noktaları, bir uygulamanın belirli bir noktasında işlemi durdurmak ve değişkenlerin değerlerini ve uygulamanın durumunu incelemek için güçlü bir araçtır. Geliştiriciler, kodlarında hataları bulmak ve düzeltmek için kırılma noktalarını kullanabilirler.\n\nFlutter Geliştirme Araçları: Flutter Geliştirme Araçları, Flutter uygulamalarını hata ayıklamak ve profillemek için tarayıcı tabanlı bir geliştirme aracıdır. Uygulamanın performansı hakkında kapsamlı bir görünüm sağlar, CPU kullanımı, bellek kullanımı ve widget ağacı dahil.\n\nSıcak Yeniden Yükleme: Sıcak yeniden yükleme, Flutter'ın bir özelliğidir ve geliştiricilere uygulamayı yeniden başlatmadan veya kodu yeniden derlemeden hızlıca yeniden yüklemelerini sağlar. Bu, kodda değişiklikler yapmayı ve sonuçları görmeyi kolaylaştırır.\n\nFlutter Denetleyici: Flutter Denetleyicisi, Flutter uygulamalarını hata ayıklamak için görsel bir araçtır. Widget ağacının canlı bir görünümünü sağlar ve geliştiricilere widget'ların özelliklerini gerçek zamanlı olarak inceleme ve değiştirme olanağı sunar.\n\nGenel olarak, Flutter, geliştiricilerin uygulamalarını hata ayıklamalarına yardımcı olmak için çeşitli araçlar ve teknikler sunar, bu da hataları bulmayı, düzeltmeyi ve uygulamanın genel kalitesini artırmayı kolaylaştırır."
+    },
+    "37": {
+        "question": "Flutter'da widget ağacı nedir ve nasıl çalışır?",
+        "answer": "Flutter'da widget ağacı, bir Flutter uygulamasının görsel öğelerini temsil eden hiyerarşik bir yapıdır. Ağaçtaki her widget, metin etiketi, görüntü veya düğme gibi belirli bir kullanıcı arayüzü parçasını oluşturmakla sorumludur.\n\nWidget ağacı, bildirimsel bir programlama modeli kullanılarak oluşturulur, bu da geliştiricilerin kod kullanarak ağacın yapısını tanımlamasını sağlar. Flutter çerçevesi, widget'ları oluşturmayı ve kullanıcı arayüzünü gerektiğinde güncellemeyi üstlenir.\n\nÖrneğin, bir geliştiricinin bir metin etiketi ve bir görüntü içeren bir ekran oluşturmak istediğini varsayalım. Bu durumda, geliştirici, widget ağacında iki widget oluşturur: etiket için bir Metin widget'i ve görüntü için bir Görüntü widget'i. Ana widget, örneğin, etiketi ve görüntüyü dikey olarak yığmak için bir Sütun widget'i kullanarak, çocuk widget'ları düzenler.\n\nWidget ağacı dinamik bir yapıya sahiptir, yani çalışma zamanında değişebilir. Örneğin, bir kullanıcı uygulamayla etkileşime geçtiğinde, widget'ların durumu değişebilir, bu da widget ağacının yeniden oluşturulmasına neden olabilir. Bu işlem, Flutter'ın çerçevesi tarafından optimize edilir ve yeniden çizilmesi gereken widget sayısını en aza indirir, böylece kullanıcı deneyimi pürüzsüz ve verimli olur.\n\nGenel olarak, widget ağacı, Flutter'da temel bir kavramdır ve uygulamanın görsel öğelerini yapılandırılmış ve verimli bir şekilde tanımlama ve yönetme olanağı sağlar."
+    },
+    "38": {
+        "question": "StatelessWidget ve StatefulWidget arasındaki fark nedir?",
+        "answer": "Flutter'da, StatelessWidget dinamik olarak değişmeyen kullanıcı arayüzünün statik bir bölümünü temsil eden bir widget'tir. Örneğin, bir metin etiketi veya statik bir görüntü bir StatelessWidget olarak uygulanabilir.\n\nBuna karşılık, StatefulWidget, dinamik olarak değişebilen bir kullanıcı arayüzünün bir bölümünü temsil eden bir widget'tir. Örneğin, bir düğme veya bir geçiş anahtarı bir StatefulWidget olarak uygulanabilir.\n\nStatelessWidget ve StatefulWidget arasındaki temel fark, nasıl durumlarını veya verilerini yönettiklerinde yatar. Bir StatelessWidget'ın durumu yoktur, yani özellikleri yalnızca bir kez oluşturulduğunda ayarlanır ve değiştirilemez. Bunun karşısında, StatefulWidget'ın bir durumu vardır ve bu durum, kullanıcı etkileşimlerine veya diğer olaylara yanıt olarak dinamik olarak güncellenebilir. Bir StatefulWidget'ın durumu değiştiğinde, Flutter çerçevesi tarafından widget yeniden oluşturulur ve güncellenmiş durumu yansıtmak için kullanıcı arayüzü yeniden çizilir.\n\nGenel olarak, StatelessWidget ve StatefulWidget arasındaki seçim, kullanıcı arayüzünün belirli ihtiyaçlarına bağlıdır. Arayüzün bir bölümü statiktir ve dinamik olarak değişmezse, StatelessWidget olarak uygulanabilir. Arayüzün, kullanıcı etkileşimlerine veya diğer olaylara yanıt olarak dinamik olarak değişmesi gerekiyorsa, StatefulWidget olarak uygulanmalıdır."
+    },
+    "39": {
+        "question": "Flutter'ın Sıcak Yeniden Yükleme özelliği nedir ve nasıl çalışır?",
+        "answer": "Sıcak Yeniden Yükleme, geliştiricilere uygulamadaki kodlarda yapılan değişiklikleri anında görmelerini sağlayan bir özelliktir, uygulamayı yeniden başlatmadan veya kodu yeniden derlemeden. Bu, zaman kazandırır ve uygulamanın tasarımı ve işlevselliği üzerinde döngüsel olarak çalışmayı kolaylaştırır.\n\nSıcak Yeniden Yükleme, hataları düzeltmek, yeni özellikleri denemek ve kullanıcı arayüzüyle deney yapmak için özellikle kullanışlıdır. Geliştiriciler, kodlarda değişiklik yapabilir, değişikliklerin hemen uygulamada yansıtıldığını görebilir ve uygulama yeniden başlatılmasını beklemek zorunda kalmadan uygulamada çalışmaya devam edebilir.\n\nSıcak Yeniden Yükleme, Flutter çerçevesi tarafından desteklenir ve hem iOS hem de Android için kullanılabilir. Bu, Flutter'ın hızlı geliştirme döngüsüne katkıda bulunan ve geliştiricilerin yüksek kaliteli, duyarlı ve verimli uygulamalar oluşturmasını kolaylaştıran önemli bir özelliktir."
+    },
+    "40": {
+        "question": "Flutter, düzen ve duyarlı tasarımı nasıl yönetir?",
+        "answer": "Flutter'da, düzen ve duyarlı tasarım, widget'lar ve kısıtlamaların bir kombinasyonu kullanılarak ele alınır.\n\nBir Flutter uygulamasının düzeni, her bir widget'ın kendi boyutunu, konumunu ve ana widget'ının içinde nasıl hizalanması gerektiğini belirten bir widget ağacı kullanılarak tanımlanır. Flutter, karmaşık ve dinamik kullanıcı arayüzleri oluşturmayı kolaylaştıran zengin bir düzen widget'ları seti sağlar. Örneğin, Bir Container widget'i bir widget'ın boyutunu ve konumunu tanımlamak için kullanılır, Row ve Column widget'ları widget'ları yatay veya dikey bir çizgide düzenlemek için kullanılır ve Expanded widget'i bir satırın veya sütunun kalan boşluğunu almak için kullanılır.\n\nDuyarlı tasarım için, Flutter, farklı ekran boyutları ve en boy oranlarıyla başa çıkmak için bir dizi strateji sağlar. Örneğin, LayoutBuilder widget'i, bir widget'ın boyutunu belirleyen ebeveyninin boyutuna dayanarak bir widget'ın düzenini dinamik olarak ayarlamak için kullanılabilir. MediaQuery widget'i, ekran boyutu ve yönelimi hakkında bilgi almak için kullanılabilir, bu da geliştiricilere mevcut ekran koşullarına göre düzeni nasıl ayarlayacaklarına karar vermelerini sağlar.\n\nGenel olarak, Flutter, düzen ve duyarlı tasarımı ele almak için zengin ve esnek bir araç seti sağlar, bu da herhangi bir ekran boyutunda veya en boy oranında harika görünen ve iyi çalışan kullanıcı arayüzleri oluşturmayı kolaylaştırır. Geliştiricilerin basit bir düzen veya karmaşık, duyarlı bir tasarım oluşturması gerekiyorsa, Flutter, işlerini halletmeleri için ihtiyaç duydukları araçları sağlar."
+    },
+    "41": {
+        "question": "Flutter'da Durumsuz ve Durumlu animasyonlar arasındaki fark nedir?",
+        "answer": "Durumsuz animasyonlar bir kez tanımlanan ve kullanıcı etkileşimi veya diğer olaylara göre değişmeden tamamlanana kadar çalışan animasyonlardır. Örneğin, uygulama başlatıldığında oynatılan basit bir açılış ekranı animasyonu, durumsuz bir animasyon olarak uygulanabilir.\n\nDurumlu animasyonlar ise, kullanıcı etkileşimi veya diğer olaylara göre zaman içinde değişebilen animasyonlardır. Örneğin, basıldığında boyutunu değiştiren bir düğme animasyonu, durumlu bir animasyon olarak uygulanabilir. Durumlu animasyonlar genellikle bir AnimationController ile birlikte bir StatefulWidget kullanılarak uygulanır.\n\nAnimationController, animasyonun hızını ve yönünü kontrol etmek için kullanılır ve Animation nesnesi, istenen animasyonu tanımlamak için kullanılır. Animation nesnesi, StatefulWidget'ın build yöntemine iletilir ve animasyonun değeri, widget ağacındaki widget'ların özelliklerini kontrol etmek için kullanılır.\n\nÖzet olarak, Durumsuz animasyonlar, etkileşim gerektirmeyen basit animasyonlar için en iyisidir, Durumlu animasyonlar ise, kullanıcı etkileşimine cevap veren veya zaman içinde dinamik olarak değişen karmaşık animasyonlar için en iyisidir."
+    },
+    "42": {
+        "question": "Flutter'da streams ve Futures arasındaki fark nedir?",
+        "answer": "Streams ve Futures, Flutter'da asenkron verileri işlemenin iki yoludur.\n\nStream'ler, zaman içinde gerçekleşen birden fazla olayı işlemenin bir yoludur, her olay bir veri parçasıdır. Bir stream'e abone olabilir ve olaylar gerçekleştiğinde bunları alabilir, ayrıca işlem sırasında oluşabilecek hataları da işleyebilirsiniz.\n\nFuture'lar ise, tek bir değeri döndüren tek bir async işlemini temsil eder. Bir Future kullanarak arka planda bir hesaplama yapabilir ve sonuç hazır olduğunda alabilirbilirsiniz.\n\nÖzet olarak, Stream'ler zaman içinde birden fazla veri parçasını işlemek için en iyisidir, Future'lar ise tek bir async işleminin sonucu olarak döndürülen tek bir veri parçasını işlemek için en iyisidir."
+    },
+    "43": {
+        "question": "Flutter'da Scaffold ve MaterialApp widget'ları arasındaki fark nedir?",
+        "answer": "Scaffold ve MaterialApp, Flutter'da widget'lardır, ancak farklı amaçlara hizmet ederler.\n\nScaffold widget'ı, bir uygulama ekranının temel yapısını tanımlamak için kullanılır ve uygulamanın içeriği için görsel bir yapı sağlar. AppBar, Drawer, BottomNavigationBar ve yüzeren bir işlem düğmesi içerir. Ayrıca, uygulamanın kullanıcı arayüzünü oluşturmak için boş bir alan sağlar.\n\nMaterialApp widget'ı ise, Material Design kullanan bir Flutter uygulamasının kök widget'ıdır. Uygulama için üst düzey gezinme ve stil sağlar ve genellikle Scaffold widget'ı için üst widget'tır. MaterialApp widget'ı, uygulamanız için doğru tema, yazı tipi ve renkleri başlatma işlemini yürütür ve ayrıca gezinme rotaları ve uygulamanız için temel yapı sağlar.\n\nÖzet olarak, Scaffold widget'ı uygulamanızdaki tek bir ekranın yapısını tanımlamak için kullanılırken, MaterialApp widget'ı tüm uygulamanızın genel görünümünü ve hissini tanımlamak için kullanılır. Scaffold genellikle MaterialApp widget'ının bir alt öğesidir.\n\nFlutter uygulaması oluştururken, genellikle bir MaterialApp widget'ı oluşturarak başlarsınız ve ardından uygulamanın kullanıcı arayüzünü oluşturmak için MaterialApp içinde Scaffold widget'larını kullanırsınız."
+    },
+    "44": {
+        "question": "Flutter'da durum nasıl yönetilir?",
+        "answer": "Flutter'da, durumu yönetmek, güçlü ve duyarlı bir uygulama geliştirmenin önemli bir parçasıdır. Flutter'da durumu yönetmenin birkaç yolu vardır, bunlar arasında şunlar bulunur:\n\n1. StatefulWidget: Bir StatefulWidget, değiştirilebilir bir duruma sahip bir widget'tır. Bir StatefulWidget ile durumu yönetmek için, widget'ın kendisi için ve durumu için iki sınıf oluşturmanız gerekir. Durum sınıfı, durum verilerini tutar ve widget sınıfı, bu duruma dayalı olarak UI'yi oluşturur. Durum değiştiğinde, widget, yeni durumu yansıtmak için UI'sini yeniden oluşturur.\n\n2. InheritedWidget: Bir InheritedWidget, verileri widget ağacında aşağıya ileten bir widget'tır. Bir InheritedWidget kullanmak için, InheritedWidget'ı genişleten bir sınıf oluşturur ve ardından widget ağacının etrafına sararsınız. InheritedWidget'ın çocukları, bir BuildContext kullanarak verilere erişebilir ve InheritedWidget.of(context) çağrarak.\n\n3. Bloc pattern: Bloc (Business Logic Component) modeli, durumu yönetmek için akışları ve akışları kullanarak bir durum yönetim çözümüdür. Bloc modeli, durum yönetimini UI'dan ayırmaya yardımcı olur, bu da uygulamanızı test etmeyi ve bakımını yapmayı kolaylaştırır.\n\n4. Provider: Provider, Flutter'da durumu yönetmeyi kolaylaştıran popüler bir üçüncü taraf paketidir. Arka planda bir InheritedWidget kullanır, ancak daha basit ve esnek bir API sağlar.\n\n5. ScopedModel: ScopedModel, InheritedWidget'ı genişleten ve bir widget ağacında durumu yönetmek için kullanımı kolay, yüksek seviyeli bir API sağlayan bir pakettir.\n\nEn iyi yaklaşım, uygulamanızın belirli ihtiyaçlarına bağlıdır. Basit durumlarda küçük uygulamalar için StatefulWidget veya InheritedWidget yeterli olabilir. Daha büyük ve karmaşık uygulamalar için, Provider veya Bloc daha iyi bir seçim olabilir.\n\nGenel olarak, basit, bakımı kolay ve test edilebilir bir yaklaşım seçmek önemlidir ve her zaman UI'yı mümkün olduğunca basit tutmak önemlidir. Bu, uygulamanızın durumu hakkında düşünmeyi ve hataların ve diğer sorunların riskini azaltır."
+    },
+    "45": {
+        "question": "Provider paketi nedir ve Flutter'da nasıl kullanılır?",
+        "answer": "Provider paketi, Flutter uygulamalarında durumu yönetmek için popüler bir seçenektir. Widget ağacında veri sağlamak ve verilere erişmek için kolay bir yol sağlayan üçüncü taraf bir pakettir.\n\nProvider paketi, verileri widget ağacında aşağı iletmek için 'inherit edilen widget' kavramını kullanır, bu da birden çok widget'ın aynı veriye erişmesine izin verir. Provider kullanmanın temel avantajı, durumu yönetmeyi kolaylaştırmasıdır, StatefulWidget veya InheritedWidget kullanmanıza gerek kalmadan.\n\nProvider'ı kullanmak için, yönetmek istediğiniz verileri tutan bir ChangeNotifier veya ValueNotifier sınıfı oluşturursunuz. Ardından, uygulamanızı MultiProvider widget'ında sarmalarsınız ve ChangeNotifier veya ValueNotifier sınıflarının örneklerini argüman olarak geçirirsiniz. Son olarak, Consumer widget'larını kullanarak ChangeNotifier veya ValueNotifier sınıflarındaki verilere erişir ve veri değiştikçe UI'yı güncellersiniz.\n\nProvider paketini kullanmak, Flutter uygulamalarında durumu yönetme sürecini büyük ölçüde basitleştirebilir ve ölçeklenebilir ve bakımı kolay uygulamalar oluşturmayı kolaylaştırabilir."
+    },
+    "46": {
+        "question": "Bir Flutter uygulamasını bir REST API ile nasıl entegre edersiniz?",
+        "answer": "Bir Flutter uygulamasını bir REST API ile entegre etmek, API uç noktalarına HTTP istekleri yapmayı ve yanıtı işlemeyi ve verileri uygulamada görüntülemek için yanıtı ele almayı içerir. HTTP istekleri yapmak için, Flutter dio, http ve chopper gibi çeşitli kütüphaneler sağlar. Yanıtı ele almak için, Future ve Stream builder'ları kullanabilir veya yanıtı manuel olarak ayrıştırabilir ve değişkenlerde saklayabilirsiniz. flutter_bloc veya provider gibi paketleri de kullanarak API çağrılarını ve veri akışını uygulamanızda yönetebilirsiniz. API çağrılarında hataları ve istisnaları ele almak ve kullanıcıya uygun mesajları görüntülemek önemlidir."
+    },
+    "47": {
+        "question": "Flutter'da farklı derleme modları nelerdir?",
+        "answer": "Geliştirme aşamanıza bağlı olarak, çerçeve kodunuzu farklı yollarla veya modlarda derler; bu da derleme modu olarak adlandırılır. Flutter'ın araçları, uygulamanın üç modda derlenmesine izin verir. Geliştirme aşamanıza bağlı olarak, bu derleme modları arasından seçim yapabilirsiniz.\n\nHata Ayıklama Modu (Debug Mode): Bu mod, uygulamaların fiziksel bir cihazda, emülatörde veya simülatörde hata ayıklanmasını sağlar. Bu modda, doğrulamalar ve hizmet uzantıları etkindir. Hızlı dağıtım, derlemeyi optimize ederek elde edilir.\n\nProfil Modu (Profile Mode): Bu modda, test edilirken uygulamanın performansını analiz etmek için yeterli olan bazı hata ayıklama yetenekleri korunur. Bu durumda, izleme ve bazı uzantılar etkindir. Emülatörlerde ve simülatörlerde, profil modu devre dışı bırakılmıştır çünkü davranışları gerçek dünya performansını yeniden üretmez. Profil modunu derlemek için aşağıdaki komut kullanılabilir: flutter run — profile\n\nYayınlama Modu (Release Mode): Uygulamayı dağıtırken, bu mod, ayak izinin boyutunu en aza indirgemek ve optimizasyonu maksimize etmek için kullanılır. Hata ayıklama, doğrulamalar ve hizmet uzantıları bu modda devre dışı bırakılmıştır. Daha hızlı başlatma, daha hızlı yürütme ve daha az boyut bu modun temel özellikleridir. Yayınlama modunu derlemek için aşağıdaki komut kullanılabilir: flutter run — release."
+    },
+    "48": {
+        "soru": "Flutter'da Mixin'lerin Kullanımı Nedir?",
+        "cevap": "Flutter'da Mixin'ler, bir sınıfın kodunu birden fazla sınıf hiyerarşisinde yeniden kullanmanın bir yoludur. Mixin'ler, geleneksel mirasla mümkün olmayan, ortak üst sınıfa sahip olmayan sınıflar arasında işlevselliği paylaşmanıza olanak tanır. Mixin'ler \"mixin\" anahtar kelimesi kullanılarak tanımlanır ve ek işlevsellik sağlamak için bir sınıf ile birlikte kullanılabilirler. Örneğin, bir mixin sınıfı animasyonları işleyen kod içerebilir ve bu kod birden fazla widget sınıfında yeniden kullanılabilir. Bir mixin'i kullanmak için, onu \"with\" anahtar kelimesini kullanarak bir sınıfa karıştırmanız yeterlidir. Bu, mixin'in kodunu ve temel sınıftan gelen kodla birlikte miras almanızı sağlar, bu da Flutter'da kodu paylaşmanın ve yeniden kullanmanın kolay bir yolu haline getirir. \n/n Mixin'ler, Dart'ta doğrudan desteklenmeyen çoklu mirası elde etmenin bir yoludur."
+    },
+    "49": {
+        "soru": "Flutter'da Null Farkındalığı Operatörleri ile Ne Kasdediliyor?",
+        "cevap": "Flutter'daki null farkındalığı operatörleri, null değerleri temiz ve özlü bir şekilde işlemenizi sağlayan operatörlerdir. Null olabilecek veya bulunmayan verilere güvenli bir şekilde erişmenizi ve bunları işlemeyi sağlayan bir yol sunarlar. Flutter'da en sık kullanılan null farkındalığı operatörü, yalnızca nesne null değilse nesnenin özelliklerine erişmek için kullanılan \"?.\" operatörüdür. Bu, NullPointerException'ları önlemeye yardımcı olur ve verilerin eksik olabileceği veya henüz mevcut olmadığı durumları ele almanın bir yolunu sunar."
+    },
+    "50": {
+        "soru": "Flutter'da await ve async arasındaki fark nedir?",
+        "cevap": "await ve async, Flutter'da kullanılan Dart programlama dilinde, asenkron işlemleri işlemek için kullanılan anahtar kelimelerdir.\n\nasync, Future nesnesi döndüren bir fonksiyonun tanımlanmasından önce kullanılır ve fonksiyonun asenkron bir işlem gerçekleştirdiğini belirtir.\n\nawait, bir async fonksiyonunda, bir Future nesnesinin tamamlanmasını beklemek için kullanılır. Kodun, bir sonraki satıra geçmeden önce asenkron işlemin tamamlanmasını beklemesini sağlar. Özetlemek gerekirse:\n\nasync anahtar kelimesi, asenkron bir fonksiyon tanımlamak için kullanılır\n\nawait anahtar kelimesi, bir Future'ın tamamlanmasını beklemek için async bir fonksiyon içinde kullanılır\n\nBaşka bir deyişle, async fonksiyonları asenkron işlemler gerçekleştirmek için kullanılırken, await bu işlemlerin tamamlanmasını beklemek için kullanılır."
+    },
+    "51": {
+        "soru": "BLoC paterni nedir ve Flutter'da nasıl kullanılır?",
+        "cevap": "BLoC (Business Logic Component) paterni, bir uygulamanın sunum mantığını iş mantığından ayırmak için Flutter'da kullanılan popüler bir durum yönetimi paternidir. Pattern, widget'lar ile BLoC bileşeni arasında iletişim kurmak için stream'ler ve sink'ler kullanır. BLoC bileşeni, uygulamanın durumu için tek bir gerçek kaynağı görevi görür ve widget'lar, durumu güncellemelerini almak için BLoC bileşeni tarafından sağlanan stream'lere abone olur. Bu sorumluluk ayrımı, uygulamanın test edilebilirliğini ve sürdürülebilirliğini artırmaya yardımcı olur. BLoC paterni, Flutter'da stream'ler ve sink'lerle çalışmak için kullanışlı bir soyutlama seti sağlayan flutter_bloc paketini kullanılarak uygulanır.\n\nBLoC patterninin örnek bir kullanım durumu, BLoC'un sepetteki öğelerin durumunu yönetirken, UI'nin öğeleri görüntülemesine ve öğe ekleyip çıkarmasına izin veren bir alışveriş sepeti olabilir."
+    },
+    "52": {
+        "question": "Flutter'da InheritedWidget nedir ve nasıl kullanılır?",
+        "answer": "Flutter'da, InheritedWidget, miras alınabilir bir widget'tır. Widget ağacındaki birden fazla widget arasında erişilebilen ve paylaşılan değerleri depolamak ve yönetmek için kullanılır. Bir InheritedWidget değiştiğinde, bağımlı tüm widget'ların yeniden oluşturulmasını tetikler. Bu, InheritedWidget'ta depolanan değerlerin widget ağacı boyunca güncellenmesine izin verir ve özellikle karmaşık UI davranışlarını uygularken çok kullanışlıdır.\n\nÖrneğin, bir tema rengini depolamak ve görüntülemek gereken bir uygulama düşünün. Tema rengini ihtiyacı olan her bir widget'a bir parametre olarak iletmek yerine, rengi depolayan bir InheritedWidget oluşturabilir ve ihtiyacınız olduğunda erişebilirsiniz. Bu şekilde, rengi tek bir yerden güncelleyebilirsiniz ve uygulama genelinde yansıtılır."
+    },
+    "53": {
+        "question": "Flutter web'de ağaç sarsılması nedir?",
+        "answer": "Bir Flutter web uygulaması derlendiğinde, JavaScript demeti dart2js derleyicisi tarafından oluşturulur. Bir sürüm derlemesi, kodunuzu ağaç sarsılması da dahil olmak üzere en yüksek düzeyde optimize eder. Ağaç sarsılması, yalnızca çalıştırılması garanti olan kodu içerek ölü kodu ortadan kaldırma işlemidir. Bu, uygulamanızın dahil edilen kitaplıkların boyutundan endişe etmenize gerek olmadığı anlamına gelir çünkü kullanılmayan sınıflar veya işlevler derlenmiş JavaScript demetinden hariç tutulur."
+    },
+    "54": {
+        "question": "Sıcak yeniden başlatma ve sıcak yeniden yükleme arasındaki fark nedir?",
+        "answer": "Flutter'da Sıcak Yeniden Yükleme Nedir:\n\nFlutter sıcak yeniden yükleme özelliği, komut istemcisi veya Terminal'deki Küçük r tuşu kombinasyonu ile çalışır. Sıcak yeniden yükleme özelliği, dosyamıza eklenen yeni kodu hızlı bir şekilde derler ve kodu Dart Sanal Makinesine gönderir. Kod güncelleme işlemi bittiğinde Dart Sanal Makinesi, uygulama arayüzünü widget'larla günceller. Sıcak Yeniden Yükleme, Sıcak Yeniden Başlatmadan daha az zaman alır. Sıcak Yeniden Yükleme'nin bir dezavantajı vardır, Uygulamanızda Durumlar kullanıyorsanız Sıcak Yeniden Yükleme, Durumları korur, bu yüzden Durumlar, Sıcak Yeniden Yükleme sırasında güncellenmez veya varsayılan değerlerine ayarlanmıştır\n\nFlutter'da Sıcak Yeniden Başlatma Nedir:\n\nSıcak yeniden başlatma, sıcak yeniden yüklemeden çok farklıdır. Sıcak yeniden başlatmada korunan Durum değerleri yok edilir ve varsayılanlarına ayarlanır. Bu nedenle, Uygulamanızda Durum değerlerini kullanıyorsanız, her sıcak yeniden başlatmadan sonra geliştirici tamamen derlenmiş bir uygulama alır ve tüm durumlar varsayılan değerlerine ayarlanır. Uygulama widget ağacı, yeni yazılan kodla tamamen yeniden oluşturulur. Sıcak yeniden başlatma, Sıcak yeniden yüklemeye göre çok daha fazla zaman alır."
+    },
+    "55": {
+        "question": "SafeArea'nın amacı nedir?",
+        "answer": "SafeArea temelde biraz aşırı bir Padding widget'tır. Başka bir widget'i SafeArea ile sardığınızda, widget'inizi sistem durum çubuğu, çentikler, delikler, yuvarlatılmış köşeler ve üreticilerin diğer 'yaratıcı' özellikler tarafından engellenmesini önlemek için gereken gerekli dolguyu ekler."
+    },
+    "56": {
+        "question": "Inherited Widget bir Provider'dan nasıl farklıdır?",
+        "answer": "Provider temelde InheritedWidget'ların mantığını alır, ancak fazlalığı minimuma indirir."
+    },
+    "57": {
+        "question": "UnmodifiableListView nedir?",
+        "answer": "Liste öğelerini ekleyip çıkaramaz."
+    },
+    "58": {
+        "question": "Bu operatörler ?? ve ? arasındaki fark nedir?",
+        "answer": "?? expr1 ?? expr2 Eğer expr1 boş değilse, değerini döndürür; aksi takdirde, expr2'nin değerini değerlendirir ve döndürür.\n\n?. . gibi ancak en soldaki işlemci null olabilir; örnek: foo?.bar ifadesi, foo null ise (bu durumda foo?.bar'ın değeri null olur) ifadesinden bar özelliğini seçer."
+    },
+    "59": {
+        "question": "WidgetsBindingObserver ne zaman kullanılır?",
+        "answer": "Sistem uygulamayı arka plana alır veya uygulamayı yeniden öne çıkarırken kontrol etmek için kullanılır."
+    },
+    "60": {
+        "question": "Neden ilk Flutter uygulaması çok uzun bir geliştirme süresi alır?",
+        "answer": "İlk kez Flutter uygulamasını oluştururken, genellikle Flutter bir cihaza özgü IPA veya APK dosyası oluşturduğu için normalden çok daha uzun sürer. Bu süreçte Xcode ve Gradle dosya oluşturmak için kullanılır ve bu genellikle uzun zaman alır."
+    },
+    "61": {
+        "question": "Bir Uygulama Durumu nedir?",
+        "answer": "Uygulama Durumu ayrıca uygulama durumu veya paylaşılan durum olarak adlandırılır. Uygulama durumu uygulamanızın birden çok alanına dağıtılabilir ve aynı kullanıcı oturumlarıyla korunur.\n\nUygulama Durumunun örnekleri aşağıdaki gibidir:\n\nGiriş bilgileri Kullanıcı tercihleri Bir e-ticaret uygulamasının alışveriş sepeti."
+    },
+    "62": {
+        "question": "Flutter denetleyicisi nedir?",
+        "answer": "Flutter denetleyicisi, widget ağaçlarını görselleştirmeye ve keşfetmeye yardımcı olan bir araçtır. Mevcut düzeni anlamakta ve çeşitli düzen sorunlarını teşhis etmede yardımcı olur."
+    },
+    "63": {
+        "question": "main fonksiyonu ile runApp() fonksiyonu arasındaki fark nedir?",
+        "answer": "Dart'ta, main() programın giriş noktası olarak işlev görürken, runApp() verilen widget'ı ekrana ekler."
+    },
+    "64": {
+        "question": "Flutter'da final ve const arasındaki fark nedir?",
+        "answer": "final tek atamalı anlamına gelir: Bir final değişkeni veya alanı bir başlatıcıya sahip olmalıdır. Bir değer atandıktan sonra, bir final değişkeninin değeri değiştirilemez. final değişkenleri değiştirir.\n\nconst, Dart'ta biraz daha karmaşık ve ince bir anlama sahiptir. const, değerleri değiştirir. Koleksiyonlar oluştururken, const [1, 2, 3] gibi ve nesneleri oluştururken (new yerine) const Point(2, 3) gibi kullanabilirsiniz. Burada, const, nesnenin tüm derin durumunun derleme zamanında tamamen belirlenebileceği ve nesnenin dondurulmuş ve tamamen değiştirilemez olacağı anlamına gelir.\n\nConst nesnelerin birkaç ilginç özelliği ve kısıtlaması vardır:\n\nDerleme zamanında hesaplanabilecek verilerden oluşturulmalıdır. Bir const nesnesinin derleme zamanında hesaplanması gereken bir şeye erişimi yoktur. 1 + 2 geçerli bir const ifadesidir, ancak new DateTime.now() değildir.\n\nDerinlemesine, transitif olarak değiştirilemezler. Bir koleksiyonu içeren bir final alanınız varsa, koleksiyon hala değiştirilebilir olabilir. Bir const koleksiyonunuz varsa, içindeki her şey de const olmalıdır, bu da özyinelemeli olarak geçerlidir.\n\nKanonik hale getirilirler. Bu, string internicik gibi: herhangi bir const değeri için, const ifadesi ne kadar çok kez değerlendirilirse edilsin, bir const nesne oluşturulur ve yeniden kullanılır."
+    },
+    "65": {
+        "question": "Widget yeniden oluşturmayı nasıl azaltırsınız?",
+        "answer": "Durum değiştiğinde widget'ları yeniden oluşturursunuz. Bu normal ve istenir çünkü kullanıcının durum değişikliklerini arayüzde görmesini sağlar. Ancak, değişmesi gerekmeyen UI'nın parçalarını yeniden oluşturmak gereksizdir.\n\nGereksiz widget yeniden oluşturmayı azaltmak için yapabileceğiniz birkaç şey vardır:\n\n1. İlk olarak, büyük bir widget ağacını daha küçük, kendi başına bir build yöntemi olan bireysel widget'lara yeniden düzenleyin.\n2. Mümkün olduğunca, const kurucuyu kullanın, çünkü bu, Flutter'a widget'ın yeniden oluşturulmasına gerek olmadığını söyler.\n\n3. Bir durumlu widgetın alt ağacını mümkün olduğunca küçük tutun. Bir durumlu widgetın altında bir widget alt ağacına ihtiyaç varsa, durumlu widget için özel bir widget oluşturun ve ona bir child parametresi verin."
+    },
+    "66": {
+        "question": "BuildContext nedir ve nasıl faydalıdır?",
+        "answer": "BuildContext aslında Element ağacındaki widget'ın elemanıdır - bu nedenle her widget'ın kendi BuildContext'i vardır. Genellikle BuildContext'i bir temaya veya başka bir widget'a başvurmak için kullanırsınız. Örneğin, bir materyal diyalog göstermek istiyorsanız, bir referansa ihtiyacınız vardır. BuildContext, neredeyse çerçeve bulana kadar bir ağaçta yukarı doğru arama yapar."
+    },
+    "67": {
+        "question": "setState() nedir?",
+        "answer": "setState, bir nesnenin iç durumunun bu alt ağaçtaki kullanıcı arayüzünü etkileyebilecek şekilde değiştiğini bildiren ve bu Durum nesnesi için bir derleme zamanlaması oluşturan çerçeveye bildirir. setState çağırmadan doğrudan durumu değiştirirsek, çerçeve bir derleme planlamaz ve bu alt ağaçtaki kullanıcı arayüzü yeni durumu yansıtmak için güncellenmez. setState yönteminin yalnızca durumla ilgili gerçek değişiklikleri sarmak için kullanılması önerilir, değişiklikle ilişkilendirilebilecek herhangi bir hesaplama değil."
+    },
+    "68": {
+        "question": "WidgetsApp ve MaterialApp arasındaki fark nedir?",
+        "answer": "WidgetsApp temel gezinmeyi sağlar. Widgets kitaplığı ile birlikte, Flutter'ın kullandığı temel widget'ların birçoğunu içerir. MaterialApp ve karşılık gelen materyal kitaplığı, WidgetsApp ve widgets kitaplığı üzerine inşa edilmiş bir katmandır. Materyal Tasarımı'nı uygular, bu da uygulamaya herhangi bir platformda veya cihazda birleşik bir görünüm ve his verir. Materyal kitaplığıyla birçok ek widget gelir. Projede MaterialApp kullanmanız gerekli değildir. iOS kullanıcılarını evlerinde hissettirmek için CupertinoApp'i kullanabilirsiniz veya hatta markanıza uyacak şekilde kendi özel widget kümenizi oluşturabilirsiniz."
+    },
+    "69": {
+        "question": "Profil modu nedir ve ne zaman kullanılır?",
+        "answer": "Profil modunda, bazı hata ayıklama yetenekleri korunur - uygulamanızın performansını profillemek için yeterlidir. Performansı analiz etmek istediğinizde profil modunu kullanırsınız. Profil modu, davranışları gerçek performansı temsil etmeyen emulator ve simülatörde devre dışı bırakılır. Mobil cihazlarda, profil modu, aşağıdaki farklarla birlikte yayın moduna benzerdir: - Performans örtüsünü etkinleştirenler gibi bazı hizmet uzantıları etkinleştirilmiştir. - İzleme etkinleştirilmiş ve kaynak düzeyinde hata ayıklama araçları (örneğin DevTools gibi) işleme bağlanabilir. Bir web uygulaması için profil modu, derleme küçültülmez ancak ağaç sarsılması gerçekleştirilir. Uygulama dart2js derleyicisi ile derlenir. flutter run --profile komutu profil moduna derler."
+    },
+    "70": {
+        "question": "@override kullanımının Flutter'da amacı nedir?",
+        "answer": "@override, işlevin mevcut sınıfta başka bir yerde tanımlandığını, ancak geçerli sınıfta başka bir şey yapmak üzere yeniden tanımlandığını belirtir. Ayrıca, soyut bir yöntemin uygulamasını işaretlemek için de kullanılır. Kullanması isteğe bağlıdır ancak okunabilirliği artırır ve önerilir."
+    },
+    "71": {
+        "question": "Flutter'da paketler ve eklentiler nedir?",
+        "answer": "Bir paket, benzer türdeki sınıfların, arabirimlerin ve alt paketlerin bir grubudur. Paketler ve eklentiler, her şeyi baştan geliştirmeden uygulamayı oluşturmamıza yardımcı olur.\n\nFlutter'da, yeni widget'ları veya işlevselliği içe aktarmanıza olanak tanır. Paketler ve eklentilerin çok küçük bir farkı vardır. Genellikle, paketler yeni bileşenler veya dart dillerinde yazılan kodlardır, eklentiler ise yerel kodu kullanarak cihazda daha fazla işlevsellik sağlar. DartPub'da, paketler ve eklentiler her ikisi de paketler olarak adlandırılır."
+    },
+    "72": {
+        "question": "Yayın modu nedir ve ne zaman kullanılır?",
+        "answer": "Uygulamayı dağıtmak için yayın modunu kullanın, maksimum optimizasyon ve minimum iz bırakma boyutu istediğinizde. Mobil cihazlar için, yayın modu (simülatör veya emulatorde desteklenmeyen), aşağıdaki farklarla birlikte şunları ifade eder: - Destelemeler devre dışı bırakıldı. - Hata ayıklama bilgileri çıkartıldı. - Hata ayıklama devre dışı bırakıldı. - Derleme hızlı başlatma, hızlı yürütme ve küçük paket boyutları için optimize edildi. - Servis uzantıları devre dışı bırakıldı. Bir web uygulaması için yayın modu, derleme küçültülür ve ağaç sarsılması gerçekleştirilir. Uygulama, en iyi performans için dart2js derleyicisi ile derlenir."
+    },
+    "73": {
+        "question": "Neden performans testi yapmak için assert yerine kReleaseMode kullanmalısınız?",
+        "answer": "Genellikle, kodu korumak için kDebugMode veya assert kullanmak daha iyidir, çünkü kReleaseMode kullanmak yayın ve profil derlemeleri arasında farklılıklar getirecektir, bu da performans testini daha az temsil edici hale getirir."
+    }
+}

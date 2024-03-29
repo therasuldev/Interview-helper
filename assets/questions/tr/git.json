@@ -1,0 +1,150 @@
+{
+    "1": {
+        "question": "Git ve GitHub nedir?",
+        "answer": "Git, projeleri hızlı ve verimli bir şekilde yönetmek için geliştirilmiş açık kaynaklı ve ücretsiz bir dağıtık sürüm kontrol sistemidir.\n\nGitHub, internet barındırma hizmeti sağlamak için Git'i kullanır ve sürüm kontrolü ve yazılım geliştirmede Git'te bulunan işlevselliği sunar. GitHub, açık kaynaklı projelerin daha iyi yönetilmesine yardımcı olacak şekilde tasarlanmıştır."
+    },
+    "2": {
+        "question": "Git ile GitHub arasındaki fark nedir?",
+        "answer": "Git, kaynak kodu geçmişinin yönetiminde kullanılan bir sürüm kontrol sistemidir. GitHub ise bulut tabanlı bir barındırma servisidir ve Git depolarının yönetiminde kullanılır. GitHub, açık kaynaklı projelerin daha iyi yönetilmesine yardımcı olmak için tasarlanmıştır."
+    },
+    "3": {
+        "question": "Git deposu nedir? Bazı popüler Git barındırma hizmetlerinin adlarını verin.",
+        "answer": "Depolar, bir projenin farklı sürümlerini içeren dosya topluluklarıdır. Bu dosyalar, kullanıcıların yerel sunucularına içeriği daha fazla değiştirmek ve güncellemek için depolardan alınır.\n\nBazı popüler Git barındırma hizmetleri şunlardır:\n* GitHub\n* GitLab\n* Bitbucket\n* SourceForge"
+    },
+    "4": {
+        "question": "Sürüm kontrol sistemi nedir? Türlerini belirtin.",
+        "answer": "Bir sürüm kontrol sistemi (VCS), farklı projelerin sürümlerini oluşturmak ve bunları bir depoda saklamak için kullanılan bir yazılım aracıdır. Tüm kod değişiklikleri VCS tarafından kaydedilir ve izlenir.\n\nSürüm kontrol sistemlerinin türleri:\n\n* Yerel sürüm kontrol sistemleri, diskteki tüm dosya değişikliklerini özel bir formatta revizyon kontrolü altında tutan bir veritabanına sahiptir.\n* Merkezi sürüm kontrol sistemleri, bir depoyu içerir ve her kullanıcı kendi çalışma kopyasını alır.\n* Dağıtık sürüm kontrol sistemleri, her birine ayrı çalışma kopyası olan ayrı kullanıcılara erişilebilen çoklu depolar içerir."
+    },
+    "5": {
+        "question": "GIT kullanmanın avantajları nelerdir?",
+        "answer": "Git'in en önemli avantajlarından bazıları şunlardır:\n* Veri yedekliliği ve veri çoğaltma mümkündür\n* Yüksek kullanılabilirlik hizmetidir\n* Bir depo için yalnızca bir Git dizini olabilir\n* Ağ performansı ve disk kullanımı mükemmeldir\n* Herhangi bir projede işbirliği yapmak çok kolaydır\n* Git içinde her türlü projede çalışabiliriz"
+    },
+    "6": {
+        "question": "GIT'te hangi dil kullanılır?",
+        "answer": "Git'in oluşturulmasında kullanılan programlama dili, giderlerin azaltılmasını sağlayan C'dir."
+    },
+    "7": {
+        "question": "Git'in SVN'ye göre avantajları nelerdir?",
+        "answer": "Git, açık kaynaklı bir sürüm kontrol sistemidir ve projenin birden çok sürümünü çalıştırmanıza izin verir, bu da zaman içinde kodda yapılan değişiklikleri gösterir ve gerektiğinde yaptığımız değişiklikleri takip edebiliriz. Bu, birçok geliştiricinin kendi değişikliklerini yapmasına ve bu değişikliklerin belirli geliştiricilere atfedilmesine olanak tanır."
+    },
+    "8": {
+        "question": "Git Bash nedir?",
+        "answer": "Git Bash, Windows işletim sistemlerinde yaygın olarak kullanılan Bash, Git ve birkaç Bash yardımcı programını kurar. Git Bash'te, farklı komutlar aracılığıyla Git öğeleri ve depo ile etkileşim mümkündür."
+    },
+    "9": {
+        "question": "GIT'te “Index” veya “Staging Area” ne anlama gelir?",
+        "answer": "Commit'ler yaparken, değişiklikleri yapabilir, biçimlendirebilir ve inceleyebiliriz. Bu, 'Staging Area' veya 'Index' olarak bilinen ara bir alanda yapılır."
+    },
+    "10": {
+        "question": "Git'te etiketleme nedir?",
+        "answer": "Etiketleme, geliştiricilerin projelerinin ilerleyişi boyunca tüm önemli kontrol noktalarını işaretlemesine olanak tanır. Commit kimlikleri yerine etiket adları kullanılabilir ve commit'ler uzak bir depoya çekilirken ve itilirken kullanılabilir."
+    },
+    "11": {
+        "question": "Git'te forklama nedir?",
+        "answer": "Bir depo kopyası bir fork olarak adlandırılır. Bu nedenle, forklama, orijinal projeyi endişe etmeden değişikliklerle deneme yapmanıza olanak tanır. Bu süreç, başka birinin projelerine değişiklikler önermek için idealdir."
+    },
+    "12": {
+        "question": "Git clone'ın kullanımı nedir?",
+        "answer": "Git clone komutu, mevcut Git deposunu kopyalamamıza olanak tanır. Merkezi depodan bir kopya almak istiyorsak, bunu yapmanın en iyi yolu 'klonlama'yı kullanmaktır."
+    },
+    "13": {
+        "question": "‘git config’ komutunun işlevi nedir?",
+        "answer": "'Git config', Git kurulumu için seçeneklerimizi yapılandırmak için harika bir yoldur. Bu komutu kullanarak, depo davranışını, tercihleri ve kullanıcı bilgilerini tanımlayabiliriz."
+    },
+    "14": {
+        "question": "Git'te bir depo oluşturma süreci nedir?",
+        "answer": "Eğer Git'te bir depo oluşturmak istiyorsak, 'git init' komutunu çalıştırmamız gerekir. Bu komutla .git deposu, projenin dizini içinde bir dizin oluşturabiliriz."
+    },
+    "15": {
+        "question": "Git'te cherry-pick nedir?",
+        "answer": "Git cherry-pick, belirli Git commit'lerini referans alarak seçme ve bunları HEAD'e eklemeyi sağlayan bir komuttur. Cherry-pick, bir dalda bir commit'i seçme ve başka birine uygulama işlemidir. Değişiklikleri geri almakta yardımcı olur."
+    },
+    "16": {
+        "question": "Git'te origin ne anlama gelir?",
+        "answer": "Origin, bir projenin orijinal olarak klonlandığı uzak deposunu ifade eder ve orijinal depo URL'sinin yerine kullanılır. Bu, daha kolay başvurmayı sağlar."
+    },
+    "17": {
+        "question": "git push komutu nedir?",
+        "answer": "git push komutu, yerel bir depodan uzak bir depoya içerik yüklemek için kullanılır. İtme işlemi değişiklikleri üzerine yazabilir, bu nedenle dikkatli kullanılmalıdır."
+    },
+    "18": {
+        "question": "git pull komutu nedir?",
+        "answer": "git pull komutu, uzak bir depodan içerik almak ve indirmek ve bunu yerel bir depoyla entegre etmek içindir."
+    },
+    "19": {
+        "question": "git fetch ile git pull arasındaki fark nedir?",
+        "answer": "Git fetch, uzak bir depodan yeni verileri alır ancak bunları çalışma dosyalarımıza entegre etmez. Uzak depoda herhangi bir değişiklik olup olmadığını kontrol etmede yardımcı olur. Bu işlem sırasında hiçbir şeyi değiştirmez veya yok etmez.\n\nÖte yandan, git pull, başka bir deyişle HEAD'i uzak sunucudan gelen en son değişikliklerle günceller ve bunları doğrudan çalışma kopyası dosyalarına entegre eder. Git pull kullanmak, uzak değişiklikleri yerel olanlarla birleştirmeye çalıştığı için birleştirme çakışmasıyla sonuçlanabilir."
+    },
+    "20": {
+        "question": "Git'te git checkout ne anlama gelir?",
+        "answer": "Git checkout, HEAD'in değiştirilmesine olanak tanır. Ayrıca dosyaların tarihsel sürümlerini geri yükleme için de kullanılabilir. Komut, dosyalar, commit'ler ve dallar üzerinde işlem yapar."
+    },
+    "21": {
+        "question": "Git'te git rebase ne işe yarar?",
+        "answer": "Rebasing, bir takım commit'lerin başka bir temel gezegene yeniden uygulanmasıdır. Farklı dallardan bir dizi commit, son commit'e uygulanır. Bu, birleştirme işleminin lineer bir sürecidir ve git merge komutunun alternatifidir. Rebasing, birinin farklı bir commit'ten bir dal oluşturmuş gibi görünmesini sağlar."
+    },
+    "22": {
+        "question": "Git rebase ile git merge arasındaki fark nedir?",
+        "answer": "Git rebase'de, bir özellik dalı bir ana dala taşınır. Git merge, yeni bir commit ekleyerek geçmişi korur."
+    },
+    "23": {
+        "question": "Git'te revert ne anlama gelir?",
+        "answer": "Git revert komutu, ileriye doğru geri alma işlemidir. Bu, değişiklikleri tersine çeviren yeni bir commit oluşturur, böylece commit geçmişindeki commit'leri silmez veya öksüz bırakmaz."
+    },
+    "24": {
+        "question": "Sıfırlama ve geri alma arasındaki fark nedir?",
+        "answer": "Git reset, istenen commit'ten sonraki tüm durumları kaldırarak bir dalın durumunu bir öncekine değiştirirken, git revert, yeni geri alma commit'leri oluşturarak ve orijinalini değiştirmeden yapar."
+    },
+    "25": {
+        "question": "‘git remote’ ile ‘git clone’ arasındaki fark nedir?",
+        "answer": "Git remote, daha fazla izleme için bir uzak deposuna bir referans ekler. Git clone, adından da anlaşılacağı gibi, mevcut bir uzak depoyu klonlar ve yeni bir oluşturur."
+    },
+    "26": {
+        "question": "GIT stash nedir?",
+        "answer": "Git stash, çalışma dizinini mevcut durumda alır ve bir sonraki aşamada yığın üzerine eklemek için dizine koyar, böylece temiz bir çalışma dizisi elde ederiz. Bu, eğer bir görevin ortasındaysak ve temiz bir çalışma dizisi almak istiyorsak ve aynı zamanda tüm mevcut düzenlemelerimizi korumak istiyorsak, Git stash'ı kullanabiliriz."
+    },
+    "27": {
+        "question": "Fork, branch ve clone birbirinden nasıl farklıdır?",
+        "answer": "Fork, orijinal depodan bir kopya oluşturur ve GitHub hesabında kalır. Öte yandan, klonlama, depoyu Git kullanarak yerel makineye kopyalar. Forking, değişiklikleri depo sahiplerine önermek için kullanılır. Klonlama durumunda, kullanıcıların yazma erişimi varsa, değişiklikler doğrudan orijinal depoya gönderilir. Bir dal, bir depo içinde meydana gelir ve ana projeyi etkilemeden yazılımı geliştirmeye ve değiştirmeye devam etmenin bir yoludur."
+    },
+    "28": {
+        "question": "git reflog ve log arasındaki fark nedir?",
+        "answer": "Git log, bir dal için commit geçmişinin genel kaydıdır. Reflog ise, deposun yerel commit'lerinin özel biridir.\n\nGit log, reflog'un aksine, Git deposunun bir parçasıdır ve bir itme, çekme veya getirme işleminden sonra çoğaltılır. Bir geliştirici, yerel bir depodaki reflog'a erişemez çünkü reflog, onun bulunduğu bilgisayara erişim sağlamadığı sürece."
+    },
+    "29": {
+        "question": "GIT stash drop nedir?",
+        "answer": "Stash öğesi üzerinde çalışmayı bitirdiğimizde veya listeden kaldırmak istediğimizde, Git stash drop'u kullanabiliriz. Bu, varsayılan olarak eklenen son öğeyi veya belirli bir öğeyi argümandan kaldırabilir."
+    },
+    "30": {
+        "question": "Belirli bir dalın master'a birleştirilip birleştirilmediğini nasıl belirleriz?",
+        "answer": "Git branch –merged master – master'a birleştirilmiş tüm dalları gösterir\n\nGit branch –merged – başa birleştirilmiş tüm dalları gösterir\n\nGit branch – no-merged – birleştirilmemiş tüm dalları gösterir"
+    },
+    "31": {
+        "question": "Neden GIT'te dal oluşturmamız gerekiyor?",
+        "answer": "Dal oluşturarak, kendi dalımızı oluşturabilir ve farklı dallar arasında geçiş yapabiliriz. Önceki çalışmamıza gidebiliriz ve aynı zamanda son çalışmamızı koruyabiliriz."
+    },
+    "32": {
+        "question": "Commit nesnesinin bileşenleri nelerdir?",
+        "answer": "* Bir projenin belirli bir zamandaki durumu bir dosya kümesinde bulunur\n* Üst nesne commit referansları\n* Commit nesnesini benzersiz şekilde tanımlayan 40 karakterlik bir dize, SHA1 adı"
+    },
+    "33": {
+        "question": "Git'te HEAD nedir ve bir depoda kaç HEAD oluşturulabilir?",
+        "answer": "Bir taahhüt nesnesine olan referans HEAD olarak adlandırılır. Her depoda varsayılan olarak 'Master' adında bir baş olur. Bir depoda birden fazla baş olabilir."
+    },
+    "34": {
+        "question": "GIT'te dal oluşturmanın düzenli yolu nedir?",
+        "answer": "GIT'te bir dal oluşturmanın en iyi yolu bir 'ana' dal oluşturmak ve sonra yapmak istediğimiz değişiklikleri uygulamak için başka bir dal oluşturmaktır. Bu, tek bir projede çalışan büyük bir geliştirici grubu varsa son derece yararlıdır."
+    },
+    "35": {
+        "question": "Git'te yeni bir dal oluşturmanın bir yolu nedir?",
+        "answer": "Ana dala yeni bir özellik eklemek istiyorsak, o zaman 'git merge' veya 'git pull' komutunu kullanabiliriz."
+    },
+    "36": {
+        "question": "Git'te 'çakışma' nasıl tanımlanır?",
+        "answer": "Bir birleştirmek istiyorsak bir yerde bir değişiklik ve aynı değişikliğin zaten varsa, birleştirirken Git, hangi değişikliğin öncelikli olduğunu tahmin edemez."
+    },
+    "37": {
+        "question": "Git'te bir çakışmayı nasıl çözeriz?",
+        "answer": "Git'te bir çakışmayı çözmek istiyorsak, çelişen değişiklikleri düzeltmek için dosyaları düzenlememiz ve sonra 'git add' komutunu çalıştırmamız ve sonra da 'git commit' komutunu çalıştırmamız gerekir."
+    }
+}

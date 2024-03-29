@@ -1,0 +1,282 @@
+{
+    "1": {
+        "question": "Go'da 'init' fonksiyonunun rolü nedir?",
+        "answer": "Go'da 'init' fonksiyonu, bir paket başlatıldığında Go çalışma zamanı tarafından otomatik olarak çağrılan özel bir fonksiyondur. Bu, main fonksiyonundan önce çağrılır ve paket için başlatma görevlerini gerçekleştirmek için kullanılabilir.\n'init' fonksiyonu herhangi bir argüman almaz ve bir değer döndürmez. Genellikle paket düzeyinde değişkenlerin başlangıç değerlerini belirlemek, veritabanları gibi harici kaynaklara bağlantılar kurmak veya ana fonksiyonun çağrılmasından önce yapılması gereken diğer başlatma görevlerini gerçekleştirmek için kullanılır.\n'init' fonksiyonu paketin herhangi bir yerinde tanımlanabilir ve aynı paket içinde birden fazla 'init' fonksiyonu tanımlanabilir. Bir paket içindeki tüm 'init' fonksiyonları, kodda göründükleri sırayla Go çalışma zamanı tarafından çağrılır.\n'init' fonksiyonu, main fonksiyonunun çağrılması öncesinde gerçekleştirilmesi gereken başlatma görevlerini gerçekleştirmek için kullanışlı bir araçtır ve genellikle 'main' paketi ile birlikte kullanılırken, ana fonksiyonun çalışması için ortamı kurar."
+    },
+    "2": {
+        "question": "Go'da paralellik nasıl uygulanır?",
+        "answer": "Go'da paralellik, Goroutine'ler ve kanallar kullanılarak uygulanır. Bir Goroutine, aynı süreç içinde diğer Goroutine'lerle eş zamanlı olarak çalışan hafif bir iş yürütme işlemidir. Goroutine'ler, 'go' anahtar kelimesi kullanılarak, bir fonksiyon çağrısının ardından oluşturulur. Örneğin:\ngo someFunction()\nBu, 'someFunction' fonksiyonunu çağıran bir Goroutine oluşturur.\nKanallar, Goroutine'ler arasında iletişim kurmak ve yürütme sürelerini senkronize etmek için kullanılır. Bir kanal, kanal operatörü '<-' ile değer gönderip alabileceğiniz bir tür iletilerdir. Örneğin:\nch := make(chan int)\ngo func() {\nch <- 1\n}()\nx := <-ch\nBu örnekte, 'ch' adında yeni bir 'int' türünde bir kanal oluşturulur ve kanala '1' değerini gönderen bir Goroutine başlatılır. Ardından, çağıran Goroutine, kanaldan gelen değeri alır ve 'x' değişkenine atar.\nGoroutine'ler ve kanalları kullanarak, Go'da aynı anda birden fazla görev gerçekleştirebilen ve birbirleriyle iletişim kurarak yürütme sürelerini koordine edebilen karmaşık eşzamanlı programlar oluşturabilirsiniz.\nGo, Goroutine'lerin planlanması üzerinde açık bir kontrol sağlamaz ve Goroutine'lerin gerçek yürütülmesi Go çalışma zamanı tarafından yönetilir. Bu, Goroutine'lerin kesin olarak hangi sırayla yürütüldüğüne güvenmemeniz gerektiği anlamına gelir ve kodunuzda belirli bir yürütme sırasına güvenmemelisiniz."
+    },
+    "3": {
+        "question": "Go'da hataları nasıl işlersiniz?",
+        "answer": "Go'da hatalar, tek bir yöntemi tanımlayan yerleşik 'error' türünün değerleri olarak temsil edilir:\ntype error interface {\n Error() string\n }\nHata değeri oluşturmak için, verilen dizeyi hata iletişimi olarak içeren 'errors' paketinin 'New' fonksiyonunu kullanabilirsiniz:\nimport 'errors'\nerr := errors.New('bazı hata iletişimi')\nBir hatayı işlemek için, 'if' ifadesini ve 'comma-ok' deyimini kullanarak hata değerinin nil olup olmadığını kontrol edebilirsiniz. Hata değeri nil değilse, bir hata meydana geldiği anlamına gelir ve buna uygun şekilde işleyebilirsiniz:\n_, err := someFunction() \nif err != nil { \n// hatayı işle \n}"
+    },
+    "4": {
+        "question": "Go'da arayüzleri nasıl uygularsınız?",
+        "answer": "Go'da bir arayüzü, arayüzdeki yöntemlerin adlarını ve imzalarını aynı olan yöntemlerin bir kümesini tanımlayarak uygulayabilirsiniz. İşte bir örnek:\ntype Shape interface { \nArea() float64\nPerimeter() float64 \n} \ntype Rectangle struct { \nwidth, height float64 \n} \nfunc (r Rectangle) Area() float64 { \nreturn r.width * r.height \n} \nfunc (r Rectangle) Perimeter() float64 { \nreturn 2*r.width + 2*r.height \n}\nBu örnekte, Shape arayüzü Area ve Perimeter yöntemlerini tanımlar. Dikdörtgen struct bu yöntemleri uygular, bu nedenle Shape arayüzünü karşılar.\nArayüzü kullanmak için, arayüz türünde bir değişken bildirebilir ve ona uygulayan türdeki bir değeri atayabilirsiniz:\nvar s Shape\ns = Rectangle{5.0, 4.0}\nArdından, arayüz değişkenini kullanarak arayüzde tanımlanan yöntemleri çağırabilirsiniz:\narea := s.Area() \nperimeter := s.Perimeter()"
+    },
+    "5": {
+        "question": "Go kodunun performansını nasıl optimize edersiniz?",
+        "answer": "Go kodunun performansını optimize etmenin birkaç yolu vardır:\n1. Gorutinler kullanarak fonksiyonları eş zamanlı olarak çalıştırmak için go anahtar kelimesini kullanın. Bu, çoklu CPU çekirdeklerinden faydalanarak programınızın daha hızlı çalışmasına yardımcı olabilir.\n2. Paylaşılan kaynaklara erişimi kontrol etmek ve yarış koşullarını önlemek için sync paketini kullanın.\n3. Değişkenler üzerinde atomik işlemleri gerçekleştirmek için sync/atomic paketini kullanın.\n4. Gereksiz dönüşümleri önlemek için strings, bytes ve bufio paketlerini kullanın.\n5. Kullanıcı tanımlı bir sıralama algoritması yerine dilin sıralama paketini kullanın.\n6. Bit seviyesi işlemleri gerçekleştirmek için math/bits paketini kullanın.\n7. Kodunuzun performansını ölçmek ve darboğazları belirlemek için testing paketini kullanın.\n8. Çalışma zamanı ortamı hakkında bilgi almak ve programınızın davranışını ayarlamak için runtime paketini kullanın.\n9. Çöp toplayıcıyı ve bellek kullanımını optimize etmek için -gcflags ve -benchmem bayraklarını kullanın.\n10. Konumdan bağımsız bir yürütülebilir oluşturmak için -buildmode=pie bayrağını kullanın.\n11. Rastgele koşulları algılamak için çalışma zamanında yarış koşullarını algılamak için -race bayrağını kullanın.\nAyrıca, kodunuzu darboğazları belirlemek ve programınızın en performans kritik bölümlerini optimize etmek için profillendirmeniz iyi bir fikirdir. Go programınızın performansını analiz etmek için pprof ve perf gibi araçları kullanabilirsiniz."
+    },
+    "6": {
+        "question": "Go programlama dili nedir ve neden kullanılır?",
+        "answer": "Google, 2007 yılında Go (veya Golang) programlama dilini oluşturdu. Bu, öğrenmesi ve yazması kolay olacak şekilde tasarlanmış C benzeri bir dil olan statik tipleme dilidir.\nGo, derlenmiş bir dil olacak şekilde tasarlanmıştır, yani doğrudan bir bilgisayarın işlemcisinde çalıştırılabilecek makine koduna dönüştürülür. Bu, yorumlanan dillerden daha hızlı ve verimli hale getirir, çünkü yorumlayıcı tarafından çalışma zamanında yürütülmezler.\nGo, web sunucuları, ağ uygulamaları ve dağıtık sistemler oluşturmak için popüler bir dildir. Ayrıca, araçlar, kütüphaneler ve diğer yazılım bileşenleri geliştirmek için de kullanılır.\nGo'nun popüler olmasının temel nedenlerinden biri, okuması ve yazması kolay olacak şekilde tasarlanmış olmasıdır. Basit, özlü bir sözdizimi ve küçük bir temel dil özellikleri setine sahiptir. Go ayrıca eşzamanlılık ve paralelizme güçlü bir vurgu yapar, bu da ölçeklenebilir ağlı sistemler oluşturmak için uygun olmasını sağlar."
+    },
+    "7": {
+        "question": "Go'da bir değişkeni bildirmek için sözdizimi nedir?",
+        "answer": "Go'da bir değişkeni bildirmek için var anahtar kelimesi, değişkenin adı ve türünün yan yana yazılması kullanılır. İşte bir örnek:\nvar x int \nBu, int türünde bir x değişkeni bildirir."
+    },
+    "8": {
+        "question": "Go'da farklı veri tipleri nelerdir?",
+        "answer": "Go'nun birkaç yerleşik veri tipi vardır, bunlar arasında şunlar bulunur:\n1. bool: bir mantıksal değer (true veya false)\n2. int, int8, int16, int32, int64: çeşitli boyutlarda işaretli tamsayılar\n3. uint, uint8, uint16, uint32, uint64: çeşitli boyutlarda işaretsiz tamsayılar\n4. float32, float64: kayan noktalı sayılar\n5. complex64, complex128: karmaşık sayılar\n6. string: Unicode karakterlerden oluşan bir dize\n7. byte: uint8 için takma ad\n8. rune: int32 için takma ad"
+    },
+    "9": {
+        "question": "Go'da bir sabit nasıl oluşturulur?",
+        "answer": "Go'da bir sabit oluşturmak için const anahtar kelimesini, sabit adını, türünü ve değerini izleyerek kullanabilirsiniz. İşte bir örnek:\nconst PI = 3.14 \nBu, float64 türünde ve değeri 3.14 olan PI adında bir sabit oluşturur."
+    },
+    "10": {
+        "question": "Go'da bir fonksiyon oluşturmanın sözdizimi nedir?",
+        "answer": "Go'da bir fonksiyon oluşturmak için func anahtar kelimesini, fonksiyon adını, parametrelerin listesini ve fonksiyon gövdesini izleyerek kullanabilirsiniz. İşte bir örnek:\nfunc add(x int, y int) int { \nreturn x + y \n}\nBu, int türünde iki argüman alan ve bir int değeri döndüren add adında bir fonksiyon tanımlar."
+    },
+    "11": {
+        "question": "Go'da bir döngü nasıl oluşturulur?",
+        "answer": "Golang mülakat sorularıyla karşılaşmayı bekleyin. Go'da bir döngü oluşturmak için for anahtar kelimesini kullanabilirsiniz. Go dilinde while anahtar kelimesi olmadığından, for döngüsü dildeki tek döngü yapısıdır.\nİşte bir for döngüsünün sözdizimi:\nfor initializer; condition; post {\n// döngü gövdesi\n}\nInitializer, condition ve post seçeneklidir. Initializer'ı ve postu ihmal ederseniz, condition'ı döngü gövdesinden ayırmak için bir noktalı virgül kullanabilirsiniz:\nfor condition {\n// döngü gövdesi\n}\nAyrıca, bir koşulu ihmal ederek sonsuz bir döngü oluşturabilirsiniz:\nfor { \n// döngü gövdesi \n} "
+    },
+    "12": {
+        "question": "Go'da bir if ifadesinin sözdizimi nedir?",
+        "answer": "Go'da bir if ifadesi oluşturmak için if anahtar kelimesini kullanabilirsiniz. Sözdizimi şu şekildedir:\nif condition {\n// if gövdesi\n} else {\n// else gövdesi\n}\nElse bloğu isteğe bağlıdır."
+    },
+    "13": {
+        "question": "Go'da bir switch ifadesinin sözdizimi nedir?",
+        "answer": "Go'da bir switch ifadesi oluşturmak için switch anahtar kelimesini kullanabilirsiniz. Sözdizimi şu şekildedir:\nswitch x { \ncase value1: \n// case gövdesi \ncase value2: \n// case gövdesi \n... \ndefault: \n// varsayılan gövde \n}\nSwitch ifadesi, x ifadesinin değerini case kısımlarının değerleriyle karşılaştırır. Bir eşleşme bulunursa, ilgili case gövdesi yürütülür. Hiçbir case değeri eşleşmezse, varsayılan gövde yürütülür (varsa)."
+    },
+    "14": {
+        "question": "Go'da bir işaretçi nasıl oluşturulur?",
+        "answer": "Go'da bir değerin işaretçisini oluşturmak için & operatörünü kullanabilirsiniz. Bu operatör, değerin bellek adresini döndürür.\n\nÖrneğin, bir int değerine işaretçi oluşturmak için aşağıdaki gibi yapabilirsiniz:\nx := 10\np := &x\n\nBurada, p bir int değerine işaretçidir ve &x x değişkeninin bellek adresidir.\n\nBir işaretçiyi dereference etmek ve işaret ettiği değere erişmek için * operatörünü kullanabilirsiniz. Örneğin\nfmt.Println(*p)  // 10 yazdırır\n\n İşaretçiler aşağıdaki amaçlarla kullanılır:\n\n* Bir işlevin, doğrudan iletilen değeri değiştirmesine izin verme. Yani referans geçme işlevselliğini başarmak.\n\n* Büyük veri yapıları mevcutken sınırlı durumlarda performansı artırmak için. İşaretçilerin kullanılması, büyük verilerin verimli bir şekilde kopyalanmasına yardımcı olur.\n\n* Değer eksikliğini belirtmekte yardımcı olur. Örneğin, bir JSON verisini bir yapıya ayrıştırırken, anahtarın mevcut veya mevcut olmadığını bilmek, anahtarın 0 değeriyle mevcut olduğunu belirtmek için kullanışlıdır."
+    },
+    "15": {
+        "question": "Go'da bir struct oluşturmak için sözdizimi nedir?",
+        "answer": "Go'da, bir struct oluşturmak için struct anahtar kelimesini, ardından alan adlarını ve bunların karşılık gelen türlerini içeren bir seti kullanabilirsiniz. İşte iki boyutlu uzayda bir noktayı temsil etmek için bir struct oluşturabileceğiniz bir örnek:\n\ntype Point struct { \nX float64 \nY float64 \n}\n\nBirleşik bir literalle bu struct türünde bir değer oluşturabilirsiniz:\np := Point{X: 1, Y: 2}"
+    },
+    "16": {
+        "question": "Go'da bir dizi nasıl oluşturulur?",
+        "answer": "Go'da, türü belirterek ve ardından köşeli parantez içindeki eleman sayısını belirterek bir dizi oluşturabilirsiniz. Örneğin, aşağıdaki kod, uzunluğu 5 olan bir tam sayı dizisi oluşturur:\nvar a [5]int "
+    },
+    "17": {
+        "question": "Go'da bir dilim nasıl oluşturulur?",
+        "answer": "Bir dilim, Go'da esnek, dinamik boyutlu bir dizidir. Bir dilim oluşturmak için make fonksiyonunu kullanabilirsiniz, bu fonksiyona bir dilim türü, bir uzunluk ve isteğe bağlı bir kapasite argümanı olarak geçirilir:\na := make([]int, 5)\nBu, uzunluğu 5 ve kapasitesi 5 olan bir dilim oluşturur."
+    },
+    "18": {
+        "question": "Go'da bir dizi ile bir dilim arasındaki fark nedir?",
+        "answer": "Bu soru, Golang kodlama mülakat sorularının düzenli bir parçasıdır, onunla başa çıkmaya hazır olun. Go'da, bir dizi belirli bir türdeki sabit boyutlu bir öğe dizisidir. Bir dizi oluşturduktan sonra, boyutunu değiştiremezsiniz.\n\nÖte yandan, bir dilim esnek, dinamik boyutlu bir dizidir. Bir dilim oluşturmak için make fonksiyonunu veya bir bileşik literal kullanabilirsiniz. Ayrıca, bir diziden veya başka bir dilimden bir dilim oluşturabilirsiniz. append fonksiyonunu kullanarak bir dilime öğeler ekleyebilirsiniz ve bir dilimin kapasitesi, öğeleri ekledikçe otomatik olarak büyüyebilir.\n\nDizilerle dilimler arasındaki önemli bir fark, dizilerin değer türleri olmasıdır, dilimlerin ise referans türleri olmasıdır. Bu, bir diziyi bir işleve ilettiğinizde veya yeni bir değişkene atadığınızda, dizinin bir kopyası oluşturulur. Öte yandan, bir dilimi bir işleve ilettiğinizde veya yeni bir değişkene atadığınızda, yalnızca temel dizinin bir referansı kopyalanır. Büyük dizilerle çalışırken veya gereksiz yere veri kopyalamaktan kaçınmak istediğinizde bunu dikkate almak önemli olabilir."
+    },
+    "19": {
+        "question": "Go'da bir harita nasıl oluşturulur?",
+        "answer": "Go'da bir harita oluşturmak için make fonksiyonunu veya bir bileşik literal kullanabilirsiniz.\n\nMake fonksiyonunu kullanarak boş bir harita oluşturmak için, anahtarların türünü ve değerlerin türünü belirtmeniz gerekir. Örneğin,\nm := make(map[string]int)\nBu, string anahtarları ve int değerlerini olan boş bir harita oluşturur."
+    },
+    "20": {
+        "question": "Go'da bir harita üzerinde nasıl dolaşılır?",
+        "answer": "Go'da bir harita üzerinde dolaşmak için bir aralık döngüsü kullanabilirsiniz. Aralık döngüsü, haritanın anahtar-değer çiftlerini üzerinde döner ve her çiftin anahtarına ve değerine erişmek için anahtar ve değer değişkenlerini kullanabilirsiniz.\n\nİşte bir stringlerden tamsayılara bir harita üzerinde nasıl dolaşabileceğinize dair bir örnek:\nm := map[string]int{ \n  'elma':  5,\n  'muz': 3,\n  'portakal': 2,\n} \nfor anahtar, değer := range m { \n  fmt.Printf('%s: %d\n', anahtar, değer) \n}\nBu, aşağıdaki çıktıyı yazdıracaktır:\n elma: 5 \nmuz: 3 \nportakal: 2\n\nNot olarak, anahtar-değer çiftlerinin ziyaret edildiği sıra belirtilmediğinden, belirli bir sıraya güvenmemelisiniz. Haritayı belirli bir sırada dolaşmanız gerekiyorsa, anahtarların bir dilimi kullanarak sırayı kontrol edebilirsiniz."
+    },
+    "21": {
+        "question": "Go'da bir Goroutine nedir?",
+        "answer": "Go programlama dilinde, bir goroutine, hafif bir yürütme iş parçacığıdır. Goroutine'ler görevleri eş zamanlı olarak gerçekleştirmek için kullanılır ve bunlar çok verimlidir çünkü az sayıda işletim sistemi iş parçacığına eşlenirler.\n\nGoroutine'ler geleneksel iş parçacıklarından birkaç açıdan farklıdır. Gerçek iş parçacıklarına eşlenirler, bu nedenle goroutine'lerle işletim sistemi iş parçacığı arasında birbirine karşılık gelen bir ilişki yoktur. Bu, az sayıda işletim sistemi iş parçacığında birçok goroutine'in eş zamanlı olarak çalışabileceği anlamına gelir. Ayrıca, goroutine'ler çok hafiftir, bu nedenle onları oluşturmak ve yönetmek maliyetli değildir."
+    },
+    "22": {
+        "question": "Go'da bir kanal nedir?",
+        "answer": "Go programlama dilinde, bir kanal, bir goroutine içinde değer gönderip almanızı sağlayan bir türdür. Kanallar, goroutine'ler arasındaki yürütme senkronizasyonu ve veri iletişimi için kullanılır.\n\nKanallar, make fonksiyonu kullanılarak oluşturulur:\n\nch := make(chan int)\n\nBu, tamsayılar gönderip almak için kullanılabilecek bir kanal oluşturur."
+    },
+    "23": {
+        "question": "Go'da nasıl bir kanal oluşturulur?",
+        "answer": "Go'da bir kanal oluşturmak için make fonksiyonunu kullanırız:\n\nch := make(chan int)\n\nBu, tamsayı gönderip almak için kullanılabilecek bir kanal oluşturur. Kanalın kapasitesini belirtmek için make fonksiyonuna bir ek argüman geçerek kanalın kapasitesini belirtebilirsiniz:\n\nch := make(chan int, 100)\n\nBu, 100 tamsayı kapasiteli bir kanal oluşturur.\n\nKanalı oluştururken kanalın yönünü de belirtebilirsiniz, bunun için kanal türünden önce chan anahtar kelimesini kullanarak yönü belirleyebilirsiniz:\n\n// sadece gönderme kanalı\nch := make(chan<- int)\n// sadece alma kanalı\nch := make(<-chan int)"
+    },
+    "24": {
+        "question": "Go'da bir kanalı nasıl kapatırsınız?",
+        "answer": "Bir kanalı sonlandırmak için Go'da close fonksiyonunu kullanmalısınız.\n\nclose fonksiyonu, bir kanalı kapatmak ve üzerine daha fazla değer gönderilmeyeceğini belirtmek için kullanılır. Bir kanal kapatıldıktan sonra, kanala değer gönderme girişimleri bir panikle sonuçlanır. İşte bir kanalı kapatmanın bir örneği:\n\nch := make(chan int)\n// kanalı kapat\nclose(ch)\n// bu bir panik oluşturacak: 'kapalı kanala gönder' \nch <- 5\n\nBir kanal artık gerekli olmadığında kanalı kapatmalısınız ve o kanala bağlı bir alım işlemi için bekleyen goroutine'ler varsa kanalı kapatmamalısınız."
+    },
+    "25": {
+        "question": "Go'da bir kanal üzerinde nasıl döngü oluşturulur?",
+        "answer": "Go'nun range anahtar kelimesi, belirtilen bir kanal üzerinde bir döngü oluşturmak için bir for döngüsü ile birlikte kullanılabilir.\n\nrange anahtar kelimesi, bir kanaldan alınan değerler üzerinde döngü oluşturmak için kullanılır; kanal kapatıldığında, döngü sona erer.\n\nİşte bir kanal üzerinde döngü oluşturmanın bir örneği:\n\nch := make(chan int)\ngo func() {\n  for i := 0; i < 10; i++ {\n    ch <- i\n  }\n  close(ch)\n}()\n// kanal üzerinde döngü oluştur\nfor val := range ch {\n  fmt.Println(val)\n}\n\nBu örnek bir kanal ch oluşturur ve bu kanala 10 değer gönderen bir goroutine başlatır. Ana işlev, kanal üzerinde döngü oluşturarak alınan değerleri yazdırır. Kanal kapatıldığında, döngü sona erer."
+    },
+    "26": {
+        "question": "Go'da panikleri nasıl yönetir ve onlardan nasıl kurtulursunuz?",
+        "answer": "Go programlama dilinde, bir panik, bir programın bir hatadan kurtulamadığında ortaya çıkan bir çalışma zamanı hatasıdır. Panikler genellikle programcı hataları tarafından neden olur, örneğin bir dizi endekslemeye çalışmak veya sıfıra bölmek gibi.\n\nBir panikle başa çıkmak ve ondan kurtulmak için, bir defer ifadesi içinde recover fonksiyonunu kullanabilirsiniz. Defer ifadesi çevresindeki işlev dönene kadar ertelenmiş olan bir işlev, çevresindeki işlev normal olarak veya bir panik aracılığıyla dönene kadar bekletilir."
+    },
+    "27": {
+        "question": "Go'da 'defer' anahtar kelimesi ne için kullanılır?",
+        "answer": "2 yıllık deneyime sahip bir Golang mülakat sorusu olarak, buna cevap verebilecek şekilde hazırlıklı olun. Go programlama dilinde, defer anahtar kelimesi, çevresindeki işlev dönene kadar bir işlevin yürütülmesini ertelemek için kullanılır.\n\nDefer ifadesi, çevresindeki işlevin normal olarak dönüp dönmediğinden veya bir panik aracılığıyla dönüp dönmediğinden bağımsız olarak bir işlevin her zaman yürütülmesini sağlamak için kullanılır. Genellikle, dosya kapatma veya kilit serbest bırakma gibi temizlik görevlerini gerçekleştirmek için kullanılır."
+    },
+    "28": {
+        "question": "Go'da bir paket nasıl oluşturulur ve kullanılır?",
+        "answer": "Go programlama dilinde, bir paket, birlikte derlenen ilgili Go kaynak dosyalarının bir koleksiyonudur. Paketler, kodu düzenlemek ve yeniden kullanmak için kullanılır ve Go'da kütüphaneler oluşturmak ve kullanmak için bir yol sağlar.\n\nGo'da bir paket oluşturmak için, Go kaynak dosyalarınızı paketin adıyla aynı isimde bir dizine koymanız yeterlidir. Paket adı, kaynak dosyalarının bulunduğu dizinin adıdır."
+    },
+    "29": {
+        "question": "Go'da bir paket ile bir modül arasındaki fark nedir?",
+        "answer": "Go programlama dilinde, bir paket, birlikte derlenen ilgili Go kaynak dosyalarının bir koleksiyonudur. Paketler, kodu düzenlemek ve yeniden kullanmak için kullanılır ve Go'da kütüphaneler oluşturmak ve kullanmak için bir yol sağlar.\n\nBir modül, Go 1.11'de tanıtılan Go kaynak kodu için bir düzenleme birimidir. Modüller, bağımlılık sürümlerini yönetmek için bir yol sağlar ve Go paketlerini oluşturmak, test etmek ve yayınlamak için kullanılır.\n\nModüller, modül yolunu, modülün bağımlılıklarını ve bu bağımlılıkların gereken sürümlerini belirten bir go.mod dosyası kullanılarak tanımlanır."
+    },
+    "30": {
+        "question": "Go'da özel bir tür nasıl oluşturulur?",
+        "answer": "Go programlama dilinde, bir türü özel olarak tanımlayabilirsiniz, bunun için type anahtar kelimesini, ardından tür adını ve tanımlamak istediğiniz türü kullanırsınız.\n\nAşağıdaki örnekte, dahili int türüne dayanan MyInt adlı özel bir tür oluşturulmuştur:\n\npackage main\ntype MyInt int\nfunc main() {\n  var x MyInt = 5\n  fmt.Println(x)\n}\n\nBu örnek, int türüne dayalı MyInt adlı özel bir tür oluşturur. Özel tür, Go'da diğer türler gibi kullanılabilir."
+    },
+    "31": {
+        "question": "Go'da tür dönüşümü için sözdizimi nedir?",
+        "answer": "Go programlama dilinde bir değerin türünü değiştirme işlemine 'tür dönüşümü' denir. Go'da bir değeri farklı bir türe dönüştürmek için aşağıdaki sözdizimini kullanırsınız:\n\nnewType(ifade)\n\nİşte Go'da tür dönüşümünün bir örneği:\n\npackage main\nimport 'fmt'\nfunc main() {\n  var x float64 = 3.14\n  var y int = int(x)\n  fmt.Println(y)  // '3' yazdırır\n}\nBu örnekte, x'in değeri float64'ten int'e dönüştürülür. Sonuç, tamsayı değer 3'tür."
+    },
+    "32": {
+        "question": "Go'da 'boş tanımlayıcı' nasıl kullanılır?",
+        "answer": "Deneyimli kullanıcılar için en sık sorulan Golang mülakat sorularından biri. Boş tanımlayıcı, bir değerin atılması gerektiğinde kullanılan Go programlama dilindeki benzersiz bir tanımlayıcıdır. Boş tanımlayıcı, alt çizgi karakteri (_) ile temsil edilir. Bir adı yoktur ve bir değişken olarak kullanılamaz.\n\nİşte Go'da boş tanımlayıcı kullanımının bir örneği:\n\npackage main\nimport 'fmt'\nfunc main() {\n  // hata değerini atla\n  _, err := os.Open('dosya.txt')\n  if err != nil {\n    panic(err)\n  }\n}\n\nBu örnekte, boş tanımlayıcı, dosya ve bir hata döndüren os.Open tarafından döndürülen değeri atlamak için kullanılır. Hata değeri err değişkenine atanırken, dosya değeri boş tanımlayıcı kullanılarak atılır."
+    },
+    "33": {
+        "question": "Go'da bir yapıya işaretçi nasıl oluşturulur ve kullanılır?",
+        "answer": "Go'da işaretçiler, diğer değişkenlerin bellek adresini tutan değişkenlerdir. İşaretçiler, değişkenleri referansla geçmek ve dolaylı yoldan değişkenleri değiştirmek için kullanışlıdır. Bir yapıya işaretçi oluşturmak için Go'da, yapı bellek adresini almak için & operatörünü kullanır ve işaretçinin türünü tanımlamak için * operatörünü kullanırsınız:\n\npackage main\n\ntype Person struct {\n  Name string\n  Age  int\n}\n\nfunc main() {\n  // Bir Person yapısına işaretçi oluştur\n  p := &Person{Name: 'John', Age: 30}\n  // İşaretçi üzerinden yapıyı değiştir\n  p.Age = 31\n  fmt.Println(p)  // '&{John 31}' yazdırır\n}"
+    },
+    "34": {
+        "question": "Go'da bir yapıyı nasıl gömersiniz?",
+        "answer": "Go programlama dilinde, bileşik bir veri türü oluşturmak için bir yapıyı başka bir yapı içine gömebilirsiniz. Buna yapı gömme denir.\n\nBir yapıyı gömmek için, iç yapı türünü dış yapıda bir alan olarak belirtirsiniz. İç yapının alanları, dış yapının alanları haline gelir ve iç yapının yöntemleri, dış yapının yöntemleri haline gelir."
+    },
+    "35": {
+        "question": "Go'da bir fonksiyon kapanışı nasıl oluşturulur ve kullanılır?",
+        "answer": "Go'da bir fonksiyon kapanışı, tanımlandığı kapsamdan değişkenlere başvuran bir fonksiyondur. Bu değişkenler, fonksiyon tarafından 'kapanır' ve fonksiyon, orijinal kapsamının dışında çağrıldıktan sonra bile erişilebilir durumda kalır.\n\nİşte Go'da bir fonksiyon kapanışının nasıl oluşturulup kullanılacağına dair bir örnek:\n\npackage main\nimport 'fmt'\nfunc main() {\n  // x adında bir değişken oluştur ve 10'a eşitle\n  x := 10\n  // x'in değerini yakalayan bir fonksiyon kapanışı oluştur\n  ekleX := func(y int) int {\n     return x + y\n  }\n  // Fonksiyon kapanışını kullanarak x'i farklı y değerlerine ekleyin\n  fmt.Println(ekleX(5))  // 15 yazdırır\n  fmt.Println(ekleX(10)) // 20 yazdırır\n  // x'in değerini değiştir ve fonksiyon kapanışının hala orijinal değeri kullandığını görün\n  x = 20\n  fmt.Println(ekleX(5))  // hala 15 yazdırır\n}"
+    },
+    "36": {
+        "question": "Go'da bir fonksiyon literali oluşturmak ve kullanmak için sözdizimi nedir?",
+        "answer": "Go'da anonim bir fonksiyon, adı olmadan tanımlanan ve çağrılan bir fonksiyondur. Bunlar bir değişkene atanabilir veya başka bir fonksiyona argüman olarak geçirilebilir. İşte Go'da bir fonksiyon literali oluşturmanın ve kullanmanın bir örneği:\n\npackage main\nimport 'fmt'\nfunc main() {\n  // İki tamsayıyı giriş olarak alan ve toplamlarını döndüren bir fonksiyon literali oluşturun\n  ekle := func(x, y int) int {\n     return x + y\n  }\n  // İki sayıyı toplamak için fonksiyon literali kullan\n  sonuç := ekle(5, 10)\n  fmt.Println(sonuç) // 15 yazdırır\n  // Bir fonksiyon literali, başka bir fonksiyona argüman olarak geçirilir\n  bazıFonksiyon(func(x int) int {\n     return x * x\n  })\n}\nfunc bazıFonksiyon(f func(int) int) {\n  fmt.Println(f(5))\n}"
+    },
+    "37": {
+        "question": "Go'da 'select' ifadesi nasıl kullanılır?",
+        "answer": "Go'da, 'select' ifadesi birden fazla iletişim işlemi arasından seçim yapmak için kullanılır. Bir 'switch' ifadesine benzer, ancak özellikle kanallarda veri gönderme veya alma gibi iletişim işlemleri için kullanılır. Select ifadesi, durumlardan biri çalıştırılabilir hale gelene kadar bloke olur, sonra o durumu çalıştırır, bu bloke edici bir işlemdir."
+    },
+    "38": {
+        "question": "Go'da bir tür ispatı oluşturmak ve kullanmak için sözdizimi nedir?",
+        "answer": "Go'da bir tür ispatı, bir arayüz değişkeninin belirli bir türü içerip içermediğini kontrol etmek ve eğer içeriyorsa, o türün altta yatan değerini çıkarmak için kullanılır. \n\nİşte Go'da bir tür ispatı oluşturmanın ve kullanmanın bir örneği:\n\npackage main \nimport ( \n'fmt' \n) \nfunc main() { \n// Bir arayüz değişkeni tanımla \nvar myvar interface{} = 'hello' \n// myvar'ın türünü kontrol etmek için tür ispatını kullan \nstr, ok := myvar.(string) \nif ok { \n   fmt.Println(str) \n} else { \n   fmt.Println('myvar bir dize değil') \n} \n}"
+    },
+    "39": {
+        "question": "Go'da bir tür anahtarlaması oluşturmak ve kullanmak için sözdizimi nedir?",
+        "answer": "Go'da bir tür anahtarlaması, bir arayüz değişkeninin türünü kontrol etmek ve altta yatan değerinin türüne göre farklı kodları çalıştırmak için kullanılır. Bir tür anahtarlaması, bir tür ispatına benzer, ancak aynı anda birden çok tür için kontrol edebilir ve altta yatan değeri tutmak için bir değişkene ihtiyaç duymaz. \n\nİşte Go'da bir tür anahtarlaması oluşturmanın ve kullanmanın bir örneği: \n\npackage main \nimport ( \n'fmt' \n) \nfunc birŞeyYap(i interface{}) { \nswitch v := i.(type) { \n  case int: \n     fmt.Println('i bir int:', v) \n  case float64: \n     fmt.Println('i bir float64:', v) \n  case string: \n     fmt.Println('i bir string:', v) \n  default: \n     fmt.Println('i bilinmeyen bir türde') \n} \n} \nfunc main() { \nbirŞeyYap(1) \nbirŞeyYap(3.14) \nbirŞeyYap('hello') \nbirŞeyYap([]int{}) \n} "
+    },
+    "40": {
+        "question": "Go'da bir tür dönüşümü oluşturmak ve kullanmak için sözdizimi nedir?",
+        "answer": "Go'da bir değerin türünü değiştirmenin bir yolu, bir tür dönüşümü uygulamaktır. Go'da, temel türlerin çoğu için yerleşik tür dönüşümleri bulunmaktadır. İşte Go'da bir tür dönüşümü oluşturmanın ve kullanmanın bir örneği:\n\npackage main \nimport ( \n'fmt' \n) \nfunc main() { \nvar x float64 = 3.14 \nvar y int = int(x) // float64'ten int'e tür dönüşümü 'nfmt.Println(y) // '3' yazdırır \nvar a string = '42' \nvar b int64 \nb, _ = strconv.ParseInt(a, 10, 64) // standart kütüphaneyi kullanarak string'den int64'e tür dönüşümü \nfmt.Println(b) // '42' yazdırır \n} "
+    },
+    "41": {
+        "question": "Go'da paylaşılan verileri korumak için 'sync' paketini nasıl kullanırsınız?",
+        "answer": "Go'da 'sync' paketi, paylaşılan verilere erişimi senkronize etmek için çeşitli türler ve işlevler sağlar. En popüler seçeneklerden biri, yalnızca bir Gorutin'in paylaşılan verilere aynı anda erişebilmesini sağlayan sync.Mutex'tir."
+    },
+    "42": {
+        "question": "Go'da 'sync/atomic' paketini atomik işlemler için nasıl kullanırsınız?",
+        "answer": "Go'da 'sync/atomic' paketi, senkronizasyon paketiyle birlikte kullanılmak üzere atomik bellek işlemleri gibi düşük seviyeli işlemleri sağlar. Bu işlemler, birden fazla gorutin arasında paylaşılan değişkenler üzerinde atomik okuma-değiştirme-yazma işlemlerini gerçekleştirmenizi sağlar ve bu işlem için açık kilitleme veya diğer senkronizasyon yöntemlerine ihtiyaç duymaz."
+    },
+    "43": {
+        "question": "'context' paketini Go'da istek kapsamlı değerleri taşımak için nasıl kullanırsınız?",
+        "answer": "'Context' paketi, API sınırlarında istek kapsamlı değerleri ve iptal sinyallerini taşımak için bir yol sağlar. Genellikle, istek metadatası, istek zaman aşımı vb. gibi istek kapsamlı veriler sağlamak için http istek işleyicileriyle birlikte kullanılır."
+    },
+    "44": {
+        "question": "'net/http' paketini Go'da bir HTTP sunucusu oluşturmak için nasıl kullanırsınız?",
+        "answer": "'net/http' paketi, HTTP sunucuları ve istemcileri oluşturmak için bir dizi işlev ve tür sağlar. Bu yazılımla oluşturulan basit bir HTTP sunucusu aşağıda gösterilmiştir.\n\npackage main \nimport ( \n'fmt' \n'net/http' \n) \nfunc handler(w http.ResponseWriter, r *http.Request) { \nfmt.Fprint(w, 'Merhaba, Dünya!') \n} \nfunc main() { \nhttp.HandleFunc('/', handler) \nhttp.ListenAndServe(':8080', nil) \n}\n\nBu kod, 8080 portunda dinleyen ve gelen istekleri 'handler' fonksiyonunu çağırarak işleyen bir HTTP sunucusu oluşturur."
+    },
+    "45": {
+        "question": "Go'da 'encoding/json' paketini JSON ayrıştırmak ve oluşturmak için nasıl kullanırsınız?",
+        "answer": "Go'da 'encoding/json' paketi, JSON verilerini kodlama ve kod çözme işlevselliği sağlar.\n\nJSON verilerini ayrıştırmak için json.Unmarshal() işlevini kullanabilirsiniz. Bu işlev, JSON verilerinin bir byte dizisini ve bir yapı işaretçisini alır ve yapıyı JSON verileriyle doldurur."
+    },
+    "46": {
+        "question": "Go'da bir değişkenin türünü ve değerini kontrol etmek için 'reflect' paketini nasıl kullanırsınız?",
+        "answer": "Go'da 'reflect' paketi, değişkenlerin türünü ve değerini çalışma zamanında kontrol etmek için işlevler sağlar.\n\nBir değişkenin türünü kontrol etmek için reflect.TypeOf() işlevini kullanabilirsiniz. Bu işlev, bir interface{} değerini alır ve alttaki değerin türünü temsil eden bir reflect.Type değeri döndürür. İşte reflect.TypeOf() kullanımına ilişkin bir örnek:\n\npackage main \nimport ( \n'fmt' \n'reflect' \n) \nfunc main() { \nvar x int = 10 \nfmt.Println(reflect.TypeOf(x)) // 'int' yazdırır \nvar y float64 = 3.14 \nfmt.Println(reflect.TypeOf(y)) // 'float64' yazdırır \nvar z string = 'hello' \nfmt.Println(reflect.TypeOf(z)) // 'string' yazdırır \n} "
+    },
+    "47": {
+        "question": "'testing' paketini Go'da birim testleri yazmak için nasıl kullanırsınız?",
+        "answer": "Go'da 'testing' paketi, birim testleri yazmak için işlevsellik sağlar.\n\nGo'da bir birim testi, func TestXxx(*testing.T) şeklinde bir imzaya sahip bir işlevdir, Xxx herhangi bir alfasayısal dize olabilir (ancak Xxx'in ilk harfi büyük olmalıdır). Bu işlev, bazı test durumlarını çalıştırır ve bunların geçip geçmediğini rapor eder, bunu testing.T yapısı tarafından sağlanan yöntemleri kullanarak yapar."
+    },
+    "48": {
+        "question": "Go'da hataları oluşturmak ve manipüle etmek için 'errors' paketini nasıl kullanırsınız?",
+        "answer": "Go'da 'errors' paketi, hataları oluşturmak ve manipüle etmek için basit bir yol sağlar. Bir hata oluşturmak için, bir string'i argüman olarak alan ve bir hata döndüren errors.New işlevini kullanabilirsiniz. Örneğin:\n\npackage main \nimport ( \n'errors' \n'fmt' \n)  \nfunc main() { \nerr := errors.New('something went wrong') \nfmt.Println(err) \n}\n\nBu, 'something went wrong' dizesini yazdırır."
+    },
+    "49": {
+        "question": "'net' paketini kullanarak Go'da ağ protokollerini nasıl uygularsınız?",
+        "answer": "'net' paketini kullanarak Go'da ağ protokollerini uygulamak için ilk adım, kodunuzda paketi içe aktarmaktır. Bunun için belgenizin en başına aşağıdaki satırı ekleyin: \n\nimport 'net'\n\n* Bir ağ bağlantısı oluşturun: 'net' paketi içe aktarıldığında, bir ağ bağlantısı oluşturmak için kullanabilirsiniz. Go, TCP, UDP ve IP gibi çeşitli türlerde ağ bağlantıları sağlar. Örneğin, bir TCP bağlantısı oluşturmak için 'net.DialTCP' işlevini kullanabilirsiniz. Bir UDP bağlantısı oluşturmak için 'net.DialUDP' işlevini kullanabilirsiniz. Bir IP bağlantısı oluşturmak için 'net.DialIP' işlevini kullanabilirsiniz.\n\n* Bağlantı üzerinden veri gönderin: Bağlantı kurulduktan sonra, verileri uzak ana bilgisayara göndermek için bağlantının 'Write' yöntemini kullanabilirsiniz. 'Write' yöntemi, göndermek istediğiniz veriler olan bir byte dizisini argüman olarak alır.\n\n* Bağlantıdan veri alın: Uzak ana bilgisayardan veri almak için, bağlantının 'Read' yöntemini kullanabilirsiniz. Bu yöntem, veri alınıncaya veya bağlantı kapatılana kadar engellenecektir.\n\n* Bağlantıyı kapatın: Bağlantı ile işiniz bittiğinde, kaynakları serbest bırakmak ve bellek sızıntılarını önlemek için bağlantıyı kapatmanız gerekir. Bir bağlantıyı kapatmak için, bağlantının 'Close' yöntemini kullanabilirsiniz.\n\n* Hataları işleyin: Her adım, hatalar içerebilir ve başarısız bir numara çevirme, bağlantı reddedildi, yazma veya okuma başarısız oldu vb. gibi hatalarla başa çıkmalısınız."
+    },
+    "50": {
+        "question": "Go'da tarih ve zamanları nasıl işleriz?",
+        "answer": "Go'daki 'time' paketi, tarih ve zamanlarla çalışmak için bir dizi işlev ve tür sağlar. İşte Go'da tarih ve zamanları işlemek için 'time' paketini nasıl kullanabileceğinizi gösteren bazı örnek kodlar:\n\npackage main\nimport (\n  'fmt'\n  'time'\n)\nfunc main() {\n// Geçerli zamanı al\nşimdi := time.Now()\n   fmt.Println('Geçerli zaman:', şimdi)\n   // Önceden tanımlanmış bir düzeni kullanarak zamanı biçimlendir\n   fmt.Println('Biçimlendirilmiş zaman:', şimdi.Format(time.RFC3339))\n   // Bir dizeden bir zamanı çöz\n   çözülmüşZaman, hata := time.Parse('2006-01-02 15:04:05', '2022-11-17 14:25:00')\nif hata != nil {\nfmt.Println('Zaman çözülürken hata oluştu:', hata)\n} else {\nfmt.Println('Çözülmüş zaman:', çözülmüşZaman)\n}\n// Zamanı bir süreye ekle\nsüre, _ := time.ParseDuration('2s30d')\ngelecekZaman := şimdi.Add(süre)\nfmt.Println('Gelecek zaman:', gelecekZaman)\n// İki zaman arasındaki farkı al\nfark := gelecekZaman.Sub(şimdi)\nfmt.Println('Zaman farkı:', fark)\n}"
+    },
+    "51": {
+        "question": "Go'da matematiksel ve istatistiksel işlemler yapmak için 'math' ve 'math/rand' paketlerini nasıl kullanırsınız?",
+        "answer": "Go'daki 'math' paketi, trigonometri, üstel ve logaritma gibi temel matematiksel işlemleri yapmak için bir dizi işlev ve sabit sağlar. Öte yandan, 'math/rand' paketi, sözde rasgele sayı üreteci sağlar.\n\nGo'da matematiksel ve istatistiksel işlemler yapmak için 'math' ve 'math/rand' paketlerini kullanmanın genel adımları şunlardır:\n\n'math' ve 'math/rand' paketlerini içe aktarın: 'math' ve 'math/rand' paketlerini kullanmak için öncelikle kodunuza içe aktarmanız gerekir. Bunu, dosyanızın en üstüne aşağıdaki satırları ekleyerek yapabilirsiniz:\n\nimport 'math/rand'\n\n* Matematiksel işlevleri kullanın: 'math' paketi, sinüs, kosinüs, tanjant, karekök vb. gibi birçok matematiksel işlev sağlar. Bu işlevler doğrudan çağrılabilir ve bir float64 alır ve bir float64 döndürür.\n\n* Rasgele sayı üretecinin tohumunu ekin: 'math/rand' paketi, rastgele sayı üreteci sağlar ve rastgele sayılar üretmek için bir tohum değeri kullanır. Üreteciye tohum ekmek için, 'rand.Seed' işlevini kullanabilirsiniz, bu işlevin argümanı olarak bir int64 değeri alır.\n\n* Rasgele sayılar üretin: Rastgele sayı üreteci tohumlandıktan sonra, 'rand.Intn' işlevini kullanarak 0 ile belirtilen üst sınır arasında rasgele bir tamsayı üretebilirsiniz. Ayrıca, 0 ile 1 arasında rasgele bir float64 değeri üretmek için 'rand.Float64' işlevini kullanabilirsiniz.\n\n* İstatistiksel işlemler: 'math' paketi ayrıca ortalama, varyans vb. gibi istatistiksel işlemleri sağlar, bu işlevleri float64 dilimler üzerinde kullanabilirsiniz.\n\n* Hataları işleyin: 'math' paketindeki bazı işlevler, girişlere bağlı olarak hatalar döndürebilir, örneğin, log(-1) bir hata döndürecektir."
+    },
+    "52": {
+        "question": "Go'da kriptografik işlemler yapmak için 'crypto' paketini nasıl kullanırsınız?",
+        "answer": "Go'daki 'crypto' paketi, ileti özetleri, dijital imzalar ve şifreleme gibi çeşitli kriptografik işlemler için bir dizi işlev ve tür sağlar. İşte Go'da kriptografik işlemler yapmak için 'crypto' paketini nasıl kullanabileceğinizi gösteren bazı örnek kodlar:\n\npackage main\nimport (\n   'crypto/sha256'\n   'fmt'\n)\nfunc main() {\n// Yeni bir SHA-256 özeti oluştur\n   özet := sha256.New()\n   // Veriyi özete yaz\n   özet.Write([]byte('merhaba dünya'))\n   // Sonuçta elde edilen özet değerini al\n   özetDeğeri := özet.Sum(nil)\n   // Özet değerini yazdır\n   fmt.Printf('Özet: %x\\n', özetDeğeri)\n}"
+    },
+    "53": {
+        "question": "<p>Go'da işletim sistemiyle etkileşimde bulunmak için 'os' paketini nasıl kullanırsınız?</p>",
+        "answer": "Bu, kıdemli Golang mülakat sorularında sık sık karşımıza çıkan bir durum değil. Go'daki 'os' paketi, dosya ve dizinlerle çalışma, harici komutları çalıştırma ve ortam değişkenlerine erişme gibi işletim sistemiyle etkileşim için bir dizi işlev ve tür sağlar.\n\nİşletim sistemiyle Go'da etkileşimde bulunmak için 'os' paketini kullanmanın genel adımları aşağıda verilmiştir:\n\n* 'os' paketini içe aktarın: 'os' paketini kullanmak için öncelikle kodunuzda içe aktarmanız gerekir. Bunu dosyanızın en üstüne aşağıdaki satırı ekleyerek yapabilirsiniz: import 'os'\n\n* Ortam değişkenlerine erişim: 'os.Getenv' işlevini kullanarak ortam değişkenlerine erişebilirsiniz. Bu işlev, ortam değişkeninin adını temsil eden bir dize alır ve ortam değişkeninin değerini temsil eden bir dize döndürür. value := os.Getenv('MY_VARIABLE')\n\n* Harici komutları çalıştırma: 'os.Command' işlevini kullanarak harici komutları çalıştırabilirsiniz. Bu işlev, komut adı ve argümanlarla çağrılabilir ve ardından çalıştırılabilir.\n\ncmd := exec.Command('ls', '-l')  \noutput, err := cmd.Output()\n\n* Dosya ve dizin oluşturma ve silme: Dosya ve dizin oluşturabilir, silebilir ve taşıyabilirsiniz. 'os.Create', 'os.Remove' ve 'os.Rename' işlevlerini kullanarak bu işlemleri gerçekleştirebilirsiniz. os.Create('yenidosya.txt')\n\nos.Remove('mevcutdosya.txt') \n\nos.Rename('eskidosya.txt', 'yenidosya.txt') \n\n* Dosya özelliklerini değiştirme: 'os' paketi, dosya özelliklerini değiştirmek için 'chmod' ve 'chtimes' gibi komutlar içerir.\n\n* Herhangi bir aşamada bir sorun oluşursa—örneğin, komut başarılı bir şekilde yürütülmezse, dosya silinmezse, vb.—bununla başa çıkmanız gerekecektir."
+    },
+    "54": {
+        "question": "Go'da tamponlu verileri okumak ve yazmak için 'bufio' paketini nasıl kullanırsınız?",
+        "answer": "'bufio' paketi, bayt akımlarını okumak ve yazmak için tamponlu G/Ç sağlar.\n\nBir dosyadan bilgi okumak için 'bufio' paketini kullanabilirsiniz, işte bir örnek:\n\npackage main \nimport ( \n'bufio' \n'fmt' \n'os' \n)\nfunc main() { \ndosya, hata := os.Open('dosya.txt') \nif hata != nil { \n   fmt.Println(hata) \n   return \n}\ndefer dosya.Close() \ntarayıcı := bufio.NewScanner(dosya) \ndöngü için tarayıcı.Scan() { \n   fmt.Println(tarayıcı.Text()) \n}\nif hata := tarayıcı.Err(); hata != nil { \nfmt.Println(hata) \n} \n}\nBu örnek, 'dosya.txt' adlı bir dosyayı okumak için os.Open işlevini kullanır. Daha sonra, yeni bir bufio.Scanner oluşturur ve onu dosyaya argüman olarak geçirerek giriş kaynağını ayarlar. Tarayıcının Scan yöntemi, dosyayı satır satır okumak için bir döngü içinde kullanılır. Tarayıcının Text yöntemi, geçerli satırı bir dize olarak döndürmek için kullanılır."
+    },
+    "55": {
+        "question": "Go'da dizeleri nasıl manipüle edersiniz için 'strings' paketini nasıl kullanırsınız?",
+        "answer": "Go'da 'strings' paketi, dizeleri manipüle etmek için çeşitli işlevler sağlar. Aşağıda, Go'da dizeleri manipüle etmek için 'strings' paketini nasıl kullanabileceğinize dair birkaç örnek bulunmaktadır: \n\nContains(s, altstr string) bool: dize s alt dizesini içeriyorsa true döner. \npackage main \nimport ( \n'fmt' \n'strings' \n)\nfunc main() { \ns := 'Merhaba, Dünya!' \naltstr := 'Dünya' \nfmt.Println(strings.Contains(s, altstr))  // true \n}\nCount(s, sep string) int: dize s içinde sep'in örtüşmeyen örneklerinin sayısını döndürür. \npackage main \nimport ( \n'fmt' \n'strings' \n)\nfunc main() { \ns := 'Merhaba, Dünya! Nasılsınız?' \nayır := ' ' \nfmt.Println(strings.Count(s, ayır))  // 6 \n} "
+    },
+    "56": {
+        "question": "Go'da bayt dilimlerini nasıl manipüle edersiniz için 'bytes' paketini nasıl kullanırsınız?",
+        "answer": "Go'daki bytes paketi, bayt dilimlerini manipüle etmek için çeşitli işlevler sağlar. Aşağıda, Go'da bayt dilimlerini manipüle etmek için 'bytes' paketini nasıl kullanabileceğinize dair bir örnek bulunmaktadır: \n\nCompare(a, b []byte) int: iki bayt dilimini leksikografik olarak karşılaştırır ve sıralarını belirten bir tamsayı döndürür (-1, 0 veya 1) \n\npackage main \nimport ( \n'fmt' \n'bytes'\n) \nfunc main() { \na := []byte('merhaba') \nb := []byte('dünya') \nfmt.Println(bytes.Compare(a, b)) // -1 \n} "
+    },
+    "57": {
+        "question": "Go'da ikili verileri kodlamak ve kod çözmek için 'encoding/binary' paketini nasıl kullanırsınız?",
+        "answer": "Go'daki encoding/binary paketi, ikili biçimde veri kodlamak ve kod çözmek için işlevler sağlar. Aşağıda, Go'da ikili verileri kodlamak ve kod çözmek için encoding/binary paketini kullanmaya yönelik bir örnek bulunmaktadır:\n\nBir int32 değerini Write işlevini kullanarak bir bayt dilimine kodlama: \n\npackage main \nimport ( \n'bytes' \n'encoding/binary' \n'fmt' \n) \nfunc main() { \nvar num int32 = 12345 \nbuff := new(bytes.Buffer) \nerr := binary.Write(buff, binary.LittleEndian, num) \nif err != nil { \n     fmt.Println('binary.Write failed:', err) \n} \nfmt.Printf('% x', buff.Bytes()) // 39 30 00 00 \n} \n\nWrite işlevi üç argüman alır: yazılacak tampon, bayt düzeni ve kodlanacak değer. Bu durumda, bayt düzeni için binary.LittleEndian'ı ve kodlanacak değer için num'u kullanıyoruz."
+    },
+    "58": {
+        "question": "Go'da gzip algoritması kullanarak verileri sıkıştırmak ve açmak için 'compress/gzip' paketini nasıl kullanırsınız?",
+        "answer": "'compress/gzip' paketi, verileri gzip algoritması kullanarak sıkıştırmak ve açmak için fonksiyonlar sağlar. Aşağıda, Go'da gzip algoritmasını kullanarak verileri sıkıştırmak ve açmak için 'compress/gzip' paketini nasıl kullanacağınıza dair bir örnek bulunmaktadır: \n\npackage main \nimport ( \n'bytes' \n'compress/gzip' \n'fmt' \n'io' \n'log' \n) \nfunc main() { \n// Sıkıştırılacak veriler \ndata := []byte('Merhaba Dünya') \n// Verileri sıkıştır \nvar b bytes.Buffer \nw := gzip.NewWriter(&b) \nif _, err := w.Write(data); err != nil { \n       log.Fatalln(err) \n} \nif err := w.Close(); err != nil { \nlog.Fatalln(err) \n}  \n// Verileri aç \nr, err := gzip.NewReader(&b) \nif err != nil { \n       log.Fatalln(err) \n} \ndefer r.Close() \nvar result bytes.Buffer \nio.Copy(&result, r) \nfmt.Println(result.String()) // Merhaba Dünya \n} "
+    },
+    "59": {
+        "question": "Go'da bir SQL veritabanına erişmek için 'database/sql' paketini nasıl kullanırsınız?",
+        "answer": "'database/sql' paketi, SQL veritabanlarına etkileşimde bulunmak için basit ve temiz bir arayüz sağlar. Basit bir sorgu yapmak için nasıl kullanabileceğinizi gösteren bir örnek aşağıda verilmiştir: \n\npackage main \nimport ( \n      'database/sql' \n       'fmt'\n_ 'github.com/go-sql-driver/mysql' // MySQL sürücüsü için gerekli import \n) \nfunc main() { \n    // Veritabanına bir bağlantı aç \n     db, err := sql.Open('mysql', 'kullanıcı:şifre@tcp(sunucu:port)/veritabanı') \n      if err != nil { \n      fmt.Println(err) \n     return \n} \n       defer db.Close() \n         // 'users' tablosundan tüm satırları seçmek için bir ifade hazırla \n       rows, err := db.Query('SELECT * FROM users') \n     if err != nil { \n      fmt.Println(err) \n     return \n} \n       defer rows.Close() \n       // Satırları döngü ile gez ve sonuçları yazdır \n       for rows.Next() { \n        var id int \n       var name string \n      var age int \n      err := rows.Scan(&id, &name, &age) \n       if err != nil { \n      fmt.Println(err) \n         return \n       } \n        fmt.Println(id, name, age) \n     } \n}\n\nBu örnekte, database/sql paketini ve ayrıca (github.com/go-sql-driver/mysql) şeklinde ayrı bir paket olarak bulunan MySQL sürücüsünü içe aktarıyoruz. Daha sonra, sql.Open() fonksiyonunu kullanarak veritabanına bir bağlantı açıyoruz ve sürücü adını ('mysql') ve 'kullanıcı:şifre@tcp(sunucu:port)/veritabanı' biçimindeki veri kaynağı adını (DSN) iletiyoruz."
+    },
+    "60": {
+        "question": "Go'da 'html/template' paketini kullanarak HTML şablonları nasıl oluşturursunuz?",
+        "answer": "Go'daki 'html/template' paketi, HTML şablonlarıyla çalışmak için bir dizi işlev sağlar. Bu paketi bir şablon dosyasını ayrıştırmak ve ardından veri ile birlikte çalıştırarak nihai HTML çıktısını üretmek için kullanabilirsiniz. İşte paketi kullanarak bir HTML şablonu oluşturmanın bir örneği:\n\npackage main \nimport ( \n'html/template' \n'os' \n) \ntype Person struct { \nName string \nAge  int \n} \nfunc main() { \n// şablonu tanımla \n tmpl := ` \n<h1>{{.Name}}</h1> \n <p>Age: {{.Age}}</p>  \n// yeni bir şablon oluştur \nt, err := template.New('person').Parse(tmpl) \nif err != nil { \n      panic(err) \n} \n// bir Person yapısı oluştur \np := Person{Name: 'Alice', Age: 30} \n// şablonu yürüt ve sonucu os.Stdout'a yaz \nerr = t.Execute(os.Stdout, p) \nif err != nil { \n       panic(err) \n} \n} \n\nBu kod, Person adında iki alanı (Name ve Age) olan bir yapı türü tanımlar. Daha sonra, bir HTML şablon dizesi oluşturur ve Go'nun şablon dilini kullanarak Person yapısının Name ve Age değerlerini HTML'e yerleştirir. template.New('person') çağrısı ile yeni bir şablon nesnesi oluşturur ve Parse(tmpl) ile şablon dizesini ayrıştırır.\n\nArdından bir Person örneği oluşturur, sonra Execute işlevini kullanarak şablonun veri ile doldurulmasını sağlar."
+    },
+    "61": {
+        "question": "Golang büyük-küçük harf duyarlı mıdır yoksa duyarsız mıdır?",
+        "answer": "Go, büyük-küçük harf duyarlı bir dilidir."
+    },
+    "62": {
+        "question": "Go dilinde değişkenlerin kapsamı ne anlama gelir?",
+        "answer": "Değişken kapsamı, değişkenin erişilebileceği programın bir parçası olarak tanımlanır. Her değişken Go'da statik olarak kapsanır (bir değişkenin kapsamı derleme zamanında belirlenebilir anlamına gelir), bu da kapsamın derleme zamanında kendisinin ilan edildiği anlamına gelir. Go'da iki kapsam bulunmaktadır, bunlar:\n\n* Yerel değişkenler - Bunlar bir işlevin veya bir bloğun içinde bildirilir ve yalnızca bu varlıklar içinde erişilebilir.\n\n* Global değişkenler - Bunlar bir işlevin veya bloğun dışında bildirilir ve tüm kaynak dosyası tarafından erişilebilir."
+    },
+    "63": {
+        "question": "Gorutinler uygulayan programlarda Global Değişkenlerin kullanımı önerilir mi?",
+        "answer": "Gorutinlerde global değişkenlerin kullanımı önerilmez çünkü birden çok gorutin tarafından aynı anda erişilebilir ve değiştirilebilir. Bu, beklenmeyen ve keyfi sonuçlara yol açabilir."
+    },
+    "64": {
+        "question": "Boş bir yapı (struct) hangi amaçlarla kullanılır?",
+        "answer": "Boş bir yapı (struct), bellek tasarrufu yapmak istediğimizde kullanılır. Bu, değerler için herhangi bir bellek tüketmedikleri anlamına gelir. Boş bir yapı için sözdizimi şöyledir:\n\n a := struct{}{}\n\n Boş bir yapının boyutu, println(unsafe.Sizeof(a)) kullanılarak 0 olarak döndürülür.\n\nBoş bir yapının önemli kullanımı, geliştiriciye hiçbir değere sahip olmadığımızı göstermektir."
+    },
+    "65": {
+        "question": "GoPATH ve GoROOT değişkenleri Go dilinde nasıl farklıdır?",
+        "answer": "GoPATH değişkeni, Go Projelerinin kaynaklarını ve ikili dosyalarını birleştiren $GoROOT'un dışındaki dizinleri sembolize etmek için kullanılan bir ortam değişkenidir. GoROOT değişkeni, Go SDK'nın nerede bulunduğunu belirler. Değişkeni değiştirmemiz gerekmeyebilir ancak birden çok Go sürümü kullanmayı planlıyorsak değiştirmemiz gerekebilir. GoPATH, iş alanının kökünü belirlerken, GoROOT, Go SDK'nın konumunu belirler."
+    },
+    "66": {
+        "question": "Eşzamanlı veri erişimi için hangisi daha güvenlidir? Kanallar mı yoksa Haritalar mı?",
+        "answer": "Kanallar, eşzamanlı erişim için güvenlidir çünkü birden çok iş parçacığı mevcutken gorutinlerin belleği paylaşmasına izin vermeyen engelleme/kilitleme mekanizmalarına sahiptir.\n\nHaritalar güvensizdir çünkü kilitleme mekanizmalarına sahip değillerdir. Haritaları kullanırken, verileri güvenli bir şekilde gorutinler aracılığıyla göndermek için mutex gibi açık kilitleme mekanizmalarını kullanmamız gerekir."
+    },
+    "67": {
+        "question": "Dize literalleri nedir?",
+        "answer": "Dize literalleri, bir karakter dizisinin birleştirilmiş bir dizisinden elde edilen bir dize sabitini temsil eder. İki form vardır,\n\n* Ham dize literalleri: Ham dize literallerinin değeri arka tırnaklar arasındaki karakter dizisi. Bir dize literalinin değeri, tırnaklar arasındaki kesintisiz karakter dizisinden oluşur.\n\n* Yorumlanan dize literalleri: Çift tırnaklar arasında temsil edilir. Çift tırnaklar arasındaki metin, değerin değeri oluşturur ve yeni satırlar içermeyebilir."
+    },
+    "68": {
+        "question": "Go programlama dilinde değişkenin statik tür bildirimi nasıl açıklanır?",
+        "answer": "Statik tür değişken bildirimi, belirli bir tür ve isimde bir değişkenin olduğuna dair derleyiciye güvence sağlamak için kullanılır, böylece derleyicinin ileri işleme için değişken hakkında tam ayrıntıya sahip olmasına gerek yoktur. Bir değişken bildirimi yalnızca derleme zamanında anlam kazanır, derleyicinin programın bağlantısı sırasında gerçek değişken bildirimine ihtiyacı vardır."
+    },
+    "69": {
+        "question": "Go programlama dilinde değişkenin dinamik tür bildirimi nasıl açıklanır?",
+        "answer": "Dinamik tür değişken bildirimi, derleyicinin değişkenin türünü geçirilen değere göre yorumlamasını gerektirir. Derleyicilerin değişkenin statik olarak bir türe sahip olmasını gerekli bir gereklilik olarak görmesi gerekmez."
+    },
+    "70": {
+        "question": "Kısa değişken bildirimi := sadece bir işlev içinde kullanılabilir mi?",
+        "answer": "Evet. Kısa değişken bildirimi := sadece bir işlev içinde kullanılabilir."
+    }
+}
