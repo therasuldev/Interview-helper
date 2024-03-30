@@ -1,0 +1,154 @@
+{
+    "1": {
+        "question": "Scala nedir?",
+        "answer": "Scala, hem işlevsel hem de nesne yönelimli programlamayı destekleyen genel amaçlı bir programlama dilidir. Kaynak kodu Java byte koduna derlenir ve yürütülebilir kod Java sanal makinesinde çalışır."
+    },
+    "2": {
+        "question": "Scala tanımlayıcılarının dört türünü isimlendirin?",
+        "answer": "Scala'da kullanılan dört tür tanımlayıcı vardır -\n\n* Operatör tanımlayıcılar\n* Karışık tanımlayıcılar\n* Alfasayısal tanımlayıcılar\n* Sembolik tanımlayıcılar"
+    },
+    "3": {
+        "question": "Scala'da farklı türdeki literallerin isimlerini verin?",
+        "answer": "Scala'da kullanılan farklı literaller şunlardır  \n\n* Tamsayı literalleri\n* Boolean literalleri\n* Sembol literalleri\n* Karakter literalleri\n* Dize literalleri\n* Çoklu Satır dizeleri\n* Ondalık sayı literalleri"
+    },
+    "4": {
+        "question": "Scala kullanmanın faydaları/avantajları nelerdir?",
+        "answer": "Scala'nın avantajları aşağıdaki gibidir \n\n* Anonim bir görevi tanımlamak için hafif sözdizimi kullanır\n8 İç içe fonksiyonlara izin verir\n* Birinci dereceden işlemleri destekler\n* Eşzamanlı programlamanın özelliklerini sağlar\n* Yüksek ölçeklenebilirlik ve test edilebilirlik\n* Hata eğilimli işlevsel tarz"
+    },
+    "5": {
+        "question": "Scala kümesi nedir? Farklı türleri nelerdir?",
+        "answer": "Scala kümesi, aynı türden çiftsiz farklı öğelerin bir grubudur. Bu küme tekrarlanan öğeler içermez. İki tür küme vardır - değişken ve değişmez. Varsayılan olarak, Scala değişmez kümeler kullanır."
+    },
+    "6": {
+        "question": "Scala haritaları nedir?",
+        "answer": "Scala haritası, benzersiz değer (Anahtar) çiftlerinden oluşan bir gruptur. Haritalar ayrıca hash tabloları olarak da adlandırılır ve bunlar ikiye ayrılır - değişken ve değişmez. Değişken ve değişmez arasındaki temel fark, değişmez bir nesnenin kendi başına değiştirilememesidir."
+    },
+    "7": {
+        "question": "Scala değişkenleri nedir?",
+        "answer": "Değişkenler, değerleri depolamak için kullanılan ayrılmış bellek konumlarıdır. Bir değişken oluşturduğunuzda, derleyici, değişkenin veri türüne bağlı olarak bellek ayırır."
+    },
+    "8": {
+        "question": "Sınıf ve nesne arasındaki fark nedir?",
+        "answer": "Bir sınıf, değişken ve yöntemleri içeren kullanıcı tanımlı bir prototiptir. Bir nesne, bir sınıfın bir örneğidir ve bu örneği kullanarak yöntemlere ve değişkenlere erişilebilir."
+    },
+    "9": {
+        "question": "Scala'da kuyruk rekürsüyonu nedir?",
+        "answer": "Rekürsif bir işlev, kendisini tekrar tekrar çağıran bir işlevdir. Bu işlev tarafından gerçekleştirilen son işlem, kendisini çağırmaktır. Bu teknik, işlevsel programlamada kullanılır."
+    },
+    "10": {
+        "question": "Scala özelliği nedir?",
+        "answer": "Bir özellik, method ve alan tanımlamalarından oluşur ve bunlar sınıflara karıştırılarak yeniden kullanılabilir. Bir özellik tanımı tam olarak bir sınıf tanımına benzer, tek farkı 'Trait' kelimesini kullanmasıdır."
+    },
+    "11": {
+        "question": "Durum sınıfları nedir?",
+        "answer": "Durum sınıfları, kurucu parametrelerini dışa aktarabilen ve desen eşleme yoluyla özyinelemeli parçalara izin veren düzenli sınıflardır. Bu kurucu parametreler genel olarak herkese açıktır ve doğrudan erişilebilir."
+    },
+    "12": {
+        "question": "Bir dizgeyi nasıl biçimlendirirsiniz?",
+        "answer": "Bir dizgeyi biçimlendirmek için .format() yöntemini kullanabiliriz. \n\nVal formatted= “%s %i”.format (mystring.myInt)"
+    },
+    "13": {
+        "question": "Neden Scala, değişmezliği tercih eder?",
+        "answer": "Scala, varsayılan olarak değişmezliği tercih eder ve eşzamanlı programlar ve eşitlik sorunlarıyla başa çıkmaya yardımcı olur."
+    },
+    "14": {
+        "question": "Listeye nasıl ekleme yaparız?",
+        "answer": "Scala'da, ':+'' tek bir değere ekleyebiliriz. Daha iyi anlamak için aşağıdaki örneğe bakın.\n\nvar myList = List.empty[String]\n\nmyList :+= 'a'\n\nmyList :+= 'b'\n\nmyList :+= 'c'\n\nListe eklemek için ++ kullanın\n\nvar myList = List.empty[String]\n\nmyList ++= List('a', 'b', 'c')"
+    },
+    "15": {
+        "question": "Var ve val arasındaki temel fark nedir?",
+        "answer": "Scala'da, Val bir sabiti tanımlar, bir kere bildirildikten ve atandıktan sonra değiştirilemezken var bir değişkeni tanımlar ve değiştirilebilir veya yeniden atanabilir."
+    },
+    "16": {
+        "question": "Scala diğer programlama dillerine göre nasıl daha iyidir?",
+        "answer": "Hiçbir dil mükemmel değildir, ancak Scala'yı diğer programlama dillerinden daha iyi yapan birçok avantaj vardır. Bunlardan bazıları şunlardır -\n\n* Scala kodu daha özlü, okunabilir ve hatasızdır.\n* Scala'da program yazmak, derlemek, hata ayıklamak ve çalıştırmak diğer birçok programlama diline göre daha kolaydır.\n* Scala'da işlevsel programlama, aynı problemi farklı açılardan çözmenize yardımcı olur.\n* Eşzamanlılık görevleri paralelleştirmeye yardımcı olur.\n* Belirli görevler için üçüncü taraf kütüphaneleri kullanılır. Bunlar dil yapıları olarak eklenir"
+    },
+    "17": {
+        "question": "Scala'da demetlerin kullanımı nedir?",
+        "answer": "Demetler, bir araya getirilen sabit bir sayıdaki öğeleri bir araya getirmek için kullanılır, böylece bunlar tek bir öğe olarak geçirilebilir. Bir demet değiştirilemez ve bir dizi veya liste gibi farklı türlerde nesneleri içerebilir."
+    },
+    "18": {
+        "question": "Scala'da fonksiyon currying'in kullanımı nedir?",
+        "answer": "Currying, birden fazla argüman alan bir işlevi tek bir argüman alan bir işleve dönüştürmenin basit bir sürecidir. Bu işlev, birden fazla işlevsel dilde yaygın olarak kullanılır."
+    },
+    "19": {
+        "question": "Scala'da örtük parametreler nedir?",
+        "answer": "Bir yönteme veya işleve hiçbir değer veya parametre geçirilmediğinde, derleyici örtük parametreleri arar ve bunları daha da işler. Bir yöntemde yalnızca bir tane örtük anahtar kelime bulunabilir."
+    },
+    "20": {
+        "question": "Scala'da kapanışlar nedir?",
+        "answer": "Scala kapanışları, birden fazla serbest değişkeni kullanan fonksiyonlardır ve fonksiyonun dönüş değeri bu değişkenlere bağlıdır. Serbest değişkenler kapanış fonksiyonunun dışında tanımlanır ve geçerli bir değere bağlı değildir."
+    },
+    "21": {
+        "question": "Scala'nın yüksek seviyeli fonksiyonları nedir?",
+        "answer": "Scala yüksek seviyeli fonksiyonlar, diğer fonksiyonları parametre olarak içeren ve bir fonksiyonu çıktı olarak döndüren fonksiyonlardır. Basitçe, diğer fonksiyonlarla çalışan bir fonksiyon yüksek seviyeli bir fonksiyondur."
+    },
+    "22": {
+        "question": "Scala anonim fonksiyon hakkında açıklama yapar mısınız?",
+        "answer": "Scala anonim fonksiyon, herhangi bir ad içermeyen ve hafif bir fonksiyon tanımı sağlayan bir fonksiyondur. Kullanıcı bir iç içe fonksiyon oluşturmak zorunda kaldığında kullanışlıdır."
+    },
+    "23": {
+        "question": "Scala'nın birkaç çerçevesini verin?",
+        "answer": "Scala tarafından desteklenen en yaygın çerçevelerden bazıları şunlardır -\n\n* Akka Çerçevesi\n* Neo4j Çerçevesi\n* Lift Çerçevesi\n* Spark Çerçevesi\n* Oyun Çerçevesi\n* Scalding Çerçevesi\n* Bowler Çerçevesi"
+    },
+    "24": {
+        "question": "Scala'da değişken türleri nelerdir?",
+        "answer": "Scala'da en yaygın kullanılan iki tür değişken vardır ve bunlar şunlardır - \n\n* Değişken değişkenler *\n\nVar anahtar kelimesi kullanılarak bildirilen Değişken Değişkenler. \n* Değişkenlerdeki Değerler Değişiklikleri Destekler\n\n * Değişmez değişkenler *\n\nVal anahtar kelimesi kullanılarak bildirilen Değişmez Değişkenler. \n* Değişmez Değişkenlerdeki Değerler Değişiklikleri Desteklemez."
+    },
+    "25": {
+        "question": "Scala'da bir akış nedir?",
+        "answer": "Bir Scala akışı, öğeleri tembelce hesaplandığı için sonsuz olabilen bir listedir."
+    },
+    "26": {
+        "question": "Scala'da Operatörler nasıl açıklanır?",
+        "answer": "Scala'da Operatörler \n\n* Aritmetik Operatörler\n* İlişkisel Operatörler\n* Mantıksal Operatörler\n8 Bitişik Operatörler\n* Atama Operatörleri"
+    },
+    "27": {
+        "question": "Neden Scala'da bir Uygulamaya ihtiyacımız var?",
+        "answer": "Scala, 'App' adlı bir yardımcı sınıf sunar. Bu sınıf, ana yöntemi ve üyelerini içerir. Kendi ana yönteminizi yazmak yerine, App sınıfını genişletebilir ve Scala'da çalıştırılabilir uygulamalar oluşturabilirsiniz."
+    },
+    "28": {
+        "question": "Scala için sağlanan değişken kapsamı nedir?",
+        "answer": "Scala'da değişkenler için üç tür kapsam vardır: \n\n* Alanlar: Alanlar, bir nesne içinde bildirilen ve erişim belirleyicilerine bağlı olarak programın her yerinden erişilebilecek değişkenlerdir. Alanlar var ve val kullanılarak bildirilir.\n\n* Yöntem Parametreleri: Yöntem parametreleri kesinlikle Değişmezdir. Yöntem parametreleri, yöntemlere değerlerin geçirilmesi için kullanılır. Bunlar bir yöntemin içinden erişilir, ancak bir Referans tarafından sağlandığında dışarıdan erişilebilir.\n\n* Yerel Değişkenler: Yerel değişkenler bir yöntemin içinde bildirilir ve yalnızca yöntem içinde erişilebilir. Bunlara yöntemden döndürürseniz erişilebilirler."
+    },
+    "29": {
+        "question": "Scala hem nesne yönelimli hem de işlevsel bir programlama dili nasıl olur?",
+        "answer": "Scala, fonksiyonları da içeren her bir değeri bir nesne olarak işler. Dolayısıyla, scala, hem işlevsel hem de nesne yönelimli özelliklerin birleşimidir."
+    },
+    "30": {
+        "question": "Scala'da mevcut olan erişim belirleyicileri nelerdir?",
+        "answer": "Scala'da temel olarak üç erişim belirleyici bulunur ve bunlar -\n\nÖzel: bir özel üye, yalnızca tanımlandığı Sınıf veya Nesne içinde erişilebilir.\n\nKorumalı: bir korumalı üye, bulunduğu sınıfın Alt Sınıflarından erişilebilir.\n\nGenel: Genel üyeler herhangi bir yerden erişilebilir."
+    },
+    "31": {
+        "question": "Get fonksiyonunun işlevselliği nedir?",
+        "answer": "Get fonksiyonu bir döngüde kullanılır ve her iterasyon için bir değer üretir."
+    },
+    "32": {
+        "question": "Scala'da Monad nedir?",
+        "answer": "Bir Monad, içinde başka bir nesneyi saran bir nesnedir. İşlemleri birbirine bağlama izni verir."
+    },
+    "33": {
+        "question": "Scala'da Option neden kullanılır?",
+        "answer": "Scala'da Option, Eksik değeri Paketlemek için kullanılır."
+    },
+    "34": {
+        "question": "Scala kodu nasıl derlenir?",
+        "answer": "İlk olarak, kod Scala REPL veya bir Scala IDE'de yazılır, ardından Byte koduna dönüştürülür ve JVM'e derleme için gönderilir."
+    },
+    "35": {
+        "question": "Null, Nill, None ve Nothing arasındaki fark nedir?",
+        "answer": "* Null bir değerin yokluğunu temsil eder\n* Nill liste sonunu belirtir\n* None değeri olmayan bir seçeneğin değeridir \n* Nothing bir tür sistemindeki en düşük türdür"
+    },
+    "36": {
+        "question": "Bir yardımcı kurucu nedir?",
+        "answer": "Bir yardımcı kurucu, kurucu aşırı yüklemesi için kullanılır. Daha önceden tanımlanan yardımcı bir kurucuyu veya vücutta bulunan birincil kurucuları çağırır. Bir scala sınıfı, sıfır veya daha fazla yardımcı kurucu içerebilir."
+    },
+    "37": {
+        "question": "Scala'da çıkartıcı nedir?",
+        "answer": "Bir çıkartıcı, üyelerinden biri olarak 'unapply' adlı bir yöntem içeren bir nesnedir. unapply yöntemi, değerleri eşleştirmek ve bunları ayırmak için kullanılır."
+    },
+    "38": {
+        "question": "x+y*z'nin sonucu ne olur ve neden?",
+        "answer": "Scala, önce y*z'yi hesaplar ve sonra (y*z) ile x'i ekler.\n\nDiğer programlama dilleri gibi, Scala da Başkanlık ve Öncelik tablosu kurallarını izler. "
+    }
+}

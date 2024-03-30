@@ -1,0 +1,194 @@
+{
+    "1": {
+        "question": "iOS Swift nedir?",
+        "answer": "Swift, mobil ve masaüstü uygulamalar geliştirmek için Apple Inc tarafından Haziran 2014'te geliştirilen derlenmiş ve yeni bir programlama dilidir. Bu dil, watchOS, macOS, iOS ve tvOS için çalışır.\n\nApple, Swift dilini hem Cocoa Touch hem de Cocoa ile çalışacak şekilde oluşturdu. Swift, FreeBSD, Linux, Darwin vb. gibi çeşitli işletim sistemlerini destekler. Bu dil, Apple ürünlerinde Objective-C kitaplığı ve Cocoa çerçevesiyle birlikte çalışacak şekilde tasarlanmıştır."
+    },
+    "2": {
+        "question": "Swift'in kullanım avantajları nelerdir?",
+        "answer": "Swift programlama dili, hızla büyüyen dillerden biri haline gelmiştir. Swift, inanılmaz derecede hızlı, güçlü ve güvenli yazılım geliştirmemizi sağlar.\n\nBu dil, macOS ve iOS (iPad ve iPhone için) uygulamalarını geliştirmek için kullanılan en kullanışlı programlama dillerinden biridir.\n\nSwift ile macOS ve iOS için uygulama geliştirirken sunulan bazı önemli avantajlar vardır.\n\n* Açık kaynaklı dil: Swift programlama dili, açık kaynak olarak oluşturulmuş ve herkese açıktır, bu da kaynak kodlarını, e-posta listelerini ve hata izleyicisini düzenli aralıklarla güncellemeyi kolaylaştırır.\n* Öğrenmesi ve bakımı kolay: Swift programlama dili, C/C++ ile karşılaştırıldığında daha basit ve doğrudur. Apple, programlama dilini kullanımı kolay ve sözdizimlerinin C#, Python ve Ruby gibi programlama dillerinden alındığı şekilde tasarladı. Bu dilin basit sözdizimi, onu daha anlamlı hale getirir. Swift'te, uygulamanın tüm uygulama (.m) ve başlık (.h) dosyalarının içeriği tek bir dosyada (.swift) birleştirilir.\n* Birden çok cihaz tarafından desteklenir: Swift programlama dili sadece Apple cihazlarını desteklemekle kalmaz, aynı zamanda Linux ve Windows gibi teknoloji dünyasının birden çok cihazını da destekler.\n* Dinamik kütüphaneleri destekler: Dinamik kütüphaneler, uygulamaya bağlanabilen kod parçalarıdır. Bu özellik, en son Swift programlama dilini kullanmayı sağlar. Swift'te, dinamik kütüphaneler doğrudan belleğe yüklenir, bu da uygulamanın başlangıç boyutunu azaltır ve sonuç olarak uygulama performansını artırır.\n* İsteğe bağlı tipler: Swift'te bir isteğe bağlı, bir değer veya bir değer olarak tutulabilen bir tiptir. Bir isteğe bağlıyı bildirmek için bir soru işareti “?” kullanabiliriz.\n* Kapanışlar: Kapanışlar, kodumuzda taşınabilen ve kullanılabilen kendiliğinden kapanmış işlev bloklarıdır."
+    },
+    "3": {
+        "question": "Swift ile Objective-C arasındaki farkları açıklayın.",
+        "answer": "İşte Swift ile Objective-C arasındaki çeşitli farklar:\n\n1. Swift, nesne odaklı ve işlevsel bir programlama dilidir, oysa Objective-C, sınıf tabanlı bir nesne odaklı programlama dilidir.\n2. Swift, dinamik kütüphaneleri desteklerken, Objective-C dinamik kütüphaneleri desteklemez.\n3. Swift, Tuples'ı desteklerken, Objective-C Tuples'ı desteklemez.\n4. Swift'te noktalı virgül gerekli değildir, oysa Objective-C'de noktalı virgül gereklidir.\n5. Swift, açık kaynaklı bir programlama dilidir, oysa Objective-C sadece Apple'a özeldir ve açık kaynaklı bir dil değildir.\n6. Sabit için \"let\" anahtar kelimesini ve değişken için \"var\" anahtar kelimesini kullanmamız gerekirken Objective-C'de değişkeni \"NSString\" olarak ve sabiti \"int\" olarak bildirmemiz gerekir.\n7. Swift, yapı, sınıf veya numaralama içinde yöntemleri tanımlamamıza izin verirken, Objective-C bunu mümkün kılmaz.\n8. Swift'te, sınıfları tek bir dosyada (.swift) tanımlayabiliriz, oysa Objective-C'de sınıflar için ayrı arayüz (.h) dosyaları ve uygulama (.m) dosyaları oluştururuz."
+    },
+    "4": {
+        "question": "iOS cihazımız yoksa Apple iPhone uygulamalarını nerede test edebiliriz?",
+        "answer": "iOS cihazımız yoksa, Apple'ın Mac sistemlerinde sağladığı simülatörlerde uygulamamızı test edebiliriz."
+    },
+    "5": {
+        "question": "iOS uygulamaları geliştirmek için gereken araçlar nelerdir?",
+        "answer": "Aşağıdakiler, sahip olmamız gereken temel araçlardır:\n\n* Mac/MacMini: Intel tabanlı işlemcide çalışan Mac OS çalıştıran bir Mac'e sahip olmak gereklidir. Kendi PC'miz varsa, yine de Mac Mini aracılığıyla iOS uygulamaları geliştirebiliriz.\n* Xcode: Xcode, hem iOS uygulamaları hem de MAC OS için kullanılan Apple IDE (Entegre Geliştirme Ortamı)'dir. Görsel düzenleyici ve kod düzenleyici sağlar ve arka planda mantık, kullanıcı arayüzü ve yanıtı ele alabilir.\n* Swift Programlama Dili: Kod düzenleyicide, mantık, Apple tarafından icat edilmiş bir programlama dili olan Swift'te yazılacaktır.\n* Apple Geliştirici Programı: Bu program, uygulamamızı App Store'da canlı olarak yayınlamamıza olanak tanır, böylece dünya çapındaki müşteriler ve indirenler uygulamamızı indirip kullanabilir."
+    },
+    "6": {
+        "question": "Swift'in en önemli özellikleri nelerdir?",
+        "answer": "Swift'in bazı önemli özellikleri aşağıda verilmiştir:\n* Daha etkileyici yapılar ve numaralandırmalar\n* Protokol odaklı\n* İsteğe bağlı Tipler\n* Tür Güvenliği ve Tür çıkarım dili\n* Noktalı virgül kullanmak zorunlu değil\n* Zorunlu başlatıcılar\n* Varsayılan olarak güvenli\n* Daha az kod, daha az dosya\n* Zorla açma\n* Tuples\n* Kapanışlar\n* Diğer dillerle karşılaştırıldığında çok daha hızlı."
+    },
+    "7": {
+        "question": "Bir Swift iOS Uygulaması için ortak yürütme durumlarını açıklayın (iOS Uygulama Yaşam Döngüsü).",
+        "answer": "5 ortak yürütme durumu aşağıdaki gibidir:\n* Çalışmıyor: Bu, uygulamamızın başlatılmadığı veya hiçbir kodun yürütülmediği basit bir durumdur ve sistem tarafından sonlandırılmış ve uygulama tamamen kapatılmıştır.\n* Etkin Değil: Bu durum sadece geçici bir durumdur. Etkin olmayan durum, uygulamamızın arka planda çalıştığı ancak olayları alamadığı bir durumdur.\n* Aktif: Aktif durum, uygulamamızın arka planda çalıştığı ve olayları alabildiği ana yürütme durumudur.\n* Arkaplan: Bu, Uygulamamızın arka planda çalıştığı ve hala arka planda kodu yürütebildiği durumdur.\n* Askıda: Bu durum, uygulamamızın arka planda çalıştığı ve sistem tarafından bu uygulamanın askıya alındığı ve uygulamanın hiçbir kodu yürütemeyeceği durumdur."
+    },
+    "8": {
+        "question": "Swift bir nesne odaklı programlama dili midir?",
+        "answer": "Evet, Swift bir nesne odaklı programlama dilidir."
+    },
+    "9": {
+        "question": "Swift'te temel veri tipleri nelerdir?",
+        "answer": "Swift, farklı amaçlar için kullanılan standart bir dizi temel veri türü kullanır; Boolean değerler, sayılar ve dizeler gibi.\n\n* Int: int, tamsayı değerini saklamak için kullanılır.\n* Double ve Float: Double ve Float, ondalık sayılarla çalışırken göz önünde bulundurulur.\n* Bool: Bool türü, Boolean değerini saklamak için kullanılır. Swift'te, true ve false koşullarını kullanır.\n* String: Dize sabitlerinde, Swift'te metni çift tırnaklarla çevrelenmiş olarak tanımlarız.\n* Diziler: Diziler, liste öğelerinin koleksiyonudur.\n* Sözlükler: Bir sözlük, benzersiz bir anahtarla ilişkilendirilmiş belirli bir türde öğelerin sırasız bir koleksiyonudur."
+    },
+    "10": {
+        "question": "Swift'te init() nedir?",
+        "answer": "Başlatma, bir numaralandırmanın, yapı veya sınıfın kullanılmak üzere hazırlanması işlemidir.\n\nBaşlatıcılar ayrıca belirli bir türün yeni bir örneğini oluşturmak için çağrılır. Bir başlatıcı, parametresiz bir örnek yöntemidir. Başlatıcıyı kullanarak, init anahtar kelimesini yazabiliriz."
+    },
+    "11": {
+        "question": "iOS swift'te kullanılan kontrol transfer ifadeleri nelerdir?",
+        "answer": "iOS swift'te kullanılan kontrol transfer ifadeleri şunları içerir:\n\n1. Dönüş\n2. Kırılma\n3. Devam etme\n4. Geçiş"
+    },
+    "12": {
+        "question": "Swift'te Let ve Var arasındaki fark nedir?",
+        "answer": "Swift dilinde, Let ve Var anahtar kelimelerini kullanarak bir sabit ve değişken bildirebiliriz.\n\n(i) Let: Let anahtarı değişmezdir, bir sabit değişkeni bildirmek için kullanılır ve sabit değişkenler bir kez başlatıldıktan sonra değiştirilemezler.\n\nÖrnek: let myAge = 25\n\nYaşı değiştiremeyiz, sadece let anahtarı kullanılarak sabit değeri bir kez bildirebilirsiniz.\n\n(ii) Var: Var anahtarı değişkendir ve bir değişken değişken bildirmek için kullanılır. Bu değişken değişkenler çalışma zamanında değişebilir."
+    },
+    "13": {
+        "question": "Bir Diziye nasıl bir öğe eklenir?",
+        "answer": "Diziler, bir uygulamadaki en çok kullanılan veri tiplerinden biridir. Uygulama verilerimizi düzenlemek için dizileri kullanırız.\n\nSwift, kodumuzda bir dizi oluşturmayı bir dizi literali kullanarak kolaylaştırır. Dizi öğeleri, basitçe bir virgülle çevrili ve değerlerin listesi köşeli parantezlerle ayrılmıştır."
+    },
+    "14": {
+        "question": "iOS tarafından desteklenen JSON çerçevesi hangisidir?",
+        "answer": "SBJson çerçevesi iOS tarafından desteklenmektedir. SBJson çerçevesi, JSON işlemlerini kolaylaştıran ek kontrol ve esnek bir API sağlar. Esnek işlev görme yeteneğine sahip iyi ve son derece esnek bir çerçevedir."
+    },
+    "15": {
+        "question": "iOS'ta PLIST nedir?",
+        "answer": "PLIST, Mülkiyet Listesi anlamına gelir. PLIST temelde dosya sistemimizde .plist dosya uzantısıyla depolanabilen bir değer ve anahtar sözlüğüdür. Mülkiyet listesi, daha az miktarda veriyi depolamak için taşınabilir ve hafif bir yöntem olarak kullanılır. Genellikle XML'de yazılır.\n\nAşağıda farklı türdeki mülkiyet listeleri listelenmiştir:\n\n* İkili Mülkiyet Listesi\n* XML Mülkiyet Listesi\n* ASCII Miras Mülkiyet Listesi"
+    },
+    "16": {
+        "question": "Sözlük nedir?",
+        "answer": "Sözlükler, anahtar-değer çiftlerinden oluşan bir düzenli olmayan bir koleksiyondur. Her değer, bir sayı veya dize gibi bir hashable türle ilişkilendirilmiş benzersiz bir anahtarla ilişkilendirilir. Bir anahtar değerine dayanarak değerleri almak istediğimizde, sözlük kavramını Swift programlama dilinde kullanabiliriz."
+    },
+    "17": {
+        "question": "Swift'te Protokol nedir?",
+        "answer": "Protokol, Swift programlama dilinin çok yaygın bir özelliğidir ve protokol, Java'daki bir arayüzle benzer bir kavramdır. Bir protokol, belirli bir görev için uygun olan özelliklerin, yöntemlerin ve diğer gereksinimlerin bir taslağını tanımlar.\n\nEn basit haliyle, protokol, bazı yöntemleri ve özellikleri tanımlayan bir arayüzdür. Protokol, sadece özelliklerin veya yöntemlerin iskeletini, uygulamayı değil tanımlar. Özelliklerin ve yöntemlerin uygulanması, numaralandırmalar, işlevler ve sınıflar tanımlanarak yapılabilir.\n\nProtokoller, yapı, numaralandırma veya sınıf türü adlarından sonra bildirilir. Tek ve çoklu protokol bildirimi mümkündür. Birden fazla protokol virgüllerle ayrılır."
+    },
+    "18": {
+        "question": "Swift'te Delege nedir?",
+        "answer": "Delege, verilerin veya iletişimin yapılar veya sınıflar arasında geçirilmesi için kullanılan bir tasarım desenidir. Bir belirli bir olay gerçekleştiğinde bir nesneden başka bir nesneye bir ileti göndermeyi sağlar ve tablo görünümü ve koleksiyon görünümü etkinliklerini işlemek için kullanılır.\n\nDelegelerin bir bir ilişkisi ve bir bir iletişimi vardır."
+    },
+    "19": {
+        "question": "Swift'te çift soru işareti “??” ne işe yarar?",
+        "answer": "Çift soru işareti “??”, nil-kaynaştırma operatörüdür, genellikle nil'i test ettiğimiz üçlü koşullu operatör için kısaltma olarak kullanılır. Çift soru işareti ayrıca bir değişken için bir varsayılan değer sağlamak için kullanılır.\n\nstringVar ?? “varsayılan dize”\n\nBu, genellikle, stringVar nil değilse döndürülür, aksi takdirde “varsayılan dize” döndürülür."
+    },
+    "20": {
+        "question": "GUARD ifadesi nedir? Swift'te GUARD ifadesinin kullanımının faydaları nelerdir?",
+        "answer": "Bir GUARD ifadesi, bir veya daha fazla koşulun karşılanmadığı durumlarda program kontrolünü kapsamın dışına aktarmak için kullanılır. Bu ifade kullanarak, kafa karışıklığını önlemeye yardımcı olunur."
+    },
+    "21": {
+        "question": "Swift'te hangi koleksiyon türleri bulunmaktadır?",
+        "answer": "Bir değerler koleksiyonunu depolamak için Swift'te üç temel koleksiyon türü vardır. Bunlar sözlükler, kümeler ve dizilerdir.\n\n1. Diziler: Diziler, aynı türdeki değerlerin bir sıralı koleksiyonudur ve sıralı bir listede depolanır.\n\n2. Kümeler: Kümeler, belirli bir düzenleme olmadan bir koleksiyonda aynı türdeki benzersiz değerlerin depolandığı bir koleksiyondur.\n\n3. Sözlükler: Sözlükler, anahtar ve değer çiftlerinin birleşimlerinin belirli bir düzensiz koleksiyonudur."
+    },
+    "22": {
+        "question": "“defer” nedir?",
+        "answer": "“Defer”, yürütme mevcut kapsamdan ayrılırken yürütülebilecek bir kod bloğu sağlayan bir anahtar kelimedir."
+    },
+    "23": {
+        "question": "Tuple nedir? Swift'te Tuple nasıl oluşturulur?",
+        "answer": "Tuple, bir bileşik değerde farklı değerlerin bir grubudur. Sıralı bir öğeler listesidir. Bir Tuple'daki nesne verilerine erişmenin iki yolu vardır, yani ada göre veya konuma göre.\n\nSwift'te, Tuple birden fazla farklı türde olabilir. İki değeri destekleyebilir, biri tamsayı türünde ve diğeri dize türünde. Bu yasal bir komuttur."
+    },
+    "24": {
+        "question": "Dizi ve NSArray arasındaki fark nedir?",
+        "answer": "Dizi ve NSArray arasındaki farklar aşağıda verilmiştir:\n\n* Bir dizi yalnızca bir tür veriyi tutabilir, oysa bir NSArray farklı türde verileri tutabilir.\n* Bir dizi bir değer türüdür, bir NSArray ise değiştirilemez bir referans türüdür."
+    },
+    "25": {
+        "question": "Sınıf ve yapı arasındaki fark nedir?",
+        "answer": "Sınıf ve yapı arasındaki farklar aşağıda verilmiştir:\n\n1. Sınıflar referans türleridir, yapılar ise değer türleridir.\n2. Sınıflar diğer sınıflara dayanabilirken, yapılar başka bir yapıdan miras alamaz.\n3. Sınıfların kalıtımı vardır, yapıların kalıtımı olamaz.\n4. Sınıfta, özelliklerini “let” anahtar kelimesiyle oluşturabilir ve özelliklerini değiştirmeye çalışabiliriz, yapılar için Mutability yoktur.\n5. Sınıflarda Tür Dönüşümü vardır, yapılar için Tür Dönüşümü yoktur."
+    },
+    "26": {
+        "question": "iOS'ta eş zamanlılık elde etmenin en iyi yolları nelerdir?",
+        "answer": "iOS'ta eş zamanlılık elde etmenin en iyi üç yolu aşağıda verilmiştir:\n\n* Gönderim kuyrukları\n* İş parçacıkları\n* İşlem kuyrukları"
+    },
+    "27": {
+        "question": "Swift programlamada bir sabit nasıl oluşturulur?",
+        "answer": "Swift Programlamada bir sabit oluşturmak için “let” anahtar kelimesini kullanmalıyız."
+    },
+    "28": {
+        "question": "Görünüm denetleyicileri arasında veri nasıl iletilir?",
+        "answer": "Görünüm denetleyicileri arasında veri iletmek için üç yol vardır, aşağıda gösterildiği gibi.\n\n1. Segue kullanarak, prepareForSegue yönteminde (İleri).\n2. Değişkeni doğrudan ayarlamak (Geri).\n3. Delege kullanarak (Geri)."
+    },
+    "29": {
+        "question": "Swift'te bir temel sınıf nasıl tanımlanır?",
+        "answer": "Swift programlama dilinde sınıflar temel sınıftan miras alınmaz. Sınıflar, geliştirici tarafından süper sınıfı belirtilmeden tanımlanır ve otomatik olarak temel sınıf haline gelir."
+    },
+    "30": {
+        "question": "Swift'te bir özelliği İsteğe Bağlı yapmak için nasıl yapılır?",
+        "answer": "Swift kodunda bir özelliği İsteğe Bağlı yapmak için soru işareti “?” kullanmalıyız. Bu soru işareti “?” bir özelliğin bir değer taşımadığında çalışma zamanı hatasını önlemeye yardımcı olur."
+    },
+    "31": {
+        "question": "Uygulama başlatma döngüsü sırasında uygulamamızın ana işlevini kim çağırır?",
+        "answer": "Ana iş parçacığı (main thread), uygulamamızın ana işlevini çağırır. Uygulama başlatma döngüsü sırasında, sistem uygulama için bir ana iş parçacığı oluşturacak ve bu ana iş parçacığında uygulama ana işlevini çağıracaktır."
+    },
+    "32": {
+        "question": "UI öğeleri nelerdir?",
+        "answer": "Uygulama içinde kullanıcıya görünen görüntüler, düğmeler, etiketler, metin alanları ve diğer tüm öğeler UI öğeleri olarak adlandırılır."
+    },
+    "33": {
+        "question": "Tüm görünüm denetleyicisi nesnelerinin üst sınıfı hangisidir?",
+        "answer": "UIViewController sınıfı, tüm görünüm denetleyicisi nesnelerinin üst sınıfıdır. Bunları sunma, görünümleri yükleme, döndürme ve cihaz dönüşümlerine yanıt olarak döndürme işlevselliği sağlanır. Tüm standart sistem davranışı UIViewController sınıfı tarafından sağlanır."
+    },
+    "34": {
+        "question": "Swift 4.0'daki yeni özellikler nelerdir?",
+        "answer": "Swift 4.0'daki yeni özellikler aşağıda verilmiştir:\n\n* Unicode doğruluğunu koruyan daha hızlı ve kullanımı kolay dizeler.\n* Tuple'lar ve birden fazla dönüş değeri.\n* throw/try/catch kullanarak yerel hata işleme.\n* Bir yapıya serileştirme desteği genişletilmiştir."
+    },
+    "35": {
+        "question": "Swift'te çok satırlı bir yorum nasıl yazılır?",
+        "answer": "Çok satırlı bir yorum, başlangıç noktasında (/*) ve son noktada (*/) arasında yazılır."
+    },
+    "36": {
+        "question": "Xcode tarafından kullanılan kaynak öğeler nelerdir?",
+        "answer": "Xcode, aşağıda belirtilen dört farklı türde kaynak öğe kullanır:\n\n* Framework\n* Kaynak Grubu\n* Kaynak Dosyası\n* Kaynak Klasörü"
+    },
+    "37": {
+        "question": "Swift'te veri iletmek için farklı yöntemler nelerdir?",
+        "answer": "Swift'te veri iletmek için KVO, Delege, NSNotification & Geri Çağrılar, Hedef-Eylem vb. gibi birçok yöntem bulunmaktadır."
+    },
+    "38": {
+        "question": "Sınıfın kullanımını ve Mirasın faydalarını açıklayın.",
+        "answer": "Bunlar:\n\n* Uygulama tekrarı\n* Alt sınıf, dinamik dağıtım sağlar.\n* Alt sınıf, yeniden kullanım arayüzü sağlar.\n* Modülerlik\n* Geçersiz kılmak, özelleştirme için mekanizma sağlar."
+    },
+    "39": {
+        "question": "Protokol ve Üst Sınıfların Ortak Özelliklerini açıklayın.",
+        "answer": "Protokol ve Üst Sınıfların ortak özelliklerinden bazıları aşağıda verilmiştir:\n\n* Arayüz yeniden kullanımı.\n* Uygulama yeniden kullanımı.\n* Modüler tasarımı destekleme.\n* Özelleştirme noktaları sağlar."
+    },
+    "40": {
+        "question": "UserNotifications'daki bazı büyük değişiklikleri açıklayın.",
+        "answer": "UserNotifications'daki bazı büyük değişiklikler aşağıda verilmiştir:\n\n* Resimler, sesler ve videolar ekleme imkanı.\n* Bildirimler için özel arayüzler oluşturma imkanı.\n* Bildirim merkezinde arayüz ile bildirimleri yönetme imkanı."
+    },
+    "41": {
+        "question": "İsteğe Bağlı Zincirleme nedir?",
+        "answer": "İsteğe Bağlı Zincirleme, isteğe bağlıları kullanarak yöntemleri, özellikleri ve dizinleri çağırmak için kullanabileceğimiz faydalı bir süreçtir ve bu değerler nil olabilir veya olmayabilir. Bu süreçte, isteğe bağlı değerler zincirinden bir değeri almaya çalışabiliriz.\n\n* Eğer isteğe bağlı bir değer içeriyorsa, o zaman isteğe bağlı bir dizinin dizinini, yöntemini veya özelliğini çağırarak bir değer döndürecektir.\n* Eğer isteğe bağlı nil ise, o zaman dizin, yöntem ve özellik çağırıldığında nil dönecektir."
+    },
+    "42": {
+        "question": "İsteğe Bağlı Bağlama nedir?",
+        "answer": "İsteğe Bağlı Bağlama kavramı, bir isteğe bağlının bir değer içerip içermediğini bulmak için kullanılır ve bu değeri bir değişken veya geçici sabit olarak kullanılabilir hale getirir. Bir isteğe bağlıda değer olup olmadığını kontrol etmek için isteğe bağlı bağlama kavramını kullanırız.\n\nİsteğe bağlama, bir koşul (if ve while) ifadeleri ile birlikte kullanılarak isteğe bağlı içinde bir değeri kontrol etmek için kullanılabilir."
+    },
+    "43": {
+        "question": "Swift'te Yüksek Düzeyli Fonksiyonlar nelerdir?",
+        "answer": "Yüksek düzeyli fonksiyonlar aşağıda verilmiştir:\n\n* Map: Dizi içeriğini dönüştürme.\n* Reduce: Koleksiyonlardaki değerleri tek bir değere indirgeme.\n* Sort: Dizileri sıralama.\n* Filter: Dizi içeriğini filtreleme."
+    },
+    "44": {
+        "question": "Uygulama geliştirme sırasında genellikle kullandığımız tasarım desenlerini açıklayın.",
+        "answer": "Uygulama geliştirme sırasında kullanılan tasarım desenleri aşağıda verilmiştir:\n\n* Davranışsal: Hatırlatıcı ve Gözlemci.\n* Yaratıcı: Oluşturucu, Fabrika ve Tek Nesne.\n* Yapısal: Yüz, Uyumlayıcı ve Süsleyici."
+    },
+    "45": {
+        "question": "Swift'te bir isteğe bağlıyı açmak için çeşitli yollar nelerdir?",
+        "answer": "Swift'te bir isteğe bağlıyı açmanın yedi yolu vardır. Bunlar:\n\n* Guard ifadesi: Güvenli.\n* Zorunlu açma: “!” operatörünü kullanarak, güvensiz.\n* İsteğe bağlı bağlama: Güvenli.\n* İsteğe bağlı model: Güvenli.\n* Nil birleştirme operatörü: Güvenli.\n* İçsel olarak açılmış değişken bildirimi: Birçok durumda güvensiz.\n* İsteğe bağlı zincirleme: Güvenli."
+    },
+    "46": {
+        "question": "iOS, çoklu iş parçacığı için hangi mekanizmayı destekler?",
+        "answer": "Bunlar:\n\n* NSThread: “start” yöntemi kullanılarak başlatılabilen düşük seviyeli bir iş parçacığı oluşturabilir.\n* NSOperationQueue: Bir dizi iş parçacığının oluşturulmasına izin verir ve “NSOperations”'ların paralel olarak yürütülmesi için kullanılır."
+    },
+    "47": {
+        "question": "Swift modülü nedir?",
+        "answer": "* Bir modül, bir kod dağıtımının tek bir birimidir.\n* Bir çerçeve veya uygulama bir birim olarak oluşturulur ve başka bir modül tarafından swift import anahtar kelimesini kullanarak içe aktarılabilir.\n* Xcode aracındaki her derleme hedefi, Swift'te ayrı bir modül olarak işlenir."
+    },
+    "48": {
+        "question": "Core Data nedir?",
+        "answer": "Core Data, macOS ve iOS uygulamaları için Apple tarafından sağlanan en güçlü çerçevelerden biridir. Core Data, uygulamalarımızdaki model katman nesnelerinin işlenmesi için kullanılır. Core Data'yı, iOS uygulamaları içindeki verileri filtrelemek, değiştirmek, kaydetmek, izlemek için bir çerçeve olarak düşünebiliriz. Core Data, ilişkisel bir veritabanı değildir.\n\nCore Data kullanarak, uygulamamızdaki nesneleri veritabanındaki tablo kayıtlarına SQL bilgisi olmadan kolayca eşleyebiliriz. Core Data, MVC yapısının M'sidir.\n\nCore Data'nın bazı özellikleri aşağıda verilmiştir:\n\n* iOS ve macOS araç zincirleri ile etkili entegrasyon.\n* Bellekte ve UI (Kullanıcı Arayüzü) içinde veri düzenleme, filtreleme ve gruplama.\n* Nesneleri depolamak için otomatik destek.\n* Özellik değerlerinin otomatik doğrulanması.\n* Nesne grafiğinin yönetimi için ilk çerçeve.\n* Nesne grafiğindeki nesnelerin yaşam döngüsünün yönetimi için Core Data çerçevesi."
+    }
+}

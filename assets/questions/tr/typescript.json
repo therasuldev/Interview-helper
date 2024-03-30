@@ -1,0 +1,146 @@
+{
+    "1": {
+        "question": "TypeScript nedir?",
+        "answer": "TypeScript, açıkça yazılmış bir JavaScript üst kümesidir ve düz JavaScript üretecek bir derleyiciye geçirilebilir.\n\nTypeScript, JavaScript'i tamamen nesne yönelimli bir ortamda çalışmak için bir yol sağlar. Burada, sınıflar ve arabirimler kullanabilirsiniz. Ayrıca, C# veya Java gibi statik olarak yazılmıştır. Kullanmak için, TypeScript kodunuzu JavaScript dosyasına derleyecek bir TypeScript derleyiciye ihtiyacınız olacaktır.\n\nTypeScript dosyası .ts uzantısını taşır ve daha sonra TypeScript derleyicisi tarafından bir JavaScript dosyasına derlenir. TypeScript'i VS Code, Sublime vb. gibi çeşitli editörlerle yazabilirsiniz."
+    },
+    "2": {
+        "question": "TypeScript ile JavaScript arasındaki farklar nelerdir?",
+        "answer": "** TypeScript **\n\n1.Nesne Yönelimli\n2.Statik olarak yazılmıştır\n3.Modülleri destekler\n4.İsteğe bağlı parametre fonksiyonlarını destekler\n\n** JavaScript **\n\n1.Scripting\n2.Statik olarak yazılmamıştır\n3.Modülleri desteklemez\n4.İsteğe bağlı parametre fonksiyonlarını desteklemez"
+    },
+    "3": {
+        "question": "Neden TypeScript kullanmalıyız?",
+        "answer": "Birçok geliştiricinin düz JavaScript yerine TypeScript'i tercih etme nedenleri, belirttiğimiz temel farklılıklardan kaynaklanmaktadır.\n\nTypeScript kullanmanın en büyük avantajlarından biri, kodu yazarken IDE'lerin kod denetimi sağlamasına izin vermesidir. Büyük JavaScript projeleri için, bu, özellikle web barındırma platformunun gizlilik ve güvenliği konusunda endişeler olduğunda, çok daha güvenli bir kod sağlayabilir."
+    },
+    "4": {
+        "question": "TypeScript'in bileşenleri nelerdir?",
+        "answer": "TypeScript'in üç seviyesi vardır. Normal olarak kurulduğunda, dil şunları içerir:\n\n1.Dil, genellikle bir IDE'den çalışır.\n2.Bir derleyici, TypeScript'i düz JavaScript koduna çevirir.\n3.Dil Hizmeti, mevcut TypeScript kodunda editör işlemleri sağlar."
+    },
+    "5": {
+        "question": "TypeScript'te Türler (Types) nedir?",
+        "answer": "Şimdi daha teknik sorulara gireceğiz. TypeScript'te Türler (Types), programlarımızda kullandığımız değerlerin türleridir. Sayılar, dizeler ve Boole değerleri gibi birçok farklı türde değeri destekler; ayrıca enum, any, never gibi ek türler de vardır.\n\nTypeScript'te türleri açıkça belirtmenin birkaç iyi nedeni vardır. Türler, kod kalitesini ve anlaşılabilirliğini artırır ve derleyicinizin yanlış tür atamalarından kaynaklanan hataları yakalamasına yardımcı olabilir. Ayrıca, Türler, işbirlikçi bir ortamda çalışırken yardımcı olabilecek ek bir belgelendirme katmanı olarak işlev görür.\n\nBir türü açıkça belirtmek için, değişken adının sonuna ‘:’ ekleyebilir ve ardından Tür'ü belirtebilirsiniz:\n\nlet decimal: number = 6;\n\nlet color: string = \"mavi\";"
+    },
+    "6": {
+        "question": "TypeScript'te Tür Tanımlamaları (Type Assertions) nedir?",
+        "answer": "TypeScript'in bir başka özelliği de \"Tür Tanımlamaları\"dır. Bu, diğer nesne yönelimli dillerde olduğu gibi bir tür dönüşümü gibi işlev görür: yalnızca derleyici tarafından kullanılır ve çalışma zamanında herhangi bir etkisi yoktur. Tür Tanımlamaları kullanmak kodunuzu sizin için denetlemeyecektir.\n\nİşte Tür Tanımlamalarının sözdizimi:\n\nlet strlength: number = (someString).length;"
+    },
+    "7": {
+        "question": "TypeScript'te özel veri türleri nelerdir?",
+        "answer": "* Any\n\n* Void\n\n* Never"
+    },
+    "8": {
+        "question": "TypeScript'te hangi kapsamı kullanıyoruz?",
+        "answer": "Değişkenlerle ilgili üç kapsam vardır, yani:\n\n* Yerel\n\n* Fonksiyon\n\n* Global\n\nFonksiyon ve global değişkenleri var ile oluştururken, const ve let hem fonksiyon hem de global değişkenler tarafından kullanılabilir."
+    },
+    "9": {
+        "question": "TypeScript'te arabirimler (interfaces) nedir?",
+        "answer": "Bir TypeScript Arabirimi, bazı özelliklere sahip nesneler oluşturmamıza yardımcı olan özel bir varlıktır. Örneğin, TypeScript Arabirimi oluşturmak için TypeScript'te rezerve edilmiş bir kelime olan \"Arayüz\" kelimesini yazarak başlayabiliriz."
+    },
+    "10": {
+        "question": "TypeScript'te Enums veya Numaralandırmalar (Enumerations) nedir?",
+        "answer": "Bu, JavaScript türlerinden biri olan birkaç TypeScript türünden biridir. Adlandırılmış sabitler kümesini tanımlamamıza izin verir. TypeScript, hem dize tabanlı hem de sayısal numaralandırmalar sağlar."
+    },
+    "11": {
+        "question": "TypeScript'in farklı özellikleri nelerdir?",
+        "answer": "Özellikler aşağıdaki gibidir:\n\n* Sadece JavaScript'tir.\n* Diğer JS kitaplıklarını destekler\n* Taşınabilir"
+    },
+    "12": {
+        "question": "TypeScript, yöntem/fonksiyon aşırı yüklemesini destekler mi?",
+        "answer": "Evet, TypeScript, fonksiyon aşırı yüklemeyi sağlar. Birden fazla fonksiyon aynı adı ve parametre sayısını taşıyabilir, ancak dönüş türü ve parametre türleri farklı olmalıdır. TypeScript, aynı adı, türleri ve farklı parametre sayısını taşıyan aşırı yüklemeyi desteklemez."
+    },
+    "13": {
+        "question": "TypeScript'te declare anahtar kelimesi nedir?",
+        "answer": "TypeScript anahtar kelimesi declare, bu belirli kodun dış kodda var olduğunu derleyiciye bildirir, bu nedenle JavaScript'in çıktısına dönüştürülmemelidir."
+    },
+    "14": {
+        "question": "Arayüz ve Tür bildirimi arasındaki fark nedir?",
+        "answer": "Tür aliazı bildirimi, birleşim, demetler ve ilkel türler gibi herhangi bir tür için bir isim tanıtır. Ancak, adlandırılmış nesne türleri her zaman Arabirimler tarafından tanıtılır."
+    },
+    "15": {
+        "question": "TypeScript Harita (Map) dosyası nedir?",
+        "answer": "Harita TypeScript dosyası, insan tarafından okunabilir TypeScript biçiminden trans-derlenmiş JavaScript'i çevirir. Bu, üretim sırasında hata ayıklama yapılması gerektiğinde kullanışlıdır çünkü kaynak Harita kullanılacaktır."
+    },
+    "16": {
+        "question": "TypeScript'te \"as\" sözdizimi nedir?",
+        "answer": "TypeScript'te \"as\" sözdizimi, yukarıdaki gibi bir Tür Tanımlaması biçimidir. JSX ile çalışırken normal TypeScript sözdizimi, bu deyimin kullandığı <type> değişkeniyle çakışır. Bu nedenle, TypeScript ve JSX ile çalışırken, yalnızca bu sözdizimini kullanmalısınız."
+    },
+    "17": {
+        "question": "TypeScript'te derleyici bağlamı nedir?",
+        "answer": "TypeScript kodu derlendiğinde, derleyiciniz bir grup dosyayı inceleyecek ve bunları geçerli kod ve olmayan kod olarak ayıracaktır. TypeScript ayrıca, derleyici seçeneklerini ayarlamanıza olanak tanır ve bunu tsconfig.json dosyası aracılığıyla yapar."
+    },
+    "18": {
+        "question": "TypeScript'te erişim belirleyicileri nelerdir?",
+        "answer": "TypeScript, sınıfların üyeleriyle çalışırken birkaç erişim belirleyicisi de kullanır. Desteklenen belirleyiciler public, private ve protected'tir.\n\nBunlar aşağıdaki gibi çalışır:\n\n* Public, bir sınıfın tüm üyelerinin, alt sınıflarının ve bir sınıfın örneğinin ona erişebileceğini belirtir.\n\n* Private, yalnızca bir sınıfın diğer üyelerinin erişebileceği anlamına gelir.\n\n* Protected, bir sınıfın tüm üyeleri ve alt sınıflarının erişebileceği, ancak bir sınıfın örneğinin erişemeyeceği anlamına gelir.\n\nBelirleyicileri belirli bir sınıf üyesi için tanımlanmadığında, o üye varsayılan olarak public olarak kabul edilir. Bu, uyumluluk süreçleri açısından sorunlara neden olabilir, bu nedenle mümkün olduğunda erişimi açıkça tanımlamanız gerekir.\n\nAyrıca, sınıf belirleyicilerinin, TypeScript kodunuz derlendikten sonra hiçbir etkisi olmaz. Derleyicinin ürettiği JS, bu belirleyicileri görmezden gelir."
+    },
+    "19": {
+        "question": "TypeScript'te bağlamsal türleme nedir?",
+        "answer": "Bağlamsal türleme, TypeScript'in son derece kullanışlı bir özelliğidir; dil, bir denklemde oluşan değişkenlerin türlerini otomatik olarak belirleyebilir.\n\nÖrneğin, bir değişkenin açıkça bir sayı türü olarak tanımlandığı bir işlev tanımlarsanız ve bu işlevin sonucunu başka bir değişkene yazarsa, TypeScript bu ikinci değişkene aynı türü atar. Bu, geliştiricilere çok zaman kazandırır, çünkü fonksiyon çıktılarının türlerini açıkça belirtmek zorunda kalmazsınız."
+    },
+    "20": {
+        "question": "TypeScript'te göreli ve göreli olmayan içe aktarmaları açıklayın.",
+        "answer": "TypeScript, iki tür içe aktarmayı destekler: göreli ve göreli olmayan.\n\nGöreli içe aktarmalar, içe aktaran dosyanın konumuna göre çözülür ve yazmanız gereken kod miktarını azaltmanın iyi bir yoludur. Diğer yandan, göreli içe aktarmalar yalnızca aynı yerde kalacak modüller için kullanılmalıdır."
+    },
+    "21": {
+        "question": "TypeScript'te üç çizgi direktifleri nedir?",
+        "answer": "Üç çizgi direktifleri, TypeScript'te yorumlar gibi işlev görür, ancak aynı zamanda derleyicinize talimatlar içerir. Bunlar tek XML etiketlerini içerir.\n\nÜç çizgi direktifleri, içerdikleri dosyanın en üstünde olduğunda yalnızca çalışır. Bunların önlerine yorumlar ekleyebilirsiniz, diğer üç çizgi direktifleri de dahil olmak üzere, ancak bunlar başka türde bir ifadenin veya deklarasyonun ardından gelirse, derleyiciniz bunları standart yorumlar olarak işleyecek ve yok sayacaktır.\n\nÜç çizgi direktiflerinin sağladığı birkaç faydalı işlev vardır:\n\n* En önemlilerinden biri, /// <reference path=”some/reference/path” /> direktifidir. Bununla TypeScript kodunuzun başına eklerseniz, derleyicinize dosyalar arasında bağımlılıklar olduğunu belirtmiş olursunuz. Derleyiciniz daha sonra bu ek dosyaları derleme sürecine dahil eder.\n\n* Ayrıca bir pakete bağımlılığı bildirmek için üç çizgi direktiflerini kullanabilirsiniz. Bu, /// <reference types=”…” /> kullanılarak yapılır.\n\nTest sırasında, derleyicinizi üç çizgi direktiflerini görmezden gelmesi için –noResolve derleyici bayrağını kullanabilirsiniz. Bu belirtilirse, derleyici tüm üç çizgi direktiflerinizi yok sayacak ve başka dosyaları içe aktarmayacaktır."
+    },
+    "22": {
+        "question": "TypeScript'te JSX'i kullanabilir miyiz?",
+        "answer": "Evet, ancak TypeScript dosyanızı .tsx uzantısı ile kaydetmeniz gerekecektir.\n\nAncak, JSX ve TypeScript ile çalışırken dikkate almanız gereken bazı önemli noktalar vardır. Bir gömülü XML benzeri sözdizimi olarak, JSX'in kendisi geçerli JS'ye derlenmelidir. Bu, kodunuzu başka bir derleyici tarafından doğrudan işlenmesi için başka bir derleme adımı ekler, bu da performans maliyeti ile gelebilir.\n\nÖte yandan, TypeScript, JSX ile çalışmak için bazı güçlü özellikler sunar: gömülü, tür denetimi ve JSX'i doğrudan JS'e derleyebilir."
+    },
+    "23": {
+        "question": "TypeScript hangi JSX modlarını destekler?",
+        "answer": "Standart olarak, TypeScript üç JSX moduyla birlikte gelir. Bunlar korunan, react ve react-native'dir.\n\nBu modlar, kodunuzun JSX çıktısını özelleştirmek için kullanılır. Koruma modu, JSX çıktısını derlendiği gibi tutar, böylece başka bir derleyici tarafından doğrudan işlenebilir. Bu modu kullanırken, derleyici .jsx dosya uzantılı bir dosya oluşturur, böylece kullanımdan önce başka bir şekilde dönüştürülebilir. React-native modu da aynı şeyi yapar, ancak çıktıya .js dosya uzantısı verir.\n\nReact modu biraz farklı çalışır. React.createElement değiştiricisini hariç bırakır, bu nedenle çıktıda ham JSX kodunu içermez. Bu modu kullanırken, çıktı dosyası .js dosya uzantısına sahip olacaktır."
+    },
+    "24": {
+        "question": "TypeScript'te isteğe bağlı statik türleme nedir?",
+        "answer": "Varsayılan olarak, TypeScript statik olarak yazılmıştır. Bu, derleyicinizin derleme sürecinde veri türlerinizi otomatik olarak kontrol edeceği anlamına gelir. Ancak, bu işlevi devre dışı bırakabilir ve derleyicinizi belirli bir değişkenin türünü görmezden gelecek şekilde yapabilirsiniz.\n\nBunu any veri türünü kullanarak yaparsınız. Bir değişkenin türünü any olarak tanımlarsanız, derleyici bu değişkenin türünü kontrol etmez ve bu değişkeni herhangi bir türe atayabilirsiniz. Bu, özellikle tiplemeye gerek olmayan veya statik türlemeye ihtiyacı olmayan durumlar için kullanışlıdır."
+    },
+    "25": {
+        "question": "TypeScript'te modül bildirim çakışmalarını çözmek için kullanılan yöntemler nelerdir?",
+        "answer": "TypeScript, modül bildirim çakışmalarını çözmek için birkaç farklı yöntem sunar:\n\n1. **Üzerindeki Modül Bildirimleri:** Eğer bir modülü mevcut olanın üzerine ekliyorsanız, derleyiciniz bu modül bildirimlerini birleştirecek ve hata vermeyecektir.\n\n2. **İçiçe Geçmiş Modül Bildirimleri:** Eğer bir modül diğer bir modülün içindedir, derleyiciniz bu modül bildirimlerini birleştirecek ve hata vermeyecektir.\n\n3. **Açıkça Çözme:** Eğer modül bildirim çakışması varsa ve bu çakışmayı çözmek istiyorsanız, modül bildirimini çakışan modül bildirimine eklemelisiniz. Böylece, çakışan bildirim yerine eklenen bildirim kullanılacaktır."
+    },
+    "26": {
+        "question": "TypeScript'te iç modüllerle dış modüller arasındaki farklar nelerdir?",
+        "answer": "TypeScript, iç modül ve dış modül olmak üzere iki tür modül tanımlar. Burada kullanılan terimler biraz karışık çünkü TypeScript'in en son sürümünde modüller için terimler değişti. “Dış” modülleri bu en son sürümde sadece “modüller” olarak adlandırılır, ancak önceki sürümler iç modüller için aynı terimi kullanırdı.\n\n** İç Modül **\n1. İç modüller, işlevleri, sınıfları, arayüzleri ve değişkenleri tek bir birimde mantıksal olarak gruplamak içindir. İç modülü başka bir modüle aktarabilirsiniz\n2. Küresel ve harici modüller için iç modüller, bunların yerel veya harici üyeleri olarak kalır.\n3. Modül Bildirimleri, adlarını ve gövdelerini içeren İç Modülleri bildirmek için kullanılır.\n\n** Dış Modül **\n\n1. Dış modüller, modül tanımlarının iç içe geçmiş ifadelerini gizler. Tanımlanmış değişkenle ilgili yöntemleri ve parametreleri gösterirler.\n2. Dış modüller ayrı bir kod gövdesi olarak yüklenir. İsimleriyle referans edilirler.\n3. Bir dış modül, en az bir içe aktarma veya dışa aktarma bildirimi içeren bağımsız bir kaynak dosyası yazılarak tanımlanır."
+    },
+    "27": {
+        "question": "TypeScript'te dekoratörler nedir?",
+        "answer": "Bu son birkaç soruda, TypeScript'in daha alışılmadık özelliklerinden bazılarına gireceğiz. Bu özellikler hakkında sık sık mülakatlarda sorulacak çünkü bunları kapsamlı bir şekilde kullandığınızı bilmek, bu bilgiyi kanıtlar.\n\nBu özelliklerden ilki “Dekoratörler”dir. Bir dekoratör, var olan kodlara ek açıklamalar ve meta veri eklemek için kullanılan belirli bir tür deklarasyondur. Onlar deklaratif bir şekilde çalışırlar. Bunları kullanmak için, deneyselDekoratörler derleyici işlevini etkinleştirmeniz gerekecektir."
+    },
+    "28": {
+        "question": "TypeScript'te karışımlar nedir?",
+        "answer": "Karışımlar, birkaç daha basit kısmi sınıfı birleştirerek karmaşık sınıflar oluşturma yoludur. Temel TypeScript kurslarının çoğu bunları kapsamaz ancak bunlar önemli bir parçadır.\n\nBir Karışım örneği şöyledir: Belirli bir sınıf A'nın işlevselliğini elde etmek için sınıf B'yi genişletmek yerine, işlev B sınıf A'yı çağırır ve ardından bu ek işlevsellikle yeni bir sınıf oluşturur. Bu örnekte, işlev B bir karışım olarak adlandırılır."
+    },
+    "29": {
+        "question": "TypeScript dosyasını nasıl hata ayıklarsınız?",
+        "answer": "Hata ayıklamak için, bir .js kaynak haritası dosyasıyla birlikte derlemelisiniz. TypeScript, bunu hem .js dosyanızı hem de yanında bir .js.map dosyasını üretecek tek bir komutla yapabilme yeteneği sunar.\n\n$ tsc -sourcemap dosya1.ts\n\nEğer .js dosyasını açarsanız, son satırın bir göreli referans kullanarak kaynak haritası dosyasına işaret ettiğini göreceksiniz. Bu iki dosya aynı yerde tutulmalıdır - birbirlerine göre - aksi takdirde bunları ayırmak istiyorsanız bu referansı değiştirebilirsiniz."
+    },
+    "30": {
+        "question": "TypeScript Tanım Yöneticisi nedir?",
+        "answer": "TypeScript Tanım Yöneticisi (TSD), TypeScript için bir paket yöneticisidir. Açık kaynaklı DefinitelyTyped deposundan TypeScript tanım dosyalarını bulmak ve yüklemek için kullanılır.\n\nTSD son derece yararlıdır çünkü doğrudan TypeScript kodunuzda tür tanım dosyalarını kullanmanıza olanak tanır. Örneğin, bir .ts dosyasında bazı jQuery kodlarını dahil etmek istiyorsanız:\n\n$(document).ready(function() { //Your jQuery code });\n\nDerleyiciniz ' $ ' adını bulamadığını size söyleyecektir. Çünkü bu bir jQuery türüne aittir. TSD'yi jQuery Tür Tanım dosyasını bulmak ve indirmek için kullanabilir ve ardından bu dosyayı .ts dosyanıza ekleyebilir ve ardından derleyicinizin ihtiyacı olan her şeye sahip olmasını sağlayabilirsiniz."
+    },
+    "31": {
+        "question": "TypeScript'te ambiyanslar nedir?",
+        "answer": "TypeScript kodunuzdaki ambiyans bildirimleri, derleyicinize başka bir yerde depolanan kaynak kodu hakkında bilgi verir. Bunlar genellikle jQuery, AngularJS ve nodejs gibi diğer js kitaplıklarını TypeScript'e entegre etmek için kullanılır.\n\nAmbiyans bildirimleri genellikle d.ts uzantılı bir tür bildirim dosyasında saklanır."
+    },
+    "32": {
+        "question": "TypeScript'te anonim fonksiyonlar nedir?",
+        "answer": "TypeScript'te anonim fonksiyonlar, adlandırılmış herhangi bir tanımlayıcı olmadan bildirilen fonksiyonlardır. Bu tür bir fonksiyon, geleneksel bir fonksiyon gibi girdi alabilir ve çıktı döndürebilir, ancak tipik olarak oluşturulduktan sonra kullanıcı tarafından erişilemez."
+    },
+    "33": {
+        "question": "TypeScript'te deklarasyon birleştirme nedir?",
+        "answer": "Bazı durumlarda, TypeScript'in derlediği düz JavaScript, aynı adla birden fazla deklarasyon içerebilir. TypeScript derleyiciniz, bu ayrı deklarasyonları birleştirerek (veya birleştirerek) bu deklarasyonları, derlenmiş olan orijinal tanımlarından gelen özellikleri miras alacak şekilde tek bir tanıma dönüştürür. Bu birleştirilmiş tanım, kodunuzun performansını artırmak için kullanılır."
+    },
+    "34": {
+        "question": "TypeScript'te yöntem üzerine yazma nasıl yapılır?",
+        "answer": "Alt sınıflar, ana sınıflarının yöntemlerini devralabilir. Bu, yöntem üzerine yazma olarak bilinir ve birden çok alt sınıfa hızlıca aynı yöntemleri sağlamak için kullanışlı olabilir.\n\nAncak, yöntem üzerine yazma yaparken birkaç dikkate alınması gereken nokta vardır:\n\n* Yöntemin, ana sınıf ile aynı adı olmalıdır\n\n* Yöntemin, ana sınıftakiyle aynı parametrelere sahip olması gerekir\n\n* Alt sınıflar arasında bir IS-A ilişkisi olmalıdır"
+    },
+    "35": {
+        "question": "TypeScript'te Lambda-Ok işlevi nedir?",
+        "answer": "ES6 standartlarına derlenen TypeScript sürümleri, anonim işlevi tanımlamanın kısaltılmış bir yoluna sahiptir (yukarıya bakınız). Bunlar lambda işlevleri veya ok işlevleri olarak adlandırılır ve bunların kullanılan sözdiziminden sonra adlandırılırlar. Bunlar, özünde adı olmayan ve işlev anahtar sözcüğünü görmezden gelen işlevlerdir."
+    },
+    "36": {
+        "question": "TypeScript'te Rest Parametresi nedir?",
+        "answer": "TypeScript, bir işleve değerler aktarmanızı sağlayan özel bir parametre olan Rest Parametresini içerir. Bu parametre, çalıştığınız parametre önünde üç nokta (...) kullanılarak çağrılır. Bu, işlevlere değişken sayıda argüman aktarmanıza olanak tanır, bu da belirli bir işleve aktarmak istediğiniz bilinmeyen sayıda parametreye sahipseniz son derece yararlıdır.\n\nRest Parametresi ile çalışırken bazı dikkate alınması gereken hususlar vardır:\n\n* Bir işlevde yalnızca tek bir dinlenme parametresi kullanılabilir\n\n* Açıkça bir dizi türü olarak belirtilmelidir\n\n* Parametre listesinde en son parametre olmalıdır"
+    }
+}

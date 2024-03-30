@@ -1,0 +1,374 @@
+{
+    "1": {
+        "question": "Rust'un Çöp Toplama nasıl gerçekleştirilir?",
+        "answer": "Bu Rust mülakat sorusu aldatıcıdır çünkü bazı insanlar Rust'un bir çöp toplayıcısı olmadığına inanır. Ancak, Rust'ta statik bir çöp toplayıcı kullanılır. Otomatik bellek yönetimi prensibine dayanır, yani artık kullanılmayan herhangi bir belleği yeniden döndürür. İlk izlenimde, Rust, özellikle atıf ve dereferanslama açısından, C'ye benzer. Ancak, bellek yönetimi konusunda benzersiz bir yaklaşım benimser. Her bellek segmentinin tek bir referansı sahiptir. Geliştiricinin bakış açısından, bir değişken her zaman verinin sahibidir. Bu değişken artık mevcut değilse ve kapsam dışına çıkarsa, sahiplik başka bir değişkene aktarılır veya bellek serbest bırakılır."
+    },
+    "2": {
+        "question": "Rust, taşıma yapılandırıcılarını içerir mi?",
+        "answer": "Hayır, Rust'ta tüm türlerin değerleri memcpy aracılığıyla taşınır. Kopyalama işlevi olan her şey Object() { [native code] } veya kopyalama özniteliğini uygulamıyorsa taşınır."
+    },
+    "3": {
+        "question": "Cargo nedir?",
+        "answer": "Rust kullanıcılarının projelerini yönetmek için özel olarak tasarlanmış bir yapı sistemidir ve paket yöneticisidir. Cargo sistemi, kullanıcılar için üç görevi ele alır: kod oluşturma, kütüphaneleri indirme ve kütüphaneleri yeniden oluşturma."
+    },
+    "4": {
+        "question": "Rust, C ve C++'a kıyasla güvenli midir?",
+        "answer": "Rust'un C'ye göre en büyük avantajı, güvenli kod yazmaya odaklanmasıdır. Rust, programcılarına güvensiz kod yazmalarına izin verir, ancak varsayılan olarak güvenli kodu tercih eder. Bellek yönetimi ve işaretçi aritmetiği C uygulamalarında gereklidir, ancak Rust baştan sona hiçbirini gerektirmez."
+    },
+    "5": {
+        "question": "unwrap() her yerde fonksiyonunun önemi nedir?",
+        "answer": "Bu fonksiyon, bir seçeneğin değeri çıkarıldığında ortaya çıkan hatalarla başa çıkmak için kullanılır. Ayrıca, hataları olmayan hızlı prototipler için harikadır."
+    },
+    "6": {
+        "question": "Rust programlama dilini nasıl tanımlarsınız?",
+        "answer": "Rust, yüksek performans ve eşzamanlılık sunan genel amaçlı, çok paradigmal bir programlama dilidir. Rust, bellek toplayıcısına ihtiyaç duymadan bellek yönetimini sağlayan benzersiz sahiplik ve ödünç verme sistemine sahiptir.\n\nBu sistem, belleğin asla yanlış şekilde erişilmediği veya erken serbest bırakılmadığından emin olur, bu da birçok yaygın çalışma zamanı hatasını ortadan kaldırır ve Rust programlarını daha güvenilir ve güvenli hale getirir."
+    },
+    "7": {
+        "question": "Rust'un temel özellikleri nelerdir?",
+        "answer": "Rust, geliştiriciler için popüler bir seçim yapan birkaç özellik sunar. En önemli özelliklerinden bazıları şunlardır:\n\nYüksek performans: Rust, sistem kaynakları üzerinde düşük seviyeli kontrolle yüksek verimlilik ve hız için tasarlanmıştır, böylece mükemmel performans sağlar.\n\nEşzamanlılık: Rust, iplikler ve mesaj geçişi gibi özelliklerle eşzamanlılık ve paralel yürütme destekler.\n\nBellek güvenliği: Rust, önemli çalışma zamanı maliyetleri olmadan bellek güvenliğini sağlayan benzersiz bir sahiplik ve ödünç verme sistemine sahiptir.\n\nMaliyetsiz soyutlamalar: Rust'ta kullanılan soyutlamalar, derleyici tarafından uygulanan kod optimizasyonu nedeniyle herhangi bir çalışma zamanı maliyeti gerektirmez.\n\nMacrolar: Rust, optimize edilmiş kod üretimini ve meta programlamayı sağlayan sağlam bir makro sistemine sahiptir. Cargo entegrasyonu: Rust, bağımlılıkları yönetmeye ve projeleri kolayca oluşturmaya yardımcı olan yerleşik bir paket yöneticisi olan Cargo'yu sağlar.\n\nHata iletişimi: Rust'un hata iletişimi, C++ gibi birçok diğer programlama diline göre geliştirilmiştir. Bu dil, geliştiricilere hataların açık, öz ve detaylı açıklamalarını sağlar ve uygun biçimlendirme, renkler ve vurgulanmış yanlış yazımlarla yardımcı olarak sorunları etkili bir şekilde tanımlamalarına ve düzeltmelerine yardımcı olur."
+    },
+    "8": {
+        "question": "Rust'ta sahiplik nasıl tanımlanır?",
+        "answer": "Rust'ta sahiplik, belleğin bir Rust programında nasıl yönetildiğini tanımlayan ve yöneten temel bir kavramdır. Bellek toplayıcısına ihtiyaç duymadan bellek güvenliğini uygulamanın bir mekanizmasıdır.\n\nHer değer, Rust'ta bir sahibe sahiptir, değeri tutan değişken. Sahip kapsam dışına çıktığında, değer bırakılır ve ilişkilendirilmiş bellek serbest bırakılır."
+    },
+    "9": {
+        "question": "Rust tarafından desteklenen platformlar hangileridir?",
+        "answer": "Rust tarafından desteklenen çeşitli platformlar arasında aşağıdakiler bulunmaktadır:\n\nLinux\n* macOS\n* Windows\n* iOS\n* Android\n* FreeBSD\n* NetBSD\n* OpenBSD\n* Solaris\n* WebAssembly\n* Rust'un güçlü çapraz derleme desteği vardır, bu da geliştiricilerin tek bir geliştirme ortamından birden çok hedef platform için uygulamalar oluşturmasını sağlar."
+    },
+    "10": {
+        "question": "Rust'ta global değişkenler nasıl bildirilir?",
+        "answer": "Rust'ta, bir global değişkeni static anahtar kelimesini kullanarak bildirebilirsiniz. static anahtar kelimesi, programın çalışma süresi boyunca var olan bir statik yaşam süresi ile bir global değişkeni bildirir.\n\nBir global değişken bildirmek için, türü belirtmeniz ve başlatma için sabit bir ifadeye sahip olmanız gerekir. Ayrıca, global değişkenlere birden çok iplikten erişilebileceğinden, değiştirilebilir global değişkenler kullanırken senkronizasyonu ele almak önemlidir."
+    },
+    "11": {
+        "question": "Rust'ın sınırlamaları nelerdir?",
+        "answer": "İşte Rust programlama dilinin bazı önemli sınırlamaları:\n\nÖğrenme Eğrisi: Rust, özellikle programlamaya yeni olanlar veya sistem programlama dillerine aşina olmayanlar için zor olabilir. Çok dik bir öğrenme eğrisine sahiptir ve sözdizimi birçok geliştirici için karmaşık ve alışılmadık olabilir.\n\nBellek Yönetimi: Rust'ın sahiplik ve ödünç verme sistemi bellek ile ilgili hataları önlemek için tasarlanmış olmasına rağmen, aynı zamanda oldukça kısıtlayıcı olabilir, geliştiricilerin bellek kullanımını ve değişkenlerin sahipliğini dikkatlice yönetmelerini gerektirir.\n\nYavaş Derleme: Rust, özellikle diğer modern programlama dilleri ile karşılaştırıldığında yavaş derleme sürelerine sahiptir. Bu, geliştiricilerin geliştirme süreci sırasında hızlı bir şekilde tekrar etmeleri gereken durumlarda frustrasyona neden olabilir.\n\nSınırlı Kütüphaneler: Rust hala nispeten yeni bir dil olduğundan, kütüphane ekosistemi Python veya JavaScript gibi diğer dillerin olgunluğuna sahip değildir. Bu, üçüncü taraf kütüphaneleri ve çerçeveleri bulup kullanmayı ve kullanmayı zorlaştırabilir."
+    },
+    "12": {
+        "question": "Rust'ta bir GUI uygulaması nasıl yazılır?",
+        "answer": "Rust'ta bir Grafiksel Kullanıcı Arayüzü (GUI) uygulaması yazmak için çeşitli mevcut GUI kütüphane ve çerçevelerinden birini kullanabilirsiniz. İşte bazı popüler seçenekler:\n\nCocoa: Cocoa, macOS için yerel bir UI çerçevesidir (Rust kütüphanesi değil). Cocoa-rs Rust bağlantılarını kullanarak erişilebilir. Bu, yerel macOS uygulamaları oluşturmanıza olanak tanır. Ancak, doğrudan Cocoa kullanmak platforma özgü olacak ve çapraz platform olmayacaktır.\n\nImGui: ImGui (Dear ImGui olarak da bilinir), C++ için şişkin olmayan bir grafik kullanıcı arayüzü kütüphanesidir. Oyun geliştirme, araçlar ve uygulamalar için grafik arayüzleri oluşturmak için popülerdir.\n\nGTK: Gtk-rs, yerel görünümlü ve yüksek derecede özelleştirilebilir arayüzler oluşturmak için popüler bir GUI kütüphanesi olan GTK için bağlantıların bir kümesidir.\n\nGyscos: Gyscos, Rust için bir Metin Kullanıcı Arayüzü (TUI) kütüphanesidir. Farklı arka uçlar (örneğin termion, ncurses) kullanarak terminalde arayüzler oluşturur.\n\nIUP: IUP (Taşınabilir Kullanıcı Arayüzü) minimal ve kullanımı kolay bir arayüz sağlamak için başlangıçta C'de geliştirilen bir GUI kütüphanesidir. IUP'nin Rust bağlantıları olan iup-rust, Rust'ta GUI uygulamaları oluşturmak için IUP'yi kullanmanıza olanak tanır."
+    },
+    "13": {
+        "question": "Rust'ta sahiplik modeli kuralları nelerdir?",
+        "answer": "Rust'taki sahiplik modeli kuralları bellek güvenliğini sağlar ve bu kurallar şunlardır:\n\n* Rust'taki her değer tek bir sahibe sahiptir.\n* Sahip kapsam dışına çıktığında, değer bırakılır.\n* Bir değer, bir değişkenden başka bir değişkene taşındığında, orijinal değişken artık değere erişemez.\n* Rust'ın ödünç verme sistemi, sahiplik olmadan bir değere geçici erişim sağlar."
+    },
+    "14": {
+        "question": "Rust'ta tamamen bir işletim sistemi oluşturmak mümkün müdür?",
+        "answer": "Evet, Rust ile tam bir işletim sistemi yazabilirsiniz. Rust, son zamanlarda piyasaya sürülen birkaç işletim sisteminde ana programlama dili olarak kullanılmaktadır. Geliştiriciler, Rust'u oyun motorları, işletim sistemleri, dosya sistemleri, tarayıcı bileşenleri ve sanal gerçeklik simülasyon motorları dahil olmak üzere çeşitli yeni yazılım uygulamaları oluşturmak için kullanmaktadır."
+    },
+    "15": {
+        "question": "Rust'ta ödünç verme nedir?",
+        "answer": "Rust'ta ödünç verme, bir programın bir kaynağa, örneğin bir değişkene, kalıcı sahipliği olmadan geçici erişim sağlayabileceği bir etkinliği ifade eder.\n\nÖdünç verme, kodun değişkenin sahipliğine ihtiyaç duymadan değişken değerine erişmesine olanak tanır. Bu, bir programın farklı parçalarının, sahipliği aktarmadan veya yeni kopyalar oluşturmadan aynı verilere erişmesini sağlar."
+    },
+    "16": {
+        "question": "Rust'ta yaşam nedir?",
+        "answer": "Rust'ta yaşam, bellekteki veri referansları arasındaki ilişkileri ve veri ömrünü tanımlayan bir yapıdır. Rust derleyicisi, referansın geçerlilik süresini anlamak ve takip etmek için yaşamı kullanır.\n\nBu, referansın ne kadar süreyle geçerli olduğunu gösteren bir etiket gibi düşünülebilir ve böylece veriye erişmek için kullanılabilir."
+    },
+    "17": {
+        "question": "Rust'ta bir modül nedir?",
+        "answer": "Rust, kodun görünürlüğünü düzenlemek ve yönetmek için güçlü bir modül sistemine sahiptir. Bir modül, fonksiyonlar, sabitler, numaralandırmalar, öznitelikler ve yapılar gibi birimleri ayrı birimlere gruplamak için kullanılır. Modüller, öğeleriniz için ad alanları sağlar, böylece isim çakışmalarını önler ve kod düzeninizi düşünmeyi kolaylaştırır. Bir modülü mod anahtar kelimesi ile oluşturabilir ve içindeki öğeleri tanımlayabilirsiniz."
+    },
+    "18": {
+        "question": "Rust'ta desen eşleme nedir?",
+        "answer": "Desen eşleme, geliştiricilere desenleri belirleyip değer yapısını bunlarla karşılaştırma olanağı sağlayan bir özelliktir. Bu, verilerdeki desenleri eşleştirmek ve ardından eşleşmeye dayalı olarak kodu çalıştırmak için kısa ve öz bir yol sağlar. Rust'ta desen eşleme, 'match' ifadesi kullanılarak yapılır."
+    },
+    "19": {
+        "question": "Rust, C ve C++ ile karşılaştırıldığında güvenli midir?",
+        "answer": "Rust'un C'ye göre en büyük avantajı, güvenli kod yazmaya odaklanmasıdır. Bellek güvenliği, Rust'un öncelikli hedeflerinden biri olarak oluşturulmuştur. Rust, güvensiz kod yazmayı zorlaştıran birkaç özellik sunar.\n\nC ve C++, bellek yönetimi ve diğer düşük seviye işlemler üzerinde daha büyük bir kontrol ve esneklik sunar, bu da güvenliği olumsuz yönde etkileyebilir. Rust, C ve C++'a kıyasla daha güvenli bir dildir."
+    },
+    "20": {
+        "question": "Rust'ta bir referans nedir?",
+        "answer": "Rust'ta bir referans, sahibi olmadan değeri işaret eden bir işaretçidir. Referanslar, ana işlevlerin orijinal değişken kapsamını korurken alt işlevin bunu kullanmasına olanak tanır. Bu, programın farklı bölümlerinin aynı verilere sahip olmadan veya kopya oluşturmadan aynı verilere erişmesini sağlar."
+    },
+    "21": {
+        "question": "Rust'ta referans türleri nelerdir?",
+        "answer": "Rust'ta iki tür referans vardır: değişmez referanslar ve değiştirilebilir referanslar.\n\nDeğişmez referanslar: Bunlar, bir değerin değişmez bir görünümünü ödünç almanızı sağlayan salt okunur referanslardır. Bir değere değişmez bir referansa sahip olduğunuzda, bu referans aracılığıyla değeri değiştiremezsiniz. Değişmez referanslar, & sembolünü kullanarak ödünç almak istediğiniz değeri takip ederek oluşturulur.\n\nDeğiştirilebilir referanslar: Bunlar, bir değerin değiştirilebilir bir görünümünü ödünç almanızı sağlayan referanslardır. Bir değere değiştirilebilir bir referansa sahip olduğunuzda, bu referans aracılığıyla değeri değiştirebilirsiniz. Değiştirilebilir referanslar, & mut sembolünü kullanarak ödünç almak istediğiniz değeri takip ederek oluşturulur."
+    },
+    "22": {
+        "question": "Rust ile yeniden kullanılabilir kodlar arasındaki bağlantı nedir?",
+        "answer": "Rust'ta, derleyici sahiplik modelini zorlar, yani yönetilmeyen işaretçiler veya bellek sızıntıları yoktur. Bu, yeniden kullanılabilir kod yazmayı inanılmaz derecede kolay ve verimli hale getirir.\n\nAyrıca, Rust'un paket yöneticisi Cargo, kod paylaşımını ve yeniden kullanılabilirliği çok basit hale getirir. Rust'un birçok kütüphanesi ve paketi vardır, bu da geliştiricilerin modüler ve yeniden kullanılabilir kod yazmasını ve mevcut kodu hızlandırmak için var olan kodu kullanmasını kolaylaştırır."
+    },
+    "23": {
+        "question": "Rust'ta unwrap() metodu nedir?",
+        "answer": "unwrap(), Rust programlama dilinin standart kütüphanesi tarafından sağlanan bir yöntemdir ve bir Option veya Result türündeki değeri çıkarırken aynı zamanda olası hataları da iletebilir.\n\nRust'ta, 'Option' ve 'Result' türleri, bir değerin mevcut olma veya olmama ihtimalinin veya bir işlemin bir hata nedeniyle başarısız olabilme durumunun ele alınması için yaygın olarak kullanılır. Bir 'Option' veya 'Result' içindeki değeri erişmek için, unwrap(), expect(), map(), match vb. gibi bu türler tarafından sağlanan bir dizi yöntemden birini kullanmanız gerekir."
+    },
+    "24": {
+        "question": "Rust'ta struct nedir?",
+        "answer": "Struct, Yapı olarak da bilinen, ilişkili değerleri tek bir isim altında gruplamayı sağlayan bileşik bir veri türüdür. Struct'lar, programınızdaki kavramları veya nesneleri temsil etmenizi sağlar, verilerinizi daha düzenli bir şekilde yapılandırmanıza olanak tanır. C'deki yapılar, C++/Java'daki sınıflar veya Pascal'daki kayıtlar gibi bir içsel davranışa sahip değildirler."
+    },
+    "25": {
+        "question": "Rust'ta bir option ile bir result arasındaki fark nedir?",
+        "answer": "Rust'ta, bir option ve bir result hem bir hata olma ihtimalini hem de başarılı bir değerin olma ihtimalini temsil eden türlerdir. Bununla birlikte, aralarındaki bazı farklar şunlardır:\n\n* Bir 'Option', mevcut veya mevcut olmayan bir hesaplama değerini temsil eder. Örneğin, bir koleksiyon içinde bir öğeyi ararken bir işlevin bir değer döndürmeme olasılığı olduğunda kullanılır. Option, genellikle null işaretçi hatalarını önlemek için kullanılır.\n\n* Bir 'Result', işlevin bir başarısı veya bir başarısızlığı (bir hata durumunda ilişkili hata değeri (E) ile) temsil eder. 'result' türü, bir işlevin birkaç nedenle başarısız olabileceği durumlarda kullanılır ve bu nedenle hata durumları yapılandırılmış bir şekilde ele alınabilir."
+    },
+    "26": {
+        "question": "Rust'ta bir prosedürel makro nedir?",
+        "answer": "Rust'ta, bir prosedürel makro, kodunuzda kullanılabilecek özel sözdizimi uzantılarını tanımlamanıza olanak tanıyan bir makro türüdür. Prosedürel makrolar, girdi olarak Rust kodunu alan ve bir şekilde manipüle eden Rust fonksiyonları olarak uygulanır ve ardından yeni bir Rust kodu ile çıktı oluşturur. Prosedürel makrolar derleme zamanında kod oluşturmak için kullanılır."
+    },
+    "27": {
+        "question": "Rust'ta bir veri yarışı nedir?",
+        "answer": "Rust'ta bir veri yarışı, birden fazla iş parçacığının (genellikle 2'den fazla) aynı anda aynı veri veya bellek konumuna erişmeye çalıştığı bir durumu ifade eder, bu erişimlerden en az biri bir yazma işlemidir. Bu, veri bozulması, program çökmeleri veya güvenlik açıkları gibi tanımsız davranışlara yol açabilir."
+    },
+    "28": {
+        "question": "Rust, nasıl bellek güvenliğini sağlar?",
+        "answer": "Rust, bellek güvenliğini iki temel yaklaşım ile sağlar:\n\nSıkı tür sistemi: Rust'un tür sistemi, türlerin derleme zamanında kontrol edilmesini sağlayarak bellek güvenliği sorunlarını önler. Bu, derleyicinin, kodun çalıştırılmadan önce birçok hatayı yakalayabileceği anlamına gelir, örneğin, zaten taşınmış veya ödünç alınmış bir değere erişmeye çalışma.\n\nSahiplik ve ödünç alma sistemi: Rust'ta, her değerin yönetilen belleğinden sorumlu olan bir sahibi vardır. Rust, bir değer için aynı anda yalnızca bir sahibin olmasını sağlayarak, asılı işaretçi veya serbest bırakılan kullanımlar gibi sorunları önler. Sahipliğin yanı sıra, Rust ayrıca ödünç verme kullanır. Ödünç verme, bir işlevin veya yöntemin, programın başka bir bölümünde sahibi olan bir değeri geçici olarak ödünç almasını sağlar."
+    },
+    "29": {
+        "question": "Rust'ta cargo.lock dosyası nedir?",
+        "answer": "Cargo.lock, bir Rust projesinin bağımlılıklarıyla ilgili bilgileri, transitif bağımlılıklar gibi içerir. Bu dosyanın amacı, yeni bir proje oluşturan herkesin, proje'nin son sürümünde kullanılan bağımlılıkları kullanmasını sağlamak ve bağımlılık çatışmalarını önlemek ve yeniden kullanılabilir yapıları garanti etmektir."
+    },
+    "30": {
+        "question": "Rust'ta enum nedir?",
+        "answer": "Rust'ta, bir enum, adlandırılmış değerlerin veya verilerin bir kümesini tanımlamanıza olanak tanıyan bir türdür. Bu değerler birkaç varyanta sahip olabilir ve ayrıca ek veya isteğe bağlı verilere sahip olabilirler.\n\nEnumlar, Rust'ta sınırlı bir değer kümesini temsil etmek için kullanışlı olabilir, örneğin, haftanın günleri veya bir kullanıcı arayüzü için seçenekler. Ayrıca özel hata türlerini veya diğer karmaşık veri yapılarını tanımlayabilirler."
+    },
+    "31": {
+        "question": "Rust'ta koşullu derleme nedir?",
+        "answer": "Rust'ta, koşullu derleme, belirlenmiş koşulları kullanarak kodun belirli bölümlerini seçmeli olarak derlemenizi sağlayan bir özelliktir. Bu özellik genellikle platforma özgü kod geliştirmek veya belirli derleme yapılandırmaları için işlevsellik oluşturmak için kullanılır.\n\nRust'ta, koşullu derleme #[cfg] özniteliği kullanılarak sağlanır. Bu öznitelik, belirli bir kod bloğunun nihai derlenmiş ikiliye dahil edilip edilmeyeceğini belirleyen bir koşulu belirtebilir."
+    },
+    "32": {
+        "question": "Bir yapı betiği nedir?",
+        "answer": "Bir yapı betiği, Rust'ta bir projenin derleme işlemi sırasında yürütülen özel bir kaynak dosyasıdır. Bir yapı betiği şunları içeren çeşitli görevler gerçekleştirir:\n\n* Kod üretme\n* Ortam değişkenlerini ayarlama\n* Harici bağımlılıkları derleme\n* Derleme seçeneklerini yapılandırma"
+    },
+    "33": {
+        "question": "Rust'ta bir yineleyici nedir?",
+        "answer": "Rust'ta yineleyici, bir dizi değeri sağlayan bir süreçtir ve yineleyici yöntemleri gibi yineleyici yöntemleri kullanılarak yinelenebilir. Yineleyiciler döngü uygulamaya yardımcı olur. Rust'ta bir yineleyiciyi kullanmak için genellikle Iterator özniteliğini uygulayan bir türün bir örneğini oluşturur ve ardından bu örneği bir döngüde veya diğer yineleyici yöntemleriyle kullanırsınız."
+    },
+    "34": {
+        "question": "Rust'ta bir kanal nedir?",
+        "answer": "Bir kanal, iki eş zamanlı çalışma iş parçacığı arasında iletişim kurma ve mesajları iletmek için bir mekanizmadır. Bir kanal, bir gönderici ve bir alıcıdan oluşur ve göndericiden alıcıya tek yönlü bilgi akışı vardır. Rust'taki kanallar std::sync::mpsc modülü kullanılarak uygulanır."
+    },
+    "35": {
+        "question": "Rust'ta cargo.toml dosyası hakkında ne biliyorsunuz?",
+        "answer": "Cargo.toml, Rust tarafından kullanılan paket yöneticisi Cargo'nun kullandığı bir yapılandırma dosyasıdır. Bu dosya, proje adı, sürüm, derleme ayarları ve bağımlılıklar hakkında bilgi içerir.\n\nBu dosya, Tom's Obvious Minimal Language (TOML) olarak adlandırılan basit bir yapılandırma dilinde yazılmıştır. Cargo.toml kullanarak projenizin bağımlılıklarını ve derleme ayarlarını kolayca yönetebilirsiniz, bu da projenizin paylaşımını ve işbirliği yapmasını kolaylaştırır."
+    },
+    "36": {
+        "question": "Rust'ta deklaratif bir makro nedir?",
+        "answer": "Rust'ta, deklaratif bir makro, girdi koduna eşleşecek bir deseni tanımlamanıza ve ardından o desene dayalı olarak yeni kod oluşturmanıza olanak tanır. Deklaratif makrolar macro_rules! makrosunu kullanılarak tanımlanır.\n\nmacro_rules! makrosu, eşleşecek deseni ve oluşturulacak kodu tanımlayan bir dizi kuralı girdi olarak alır ve makroyu uygulayan kodu oluşturur."
+    },
+    "37": {
+        "question": "Fonksiyon işaretçisi hakkında ne anlıyorsunuz?",
+        "answer": "Bir fonksiyon işaretçisi, kimliği derleme zamanında bilinmeyen bir fonksiyona işaret eden bir türdür. Geliştiricilere, belirli bir zamanda başka bir yerde çağrılabilecek belirli bir fonksiyona bir referans saklama olanağı sağlar.\n\nFonksiyon işaretçileri, bir fonksiyonu başka bir işleve argüman olarak geçirmeniz gerektiğinde veya bir işlevi bir veri yapısında sakladığınızda faydalıdır. Rust'ta, bir fonksiyon işaretçisi fn anahtar kelimesi ve *const veya *mut işaretçi sözdizimi kullanılarak tanımlanabilir."
+    },
+    "38": {
+        "question": "Rust'ta Tuple'ı açıklayın.",
+        "answer": "Bir tuple, farklı türlerdeki değerlerin bir koleksiyonudur. Bir diziye benzer, ancak dizilerin aksine, bir tuple farklı türlerdeki değerleri içerebilir. Bir tuple, parantez kullanılarak oluşturulur ve içindeki değerler virgülle ayrılır.\n\nÖrnek:\n\nlet my_tuple = (10, 'hello', true);"
+    },
+    "39": {
+        "question": "Eşleme ifadesini açıklayın.",
+        "answer": "Eşleme ifadesi, değişkenlerin eşleşen desenlere göre belirli bir kod bloğuna kontrol aktarımı sağlayan bir kontrol akışı operatörüdür. Bir değeri bir dizi desen boyunca karşılaştırmanıza ve ardından değere eşleşen ilk desene dayalı olarak ilgili kod bloğunu yürütmenize olanak tanır.\n\nEşleme ifadesi yürütüldüğünde, Rust, her bir deseni deneyecek ve değere eşleşen ilk desene dayalı olarak ilgili kodu yürütecektir."
+    },
+    "40": {
+        "question": "Rust'ta bir struct ile bir enum arasındaki fark nedir?",
+        "answer": "Struct ve enum, Rust'ta özel veri türlerini belirtmek için kullanılsa da, bunların farklı özellikleri ve amaçları vardır. Bir struct, farklı türlerdeki ilişkili verileri tek bir birimde gruplar. Struct'lar genellikle bir programın içindeki varlıkları veya nesneleri temsil etmek için kullanılır.\n\nBir enum, adlandırılmış değerler kümesini temsil etmek için kullanılan bir veri türüdür. Enumlar genellikle belirli bir değer için mümkün olan sonlu bir dizi durumu veya seçeneği tanımlamak için kullanılır. Enum'daki her adlandırılmış değere bir varyant denir."
+    },
+    "41": {
+        "question": "Rust'ta hataları nasıl ele alırsınız?",
+        "answer": "Rust'ta hataları ele almanın çeşitli mekanizmaları vardır. Birkaç seçeneği inceleyelim.\n\nResult türü: Rust, işlevlerin bir değer veya bir hata döndürmesini sağlayan yerleşik bir Result türü sağlar. Sonuç değeri Ok(değer) veya Err(hata) ile temsil edilir. Bir hata durumunda, işlev hakkında bilgi sağlanacaktır.\n\nOption türü: Option türü, Result türüne benzer ancak bir değerin mevcut olup olmadığı durumlar için kullanılır. Option türleri, bir değerin isteğe bağlı olduğu veya bir işlevin bir değeri döndüremeyeceği durumlar için sıkça kullanılır.\n\nPanic! makrosu: Program ciddi bir hatayla karşılaştığında, panic! makrosu mekanizması, programın yürütmesini durdurur ve ilgili hata mesajını sağlar. Bu, bir program ciddi bir hatayla karşılaştığında programın yürütülmesine son vermek için yardımcı olur.\n\nHata işleme Kütüphaneleri: Rust'un standart kütüphanesinin Error özniteliği ve thiserror, anyhow ve failure gibi popüler kafesler gibi gelişmiş özellikler sunan çeşitli hata işleme kütüphaneleri bulunmaktadır. özel hata türleri, geri izlemeler ve hata zincirleme."
+    },
+    "42": {
+        "question": "Rust'ta standart kütüphanenin rolü nedir?",
+        "answer": "Rust'ta standart kütüphane, dilin temel işlevlerini sunan bir modül koleksiyonunu içerir. Standart kütüphane, her Rust kurulumuyla birlikte paketlenir ve giriş/çıkış işlemleri, veri tipleri, ağ yetenekleri, eşzamanlılık protokolleri vb. gibi geniş bir özellik yelpazesi sunar.\n\nStandart kütüphane, verimli, güvenli ve kullanımı kolay olacak şekilde tasarlanmıştır. Ayrıca tamamen belgelendirilmiş olup, kapsamlı bir API belgeleri ve çevrimiçi örnekler sunar."
+    },
+    "43": {
+        "question": "Rust'ta asenkron programlama nasıl açıklanır?",
+        "answer": "Rust'ta asenkron programlama, ana iş parçacığını engellemeden non-blocking işlemleri gerçekleştirebilen kodun yazılmasını içerir. Bu, Rust'ın async/await sözdizimi ve Rust standart kütüphanesinin asenkron çalışma zamanı kullanılarak gerçekleştirilir.\n\nRust'ta asenkron programlama, bir değerin mevcut olmayabileceğini temsil eden futures'lar üzerinden yapılır. Bu futures'lar, map, and_then ve or_else gibi kombinatörler kullanılarak asenkron olarak yürütülecek işlemler dizisini oluşturmak için bir araya getirilebilir.\n\nasync anahtar kelimesi, geleceği döndüren bir işlevi tanımlamak için kullanılır ve await anahtar kelimesi, mevcut işlevin yürütümünü geleceğin tamamlanmasına kadar askıya almak için kullanılır."
+    },
+    "44": {
+        "question": "Eşzamanlılık modelini açıklayın.",
+        "answer": "Rust, paralel programlar yazmak ve eşzamanlılığı uygulamak için çeşitli özellikler sağlar. Rust'taki eşzamanlılık modeli, bellek güvenliğini sağlayan ve kilitlenme ve veri yarışları gibi yaygın eşzamanlılık hatalarını önleyen sahiplik ve ödünç alma kavramlarına dayanır.\n\nRust'ta her bir değer, yalnızca bir iş parçacığı tarafından sahiplenilir ve sahiplik, mesaj geçirme yoluyla iplikler arasında aktarılabilir. Rust'un eşzamanlılık modeli, güvenli ve verimli olacak şekilde tasarlanmış olup, eşzamanlı ve paralel programlar oluşturmak için güçlü bir araç seti sunar."
+    },
+    "45": {
+        "question": "Rust'ta giriş/çıkış nasıl yapılır?",
+        "answer": "Rust'ta standart kütüphaneye ait std::io modülü, giriş/çıkış I/O işlemlerini gerçekleştirmek için kullanılır. std::io modülü aracılığıyla giriş/çıkış işlemlerini etkin bir şekilde gerçekleştirmek için bir dizi yapı, işlev ve öznitelik elde edersiniz.\n\nAyrıca, std::io::stdout() işlevi aracılığıyla çıktı işlemlerini gerçekleştirebilirsiniz, bu işlev standart çıktıyı işleyecek ve ardından verileri çıktı akışına yazmak için write() veya writeln!() yöntemlerini kullanabilirsiniz."
+    },
+    "46": {
+        "question": "Test çerçevesi ne için kullanılır?",
+        "answer": "Rust'taki test çerçevesi, manuel test etmeye alternatif bir sağlar. Rustc_test adı verilen yerleşik bir çerçeve ile birlikte gelir ve Rust kodunu test etmek için bir dizi araç sunar.\n\nrustc_test çerçevesi, Rust'un yerleşik bir birim testi sistemini kullanır, bu sistem, #[test] gibi öznitelikler kullanarak testleri tanımlamanıza olanak tanır ve assert_eq! ve assert_ne! gibi makrolar sağlar.\n\nRust'taki test çerçevesinin birkaç faydası vardır, bunlar arasında değişkenler aracılığıyla değerleri hesaplama, otomatik serileştirme ve tür denetimi bulunur."
+    },
+    "47": {
+        "question": "Rust'ta belgelendirme sistemi nedir?",
+        "answer": "Rust'ta belgelendirme, kod yazmanın önemli bir parçasıdır. Rust'un, kodlarınızı yorumlarla belgelemenize ve bir web tarayıcısında görüntülenebilen HTML belgeleri oluşturmanıza olanak tanıyan yerleşik bir belgelendirme sistemi olan Rustdoc'u bulunmaktadır.\n\nRustdoc, 'Rustdoc yorumları' olarak adlandırılan bir belgeleme kodu sözdizimini kullanır. Rustdoc yorumları, belgelenen öğenin hemen üstünde, işlev, yapı veya modül gibi belgelenen öğenin hemen üzerine yerleştirilir."
+    },
+    "48": {
+        "question": "Rust'ta çoklu işlem nasıl ele alınır?",
+        "answer": "Rust, standart kütüphane aracılığıyla çoklu işlem desteği sağlar. Rust, hafif yürütme birimleri olarak işleyen ve bir program içinde aynı anda eşzamanlı olarak çalışabilen iplikleri sağlar.\n\nstd::thread::spawn işlevi, Rust'ta yeni bir iplik oluşturmayı sağlar ve iplikte çalışacak kodu temsil eden bir kapanış alır. Rust ayrıca, paylaşılan veriye erişimi yönetmeye yardımcı olan birkaç senkronizasyon aracı da sağlar, bunlar arasında mutex'ler, semaforlar ve kanallar bulunur."
+    },
+    "49": {
+        "question": "Rust'ta bir mutex nedir?",
+        "answer": "Mutex, paylaşılan veriyi korumada son derece faydalı olan bir karşılıklı dışlama öğesidir. Mutex, bir kilidin kullanılabilir hale gelmesini bekleyen iplikleri engelleyerek, birden çok yürütme ipliğinde güvenli erişimi sağlar.\n\nBir Mutex bir kaynağı korumak için kullanıldığında, yalnızca bir iplik herhangi bir zamanda kilidi tutabilir, veri yarışlarını önler ve kaynağın güvenli ve kontrollü bir şekilde erişilmesini sağlar."
+    },
+    "50": {
+        "question": "Rust'ta atomic nedir?",
+        "answer": "Rust'ta, 'atomic', bu işlemlerin bölünemez olduğu garantili olan ve bu nedenle birden çok iplik tarafından aynı anda erişildiğinde yarış koşullarına veya veri bozulmalarına duyarlı olmayan türleri ifade eder.\n\nRust, AtomicBool, AtomicIsize, AtomicUsize, AtomicPtr vb. gibi çeşitli atomic türler sağlar. Bu türler, altta yatan veriler üzerinde atomik okuma-değiştirme-yazma işlemlerini thread-safe ve etkin bir şekilde gerçekleştirmenizi sağlar."
+    },
+    "51": {
+        "question": "Mutable referans nedir?",
+        "answer": "Mutable referans, değiştirilmesine izin veren bir değişkenin referansıdır. Bu, “&mut” sözdizimi ile temsil edilir. Belirli bir değişkenin bir işleve mutable referans olarak iletilmesi durumunda, o değişkenin değeri işlev tarafından değiştirilebilir. Ancak, aynı anda yalnızca bir değişken için bir mutable referans olabilir, bu da Rust'ın ödünç alma denetleyicisi tarafından veri yarışlarını önlemek ve bellek güvenliğini sağlamak için zorunlu tutulur."
+    },
+    "52": {
+        "question": "Rust'ın standart koleksiyonlarıyla (Vec, HashMap vb.) nasıl çalışılır?",
+        "answer": "Vec, HashMap ve HashSet gibi Rust'ın standart koleksiyonları, veri koleksiyonlarını yönetmek ve manipüle etmek için Rust programlarında yaygın olarak kullanılır. Bu koleksiyonların nasıl kullanılacağına dair bazı temel örnekler şunlardır:\n\nVec: Bir Vec ('vector'), Rust'ın yerleşik dinamik dizisidir. Yeni bir vektör oluşturmak için Vec::new() yöntemi veya vec![1, 2, 3] gibi başlangıç değerleri ile bir vektör oluşturmak için bir kısayol notasyonu kullanabilirsiniz.\n\nHashMap: Bir HashMap, Rust'ın yerleşik hash tablosu uygulamasıdır. Her bir anahtarın benzersiz olduğu bir anahtar-değer çiftleri saklamak için kullanılabilir.\n\nHashSet: Bir HashSet, bir HashMap gibi çalışır ancak yalnızca ilişkilendirilmiş değerler olmadan benzersiz anahtarlar saklar."
+    },
+    "53": {
+        "question": "Rust'ta trait sistemi nedir?",
+        "answer": "Trait sistemi, belirli bir tür için tanımlanmış bir yöntem koleksiyonunu kapsar. Trait sistemi, genel programlama ve kod yeniden kullanılabilirliğini sağlar. Traitler ayrıca, türlerin uygulayabileceği bir dizi nitelik, yetenek veya davranışı belirtir.\n\nBir trait, herhangi bir türün uygulaması tarafından kullanılabilen yöntemler, ilgili türler ve sabitler tanımlamak için kullanılabilir. Çeşitli traitlerin uygulanması türler tarafından birden çok yeteneği ve davranışı entegre etmelerini sağlar."
+    },
+    "54": {
+        "question": "Rust'ta bellek modeli nedir?",
+        "answer": "Rust'taki bellek modeli, Rust kodunun bellek ile etkileşimini düzenleyen bir dizi kuralı uygulayarak güvenlik ve performans sağlamak üzere tasarlanmıştır. Bu kurallar, Rust derleyicisi tarafından uygulanır ve Rust kodunun bellek güvenliği kurallarını ihlal etmediğinden emin olmak için derleme zamanında birkaç kontrol gerçekleştirir.\n\nRust'taki bellek modeli, sahiplik ve ödünç alma üzerine dayanır. Sahiplik, Rust'taki her değerin bir sahibi olduğu ve her zaman yalnızca bir sahibin olabileceği fikrine dayanır.\n\nÖdünç alma, bir değerin programın başka bir bölümü tarafından ödünç alınabileceği fikrine dayanır, bu da bu değerin ödünç alındığı değerin yaşam süresini izlemek ve ödünç alınan değerin nasıl kullanılabileceğini izlemek için kullanılır. Ödünç alma, Rust derleyicisi tarafından uygulanan sıkı kurallara sahiptir."
+    },
+    "55": {
+        "question": "Rust'ta standart string türleriyle nasıl çalışılır?",
+        "answer": "Rust'ta iki ana dize türü vardır: String ve str. String, büyüyen, heap-alan dize türüdür, str ise ardışık bir UTF-8 bayt dizisine bir görünüm olan bir dize dilimidir. Yeni bir String oluşturmak için String::new() işlevini kullanabilirsiniz.\n\nDize dilimini (&str) bir dize literaliyle oluşturmak için, sadece dize literali için bir referans kullanabilirsiniz. Dizelerle işlem yapmak için, String ve str türleri tarafından sağlanan çeşitli yöntemleri kullanabilirsiniz, bunlar arasında len(), is_empty(), chars(), as_bytes(), split() ve trim() bulunur."
+    },
+    "56": {
+        "question": "Rust, Makroları nasıl destekler?",
+        "answer": "Rust'ta iki makro türü desteklenir: Prosedürel Makrolar ve Bildirimsel Makrolar.\n\nProsedürel Makrolar, derleme zamanında sözdizimi ağacı aracılığıyla kod üreten makrolardır. Prosedürel makrolar kendi raflarında tanımlanır ve özel nitelikler aracılığıyla çağrılabilirler.\n\nBildirimsel makrolar, Rust kodu içinde desenleri eşleştirmenizi ve bu desenleri kullanarak yeni bir kod üretmenizi sağlar. Bildirimsel makrolar, bir dizi eşleşme kuralı ve bir dizi değiştirme deseni alan macro_rules! makrosu kullanılarak tanımlanır.\n\nGenel olarak, Rust, kodu çeşitli şekillerde oluşturabilme esnekliği sağlayan güçlü bir makro sistemine sahiptir. Ancak, makrolar karmaşık olabilir ve hata ayıklaması zor olabilir, bu nedenle dikkatli bir şekilde kullanılmalıdır."
+    },
+    "57": {
+        "question": "Rust'ta kapanış nedir?",
+        "answer": "Rust'ta, bir kapanış, dış ortamdan değişkenleri yakalamak için kullanılan ve bir değer olarak geçirilebilen bir yapıya benzer işlevdir ve bir fonksiyon olarak çağrılabilir. Bir kapanış, dış ortamdan bir değişkeni yakaladığında, Rust, yakalanan değişkenleri ve kapanış kodunu içeren bir kapanış nesnesi oluşturur.\n\nKapanış nesnesi daha sonra normal bir değer gibi kullanılabilir ve normal bir işlev olarak çağrılabilir. Rust kapanışları, argümanlarının ve dönüş değerlerinin tiplerini de çıkarabildiğinden, çok esnek ve kullanımı kolaydır."
+    },
+    "58": {
+        "question": "Kapanışlar için sahiplik modeli nedir?",
+        "answer": "Rust, kapanışlar için benzersiz bir sahiplik modeli sağlar ve değişkenlerin dış ortamdan yakalanmasını sağlar. Bir değişken bir kapanış tarafından yakalandığında, kapanış, değişkenin sahipliğini alarak değişkeni taşıma veya değiştirme yeteneğine sahip olur.\n\nRust'un farklı kapanış türleri Fn, FnMut ve FnOnce'dur. Kapanışlar için sahiplik modeli, hangi kapanış türüyle uğraştığınıza bağlı olarak değişir. Rust'un sahiplik modeli, kapanışların yalnızca yakalanan değişkenlere güvenli ve öngörülebilir şekilde erişebileceğinden emin olur ve yaygın hataların, örneğin sonraki kullanımdan sonra bellek erişimi ve veri yarışları, önlenmesini sağlar."
+    },
+    "59": {
+        "question": "Rust, ağ iletişimini nasıl destekler?",
+        "answer": "Rust'ın standart kütüphanesi 'std', ağ için modüller sağlar. std::net modülü, IPV4, IPV6, TCP ve UDP dahil olmak üzere birçok ağ protokolü ve mekanizmasını destekler.\n\nTCP ve UDP soketleri: Rust, std::net::TcpStream ve std::net::UdpSocket türleri kullanılarak TCP ve UDP soketlerini oluşturmak ve bunlarla etkileşmek için düşük düzeyli öğeler sağlar.\n\nTCP ve UDP dinleyicileri: Rust ayrıca, std::net::TcpListener ve std::net::UdpSocket türleri kullanılarak TCP ve UDP dinleyicilerini oluşturmak için öğeler sağlar.\n\nIPv4 ve IPv6: Rust, IPv4 ve IPv6 adreslerini ve soketlerini destekler.\n\nHTTP: Rust'un, “hyper” ve “request” gibi HTTP ile çalışmak için birkaç kasa vardır. Bu kasalar, HTTP istemcileri ve sunucuları oluşturmak için yüksek düzeyde soyutlamalar sağlar."
+    },
+    "60": {
+        "question": "Rust ile web geliştirme nasıl yapılır?",
+        "answer": "Rust, web geliştirmede kullanılan en verimli programlama dillerinden biridir ve web geliştirmeye kapsamlı destek ve çeşitli özellikler sunar. Rust'un web geliştirme için sağladığı başlıca özellikler şunlardır:\n\nAsenkron programlama: Rust, çoklu eşzamansız istekleri yönetmek için etkili ve engelsiz kod üretmeyi sağlayan yerleşik asenkron programlama desteğine sahiptir.\n\nWeb çerçeveleri: Rust ile birçok web çerçevesi bulunmaktadır; bunlar arasında Rocket, Actix ve Warp gibi, web geliştirme için sağlam bir temel sunanlar bulunmaktadır.\n\nGüvenlik: Rust, güvenli bellek yönetimi sağlamak ve bellek sızıntıları ve null işaretçi istisnaları gibi belirgin sorunları önlemek için sahiplik ve ödünç alma mekanizmalarını kullanarak web geliştirme için güçlü bir güvenlik mekanizması sunar.\n\nÇapraz platform uyumluluğu: Rust, farklı platformlarda derlenebilme yeteneği sunarak çapraz platform uyumluluğu sağlar, böylece web uygulamaları için ideal bir seçenek haline gelir.\n\nRust, 2023'te web geliştirme için güçlü bir aday olarak ortaya çıkmış olup, bazı alanlarda Go diline göre avantajlar sunmaktadır. Bu, Rust'un Go'dan üstün olduğu anlamına gelmez; her iki dil de farklı amaçlar için kullanılır ve kendi güçlü yönlerine sahiptir. Ancak, Rust'un 2023'te web geliştirme için daha iyi bir seçenek olarak kabul edilme nedenleri bulunmaktadır. Go vs Rust: 2023'te web geliştirme için en iyi seçenek hangisidir hakkında daha fazla bilgi edinin."
+    },
+    "61": {
+        "question": "Rust, veritabanı programlamasını nasıl destekler?",
+        "answer": "Rust, genellikle yüksek performanslı ve güvenilir uygulamalar oluşturmak için kullanılan popüler bir sistem programlama dilidir. Rust, özellikle veritabanı programlaması için tasarlanmamış olmasına rağmen, veritabanlarıyla verimli bir şekilde çalışmayı sağlayan çeşitli kütüphane ve araçlar sağlar.\n\nVeritabanı programlaması için popüler Rust kütüphanelerinden bazıları şunlardır:\n\nDiesel: Diesel, tip güvenli ve birleştirilebilir bir sorgu oluşturucu sağlayan popüler bir Rust ORM (Nesne-İlişkisel Haritalama) kütüphanesidir. PostgreSQL, MySQL ve SQLite gibi birçok veritabanını destekler.\n\nPostgres: Postgres, PostgreSQL veritabanlarıyla çalışmak için bir Rust kütüphanesidir. Postgres ile etkileşimi kolaylaştıran güvenli ve ergonomik bir API sağlar.\n\nSQLx: SQLx, PostgreSQL, MySQL ve SQLite gibi birçok veritabanıyla çalışmak için birleşik bir API sağlayan bir Rust kütüphanesidir. Hem senkron hem de asenkron işlemleri destekler ve tip güvenli bir sorgu oluşturucu sağlar.\n\nRust, veritabanı programlaması için güçlü bir araç ve kütüphane seti sağlar, bu da yüksek performanslı ve güvenilir uygulamalar oluşturmak için mükemmel bir seçenek haline gelir."
+    },
+    "62": {
+        "question": "Rust, güvensiz kodu nasıl yönetir?",
+        "answer": "Rust, düşük seviyeli sistemler programlamasının gücünü ve performansını sağlarken aynı zamanda güvenliği sağlamak ve null işaretçiler, veri yarışları ve bellek taşmaları gibi yaygın hataları önlemek için tasarlanmıştır. Ancak, geliştiricilerin düşük seviyeli bellek ile doğrudan çalışmaları gereken durumlar olabilir ve bu, güvenlik sorunlarına neden olabilir.\n\nRust derleyicisi, güvensiz kodu yönetmeye yardımcı olmak için birkaç özellik sağlar:\n\nHam işaretçiler: Rust, geliştiricilere düşük seviyeli işlemler yapmalarına olanak tanıyan, C ile benzer ham işaretçiler sağlar; bunlar arasında işaretçi aritmetiği ve dönüştürme bulunur.\n\nGüvensiz işlevler ve yöntemler: Rust, belirli işlevleri ve yöntemleri 'güvensiz' olarak işaretleyen, bunların doğru bir şekilde kullanıldığından emin olmak için geliştiricinin manuel olarak kontrol etmesi gereken birkaç işlev ve yöntem sağlar.\n\nGüvensiz bloklar: Rust, geliştiricilere bir kod bloğunu 'güvensiz' olarak işaretlemelerine izin verir, böylece diğer koşullarda izin verilmeyen düşük seviyeli işlemleri gerçekleştirebilirler. Ancak, Rust, güvenli davranışın genel davranışın güvenli olduğundan emin olmak için güvensiz bloğun bir güvenli işlev veya yöntemin içinde olmasını gerektirir."
+    },
+    "63": {
+        "question": "Rust, generic'leri nasıl destekler?",
+        "answer": "Rust, tür parametreleri kullanarak generic'leri destekler. Tür parametreleri, herhangi bir tür için ayrı ayrı kod yazmaya gerek kalmadan bir işlev veya generic tür tanımlamanıza olanak tanır.\n\nGenel bir tür veya işlev tanımlamak için, <> işaretleri kullanarak bir veya daha fazla tür parametresi bildirerek başlarsınız. Generic'leri kullanarak, Rust, farklı türlerle çalışan yeniden kullanılabilir kod yazmak için güçlü ve esnek bir mekanizma sağlar ve aynı zamanda tür güvenliğini ve performansı korur."
+    },
+    "64": {
+        "question": "Rust'ta kasaları açıklayın.",
+        "answer": "Bir kasa, dili içinde paketlenmiş bir derleme birimidir. Modül veya kütüphane olarak düşünülebilir ve farklı Rust projeleri arasında yeniden kullanılabilen ve paylaşılan kodları içerir. Bir kasa, fonksiyonlar, enum'lar, yapılar ve diğer özellikler içeren birden fazla modül içerebilir.\n\nKodu kasalara ve modüllere düzenlemek, kodun yeniden kullanılabilirliğini akıcı, modüler bir şekilde sağlar. Rust kasaları, Rust paket deposu olarak bilinen crates.io'da yayınlanır. Bu, geliştiricilerin kasalarını yayınladığı ve diğer geliştiricilerin bunları projelerinde arayıp kullanabileceği merkezi bir depodur."
+    },
+    "65": {
+        "question": "Rust'ta Copy ve Clone özellikleri arasındaki fark nedir?",
+        "answer": "Copy ve Clone özellikleri, Rust türlerinin kopyalanması veya çoğaltılması gereken şekli belirler. Copy özelliği, kopyalanması ucuz olan türler için kullanılır, örneğin sayılar, işaretçiler ve booleanlar. Copy özelliği uygulayan bir türün değeri başka bir değişkene atandığında, değerin bit düzeyinde bir kopyası yapılır ve her iki değişken bağımsız olarak kullanılabilir.\n\nClone özelliği, kopyalanması maliyetli veya sahiplik semantiği olan türler için kullanılır, örneğin dizeler, vektörler ve bellekte hafıza tahsisi yapan diğer türler. Clone özelliğini uygulayan bir türün değeri klonlandığında, değerin yeni bir kopyası oluşturulur ve orijinal değer ile klon bağımsız olarak kullanılabilir."
+    },
+    "66": {
+        "question": "Modül ve kasa arasındaki farkı açıklayın.",
+        "answer": "Rust'ta, bir modül, bir dosya içinde veya birden fazla dosya arasında kodu düzenlemenin bir yoludur; kasa ise Rust'ta bir derleme birimidir ve bir ikili veya kütüphane üretir.\n\nBir modül, mod anahtar kelimesi kullanılarak tanımlanır ve işlevler, yapılar, enumlar, sabitler ve diğer modülleri içerebilir. Bir modül, başka bir modülün içine yerleştirilerek iç içe modüller oluşturulabilir. Bu, düzenli ve yeniden kullanılabilir kod oluşturmayı sağlar.\n\nÖte yandan, bir kasa, bir araya getirilen birkaç Rust kaynak dosyasını tek bir birim halinde derler. Bir kasa ya bir ikili kasa, yani yürütülebilir bir program üreten kasa olabilir ya da bir kütüphane kasa, diğer programlara bağlanabilen bir kütüphane üreten kasa olabilir.\n\nRust projesi oluşturduğunuzda, bir kasa ile başlarsınız ve bu kasada birden fazla modül olabilir. Modüller, kasadaki kodu düzenlemek için kullanılır, bu da bakımını ve yeniden kullanılabilirliğini kolaylaştırır."
+    },
+    "67": {
+        "question": "Statik yaşam süresinin amacı nedir?",
+        "answer": "Rust'ta, statik yaşam süresi, verinin programın tamamı boyunca geçerli olan global bir yaşam süresini temsil eder ve bir statik yaşam süresi belirleyicisi bunu tanımlar.\n\nBir değişkenin statik yaşam süresi belirleyicisi olarak tanımlandığında, bir bellek konumu değişkene programın tamamı boyunca atanır. Statik değişkenler, sabitler veya değişkenler olarak tanımlanabilir ve programın herhangi bir yerinden erişilebilir."
+    },
+    "68": {
+        "question": "Rust'ta bir değiştirilebilir ve bir değiştirilemez referans arasındaki fark nedir?",
+        "answer": "Rust'ta, bir değiştirilebilir referans, değiştirilmesine izin veren bir değere referans sağlarken, bir değiştirilemez referans, değerin değiştirilemeyeceği bir değere referans sağlar.\n\nDeğiştirilebilir referanslar, &mut sözdizimi kullanılarak oluşturulur ve değer değiştirilebilir olduğu sürece referans üzerinde değişiklik yapılabilir. Örneğin, bir vektöre değiştirilebilir bir referansa sahipseniz, referansı kullanarak vektörün öğelerini değiştirebilirsiniz.\n\nÖte yandan, değiştirilemez referanslar, & sözdizimi kullanılarak oluşturulur ve referans üzerinden değer değiştirilemez. Bu, değeri okuyabilirsiniz ancak referansı kullanarak değiştiremezsiniz."
+    },
+    "69": {
+        "question": "Trait objesi ile generic tip arasındaki farkı açıklayın.",
+        "answer": "Rust'ta, bir trait objesi ve bir generic tip, polimorfizmi gerçekleştirmenin iki farklı mekanizmasıdır.\n\nGeneric bir tür, diğer bir veya daha fazla türe göre parametreli olan bir türdür. Bir fonksiyon veya yapı, bir generic türle tanımlandığında, çağrıldığında kullanılan somut türleri belirtebilir. Bu, farklı türlerle çalışabilen esnek ve yeniden kullanılabilir kod sağlar.\n\nÖte yandan, bir trait objesi, belirli bir öznelliği uygulayan bir nesnenin tür-eriştirme yoluyla silinmiş bir referansıdır. Bir trait objesi oluşturmak için, nesnenin uyguladığı öznelliği belirtmek için 'dyn' anahtar kelimesini kullanırsınız. Bu, dinamik yönlendirmeyi mümkün kılar, yani çağrılan gerçek yöntem, nesnenin somut türüne dayanarak çalışma zamanında belirlenir."
+    },
+    "70": {
+        "question": "Ömür parametresini kısaca açıklayın.",
+        "answer": "Ömür parametresi, farklı değerler arasındaki ilişkileri ve ömürlerini ifade etmek için dilin tür sisteminde kullanılan bir özelliktir. Bir ömür, bir değerin geçerli ve bellekte erişilebilir olduğu süreyi temsil eder.\n\nRust'ta her değerin bir ömrü vardır ve Rust'ın sahiplik ve ödünç alma kuralları, bir değerin ömrünün doğru şekilde yönetilmesini sağlamak için tasarlanmıştır. Ömür parametreleri, bir türün imzalarında, yapı tanımlarında ve ömürlü değerlerin bulunduğu diğer yerlerde kullanılır."
+    },
+    "71": {
+        "question": "Iterator ve jeneratör arasındaki fark nedir?",
+        "answer": "Rust'ta, bir iterator, bir for döngüsü veya diğer döngü yapılarını kullanarak üzerinde yinelemeler yapılabilen bir öğeler dizisini tanımlayan bir özniteliktir.\n\nBir iterator, talep üzerine bir değer dizisi üretir ve Iterator özniteliğini uygulayan herhangi bir koleksiyon üzerinde yineleme yapabilir.\n\nÖte yandan, bir jeneratör, tüm değerleri önceden üretmek yerine tembelce ve talep üzerine değerler üreten bir türdür. Jeneratörler yield anahtar kelimesi kullanılarak tanımlanır ve sonsuz veya çok büyük dizileri temsil etmek için kullanılabilir."
+    },
+    "72": {
+        "question": "Rust'ta bir değiştirilebilir ve bir değiştirilemez değişken arasındaki fark nedir?",
+        "answer": "Bir değiştirilebilir değişken, atamadan sonra değerinin düzenlenebileceği bir değişkendir, bir değiştirilemez değişken ise atamadan sonra değerinin düzenlenemeyeceği bir değişkendir. Bir değiştirilebilir değişken bildirmek için mut anahtar kelimesini kullanabilirsiniz:\n\nlet mut x = 5;\n\nx değiştirilebilir olduğu için, programda daha sonra yeni bir değer atayarak değiştirilebilir.\n\nBir değiştirilemez değişken bildirmek için mut anahtar kelimesini atlayabilir ve değişkeni sadece\n\nlet y = 20; şeklinde bildirebilirsiniz."
+    },
+    "73": {
+        "question": "Rust'ta akıllı işaretçi nedir?",
+        "answer": "Akıllı işaretçi, normal bir işaretçiye kıyasla ek işlevsellik sağlayan bir veri türüdür. Akıllı işaretçiler, gerekli olmadığında bellek otomatik olarak geri alındığında belleği yönetmeye yardımcı olur. Bu, sarkık işaretçiler ve bellek sızıntıları gibi sorunları önlemeye yardımcı olur."
+    },
+    "74": {
+        "question": "Rust'ta akıllı işaretçi nasıl kullanılır?",
+        "answer": "Akıllı işaretçi, normal bir işaretçinin özelliklerine sahip ancak ek yeteneklere sahip bir veri yapısıdır. Rust'ta bir akıllı işaretçi örneği, bir değerin paylaşımlı sahipliğini sağlayan Rc türüdür."
+    },
+    "75": {
+        "question": "Rust'ta dilimler nasıl kullanılır?",
+        "answer": "Dilimler, koleksiyonun tamamını değil bir kısmını bir işleve aktarmak için sıklıkla kullanılır. Dilimler hafif ve verimlidir çünkü sadece bir dizinin başlangıcındaki bir işaretçiyi ve bir uzunluğu içerir.\n\nDilimler, bir koleksiyonun bir kısmına erişmek ve bu kısmı kopyalamadan verimli bir şekilde işlemek için Rust'ın güçlü bir özelliğidir. Rust'ta dilimlerin yaygın kullanım alanları şunlardır:\n\nBir dizinin veya vektörün parçalarına erişmek: [başlangıç..son] sözdizimini kullanarak bir dilim oluşturabilirsiniz, burada başlangıç, dahil edilecek ilk öğenin dizini ve son, dahil edilmeyecek ilk öğenin dizinidir.\n\nFonksiyonlara argümanlar geçirme: Dilimler, bir koleksiyon alt kümesini bir işleve geçirmek için yaygın olarak kullanılır.\n\nDize işlemleri: Rust'ın dize türü (String), bir bayt vektörü olarak uygulandığından, dize dilimleri sıkça kullanılır ve bir dizenin alt dizelerini almak için kullanılır."
+    },
+    "76": {
+        "question": "Rust'ta bir dilim (slice) nedir?",
+        "answer": "Bir dilim, bellek bloğundaki öğelerin ardışık dizisine bir işaretçi veya referanstır. Dilimler, bellekte ardışık dizilerde depolanan veri miktarına erişmek için kullanılır. Bir dilim, öğelerin türünü temsil eden tür &[T] ile gösterilir, burada T dilimdeki öğelerin türüdür. Bir dilim, vektörlerden, dizilerden, dizelerden ve std::slice::SliceIndex özniteliğini kullanan diğer koleksiyon türlerinden oluşturulabilir."
+    },
+    "77": {
+        "question": "Eşleşme ifadesi nedir?",
+        "answer": "Eşleşme ifadesi, belirli bir değeri bir dizi desenle karşılaştırmanızı ve 1. eşleşen desene ilişkin kodu çalıştırmanızı sağlayan bir kontrol akış yapısıdır. Diğer programlama dillerindeki anahtar değiştirme ifadesine benzer, ancak eşleşme ifadesi Rust'ta daha fazla güvenlik ve esneklik sunar."
+    },
+    "78": {
+        "question": "Fonksiyon ve kapanış (closure) çağrısı arasındaki fark nedir?",
+        "answer": "Fonksiyon ve kapanış (closure) çağrıları, bir parça kodu çalıştırmak için kullanılır, ancak onları yakaladıkları ve kullandıkları değişkenlere bağlı olarak aralarındaki temel fark, Değişkenleri. Bir fonksiyon çağrısı, adlandırılmış bir fonksiyonu belirli parametreler ve dönüş türüyle çağırmak için kullanılır.\n\nÖte yandan, bir kapanış, çevresel ortamından değişkenleri yakalayabilen anonim bir fonksiyondur. Kapanışlar, değişkenlerin dikey çubuklar arasında listelendiği |...| {...} sözdizimini kullanarak tanımlanabilir."
+    },
+    "79": {
+        "question": "Trait kısıtlaması ve nerede (where) kısmı arasındaki fark nedir?",
+        "answer": "Trait kısıtlamaları ve nerede (where) kısımları, fonksiyonlara ve türlere belirli gereksinimleri veya koşulları eklemek için kullanılır. Trait kısıtlamaları, bir tür parametresini belirli bir özelliği uygulamaya zorlamak için kullanılır. Tür parametresinden sonra bir iki nokta üst üste (:) ve ardından öznitelik adı yazılarak belirtilir.\n\nÖte yandan, nerede (where) kısımları, türler veya fonksiyonlar üzerinde ek gereksinimleri belirtmek için kullanılır. Bunlar, fonksiyon imzasından sonra yazılır ve kısıtlamaların başlangıcını belirlemek için where kelimesiyle başlar."
+    },
+    "80": {
+        "question": "Kapanış (closure) yakalama nedir?",
+        "answer": "Rust'ta bir kapanış, çevresel ortamından değişkenleri yakalayabilen anonim bir fonksiyon türüdür. Bir kapanışın çevresel bir değişkeni yakalaması, kapanışın içinde değişkenin bir 'kapanış yakalaması' oluşturduğu ve daha sonra kapanış içinde depolandığı ve erişilebildiği bir süreçtir."
+    },
+    "81": {
+        "question": "Rust'ta kapanış yakalama türleri nelerdir?",
+        "answer": "Rust'ta iki tür kapanış yakalama vardır:\n\nTaşıma yakalaması: Bir kapanış, bir değişkeni çevresel ortamından kapanışa taşıdığında, bir 'taşıma yakalaması' gerçekleştirir denir. Bu, kapanışın değişkenin sahipliğini almasını ve değişkeni değiştirebilmesini ancak çevresel ortamdaki orijinal değişkenin artık erişilebilir olmadığı anlamına gelir.\n\nÖdünç yakalaması: Bir kapanış, bir değişkeni çevresel ortamından ödünç aldığında, bir 'ödünç yakalaması' gerçekleştirir. Bu, kapanışın değişkeni erişip değiştirebilmesine rağmen, çevresel ortamdaki orijinal değişkenin erişilebilirliğini korur."
+    },
+    "82": {
+        "question": "Rust'ta değiştirilebilir ve değiştirilemez kapanış arasındaki fark nedir?",
+        "answer": "Kapanışlar, çevresel kapsamdan değişkenleri yakalayan anonim fonksiyonlardır. Kapanışlar, yakalanan değişkenleri düzenlemek veya değiştirmek yeteneklerine göre değiştirilebilir veya değiştirilemez olarak kabul edilebilir.\n\nDeğiştirilemez bir kapanış, referans aracılığıyla değişkenleri yakalar, bu da değişkenleri okuyabilir ancak değiştiremez anlamına gelir. Bu tür bir kapanış, Fn özniteliği tarafından temsil edilir.\n\nDeğiştirilebilir bir kapanış ise değiştirilebilir referans aracılığıyla değişkenleri yakalar, bu da değişkenleri okuyup değiştirebilir anlamına gelir. Bu tür bir kapanış, FnMut özniteliği tarafından temsil edilir. Önemli bir nokta, değiştirilebilir bir kapanışın yakalanan değişkenlerin de değiştirilebilir olmasını gerektirmesidir."
+    },
+    "83": {
+        "question": "Statik gönderim (dispatch) nedir?",
+        "answer": "Statik gönderim, derleme zamanında gerçekleşir, derleyicinin bir değişkenin veya ifadenin statik türüne dayalı olarak hangi işlevi çağıracağını belirlediği zaman. Statik gönderim ile çalışma zamanı maliyeti olmaz ve statik gönderim yaklaşımı, daha iyi bir performans elde etmek için derleyicinin daha etkili bir kod üretmesini sağlar çünkü gereksiz bir maliyeti olmadan."
+    },
+    "84": {
+        "question": "Dinamik gönderim (dispatch) nedir?",
+        "answer": "Rust'ta dinamik gönderim, bir yöntemin çağrıldığı nesnenin türüne dayalı olarak çalışma zamanında hangi uygulamanın çağrılacağını belirleme sürecidir.\n\nDinamik gönderim, bir türün uyguladığı belirli bir özelliğe dayalı olarak daha spesifik bir genel işlev uygulaması oluşturan bir tekniktir. Bu, her bir beton tür için kod oluştururken Rust'taki monomorfizasyona benzer."
+    },
+    "85": {
+        "question": "Dinamik gönderimi ne zaman kullanırsınız?",
+        "answer": "Dinamik gönderim, ortak bir özellik uygulayan farklı türlerin nesneleriyle çalışabilen kod yazmanız gerektiğinde faydalıdır. Ancak, Rust bir statik olarak yazılmış bir dil olduğundan, dinamik gönderim, statik gönderime göre bazı performans maliyetlerine neden olabilir.\n\nRust, bu maliyeti en aza indirmek için 'dyn' anahtar kelimesi ile özniteliğe sahip özel tür nesneleri kullanma gibi çeşitli mekanizmalar sağlar, bu da derleyicinin daha verimli kod üretmesine olanak tanır."
+    },
+    "86": {
+        "question": "Rust'ta monomorfizasyon nedir?",
+        "answer": "Monomorfizasyon, derleyicinin kodu optimize etmek için kullandığı bir tekniktir, ancak amaçları farklıdır. Monomorfizasyon, derleme sırasında yapılar veya genel işlevlerde kullanılan her beton tür için özelleştirilmiş kod üreten bir süreçtir.\n\nBu, bir genel işlev belirli bir türle çağrıldığında, derleyicinin o tür için özgün bir sürümünü oluşturması anlamına gelir. Derleyici, bu beton türün bilindiği için bu özelleştirilmiş sürümleri daha etkili bir şekilde optimize edebilir."
+    },
+    "87": {
+        "question": "Rust'ta özelleştirme nedir?",
+        "answer": "Özelleştirme, belirli bir tür için uygulanan özelliklere dayanarak daha spesifik bir genel işlev uygulaması oluşturma tekniğidir. Bu, her bir beton tür için kod oluştururken Rust'taki monomorfizasyona benzer.\n\nBu, derleyicinin türün uyguladığı özelliklere dayalı olarak kodu daha da optimize etmesine olanak tanır."
+    },
+    "88": {
+        "question": "Bir aralık nedir?",
+        "answer": "Rust'ta bir aralık, '..' veya '...' aralık operatörleri kullanılarak oluşturulan bir değer dizisidir. İki nokta '...' operatörü, üst sınırı hariç tutan bir aralık oluştururken, üç nokta '...' operatörü, üst sınırı dahil eden bir aralık oluşturur. Aralıklar, bir değer dizisi üzerinde yineleme yapmak için sıkça kullanılır, örneğin for döngüsünde."
+    },
+    "89": {
+        "question": "Rust'ta bir aralık nasıl kullanılır?",
+        "answer": "Aralık, bir dizi değer üzerinde yineleme yapma, dilim oluşturma ve bir aralık içinde rastgele sayılar oluşturma gibi çeşitli amaçlar için kullanılabilir. Bir aralık uygulamak için, iki veya üç nokta aralık operatörlerinden birini kullanabilirsiniz."
+    },
+    "90": {
+        "question": "Bir trait ve bir interface arasındaki fark nedir?",
+        "answer": "Rust'ta, trait ve interface bir türün uygulamak zorunda olduğu bir dizi yöntemi tanımlar. Ancak, ikisi arasında birkaç temel fark vardır:\n\nSözdizimi: Bir trait, Rust'ta trait anahtar kelimesini kullanılarak tanımlanırken, bir interface interface anahtar kelimesi kullanılarak tanımlanır. Ancak, Rust'un arayüzlere özgü bir anahtar kelimesi yoktur - bu, Java ve TypeScript gibi diğer programlama dillerinde kullanılan bir terimdir.\n\nUygulama: Rust'taki trait'lerin varsayılan yöntem uygulamaları olabilir, ancak interface'ler genellikle değil. Bu, bir tür için bir trait'i uyguladığınızda, her yöntem için kendi uygulamanızı sağlayabilir veya trait tarafından sağlanan varsayılan uygulamayı kullanabilirsiniz. Bir interface ile, her yöntem için kendi uygulamanızı sağlamanız gerekir.\n\nKalıtım: Rust'ta, bir trait başka bir trait'e impl Trait1 for Trait2 {} sözdizimi ile kalıtım yapılabilir, diğer dillerdeki gibi diğer arayüzlerde arayüzler uzatılabilir. Bu, daha karmaşık trait/interfaceleri daha basit olanlardan oluşturmanıza olanak tanır.\n\nTür sınırları: Rust'ta, türlerin belirli bir yöntem kümesini uygulamasını belirtmek için trait'leri tür sınırları olarak kullanabilirsiniz. Diğer dillerdeki interface'lerle bu mümkün değildir."
+    },
+    "91": {
+        "question": "Rust'ta tür parametresi nedir?",
+        "answer": "Rust'ta bir tür parametresi, kodunuzu genelleştirerek, her bir tür için kodu tekrar etmeden farklı türlerle çalışmasını sağlayan bir yoldur. Tür parametreleri, genel işlevler, yapılar, enumlar ve traitler tanımlamak için kullanılır. Bunlar, C++'taki şablonlar veya Java'daki genel yapılar gibi işlev görür.\n\nBir tür parametresi tanımladığınızda, genellikle adının ardından üçgen parantezler <T> kullanırsınız. Genel tanımın kapsamı içinde, T daha sonra sağlanacak gerçek tür için bir yer tutucu olarak kullanılabilir."
+    },
+    "92": {
+        "question": "Rust'ta yıkıcı (destructor) nedir?",
+        "answer": "Rust'ta bir yıkıcı kavramı, Drop özniteliği aracılığıyla uygulanır. Bu öznitelik, bir değerin kapsam dışına çıktığında otomatik olarak çağrılan bir drop yöntemi sağlar ve değerin bellekten serbest bırakılmadan önce kaynakları temizlemenize veya diğer işlemleri gerçekleştirmenize olanak tanır. Bu, C++'daki bir yıkıcı veya Java veya C# gibi bir nihai nesne kavramına benzer.\n\nBir yapı veya bir enum Drop özniteliğini uyguladığında, drop yöntemi değer bellekten serbest bırakılmadan önce her zaman çağrılır ve değere ilişkilendirilen herhangi bir kaynağı temizleme fırsatı verir."
+    },
+    "93": {
+        "question": "Yaşam süresi elisionu nedir?",
+        "answer": "Yaşam süresi elisionu, belirli durumlarda derleyicinin ömürleri otomatik olarak çıkarmasına olanak tanıyan bir Rust özelliğidir, bu nedenle kodunuzda açıkça işaretlemenize gerek yoktur. Ömürler, Rust'taki ödünç alma sisteminin yönetilmesi için önemlidir ve her işlevde açıkça belirtmek, kodun anlaşılmasına pek katkı sağlamazken sıkıcı olabilir."
+    }
+}
