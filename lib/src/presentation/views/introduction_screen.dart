@@ -21,6 +21,18 @@ class IntroductionScreen extends StatefulWidget {
 
 class _IntroductionScreenState extends State<IntroductionScreen> {
   @override
+  void initState() {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      final appBloc = context.read<AppBloc>();
+      if (appBloc.state.onboardingViewed!) {
+        context.go(AppRouteConstant.homeView);
+      }
+    });
+
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return BlocListener<AppBloc, AppState>(
       listener: (context, state) {

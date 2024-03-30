@@ -1,5 +1,9 @@
 import 'package:app_settings/app_settings.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:interview_helper/src/presentation/provider/cubit/language/language_cubit.dart';
+import 'package:interview_helper/src/utils/index.dart';
 import 'package:simple_app_cache_manager/simple_app_cache_manager.dart';
 import 'package:version_tracker/version_tracker.dart';
 
@@ -65,12 +69,61 @@ class _SettingsViewState extends State<SettingsView> with WidgetsBindingObserver
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(height: 10),
-            clearCacheCard(),
+            changeAppLanguage(),
             notificationCard(),
+            clearCacheCard(),
             const Spacer(),
             showAppVersion(),
           ],
         ),
+      ),
+    );
+  }
+
+  Widget changeAppLanguage() {
+    return SettingTile(
+      icon: const Icon(size: 20, color: Colors.white, Icons.language),
+      tralling: ValueListenableBuilder(
+        valueListenable: notificationPrefsNotifier,
+        builder: (context, isEnabled, child) {
+          return _buildPopUpMenu();
+        },
+      ),
+      title: 'Notifications',
+      iconColor: Colors.blueGrey,
+    );
+  }
+
+  Widget _buildPopUpMenu() {
+    // Build the popup menu for language selection
+    return Theme(
+      data: ThemeData(
+        useMaterial3: false,
+        popupMenuTheme: const PopupMenuThemeData(color: Colors.white),
+      ),
+      child: PopUpMenuBar(
+        baseIcon: Icons.select_all,
+        iconColor: AppColors.primary,
+        items: const [
+          PopUpMenuBarItem(
+            title: 'EN',
+            tralling: Text('🇬🇧', style: TextStyle(fontSize: 20)),
+          ),
+          PopUpMenuBarItem(
+            title: 'RU',
+            tralling: Text('🇷🇺', style: TextStyle(fontSize: 20)),
+          ),
+          PopUpMenuBarItem(
+            title: 'TR',
+            tralling: Text('🇹🇷', style: TextStyle(fontSize: 20)),
+          ),
+        ],
+        onSelect: (i) async {
+          final values = {0: 'en', 1: 'ru', 2: 'tr'};
+          if (context.locale.languageCode == values[i]) return;
+          var langCubit = context.read<LanguageCubit>();
+          langCubit.setLanguage(values[i]!, context);
+        },
       ),
     );
   }
@@ -211,5 +264,64 @@ mixin NotificationMixin on State<SettingsView> {
   void updateNotificationSettings({bool? status}) async {
     var isEnabled = await notificationPrefs.getNotificationState();
     notificationPrefsNotifier.value = status ?? isEnabled ?? false;
+  }
+}
+
+// An item object for [PopUpMenuBar].
+class PopUpMenuBarItem {
+  final String title;
+  final Widget tralling;
+
+  const PopUpMenuBarItem({required this.title, required this.tralling});
+}
+
+// A modified pop up menu widget.
+class PopUpMenuBar extends StatelessWidget {
+  final List<PopUpMenuBarItem> items;
+  final Function(int index) onSelect;
+  final IconData baseIcon;
+  final BorderRadius radius;
+  final Color iconColor;
+  final BorderSide border;
+
+  const PopUpMenuBar({
+    super.key,
+    required this.items,
+    required this.onSelect,
+    this.baseIcon = Icons.more_vert,
+    this.radius = const BorderRadius.only(
+      topLeft: Radius.circular(25),
+      bottomLeft: Radius.circular(25),
+      bottomRight: Radius.circular(25),
+    ),
+    this.iconColor = Colors.black,
+    this.border = BorderSide.none,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return PopupMenuButton(
+      key: const Key('popUpMenuBar.widget'),
+      shape: RoundedRectangleBorder(borderRadius: radius, side: border),
+      icon: Icon(baseIcon, color: iconColor),
+      onSelected: onSelect,
+      itemBuilder: (context) => [
+        for (var i = 0; i < items.length; i++)
+          PopupMenuItem(
+            key: Key('popUpMenuItem.$i'),
+            value: i,
+            child: Padding(
+              padding: const EdgeInsets.all(5.0),
+              child: Row(
+                children: [
+                  items[i].tralling,
+                  const SizedBox(width: 10),
+                  Text(items[i].title),
+                ],
+              ),
+            ),
+          )
+      ],
+    );
   }
 }
