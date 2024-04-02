@@ -1,0 +1,43 @@
+{
+    "home": {
+      "categories": "Категории",
+      "home": "Главная",
+      "library": "Библиотека",
+      "bookmarks": "Закладки",
+      "questions": "Вопросы",
+      "books": "Книги",
+      "previous": "предыдущий",
+      "next": "следующий",
+      "search": "Поиск"
+    },
+    "library": {
+      "all": "Все",
+      "allBooks": "Все книги",
+      "discoverMore": "Узнать больше из категории {category}",
+      "page": "Страница"
+    },
+    "drawer": {
+      "rateUs": "Оцените нас",
+      "share": "Поделиться",
+      "settings": "Настройки",
+      "contactUs": "Связаться с нами"
+    },
+    "settings": {
+      "settings": "Настройки",
+      "language": "Язык",
+      "notifications": "Уведомления",
+      "clearCache": "Очистить кэш"
+    },
+    "contactUs": {
+      "contactUs": "Связаться с нами",
+      "yourEmail": "Ваш электронный адрес",
+      "writeFeedback": "Оставьте свой отзыв здесь...",
+      "sendFeedback": "Отправить отзыв",
+      "emailRequired": "Поле электронной почты обязательно",
+      "feedbackRequired": "Поле для отзыва обязательно",
+      "invalidEmailFormat": "Неверный формат электронной почты",
+      "thankforfeedback": "Спасибо за ваш отзыв"
+    },
+    "connectionProblem": "Проблема с интернетом!"
+  }
+  

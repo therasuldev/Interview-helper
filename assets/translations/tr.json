@@ -1,0 +1,42 @@
+{
+    "home": {
+        "categories": "Kategoriler",
+        "home": "Ana sayfa",
+        "library": "Kütüphane",
+        "bookmarks": "Favoriler",
+        "questions": "Sorular",
+        "books": "Kitaplar",
+        "previous": "önceki",
+        "next": "sonraki",
+        "search": "Ara"
+    },
+    "library": {
+        "all": "Tümü",
+        "allBooks": "Tüm kitaplar",
+        "discoverMore": "{category} kategorisinden daha fazlasını keşfedin",
+        "page": "Sayfa"
+    },
+    "drawer": {
+        "rateUs": "Bizi değerlendirin",
+        "share": "Paylaş",
+        "settings": "Ayarlar",
+        "contactUs": "Bize ulaşın"
+    },
+    "settings": {
+        "settings": "Ayarlar",
+        "language": "Dil",
+        "notifications": "Bildirimler",
+        "clearCache": "Önbelleği temizle"
+    },
+    "contactUs": {
+        "contactUs": "Bize ulaşın",
+        "yourEmail": "E-postanız",
+        "writeFeedback": "Geri bildiriminizi buraya yazın...",
+        "sendFeedback": "Geri bildirim gönder",
+        "emailRequired": "E-posta alanı gereklidir.",
+        "feedbackRequired": "Geri bildirim alanı gereklidir.",
+        "invalidEmailFormat": "Geçersiz e-posta formatı.",
+        "thankforfeedback": "Geri bildiriminiz için teşekkür ederiz "
+    },
+    "connectionProblem": "İnternette bir sorun oluştu!"
+}

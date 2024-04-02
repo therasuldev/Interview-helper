@@ -1,0 +1,42 @@
+{
+    "home": {
+        "categories": "Categories",
+        "home": "Home",
+        "library": "Library",
+        "bookmarks": "Bookmarks",
+        "questions": "Questions",
+        "books": "Books",
+        "previous": "previous",
+        "next": "next",
+        "search": "Search"
+    },
+    "library": {
+        "all": "All",
+        "allBooks": "All books",
+        "discoverMore": "Discover more from {category}",
+        "page": "Page"
+    },
+    "drawer": {
+        "rateUs": "Rate us",
+        "share": "Share",
+        "settings": "Settings",
+        "contactUs": "Contact us"
+    },
+    "settings": {
+        "settings": "Settings",
+        "language": "Language",
+        "notifications": "Notifications",
+        "clearCache": "Clear cache"
+    },
+    "contactUs": {
+        "contactUs": "Contact us",
+        "yourEmail": "Your email",
+        "writeFeedback": "Write your feedback here...",
+        "sendFeedback": "Send feedback",
+        "emailRequired": "Email field is required.",
+        "feedbackRequired": "Feedback field is required.",
+        "invalidEmailFormat": "Invalid email format.",
+        "thankforfeedback": "Thank you for your feedback 🥳"
+    },
+    "connectionProblem": "A problem has occurred with the internet!"
+}
