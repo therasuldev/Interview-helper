@@ -65,7 +65,7 @@ class _HomeViewState extends State<HomeView> {
             );
           },
           addRepaintBoundaries: false,
-          addAutomaticKeepAlives: false,
+          addAutomaticKeepAlives: true,
           physics: const BouncingScrollPhysics(),
           itemCount: InterviewCategories.categories.length,
           gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(

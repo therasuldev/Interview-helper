@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../utils/decorations/view_utils.dart';
+import '../../utils/view_utils.dart';
 
 class CategoryCard extends StatelessWidget {
   const CategoryCard({super.key, required this.image, required this.category});

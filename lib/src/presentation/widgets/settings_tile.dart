@@ -1,7 +1,8 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../../utils/decorations/view_utils.dart';
+import '../../utils/view_utils.dart';
 
 class SettingTile extends StatelessWidget {
   final String title;
@@ -10,12 +11,14 @@ class SettingTile extends StatelessWidget {
   final Widget icon;
   final EdgeInsets margin;
   final VoidCallback? onTap;
+  final bool? showLangCode;
 
   const SettingTile({
     super.key,
     required this.title,
     required this.iconColor,
     required this.icon,
+    this.showLangCode = false,
     this.tralling,
     this.margin = const EdgeInsets.symmetric(vertical: 10),
     this.onTap,
@@ -35,6 +38,7 @@ class SettingTile extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
       child: Builder(builder: (context) {
         return _MainPart(
+          showLangCode: showLangCode ?? false,
           iconColor: iconColor,
           tralling: tralling,
           title: title,
@@ -57,6 +61,7 @@ class _MainPart extends StatelessWidget {
     required this.iconColor,
     required this.icon,
     required this.title,
+    required this.showLangCode,
     this.tralling,
   });
 
@@ -64,6 +69,7 @@ class _MainPart extends StatelessWidget {
   final Widget icon;
   final String title;
   final Widget? tralling;
+  final bool showLangCode;
 
   @override
   Widget build(BuildContext context) {
@@ -81,7 +87,28 @@ class _MainPart extends StatelessWidget {
       minVerticalPadding: 0,
       contentPadding: EdgeInsets.zero,
       trailing: tralling ?? const SizedBox.shrink(),
-      title: Text(title, style: ViewUtils.ubuntuStyle(color: Colors.black)),
+      title: showLangCode
+          ? Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(title, style: ViewUtils.ubuntuStyle(color: Colors.black)),
+                context.locale.languageCode.getCountryFlag(),
+              ],
+            )
+          : Text(title, style: ViewUtils.ubuntuStyle(color: Colors.black)),
     );
+  }
+}
+
+extension on String {
+  Widget getCountryFlag() {
+    const style = TextStyle(fontSize: 20);
+    final flag = switch (this) {
+      'en' => const Text('🇬🇧', style: style),
+      'ru' => const Text('🇷🇺', style: style),
+      'tr' => const Text('🇹🇷', style: style),
+      _ => const SizedBox.shrink(),
+    };
+    return flag;
   }
 }

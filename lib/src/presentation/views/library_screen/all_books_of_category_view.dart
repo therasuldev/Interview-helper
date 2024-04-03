@@ -107,7 +107,7 @@ class _AllBooksOfCategoryState extends State<AllBooksOfCategory> {
         },
         itemCount: books.length,
         addRepaintBoundaries: false,
-        addAutomaticKeepAlives: false,
+        addAutomaticKeepAlives: true,
         physics: const BouncingScrollPhysics(),
         gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
           maxCrossAxisExtent: 300,

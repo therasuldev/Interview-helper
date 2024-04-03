@@ -1,7 +1,8 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_pdfview/flutter_pdfview.dart';
-import 'package:interview_helper/src/utils/decorations/view_utils.dart';
+import 'package:interview_helper/src/utils/view_utils.dart';
 
 class OpenPDFView extends StatefulWidget {
   final String filePath;
@@ -79,7 +80,7 @@ class _PageInputField extends StatelessWidget {
         controller: controller,
         decoration: InputDecoration(
           label: Text(
-            'Page',
+            'library.page'.tr(),
             style: ViewUtils.ubuntuStyle(
               color: Colors.grey.shade300,
               fontSize: 12,

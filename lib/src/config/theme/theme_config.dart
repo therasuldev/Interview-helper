@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:interview_helper/src/utils/constants/app_colors.dart';
-import 'package:interview_helper/src/utils/decorations/view_utils.dart';
+import 'package:interview_helper/src/utils/view_utils.dart';
 
 class ThemeConfig {
   ThemeConfig._();

@@ -16,7 +16,7 @@ class LibraryView extends StatefulWidget {
   State<LibraryView> createState() => _LibraryViewState();
 }
 
-class _LibraryViewState extends State<LibraryView> {
+class _LibraryViewState extends State<LibraryView> with AutomaticKeepAliveClientMixin {
   @override
   void initState() {
     super.initState();
@@ -25,12 +25,17 @@ class _LibraryViewState extends State<LibraryView> {
 
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     return BlocBuilder<BookBloc, BookState>(
       builder: (context, state) {
         if (state.loading!) {
           return const Center(child: KSpinKitCircle());
         } else if (!state.loading!) {
-          return ListView(children: buildLanguageColumn(state));
+          return ListView(
+            key: ValueKey(context.locale.languageCode),
+            addAutomaticKeepAlives: true,
+            children: buildLanguageColumn(state),
+          );
         }
         return Center(child: Text(state.error.toString()));
       },
@@ -56,6 +61,9 @@ class _LibraryViewState extends State<LibraryView> {
     }
     return column;
   }
+
+  @override
+  bool get wantKeepAlive => true;
 }
 
 class _RowTitleWidget extends StatelessWidget {

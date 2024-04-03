@@ -33,13 +33,11 @@ class QuestionBloc extends Bloc<QuestionEvent, QuestionState> {
     try {
       final lang = event.payload?['lang'];
       final category = '${event.payload?['category']}.json';
-      log('${AssetsPath.questionPath}/$lang/$category');
       final jsonStr = await rootBundle.loadString('${AssetsPath.questionPath}/$lang/$category');
       final Map<String, dynamic> jsonMap = json.decode(jsonStr);
 
       final List<Map<String, dynamic>> questions = [];
       for (var i = 1; i <= jsonMap.length; i++) {
-        log("Sual sayi  $i");
         questions.add(jsonMap['$i']);
       }
       await CacheService().cachedquestions.put(event.payload?['category'], questions);

@@ -2,7 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:interview_helper/gen/assets.gen.dart';
 
-import '../../../utils/decorations/view_utils.dart';
+import '../../../utils/view_utils.dart';
 import 'index.dart';
 
 class DrawerView extends StatefulWidget {
@@ -42,21 +42,19 @@ class _DrawerViewState extends State<DrawerView> {
             color: Colors.yellow.shade800,
             title: 'drawer.rateUs'.tr(),
             onTap: () {
-              // TODO: Rate app feature
-              // showDialog(
-              //   context: context,
-              //   builder: (context) => RateApp.ratingDialog(context),
-              // );
+              showDialog(
+                context: context,
+                builder: (context) {
+                  return ViewUtils.ratingDialog(context);
+                },
+              );
             },
           ),
           _ListTile(
             icon: Icons.share_outlined,
             color: Colors.black,
             title: 'drawer.share'.tr(),
-            onTap: () async {
-              //TODO: share app feature
-              //ShareApp.onShare(context);
-            },
+            onTap: () => ViewUtils.onShare(context),
           ),
           _ListTile(
             icon: Icons.settings_outlined,

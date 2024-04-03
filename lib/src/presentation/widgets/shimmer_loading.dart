@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 
-import '../../utils/decorations/view_utils.dart';
+import '../../utils/view_utils.dart';
 
 class KShimmer extends StatelessWidget {
   const KShimmer({super.key, this.progress});

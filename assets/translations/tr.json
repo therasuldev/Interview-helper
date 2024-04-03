@@ -13,7 +13,8 @@
     "library": {
         "all": "Tümü",
         "allBooks": "Tüm kitaplar",
-        "discoverMore": "{category} kategorisinden daha fazlasını keşfedin"
+        "discoverMore": "{category} kategorisinden daha fazlasını keşfedin",
+        "page": "Sayfa"
     },
     "drawer": {
         "rateUs": "Bizi değerlendirin",
@@ -40,5 +41,6 @@
     },
     "connectionProblem": "İnternette bir sorun oluştu!",
     "yes": "Evet",
-    "no": "Hayır"
+    "no": "Hayır",
+    "submit": "Gönder"
 }

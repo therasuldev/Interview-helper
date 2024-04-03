@@ -8,7 +8,7 @@ import 'package:interview_helper/gen/assets.gen.dart';
 import 'package:interview_helper/src/presentation/provider/bloc/introduction/introduction_bloc.dart';
 import 'package:interview_helper/src/presentation/views/splash.dart';
 import 'package:interview_helper/src/utils/constants/introduction_screen_description_texts.dart';
-import 'package:interview_helper/src/utils/decorations/view_utils.dart';
+import 'package:interview_helper/src/utils/view_utils.dart';
 
 import 'library_screen/index.dart';
 

@@ -12,7 +12,8 @@
     "library": {
         "all": "All",
         "allBooks": "All books",
-        "discoverMore": "Discover more from {category}"
+        "discoverMore": "Discover more from {category}",
+        "page": "Page"
     },
     "drawer": {
         "rateUs": "Rate us",
@@ -39,5 +40,6 @@
     },
     "connectionProblem": "A problem has occurred with the internet!",
     "yes": "Yes",
-    "no": "No"
+    "no": "No",
+    "submit": "Submit"
 }

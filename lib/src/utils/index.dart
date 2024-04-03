@@ -6,7 +6,7 @@ export 'constants/interview_categories.dart';
 export 'constants/introduction_screen_description_texts.dart';
 export 'constants/route_names.dart';
 
-export 'decorations/view_utils.dart';
+export 'view_utils.dart';
 
 export 'enum/book_collection_paths.dart';
 export 'enum/category_card_titles.dart';

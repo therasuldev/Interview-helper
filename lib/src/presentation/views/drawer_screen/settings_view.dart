@@ -2,6 +2,7 @@ import 'package:app_settings/app_settings.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:interview_helper/src/utils/constants/app_colors.dart';
 import 'package:simple_app_cache_manager/simple_app_cache_manager.dart';
 import 'package:version_tracker/version_tracker.dart';
 
@@ -90,6 +91,7 @@ class _SettingsViewState extends State<SettingsView> with WidgetsBindingObserver
       ),
       title: 'settings.language'.tr(),
       iconColor: Colors.green,
+      showLangCode: true,
     );
   }
 
@@ -150,19 +152,18 @@ class _SettingsViewState extends State<SettingsView> with WidgetsBindingObserver
               return _AlertDialog(
                 actions: <Widget>[
                   TextButton(
-                    child: Text(
-                      'yes'.tr(),
-                      style: ViewUtils.ubuntuStyle(color: Colors.red),
-                    ),
+                    style: ButtonStyle(overlayColor: MaterialStatePropertyAll(AppColors.primary.withOpacity(.1))),
                     onPressed: () {
                       cacheManager.clearCache();
                       updateCacheSize();
                       Navigator.of(context).pop();
                     },
+                    child: Text('yes'.tr(), style: ViewUtils.ubuntuStyle(color: Colors.red)),
                   ),
                   TextButton(
-                    child: Text('no'.tr(), style: ViewUtils.ubuntuStyle(color: Colors.black)),
                     onPressed: () => Navigator.of(context).pop(),
+                    style: ButtonStyle(overlayColor: MaterialStatePropertyAll(AppColors.primary.withOpacity(.1))),
+                    child: Text('no'.tr(), style: ViewUtils.ubuntuStyle(color: Colors.black)),
                   ),
                 ],
               );

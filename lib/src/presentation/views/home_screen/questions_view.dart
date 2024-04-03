@@ -36,7 +36,7 @@ class _QuestionsViewState extends State<QuestionsView> with QuestionCardMixin {
         padding: const EdgeInsets.only(top: 20),
         physics: const BouncingScrollPhysics(),
         itemCount: searchedList.length,
-        addAutomaticKeepAlives: false,
+        addAutomaticKeepAlives: true,
         addRepaintBoundaries: false,
       ),
       backgroundColor: Colors.white,
