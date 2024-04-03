@@ -13,8 +13,7 @@
     "library": {
       "all": "Все",
       "allBooks": "Все книги",
-      "discoverMore": "Узнать больше из категории {category}",
-      "page": "Страница"
+      "discoverMore": "Узнать больше из категории {category}"
     },
     "drawer": {
       "rateUs": "Оцените нас",
@@ -26,7 +25,9 @@
       "settings": "Настройки",
       "language": "Язык",
       "notifications": "Уведомления",
-      "clearCache": "Очистить кэш"
+      "clearCache": "Очистить кэш",
+      "clearCacheWarning":"Все вопросы и книги, сохраненные в кеше, будут удалены."
+
     },
     "contactUs": {
       "contactUs": "Связаться с нами",
@@ -38,6 +39,8 @@
       "invalidEmailFormat": "Неверный формат электронной почты",
       "thankforfeedback": "Спасибо за ваш отзыв"
     },
-    "connectionProblem": "Проблема с интернетом!"
+    "connectionProblem": "Проблема с интернетом!",
+    "yes":"Да",
+    "no":"Нет"
   }
   

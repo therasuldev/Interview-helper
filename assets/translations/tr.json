@@ -13,8 +13,7 @@
     "library": {
         "all": "Tümü",
         "allBooks": "Tüm kitaplar",
-        "discoverMore": "{category} kategorisinden daha fazlasını keşfedin",
-        "page": "Sayfa"
+        "discoverMore": "{category} kategorisinden daha fazlasını keşfedin"
     },
     "drawer": {
         "rateUs": "Bizi değerlendirin",
@@ -26,7 +25,8 @@
         "settings": "Ayarlar",
         "language": "Dil",
         "notifications": "Bildirimler",
-        "clearCache": "Önbelleği temizle"
+        "clearCache": "Önbelleği temizle",
+        "clearCacheWarning": "Önbelleğe alınmış tüm sorular ve kitaplar silinecek."
     },
     "contactUs": {
         "contactUs": "Bize ulaşın",
@@ -38,5 +38,7 @@
         "invalidEmailFormat": "Geçersiz e-posta formatı.",
         "thankforfeedback": "Geri bildiriminiz için teşekkür ederiz "
     },
-    "connectionProblem": "İnternette bir sorun oluştu!"
+    "connectionProblem": "İnternette bir sorun oluştu!",
+    "yes": "Evet",
+    "no": "Hayır"
 }

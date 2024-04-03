@@ -7,14 +7,12 @@
         "questions": "Questions",
         "books": "Books",
         "previous": "previous",
-        "next": "next",
-        "search": "Search"
+        "next": "next"
     },
     "library": {
         "all": "All",
         "allBooks": "All books",
-        "discoverMore": "Discover more from {category}",
-        "page": "Page"
+        "discoverMore": "Discover more from {category}"
     },
     "drawer": {
         "rateUs": "Rate us",
@@ -26,7 +24,8 @@
         "settings": "Settings",
         "language": "Language",
         "notifications": "Notifications",
-        "clearCache": "Clear cache"
+        "clearCache": "Clear cache",
+        "clearCacheWarning": "All questions and books that have been stored in cache will be deleted."
     },
     "contactUs": {
         "contactUs": "Contact us",
@@ -38,5 +37,7 @@
         "invalidEmailFormat": "Invalid email format.",
         "thankforfeedback": "Thank you for your feedback 🥳"
     },
-    "connectionProblem": "A problem has occurred with the internet!"
+    "connectionProblem": "A problem has occurred with the internet!",
+    "yes": "Yes",
+    "no": "No"
 }
