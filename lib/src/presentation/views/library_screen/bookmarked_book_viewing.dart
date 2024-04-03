@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
@@ -87,7 +88,7 @@ class _BookmarkedBookViewingState extends State<BookmarkedBookViewing> {
       final hasConnection = await ConnectivityService().hasActiveInternetConnection();
       if (!hasConnection) {
         return ViewUtils.showInterviewHelperSnackBar(
-          snackbarTitle: 'A problem has occurred with the internet!',
+          snackbarTitle: 'connectionProblem'.tr(),
           backgroundColor: Colors.red,
         );
       }

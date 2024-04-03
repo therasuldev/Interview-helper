@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -21,6 +22,7 @@ class _LibraryViewState extends State<LibraryView> {
     super.initState();
     BlocProvider.of<CategoryBloc>(context).add(CategoryEvent.fetchBookmarkedBooksStart());
   }
+
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<BookBloc, BookState>(
@@ -88,7 +90,7 @@ class _RowTitleWidget extends StatelessWidget {
               );
             },
             child: Text(
-              'All',
+              'library.all'.tr(),
               style: ViewUtils.ubuntuStyle(
                 fontSize: 20,
                 color: Colors.blue,

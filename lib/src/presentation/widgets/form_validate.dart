@@ -1,11 +1,13 @@
+import 'package:easy_localization/easy_localization.dart';
+
 class FormValidate {
   static String? emailFieldIsValidate(String? value) {
     if (value!.isEmpty) {
-      return 'Email field is required.';
+      return 'contactUs.emailRequired'.tr();
     } else {
       final emailPattern = RegExp(r'^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$');
       if (!emailPattern.hasMatch(value)) {
-        return 'Invalid email format.';
+        return 'contactUs.invalidEmailFormat'.tr();
       }
     }
     return null;
@@ -13,7 +15,7 @@ class FormValidate {
 
   static String? feedbackFieldIsValidate(String? value) {
     if (value!.isEmpty) {
-      return 'Feedback field is required.';
+      return 'contactUs.feedbackRequired'.tr();
     }
     return null;
   }

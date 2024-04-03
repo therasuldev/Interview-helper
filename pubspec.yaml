@@ -11,11 +11,14 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
 
   cupertino_icons: ^1.0.2
 
   # config
   go_router: ^12.1.0
+  easy_localization: ^3.0.5
   connectivity_plus: ^5.0.2
 
   # Firebase
@@ -97,7 +100,10 @@ flutter:
      - assets/app-original.png
      - assets/svg/
      - assets/icons/
-     - assets/questions/
+     - assets/questions/en/
+     - assets/questions/ru/
+     - assets/questions/tr/
+     - assets/translations/
      - assets/introduction/
      - .env
 

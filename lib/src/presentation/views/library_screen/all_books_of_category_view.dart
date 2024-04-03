@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
@@ -38,7 +39,7 @@ class _AllBooksOfCategoryState extends State<AllBooksOfCategory> {
     final double width = MediaQuery.sizeOf(context).width * 0.5;
     final double height = MediaQuery.sizeOf(context).height * 0.3;
     return Scaffold(
-      appBar: AppBar(title: const Text('All books'), centerTitle: false),
+      appBar: AppBar(title: Text('library.allBooks'.tr()), centerTitle: false),
       body: GridView.builder(
         itemBuilder: (context, index) {
           final book = books[index];
@@ -56,11 +57,10 @@ class _AllBooksOfCategoryState extends State<AllBooksOfCategory> {
               );
             },
             child: Container(
-              width: MediaQuery.of(context).size.width * .6,
+              width: MediaQuery.sizeOf(context).width * .6,
               margin: const EdgeInsets.all(5),
               child: Column(
                 children: [
-                  // SmallSizeBookView(book: book, category: widget.category),
                   Hero(
                     tag: book.name,
                     child: Stack(

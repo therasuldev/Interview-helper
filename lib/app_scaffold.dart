@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
@@ -26,23 +27,21 @@ class _AppScaffoldState extends State<AppScaffold> {
       appBar: appBar(widget.body.currentIndex),
       backgroundColor: Colors.white,
       body: widget.body,
-      drawer: widget.body.currentIndex.isEqual(0) ? const DrawerView() : null,
+      drawer: widget.body.currentIndex.isEqual(0) ? DrawerView(key: ValueKey(context.locale.languageCode)) : null,
       bottomNavigationBar: _BottomNavBar(changeScreen: goBranch, screenIndex: widget.body.currentIndex),
     );
   }
 
   AppBar appBar(int screenIndex) {
     return AppBar(
-      title: Text(screenIndex.isEqual(0) ? 'Categories' : 'Library'),
+      title: Text(screenIndex.isEqual(0) ? 'home.categories'.tr() : 'home.library'.tr()),
       centerTitle: false,
       elevation: 0,
       actions: [
         screenIndex.isEqual(0)
             ? IconButton(
                 icon: SvgPicture.asset(Assets.svg.bookmark, color: Colors.white),
-                onPressed: () {
-                  context.goNamed(AppRouteConstant.bookmark);
-                },
+                onPressed: () => context.goNamed(AppRouteConstant.bookmark),
               )
             : const SizedBox.shrink(),
       ],
@@ -70,9 +69,9 @@ class _BottomNavBar extends StatelessWidget {
   }
 
   List<BottomNavigationBarItem> get _buildItems {
-    return const [
-      BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-      BottomNavigationBarItem(icon: Icon(Icons.auto_stories), label: 'Library'),
+    return [
+      BottomNavigationBarItem(icon: const Icon(Icons.home), label: 'home.home'.tr()),
+      BottomNavigationBarItem(icon: const Icon(Icons.auto_stories), label: 'home.library'.tr()),
     ];
   }
 }

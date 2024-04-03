@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:connectivity_plus/connectivity_plus.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:interview_helper/src/utils/index.dart';
@@ -34,6 +35,7 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: Text('contactUs.contactUs'.tr()), centerTitle: false),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
         child: Form(
@@ -41,11 +43,6 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                'Contact us',
-                style: ViewUtils.ubuntuStyle(fontSize: 30),
-              ),
-              const SizedBox(height: 20),
               TextFormField(
                 maxLines: 1,
                 key: emailKey,
@@ -54,7 +51,7 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                 textInputAction: TextInputAction.done,
                 keyboardType: TextInputType.emailAddress,
                 decoration: InputDecoration(
-                  hintText: 'Your email',
+                  hintText: 'contactUs.yourEmail'.tr(),
                   hintStyle: ViewUtils.ubuntuStyle(),
                   border: const OutlineInputBorder(),
                   focusedBorder: const OutlineInputBorder(
@@ -72,7 +69,7 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                 textInputAction: TextInputAction.done,
                 keyboardType: TextInputType.text,
                 decoration: InputDecoration(
-                  hintText: 'Write your feedback here...',
+                  hintText: 'contactUs.writeFeedback'.tr(),
                   hintStyle: ViewUtils.ubuntuStyle(),
                   border: const OutlineInputBorder(),
                   focusedBorder: const OutlineInputBorder(
@@ -135,7 +132,7 @@ class _FeedbackButtonState extends State<_FeedbackButton> {
         break;
       default:
         ViewUtils.showInterviewHelperSnackBar(
-          snackbarTitle: 'A problem has occurred with the internet!',
+          snackbarTitle: 'connectionProblem'.tr(),
           backgroundColor: Colors.red,
         );
         break;
@@ -150,7 +147,7 @@ class _FeedbackButtonState extends State<_FeedbackButton> {
     if (!isValidate) return;
 
     final message = Message(email: widget.email.text, message: widget.message.text);
-    if (context.mounted) context.read<FeedbackCubit>().send(message: message);
+    if (mounted) context.read<FeedbackCubit>().send(message: message);
   }
 
   late StreamSubscription<ConnectivityResult> _subscription;
@@ -159,20 +156,20 @@ class _FeedbackButtonState extends State<_FeedbackButton> {
   Widget build(BuildContext context) {
     return SizedBox(
       height: 50,
-      width: MediaQuery.of(context).size.width * .9,
+      width: MediaQuery.sizeOf(context).width * .9,
       child: OutlinedButton(
         onPressed: () => _sendFeedback(),
         style: ButtonStyle(
           overlayColor: MaterialStateProperty.all(Colors.white),
-          foregroundColor: MaterialStateProperty.all(AppColors.primary),
-          side: MaterialStateProperty.all(const BorderSide(color: AppColors.primary, strokeAlign: 10)),
+          foregroundColor: MaterialStateProperty.all(Colors.black),
+          // side: MaterialStateProperty.all(const BorderSide(color: AppColors.primary, strokeAlign: 10)),
         ),
         child: BlocConsumer<FeedbackCubit, FeedbackState>(
           listener: (context, state) {
             switch (state.event) {
               case FeedbackEvents.success:
                 ViewUtils.showInterviewHelperSnackBar(
-                  snackbarTitle: 'Thank you for your feedback 🥳',
+                  snackbarTitle: 'contactUs.thankforfeedback'.tr(),
                   backgroundColor: Colors.green,
                 );
                 break;
@@ -188,7 +185,7 @@ class _FeedbackButtonState extends State<_FeedbackButton> {
           },
           builder: (context, state) {
             if (state.loading) return const KSpinKitCircle();
-            return Text('Send feedback', style: ViewUtils.ubuntuStyle());
+            return Text('contactUs.sendFeedback'.tr(), style: ViewUtils.ubuntuStyle());
           },
         ),
       ),

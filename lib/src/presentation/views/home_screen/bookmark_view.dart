@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -36,16 +37,12 @@ class _BookmarkedDatasState extends State<BookmarkedDatas> with SingleTickerProv
     if (controller.indexIsChanging) return;
 
     if (controller.index == 0) {
-      appBarTitle = AppBarTitle.questions;
       context.read<CategoryBloc>().add(CategoryEvent.fetchBookmarkedQuestionsStart());
     } else {
-      appBarTitle = AppBarTitle.books;
       context.read<CategoryBloc>().add(CategoryEvent.fetchBookmarkedBooksStart());
     }
     setState(() {});
   }
-
-  AppBarTitle appBarTitle = AppBarTitle.questions;
 
   @override
   void dispose() {
@@ -63,22 +60,22 @@ class _BookmarkedDatasState extends State<BookmarkedDatas> with SingleTickerProv
     final height = MediaQuery.sizeOf(context).height * 0.3;
     return Scaffold(
       appBar: AppBar(
-        title: Text(appBarTitle.title),
+        title: Text('home.bookmarks'.tr()),
         centerTitle: false,
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(50),
           child: TabBar(
             controller: controller,
+            indicatorColor: Colors.blue.shade900,
+            indicatorSize: TabBarIndicatorSize.tab,
             tabs: [
-              AnimatedDefaultTextStyle(
+              DefaultTextStyle(
                 style: const TextStyle().isActive(controller.index == 0),
-                duration: const Duration(milliseconds: 200),
-                child: const Text('Questions'),
+                child: Text('home.questions'.tr()),
               ),
-              AnimatedDefaultTextStyle(
-                duration: const Duration(milliseconds: 200),
+              DefaultTextStyle(
                 style: const TextStyle().isActive(controller.index == 1),
-                child: const Text('Books'),
+                child: Text('home.books'.tr()),
               ),
             ],
           ),
@@ -222,14 +219,6 @@ class _BookmarkedDatasState extends State<BookmarkedDatas> with SingleTickerProv
       ),
     );
   }
-}
-
-enum AppBarTitle {
-  questions('Saved questions'),
-  books('Saved books');
-
-  const AppBarTitle(this.title);
-  final String title;
 }
 
 extension on TextStyle {

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -67,7 +68,7 @@ class _QuestionViewState extends State<QuestionView> with _QuestionViewMixin {
                     },
                     icon: SvgPicture.asset(
                       Assets.svg.bookmark,
-                      color: isSaved ? Colors.blue.shade200 : Colors.white,
+                      color: isSaved ? Colors.orange.shade900 : Colors.white,
                     ),
                   )
                 ],
@@ -88,8 +89,8 @@ class _QuestionViewState extends State<QuestionView> with _QuestionViewMixin {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                _ChangeButton(child: 'previous', onPressed: _goToPreviousQuestion),
-                _ChangeButton(child: 'next', onPressed: _goToNextQuestion),
+                _ChangeButton(child: 'home.previous'.tr(), onPressed: _goToPreviousQuestion),
+                _ChangeButton(child: 'home.next'.tr(), onPressed: _goToNextQuestion),
               ],
             ),
           ),

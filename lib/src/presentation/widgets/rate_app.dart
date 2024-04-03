@@ -15,7 +15,7 @@ class RateApp {
       ),
       image: Image.asset(
         Assets.app.path,
-        height: MediaQuery.of(context).size.height * .2,
+        height: MediaQuery.sizeOf(context).height * .2,
       ),
       submitButtonText: 'Submit',
       commentHint: 'Tell us your comment',

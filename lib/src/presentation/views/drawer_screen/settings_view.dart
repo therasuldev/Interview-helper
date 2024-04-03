@@ -2,14 +2,13 @@ import 'package:app_settings/app_settings.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:interview_helper/src/presentation/provider/cubit/language/language_cubit.dart';
-import 'package:interview_helper/src/utils/index.dart';
 import 'package:simple_app_cache_manager/simple_app_cache_manager.dart';
 import 'package:version_tracker/version_tracker.dart';
 
 import 'package:interview_helper/src/data/datasources/local/notification_prefs_service.dart';
+import 'package:interview_helper/src/presentation/provider/cubit/language/language_cubit.dart';
+import 'package:interview_helper/src/utils/index.dart';
 
-import '../../../utils/decorations/view_utils.dart';
 import '../../widgets/index.dart';
 
 class SettingsView extends StatefulWidget {
@@ -62,7 +61,7 @@ class _SettingsViewState extends State<SettingsView> with WidgetsBindingObserver
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Settings'), centerTitle: false),
+      appBar: AppBar(title: Text('settings.settings'.tr()), centerTitle: false),
       body: Padding(
         padding: const EdgeInsets.all(15),
         child: Column(
@@ -89,8 +88,8 @@ class _SettingsViewState extends State<SettingsView> with WidgetsBindingObserver
           return _buildPopUpMenu();
         },
       ),
-      title: 'Notifications',
-      iconColor: Colors.blueGrey,
+      title: 'settings.language'.tr(),
+      iconColor: Colors.green,
     );
   }
 
@@ -103,7 +102,7 @@ class _SettingsViewState extends State<SettingsView> with WidgetsBindingObserver
       ),
       child: PopUpMenuBar(
         baseIcon: Icons.select_all,
-        iconColor: AppColors.primary,
+        iconColor: Colors.green,
         items: const [
           PopUpMenuBarItem(
             title: 'EN',
@@ -139,7 +138,7 @@ class _SettingsViewState extends State<SettingsView> with WidgetsBindingObserver
           builder: (context, cacheSize, child) => Text(
             cacheSize,
             style: ViewUtils.ubuntuStyle(
-              color: Colors.red,
+              color: Colors.orange,
               fontSize: 19,
             ),
           ),
@@ -152,7 +151,7 @@ class _SettingsViewState extends State<SettingsView> with WidgetsBindingObserver
                 actions: <Widget>[
                   TextButton(
                     child: Text(
-                      'Yes',
+                      'yes'.tr(),
                       style: ViewUtils.ubuntuStyle(color: Colors.red),
                     ),
                     onPressed: () {
@@ -162,7 +161,7 @@ class _SettingsViewState extends State<SettingsView> with WidgetsBindingObserver
                     },
                   ),
                   TextButton(
-                    child: Text('No', style: ViewUtils.ubuntuStyle(color: Colors.black)),
+                    child: Text('no'.tr(), style: ViewUtils.ubuntuStyle(color: Colors.black)),
                     onPressed: () => Navigator.of(context).pop(),
                   ),
                 ],
@@ -170,7 +169,7 @@ class _SettingsViewState extends State<SettingsView> with WidgetsBindingObserver
             },
           );
         },
-        title: 'Clear cache',
+        title: 'settings.clearCache'.tr(),
         iconColor: Colors.orange,
       );
 
@@ -183,6 +182,8 @@ class _SettingsViewState extends State<SettingsView> with WidgetsBindingObserver
           return Switch(
             value: isEnabled,
             activeColor: Colors.green,
+            thumbColor: MaterialStateProperty.all(Colors.blueGrey),
+            trackOutlineColor: MaterialStateProperty.all(Colors.blueGrey),
             inactiveTrackColor: Colors.transparent,
             onChanged: (state) async {
               AppSettings.openAppSettings(type: AppSettingsType.notification);
@@ -190,7 +191,7 @@ class _SettingsViewState extends State<SettingsView> with WidgetsBindingObserver
           );
         },
       ),
-      title: 'Notifications',
+      title: 'settings.notifications'.tr(),
       iconColor: Colors.blueGrey,
     );
   }
@@ -216,7 +217,7 @@ class _AlertDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final style = ViewUtils.ubuntuStyle(color: Colors.black);
-    const subtitle = 'All interrupted questions and books will be permanently deleted.';
+    final subtitle = 'settings.clearCacheWarning'.tr();
 
     return Theme(
       data: ThemeData(
@@ -227,7 +228,7 @@ class _AlertDialog extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(15),
         ),
-        title: Text('Clear cache?', style: style),
+        title: Text('${'settings.clearCache'.tr()}?', style: style),
         content: SingleChildScrollView(
           child: ListBody(children: <Widget>[Text(subtitle, style: style)]),
         ),

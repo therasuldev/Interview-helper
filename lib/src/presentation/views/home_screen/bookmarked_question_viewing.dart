@@ -64,7 +64,7 @@ class _BookmarkedQuestionViewingState extends State<BookmarkedQuestionViewing> w
                     },
                     icon: SvgPicture.asset(
                       Assets.svg.bookmark,
-                      color: (isSaved ?? false) ? Colors.blue.shade200 : Colors.white,
+                      color: (isSaved ?? false) ? Colors.orange.shade900 : Colors.white,
                     ),
                   )
                 ],

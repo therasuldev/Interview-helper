@@ -22,7 +22,7 @@ class QuestionCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 100,
-      width: MediaQuery.of(context).size.width * .8,
+      width: MediaQuery.sizeOf(context).width * .8,
       decoration: ViewUtils.questionCardDecor(),
       margin: const EdgeInsets.all(7),
       child: ListTile(

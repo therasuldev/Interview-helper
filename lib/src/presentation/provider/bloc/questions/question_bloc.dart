@@ -1,6 +1,7 @@
 // ignore_for_file: invalid_use_of_visible_for_testing_member
 
 import 'dart:convert';
+import 'dart:developer';
 
 import 'package:bloc/bloc.dart';
 import 'package:flutter/services.dart';
@@ -29,21 +30,29 @@ class QuestionBloc extends Bloc<QuestionEvent, QuestionState> {
   }
 
   _onAddQuestionsToCache(QuestionEvent event) async {
-    final jsonStr = await rootBundle.loadString('${AssetsPath.questionPath}/${event.payload}.json');
-    final Map<String, dynamic> jsonMap = json.decode(jsonStr);
+    try {
+      final lang = event.payload?['lang'];
+      final category = '${event.payload?['category']}.json';
+      log('${AssetsPath.questionPath}/$lang/$category');
+      final jsonStr = await rootBundle.loadString('${AssetsPath.questionPath}/$lang/$category');
+      final Map<String, dynamic> jsonMap = json.decode(jsonStr);
 
-    final List<Map<String, dynamic>> questions = [];
-    for (var i = 1; i <= jsonMap.length; i++) {
-      questions.add(jsonMap['$i']);
+      final List<Map<String, dynamic>> questions = [];
+      for (var i = 1; i <= jsonMap.length; i++) {
+        log("Sual sayi  $i");
+        questions.add(jsonMap['$i']);
+      }
+      await CacheService().cachedquestions.put(event.payload?['category'], questions);
+    } catch (exp) {
+      log(exp.toString());
     }
-    await CacheService().cachedquestions.put(event.payload, questions);
   }
 
   _onFetchQuestionStart(QuestionEvent event) async {
     emit(state.copyWith(loading: true));
 
     try {
-      final questionSources = await _questionRepository.getQuestionsFromSource(category: event.payload);
+      final questionSources = await _questionRepository.getQuestionsFromSource(category: event.payload?['category']);
       final questions = questionSources.map((question) => Question.fromJson(question)).toList();
 
       emit(

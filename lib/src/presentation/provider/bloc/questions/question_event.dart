@@ -9,15 +9,17 @@ enum QuestionEvents {
 
 class QuestionEvent {
   QuestionEvents? type;
-  dynamic payload;
+  Map? payload = {};
 
-  QuestionEvent.addQuestionsInitial(String category) {
+  QuestionEvent.addQuestionsInitial(String category, String lang) {
     type = QuestionEvents.addQuestionsInitial;
-    payload = category;
+    payload?['category'] = category;
+    payload?['lang'] = lang;
   }
-  QuestionEvent.fetchQuestionStart(String category) {
+  QuestionEvent.fetchQuestionStart(String category, String lang) {
     type = QuestionEvents.fetchQuestionsStart;
-    payload = category;
+    payload?['category'] = category;
+    payload?['lang'] = lang;
   }
   QuestionEvent.fetchQuestionSuccess() {
     type = QuestionEvents.fetchQuestionsSuccess;

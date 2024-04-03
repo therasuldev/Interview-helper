@@ -16,8 +16,8 @@ class KShimmer extends StatelessWidget {
       child: Container(
         color: Colors.white10,
         alignment: Alignment.center,
-        width: MediaQuery.of(context).size.width * 0.5,
-        height: MediaQuery.of(context).size.height * 0.3,
+        width: MediaQuery.sizeOf(context).width * 0.5,
+        height: MediaQuery.sizeOf(context).height * 0.3,
         child: Text(progress ?? '', style: ViewUtils.ubuntuStyle(fontSize: 30)),
       ),
     );

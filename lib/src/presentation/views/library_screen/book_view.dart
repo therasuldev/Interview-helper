@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
@@ -93,7 +94,7 @@ class _BookViewState extends State<BookView> with _DownloaderMixin {
       final hasConnection = await ConnectivityService().hasActiveInternetConnection();
       if (!hasConnection) {
         return ViewUtils.showInterviewHelperSnackBar(
-          snackbarTitle: 'A problem has occurred with the internet!',
+          snackbarTitle: 'connectionProblem'.tr(),
           backgroundColor: Colors.red,
         );
       }
@@ -165,26 +166,43 @@ class _BookViewState extends State<BookView> with _DownloaderMixin {
               ),
             ),
             const SizedBox(height: 40),
-            Padding(
-              padding: const EdgeInsets.only(left: 10),
-              child: Text.rich(
-                TextSpan(
-                  text: 'Discover more from ',
-                  style: ViewUtils.ubuntuStyle(fontSize: 17),
-                  children: [
-                    TextSpan(
-                      text: widget.category,
-                      style: ViewUtils.ubuntuStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                    )
-                  ],
-                ),
-              ),
-            ),
+            discoverMoreTitle(),
             const SizedBox(height: 10),
             CategoryCollection(
               allBooks: allBooks,
               otherBooks: widget.otherBooks,
               category: widget.category,
+            )
+          ],
+        ),
+      ),
+    );
+  }
+
+  Padding discoverMoreTitle() {
+    const categoryKey = '{category}';
+    final originalTitle = 'library.discoverMore'.tr();
+
+    final categoryIndex = originalTitle.indexOf(categoryKey);
+    final titleBeforeCategory = originalTitle.substring(0, categoryIndex);
+    final category =
+        originalTitle.substring(categoryIndex, categoryIndex + categoryKey.length).replaceFirst(categoryKey, widget.category);
+    final titleAfterCategory = originalTitle.substring(categoryIndex + categoryKey.length, originalTitle.length);
+
+    return Padding(
+      padding: const EdgeInsets.only(left: 10),
+      child: Text.rich(
+        TextSpan(
+          text: titleBeforeCategory,
+          style: ViewUtils.ubuntuStyle(fontSize: 17),
+          children: [
+            TextSpan(
+              text: categoryIndex == 0 ? "$category -" : "- $category",
+              style: ViewUtils.ubuntuStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+            TextSpan(
+              text: titleAfterCategory,
+              style: ViewUtils.ubuntuStyle(),
             )
           ],
         ),
@@ -403,7 +421,7 @@ class BookActionButtonRow extends StatelessWidget {
                   Assets.svg.bookmark,
                   height: 35,
                   width: 35,
-                  color: isSaved ?? false ? AppColors.primary : Colors.blue.shade200,
+                  color: isSaved ?? false ? Colors.orange.shade900 : Colors.blue.shade200,
                 ),
               ),
             );

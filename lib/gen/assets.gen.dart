@@ -136,109 +136,9 @@ class $AssetsIntroductionGen {
 class $AssetsQuestionsGen {
   const $AssetsQuestionsGen();
 
-  /// File path: assets/questions/backend.json
-  String get backend => 'assets/questions/backend.json';
-
-  /// File path: assets/questions/cplusplus.json
-  String get cplusplus => 'assets/questions/cplusplus.json';
-
-  /// File path: assets/questions/csharp.json
-  String get csharp => 'assets/questions/csharp.json';
-
-  /// File path: assets/questions/cybersecurity.json
-  String get cybersecurity => 'assets/questions/cybersecurity.json';
-
-  /// File path: assets/questions/dataanalyst.json
-  String get dataanalyst => 'assets/questions/dataanalyst.json';
-
-  /// File path: assets/questions/datascientist.json
-  String get datascientist => 'assets/questions/datascientist.json';
-
-  /// File path: assets/questions/engineer.json
-  String get engineer => 'assets/questions/engineer.json';
-
-  /// File path: assets/questions/flutter.json
-  String get flutter => 'assets/questions/flutter.json';
-
-  /// File path: assets/questions/frontend.json
-  String get frontend => 'assets/questions/frontend.json';
-
-  /// File path: assets/questions/git.json
-  String get git => 'assets/questions/git.json';
-
-  /// File path: assets/questions/go.json
-  String get go => 'assets/questions/go.json';
-
-  /// File path: assets/questions/help.json
-  String get help => 'assets/questions/help.json';
-
-  /// File path: assets/questions/java.json
-  String get java => 'assets/questions/java.json';
-
-  /// File path: assets/questions/js.json
-  String get js => 'assets/questions/js.json';
-
-  /// File path: assets/questions/kotlin.json
-  String get kotlin => 'assets/questions/kotlin.json';
-
-  /// File path: assets/questions/nodejs.json
-  String get nodejs => 'assets/questions/nodejs.json';
-
-  /// File path: assets/questions/perl.json
-  String get perl => 'assets/questions/perl.json';
-
-  /// File path: assets/questions/php.json
-  String get php => 'assets/questions/php.json';
-
-  /// File path: assets/questions/python.json
-  String get python => 'assets/questions/python.json';
-
-  /// File path: assets/questions/react.json
-  String get react => 'assets/questions/react.json';
-
-  /// File path: assets/questions/ruby.json
-  String get ruby => 'assets/questions/ruby.json';
-
-  /// File path: assets/questions/rust.json
-  String get rust => 'assets/questions/rust.json';
-
-  /// File path: assets/questions/scala.json
-  String get scala => 'assets/questions/scala.json';
-
-  /// File path: assets/questions/swift.json
-  String get swift => 'assets/questions/swift.json';
-
-  /// File path: assets/questions/typescript.json
-  String get typescript => 'assets/questions/typescript.json';
-
-  /// List of all assets
-  List<String> get values => [
-        backend,
-        cplusplus,
-        csharp,
-        cybersecurity,
-        dataanalyst,
-        datascientist,
-        engineer,
-        flutter,
-        frontend,
-        git,
-        go,
-        help,
-        java,
-        js,
-        kotlin,
-        nodejs,
-        perl,
-        php,
-        python,
-        react,
-        ruby,
-        rust,
-        scala,
-        swift,
-        typescript
-      ];
+  $AssetsQuestionsEnGen get en => const $AssetsQuestionsEnGen();
+  $AssetsQuestionsRuGen get ru => const $AssetsQuestionsRuGen();
+  $AssetsQuestionsTrGen get tr => const $AssetsQuestionsTrGen();
 }
 
 class $AssetsSvgGen {
@@ -265,6 +165,318 @@ class $AssetsSvgGen {
   /// List of all assets
   List<String> get values =>
       [bin, bookmarkOutlined, bookmark, connectionLost, download, openBook];
+}
+
+class $AssetsQuestionsEnGen {
+  const $AssetsQuestionsEnGen();
+
+  /// File path: assets/questions/en/backend.json
+  String get backend => 'assets/questions/en/backend.json';
+
+  /// File path: assets/questions/en/cplusplus.json
+  String get cplusplus => 'assets/questions/en/cplusplus.json';
+
+  /// File path: assets/questions/en/csharp.json
+  String get csharp => 'assets/questions/en/csharp.json';
+
+  /// File path: assets/questions/en/cybersecurity.json
+  String get cybersecurity => 'assets/questions/en/cybersecurity.json';
+
+  /// File path: assets/questions/en/dataanalyst.json
+  String get dataanalyst => 'assets/questions/en/dataanalyst.json';
+
+  /// File path: assets/questions/en/datascientist.json
+  String get datascientist => 'assets/questions/en/datascientist.json';
+
+  /// File path: assets/questions/en/engineer.json
+  String get engineer => 'assets/questions/en/engineer.json';
+
+  /// File path: assets/questions/en/flutter.json
+  String get flutter => 'assets/questions/en/flutter.json';
+
+  /// File path: assets/questions/en/frontend.json
+  String get frontend => 'assets/questions/en/frontend.json';
+
+  /// File path: assets/questions/en/git.json
+  String get git => 'assets/questions/en/git.json';
+
+  /// File path: assets/questions/en/go.json
+  String get go => 'assets/questions/en/go.json';
+
+  /// File path: assets/questions/en/java.json
+  String get java => 'assets/questions/en/java.json';
+
+  /// File path: assets/questions/en/js.json
+  String get js => 'assets/questions/en/js.json';
+
+  /// File path: assets/questions/en/kotlin.json
+  String get kotlin => 'assets/questions/en/kotlin.json';
+
+  /// File path: assets/questions/en/nodejs.json
+  String get nodejs => 'assets/questions/en/nodejs.json';
+
+  /// File path: assets/questions/en/perl.json
+  String get perl => 'assets/questions/en/perl.json';
+
+  /// File path: assets/questions/en/php.json
+  String get php => 'assets/questions/en/php.json';
+
+  /// File path: assets/questions/en/python.json
+  String get python => 'assets/questions/en/python.json';
+
+  /// File path: assets/questions/en/react.json
+  String get react => 'assets/questions/en/react.json';
+
+  /// File path: assets/questions/en/ruby.json
+  String get ruby => 'assets/questions/en/ruby.json';
+
+  /// File path: assets/questions/en/rust.json
+  String get rust => 'assets/questions/en/rust.json';
+
+  /// File path: assets/questions/en/scala.json
+  String get scala => 'assets/questions/en/scala.json';
+
+  /// File path: assets/questions/en/swift.json
+  String get swift => 'assets/questions/en/swift.json';
+
+  /// File path: assets/questions/en/typescript.json
+  String get typescript => 'assets/questions/en/typescript.json';
+
+  /// List of all assets
+  List<String> get values => [
+        backend,
+        cplusplus,
+        csharp,
+        cybersecurity,
+        dataanalyst,
+        datascientist,
+        engineer,
+        flutter,
+        frontend,
+        git,
+        go,
+        java,
+        js,
+        kotlin,
+        nodejs,
+        perl,
+        php,
+        python,
+        react,
+        ruby,
+        rust,
+        scala,
+        swift,
+        typescript
+      ];
+}
+
+class $AssetsQuestionsRuGen {
+  const $AssetsQuestionsRuGen();
+
+  /// File path: assets/questions/ru/backend.json
+  String get backend => 'assets/questions/ru/backend.json';
+
+  /// File path: assets/questions/ru/cplusplus.json
+  String get cplusplus => 'assets/questions/ru/cplusplus.json';
+
+  /// File path: assets/questions/ru/csharp.json
+  String get csharp => 'assets/questions/ru/csharp.json';
+
+  /// File path: assets/questions/ru/cybersecurity.json
+  String get cybersecurity => 'assets/questions/ru/cybersecurity.json';
+
+  /// File path: assets/questions/ru/dataanalyst.json
+  String get dataanalyst => 'assets/questions/ru/dataanalyst.json';
+
+  /// File path: assets/questions/ru/datascientist.json
+  String get datascientist => 'assets/questions/ru/datascientist.json';
+
+  /// File path: assets/questions/ru/engineer.json
+  String get engineer => 'assets/questions/ru/engineer.json';
+
+  /// File path: assets/questions/ru/flutter.json
+  String get flutter => 'assets/questions/ru/flutter.json';
+
+  /// File path: assets/questions/ru/frontend.json
+  String get frontend => 'assets/questions/ru/frontend.json';
+
+  /// File path: assets/questions/ru/git.json
+  String get git => 'assets/questions/ru/git.json';
+
+  /// File path: assets/questions/ru/go.json
+  String get go => 'assets/questions/ru/go.json';
+
+  /// File path: assets/questions/ru/java.json
+  String get java => 'assets/questions/ru/java.json';
+
+  /// File path: assets/questions/ru/js.json
+  String get js => 'assets/questions/ru/js.json';
+
+  /// File path: assets/questions/ru/kotlin.json
+  String get kotlin => 'assets/questions/ru/kotlin.json';
+
+  /// File path: assets/questions/ru/nodejs.json
+  String get nodejs => 'assets/questions/ru/nodejs.json';
+
+  /// File path: assets/questions/ru/perl.json
+  String get perl => 'assets/questions/ru/perl.json';
+
+  /// File path: assets/questions/ru/php.json
+  String get php => 'assets/questions/ru/php.json';
+
+  /// File path: assets/questions/ru/python.json
+  String get python => 'assets/questions/ru/python.json';
+
+  /// File path: assets/questions/ru/react.json
+  String get react => 'assets/questions/ru/react.json';
+
+  /// File path: assets/questions/ru/ruby.json
+  String get ruby => 'assets/questions/ru/ruby.json';
+
+  /// File path: assets/questions/ru/rust.json
+  String get rust => 'assets/questions/ru/rust.json';
+
+  /// File path: assets/questions/ru/scala.json
+  String get scala => 'assets/questions/ru/scala.json';
+
+  /// File path: assets/questions/ru/swift.json
+  String get swift => 'assets/questions/ru/swift.json';
+
+  /// File path: assets/questions/ru/typescript.json
+  String get typescript => 'assets/questions/ru/typescript.json';
+
+  /// List of all assets
+  List<String> get values => [
+        backend,
+        cplusplus,
+        csharp,
+        cybersecurity,
+        dataanalyst,
+        datascientist,
+        engineer,
+        flutter,
+        frontend,
+        git,
+        go,
+        java,
+        js,
+        kotlin,
+        nodejs,
+        perl,
+        php,
+        python,
+        react,
+        ruby,
+        rust,
+        scala,
+        swift,
+        typescript
+      ];
+}
+
+class $AssetsQuestionsTrGen {
+  const $AssetsQuestionsTrGen();
+
+  /// File path: assets/questions/tr/backend.json
+  String get backend => 'assets/questions/tr/backend.json';
+
+  /// File path: assets/questions/tr/cplusplus.json
+  String get cplusplus => 'assets/questions/tr/cplusplus.json';
+
+  /// File path: assets/questions/tr/csharp.json
+  String get csharp => 'assets/questions/tr/csharp.json';
+
+  /// File path: assets/questions/tr/cybersecurity.json
+  String get cybersecurity => 'assets/questions/tr/cybersecurity.json';
+
+  /// File path: assets/questions/tr/dataanalyst.json
+  String get dataanalyst => 'assets/questions/tr/dataanalyst.json';
+
+  /// File path: assets/questions/tr/datascientist.json
+  String get datascientist => 'assets/questions/tr/datascientist.json';
+
+  /// File path: assets/questions/tr/engineer.json
+  String get engineer => 'assets/questions/tr/engineer.json';
+
+  /// File path: assets/questions/tr/flutter.json
+  String get flutter => 'assets/questions/tr/flutter.json';
+
+  /// File path: assets/questions/tr/frontend.json
+  String get frontend => 'assets/questions/tr/frontend.json';
+
+  /// File path: assets/questions/tr/git.json
+  String get git => 'assets/questions/tr/git.json';
+
+  /// File path: assets/questions/tr/go.json
+  String get go => 'assets/questions/tr/go.json';
+
+  /// File path: assets/questions/tr/java.json
+  String get java => 'assets/questions/tr/java.json';
+
+  /// File path: assets/questions/tr/js.json
+  String get js => 'assets/questions/tr/js.json';
+
+  /// File path: assets/questions/tr/kotlin.json
+  String get kotlin => 'assets/questions/tr/kotlin.json';
+
+  /// File path: assets/questions/tr/nodejs.json
+  String get nodejs => 'assets/questions/tr/nodejs.json';
+
+  /// File path: assets/questions/tr/perl.json
+  String get perl => 'assets/questions/tr/perl.json';
+
+  /// File path: assets/questions/tr/php.json
+  String get php => 'assets/questions/tr/php.json';
+
+  /// File path: assets/questions/tr/python.json
+  String get python => 'assets/questions/tr/python.json';
+
+  /// File path: assets/questions/tr/react.json
+  String get react => 'assets/questions/tr/react.json';
+
+  /// File path: assets/questions/tr/ruby.json
+  String get ruby => 'assets/questions/tr/ruby.json';
+
+  /// File path: assets/questions/tr/rust.json
+  String get rust => 'assets/questions/tr/rust.json';
+
+  /// File path: assets/questions/tr/scala.json
+  String get scala => 'assets/questions/tr/scala.json';
+
+  /// File path: assets/questions/tr/swift.json
+  String get swift => 'assets/questions/tr/swift.json';
+
+  /// File path: assets/questions/tr/typescript.json
+  String get typescript => 'assets/questions/tr/typescript.json';
+
+  /// List of all assets
+  List<String> get values => [
+        backend,
+        cplusplus,
+        csharp,
+        cybersecurity,
+        dataanalyst,
+        datascientist,
+        engineer,
+        flutter,
+        frontend,
+        git,
+        go,
+        java,
+        js,
+        kotlin,
+        nodejs,
+        perl,
+        php,
+        python,
+        react,
+        ruby,
+        rust,
+        scala,
+        swift,
+        typescript
+      ];
 }
 
 class Assets {

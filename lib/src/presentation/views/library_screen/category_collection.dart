@@ -26,7 +26,7 @@ class CategoryCollection extends StatelessWidget {
     final double width = MediaQuery.sizeOf(context).width * 0.5;
     final double height = MediaQuery.sizeOf(context).height * 0.3;
     return SizedBox(
-      height: MediaQuery.of(context).size.height * .4,
+      height: MediaQuery.sizeOf(context).height * .4,
       child: ListView.builder(
         itemBuilder: (context, index) {
           final book = otherBooks[index];
@@ -46,7 +46,7 @@ class CategoryCollection extends StatelessWidget {
             },
             child: Container(
               margin: const EdgeInsets.all(5),
-              width: MediaQuery.of(context).size.width * .6,
+              width: MediaQuery.sizeOf(context).width * .6,
               child: Column(
                 children: [
                   Hero(
