@@ -105,8 +105,8 @@ class _BookViewState extends State<BookView> with _DownloaderMixin {
 
   @override
   Widget build(BuildContext context) {
-    final double width = MediaQuery.sizeOf(context).width * 0.5;
-    final double height = MediaQuery.sizeOf(context).height * 0.3;
+    final width = MediaQuery.sizeOf(context).width * 0.5;
+    final height = MediaQuery.sizeOf(context).height * 0.3;
     return Scaffold(
       appBar: AppBar(title: Text(widget.category), centerTitle: false),
       body: SingleChildScrollView(

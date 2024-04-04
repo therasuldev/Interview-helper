@@ -38,8 +38,13 @@
         "invalidEmailFormat": "Invalid email format.",
         "thankforfeedback": "Thank you for your feedback 🥳"
     },
+    "introduction": {
+        "firstPage": "\"Interview Helper\" is a dynamic app for tech job seekers and professionals, covering 19 key areas like Flutter&Dart, Go, C++, C#, Cybersecurity, and more. It offers extensive resources such as books, tutorials, and interactive exercises in each category, aimed at deepening your grasp of these technologies.",
+        "secondPage": "This app covers various technologies and programming languages, providing interview questions for junior to senior levels. It`s a thorough guide for interview prep, boosting your tech skills and readiness for job interviews."
+    },
     "connectionProblem": "A problem has occurred with the internet!",
     "yes": "Yes",
     "no": "No",
+    "done": "Done",
     "submit": "Submit"
 }

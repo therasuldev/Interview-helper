@@ -24,7 +24,6 @@ class AppBloc extends Bloc<AppEvent, AppState> {
   void _getState() async {
     emit(state.copyWith(loading: true));
     final onboardingIsViewed = await prefsImpl.getIntroducedState();
-    await Future.delayed(const Duration(seconds: 1));
     emit(state.copyWith(onboardingViewed: onboardingIsViewed, loading: false));
   }
 

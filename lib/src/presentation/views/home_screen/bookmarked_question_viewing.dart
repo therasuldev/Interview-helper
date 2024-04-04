@@ -128,7 +128,7 @@ class _AnswerView extends StatelessWidget {
       padding: const EdgeInsets.all(12.0),
       child: Text(
         question.answer,
-        textAlign: TextAlign.justify,
+        textAlign: TextAlign.center,
         style: ViewUtils.ubuntuStyle(
           fontSize: 25,
           color: const Color.fromARGB(255, 89, 97, 107),

@@ -39,8 +39,13 @@
         "invalidEmailFormat": "Geçersiz e-posta formatı.",
         "thankforfeedback": "Geri bildiriminiz için teşekkür ederiz "
     },
+    "introduction": {
+        "firstPage": "\"Interview helper\", Flutter&Dart, Go, C++, C#, Siber Güvenlik ve daha fazlası gibi 19 temel alanı kapsayan teknoloji iş arayanları ve profesyoneller için dinamik bir uygulamadır. Her kategoride kitaplar, öğreticiler ve interaktif egzersizler gibi kapsamlı kaynaklar sunar, bu teknolojilerin anlayışını derinleştirmeyi amaçlar.",
+        "secondPage": "Bu uygulama, junior'dan senior seviyesine kadar çeşitli teknolojiler ve programlama dillerini kapsar. Mülakat hazırlığı için kapsamlı bir rehberdir ve teknik becerilerinizi ve iş mülakatları için hazırlığınızı artırır."
+    },
     "connectionProblem": "İnternette bir sorun oluştu!",
     "yes": "Evet",
     "no": "Hayır",
+    "done": "Tamam",
     "submit": "Gönder"
 }

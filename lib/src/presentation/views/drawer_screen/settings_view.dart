@@ -96,14 +96,13 @@ class _SettingsViewState extends State<SettingsView> with WidgetsBindingObserver
   }
 
   Widget _buildPopUpMenu() {
-    // Build the popup menu for language selection
     return Theme(
       data: ThemeData(
         useMaterial3: false,
         popupMenuTheme: const PopupMenuThemeData(color: Colors.white),
       ),
       child: PopUpMenuBar(
-        baseIcon: Icons.select_all,
+        baseIcon: Icons.arrow_drop_down,
         iconColor: Colors.green,
         items: const [
           PopUpMenuBarItem(
