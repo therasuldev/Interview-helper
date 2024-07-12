@@ -25,7 +25,7 @@ class CategoryCard extends StatelessWidget {
             category,
             textAlign: TextAlign.center,
             style: ViewUtils.ubuntuStyle(
-              fontSize: 22,
+              fontSize: 18,
               color: Colors.blueGrey,
               fontWeight: FontWeight.w600,
             ),

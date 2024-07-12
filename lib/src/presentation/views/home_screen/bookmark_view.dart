@@ -60,7 +60,10 @@ class _BookmarkedDatasState extends State<BookmarkedDatas> with SingleTickerProv
     final height = MediaQuery.sizeOf(context).height * 0.3;
     return Scaffold(
       appBar: AppBar(
-        title: Text('home.bookmarks'.tr()),
+        title: Text(
+          'home.bookmarks'.tr(),
+          style: ViewUtils.ubuntuStyle(fontSize: 19),
+        ),
         centerTitle: false,
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(50),
@@ -92,6 +95,7 @@ class _BookmarkedDatasState extends State<BookmarkedDatas> with SingleTickerProv
               final qCategories = state.questionCategories;
               if (qCategories!.isEmpty) {
                 return const Center(
+                  //TODO translate
                   child: Text('No Saved Questions'),
                 );
               }
@@ -227,13 +231,13 @@ extension on TextStyle {
       case true:
         return const TextStyle(
           color: Colors.white,
-          fontSize: 18,
+          fontSize: 16,
         );
 
       default:
         return const TextStyle(
           color: Colors.white70,
-          fontSize: 16,
+          fontSize: 14,
         );
     }
   }

@@ -46,7 +46,7 @@ class QuestionCard extends StatelessWidget {
           maxLines: 1,
           textAlign: TextAlign.start,
           overflow: TextOverflow.ellipsis,
-          style: ViewUtils.ubuntuStyle(fontSize: 20, color: Colors.black),
+          style: ViewUtils.ubuntuStyle(fontSize: 17, color: Colors.black),
         ),
         subtitle: Padding(
           padding: const EdgeInsets.only(top: 5.0),
@@ -56,7 +56,7 @@ class QuestionCard extends StatelessWidget {
             textAlign: TextAlign.start,
             overflow: TextOverflow.ellipsis,
             style: ViewUtils.ubuntuStyle(
-              fontSize: 18,
+              fontSize: 15,
               color: Colors.blueGrey.withOpacity(.6).withBlue(155),
             ),
           ),

@@ -53,7 +53,10 @@ class _QuestionsViewState extends State<QuestionsView> with QuestionCardMixin {
       },
       appBarBuilder: (context) => AppBar(
         centerTitle: false,
-        title: Text(widget.category ?? ''),
+        title: Text(
+          widget.category ?? '',
+          style: ViewUtils.ubuntuStyle(fontSize: 19),
+        ),
         actions: const [AppBarSearchButton()],
       ),
       elevation: 0,

@@ -99,7 +99,7 @@ class _ListTile extends StatelessWidget {
       onTap: onTap,
       leading: leading,
       horizontalTitleGap: 20,
-      title: Text(title, style: ViewUtils.ubuntuStyle(fontSize: 20)),
+      title: Text(title, style: ViewUtils.ubuntuStyle(fontSize: 18)),
     );
   }
 

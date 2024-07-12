@@ -62,7 +62,13 @@ class _SettingsViewState extends State<SettingsView> with WidgetsBindingObserver
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('settings.settings'.tr()), centerTitle: false),
+      appBar: AppBar(
+        title: Text(
+          'settings.settings'.tr(),
+          style: ViewUtils.ubuntuStyle(fontSize: 19),
+        ),
+        centerTitle: false,
+      ),
       body: Padding(
         padding: const EdgeInsets.all(15),
         child: Column(

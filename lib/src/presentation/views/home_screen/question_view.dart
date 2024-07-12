@@ -32,7 +32,7 @@ class _QuestionViewState extends State<QuestionView> with _QuestionViewMixin {
       builder: (context, state) {
         if (state.loading!) return const SizedBox.shrink();
         final cachedQuestionsForCategory = state.questions ?? [];
-        bool isSaved = cachedQuestionsForCategory.isSaved(questions[currentIndex]);
+        final isSaved = cachedQuestionsForCategory.isSaved(questions[currentIndex]);
         return Scaffold(
           body: CustomScrollView(
             key: ValueKey(currentIndex),
@@ -45,7 +45,7 @@ class _QuestionViewState extends State<QuestionView> with _QuestionViewMixin {
                     padding: const EdgeInsets.all(12.0),
                     child: Text(
                       '${currentIndex + 1}/${questions.length}',
-                      style: ViewUtils.ubuntuStyle(color: Colors.white, fontSize: 20),
+                      style: ViewUtils.ubuntuStyle(color: Colors.white, fontSize: 17),
                     ),
                   ),
                   IconButton(
@@ -69,6 +69,7 @@ class _QuestionViewState extends State<QuestionView> with _QuestionViewMixin {
                     icon: SvgPicture.asset(
                       Assets.svg.bookmark,
                       color: isSaved ? Colors.orange.shade900 : Colors.white,
+                      height: 19,
                     ),
                   )
                 ],
@@ -121,7 +122,7 @@ class _QuestionView extends StatelessWidget {
                 textAlign: TextAlign.center,
                 style: ViewUtils.ubuntuStyle(
                   color: Colors.white,
-                  fontSize: 25,
+                  fontSize: 21,
                 ),
               ),
             ),
@@ -145,7 +146,7 @@ class _AnswerView extends StatelessWidget {
         question.answer,
         textAlign: TextAlign.center,
         style: ViewUtils.ubuntuStyle(
-          fontSize: 25,
+          fontSize: 19,
           color: const Color.fromARGB(255, 89, 97, 107),
         ),
       ),
@@ -156,7 +157,7 @@ class _AnswerView extends StatelessWidget {
 class _ChangeButton extends StatelessWidget {
   _ChangeButton({required this.child, required this.onPressed});
 
-  final style = ViewUtils.ubuntuStyle(fontSize: 17, color: AppColors.primary);
+  final style = ViewUtils.ubuntuStyle(fontSize: 15, color: AppColors.primary);
 
   @override
   Widget build(BuildContext context) => OutlinedButton(

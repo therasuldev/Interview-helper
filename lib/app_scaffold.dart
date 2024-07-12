@@ -34,7 +34,10 @@ class _AppScaffoldState extends State<AppScaffold> {
 
   AppBar appBar(int screenIndex) {
     return AppBar(
-      title: Text(screenIndex.isEqual(0) ? 'home.categories'.tr() : 'home.library'.tr()),
+      title: Text(
+        screenIndex.isEqual(0) ? 'home.categories'.tr() : 'home.library'.tr(),
+        style: ViewUtils.ubuntuStyle(fontSize: 19),
+      ),
       centerTitle: false,
       elevation: 0,
       actions: [
@@ -63,8 +66,8 @@ class _BottomNavBar extends StatelessWidget {
       currentIndex: screenIndex,
       selectedItemColor: AppColors.primary,
       backgroundColor: Colors.white,
-      selectedLabelStyle: ViewUtils.ubuntuStyle(fontSize: 16),
-      unselectedLabelStyle: ViewUtils.ubuntuStyle(fontSize: 14),
+      selectedLabelStyle: ViewUtils.ubuntuStyle(fontSize: 15),
+      unselectedLabelStyle: ViewUtils.ubuntuStyle(fontSize: 13),
     );
   }
 

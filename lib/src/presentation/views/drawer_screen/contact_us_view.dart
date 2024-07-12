@@ -35,7 +35,12 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('contactUs.contactUs'.tr()), centerTitle: false),
+      appBar: AppBar(
+          title: Text(
+            'contactUs.contactUs'.tr(),
+            style: ViewUtils.ubuntuStyle(fontSize: 19),
+          ),
+          centerTitle: false),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
         child: Form(
@@ -52,7 +57,7 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                 keyboardType: TextInputType.emailAddress,
                 decoration: InputDecoration(
                   hintText: 'contactUs.yourEmail'.tr(),
-                  hintStyle: ViewUtils.ubuntuStyle(),
+                  hintStyle: ViewUtils.ubuntuStyle(fontSize: 15),
                   border: const OutlineInputBorder(),
                   focusedBorder: const OutlineInputBorder(
                     borderSide: BorderSide(color: AppColors.primary),
@@ -70,7 +75,7 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                 keyboardType: TextInputType.text,
                 decoration: InputDecoration(
                   hintText: 'contactUs.writeFeedback'.tr(),
-                  hintStyle: ViewUtils.ubuntuStyle(),
+                  hintStyle: ViewUtils.ubuntuStyle(fontSize: 15),
                   border: const OutlineInputBorder(),
                   focusedBorder: const OutlineInputBorder(
                     borderSide: BorderSide(color: AppColors.primary),
